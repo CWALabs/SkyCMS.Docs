@@ -1,0 +1,255 @@
+<!-- Audience: Designers and Front-End Developers -->
+<!-- Type: How-to + Reference -->
+<!-- Status: Draft -->
+<!-- Source: SkyCMS/Docs/Layouts/ -->
+
+# Layouts
+
+Use this page to define consistent page chrome (header, footer, navigation, spacing, typography foundations) across multiple templates and pages.
+
+## When to use this page
+
+Use this guide when you need to:
+
+- establish or evolve site-wide visual structure,
+- publish a new default layout version,
+- troubleshoot layout-level rendering behavior across many pages.
+
+## What a layout is
+
+A layout is the site-wide shell for rendered pages. In SkyCMS, layout sections map to:
+
+- Head content: injected into the HTML `head` tag.
+- Header content: shared top-of-page structure.
+- Footer content: shared bottom-of-page structure.
+
+Page and template content render between the header and footer shell.
+
+## Getting started
+
+First-time layout setup usually follows one of two paths:
+
+- Choose a pre-built layout: fastest path for teams that want a polished baseline.
+- Build a custom layout: best when you need full brand-specific control from the start.
+
+Recommended order:
+
+1. Start with a pre-built layout if your team is moving quickly.
+2. Establish design tokens and navigation rules.
+3. Create a custom variant only when your requirements exceed the starter design.
+
+## Layout responsibilities
+
+Layouts should own:
+
+- Global page structure (`header`, `main`, `footer`)
+- Shared navigation and utility regions
+- Baseline spacing and responsive breakpoints
+- Theme-level design tokens (colors, type scale, spacing scale)
+- Global scripts and styles needed across the site
+
+Layouts should avoid owning:
+
+- Page-specific editorial content
+- One-off campaign content
+- Logic better placed in templates or components
+
+## Layout vs template vs page
+
+- Layout: site-wide shell and shared visual framework.
+- Template: reusable content pattern rendered inside a layout.
+- Page: a concrete content instance authored by editors.
+
+Rule of thumb:
+
+- If it appears on most pages, it belongs in the layout.
+- If it is a reusable content pattern, it belongs in a template.
+- If it is one-off content, keep it at the page level.
+
+## Create a layout
+
+Define goals:
+
+- Capture brand direction, readability, accessibility, and performance constraints.
+
+Map shared regions:
+
+- Identify header, nav, breadcrumbs area, content container, footer, and utility banners.
+
+Define tokens first:
+
+- Establish CSS custom properties for color, spacing, radius, and typography.
+
+Build responsive structure:
+
+- Start mobile-first, then add tablet and desktop breakpoints.
+
+Validate with templates:
+
+- Confirm key templates render correctly in the new shell.
+
+Validate with real pages:
+
+- Test home, article, blog stream, blog post, and long-form content examples.
+
+## Working with the layout list
+
+The layout list is your operational view for lifecycle actions.
+
+Typical list metadata includes:
+
+- Version
+- Published status
+- Last modified timestamp
+- Friendly name
+
+Typical actions include:
+
+- Create new layout
+- Edit in code mode
+- Edit in visual mode
+- Update notes/name
+- Import community layout
+- Promote version
+
+## Layout versions and publish flow
+
+SkyCMS layout changes are versioned.
+
+Behavior to expect:
+
+- Published version remains active until a new version is published.
+- Editing a published layout creates a draft version flow.
+- Promote action creates a new version derived from an existing one.
+
+Publish rules:
+
+- Only one layout version is active as the default at a time.
+- Publishing takes effect immediately for pages using default resolution.
+- Previous published versions remain in history for rollback/reference.
+
+## Editing modes
+
+### Code Editor
+
+Use code mode when you need exact control over:
+
+- Head markup (meta, stylesheet/script includes)
+- Header shell HTML
+- Footer shell HTML
+
+Best practices:
+
+- Keep semantic HTML structure clean.
+- Prefer reusable CSS classes and external styles.
+- Validate in preview before publish.
+
+### Page Builder (Visual Mode)
+
+Use visual mode when building and iterating structure quickly.
+
+Capabilities:
+
+- Drag-and-drop composition
+- Visual styling and responsive checks
+- Asset manager integration
+
+Constraints:
+
+- Avoid invalid nested editable region patterns.
+- Keep page-content placeholders intact in layout shell contexts.
+
+## Community layouts
+
+Community layouts are a strong accelerator for new sites.
+
+Recommended workflow:
+
+1. Preview layout and verify license/fit.
+2. Import into the project.
+3. Review imported templates tied to the layout.
+4. Customize branding, tokens, and navigation.
+5. Publish after responsive and accessibility validation.
+
+## Advanced operations
+
+### Export layout
+
+Export when you need to:
+
+- share layout shells externally,
+- archive static snapshots,
+- test markup outside the CMS.
+
+### Promote version
+
+Promote to branch a known-good version into a new editable draft path.
+
+### Delete layout
+
+Delete only non-published versions that are no longer needed.
+
+Guidance:
+
+- Never delete active default versions.
+- Confirm template dependencies before deletion.
+
+## Apply layout conventions
+
+Naming:
+
+- Use clear names such as `default`, `marketing`, `docs`, `landing`.
+
+CSS strategy:
+
+- Prefer design tokens over one-off hardcoded values.
+- Keep selectors shallow and predictable.
+- Keep layout styles separate from page-specific styles.
+
+Accessibility:
+
+- Preserve semantic landmarks.
+- Ensure keyboard navigation works for global nav and menus.
+- Maintain visible focus indicators and sufficient contrast.
+
+Performance:
+
+- Keep global CSS and JS payloads lean.
+- Defer non-critical scripts.
+- Avoid loading page-specific libraries globally.
+
+## Testing layout behavior
+
+Before rollout, validate:
+
+- Responsive behavior at key breakpoints.
+- Header, footer, and navigation consistency.
+- Long-title and long-content rendering.
+- Image-heavy and blog pages inside the layout.
+- Empty-state and error-state rendering.
+- Keyboard, focus, and contrast accessibility checks.
+
+## Handoff checklist
+
+- Document intended template pairings.
+- Document constraints (hero heights, max widths, region rules).
+- Share before/after screenshots for QA.
+- Capture fallback behavior for optional regions.
+
+## Troubleshooting
+
+Common issues and checks:
+
+- Save failures: validate markup and check browser console for script errors.
+- Layout not visible: verify the intended version is published.
+- Visual mode save issues: inspect structure for invalid editable nesting.
+- Imported layout appears broken: verify referenced assets and external dependencies.
+- Delete action unavailable: confirm the target version is not the currently published default.
+
+## Related guides
+
+- [Site Builder Guide Overview](./overview.md)
+- [Pages](./pages.md)
+- [Templates](./templates.md)
+- Developer implementation guide: [../for-developers/layouts.md](../for-developers/layouts.md)
+- Developer hierarchy guide: [../for-developers/layouts-templates-articles.md](../for-developers/layouts-templates-articles.md)
