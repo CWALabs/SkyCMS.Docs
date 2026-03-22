@@ -204,11 +204,11 @@ Beyond built-in widgets, you can create custom widgets for specialized needs.
 
 ### Inserting Widgets
 
-Widgets are typically inserted into pages through the Live Editor:
+Widgets are typically inserted into pages through the Visual Editor:
 
 1. **Open Page in Editor**
    - Navigate to the page you want to edit
-   - Click "Edit in Live Editor"
+   - Click "Edit in Visual Editor"
 
 2. **Insert Widget**
    - Click the "+" button or widget menu
@@ -350,7 +350,7 @@ To create a custom widget:
    - Include examples
 
 6. **Test**
-   - Test in live editor
+   - Test in visual editor
    - Test on mobile devices
    - Test different configurations
 
@@ -415,7 +415,7 @@ public class MyWidgetConfiguration
 - **[Widgets Directory](./Widgets/)** - Complete widget documentation and API reference
 - **[Image Widget Deep Dive](./Developers/ImageWidget.md)** - Detailed widget implementation example
 - **[Developer Overview](./Developers/README.md)** - Developer documentation hub
-- **[Content Editors: Live Editor](./Editors/LiveEditor/README.md)** - How editors use widgets
+- **[Content Editors: Visual Editor](./Editors/LiveEditor/README.md)** - How editors use widgets
 - **[LEARNING_PATHS: Developer](./LEARNING_PATHS.md#developer)** - Widget development learning path
 - **[LEARNING_PATHS: Content Editor](./LEARNING_PATHS.md#content-editor-non-technical)** - Using widgets as content creator
 - **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Documentation standards for widget documentation

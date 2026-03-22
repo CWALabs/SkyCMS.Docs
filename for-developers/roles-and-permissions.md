@@ -218,9 +218,9 @@ Example from EditorController:
 - `DeletePageAsync()` - Requires Administrators, Editors.
 - `CreateTemplate()` - Requires Administrators.
 
-### Live Editor hub
+### Visual Editor hub
 
-The Live Editor collaborative hub requires specific roles.
+The Visual Editor collaborative hub requires specific roles.
 
 ```csharp
 [Authorize(Roles = "Reviewers, Administrators, Editors, Authors")]

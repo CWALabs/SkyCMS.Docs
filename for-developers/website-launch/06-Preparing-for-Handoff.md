@@ -1,4 +1,4 @@
-﻿<!-- Audience: Developers, Project Managers, Trainers -->
+<!-- Audience: Developers, Project Managers, Trainers -->
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/06-Preparing-for-Handoff.md -->
@@ -336,7 +336,7 @@ Comprehensive documentation reduces support burden and ensures consistency.
 | **How to Login** | Access process, password reset |
 | **Dashboard Overview** | What you see when you log in |
 | **Creating a Page** | Full walkthrough with screenshots |
-| **Editing Content** | Using Live Editor, formatting |
+| **Editing Content** | Using Visual Editor, formatting |
 | **Publishing Pages** | Draft vs. Published, versioning |
 | **Uploading Images** | File Manager, image guidelines |
 | **Adding Links** | Internal and external links |
@@ -376,7 +376,7 @@ Comprehensive documentation reduces support burden and ensures consistency.
 3. Click **Create**
 
 ## Step 3: You're Ready to Edit
-The page opens in Live Editor mode.
+The page opens in Visual Editor mode.
 See "How to Edit Content" for next steps.
 ```
 

@@ -39,6 +39,7 @@ Developers typically:
 - [Roles and permissions (RBAC)](./roles-and-permissions.md)
 - [Layouts](./layouts.md)
 - [Templates](./templates.md)
+- [Creating editable areas](./website-launch/CreatingEditableAreas.md)
 - [Layouts, templates, and articles](./layouts-templates-articles.md)
 - [Website launch workflow (phased guides)](./website-launch/index.md)
 - [Configuration guides (migrated)](../configuration/legacy/README.md)

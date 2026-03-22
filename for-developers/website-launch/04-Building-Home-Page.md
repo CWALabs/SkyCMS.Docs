@@ -1,4 +1,4 @@
-﻿<!-- Audience: Developers, Content Creators -->
+<!-- Audience: Developers, Content Creators -->
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/04-Building-Home-Page.md -->
@@ -130,12 +130,12 @@ After entering the URL, you'll see the **"Quick Start Templates"** section.
 - A list of all available templates
 - Template names and descriptions
 - Preview thumbnails (if available)
-- Indicator if "Live Editor" is enabled (meaning it has editable regions)
+- Indicator if "Visual Editor" is enabled (meaning it has editable regions)
 
 **For Your Home Page, Look For:**
 - Templates labeled "Home Page," "Landing Page," or "Hero + Content"
 - Templates with multiple editable regions
-- Templates marked with "Live editor enabled"
+- Templates marked with "Visual editor enabled"
 
 **Template Decision Matrix:**
 
@@ -150,18 +150,18 @@ After entering the URL, you'll see the **"Quick Start Templates"** section.
 
 ```
 Available Templates:
-1. ✓ "Home Page - Hero + Services" (Live editor enabled)
+1. ✓ "Home Page - Hero + Services" (Visual editor enabled)
    - Large hero section
    - 3 service highlight areas
    - Testimonial section
    - Contact CTA
 
-2. "Product Landing Page" (Live editor enabled)
+2. "Product Landing Page" (Visual editor enabled)
    - Product showcase
    - Feature list
    - Pricing section
 
-3. "Blog Post Template" (Live editor enabled)
+3. "Blog Post Template" (Visual editor enabled)
    - Article content
    - Sidebar
    - Related posts
@@ -373,7 +373,7 @@ Before committing to a template, evaluate these factors:
 
 **Structural Quality:**
 - [ ] Has clearly defined editable regions
-- [ ] Includes "Live editor enabled" indicator
+- [ ] Includes "Visual editor enabled" indicator
 - [ ] Structure matches your content plan
 - [ ] Adequate editable regions for your needs
 - [ ] Not overly complex or restrictive
@@ -522,13 +522,13 @@ Continue building your home page content by following these guides in order:
 - Check that templates exist (go to Templates section)
 - Confirm templates are associated with your Site Design
 
-### Issue: Template Doesn't Have Live Editor
+### Issue: Template Doesn't Have Visual Editor
 
 **Solution:**
 - Template may not have editable regions defined
 - Review template in Phase 3 guide
 - Add `data-ccms-ceid` attributes to template
-- Or choose a different template with "Live editor enabled"
+- Or choose a different template with "Visual editor enabled"
 
 ### Issue: Page Created at Wrong URL
 
@@ -552,7 +552,7 @@ Continue building your home page content by following these guides in order:
 - **Previous Phase:** [Creating Templates](03-Creating-Templates.md)
 - **Parallel Reading:** [Pages Documentation](../ContentCreation-QuickStart.md)
 - **Template Reference:** [Templates Guide](../Templates/)
-- **Live Editor Guide:** [Using the Live Editor](../Editors/LiveEditor/README.md)
+- **Visual Editor Guide:** [Using the Visual Editor](../Editors/LiveEditor/README.md)
 
 ---
 
@@ -664,23 +664,23 @@ A high-converting hero section typically includes:
 
 ---
 
-### Accessing the Live Editor
+### Accessing the Visual Editor
 
-After creating your page (as covered in the previous section), you'll use the **Live Editor** to add content to your hero section.
+After creating your page (as covered in the previous section), you'll use the **Visual Editor** to add content to your hero section.
 
 #### Step 1: Open Your Page for Editing
 
 1. From the **Pages** list, find your home page
 2. Click on the article number or title to open version history
 3. Click **"Edit"** on the latest draft version
-4. The Live Editor will open
+4. The Visual Editor will open
 
 **Alternative Path:**
 - If you just created the page, click **"Edit this page"** button
 
-#### Step 2: Understand the Live Editor Interface
+#### Step 2: Understand the Visual Editor Interface
 
-The Live Editor provides a WYSIWYG (What You See Is What You Get) editing experience:
+The Visual Editor provides a WYSIWYG (What You See Is What You Get) editing experience:
 
 **Key Interface Elements:**
 
@@ -875,7 +875,7 @@ Hero images dramatically impact first impressions. Choose and implement them car
 If your template has a predefined hero section with a background, you may need to upload the image through SkyCMS's file manager.
 
 **Steps:**
-1. In the Live Editor, look for an **"Upload Image"** or **"Background"** option in the hero section
+1. In the Visual Editor, look for an **"Upload Image"** or **"Background"** option in the hero section
 2. Click the upload button or image placeholder
 3. Select your optimized hero image
 4. Upload and apply
@@ -1004,7 +1004,7 @@ Your Call-to-Action (CTA) button is the most important interactive element in th
 
 **Step 1: Locate CTA Editable Region**
 
-1. In the Live Editor, find the CTA area of your hero section
+1. In the Visual Editor, find the CTA area of your hero section
 2. Click to activate the editable region
 3. Some templates have pre-styled buttons; others require manual creation
 
@@ -1155,7 +1155,7 @@ On mobile:
 
 #### Testing Responsiveness
 
-**In the Live Editor:**
+**In the Visual Editor:**
 
 1. Click **"Preview"** button
 2. Resize your browser window to test different widths
@@ -1283,7 +1283,7 @@ Continue building your home page by adding featured content, service highlights,
 
 - **Template Patterns:** [Phase 3 - Creating Templates](03-Creating-Templates.md)
 - **Responsive Design:** [Phase 2 - Creating Layouts](02-Creating-Layouts.md)
-- **Live Editor Details:** [Live Editor Guide](../Editors/LiveEditor/README.md)
+- **Visual Editor Details:** [Visual Editor Guide](../Editors/LiveEditor/README.md)
 - **Image Management:** [File Manager Guide](../FileManagement/index.md)
 
 ---
@@ -1385,7 +1385,7 @@ Service highlights showcase what you offer in an easily scannable format.
 
 **Step 1: Locate the Service Section**
 
-1. In the Live Editor, scroll below your hero section
+1. In the Visual Editor, scroll below your hero section
 2. Find the editable region for services/features
 3. Click to activate editing
 
@@ -1482,7 +1482,7 @@ Testimonials build trust and credibility. They're one of the most effective conv
 
 **Step 1: Locate Testimonial Section**
 
-1. Scroll to the testimonial area in Live Editor
+1. Scroll to the testimonial area in Visual Editor
 2. Click into the editable region
 
 **Step 2: Add Section Heading**
@@ -1557,7 +1557,7 @@ Select 3-4 impressive, specific numbers:
 
 **Step 2: Add to Page**
 
-1. Locate stats section in Live Editor
+1. Locate stats section in Visual Editor
 2. For each stat:
    - **Big Number/Visual**: Large, bold text
    - **Label**: Small text explaining the number
@@ -1934,7 +1934,7 @@ The brief summary that appears below the title in search results.
 
 **Step 1: Access Page Settings**
 
-1. In the Live Editor, look for page settings or properties
+1. In the Visual Editor, look for page settings or properties
 2. Or go to Pages list → Click article number → Edit page properties
 
 **Step 2: Enter Page Title**

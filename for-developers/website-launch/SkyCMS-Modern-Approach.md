@@ -1,4 +1,4 @@
-﻿<!-- Audience: Developers, Architects, Decision Makers -->
+<!-- Audience: Developers, Architects, Decision Makers -->
 <!-- Type: Explanation -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/SkyCMS-Modern-Approach.md -->
@@ -39,7 +39,7 @@ A practical overview of how SkyCMS facilitates modern website development: modul
 - Encourages versioning of templates and controlled rollouts.
 
 ## Mapping to Other Stacks
-- **Live Editor** → Any WYSIWYG/block editor (Gutenberg, Sanity Studio, Contentful UI).
+- **Visual Editor** → Any WYSIWYG/block editor (Gutenberg, Sanity Studio, Contentful UI).
 - **Templates** → React/Vue/Next components, Razor Pages, or server-side templates.
 - **File Manager** → Static assets/CDN (S3 + CloudFront, Azure Blob + CDN).
 - **Workflows** → Git-based content flows, editorial review queues, or CI/CD gates.

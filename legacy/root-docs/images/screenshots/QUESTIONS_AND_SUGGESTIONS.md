@@ -23,7 +23,7 @@
 
 **Alternative approaches:**
 - **Phased rollout**: Capture setup wizard (7 images) first, then other sections. This gives early feedback before full investment.
-- **On-demand**: Only capture screenshots for the most-viewed docs (probably Setup Wizard, Live Editor, Publishing).
+- **On-demand**: Only capture screenshots for the most-viewed docs (probably Setup Wizard, Visual Editor, Publishing).
 - **Hybrid**: Capture setup wizard now, defer others to next documentation cycle.
 
 **Questions:**
@@ -195,7 +195,7 @@ A short 5-minute video showing:
 
 Instead of randomizing, capture in logical order:
 - **Batch 1** (Day 1): Setup Wizard (7 images) — foundational, widely used
-- **Batch 2** (Day 2): Live Editor basics (3 images) — core workflow
+- **Batch 2** (Day 2): Visual Editor basics (3 images) — core workflow
 - **Batch 3** (Day 3): Publishing + Post-Install (5 images)
 - **Batch 4** (Day 4): Page Scheduling + Settings (5 images)
 

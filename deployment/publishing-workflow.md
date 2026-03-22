@@ -346,7 +346,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ### Step-by-Step: Publishing Page Content {#steps-page}
 
 1. **Edit Your Content**
-   - Open page in Live Editor
+   - Open page in Visual Editor
    - Make changes to page content
    - Use widgets for media and forms
    - Preview your changes
@@ -386,7 +386,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 1. **Write Your Post**
    - Create new blog post
-   - Write content using Live Editor
+   - Write content using Visual Editor
    - Add featured image
    - Add categories/tags
 

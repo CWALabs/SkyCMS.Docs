@@ -25,7 +25,7 @@ A practical comparison of developer workflows, learning curves, deployment compl
 ### Content-Team-Friendly When They Need It
 
 - **WYSIWYG editor** (CKEditor) for non-technical users
-- **Visual designer** (GrapesJS) for layout work
+- **Page Builder** (GrapesJS) for layout work
 - **No Git knowledge required** for content updates
 - **Instant preview** before publishing
 
@@ -59,7 +59,7 @@ Developers control templates and structure with code. Content teams manage conte
 2. Run setup wizard (5 min) → Database + storage configured
 3. Create layouts (HTML/CSS) → Publish to SkyCMS
 4. Create templates (editable regions) → Publish to SkyCMS
-5. Content creators build pages via Live Editor
+5. Content creators build pages via Visual Editor
 6. Developer monitors/maintains
 ```
 
@@ -267,7 +267,7 @@ Content model   →   Frontend dev      →   Multi-sourcing
 
 | Platform | Setup | Iteration Speed | Local Preview |
 |----------|-------|-----------------|---------------|
-| **SkyCMS** | Docker (1-5 min) | Real-time (< 2 sec reload) | Live editor + preview |
+| **SkyCMS** | Docker (1-5 min) | Real-time (< 2 sec reload) | Visual editor + preview |
 | **WordPress** | Docker/Vagrant/Local (5-15 min) | Real-time | Admin interface |
 | **Jekyll** | CLI (1 min) | Fast (1-3 sec rebuild) | `jekyll serve` |
 | **Hugo** | CLI (< 1 min) | Very fast (< 1 sec rebuild) | `hugo server` |

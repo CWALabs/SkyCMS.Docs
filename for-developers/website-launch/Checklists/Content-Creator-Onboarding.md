@@ -1,4 +1,4 @@
-﻿<!-- Audience: Project Managers, Trainers -->
+<!-- Audience: Project Managers, Trainers -->
 <!-- Type: Reference -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/Checklists/Content-Creator-Onboarding.md -->
@@ -122,7 +122,7 @@ Hands-on training on page creation:
 
 - [ ] **Guided practice** (25 mins): They create page with help
   - [ ] Create test page together
-  - [ ] Show Live Editor
+  - [ ] Show Visual Editor
   - [ ] Add content to editable regions
 
 - [ ] **Q&A** (15 mins): Answer questions
@@ -139,12 +139,12 @@ Learn to edit and format content:
 
 **Preparation:**
 - [ ] Sample page with content ready to edit
-- [ ] Live Editor interface explained
+- [ ] Visual Editor interface explained
 
 **Training:**
 - [ ] **Demo first** (20 mins): Show editing process
   - [ ] Click Edit button
-  - [ ] Enter Live Editor
+  - [ ] Enter Visual Editor
   - [ ] Click content areas to edit
   - [ ] Add/remove text
 

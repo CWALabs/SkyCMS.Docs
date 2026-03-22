@@ -12,7 +12,7 @@
 
 2. **Created 20 reusable screenshot placeholders** across key doc sections:
    - Setup Wizard (7 images, 3-4 reused across docs)
-   - Live Editor (3 images, heavily reused)
+   - Visual Editor (3 images, heavily reused)
    - Page Scheduling (3 images)
    - Publishing (3 images)
    - Post-Installation verification (3 images)
@@ -143,7 +143,7 @@ Docs/images/screenshots/
 - Get feedback before proceeding
 
 ### **Phase 2b: Core Editor & Publishing** (1 day)
-- Capture 3 Live Editor images + 3 Publishing images
+- Capture 3 Visual Editor images + 3 Publishing images
 - Reuse storage-related screenshots
 
 ### **Phase 2c: Remaining & Verification** (1 day)

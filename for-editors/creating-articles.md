@@ -21,6 +21,18 @@ Use this guide when you need to:
 - For blog posts, the parent blog stream already exists.
 - You understand the difference between draft and published content (see [Article Lifecycle Overview](./overview.md)).
 
+## Template-backed pages and editable regions
+
+When an article is based on a template, what you can edit is controlled by the template's editable regions.
+
+- If an expected section is not editable, the template may not define that region as editable.
+- If content disappears after a template update, region identifiers may have changed.
+
+For technical details, share these references with your site builder/developer team:
+
+- [Template editable regions (site-builder guide)](../for-site-builders/templates.md#editable-region-attribute-reference)
+- [Creating Editable Areas (developer implementation guide)](../for-developers/website-launch/CreatingEditableAreas.md)
+
 ## Create a General Page
 
 General pages are standalone articles that appear as site pages.
@@ -116,3 +128,4 @@ After creating an article, you can:
 - [Updating and Deleting Articles](./updating-and-deleting-articles.md)
 - [Article Lifecycle Quick Reference](./article-lifecycle-reference.md)
 - [Scheduling Pages](./page-scheduling.md)
+- [Template editable regions (site-builder guide)](../for-site-builders/templates.md#editable-region-attribute-reference)

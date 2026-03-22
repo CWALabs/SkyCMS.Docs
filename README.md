@@ -5,6 +5,12 @@
 
 # SkyCMS Documentation
 
+## Developer Entry Points
+
+- [Developer index](./for-developers/index.md)
+- [Website launch workflow index](./for-developers/website-launch/index.md)
+- [Creating Editable Areas](./for-developers/website-launch/CreatingEditableAreas.md)
+
 ## Purpose
 
 TODO.

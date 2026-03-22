@@ -38,8 +38,8 @@ audience: [all]
 - First login and navigation
 - Basic concepts
 
-### Step 3: Learn the Live Editor (10 min)
-✏️ **[Live Editor Quick Start](./Editors/LiveEditor/QuickStart.md)**
+### Step 3: Learn the Visual Editor (10 min)
+✏️ **[Visual Editor Quick Start](./Editors/LiveEditor/QuickStart.md)**
 - Creating and editing pages
 - Text formatting basics
 - Adding images and links
@@ -53,7 +53,7 @@ audience: [all]
 
 ### Step 5: Advanced Content Features (Optional)
 📚 **Deep Dive Resources:**
-- **[Live Editor Complete Guide](./Editors/LiveEditor/README.md)** - Full feature documentation
+- **[Visual Editor Complete Guide](./Editors/LiveEditor/README.md)** - Full feature documentation
 - **[Page Scheduling](./Editors/PageScheduling.md)** - Schedule posts for future publication
 - **[Visual Page Builder](./Editors/Designer/README.md)** - Drag-and-drop page design
 - **[Blog Post Lifecycle](./blog/BlogPostLifecycle.md)** - Creating and managing blog posts
@@ -111,7 +111,7 @@ audience: [all]
   - [HomeControllerBase](./Developers/Controllers/HomeControllerBase.md)
   - [PubControllerBase](./Developers/Controllers/PubControllerBase.md)
 - **[Widgets Overview](./Widgets/README.md)** - Building custom widgets
-- **[Creating Editable Areas](./Developer-Guides/CreatingEditableAreas.md)** - Defining regions, headings, and image widgets
+- **[Creating Editable Areas](../../for-developers/website-launch/CreatingEditableAreas.md)** - Defining regions, headings, and image widgets
 - **[Testing Guide](./Development/Testing/README.md)** - Writing and running tests
 
 ### Step 6: Advanced Topics (Optional)
@@ -253,8 +253,8 @@ audience: [all]
 
 ### Step 5: Explore Capabilities (Optional)
 ✨ **Feature Deep Dives:**
-- **[Live Editor Overview](./Editors/LiveEditor/README.md)** - WYSIWYG content editing
-- **[Designer Overview](./Editors/Designer/README.md)** - Visual page builder
+- **[Visual Editor Overview](./Editors/LiveEditor/README.md)** - WYSIWYG content editing
+- **[Page Builder Overview](./Editors/Designer/README.md)** - Visual page builder
 - **[Blog Features](./blog/BlogPostLifecycle.md)** - Blogging capabilities
 
 ### 💡 Key Decision Factors
@@ -285,7 +285,7 @@ audience: [all]
 
 | Role | Time Investment | Focus Areas | Key Documents |
 |------|----------------|-------------|---------------|
-| **Content Editor** | 30-45 min | Using the CMS | Quick Start, Live Editor, File Management |
+| **Content Editor** | 30-45 min | Using the CMS | Quick Start, Visual Editor, File Management |
 | **Developer** | 2-3 hours | Customization | Architecture, Components, Widgets |
 | **DevOps** | 3-4 hours | Deployment | Installation, Database, Storage, CDN |
 | **Decision Maker** | 30-45 min | Strategy | About, Competitors, Cost Comparison |

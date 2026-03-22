@@ -82,6 +82,9 @@ Safe rollout strategy:
 | `data-ccms-new="true"` | Auto-generates a GUID on first save. Use this during template authoring when you have not yet assigned a stable ID. |
 | `data-editor-config="title"` | Minimal toolbar — plain heading text only. Use on `<h1>`–`<h6>` elements. |
 | `data-editor-config="heading"` | Alias for `title`. Minimal toolbar. |
+| `data-editor-config="simple"` | Compact toolbar — basic formatting and links. Good for short or structured text blocks. |
+| `data-editor-config="standard"` | Standard toolbar — the default when the attribute is omitted. Balanced selection for general content. |
+| `data-editor-config="advanced"` | Full toolbar — images, media, tables, lists, code blocks, and more. Also aliased as `default`, `richtext`, or `ckeditor`. |
 | `data-editor-config="image-widget"` | FilePond-based image uploader widget. The first image widget in a template typically acts as the page banner by convention. |
 | `class="ck-content"` | Applies CKEditor styles to the region. Required on all non-title rich content areas. |
 
@@ -140,7 +143,7 @@ From the page list you can: open version history for a page, clone a page (creat
 ### Update a single page
 
 1. In the template's page list, click the update icon next to the target page.
-2. The page updates and opens in the live editor for review.
+2. The page updates and opens in the visual editor for review.
 
 What happens:
 
@@ -178,4 +181,5 @@ Common issues and checks:
 - [Layouts](./layouts.md)
 - [Pages](./pages.md)
 - [Style Guide Template](./style-guide-template.md)
+- [Creating Editable Areas (developer implementation guide)](../for-developers/website-launch/CreatingEditableAreas.md)
 - [Developer hierarchy guide](../for-developers/layouts-templates-articles.md)

@@ -50,7 +50,7 @@ By the end, you'll have published your first page. ⚡
                ▼
 ┌─────────────────────────────────────────────┐
 │ Step 4: Edit & Format Content               │
-│ (Use Live Editor, Designer, or Code Editor) │
+│ (Use Visual Editor, Page Builder, or Code Editor) │
 └──────────────┬──────────────────────────────┘
                │
                ▼
@@ -90,7 +90,7 @@ A **Page Template** defines the structure of your pages—where the title goes, 
 1. Navigate to **Templates** from the main menu
 2. Click **New Template** or **Add Template**
 3. Choose an editor:
-   - **Visual Designer** (drag-and-drop, GrapeJS)
+   - **Page Builder** (drag-and-drop, GrapeJS)
    - **Code Editor** (raw HTML with syntax highlighting)
 4. Define **editable regions** where content editors can add content:
    ```html
@@ -119,7 +119,7 @@ Now you'll create your first **actual page** using the template you just set up.
 2. Enter a **page title**
 3. Select your **template** from the dropdown
 4. Click **Create**
-5. You'll be taken to the **Live Editor** with your template loaded
+5. You'll be taken to the **Visual Editor** with your template loaded
 6. ✅ **Move to Step 4 to add content**
 
 ---
@@ -128,7 +128,7 @@ Now you'll create your first **actual page** using the template you just set up.
 
 Now it's time to add your content. SkyCMS provides three editors for different needs:
 
-### Live Editor (Recommended for most users) {#live-editor}
+### Visual Editor (Recommended for most users) {#live-editor}
 - **Best for:** Quick content updates, formatting, and previews
 - **Features:** Rich-text editing, drag-and-drop widgets, real-time preview
 - **How to use:**  
@@ -137,14 +137,14 @@ Now it's time to add your content. SkyCMS provides three editors for different n
   3. Use the toolbar to **bold**, *italicize*, add links, headings, etc.
   4. See changes in real-time
 
-📖 [Live Editor Guide](./Editors/LiveEditor/README.md) · [Live Editor Quick Start](./Editors/LiveEditor/QuickStart.md)
+📖 [Visual Editor Guide](./Editors/LiveEditor/README.md) · [Visual Editor Quick Start](./Editors/LiveEditor/QuickStart.md)
 
-### Designer (For layouts and complex designs) {#designer}
+### Page Builder (For layouts and complex designs) {#designer}
 - **Best for:** Building page layouts, adding components, visual design
 - **Features:** Drag-and-drop canvas, component blocks, responsive preview
 - **When to use:** Creating new sections, adding sidebars, restructuring layout
 
-📖 [Designer Guide](./Editors/Designer/README.md) · [Designer Quick Start](./Editors/Designer/QuickStart.md)
+📖 [Page Builder Guide](./Editors/Designer/README.md) · [Page Builder Quick Start](./Editors/Designer/QuickStart.md)
 
 ### Code Editor (For developers) {#code-editor}
 - **Best for:** Fine-grained control over HTML, custom attributes, advanced layouts
@@ -185,7 +185,7 @@ Need to upload images, PDFs, or other assets?
 1. From the main menu, click **Files** or **File Manager**
 2. **Upload** files by dragging and dropping or clicking the upload button
 3. Organize files into folders
-4. Use the file browser in the Live Editor or Designer to insert media
+4. Use the file browser in the Visual Editor or Page Builder to insert media
 
 📖 [File Management Guide](./FileManagement/index.md) · [File Management Quick Start](./FileManagement/Quick-Start.md)
 
@@ -203,7 +203,7 @@ Need to upload images, PDFs, or other assets?
 - ✅ Keep templates simple at first—you can always add more structure later
 
 ### Content editing
-- ✅ Use the **Live Editor** for 90% of your content work
+- ✅ Use the **Visual Editor** for 90% of your content work
 - ✅ Preview on mobile before publishing
 - ✅ Use meaningful **page titles** (they become part of the URL)
 - ✅ Schedule important announcements in advance

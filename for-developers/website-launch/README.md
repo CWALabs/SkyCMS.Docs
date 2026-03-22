@@ -11,7 +11,7 @@ Complete workflows and best practices for developers building and maintaining Sk
 
 - These guides use SkyCMS examples, but the processes and tips apply broadly to modern website development (planning, componentized layouts/templates, accessibility, SEO, testing, publishing, and maintenance).
 - Everything here is intended to be useful: adopt the parts that fit your project and skip or adapt the rest.
-- Mapping to other stacks: "Live Editor" → any WYSIWYG/block editor; "Templates" → components/layouts; "File Manager" → static assets/CDN; content workflows → draft/review/publish with approvals.
+- Mapping to other stacks: "Visual Editor" → any WYSIWYG/block editor; "Templates" → components/layouts; "File Manager" → static assets/CDN; content workflows → draft/review/publish with approvals.
 
 ## SkyCMS & Modern Approach
 
@@ -25,6 +25,12 @@ SkyCMS encourages a modern, sustainable website development workflow:
 Learn more: [SkyCMS & Modern Approach (Deep Dive)](./SkyCMS-Modern-Approach.md)
 
 ## Quick Navigation
+
+### **Core Implementation Reference**
+
+**[Creating Editable Areas →](./CreatingEditableAreas.md)**
+
+Reference guide for defining `data-ccms-ceid` regions, selecting editor profiles, and wiring image widgets in templates.
 
 ### **Website Launch Workflow** (Start Here for New Projects)
 

@@ -107,7 +107,7 @@ optipng -o7 screenshot.png
 6. CDN → [Docs/Installation/SetupWizard-Step5-CDN.md](../../Installation/SetupWizard-Step5-CDN.md)
 7. Review → [Docs/Installation/SetupWizard-Step6-Review.md](../../Installation/SetupWizard-Step6-Review.md)
 
-### Live Editor Series (3 images)
+### Visual Editor Series (3 images)
 1. Dashboard → [Docs/Editors/LiveEditor/QuickStart.md](../../Editors/LiveEditor/QuickStart.md)
 2. Toolbar → [Docs/Editors/LiveEditor/VisualGuide.md](../../Editors/LiveEditor/VisualGuide.md)
 3. Insert Image → [Docs/Editors/LiveEditor/QuickStart.md](../../Editors/LiveEditor/QuickStart.md)

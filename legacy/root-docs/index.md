@@ -36,7 +36,7 @@ audience: [all]
 
 **Start here:** [Content Creator Quick Start](./ContentCreation-QuickStart.md) — Learn the workflow: Layouts → Templates → Pages → Editing
 - **Design:** [Layouts Guide](./Layouts/) · [Page Templates Guide](./Templates/)
-- **Edit:** [Live Editor](./Editors/LiveEditor/) · [Designer](./Editors/Designer/) · [Code Editor](./Editors/CodeEditor/) · [Image Editing](./Editors/ImageEditing/)
+- **Edit:** [Visual Editor](./Editors/LiveEditor/) · [Page Builder](./Editors/Designer/) · [Code Editor](./Editors/CodeEditor/) · [Image Editing](./Editors/ImageEditing/)
 - **Manage:** [File Management](./FileManagement/) · [Publishing & Scheduling](./Editors/PageScheduling.md) · [Blog Management](./blog/BlogPostLifecycle.md)
 
 ---
@@ -177,8 +177,8 @@ audience: [all]
 - [Multi-Tenant](./Configuration/Multi-Tenant-Configuration.md)
 
 ### Content Editing
-- **Live Editor:** [Guide](./Editors/LiveEditor/) | [Quick Start](./Editors/LiveEditor/QuickStart.md) | [Visual Guide](./Editors/LiveEditor/VisualGuide.md)
-- **Designer:** [Guide](./Editors/Designer/) | [Quick Start](./Editors/Designer/QuickStart.md)
+- **Visual Editor:** [Guide](./Editors/LiveEditor/) | [Quick Start](./Editors/LiveEditor/QuickStart.md) | [Visual Guide](./Editors/LiveEditor/VisualGuide.md)
+- **Page Builder:** [Guide](./Editors/Designer/) | [Quick Start](./Editors/Designer/QuickStart.md)
 - **Code Editor:** [Guide](./Editors/CodeEditor/)
 - **Image Editing:** [Guide](./Editors/ImageEditing/)
 - **File Management:** [Guide](./FileManagement/) | [Quick Start](./FileManagement/Quick-Start.md)

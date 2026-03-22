@@ -1,4 +1,4 @@
-﻿<!-- Audience: Backend and Full-Stack Developers -->
+<!-- Audience: Backend and Full-Stack Developers -->
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/03-Creating-Templates.md -->
@@ -356,7 +356,7 @@ In SkyCMS, you mark regions as editable by adding either:
 
 **How it works:**
 - Provides a unique ID for the region
-- Enables rich editing with the Live Editor
+- Enables rich editing with the Visual Editor
 - Required for template update tracking (explained later)
 - More powerful — allows multiple editing modes
 
@@ -382,7 +382,7 @@ When you need editors to create rich content (formatted text, lists, links, imag
 When an editor opens a page using this template:
 - The region with `data-ccms-ceid="main-content"` becomes a full-featured rich text editor
 - They can format text, add images, create lists, embed content
-- The Live Editor toolbar provides all CKEditor tools
+- The Visual Editor toolbar provides all CKEditor tools
 - Content is saved automatically
 
 ### Multiple Editable Regions in One Template
@@ -1323,7 +1323,7 @@ Before moving to Phase 4, verify:
 - [ ] **Templates Tested**
   - Created test pages from each template
   - Editors can click and edit regions
-  - Live Editor works and displays toolbar
+  - Visual Editor works and displays toolbar
   - All formatting options available
   
 - [ ] **Documentation Added**
@@ -1347,7 +1347,7 @@ Before moving to Phase 4, verify:
 
 ## Common Issues and Solutions
 
-### Issue: Editable Region Not Showing in Live Editor
+### Issue: Editable Region Not Showing in Visual Editor
 
 **Cause:** Region ID missing or incorrectly formatted
 **Solution:**

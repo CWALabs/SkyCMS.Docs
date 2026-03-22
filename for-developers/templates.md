@@ -17,6 +17,7 @@ Use this guide when you need to:
 
 - Template hierarchy: [./layouts-templates-articles.md](./layouts-templates-articles.md)
 - Layout implementation: [./layouts.md](./layouts.md)
+- Editable region implementation: [./website-launch/CreatingEditableAreas.md](./website-launch/CreatingEditableAreas.md)
 - Site-builder template guide: [../for-site-builders/templates.md](../for-site-builders/templates.md)
 
 ## What Templates Are
@@ -32,6 +33,20 @@ Examples:
 - Blog/article formats that should stay visually and structurally uniform
 
 In SkyCMS, templates work with layout families and can be applied to one article or many articles.
+
+## Editable region contract
+
+For template HTML, editable regions are the contract between template structure and article content preservation.
+
+Treat these as implementation requirements:
+
+- `data-ccms-ceid` values must be stable across template versions when you want existing content to survive updates.
+- Nested editable regions are invalid and can be rejected by backend validation.
+- `data-editor-config` controls editor profile behavior (`title`, `heading`, `simple`, `standard`, `advanced`, `image-widget`).
+
+Use the full implementation guide for markup patterns and profile behavior details:
+
+- [Creating Editable Areas](./website-launch/CreatingEditableAreas.md)
 
 ## Core Entities Developers Should Know
 

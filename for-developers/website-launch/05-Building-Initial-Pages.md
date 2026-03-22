@@ -1,4 +1,4 @@
-﻿<!-- Audience: Developers, Content Creators -->
+<!-- Audience: Developers, Content Creators -->
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Developer-Guides/05-Building-Initial-Pages.md -->
@@ -262,7 +262,7 @@ Before editing content, set SEO properties:
 #### Step 3: Enter Edit Mode
 
 1. Click **Edit** button (upper-right corner)
-2. Live Editor opens with editable regions
+2. Visual Editor opens with editable regions
 
 #### Step 4: Add Introduction/Hero Section
 
@@ -558,7 +558,7 @@ We'll create an example service page for "Web Design" at `/services/web-design`.
 
 #### Step 3: Add Hero/Introduction
 
-1. Click **Edit** to enter Live Editor
+1. Click **Edit** to enter Visual Editor
 2. Click on hero headline area
 3. Write benefit-focused headline:
    - **Good examples:**
@@ -1387,7 +1387,7 @@ See: [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) *(coming 
 ### SkyCMS Documentation
 
 - [Creating Pages](../ContentCreation-QuickStart.md)
-- [Live Editor Guide](../Editors/LiveEditor/README.md)
+- [Visual Editor Guide](../Editors/LiveEditor/README.md)
 - [Templates Guide](../Templates/)
 - [File Manager](../FileManagement/index.md)
 - [SkyCMS Official Docs](https://www.moonrise.net/cosmos/documentation/)

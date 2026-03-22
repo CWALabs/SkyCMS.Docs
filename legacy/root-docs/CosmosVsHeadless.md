@@ -89,7 +89,7 @@ The typical JAMstack workflow involves:
 
 SkyCMS eliminates the entire pipeline by integrating all capabilities into a single platform:
 
-1. **Content created in CMS interface** (WYSIWYG, visual designer, or code editor)
+1. **Content created in CMS interface** (WYSIWYG, page builder, or code editor)
 2. **Automatic trigger on publish** (built into the system)
 3. **Direct rendering by Publisher component** (no external generator)
 4. **Instant deployment to cloud storage** (Azure, AWS, Cloudflare)
@@ -173,7 +173,7 @@ This integrated approach delivers the same benefits as JAMstack (speed, scale, s
 **SkyCMS Solution**: Provides integrated, best-in-class editing tools:
 
 - **CKEditor 5**: WYSIWYG editing with Word-like interface
-- **GrapesJS**: Visual page designer with drag-and-drop
+- **GrapesJS**: Page Builder with drag-and-drop
 - **Monaco Editor**: Code editor for developers
 - **Filerobot**: Integrated image editor
 - **Live preview**: See changes in context before publishing

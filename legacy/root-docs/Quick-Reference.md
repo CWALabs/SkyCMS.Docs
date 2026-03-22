@@ -24,14 +24,14 @@ One-page visual summary of SkyCMS features, workflow, and comparisons.
 
 ## Core Workflow {#quick-reference-workflow-diagram}
 
-![SkyCMS workflow: Developer creates layouts/templates, Content Creator uses Live Editor, Publish goes live in <5 seconds](images/screenshots/quick-reference-workflow-diagram.webp)
+![SkyCMS workflow: Developer creates layouts/templates, Content Creator uses Visual Editor, Publish goes live in <5 seconds](images/screenshots/quick-reference-workflow-diagram.webp)
 
 *Visual workflow showing collaboration between developers and content creators through SkyCMS*
 
 ```
 Developer                          Content Creator
      ↓                                    ↓
-Create Layouts ──────→ Publish to SkyCMS ←──── Use Live Editor
+Create Layouts ──────→ Publish to SkyCMS ←──── Use Visual Editor
 Create Templates ────→ (WYSIWYG + Visual) ←──── Create Pages
                             ↓
                       [Preview Draft]
@@ -155,7 +155,7 @@ Budget-conscious?
    └─ Page-type blueprints with editable regions
    
 5. Publish Pages
-   └─ Content creators use Live Editor to build pages
+   └─ Content creators use Visual Editor to build pages
 ```
 
 **Time to first page:** 15-30 min (with planning)  
