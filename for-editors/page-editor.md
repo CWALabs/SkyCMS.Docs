@@ -63,4 +63,5 @@ Advanced editing operations:
 - [Page Editor Quick Start](./page-editor-quickstart.md)
 - [Page Editor Visual Guide](./page-editor-visual-guide.md)
 - [Page Editor Technical Reference](./page-editor-technical-reference.md)
+- [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md)
 - [Scheduling Pages](./page-scheduling.md)

@@ -7,6 +7,35 @@
 
 This guide explains what editors should expect to see in the Page Editor interface.
 
+## Open and Navigate the Editor
+
+### From the page you want to edit
+
+The quickest way to open the Visual Editor is directly from the page itself:
+
+1. Navigate to the page on the website while logged in.
+2. The SkyCMS navigation bar appears at the top of the page.
+3. Click **Edit** in the navigation bar. A dropdown loads with the available editors for that page.
+4. Click **Visual Editor** to open the Page Editor.
+
+> **Note:** **Visual Editor** only appears in the dropdown if the page template has rich-text editing enabled. If you see only **Page Builder** and **Code Editor**, the Visual Editor is not available for that page. Contact your site administrator if you need it enabled.
+
+### From the Pages list
+
+You can also reach the Visual Editor through the content management menu:
+
+1. In the SkyCMS navigation bar, click **Menu** and choose **Pages**.
+2. Locate the page you want to edit and open it.
+3. Click **Versions** to open the version history for that page.
+4. In the button group at the top of the Versions page, click **Visual Editor**.
+   - If the button is greyed out and disabled, the Visual Editor is not enabled for that page template.
+
+### Role access
+
+- **Administrators** and **Editors** can access all editor types.
+- **Authors** can access the Visual Editor where it is enabled.
+- **Reviewers** do not have access to any editor — the **Edit** dropdown is not shown for reviewer accounts.
+
 ## Main Zones
 
 - Top toolbar: formatting, insert, and publish actions.
@@ -45,3 +74,4 @@ This guide explains what editors should expect to see in the Page Editor interfa
 
 - [Page Editor](./page-editor.md)
 - [Page Editor Technical Reference](./page-editor-technical-reference.md)
+- [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md)

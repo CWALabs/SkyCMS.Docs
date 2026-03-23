@@ -42,6 +42,7 @@ Editors typically:
 4. **Content editing**:
    - [Using the page editor](./page-editor.md)
    - [Page editor quick start](./page-editor-quickstart.md)
+   - [Page editor toolbar reference](./page-editor-toolbar-reference.md)
    - [Page builder](./page-builder.md)
    - [Page builder quick start](./page-builder-quickstart.md)
    - [Code editor](./code-editor.md)
