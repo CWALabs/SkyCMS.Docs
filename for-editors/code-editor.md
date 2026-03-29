@@ -103,9 +103,25 @@ If a change causes issues:
 | Alt+Shift+Down | Add cursor below |
 | Alt+Shift+Up | Add cursor above |
 
+## Copilot inline assistance
+
+The code editor supports AI-powered inline completions. When configured and enabled by an administrator, the editor displays ghost-text suggestions as you type; press **Tab** to accept the current suggestion.
+
+The feature activates automatically at page load if the server is configured — no manual toggle is required.
+
+- Inline completions are context-aware: the model receives the current language, the text before the cursor, and a small window of text after the cursor.
+- Pressing **Tab** accepts the suggestion. Continuing to type dismisses it.
+- If the server is temporarily unreachable at load time, the editor retries quietly and continues to function normally without completions.
+
+For setup instructions and field descriptions, see [Copilot Setup](./code-editor-copilot-setup.md).
+
+For diagnosing issues, see [Copilot Troubleshooting](./code-editor-copilot-troubleshooting.md).
+
 ## Related guides
 
 - [File Manager](./file-manager.md)
 - [File Manager Quick Start](./file-manager-quickstart.md)
 - [Page Editor](./page-editor.md)
 - [Image Editing](./image-editing.md)
+- [Copilot Setup](./code-editor-copilot-setup.md)
+- [Copilot Troubleshooting](./code-editor-copilot-troubleshooting.md)
