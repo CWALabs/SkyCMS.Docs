@@ -87,7 +87,7 @@ Ensure smooth handoff to content creators:
 
 ### **Monthly Maintenance Tasks**
 
-[Complete checklist →](../Checklists/Monthly-Maintenance.md)
+*Complete checklist — coming soon*
 
 Ongoing maintenance after launch:
 
@@ -97,7 +97,7 @@ Ongoing maintenance after launch:
 
 - Typography and fonts
 
-[Get template →](../Templates/Style-Guide-Template.md)
+[Get template →](../../for-site-builders/style-guide-template.md)
 
 - Image guidelines
 - Tone of voice
@@ -106,14 +106,14 @@ Ongoing maintenance after launch:
 
 Build a training guide for content creators:
 
-• Customize the [Training Document Template](../Templates/Training-Document-Template.md)
+• Customize the [Training Document Template](../../reference/training-template.md)
 **Use by:** New content creators (during onboarding)
 
 ---
 
 ### **Content Workflow Template**
 
-[Get template →](../Templates/Content-Workflow-Template.md)
+[Get template →](../../reference/content-workflow-template.md)
 
 Document your content approval process:
 
@@ -142,7 +142,7 @@ Document your content approval process:
 
 ### **Scenario 3: "I need to train a content creator"**
 
-→ Use [Training Document Template](../Templates/Training-Document-Template.md) with [Phase 6 Guide](./06-Preparing-for-Handoff.md)
+→ Use [Training Document Template](../../reference/training-template.md) with [Phase 6 Guide](./06-Preparing-for-Handoff.md)
 
 ### **Scenario 4: "I'm about to launch and want to verify everything"**
 
@@ -150,11 +150,11 @@ Document your content approval process:
 
 ### **Scenario 5: "I'm setting up content workflows for my team"**
 
-→ Use [Content Workflow Template](../Templates/Content-Workflow-Template.md)
+→ Use [Content Workflow Template](../../reference/content-workflow-template.md)
 
 ### **Scenario 6: "I need to maintain the site after launch"**
 
-→ Use [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md)
+→ Monthly Maintenance Tasks *(coming soon)*
 
 ---
 
@@ -201,10 +201,10 @@ Visitors see → Published pages with layouts applied
 
 Before using these guides, you should have:
 
-- ✅ SkyCMS installed and running (see [Installation](../Installation/README.md))
+- ✅ SkyCMS installed and running (see [Installation](../../installation/overview.md))
 - ✅ Administrator account created
 - ✅ Database and storage configured
-- ✅ Publisher verified (see [Post-Installation](../Installation/Post-Installation.md))
+- ✅ Publisher verified (see [Post-Installation](../../installation/post-installation.md))
 - ✅ Access to editor interface (`/Editor`)
 
 ---
@@ -213,25 +213,25 @@ Before using these guides, you should have:
 
 ### **Installation & Setup**
 
-- [Installation Overview](../Installation/README.md) - Getting SkyCMS running
-- [Setup Wizard](../Installation/SetupWizard.md) - Initial configuration
-- [Post-Installation](../Installation/Post-Installation.md) - After wizard
+- [Installation Overview](../../installation/overview.md) - Getting SkyCMS running
+- [Setup Wizard](../../installation/setup-wizard.md) - Initial configuration
+- [Post-Installation](../../installation/post-installation.md) - After wizard
 
 ### **SkyCMS Architecture**
 
-- [Startup Lifecycle](../Architecture/Startup-Lifecycle.md) - How SkyCMS starts
-- [Middleware Pipeline](../Architecture/Middleware-Pipeline.md) - Request processing
+- [Startup Lifecycle](../architecture.md) - How SkyCMS starts
+- [Middleware Pipeline](../middleware-pipeline.md) - Request processing
 
 ### **Core Documentation**
 
-- [Layouts Guide](../Layouts/) - In-depth layout reference
-- [Templates Guide](../Templates/) - In-depth template reference
+- [Layouts Guide](../../for-site-builders/layouts.md) - In-depth layout reference
+- [Templates Guide](../../for-site-builders/templates.md) - In-depth template reference
 - [Role-Based Access Control](../roles-and-permissions.md) - User roles and permissions
 
 ### **Advanced Topics**
 
-- [Multi-Tenant Configuration](../Configuration/Multi-Tenant-Configuration.md) - Multiple sites on one instance
-- [Troubleshooting](../Troubleshooting.md) - Common issues and solutions
+- [Multi-Tenant Configuration](../../configuration/multi-tenancy.md) - Multiple sites on one instance
+- [Troubleshooting](../../reference/troubleshooting.md) - Common issues and solutions
 
 ---
 
@@ -241,11 +241,11 @@ Before using these guides, you should have:
 
 - Review the phase-specific guide again
 - Check the "Common Pitfalls" section
-- See [Troubleshooting](../Troubleshooting.md)
+- See [Troubleshooting](../../reference/troubleshooting.md)
 
 ### **I need to train content creators**
 
-- Customize the [Training Document Template](../Templates/Training-Document-Template.md)
+- Customize the [Training Document Template](../../reference/training-template.md)
 - Reference the [Phase 6: Preparing for Handoff](./06-Preparing-for-Handoff.md) guide
 
 ### **I need to set up permissions**
@@ -255,7 +255,7 @@ Before using these guides, you should have:
 
 ### **Something's broken**
 
-- Check [Troubleshooting](../Troubleshooting.md)
+- Check [Troubleshooting](../../reference/troubleshooting.md)
 - Review the specific phase guide where the issue occurs
 
 ---

@@ -752,10 +752,10 @@ All team members need training on:
 
 ### Resources
 
-- [Brand Style Guide](./Style-Guide-Template.md)
-- [Content Guidelines](./Content-Workflow-Template.md)
+- [Brand Style Guide](../for-site-builders/style-guide-template.md)
+- [Content Guidelines](content-workflow-template.md)
 - [SkyCMS Documentation](../index.md)
-- [Content Examples](./Content-Workflow-Template.md)
+- [Content Examples](content-workflow-template.md)
 
 ---
 

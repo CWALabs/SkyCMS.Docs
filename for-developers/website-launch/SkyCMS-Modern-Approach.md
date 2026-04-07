@@ -52,8 +52,8 @@ A practical overview of how SkyCMS facilitates modern website development: modul
 
 ## Where to Start
 - Read the [Website Launch Workflow](./Website-Launch-Workflow.md) for the end-to-end roadmap.
-- Use the [Training Document Template](../Templates/Training-Document-Template.md) to onboard content creators.
-- Adopt the [Content Workflow Template](../Templates/Content-Workflow-Template.md) to codify approvals.
+- Use the [Training Document Template](../../reference/training-template.md) to onboard content creators.
+- Adopt the [Content Workflow Template](../../reference/content-workflow-template.md) to codify approvals.
 
 ---
 

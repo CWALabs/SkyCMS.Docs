@@ -541,9 +541,9 @@ A: [Recommended frequency and why]
 ### Documentation
 
 - [Full System Documentation](../index.md)
-- [Feature Reference Guide](../Quick-Reference.md)
+- [Feature Reference Guide](glossary.md)
 - [Administrator Manual](../for-developers/roles-and-permissions.md)
-- [Developer Documentation](../Developer-Guides/README.md)
+- [Developer Documentation](../for-developers/overview.md)
 
 ### External Resources
 

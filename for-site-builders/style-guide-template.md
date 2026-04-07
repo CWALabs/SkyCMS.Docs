@@ -687,10 +687,10 @@ All web content must meet WCAG 2.1 Level AA standards:
 
 ### Related Documentation
 
-- [SkyCMS Templates Guide](../Templates/)
-- [SkyCMS Layouts Documentation](../Layouts/)
-- [Phase 2: Creating Layouts](../Developer-Guides/02-Creating-Layouts.md)
-- [Phase 3: Creating Templates](../Developer-Guides/03-Creating-Templates.md)
+- [SkyCMS Templates Guide](templates.md)
+- [SkyCMS Layouts Documentation](layouts.md)
+- [Phase 2: Creating Layouts](../for-developers/website-launch/02-Creating-Layouts.md)
+- [Phase 3: Creating Templates](../for-developers/website-launch/03-Creating-Templates.md)
 
 ### Contact Information
 

@@ -535,8 +535,8 @@ Emergency: Use contact form for urgent issues
 
 ### Help Resources
 ---
- [Quick Start Guide](../QuickStart.md)
- [FAQ](../FAQ.md)
+ [Quick Start Guide](../../getting-started/quick-start.md)
+ [FAQ](../../reference/faq.md)
 
 Effective training ensures your team feels confident using SkyCMS.
 
@@ -1289,12 +1289,12 @@ Before considering handoff complete:
 **Related Checklists:**
 - [Pre-Launch Checklist](./Checklists/Pre-Launch-Checklist.md) *(coming soon)*
 - [Content Creator Onboarding](./Checklists/Content-Creator-Onboarding.md) *(coming soon)*
-- [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) *(coming soon)*
+- Monthly Maintenance Tasks *(coming soon)*
 
 **Related Templates:**
-- [Style Guide Template](../Templates/Style-Guide-Template.md) *(coming soon)*
-- [Training Document Template](../Templates/Training-Document-Template.md) *(coming soon)*
-- [Content Workflow Template](../Templates/Content-Workflow-Template.md) *(coming soon)*
+- [Style Guide Template](../../for-site-builders/style-guide-template.md) *(coming soon)*
+- [Training Document Template](../../reference/training-template.md) *(coming soon)*
+- [Content Workflow Template](../../reference/content-workflow-template.md) *(coming soon)*
 
 **Main Guides:**
 - [Phase 1: Design & Planning](01-Design-and-Planning.md)

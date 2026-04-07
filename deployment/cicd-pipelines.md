@@ -197,4 +197,4 @@ To trigger manually:
 
 - [Demo Deployment](demo-deployment.md) — One-command Azure demo provisioning
 - [Docker Deployment](docker.md) — Docker Compose for local and production use
-- [Cloudflare Edge Hosting](cloudflare-edge-hosting.md) — R2 storage and CDN deployment
+- [Cloudflare Edge Hosting](cloudflare.md) — R2 storage and CDN deployment

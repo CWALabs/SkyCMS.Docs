@@ -105,7 +105,7 @@ The **SkyCMS.DocsPublisher** project provides a CLI/pipeline tool for bulk-impor
 3. Each file's relative path becomes its `SourceKey` for upsert matching.
 4. Subsequent runs update existing pages rather than creating duplicates.
 
-See the [DocsPublisher Quick Start](../../DocsPublisher/QUICK_START.md) for setup instructions.
+See the [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublisher/blob/main/QUICK_START.md) for setup instructions.
 
 ---
 

@@ -1370,7 +1370,7 @@ After launch:
 - **Update plugins/CMS** (security and features)
 - **Review and refine** (iterative improvements)
 
-See: [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) *(coming soon)*
+See: Monthly Maintenance Tasks *(coming soon)*
 
 ---
 
@@ -1386,10 +1386,10 @@ See: [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) *(coming 
 
 ### SkyCMS Documentation
 
-- [Creating Pages](../ContentCreation-QuickStart.md)
-- [Visual Editor Guide](../Editors/LiveEditor/README.md)
-- [Templates Guide](../Templates/)
-- [File Manager](../FileManagement/index.md)
+- [Creating Pages](../../getting-started/quick-start.md)
+- [Visual Editor Guide](../../for-editors/page-editor.md)
+- [Templates Guide](../../for-site-builders/templates.md)
+- [File Manager](../../for-editors/file-manager.md)
 - [SkyCMS Official Docs](https://www.moonrise.net/cosmos/documentation/)
 
 ### Content Writing Resources

@@ -220,9 +220,9 @@ Content creators typically need 1-2 hours to get productive.
 ### Where do I start?
 
 1. **[Website Launch Workflow](../for-developers/website-launch/Website-Launch-Workflow.md)** — 6-phase roadmap
-2. **[Learning Paths](../legacy/root-docs/LEARNING_PATHS.md)** — Role-based guided journey
-3. **[Comparisons](../legacy/root-docs/Comparisons.md)** — Decision framework
-4. **[Developer Experience Comparison](../legacy/root-docs/Developer-Experience-Comparison.md)** — Workflow deep-dive
+2. **[Getting Started](../getting-started/quick-start.md)** — Quick start guide
+3. **[Key Concepts](../getting-started/key-concepts.md)** — Core concepts and architecture
+4. **[What is SkyCMS?](../getting-started/what-is-skycms.md)** — Overview and comparisons
 
 ### What are the prerequisites?
 
@@ -245,7 +245,7 @@ Yes. SkyCMS is free and open source. Deploy it locally or to a cloud provider to
 
 ### Where can I get help?
 
-- **Documentation:** [SkyCMS Docs](../README.md)
+- **Documentation:** [SkyCMS Docs](../index.md)
 - **GitHub:** https://github.com/CWALabs/SkyCMS
 - **Issues:** Report bugs on GitHub Issues
 - **Community:** Check GitHub Discussions for community support
@@ -290,10 +290,10 @@ Yes! SkyCMS is open source (GPL 2.0). Contributions are welcome:
 
 ## See Also
 
-- [Comparisons Matrix](../legacy/root-docs/Comparisons.md) — Feature and cost comparison
-- [Developer Experience Comparison](../legacy/root-docs/Developer-Experience-Comparison.md) — Workflow details
+- [What is SkyCMS?](../getting-started/what-is-skycms.md) — Feature overview and comparisons
+- [Key Concepts](../getting-started/key-concepts.md) — Architecture and workflow details
 - [Website Launch Workflow](../for-developers/website-launch/Website-Launch-Workflow.md) — Getting started
-- [SkyCMS & Modern Approach](./Developer-Guides/SkyCMS-Modern-Approach.md) — Philosophy
+- [SkyCMS & Modern Approach](../for-developers/website-launch/SkyCMS-Modern-Approach.md) — Philosophy
 
 ---
 

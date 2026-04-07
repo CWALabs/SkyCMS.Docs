@@ -245,7 +245,7 @@ Common issues and solutions for SkyCMS setup, configuration, and operation.
 **Solutions:**
 - Verify user account exists in database
 - For first-time setup, the first user is created during the wizard
-- Reset password through database (consult [Identity Framework docs](../legacy/root-docs/Authentication-Overview.md))
+- Reset password through database (consult [Authentication docs](../for-editors/authentication.md))
 - Verify user has appropriate roles (Editor, Admin, etc.)
 
 ### "Cannot create new users"
@@ -271,7 +271,7 @@ Common issues and solutions for SkyCMS setup, configuration, and operation.
 - Origin database is slow
 
 **Solutions:**
-- Verify CDN is configured (see [CDN Integration Overview](./Configuration/CDN-Overview.md))
+- Verify CDN is configured (see [CDN Integration Overview](../configuration/cdn/overview.md))
 - Check CDN cache hit ratio in provider dashboard
 - Enable cache headers on static assets
 - Review database query performance; optimize slow queries

@@ -141,7 +141,7 @@ Multi-tenant isolation is validated by integration tests:
 
 ## See Also
 
-- [Multi-Tenancy Configuration](../../configuration/multi-tenancy.md) — Setup guide
+- [Multi-Tenancy Configuration](../configuration/multi-tenancy.md) — Setup guide
 - [Multi-Tenancy Deep Dive](multi-tenancy-deep-dive.md) — Architecture overview
 - [Publisher Architecture](publisher-architecture.md) — How the publisher handles multi-tenancy
 - [EF Cross-Provider Guide](ef-cross-provider-guide.md) — Database compatibility

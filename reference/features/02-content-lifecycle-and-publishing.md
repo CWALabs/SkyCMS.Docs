@@ -189,7 +189,7 @@ SkyCMS supports multiple publishing strategies to fit different team sizes and d
 
 ## 7. Content Export & Import
 
-> **Documentation:** [Content Export & Import Guide](../../for-editors/content-export-import.md) · [DocsPublisher Quick Start](../../../SkyCMS.DocsPublisher/QUICK_START.md)
+> **Documentation:** [Content Export & Import Guide](../../for-editors/content-export-import.md) · [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublisher/blob/main/QUICK_START.md)
 
 ### Page Export
 

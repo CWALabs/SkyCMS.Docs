@@ -46,7 +46,7 @@ This workflow is **iterative** - you may loop back to earlier phases as you disc
 - Technical leads making architecture decisions
 
 **NOT for:**
-- Content creators (see [Content Creator Training Guide](../Templates/Training-Document-Template.md) instead)
+- Content creators (see [Content Creator Training Guide](../../reference/training-template.md) instead)
 - End-users managing the site post-launch
 - System administrators managing SkyCMS infrastructure
 
@@ -54,14 +54,14 @@ This workflow is **iterative** - you may loop back to earlier phases as you disc
 
 Before starting this workflow, you should have:
 
-- ✅ SkyCMS running and initialized (follow [Setup Wizard](../Installation/SetupWizard.md) first)
+- ✅ SkyCMS running and initialized (follow [Setup Wizard](../../installation/setup-wizard.md) first)
 - ✅ Access to the editor interface (`/Editor`)
 - ✅ Administrator account created
 - ✅ Database and storage configured
-- ✅ Publisher verified and working (see [Post-Installation](../Installation/Post-Installation.md))
+- ✅ Publisher verified and working (see [Post-Installation](../../installation/post-installation.md))
 
 **If you haven't completed these, start here:**
-→ [Installation Overview](../Installation/README.md)
+→ [Installation Overview](../../installation/overview.md)
 
 ## The 6-Phase Workflow
 
@@ -518,12 +518,12 @@ Each phase has a detailed guide with step-by-step instructions:
 ### **Checklists**
 - [Pre-Launch Checklist](./Checklists/Pre-Launch-Checklist.md) - Final verification before launch
 - [Content Creator Onboarding](./Checklists/Content-Creator-Onboarding.md) - Handoff verification
-- [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) - Ongoing upkeep
+- Monthly Maintenance Tasks *(coming soon)* - Ongoing upkeep
 
 ### **Templates**
-- [Style Guide Template](../Templates/Style-Guide-Template.md) - For documenting brand guidelines
-- [Training Document Template](../Templates/Training-Document-Template.md) - For training content creators
-- [Content Workflow Template](../Templates/Content-Workflow-Template.md) - For mapping approval processes
+- [Style Guide Template](../../for-site-builders/style-guide-template.md) - For documenting brand guidelines
+- [Training Document Template](../../reference/training-template.md) - For training content creators
+- [Content Workflow Template](../../reference/content-workflow-template.md) - For mapping approval processes
 
 ## Next Steps
 
@@ -537,16 +537,16 @@ Jump to [Phase 2: Creating Layouts](./02-Creating-Layouts.md)
 
 **Need to understand SkyCMS first?**
 
-Read [SkyCMS Architecture Overview](../Architecture/Startup-Lifecycle.md)
+Read [SkyCMS Architecture Overview](../architecture.md)
 
 ## Related Documentation
 
-- [Setup Wizard](../Installation/SetupWizard.md) - Initial installation
-- [Post-Installation](../Installation/Post-Installation.md) - After wizard completes
-- [Layouts Guide](../Layouts/) - In-depth layout documentation
-- [Templates Guide](../Templates/) - In-depth template documentation
+- [Setup Wizard](../../installation/setup-wizard.md) - Initial installation
+- [Post-Installation](../../installation/post-installation.md) - After wizard completes
+- [Layouts Guide](../../for-site-builders/layouts.md) - In-depth layout documentation
+- [Templates Guide](../../for-site-builders/templates.md) - In-depth template documentation
 - [Role-Based Access Control](../roles-and-permissions.md) - Setting up user roles
-- [Content Creator Training](../Templates/Training-Document-Template.md) - Training your team
+- [Content Creator Training](../../reference/training-template.md) - Training your team
 
 ## FAQ
 
@@ -563,7 +563,7 @@ A: Use placeholder content in phases 4-5, replace with real content later. Focus
 A: You can do it solo as a developer, but involving content strategists and designers makes phases 1-3 faster and better.
 
 **Q: What happens after launch?**
-A: Use [Monthly Maintenance Tasks](../Checklists/Monthly-Maintenance.md) to keep the site healthy. Content creators add new pages using templates you created.
+A: Use Monthly Maintenance Tasks to keep the site healthy. Content creators add new pages using templates you created.
 
 **Q: How do I add new page types after launch?**
 A: Create new templates following [Phase 3 guide](./03-Creating-Templates.md), then train content creators on the new template.

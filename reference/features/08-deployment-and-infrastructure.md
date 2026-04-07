@@ -190,7 +190,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 
 ## 7. Demo Deployment
 
-> **Documentation:** [Demo Deployment Guide](../../deployment/demo-deployment.md) · [SkyCMS.Demo README](../../../SkyCMS.Demo/README.md)
+> **Documentation:** [Demo Deployment Guide](../../deployment/demo-deployment.md) · [SkyCMS.Demo README](https://github.com/CWALabs/SkyCMS.Demo)
 
 ### Automated Demo Provisioning (SkyCMS.Demo)
 
@@ -218,7 +218,7 @@ PowerShell + Bicep automation for one-command demo site deployment to Azure.
 
 ## 8. Documentation Publishing (DocsPublisher)
 
-> **Documentation:** [DocsPublisher Installation](../../installation/docs-publisher.md) · [DocsPublisher README](../../../SkyCMS.DocsPublisher/README.md) · [DocsPublisher Quick Start](../../../SkyCMS.DocsPublisher/QUICK_START.md)
+> **Documentation:** [DocsPublisher Installation](../../installation/docs-publisher.md) · [DocsPublisher README](https://github.com/CWALabs/SkyCMS.DocsPublisher) · [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublisher/blob/main/QUICK_START.md)
 
 ### Markdown-to-CMS Pipeline
 

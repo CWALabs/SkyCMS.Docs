@@ -188,7 +188,7 @@ Blog queries follow the project-wide Cosmos DB compatibility rules:
 
 ## See Also
 
-- [Blogging Guide (Editors)](../../for-editors/blogging.md) — Editor-facing guide
+- [Blogging Guide (Editors)](../for-editors/blogging.md) — Editor-facing guide
 - [Blog API Reference](api/blog-api.md) — JSON endpoints
 - [Architecture](architecture.md) — Overall application architecture
 - [Article Lifecycle](article-lifecycle.md) — Article states and transitions

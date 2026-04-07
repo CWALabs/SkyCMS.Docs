@@ -590,15 +590,14 @@ When replacing or removing pages, set up redirects:
 
 ## See Also
 
-- **[Blog Post Lifecycle](./blog/BlogPostLifecycle.md)** - Creating and publishing blog posts
-- **[Page Scheduling](./Editors/PageScheduling.md)** - Schedule pages for automatic publication
-- **[CDN Configuration](./Configuration/CDN-Overview.md)** - Cache purging on publish
-- **[Authentication & Authorization](./Authentication-Overview.md)** - Access control and permissions
-- **[LEARNING_PATHS: Content Editor](./LEARNING_PATHS.md#content-editor-non-technical)** - Content creation guide
-- **[LEARNING_PATHS: DevOps](./LEARNING_PATHS.md#devops--system-administrator)** - Publishing workflow setup
-- **[QuickStart: Publishing Content](./QuickStart.md)** - Quick reference
-- **[Troubleshooting Guide](./Troubleshooting.md)** - Publishing issues and solutions
-- **[Main Documentation Hub](./index.md)** - Browse all documentation
+- **[Blog Post Lifecycle](../for-editors/blogging.md)** - Creating and publishing blog posts
+- **[Page Scheduling](../for-editors/page-scheduling.md)** - Schedule pages for automatic publication
+- **[CDN Configuration](../configuration/cdn/overview.md)** - Cache purging on publish
+- **[Authentication & Authorization](../for-editors/authentication.md)** - Access control and permissions
+- **[Content Editor Guide](../for-editors/overview.md)** - Content creation guide
+- **[Quick Start](../getting-started/quick-start.md)** - Getting started with SkyCMS
+- **[Troubleshooting Guide](../reference/troubleshooting.md)** - Publishing issues and solutions
+- **[Main Documentation Hub](../index.md)** - Browse all documentation
 
 ---
 
