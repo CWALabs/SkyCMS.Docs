@@ -14,7 +14,7 @@ SkyCMS supports multiple deployment targets and hosting models — from one-clic
 - [Email Provider Configuration](#6-email-provider-configuration)
 - [Demo Deployment](#7-demo-deployment)
 - [Documentation Publishing (DocsPublisher)](#8-documentation-publishing-docspublisher)
-- [CI/CD & DevOps](#9-cicd--devops)
+- [CI/CD & DevOps](#9-cicd-devops)
 - [Licensing](#10-licensing)
 
 ---

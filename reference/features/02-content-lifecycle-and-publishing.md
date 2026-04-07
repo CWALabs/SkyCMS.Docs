@@ -11,10 +11,10 @@ SkyCMS provides a structured content lifecycle from draft creation through publi
 - [Publishing](#3-publishing)
 - [Scheduled Publishing](#4-scheduled-publishing)
 - [Publishing Modes](#5-publishing-modes)
-- [URL & Path Management](#6-url--path-management)
-- [Content Export & Import](#7-content-export--import)
+- [URL & Path Management](#6-url-path-management)
+- [Content Export & Import](#7-content-export-import)
 - [CDN Integration](#8-cdn-integration)
-- [Preload & Performance](#9-preload--performance)
+- [Preload & Performance](#9-preload-performance)
 - [Publishing Progress](#10-publishing-progress)
 
 ---

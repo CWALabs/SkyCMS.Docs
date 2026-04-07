@@ -7,12 +7,12 @@ SkyCMS provides comprehensive administration tools for user management, role-bas
 **Jump to:**
 
 - [User Management](#1-user-management)
-- [Roles & Permissions](#2-roles--permissions)
+- [Roles & Permissions](#2-roles-permissions)
 - [Site Settings](#3-site-settings)
 - [Email Administration](#4-email-administration)
 - [Contact Management](#5-contact-management)
 - [Security Features](#6-security-features)
-- [Audit & Logging](#7-audit--logging)
+- [Audit & Logging](#7-audit-logging)
 
 ---
 
