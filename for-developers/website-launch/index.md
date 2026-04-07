@@ -11,7 +11,6 @@ Use this section for a structured phase-based launch path.
 
 ## Start Here
 
-- [Developer Guides Overview](./README.md)
 - [Website Launch Workflow Guide](./Website-Launch-Workflow.md)
 - [Creating Editable Areas](./CreatingEditableAreas.md)
 
