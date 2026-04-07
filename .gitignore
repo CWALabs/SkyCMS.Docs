@@ -1,5 +1,30 @@
+# MkDocs build output
 site/
-.cache/
+../_skycms_docs_site/
+../_skycms_local_site/
+
+# Python cache
 __pycache__/
+*.py[cod]
+*$py.class
+.cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# Jekyll (legacy)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler (legacy)
+vendor/
+.bundle/

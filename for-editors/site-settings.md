@@ -1,0 +1,124 @@
+# Site Settings
+
+Guide to configuring site-level settings from the SkyCMS admin dashboard.
+
+**Audience:** Administrators
+
+---
+
+## Accessing Site Settings
+
+Navigate to **Editor → Settings** from the sidebar. Site settings are restricted to users with the **Administrator** role.
+
+---
+
+## General Editor Settings
+
+The main settings page controls core editor behavior:
+
+| Setting | Description |
+|---------|-------------|
+| **Allow Setup** | Enable/disable the setup wizard. Should be turned off in production. Read-only in multi-tenant mode. |
+| **Static Web Pages** | Toggle between dynamic rendering (server-side) and static site mode (pre-generated HTML). |
+| **Requires Authentication** | When enabled, the published site requires user authentication to access. |
+| **Publisher URL** | The public-facing website URL (e.g., `https://www.example.com`). |
+| **Blob Public URL** | CDN or storage URL for serving static assets (images, CSS, JS). |
+
+Click **Save** to apply changes. Some settings may require an application restart to take effect.
+
+---
+
+## CDN Configuration
+
+Navigate to **Settings → CDN** to configure content delivery network integration. SkyCMS supports four CDN providers, configured one at a time.
+
+### Cloudflare
+
+| Field | Description |
+|-------|-------------|
+| **API Token** | Cloudflare API token with Zone:Cache Purge permissions |
+| **Zone ID** | Your Cloudflare zone identifier |
+
+### Azure CDN / Azure Front Door
+
+| Field | Description |
+|-------|-------------|
+| **Is Azure Front Door** | Toggle: select Azure CDN or Azure Front Door |
+| **Subscription ID** | Azure subscription GUID |
+| **Resource Group** | Azure resource group name |
+| **Profile Name** | CDN profile or Front Door name |
+| **Endpoint Name** | CDN endpoint or Front Door endpoint |
+
+### Amazon CloudFront
+
+| Field | Description |
+|-------|-------------|
+| **Distribution ID** | CloudFront distribution identifier |
+| **Access Key ID** | AWS IAM access key |
+| **Secret Access Key** | AWS IAM secret key |
+| **Region** | AWS region (dropdown: us-east-1, eu-west-1, ap-northeast-1, etc.) |
+
+### Sucuri
+
+| Field | Description |
+|-------|-------------|
+| **API Key** | Sucuri API key |
+| **API Secret** | Sucuri API secret |
+
+### CDN Actions
+
+- **Test Connection** — Verify that the configured CDN credentials are valid.
+- **Remove** — Clear all CDN settings. Publishing will continue without CDN cache purge.
+
+> **Note:** CDN cache purge happens automatically on content publish. If the purge fails, publishing still completes — the failure is logged but does not block content delivery.
+
+---
+
+## Copilot Configuration
+
+Navigate to **Settings → Copilot** to configure the AI assistant integration in the code editor.
+
+### Provider Presets
+
+Select a preset to auto-fill endpoint and model settings:
+
+| Preset | Endpoint | Description |
+|--------|----------|-------------|
+| **Custom** | User-provided | Any OpenAI-compatible API |
+| **Copilot (GitHub Models)** | `https://models.inference.ai.azure.com` | GitHub Models API |
+| **OpenAI** | `https://api.openai.com/v1` | OpenAI direct API |
+| **Azure AI** | User-provided | Azure OpenAI Service endpoint |
+
+### Settings
+
+| Field | Range | Description |
+|-------|-------|-------------|
+| **Enabled** | on/off | Toggle Copilot availability for all editors |
+| **Endpoint URL** | URL | AI model API endpoint |
+| **Model** | text | Model identifier (e.g., `gpt-4o`, `gpt-3.5-turbo`) |
+| **Access Token** | text | API key or token (stored encrypted in settings table) |
+| **Timeout** | 1000–60000 ms | Request timeout in milliseconds |
+| **Temperature** | 0–2 | Creativity parameter (lower = more deterministic) |
+| **Max Tokens** | 16–1024 | Maximum response length |
+
+### Actions
+
+- **Save** — Apply Copilot settings.
+- **Remove** — Disable and clear all Copilot settings.
+
+> **Tip:** Settings are per-tenant in multi-tenant deployments. Each site can have its own Copilot configuration.
+
+---
+
+## Settings Storage
+
+Settings are stored in the application database under a group key (e.g., `EDITORSETTINGS`). In multi-tenant deployments, settings are isolated per tenant. Settings can be overridden by environment variables at deployment time.
+
+---
+
+## See Also
+
+- [Configuration Overview](../configuration/overview.md) — Full configuration reference
+- [CDN Overview](../configuration/cdn/overview.md) — Detailed CDN provider setup
+- [Code Editor Copilot Setup](code-editor-copilot-setup.md) — Copilot user guide
+- [Proxy Settings](../configuration/proxy-settings.md) — Reverse proxy and CDN header configuration
