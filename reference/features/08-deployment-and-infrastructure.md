@@ -103,7 +103,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 
 ## 3. Database Configuration
 
-> **Documentation:** [Database Overview](../../configuration/database/overview.md) · [Cosmos DB](../../configuration/database/cosmos-db.md) · [SQL Server](../../configuration/database/sql-server.md) · [MySQL](../../configuration/database/mysql.md) · [SQLite](../../configuration/database/sqlite.md) · [Database Configuration Reference](../../configuration/database/configuration-reference.md)
+> **Documentation:** [Database Overview](../../configuration/database/overview.md) · [Cosmos DB](../../configuration/database/cosmos-db.md) · [SQL Server](../../configuration/database/sql-server.md) · [MySQL](../../configuration/database/mysql.md) · [SQLite](../../configuration/database/sqlite.md) · [Database Configuration Reference](../../configuration/database/configuration-reference.md) · [EF Cross-Provider Compatibility Guide](../../for-developers/ef-cross-provider-guide.md)
 
 ### Supported Databases
 
@@ -117,6 +117,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 ### Database Features
 
 - Auto-detection from connection string (no configuration flags needed)
+- Provider selection is based on connection-string shape and documented for developers in the EF cross-provider guide
 - Schema auto-migration on startup
 - EF Core migrations support (`AddMigrationScript.ps1`)
 - Cross-provider query compatibility
@@ -125,7 +126,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 
 ## 4. Cloud Storage Configuration
 
-> **Documentation:** [Storage Overview](../../configuration/storage/overview.md) · [Azure Blob Storage](../../configuration/storage/azure-blob.md) · [Amazon S3](../../configuration/storage/s3.md) · [Cloudflare R2](../../configuration/storage/cloudflare-r2.md) · [Google Cloud Storage](../../configuration/storage/google-cloud.md) · [Storage Configuration Reference](../../configuration/storage/configuration-reference.md)
+> **Documentation:** [Storage Overview](../../configuration/storage/overview.md) · [Azure Blob Storage](../../configuration/storage/azure-blob.md) · [Amazon S3](../../configuration/storage/s3.md) · [Cloudflare R2](../../configuration/storage/cloudflare-r2.md) · [Google Cloud Storage](../../configuration/storage/google-cloud.md) · [Storage Configuration Reference](../../configuration/storage/configuration-reference.md) · [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md)
 
 ### Supported Providers
 
@@ -141,6 +142,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 - **Media storage** — Images, documents, uploaded assets
 - **Static site hosting** — Pre-generated HTML pages (Azure Blob static website)
 - **File manager** — All file operations routed through storage abstraction
+- **Runtime detection** — Active storage driver selected from the connection-string shape at startup or tenant resolution time
 
 ---
 

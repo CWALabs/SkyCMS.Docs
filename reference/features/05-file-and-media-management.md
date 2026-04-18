@@ -78,7 +78,7 @@ Files can be edited directly in the browser depending on type:
 
 ## 2. Multi-Cloud Storage Abstraction
 
-> **Documentation:** [Storage Overview](../../configuration/storage/overview.md) · [Azure Blob Storage](../../configuration/storage/azure-blob.md) · [Amazon S3](../../configuration/storage/s3.md) · [Cloudflare R2](../../configuration/storage/cloudflare-r2.md) · [Google Cloud Storage](../../configuration/storage/google-cloud.md) · [Storage Configuration Reference](../../configuration/storage/configuration-reference.md)
+> **Documentation:** [Storage Overview](../../configuration/storage/overview.md) · [Azure Blob Storage](../../configuration/storage/azure-blob.md) · [Amazon S3](../../configuration/storage/s3.md) · [Cloudflare R2](../../configuration/storage/cloudflare-r2.md) · [Google Cloud Storage](../../configuration/storage/google-cloud.md) · [Storage Configuration Reference](../../configuration/storage/configuration-reference.md) · [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md)
 
 SkyCMS abstracts file storage through a unified `StorageContext` layer, allowing the same file management interface to work across multiple cloud providers.
 
@@ -94,6 +94,7 @@ SkyCMS abstracts file storage through a unified `StorageContext` layer, allowing
 ### Runtime Provider Selection
 
 - Provider is auto-detected from the connection string at runtime
+- Detection is implemented in the `Cosmos.BlobService` storage runtime
 - No code changes needed to switch providers
 - Multi-tenant deployments can use different providers per tenant
 

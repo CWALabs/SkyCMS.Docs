@@ -168,6 +168,7 @@ nav:
     - Blog Architecture: for-developers/blog-architecture.md
     - Image Processing API: for-developers/image-processing-api.md
     - EF Cross-Provider Guide: for-developers/ef-cross-provider-guide.md
+    - Storage Provider Auto-Detection: for-developers/storage-provider-auto-detection.md
     - Roles & Permissions: for-developers/roles-and-permissions.md
     - Audit Logging: for-developers/audit-logging.md
     - Extending:
@@ -281,6 +282,8 @@ exclude_docs: |
   scripts/
   notes/
   .github/
+  README.md
+  for-developers/website-launch/README.md
   .gitignore
   requirements.txt
   ai-crawlers.txt

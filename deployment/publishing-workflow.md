@@ -312,7 +312,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 6. If rejected → Returned to Draft
 ```
 
-![Staged publishing approval flow](images/screenshots/publishing-staged-approval.webp)
+> Approval flow summary: Draft -> Requested -> Reviewed on staging -> Approved and promoted, or rejected back to draft.
 
 **Time:** Minutes to hours  
 **Approval:** Required  

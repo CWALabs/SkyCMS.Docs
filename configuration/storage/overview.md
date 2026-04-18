@@ -9,12 +9,33 @@
 
 Use this guide when choosing and configuring object storage for SkyCMS assets and published artifacts.
 
+## Configuration key
+
+Use `ConnectionStrings:StorageConnectionString` for the active storage provider.
+
+SkyCMS also supports `ConnectionStrings:AzureBlobStorageConnectionString` as a legacy fallback when the primary storage key is not present.
+
 ## Supported providers
 
 - Azure Blob Storage,
 - S3-compatible storage,
 - Cloudflare R2,
 - Google Cloud Storage.
+
+## Automatic provider detection
+
+SkyCMS selects the blob storage driver by inspecting the configured storage connection string. A separate `StorageProvider` flag is not required for the current blob storage path.
+
+- Azure Blob Storage is detected from Azure-style connection strings that begin with `DefaultEndpointsProtocol=`.
+- Cloudflare R2 is detected from S3-compatible strings that include `AccountId` and `Bucket`.
+- Amazon S3-compatible storage is detected from strings that include `Bucket` and `Region`.
+- Google Cloud Storage typically follows the S3-compatible path when configured with interoperable S3-style settings.
+
+This behavior is implemented in the `Cosmos.BlobService` runtime used by SkyCMS storage abstractions.
+
+For the exact connection-string shapes, see [Storage Configuration Reference](./configuration-reference.md).
+
+For the developer-focused code walkthrough, see [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md).
 
 ## Selection guidance
 
@@ -29,3 +50,4 @@ Use this guide when choosing and configuring object storage for SkyCMS assets an
 - [S3-Compatible](./s3.md)
 - [Cloudflare R2](./cloudflare-r2.md)
 - [Google Cloud Storage](./google-cloud.md)
+- [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md)

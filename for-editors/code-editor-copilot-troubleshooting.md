@@ -90,7 +90,7 @@ The request session is not authenticated. Users must be signed in with an approp
 
 If you are using a fine-grained GitHub token and authentication fails, verify token permissions:
 
-![GitHub fine-grained PAT permissions showing Account permission Models set to Read-only](../assets/images/copilot/PersonalAccessTokenPermissions.png)
+![GitHub fine-grained PAT permissions showing Account permission Models set to Read-only](../assets/images/copilot/PersonalAccessTokenPermissions.jpeg)
 
 *Caption: For SkyCMS Copilot via GitHub Models, set only **Account → Models** to **Read-only**. Do not add Copilot Chat or other Copilot account permissions.*
 
