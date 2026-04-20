@@ -7,7 +7,7 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 ## Sections
 
 | # | Section | What It Covers |
-|---|---------|---------------|
+| --- | --------- | --------------- |
 | 1 | [Content Editing & Authoring](01-content-editing-and-authoring.md) | Page Editor (WYSIWYG), Page Builder (drag-and-drop), Code Editor, AI Copilot, Image Editor, Real-time collaboration |
 | 2 | [Content Lifecycle & Publishing](02-content-lifecycle-and-publishing.md) | Article states, versioning, publishing modes, scheduling, URL management, export/import, CDN integration |
 | 3 | [Blogging](03-blogging.md) | Blog streams, blog posts, blog templates, rendering, blog API |
@@ -33,7 +33,7 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 
 ### For Site Builders
 
-- Three-layer architecture: Layouts → Templates → Pages
+- Three-layer architecture: Layouts → Templates → Articles, with Published Pages as public output
 - Visual Page Builder (GrapesJS) with 15+ block categories
 - Configurable editable regions with multiple toolbar profiles
 - Community layout library for quick starts
@@ -65,7 +65,7 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 ## Audience Quick-Reference
 
 | I am a... | Start with sections... |
-|-----------|----------------------|
+| ----------- | ---------------------- |
 | Content editor or author | 1, 2, 3, 5 |
 | Site builder or designer | 1, 4, 5 |
 | Administrator | 6, 8 |

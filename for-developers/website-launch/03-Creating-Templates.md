@@ -1,7 +1,22 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/03-Creating-Templates.md -->
+---
+canonical_title: Phase 3: Creating Templates Guide
+description: Build reusable templates in SkyCMS with editable regions and understand how template changes affect authored articles and published output.
+audience:
+  - Backend Developers
+  - Full-Stack Developers
+doc_type: How-to
+status: Draft
+entities:
+  - template
+  - article
+  - editable-region
+  - published-page
+keywords:
+  - creating templates
+  - editable regions
+  - template hierarchy
+source: SkyCMS/Docs/Developer-Guides/03-Creating-Templates.md
+---
 
 # Phase 3: Creating Templates Guide
 
@@ -14,12 +29,13 @@
 In Phase 2, you created your Site Designs (Layouts) — the structural containers for all pages. In Phase 3, you create Templates that sit inside those Site Designs and define content areas for specific page types.
 
 A **Template** is:
+
 - A page structure that defines where content goes (using editable regions)
 - A bridge between your Site Design and individual pages
 - A reusable blueprint for similar pages (blog posts, service pages, product pages, etc.)
 - A way to empower content editors to create consistent pages without touching code
 
-By the end of Phase 3, you'll have created multiple templates that content editors can use to create pages in Phase 5.
+By the end of Phase 3, you'll have created multiple templates that content editors can use to create articles in Phase 5.
 
 ---
 
@@ -27,22 +43,24 @@ By the end of Phase 3, you'll have created multiple templates that content edito
 
 Before diving in, remember how templates fit into the architecture:
 
-```
+```text
 SITE DESIGN (Layout)
   └─ TEMPLATE 1
-       └─ Page 1 (created from Template 1)
-       └─ Page 2 (created from Template 1)
-       └─ Page 3 (created from Template 1)
+      └─ Article 1 (created from Template 1)
+      └─ Article 2 (created from Template 1)
+      └─ Article 3 (created from Template 1)
   
   └─ TEMPLATE 2
-       └─ Page 4 (created from Template 2)
-       └─ Page 5 (created from Template 2)
+      └─ Article 4 (created from Template 2)
+      └─ Article 5 (created from Template 2)
   
   └─ TEMPLATE 3
-       └─ Page 6 (created from Template 3)
+      └─ Article 6 (created from Template 3)
 ```
 
-Each page created from a template is an **independent instance** with its own content. When you edit a template, it affects the structure of ALL pages using that template.
+Each article created from a template is an **independent instance** with its own content. When you edit a template, it affects the structure of ALL articles using that template.
+
+After publication, those articles are delivered as published pages.
 
 ---
 
@@ -53,6 +71,7 @@ Each page created from a template is an **independent instance** with its own co
 **The most important thing to understand:** Templates are designed to organize **page structure** — the arrangement and layout of content areas on individual pages.
 
 **What Templates Should Focus On:**
+
 ```html
 <!-- Good: Structural focus -->
 <article class="blog-post">
@@ -75,12 +94,14 @@ Each page created from a template is an **independent instance** with its own co
 ```
 
 **What Templates Should Provide:**
+
 - ✅ Logical content sections (header, body, sidebar, footer-like areas)
 - ✅ Editable regions for content creators
 - ✅ Basic HTML structure and semantic markup
 - ✅ Simple, clear organization
 
 **What Site Designs (Layouts) Handle:**
+
 - Site-wide elements (main header, navigation, footer)
 - Global CSS and JavaScript
 - Overall page wrapper and structure
@@ -115,11 +136,13 @@ While structure is the primary focus, you **can** add template-specific CSS and 
 ```
 
 **When to add template-specific CSS/JS:**
+
 - ✅ Styling unique to this template type (not used elsewhere)
 - ✅ Functionality specific to this content type
 - ✅ Small, focused enhancements
 
 **When NOT to add template-specific CSS/JS:**
+
 - ❌ Global styles (those belong in Site Design)
 - ❌ Large JavaScript libraries (add to Site Design instead)
 - ❌ Styles shared across multiple templates (consolidate in Site Design)
@@ -128,12 +151,13 @@ While structure is the primary focus, you **can** add template-specific CSS and 
 
 **Remember the template update risk from earlier in this guide?** The complexity of your template directly impacts the risk when updating pages.
 
-```
+```text
 SIMPLE TEMPLATE = LOW UPDATE RISK
 COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 **Simple Template Example:**
+
 ```html
 <!-- Low risk: Clear structure, minimal complexity -->
 <article>
@@ -147,6 +171,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 **Complex Template Example:**
+
 ```html
 <!-- High risk: Nested structure, multiple dependencies -->
 <div class="wrapper">
@@ -218,6 +243,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 **Design for Updates:**
+
 - Use minimal wrapper divs (only what's needed for styling)
 - Keep editable regions at consistent depth
 - Avoid complex grid systems inside templates (use CSS Grid/Flexbox simply)
@@ -228,6 +254,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 **Many tips from Phase 2 (Creating Layouts) also apply to templates:**
 
 #### Use CSS Variables
+
 ```html
 <style>
   /* Define template-specific variables */
@@ -244,6 +271,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 #### Avoid Inline Styles
+
 ```html
 <!-- ❌ Bad: Inline styles -->
 <div data-ccms-ceid="content" style="padding: 20px; background: #f0f0f0;">
@@ -260,6 +288,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 #### Keep Selectors Simple
+
 ```css
 /* ❌ Complex selector */
 .template-wrapper .container .content-area .post .article .body p {
@@ -273,6 +302,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 #### Semantic HTML
+
 ```html
 <!-- ✅ Good: Semantic elements -->
 <article>
@@ -290,12 +320,14 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 ```
 
 #### Performance Tips
+
 - ✅ Optimize images in template examples
 - ✅ Minimize template-specific JavaScript
 - ✅ Use lazy loading for template images
 - ✅ Keep CSS concise and focused
 
 **For more comprehensive best practices, see:**
+
 - [Phase 2: Creating Layouts - Tips and Best Practices](./02-Creating-Layouts.md#tips-and-best-practices-for-site-designs)
 - Includes: Performance optimization, accessibility, security, development workflow
 
@@ -304,7 +336,7 @@ COMPLEX TEMPLATE = HIGH UPDATE RISK
 Use this guide when deciding template complexity:
 
 | Scenario | Recommended Approach | Complexity Level |
-|----------|---------------------|------------------|
+| ---------- | --------------------- | ------------------ |
 | **Blog posts, articles** | Simple 2-3 editable regions, flat structure | **Low** ✅ |
 | **Product pages** | Moderate structure with 4-6 regions | **Medium** ⚠️ |
 | **Landing pages** | Multiple sections but clear structure | **Medium** ⚠️ |
@@ -312,6 +344,7 @@ Use this guide when deciding template complexity:
 | **One-off pages** | Use blank page or minimal template | **Low** ✅ |
 
 **Rule of Thumb:**
+
 - If you can't easily explain the template structure in 2-3 sentences → **It's too complex**
 - If you have more than 6-8 editable regions → **Consider splitting into multiple templates**
 - If nested more than 3-4 levels deep → **Simplify the structure**
@@ -341,6 +374,7 @@ In SkyCMS, you mark regions as editable by adding either:
 ```
 
 **How it works:**
+
 - Enables inline editing
 - Editors click on the region and type
 - Works for simple text and formatting
@@ -355,6 +389,7 @@ In SkyCMS, you mark regions as editable by adding either:
 ```
 
 **How it works:**
+
 - Provides a unique ID for the region
 - Enables rich editing with the Visual Editor
 - Required for template update tracking (explained later)
@@ -380,6 +415,7 @@ When you need editors to create rich content (formatted text, lists, links, imag
 ```
 
 When an editor opens a page using this template:
+
 - The region with `data-ccms-ceid="main-content"` becomes a full-featured rich text editor
 - They can format text, add images, create lists, embed content
 - The Visual Editor toolbar provides all CKEditor tools
@@ -433,7 +469,8 @@ Most templates need multiple editable regions for different content areas:
 
 ### Critical Rules for Editable Regions
 
-**Rule 1: Unique IDs**
+#### Rule 1: Unique IDs
+
 ```html
 <!-- Good: Each region has unique ID -->
 <div data-ccms-ceid="headline">...</div>
@@ -445,7 +482,8 @@ Most templates need multiple editable regions for different content areas:
 <div data-ccms-ceid="content">...</div>
 ```
 
-**Rule 2: No Nesting**
+#### Rule 2: No Nesting
+
 ```html
 <!-- Good: Regions are separate -->
 <div data-ccms-ceid="header">...</div>
@@ -457,7 +495,8 @@ Most templates need multiple editable regions for different content areas:
 </div>
 ```
 
-**Rule 3: Use Supported Elements**
+#### Rule 3: Use Supported Elements
+
 ```html
 <!-- Good: Use common container elements -->
 <div data-ccms-ceid="main">...</div>
@@ -470,7 +509,8 @@ Most templates need multiple editable regions for different content areas:
 <p data-ccms-ceid="poor">...</p>
 ```
 
-**Rule 4: Meaningful IDs**
+#### Rule 4: Meaningful IDs
+
 ```html
 <!-- Good: Descriptive IDs -->
 <div data-ccms-ceid="hero-section">...</div>
@@ -493,7 +533,8 @@ Rather than building from scratch, use proven patterns. Here are the most common
 **When to use:** Blog posts, news articles, simple informational pages
 
 **Structure:**
-```
+
+```text
 Hero/Header Image
 Page Title
 Author & Date
@@ -501,6 +542,7 @@ Main Content (rich text)
 ```
 
 **Template Code:**
+
 ```html
 <!-- Hero Section -->
 <section class="hero-section">
@@ -529,13 +571,15 @@ Main Content (rich text)
 **When to use:** Landing pages, campaign pages, service pages
 
 **Structure:**
-```
+
+```text
 Hero Section (large image + headline + CTA)
 Content Section
 Call-to-Action Section
 ```
 
 **Template Code:**
+
 ```html
 <!-- HERO SECTION -->
 <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(hero.jpg); height: 400px; display: flex; align-items: center;">
@@ -575,7 +619,8 @@ Call-to-Action Section
 **When to use:** Blog sidebars, related content, reference material
 
 **Structure:**
-```
+
+```text
 Page Header
 Two Columns:
   - Main Content (wider)
@@ -583,6 +628,7 @@ Two Columns:
 ```
 
 **Template Code:**
+
 ```html
 <div class="page-header">
   <div data-ccms-ceid="page-title">
@@ -613,7 +659,8 @@ Two Columns:
 **When to use:** Feature showcase, service highlights, product comparison
 
 **Structure:**
-```
+
+```text
 Header/Description
 Three Equal Columns:
   - Feature 1 (icon + text)
@@ -622,6 +669,7 @@ Three Equal Columns:
 ```
 
 **Template Code:**
+
 ```html
 <!-- HEADER -->
 <section class="features-header" style="text-align: center; padding: 2rem;">
@@ -673,7 +721,8 @@ Three Equal Columns:
 **When to use:** E-commerce products, service offerings, portfolio items
 
 **Structure:**
-```
+
+```text
 Product Image
 Product Title
 Description
@@ -682,6 +731,7 @@ Call-to-Action Button
 ```
 
 **Template Code:**
+
 ```html
 <section class="product-container" style="max-width: 400px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
   
@@ -719,6 +769,7 @@ Call-to-Action Button
 ### Step 1: Access Template Manager
 
 In SkyCMS Admin:
+
 1. Navigate to **Content Management** → **Templates**
 2. Click **Create New Template** button
 3. Choose your editor mode
@@ -727,7 +778,7 @@ In SkyCMS Admin:
 
 #### Code Editor (Recommended for Developers)
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │ SkyCMS Template Editor - Code Mode      │
 ├─────────────────────────────────────────┤
@@ -743,18 +794,20 @@ In SkyCMS Admin:
 ```
 
 **Advantages:**
+
 - Full control over HTML
 - Easy to paste existing designs
 - See exact code structure
 - All template features available
 
 **Disadvantages:**
+
 - Requires HTML knowledge
 - No drag-and-drop
 
 #### Design Editor (Recommended for Designers)
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │ SkyCMS Template Editor - Design Mode    │
 ├──────────┬──────────────────────────────┤
@@ -768,12 +821,14 @@ In SkyCMS Admin:
 ```
 
 **Advantages:**
+
 - Visual drag-and-drop interface
 - Preview as you build
 - Easier for non-developers
 - Pre-built component library
 
 **Disadvantages:**
+
 - May be slower for complex designs
 - Less control over markup
 - Fewer advanced features
@@ -781,6 +836,7 @@ In SkyCMS Admin:
 ### Step 3: Select Your Site Design
 
 When creating a template, choose which Site Design it uses:
+
 - Main Site Design → Most templates
 - Landing Site Design → Landing pages
 - Your custom Site Design → Specialized templates
@@ -867,18 +923,21 @@ Using one of the patterns above, add your editable regions:
 Choose a clear, descriptive name:
 
 **Good Names:**
+
 - "Blog Post" (content type clearly identified)
 - "Service Page" (indicates purpose)
 - "Product Showcase" (indicates use case)
 - "Team Member Bio" (specific content type)
 
 **Poor Names:**
+
 - "Template 1" (too generic)
 - "Page" (not descriptive)
 - "Content" (vague)
 
 **Add a Description:**
-```
+
+```text
 Blog Post Template
 For publishing blog articles, news posts, and similar long-form content.
 Features: Hero image support, metadata (author/date), rich text content area.
@@ -888,6 +947,7 @@ Use when: Creating new blog or news articles.
 ### Step 6: Test Your Template
 
 Before saving:
+
 1. Use **Preview** to see how it looks
 2. Check for:
    - Proper layout and spacing
@@ -899,10 +959,11 @@ Before saving:
 ### Step 7: Save Your Template
 
 Click **Save Template**. The system will:
+
 1. Validate HTML syntax
 2. Verify editable regions
 3. Store the template
-4. Make it available for creating pages
+4. Make it available for creating articles
 
 ---
 
@@ -970,7 +1031,7 @@ Establish a consistent naming system to keep templates organized:
 
 ### Option 1: Content Type + Purpose
 
-```
+```text
 Blog Post
 Service Page
 Product Page
@@ -983,7 +1044,7 @@ About Company
 
 ### Option 2: Hierarchical Names
 
-```
+```text
 Landing - Hero
 Landing - Simple
 Article - Blog
@@ -997,7 +1058,8 @@ Service - Brief
 ### Option 3: Business-Specific Names
 
 E-commerce site:
-```
+
+```text
 Product - Standard
 Product - Featured
 Category - Grid
@@ -1007,7 +1069,8 @@ Brand - Profile
 ```
 
 Service company:
-```
+
+```text
 Service - Main
 Service - Add-on
 Case Study - Full
@@ -1030,9 +1093,9 @@ Before we explain how template updates work, understand this: **Modifying a temp
 
 ### How Template Updates Work
 
-When you modify a template's structure, SkyCMS can update all pages using that template:
+When you modify a template's structure, SkyCMS can update all articles using that template:
 
-```
+```text
 Original Template v1 (Pages A, B, C created from it)
          ↓
 Edit Template → Template v2
@@ -1045,6 +1108,7 @@ Pages A, B, C now use new structure
 ### What Gets Updated
 
 When you update pages:
+
 1. **Editable region IDs that still exist** → Content is preserved
 2. **Editable region IDs that were removed** → Content is LOST
 3. **New editable regions added** → Appear empty on updated pages
@@ -1055,7 +1119,8 @@ When you update pages:
 #### Risk 1: Content Loss from Removed Regions
 
 **Scenario:**
-```
+
+```text
 ORIGINAL TEMPLATE:
 <div data-ccms-ceid="intro">...</div>        ← 20 pages have intro content
 <div data-ccms-ceid="body">...</div>
@@ -1073,7 +1138,8 @@ AFTER UPDATE:
 #### Risk 2: Content Mismatch from Renamed IDs
 
 **Scenario:**
-```
+
+```text
 ORIGINAL TEMPLATE:
 <div data-ccms-ceid="article-title">...</div>
 
@@ -1090,7 +1156,8 @@ Original "article-title" content is orphaned and lost
 #### Risk 3: Structural Changes Breaking Pages
 
 **Scenario:**
-```
+
+```text
 ORIGINAL TEMPLATE:
 Two-column layout (content + sidebar)
 
@@ -1108,7 +1175,8 @@ Design breaks for existing page content
 #### Risk 4: Formatting Loss from Container Changes
 
 **Scenario:**
-```
+
+```text
 ORIGINAL TEMPLATE:
 <div class="article-content" data-ccms-ceid="body">...</div>
 
@@ -1127,7 +1195,8 @@ But CSS classes changed, so styling/layout breaks
 #### Practice 1: Plan Carefully Upfront
 
 Create templates correctly from the start:
-- ✅ Think through editable regions before creating pages
+
+- ✅ Think through editable regions before creating articles
 - ✅ Use meaningful, permanent IDs
 - ✅ Plan for content types and variations
 - ✅ Test templates thoroughly with sample content
@@ -1135,12 +1204,14 @@ Create templates correctly from the start:
 #### Practice 2: Only Update When Critical
 
 Update templates only for:
+
 - ✅ Bug fixes in template structure
 - ✅ Minor CSS styling improvements
 - ✅ Adding new optional regions (safe)
 - ✅ Emergency layout corrections
 
 Do NOT update for:
+
 - ❌ Removing old regions (content loss)
 - ❌ Renaming region IDs (content orphaned)
 - ❌ Complete redesigns (use new template instead)
@@ -1150,7 +1221,7 @@ Do NOT update for:
 
 Instead of updating an existing template:
 
-```
+```text
 WRONG APPROACH:
 Template v1 (50 pages using it)
   ↓ Modify extensively
@@ -1170,7 +1241,7 @@ Gradually migrate pages from v1 to v2
 
 If you must update a template:
 
-```
+```text
 Step 1: Modify template
 Step 2: Go to Template → Pages list
 Step 3: Click "Update" on ONE page
@@ -1185,6 +1256,7 @@ Step 7: If problems → Revert changes
 #### Practice 5: Keep Backup/Versioning Strategy
 
 Before major template updates:
+
 - [ ] Have a backup of the current template code
 - [ ] Know which pages use this template
 - [ ] Understand what content they contain
@@ -1193,6 +1265,7 @@ Before major template updates:
 #### Practice 6: Communicate Changes
 
 If working with content editors:
+
 - ⚠️ Notify them before updating templates
 - ⚠️ Explain what's changing
 - ⚠️ Tell them to review their pages after update
@@ -1202,7 +1275,7 @@ If working with content editors:
 
 If you need to modify a template while preserving content:
 
-```
+```text
 SAFE MODIFICATIONS:
 ✅ Change CSS classes (styling only)
 ✅ Add new editable regions (content creators fill them)
@@ -1224,7 +1297,7 @@ UNSAFE MODIFICATIONS:
 
 Keep templates organized by creating clear categories:
 
-```
+```text
 Content Templates
 ├─ Blog Post
 ├─ News Article
@@ -1255,7 +1328,7 @@ Utility Templates
 
 For each template, document:
 
-```
+```text
 TEMPLATE NAME: Blog Post
 
 DESCRIPTION:
@@ -1287,7 +1360,7 @@ USED BY: [Number] pages
 
 When you create multiple versions of a template:
 
-```
+```text
 POOR APPROACH:
 Blog Post
 Blog Post v2
@@ -1351,6 +1424,7 @@ Before moving to Phase 4, verify:
 
 **Cause:** Region ID missing or incorrectly formatted
 **Solution:**
+
 ```html
 <!-- Bad: Missing data- prefix -->
 <div ccms-ceid="title">...</div>
@@ -1363,6 +1437,7 @@ Before moving to Phase 4, verify:
 
 **Cause:** Region ID was changed or removed
 **Solution:**
+
 - Do NOT use "Update all pages" if you've removed regions
 - Create a new template instead
 - Consider manual content migration
@@ -1371,6 +1446,7 @@ Before moving to Phase 4, verify:
 
 **Cause:** Element type not supported for rich editing
 **Solution:**
+
 ```html
 <!-- Works with rich editor -->
 <div data-ccms-ceid="content">...</div>
@@ -1383,6 +1459,7 @@ Before moving to Phase 4, verify:
 
 **Cause:** Template might not be saved, published, or associated with layout
 **Solution:**
+
 - Verify template is saved (no validation errors)
 - Check template is associated with a Site Design
 - Try refreshing the page list

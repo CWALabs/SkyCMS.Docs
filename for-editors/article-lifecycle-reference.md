@@ -1,8 +1,26 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
+---
+canonical_title: Article Lifecycle Quick Reference
+description: Reference for article states, transitions, and the effects of publish, unpublish, delete, and trash actions in SkyCMS.
+audience:
+  - Content Editors
+doc_type: Reference
+status: Draft
+entities:
+  - article
+  - published-page
+  - publishing
+keywords:
+  - article lifecycle
+  - draft
+  - publish
+  - unpublish
+  - delete
+source: SkyCMS/Editor lifecycle workflows
+---
 
 # Article Lifecycle Quick Reference
+
+This reference describes the lifecycle of the authored **article** record. Publishing and unpublishing change the public **published page** projection as well.
 
 ## When to use this page
 

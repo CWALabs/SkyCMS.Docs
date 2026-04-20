@@ -1,7 +1,22 @@
-<!-- Audience: Content Editors -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Editor/Features/Articles/Create/CreateArticleHandler.cs -->
+---
+canonical_title: Creating Articles
+description: Create general articles, blog posts, and blog streams in SkyCMS and choose the correct initial publish state.
+audience:
+   - Content Editors
+doc_type: How-to
+status: Draft
+entities:
+   - article
+   - general-article
+   - blog-post
+   - blog-stream
+keywords:
+   - create page
+   - create article
+   - create blog post
+   - create blog stream
+source: SkyCMS/Editor/Features/Articles/Create/CreateArticleHandler.cs
+---
 
 # Creating Articles
 
@@ -19,7 +34,17 @@ Use this guide when you need to:
 
 - You have editor access to SkyCMS.
 - For blog posts, the parent blog stream already exists.
-- You understand the difference between draft and published content (see [Article Lifecycle Overview](./overview.md)).
+- You understand the difference between draft and published content (see [Article Lifecycle Quick Reference](./article-lifecycle-reference.md)).
+
+## Terminology note
+
+SkyCMS uses the words **article** and **page** differently depending on context.
+
+- In editor workflows, a general article is often called a **page**.
+- In the data model, the **article** is the authored source record.
+- After publishing, the public output is represented as a **published page**.
+
+See [Key Concepts](../getting-started/key-concepts.md) for the canonical definitions.
 
 ## Template-backed pages and editable regions
 
@@ -35,7 +60,7 @@ For technical details, share these references with your site builder/developer t
 
 ## Create a General Page
 
-General pages are standalone articles that appear as site pages.
+General pages are `ArticleType = General` articles that appear as site pages after publication.
 
 ### Steps
 
@@ -83,21 +108,23 @@ Blog posts are child articles within a blog stream.
 
 ## Create a Blog Stream
 
-A blog stream is a container for organizing related blog posts.
+A blog stream is a `BlogStream` article that organizes related blog posts.
 
 ### Steps for Blog Streams
 
 1. In the editor, select **Create** > **Blog**.
 2. Enter a **title** for the blog (e.g., "News & Updates").
 3. Enter a **description** (appears on the blog listing page).
-4. By default, the blog is **created and published immediately**.
-   - To save as draft instead, adjust publish settings if available.
+4. Choose the initial publish state.
+   - Leave **Publish Date** empty to keep the stream as a draft.
+   - Set **Publish Date** to publish immediately or schedule publication.
 5. Click **Save**.
 
 ### What Happens for Blog Streams
 
 - A blog stream (index) article is created.
 - The blog URL is derived from the title.
+- If no publish date is set, the stream remains draft until published.
 - Blog posts can now be added to this stream.
 
 ## Initial Publish State Best Practices
@@ -112,7 +139,7 @@ A blog stream is a container for organizing related blog posts.
 
 - **Content is final** – Ready for live visibility.
 - **Scheduled publish** – Plan a specific date/time for go-live.
-- **Blog streams** – Typically created live so posts can be added.
+- **Blog streams** – Often published soon after creation so the stream has a live landing page.
 
 ## What's Next
 

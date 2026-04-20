@@ -1,7 +1,22 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Overview -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/ -->
+---
+canonical_title: For Editors
+description: Entry point for editor workflows in SkyCMS, including content creation, lifecycle, page editing, page builder, and blogging.
+audience:
+   - Content Editors
+doc_type: Explanation
+status: Draft
+entities:
+   - editor
+   - article-lifecycle
+   - page-editor
+   - page-builder
+   - layers-panel
+keywords:
+   - editor guide
+   - content editing
+   - publishing
+source: SkyCMS/Docs/Editors/
+---
 
 # For Editors
 
@@ -33,8 +48,8 @@ Editors typically:
 
 ## Start Here
 
-1. **Learn the article lifecycle**: [Article Lifecycle Overview](./overview.md) — understand states and transitions
-2. **Quick reference**: [Article Lifecycle Quick Reference](./article-lifecycle-reference.md) — state diagram and common workflows
+1. **Learn the article lifecycle**: [Article Lifecycle Quick Reference](./article-lifecycle-reference.md) — understand states, transitions, and common workflows
+2. **Quick reference**: [Editor Guide Overview](./overview.md) — editorial responsibilities, tooling, and handoff boundaries
 3. **How-to guides**:
    - [Creating articles](./creating-articles.md)
    - [Updating and deleting articles](./updating-and-deleting-articles.md)
@@ -44,6 +59,7 @@ Editors typically:
    - [Page editor quick start](./page-editor-quickstart.md)
    - [Page editor toolbar reference](./page-editor-toolbar-reference.md)
    - [Page builder](./page-builder.md)
+   - [Layers panel](./layers.md)
    - [Page builder quick start](./page-builder-quickstart.md)
    - [Code editor](./code-editor.md)
    - [Image editing](./image-editing.md)

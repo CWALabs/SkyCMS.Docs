@@ -5,6 +5,10 @@
 
 # Quick Start
 
+## For AI Consumers
+
+If you are grounding an AI assistant or retrieval workflow on SkyCMS documentation, start with [Key Concepts](key-concepts.md) for canonical terminology and [AI Context Pack](../reference/ai-context-pack.md) for the compact disambiguation guide.
+
 ## Prerequisites
 
 TODO.
@@ -28,4 +32,3 @@ TODO.
 ## What to learn next
 
 TODO.
-

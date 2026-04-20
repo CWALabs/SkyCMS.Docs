@@ -1,9 +1,27 @@
-<!-- Audience: Content Editors -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/LiveEditor/ -->
+---
+canonical_title: Using the Page Editor
+description: Edit article content directly in page context with the SkyCMS Page Editor, including formatting, preview, save, and publish workflows.
+audience:
+  - Content Editors
+doc_type: How-to
+status: Draft
+entities:
+  - page-editor
+  - article
+  - editable-region
+keywords:
+  - page editor
+  - wysiwyg
+  - ckeditor
+  - edit page content
+source: SkyCMS/Docs/Editors/LiveEditor/
+---
 
 # Using the Page Editor
+
+## Terminology note
+
+The Page Editor is used to edit article content inside the page context supplied by the active layout and template.
 
 The Page Editor is SkyCMS's inline WYSIWYG editor for editing content directly in page context. It is built on CKEditor 5 and supports rich text formatting, links, media, tables, quick save, and collaboration.
 

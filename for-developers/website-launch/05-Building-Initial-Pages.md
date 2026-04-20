@@ -1,9 +1,28 @@
-<!-- Audience: Developers, Content Creators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/05-Building-Initial-Pages.md -->
+---
+canonical_title: Phase 5: Building Initial Pages
+description: Create the first published content set in SkyCMS by building core articles, organizing hierarchy, and configuring internal linking and navigation.
+audience:
+   - Developers
+   - Content Creators
+doc_type: How-to
+status: Draft
+entities:
+   - article
+   - published-page
+   - navigation
+keywords:
+   - building initial pages
+   - create articles
+   - page hierarchy
+   - internal linking
+source: SkyCMS/Docs/Developer-Guides/05-Building-Initial-Pages.md
+---
 
 # Phase 5: Building Initial Pages
+
+## Terminology note
+
+This guide uses **page** in the audience-facing sense. In the canonical model, you are creating authored **articles** that become **published pages** after publication.
 
 ## Introduction
 
@@ -61,7 +80,7 @@ By the end of this phase, you will:
 
 ## 1. Planning Your Page Structure
 
-Before creating pages, plan their organization and hierarchy.
+Before creating articles, plan their organization and hierarchy.
 
 ### Understanding Page Hierarchy
 

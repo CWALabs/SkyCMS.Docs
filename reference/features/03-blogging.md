@@ -32,11 +32,11 @@ A blog stream is a named collection of blog posts — similar to a blog category
 ### Stream Properties
 
 | Property | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | **Title** | Display name for the blog stream |
 | **Description** | Summary text shown on the stream index |
 | **Banner Image** | Optional featured image for the stream (visual upload) |
-| **Publish Date** | Optional publication date/time with date picker |
+| **Publish Date** | Optional publication date/time with date picker. Leave blank to keep the stream as a draft. |
 | **Blog Key** | URL-friendly identifier for routing |
 
 ---
@@ -45,7 +45,7 @@ A blog stream is a named collection of blog posts — similar to a blog category
 
 > **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blog-posts)
 
-Blog posts are articles that belong to a blog stream. They use the same article editing pipeline (Page Editor, Code Editor, Designer) but are organized and rendered through the blog infrastructure.
+Blog posts are articles that belong to a blog stream. They use the same article editing pipeline (Page Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
 
 ### Post Management
 
@@ -79,7 +79,8 @@ SkyCMS provides dedicated blog-aware templates for consistent blog presentation.
 
 ### Template Features
 
-- Editable regions with blog-specific CSS classes (`.ccms-blog-item-title`, `.ccms-blog-item-content`, `.ccms-blog-title-image`)
+- Editable regions with stable blog-specific IDs (`skycms-blog-post-content`, `skycms-blog-post-author`, `skycms-blog-post-bi`)
+- Styling hooks built around the `sky-blog-post-*` and `sky-blog-stream-*` CSS class conventions
 - Live editor enabled for real-time editing
 - Customizable styling via embedded `<style>` blocks
 - Image widget with `data-ccms-enable-alt-editor` support
@@ -118,7 +119,7 @@ SkyCMS provides dedicated blog-aware templates for consistent blog presentation.
 JSON endpoints for programmatic access to blog data:
 
 | Endpoint | Method | Description |
-|----------|--------|-------------|
+| ---------- | -------- | ------------- |
 | `GetBlogs()` | GET | Returns JSON list of all blog streams |
 | `GetEntries(blogKey)` | GET | Returns JSON list of posts in a stream |
 

@@ -5,7 +5,7 @@
 
 Documentation source for [SkyCMS](https://github.com/CWALabs/SkyCMS) — a multi-tenant ASP.NET Core content management system with four visual editors (WYSIWYG, drag-and-drop page builder, code editor, image editor), multi-cloud storage, pluggable identity providers, and static-site publishing.
 
-Published at: **https://docs.sky-cms.com**
+Published at: [docs.sky-cms.com](https://docs.sky-cms.com)
 
 ---
 
@@ -14,7 +14,7 @@ Published at: **https://docs.sky-cms.com**
 The site is organized by **audience role** so readers find content relevant to their work:
 
 | Folder | Audience | Topics | Description |
-|--------|----------|--------|-------------|
+| -------- | ---------- | -------- | ------------- |
 | [getting-started/](getting-started/) | Everyone | 3 | What is SkyCMS, key concepts, quick start |
 | [for-editors/](for-editors/) | Editors, Authors | 30 | Content creation, all four editors, blogging, publishing, collaboration, file management |
 | [for-site-builders/](for-site-builders/) | Site Builders | 7 | Layouts, templates, pages, widgets, style guides |
@@ -24,7 +24,7 @@ The site is organized by **audience role** so readers find content relevant to t
 | [deployment/](deployment/) | DevOps | 8 | Cloud hosting, CI/CD pipelines, Docker, demo deployment, licensing |
 | [reference/](reference/) | All | 9 | Feature catalog, changelog, FAQ, glossary, troubleshooting, templates |
 
-### Feature Catalog
+### Catalog Overview
 
 The [Feature Catalog](reference/features/index.md) provides a comprehensive inventory of all 56 documented features across 8 categories, with jump-to navigation and cross-reference links to the relevant documentation pages.
 
@@ -46,6 +46,11 @@ The [Feature Catalog](reference/features/index.md) provides a comprehensive inve
 - [Architecture Overview](for-developers/architecture.md)
 - [Website Launch Workflow](for-developers/website-launch/index.md)
 - [API Reference](for-developers/api/)
+- [AI Context Pack](reference/ai-context-pack.md)
+
+### AI Ingestion Shortcut
+
+For AI assistants, retrieval systems, or prompt grounding, start with [AI Context Pack](reference/ai-context-pack.md). It summarizes canonical SkyCMS terminology, disambiguation rules, and the most authoritative docs to consult next.
 
 ---
 
@@ -73,7 +78,7 @@ cd /path/to/SkyCMS
 mkdocs serve
 ```
 
-Then open http://127.0.0.1:8000 in your browser.
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 
 > **Note:** The `mkdocs.yml` nav references a legacy `Docs/` folder structure. Some paths in the nav may differ from the folder layout in this repo. See [Deployment](#deployment) for how the published site is built.
 
@@ -86,26 +91,49 @@ Then open http://127.0.0.1:8000 in your browser.
 Place new documentation based on the target audience:
 
 | If the reader is a... | Put it in... |
-|------------------------|-------------|
+| ------------------------ | ------------- |
 | Content editor or author | `for-editors/` |
 | Site builder working with layouts/templates | `for-site-builders/` |
 | Developer extending or integrating SkyCMS | `for-developers/` |
 | Administrator installing or configuring | `installation/` or `configuration/` |
 | DevOps engineer deploying or managing CI/CD | `deployment/` |
 
-### Frontmatter Convention
+### Metadata Convention
 
-Every documentation file starts with HTML comment metadata:
+Use YAML frontmatter at the top of every new or materially revised documentation file. This gives MkDocs, search, and AI ingestion a stable, parseable metadata block.
 
-```html
-<!-- Audience: Editors -->
-<!-- Type: How-to -->
+```yaml
+---
+canonical_title: Page Builder
+description: Visual drag-and-drop composition in SkyCMS using GrapesJS.
+audience:
+  - Content Editors
+  - Site Builders
+doc_type: How-to
+status: Draft
+entities:
+  - page-builder
+  - layers-panel
+keywords:
+  - grapesjs
+  - drag and drop
+  - visual editor
+---
 ```
 
-| Field | Values |
-|-------|--------|
-| **Audience** | `Editors`, `Site Builders`, `Developers`, `Administrators`, `DevOps`, `All`, `Contributors` |
-| **Type** | `How-to`, `Explanation`, `Reference`, `Tutorial`, `Quickstart` |
+| Field | Purpose |
+| ------- | --------- |
+| `canonical_title` | Canonical page title used by search and AI context extraction |
+| `description` | One-sentence summary for search snippets and retrieval |
+| `audience` | Intended readers, as a YAML list |
+| `doc_type` | `How-to`, `Explanation`, `Reference`, `Tutorial`, or `Quickstart` |
+| `status` | `Draft`, `Canonical`, `Reference`, `Deprecated`, or other explicit state |
+| `entities` | Canonical SkyCMS concepts covered by the page |
+| `keywords` | Synonyms, aliases, and common search phrases |
+
+Optional fields may be added when helpful, such as `source`, `aliases`, `related_topics`, or `tags`.
+
+Legacy HTML comments may be retained for internal provenance, but they should not replace YAML frontmatter on new or substantially updated pages.
 
 ### File Naming
 

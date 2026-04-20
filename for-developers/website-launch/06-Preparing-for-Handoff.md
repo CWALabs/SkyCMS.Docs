@@ -1,7 +1,23 @@
-<!-- Audience: Developers, Project Managers, Trainers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/06-Preparing-for-Handoff.md -->
+---
+canonical_title: Phase 6: Preparing for Handoff
+description: Prepare SkyCMS sites for team handoff with roles, documentation, training, and sustainable publishing workflows.
+audience:
+  - Developers
+  - Project Managers
+  - Trainers
+doc_type: How-to
+status: Draft
+entities:
+  - editor
+  - article
+  - workflow
+keywords:
+  - handoff
+  - training
+  - user roles
+  - publishing workflow
+source: SkyCMS/Docs/Developer-Guides/06-Preparing-for-Handoff.md
+---
 
 # Phase 6: Preparing for Handoff
 

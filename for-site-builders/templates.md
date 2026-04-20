@@ -1,9 +1,30 @@
-<!-- Audience: Designers and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Templates/ -->
+---
+canonical_title: Templates
+description: Design and maintain reusable content templates in SkyCMS, including editable region rules, rollout behavior, and template update safety.
+audience:
+  - Designers
+  - Front-End Developers
+  - Site Builders
+doc_type: How-to
+status: Draft
+entities:
+  - template
+  - article
+  - editable-region
+  - page
+keywords:
+  - templates
+  - editable regions
+  - page templates
+  - template rollout
+source: SkyCMS/Docs/Templates/
+---
 
 # Templates
+
+## Terminology note
+
+Templates define reusable structure for authored **articles**. In site-builder workflows, those articles are often called **pages**. After publishing, the public output is a **published page**.
 
 ## When to use this page
 
@@ -28,6 +49,8 @@ Templates should avoid owning:
 - site-wide shell concerns (header/footer/global nav),
 - one-off campaign content,
 - implementation details that belong in layout-level assets.
+
+See [Key Concepts](../getting-started/key-concepts.md) for the canonical article, page, and published-page model.
 
 ## Create a template
 

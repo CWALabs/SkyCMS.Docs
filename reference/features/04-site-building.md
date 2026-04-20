@@ -1,12 +1,12 @@
 # Site Building
 
-SkyCMS uses a three-layer content architecture — **Layouts → Templates → Pages** — that separates site-wide structure from reusable page patterns and per-page content. This system gives site builders control over design consistency while allowing editors to focus on content.
+SkyCMS uses a three-layer authoring architecture — **Layouts → Templates → Articles** — with **Published Pages** as the public output. This separates site-wide structure from reusable content patterns and authored content while keeping the public delivery model explicit.
 
 **Audiences:** Site Builders, Developers, Administrators
 
 **Jump to:**
 
-- [Content Architecture: Layouts, Templates, Pages](#1-content-architecture-layouts-templates-pages)
+- [Content Architecture: Layouts, Templates, Articles](#1-content-architecture-layouts-templates-articles)
 - [Layouts](#2-layouts)
 - [Templates](#3-templates)
 - [Pages](#4-pages)
@@ -15,29 +15,33 @@ SkyCMS uses a three-layer content architecture — **Layouts → Templates → P
 
 ---
 
-## 1. Content Architecture: Layouts, Templates, Pages
+## 1. Content Architecture: Layouts, Templates, Articles
 
 > **Documentation:** [Layouts, Templates & Articles (Developers)](../../for-developers/layouts-templates-articles.md) · [Key Concepts](../../getting-started/key-concepts.md)
 
-### Three-Layer Model
+### Canonical Model
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │  Layout (site-wide shell)                   │
 │  ┌───────────────────────────────────────┐  │
 │  │  Template (reusable page structure)   │  │
 │  │  ┌─────────────────────────────────┐  │  │
-│  │  │  Page (editor content)          │  │  │
+│  │  │  Article (editor content)       │  │  │
 │  │  └─────────────────────────────────┘  │  │
 │  └───────────────────────────────────────┘  │
 └─────────────────────────────────────────────┘
+
+Public output after publish: `PublishedPage`
 ```
 
 | Layer | Managed By | Purpose |
-|-------|-----------|---------|
+| ------- | ----------- | --------- |
 | **Layout** | Site Builder / Admin | Global header, footer, navigation, base styles, scripts |
 | **Template** | Site Builder / Admin | Reusable page structures with defined editable regions |
-| **Page** | Editor / Author | Content authored within template-defined regions |
+| **Article** | Editor / Author | Authored content stored before publishing |
+
+Terminology note: in editor and site-builder UI, a general article is often called a **page**. The canonical data-model terms are **article** and **published page**.
 
 ---
 
@@ -66,7 +70,7 @@ Two editing modes:
 ### Layout Features
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | **Create** | New layout from scratch |
 | **Edit Code** | Direct HTML/CSS editing with Monaco |
 | **Visual Designer** | GrapesJS drag-and-drop builder |
@@ -116,7 +120,7 @@ Two editing modes:
 ### Template Features
 
 | Feature | Description |
-|---------|-------------|
+| --------- | ------------- |
 | **Create** | New template from scratch |
 | **Edit Code** | HTML editing with editable region markup |
 | **Visual Designer** | GrapesJS builder for template structure |
@@ -142,7 +146,7 @@ Templates use HTML attributes to define where editors can place content:
 #### Region Attributes
 
 | Attribute | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `data-ccms-ceid="region-id"` | Stable identifier — persists across template updates |
 | `data-ccms-new="true"` | Auto-generate a GUID on first save (for new regions) |
 | `data-editor-config="profile"` | Toolbar mode: `title`, `simple`, `standard`, `advanced`, `image-widget` |
@@ -176,7 +180,7 @@ Common template patterns provided or recommended:
 
 > **Documentation:** [Pages (Site Builders)](../../for-site-builders/pages.md) · [Article Examples Overview](../../for-site-builders/article-examples/overview.md) · [Standalone Content Article Examples](../../for-site-builders/article-examples/standalone-content.md) · [Announcement and Update Article Examples](../../for-site-builders/article-examples/announcement-update.md) · [Resource Article with Table of Contents Examples](../../for-site-builders/article-examples/resource-with-toc.md) · [Event Page Article Examples](../../for-site-builders/article-examples/event-page.md) · [Building the Home Page](../../for-developers/website-launch/04-Building-Home-Page.md) · [Building Initial Pages](../../for-developers/website-launch/05-Building-Initial-Pages.md)
 
-**Pages** are the concrete content instances that editors create and publish. Each page inherits structure from its layout and template.
+In site-builder language, **pages** are the concrete content instances that editors create and publish. In the canonical model, those are authored as **articles** and delivered publicly as **published pages**. Each page inherits structure from its layout and template.
 
 ### Page Properties
 
@@ -190,7 +194,7 @@ Common template patterns provided or recommended:
 
 ### Page Types
 
-- Standard content pages
+- Standard content pages (`ArticleType = General`)
 - Stand-alone articles rendered directly in a layout without a template
 - Blog posts (managed through the blogging subsystem)
 - Home page (special designation, created via initial setup or promoted)

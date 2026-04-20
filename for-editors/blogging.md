@@ -1,8 +1,33 @@
+---
+canonical_title: Blogging
+description: Create and manage blog streams and blog posts in SkyCMS using the standard article lifecycle and blog-specific rendering rules.
+audience:
+	- Content Editors
+	- Authors
+	- Administrators
+doc_type: How-to
+status: Draft
+entities:
+	- blog-stream
+	- blog-post
+	- article
+keywords:
+	- blogs
+	- blog streams
+	- blog posts
+	- publish blog
+source: SkyCMS/Editor/Features/Blogs/
+---
+
 # Blogging
 
 SkyCMS includes a dedicated blogging subsystem with support for multiple independent blog streams, post management, banner images, and public preview.
 
-**Audience:** Editors, Authors, Administrators
+## Terminology note
+
+- A **blog stream** is an article with `ArticleType = BlogStream`.
+- A **blog post** is an article with `ArticleType = BlogPost`.
+- Both use the standard article lifecycle and publishing workflow.
 
 ---
 
@@ -27,14 +52,14 @@ A **blog stream** is a named collection of blog posts — similar to a blog cate
 3. Fill in the fields:
 
 | Field | Required | Description |
-|-------|----------|-------------|
+| ------- | ---------- | ------------- |
 | **Title** | Yes | Display name shown on the blog index (max 128 characters) |
 | **Blog Key** | Yes | URL-safe identifier, auto-generated from the title. Only lowercase letters, numbers, hyphens, and underscores are allowed (`^[a-z0-9-_]+$`). Must be unique. Max 64 characters. |
 | **Description** | Yes | Summary text shown on the stream index page (max 512 characters) |
 | **Banner Image** | No | Featured image for the stream. Click the image placeholder to upload or select from the File Manager. |
 | **Publish Date** | No | Optional publication date/time. Leave blank to keep the stream in draft. |
 
-4. Click **Create** to save.
+1. Click **Create** to save.
 
 ### Editing a Blog Stream
 
@@ -74,7 +99,7 @@ Blog posts are articles that belong to a blog stream. They use the same editing 
 ### Post Properties
 
 | Property | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | **Title** | Post headline (max 254 characters). The URL slug is auto-generated from the title. |
 | **Content** | The post body, edited with any of the standard editors. |
 | **Introduction** | Short excerpt or summary (max 512 characters). Shown in blog stream listings. |
@@ -87,7 +112,7 @@ Blog posts are articles that belong to a blog stream. They use the same editing 
 From the blog entries list, each post has these quick actions:
 
 | Action | Description |
-|--------|-------------|
+| -------- | ------------- |
 | **Edit** | Open the post in the page editor |
 | **Delete** | Soft-delete the post (with confirmation) |
 | **Preview on Site** | View the post as visitors will see it |
@@ -96,13 +121,13 @@ From the blog entries list, each post has these quick actions:
 
 Blog post URLs follow this pattern:
 
-```
+```text
 /{blog-key}/{post-slug}
 ```
 
 For example, a post titled "Getting Started with SkyCMS" in the "engineering" blog stream would have the URL:
 
-```
+```text
 /engineering/getting-started-with-skycms
 ```
 
@@ -136,7 +161,7 @@ The post template renders individual blog posts. Key elements:
 Blog templates define these editable regions using `data-ccms-ceid` attributes:
 
 | Region ID | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `skycms-blog-post-content` | Main post body content |
 | `skycms-blog-post-author` | Author information widget |
 | `skycms-blog-post-bi` | Banner image widget |
@@ -153,13 +178,15 @@ Blog templates use a consistent CSS class naming convention for styling:
 
 You can customize blog appearance by overriding these classes in your layout's stylesheet.
 
+Legacy templates may still contain older class names or markup patterns, but new documentation and new template work should prefer the stable `skycms-blog-post-*` region identifiers and `sky-blog-post-*` CSS hooks documented here.
+
 ---
 
 ## Blog Preview
 
 Each blog stream has an anonymous preview endpoint:
 
-```
+```text
 /editor/blogs/{blog-key}/preview
 ```
 

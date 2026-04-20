@@ -1,7 +1,23 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Explanation + Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Logic/LayoutHelper.cs, SkyCMS/Editor/Features/Layouts/Create/CreateLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Delete/DeleteLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Import/ImportLayoutHandler.cs, SkyCMS/Editor/Services/Layouts/LayoutTemplateService.cs, SkyCMS/Editor/Services/Layouts/LayoutVersioningService.cs, SkyCMS/Editor/Services/Layouts/LayoutImportService.cs, SkyCMS/Editor/Controllers/LayoutsController.cs, SkyCMS/Editor/Controllers/BaseController.cs -->
+---
+canonical_title: Layouts
+description: Developer reference for layout entities, versioning, runtime resolution, import flows, and layout-to-template binding in SkyCMS.
+audience:
+	- Backend Developers
+	- Full-Stack Developers
+doc_type: Reference
+status: Draft
+entities:
+	- layout
+	- template
+	- article
+	- published-page
+keywords:
+	- layouts
+	- layout resolution
+	- layout versioning
+	- site design
+source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Logic/LayoutHelper.cs, SkyCMS/Editor/Features/Layouts/Create/CreateLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Delete/DeleteLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Import/ImportLayoutHandler.cs, SkyCMS/Editor/Services/Layouts/LayoutTemplateService.cs, SkyCMS/Editor/Services/Layouts/LayoutVersioningService.cs, SkyCMS/Editor/Services/Layouts/LayoutImportService.cs, SkyCMS/Editor/Controllers/LayoutsController.cs, SkyCMS/Editor/Controllers/BaseController.cs
+---
 
 # Layouts
 
@@ -22,6 +38,8 @@ Use this guide when you need to:
 ## Why This Matters
 
 For developers, layouts are not just presentation assets. They are versioned data records that control the shared page shell used by templates and rendered pages.
+
+In the canonical model, that shell ultimately participates in `Layout -> Template (optional) -> Article -> Published Page`.
 
 That means layout work touches:
 

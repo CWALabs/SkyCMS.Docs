@@ -248,8 +248,8 @@ Prepare your site and team for content creators to take over.
 By completing this workflow, you will be able to:
 
 ### **Architecture Understanding**
-- [ ] Explain the relationship between Layouts → Templates → Pages
-- [ ] Determine when to use layout changes vs. template changes vs. page customizations
+- [ ] Explain the relationship between Layouts → Templates → Articles → Published Pages
+- [ ] Determine when to use layout changes vs. template changes vs. article customizations
 - [ ] Design scalable site structures that support future content types
 
 ### **Hands-On Skills**
@@ -275,7 +275,7 @@ By completing this workflow, you will be able to:
 
 Before you start building, understand how SkyCMS pieces fit together:
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                    LAYOUT                           │
 │  (Site-wide structure: header, nav, footer)        │
@@ -302,12 +302,12 @@ Before you start building, understand how SkyCMS pieces fit together:
 | Component | Purpose | Scope | Who Changes It |
 |-----------|---------|-------|-----------------|
 | **Layout** | Site-wide structure (header, footer, nav) | Entire site | Developer (rarely) |
-| **Template** | Page type structure (e.g., blog post layout) | All pages using this template | Developer (occasionally) |
-| **Page** | Actual content instance | Single page | Content creator (frequently) |
+| **Template** | Article type structure (e.g., blog post layout) | All articles using this template | Developer (occasionally) |
+| **Article** | Actual authored content instance | Single article | Content creator (frequently) |
 
 ### **Real-World Example**
 
-```
+```text
 LAYOUT: "Main Layout"
 ├── Header (site logo, main nav) - shared by all pages
 ├── Footer (contact info, links) - shared by all pages
@@ -317,7 +317,7 @@ LAYOUT: "Main Layout"
         ├── Author/date area
         ├── Featured image area
         └── Content area
-            └── PAGE: "Why We Love SkyCMS"
+            └── ARTICLE: "Why We Love SkyCMS"
                 ├── Title: "Why We Love SkyCMS"
                 ├── Author: "Jane Smith"
                 ├── Date: "Dec 17, 2025"

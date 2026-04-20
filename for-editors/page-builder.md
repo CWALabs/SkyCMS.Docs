@@ -1,7 +1,23 @@
-<!-- Audience: Content Editors and Site Builders -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/Designer/ -->
+---
+canonical_title: Page Builder
+description: Use the SkyCMS visual drag-and-drop builder to compose layouts, templates, and article structures with GrapesJS.
+audience:
+	- Content Editors
+	- Site Builders
+doc_type: How-to
+status: Draft
+entities:
+	- page-builder
+	- layers-panel
+	- templates
+	- layouts
+keywords:
+	- grapesjs
+	- visual editor
+	- drag and drop
+	- layers panel
+source: SkyCMS/Docs/Editors/Designer/
+---
 
 # Page Builder
 
@@ -28,6 +44,21 @@ Use this guide when you need to:
 - Style manager: visual CSS controls (spacing, typography, dimensions, color, borders).
 - Layers panel: hierarchical structure for selecting and reordering nested elements.
 - Asset manager: upload/select images and media.
+
+## Layers Panel
+
+The **Layers panel** shows the current element hierarchy for the page-builder canvas.
+
+- Use it to select nested elements that are hard to click directly.
+- Use it to verify structure after drag-and-drop edits.
+- Use it to reorder elements without editing raw markup.
+
+Terminology note:
+
+- The **Layers panel** is an editor feature.
+- It is not the same as the SkyCMS content model of layouts, templates, articles, and published pages.
+
+See [Layers Panel](./layers.md) for the dedicated guide.
 
 ## Key Capabilities
 
@@ -57,6 +88,7 @@ Use this guide when you need to:
 ## Related guides
 
 - [Page Builder Quick Start](./page-builder-quickstart.md)
+- [Layers Panel](./layers.md)
 - [Page Editor](./page-editor.md)
 - [Code Editor](./code-editor.md)
 - [For Site Builders: Layouts](../for-site-builders/layouts.md)

@@ -1,7 +1,24 @@
-<!-- Audience: Backend and Full-Stack Developers, Designers, Project Managers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/01-Design-and-Planning.md -->
+---
+canonical_title: Phase 1: Design & Planning Guide
+description: Plan the SkyCMS site structure, information architecture, layouts, templates, and article types before implementation.
+audience:
+  - Backend Developers
+  - Full-Stack Developers
+  - Designers
+  - Project Managers
+doc_type: How-to
+status: Draft
+entities:
+  - layout
+  - template
+  - article
+  - published-page
+keywords:
+  - design planning
+  - information architecture
+  - layouts templates articles
+source: SkyCMS/Docs/Developer-Guides/01-Design-and-Planning.md
+---
 
 # Phase 1: Design & Planning Guide
 
@@ -26,7 +43,7 @@ By investing time in Phase 1, you create a blueprint that keeps your entire proj
 
 ---
 
-## The SkyCMS Architecture Model: Layouts → Templates → Pages
+## The SkyCMS Architecture Model: Layouts → Templates → Articles
 
 Before diving into planning, you need to understand how SkyCMS structures content. This hierarchical relationship is central to everything you'll build:
 
@@ -50,10 +67,10 @@ Before diving into planning, you need to understand how SkyCMS structures conten
 │  └──────────────┘  └──────────────┘  └────────────┘│
 │       │                   │                 │       │
 │  ┌────┴─────┐         ┌───┴───┐        ┌───┴────┐  │
-│  │   Page   │         │ Page  │        │  Page  │  │
+│  │ Article  │         │Article│        │Article │  │
 │  │  (Blog   │         │ (Prod)│        │ (Info) │  │
 │  │  Post 1) │         │       │        │        │  │
-│  │   Page   │         │ Page  │        │  Page  │  │
+│  │ Article  │         │Article│        │Article │  │
 │  │  (Blog   │         │ (Prod)│        │ (Info) │  │
 │  │  Post 2) │         │       │        │        │  │
 │  └──────────┘         └───────┘        └────────┘  │
@@ -78,12 +95,14 @@ Before diving into planning, you need to understand how SkyCMS structures conten
 - Multiple templates can share the same layout
 - Typically 3-8 per site depending on content diversity
 
-**Pages** are the actual content instances:
+**Articles** are the actual authored content instances:
 
-- Individual web pages created from templates
+- Individual pieces of content created from templates
 - Contain the actual text, images, and data
 - Published to make them visible to the public
 - Can be created, edited, published, and archived by content editors
+
+After publication, the public output is a **published page**.
 
 ### Why This Hierarchy Matters for Planning
 
@@ -508,7 +527,7 @@ Before moving to Phase 2, verify you have:
   - Consolidation decisions made
   
 - [ ] **Site Structure Outline**
-  - Visual hierarchy of layouts → templates → pages
+  - Visual hierarchy of layouts → templates → articles
   - Navigation strategy documented
   
 - [ ] **Design Guidelines Started**
@@ -528,7 +547,7 @@ Before moving to Phase 2, verify you have:
 **Problem:** You end up with 20+ templates, each slightly different
 **Solution:** Identify common structures and consolidate (maximum 6-8 templates)
 
-### ❌ Planning Without Understanding the Layouts → Templates → Pages Hierarchy
+### ❌ Planning Without Understanding the Layouts → Templates → Articles Hierarchy
 
 **Problem:** You design content pages first, then realize your layout doesn't work
 **Solution:** Always plan layouts first, then templates, then pages (top-down approach)

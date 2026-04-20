@@ -1,8 +1,31 @@
+---
+canonical_title: Blog Architecture
+description: Developer reference for the SkyCMS blogging subsystem, including article types, CQRS flows, rendering, routing, and published output behavior.
+audience:
+  - Developers
+doc_type: Explanation
+status: Draft
+entities:
+  - blog-stream
+  - blog-post
+  - article
+  - published-page
+keywords:
+  - blog architecture
+  - blog stream
+  - blog post
+  - cqrs
+source: SkyCMS blogging subsystem
+---
+
 # Blog Architecture
 
 Technical internals of the SkyCMS blogging subsystem for developers extending or maintaining it.
 
-**Audience:** Developers
+## Canonical terminology
+
+- Blog streams and blog posts are both **article** types.
+- Their public output is delivered through **published pages**.
 
 ---
 
@@ -17,7 +40,7 @@ The blogging subsystem reuses the core `Article` entity and content pipeline but
 Blogs do not have their own database table. Both blog streams and blog posts are stored as `Article` records, distinguished by the `ArticleType` field:
 
 | ArticleType | Value | Description |
-|-------------|-------|-------------|
+| ------------- | ------- | ------------- |
 | General | `0` | Standard content page |
 | BlogPost | `1` | Individual blog post |
 | BlogStream | `2` | Blog stream definition (metadata container) |
@@ -26,7 +49,7 @@ Blogs do not have their own database table. Both blog streams and blog posts are
 ### Key Fields for Blogging
 
 | Field | Usage |
-|-------|-------|
+| ------- | ------- |
 | `BlogKey` | Groups posts with their parent stream. Pattern: `^[a-z0-9-_]+$`. Default: `"default"`. |
 | `ArticleType` | Discriminator: `1` for posts, `2` for streams. |
 | `Introduction` | Post excerpt/summary (max 512 chars). |
@@ -43,7 +66,7 @@ Blog features follow the vertical-slice CQRS pattern used throughout SkyCMS.
 ### Commands
 
 | Command | Handler Location | Purpose |
-|---------|-----------------|---------|
+| --------- | ----------------- | --------- |
 | `CreateBlogPostCommand` | `Editor/Features/Blogs/CreatePost/` | Create a new post in a stream |
 | `UpdateBlogPostCommand` | `Editor/Features/Blogs/UpdatePost/` | Update post content/metadata |
 | `UpdateBlogStreamCommand` | `Editor/Features/Blogs/UpdateStream/` | Update stream metadata, regenerate wrapper |
@@ -53,14 +76,14 @@ Blog features follow the vertical-slice CQRS pattern used throughout SkyCMS.
 ### Queries
 
 | Query | Handler Location | Purpose |
-|-------|-----------------|---------|
+| ------- | ----------------- | --------- |
 | `GetBlogStreamQuery` | `Common/Features/Blogs/Queries/` | Fetch stream metadata + latest post + count |
 | `GetBlogPostQuery` | `Common/Features/Blogs/Queries/` | Fetch post content with prev/next navigation |
 | `GetBlogPostNavigationQuery` | `Common/Features/Blogs/Queries/` | Fetch previous/next post links for a post |
 
 ### Command Flow Example: Creating a Post
 
-```
+```text
 BlogController.CreateEntry(blogKey, title)
   → Validate parent stream exists
   → CreateBlogPostCommand { BlogKey, Title, UserId, Published=null }
@@ -73,7 +96,7 @@ BlogController.CreateEntry(blogKey, title)
 
 ### Command Flow: Updating a Stream
 
-```
+```text
 BlogController.Edit(id, model)
   → UpdateBlogStreamCommand { Id, Title, Description, HeroImage, Published }
     → UpdateBlogStreamHandler
@@ -94,7 +117,7 @@ BlogController.Edit(id, model)
 ### Methods
 
 | Method | Purpose |
-|--------|---------|
+| -------- | --------- |
 | `GenerateBlogStreamWrapperAsync(article, blogKey)` | Generates the blog stream index page HTML with embedded post metadata JSON |
 | `GenerateBlogPostMetadataJsonAsync(blogKey)` | Generates a JSON array of all published posts for a stream |
 | `GenerateBlogPostSnippetAsync(article)` | Generates a single post as an HTML snippet |
@@ -103,7 +126,7 @@ BlogController.Edit(id, model)
 
 Blog stream pages use a client-side rendering approach:
 
-```
+```text
 Server generates:
 ┌─────────────────────────────────────┐
 │ Stream header (title, description)  │
@@ -143,7 +166,7 @@ All blog CSS classes follow a BEM-like naming convention:
 ### Action Summary
 
 | Action | HTTP | Route | Notes |
-|--------|------|-------|-------|
+| -------- | ------ | ------- | ------- |
 | `Index` | GET | `/editor/blogs` | Lists all streams |
 | `Create` | GET/POST | `/editor/blogs/create` | Create stream form + handler |
 | `Edit` | GET/POST | `/editor/blogs/{id:guid}/edit` | Edit stream form + handler |
@@ -174,7 +197,7 @@ Blog queries follow the project-wide Cosmos DB compatibility rules:
 ## Validation Rules
 
 | Rule | Constraint |
-|------|-----------|
+| ------ | ----------- |
 | BlogKey format | `^[a-z0-9-_]+$` |
 | BlogKey uniqueness | Enforced — conflicts return validation error |
 | BlogKey max length | 64 characters (validation), 128 characters (storage) |

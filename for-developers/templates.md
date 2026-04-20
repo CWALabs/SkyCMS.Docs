@@ -1,7 +1,23 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Explanation + How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/PageDesignVersion.cs, SkyCMS/Editor/Controllers/TemplatesController.cs, SkyCMS/Editor/Features/Templates/Create/CreatePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/GetEditable/GetEditablePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/Save/SavePageDesignVersionHandler.cs -->
+---
+canonical_title: Templates
+description: Developer guide to template entities, versioning, editable region contracts, save flows, and rollout behavior in SkyCMS.
+audience:
+	- Backend Developers
+	- Full-Stack Developers
+doc_type: Explanation
+status: Draft
+entities:
+	- template
+	- article
+	- editable-region
+	- page-design-version
+keywords:
+	- templates
+	- page design version
+	- editable regions
+	- template publish
+source: SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/PageDesignVersion.cs, SkyCMS/Editor/Controllers/TemplatesController.cs, SkyCMS/Editor/Features/Templates/Create/CreatePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/GetEditable/GetEditablePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/Save/SavePageDesignVersionHandler.cs
+---
 
 # Templates
 
@@ -23,6 +39,8 @@ Use this guide when you need to:
 ## What Templates Are
 
 A template is a reusable content structure for articles.
+
+In site-builder and editor language these articles may be described as pages, but the canonical data-model term is **article**.
 
 Templates are optional for article rendering, but they are highly useful when you have a series of articles that should share the same format.
 

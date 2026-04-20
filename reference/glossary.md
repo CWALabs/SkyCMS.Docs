@@ -50,7 +50,7 @@ An article with `ArticleType = BlogPost`. A blog post belongs to a blog stream t
 
 ## Blog Stream
 
-An article with `ArticleType = BlogStream`. A blog stream acts as the parent container for blog posts in a given `BlogKey` and can cascade publish or unpublish behavior to child posts.
+An article with `ArticleType = BlogStream`. A blog stream acts as the parent container for blog posts in a given `BlogKey` and can be saved as draft, published immediately, or scheduled like other articles.
 
 ## Catalog Entry
 
@@ -99,9 +99,13 @@ See also:
 - Site-builder layouts guide: [../for-site-builders/layouts.md](../for-site-builders/layouts.md)
 - Developer layouts guide: [../for-developers/layouts.md](../for-developers/layouts.md)
 
+## Layers Panel
+
+The Page Builder tree view used to inspect, select, and reorder nested elements on the current canvas. This is an editor feature and should not be confused with architectural layers such as layout, template, article, and published page.
+
 ## Page
 
-In common usage, a page usually refers to a published piece of site content. In code, that usually means the public projection of an article stored in `Pages` as a `PublishedPage`.
+In common usage, a page usually refers to a general article and its public result. In precise platform terms, the authored source is an **article** and the public projection is a **PublishedPage** stored in `Pages`.
 
 ## Published Page
 

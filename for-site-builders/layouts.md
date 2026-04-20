@@ -1,9 +1,35 @@
-<!-- Audience: Designers and Front-End Developers -->
-<!-- Type: How-to + Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Layouts/ -->
+---
+canonical_title: Layouts
+description: Create and manage site-wide layout shells in SkyCMS, including shared structure, versioning expectations, and layout-to-template boundaries.
+audience:
+	- Designers
+	- Front-End Developers
+	- Site Builders
+doc_type: How-to
+status: Draft
+entities:
+	- layout
+	- template
+	- article
+keywords:
+	- layouts
+	- site design
+	- layout shell
+	- header footer navigation
+source: SkyCMS/Docs/Layouts/
+---
 
 # Layouts
+
+## Terminology note
+
+Layouts are the site-wide shell in the canonical model:
+
+```text
+Layout -> Template (optional) -> Article -> Published Page
+```
+
+Use **layout** for shared site structure, **template** for reusable article structure, and **article** for authored content.
 
 Use this guide to create and manage consistent page structure across templates and pages, including the header, footer, navigation, spacing, and typography foundations.
 
@@ -60,7 +86,7 @@ Layouts should avoid owning:
 
 - Layout: site-wide shell and shared visual framework.
 - Template: reusable content pattern rendered inside a layout.
-- Page: a concrete content instance authored by editors.
+- Page: a concrete content instance authored by editors; canonically this is an article before publish and a published page after publish.
 
 Rule of thumb:
 

@@ -1,7 +1,23 @@
-<!-- Audience: Designers and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/ContentCreation-QuickStart.md -->
+---
+canonical_title: Pages
+description: Create and maintain page instances in SkyCMS, including template-backed general articles and one-off content paths.
+audience:
+	- Designers
+	- Front-End Developers
+doc_type: How-to
+status: Draft
+entities:
+	- page
+	- article
+	- template
+	- published-page
+keywords:
+	- pages
+	- articles
+	- templates
+	- one-off pages
+source: SkyCMS/Docs/ContentCreation-QuickStart.md
+---
 
 # Pages
 
@@ -14,9 +30,19 @@ Use this guide when you need to:
 - validate page composition and publish readiness,
 - diagnose page-level issues after template or layout changes.
 
+## Terminology note
+
+In site-builder language, a **page** usually means a general article and its expected public result. The canonical data model is:
+
+```text
+Layout -> Template (optional) -> Article -> Published Page
+```
+
+Use **article** when discussing authoring and lifecycle behavior. Use **published page** when discussing public output.
+
 ## Create a page
 
-Pages are concrete content instances built from templates and rendered in layouts.
+Pages are concrete content instances built from articles, optionally backed by templates, and rendered in layouts.
 
 Standard creation flow:
 

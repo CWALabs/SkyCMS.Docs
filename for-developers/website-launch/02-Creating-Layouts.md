@@ -1,7 +1,22 @@
-﻿<!-- Audience: Backend and Full-Stack Developers, Designers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/02-Creating-Layouts.md -->
+﻿---
+canonical_title: Phase 2: Creating Layouts Guide
+description: Build site-wide layout shells in SkyCMS and understand how shared structure reduces duplication across templates and articles.
+audience:
+    - Backend Developers
+    - Full-Stack Developers
+    - Designers
+doc_type: How-to
+status: Draft
+entities:
+    - layout
+    - template
+    - article
+keywords:
+    - creating layouts
+    - site design
+    - dry principle
+source: SkyCMS/Docs/Developer-Guides/02-Creating-Layouts.md
+---
 
 # Phase 2: Creating Layouts Guide
 
@@ -14,6 +29,7 @@
 In Phase 1, you planned your site structure and decided how many Layouts you needed. Phase 2 is where you build those Layouts (referred to as "Site Designs" in the SkyCMS editor UI) in SkyCMS.
 
 In the context of SkyCMS, a **Layout** (or Site Design) is the structural container that defines:
+
 - Overall page structure (where content goes)
 - Header and footer areas
 - Navigation placement
@@ -21,6 +37,8 @@ In the context of SkyCMS, a **Layout** (or Site Design) is the structural contai
 - Global HTML structure
 
 This guide walks you through creating your first Site Design, adding variations, and ensuring mobile responsiveness.
+
+In the canonical model, layouts sit above templates and authored articles.
 
 ---
 
@@ -65,6 +83,7 @@ Imagine building a website with 50 pages without layouts:
 ```
 
 **The Problem:**
+
 - Header/nav/footer code **repeated 50 times**
 - Need to update logo? **Edit 50 files**
 - Fix footer bug? **Edit 50 files**
@@ -103,6 +122,7 @@ Using a Layout, you write shared code **once**:
 ```
 
 **The Benefits:**
+
 - Header/nav/footer written **once** in the Layout
 - Update logo? **Edit 1 file** (the Layout)
 - Fix footer bug? **Edit 1 file** (automatically applied to all 50 pages)
@@ -116,12 +136,14 @@ Using a Layout, you write shared code **once**:
 Consider a typical website project:
 
 **Without Layouts (Repetition):**
+
 - 50 pages × 150 lines of repeated code = **7,500 lines of duplicate code**
 - Logo update: 50 file edits × 2 minutes = **100 minutes**
 - Navigation change: 50 file edits × 3 minutes = **150 minutes**
 - Risk: Miss 3 pages → **broken consistency**
 
 **With Layouts (DRY):**
+
 - 1 Layout × 150 lines = **150 lines** (shared code)
 - 50 pages × 30 lines = **1,500 lines** (unique content only)
 - Logo update: **1 file edit × 2 minutes = 2 minutes**
@@ -135,6 +157,7 @@ Consider a typical website project:
 The DRY principle extends beyond just layouts:
 
 **Good DRY Practices:**
+
 ```html
 <!-- Layout: Define reusable CSS variables once -->
 <style>
@@ -157,6 +180,7 @@ The DRY principle extends beyond just layouts:
 ```
 
 **Avoid Repetition:**
+
 ```html
 <!-- Bad: Repeated inline styles -->
 <button style="background: #0066cc; padding: 10px 20px;">Click</button>
@@ -185,31 +209,36 @@ Before we dive into step-by-step instructions, let's be clear about what you can
 ### Framework Flexibility
 
 SkyCMS comes with **Bootstrap and Tailwind CSS frameworks pre-configured** as options, but they are:
+
 - **Completely optional** — use them if they suit your project
 - **Not required** — you can write 100% custom CSS
 - **Not limiting** — you can use a completely different framework if you prefer
 
 ### Your Options
 
-**Option 1: Use Built-in Frameworks (Recommended for Speed)**
+#### Option 1: Use Built-in Frameworks (Recommended for Speed)
+
 - Bootstrap 5 is available and configured
 - Tailwind CSS is available and configured
 - Choose whichever aligns with your design preferences
 - Fastest path to a responsive Site Design
 
-**Option 2: Custom CSS Only**
+#### Option 2: Custom CSS Only
+
 - Write your own CSS from scratch
 - Use your own preferred methodology (BEM, Atomic, etc.)
 - Complete control over styling and behavior
 - Takes more time but results in minimal code
 
-**Option 3: Different Framework**
+#### Option 3: Different Framework
+
 - Want Material Design? Use it.
 - Want Foundation? Use it.
 - Want CSS Grid with custom layouts? Go for it.
 - SkyCMS doesn't dictate your tech stack
 
-**Option 4: Minimal Layout or No Layout**
+#### Option 4: Minimal Layout or No Layout
+
 - If you want each page to have its own unique design
 - If you're using a per-page theme or CSS framework
 - You can create a **minimal layout** (just the `<html>`, `<body>`, and `@RenderBody()`)
@@ -231,6 +260,7 @@ Before creating your first Site Design, understand how it functions within SkyCM
 ### The Layout File Structure
 
 A Layout in SkyCMS is a Razor template that defines:
+
 1. The overall HTML document structure
 2. Where templates will render their content (`@RenderBody()`)
 3. Common elements (header, navigation, footer)
@@ -309,7 +339,7 @@ Before building, decide which design approach fits your project:
 
 ### Decision Tree
 
-```
+```text
 START: How should your site look?
 
 ├─ All pages look similar with consistent header/nav/footer
@@ -332,12 +362,14 @@ START: How should your site look?
 **When to use:** You want responsive design fast, don't need heavily customized styling, prefer CSS classes over custom CSS.
 
 **Pros:**
+
 - Pre-built responsive components (navbar, grid, buttons, forms)
 - Extensive documentation and community support
 - Quick to implement
 - Accessible by default
 
 **Cons:**
+
 - Requires learning Bootstrap class naming
 - Default design looks "Bootstrap-like"
 - Need customization via CSS overrides for unique branding
@@ -349,6 +381,7 @@ START: How should your site look?
 **When to use:** You want a modern utility-first approach, prefer building with classes, want a lightweight framework.
 
 **Pros:**
+
 - Highly customizable via configuration
 - Utility-first approach (compose designs from small classes)
 - Minimal output CSS when purged
@@ -356,6 +389,7 @@ START: How should your site look?
 - Modern and popular
 
 **Cons:**
+
 - Steeper learning curve if unfamiliar with utility-first
 - Requires understanding composition vs components
 - Build process needed for custom configuration
@@ -367,12 +401,14 @@ START: How should your site look?
 **When to use:** You have specific design needs, want maximum control, prefer minimal dependencies.
 
 **Pros:**
+
 - Complete control over every pixel
 - No framework constraints
 - Lighter payload (only your CSS)
 - Full creative freedom
 
 **Cons:**
+
 - More CSS to write
 - Responsive design is your responsibility
 - No pre-built components
@@ -384,11 +420,13 @@ START: How should your site look?
 **When to use:** Some pages need shared elements (header/nav), others need completely custom designs.
 
 **Pros:**
+
 - Flexibility to use different frameworks per page
 - Shared navigation doesn't repeat
 - Pages can have unique styling
 
 **Cons:**
+
 - Multiple design systems across site
 - Harder to maintain consistency
 - More complexity
@@ -400,11 +438,13 @@ START: How should your site look?
 **When to use:** Each page needs a completely unique design, or you're using per-page theme systems.
 
 **Pros:**
+
 - Maximum flexibility
 - Each page can be optimized independently
 - Use whatever framework/CSS makes sense per page
 
 **Cons:**
+
 - No automatic shared elements
 - Harder to maintain consistency
 - Content creators must understand layout independence
@@ -420,6 +460,7 @@ Let's walk through creating a standard Site Design using Bootstrap (the quickest
 ### Step 1: Access the Layout Manager
 
 In SkyCMS Admin:
+
 1. Navigate to **Content Management** → **Layouts**
 2. Click **Create New Layout** button
 3. You'll see a form with these fields:
@@ -432,12 +473,14 @@ In SkyCMS Admin:
 Choose a clear, descriptive name:
 
 **Good Names:**
+
 - "Main Site Design" (primary layout)
 - "Landing Page Design" (hero-focused)
 - "Admin Design" (for internal pages)
 - "Blog Design" (if blog pages differ from main)
 
 **Poor Names:**
+
 - "Layout" (too generic)
 - "Template" (confusing with templates in Phase 3)
 - "Site1" (not descriptive)
@@ -582,6 +625,7 @@ Start with a basic structure and build from there. Here's a Bootstrap example:
 ### Step 4: Test on Different Screen Sizes
 
 Before saving:
+
 1. Open browser DevTools (F12)
 2. Toggle device toolbar (Ctrl+Shift+M or Cmd+Shift+M)
 3. Test at multiple breakpoints:
@@ -590,6 +634,7 @@ Before saving:
    - Desktop: 1440px, 1920px
 
 Verify:
+
 - Header and navigation are readable
 - Main content area is accessible
 - Footer displays correctly
@@ -598,6 +643,7 @@ Verify:
 ### Step 5: Save Your Site Design
 
 Click **Save Layout** in SkyCMS. The system will:
+
 1. Validate the Razor syntax
 2. Store the markup
 3. Make it available for templates to use
@@ -607,11 +653,13 @@ Click **Save Layout** in SkyCMS. The system will:
 Once you have a main Site Design, you might create variations:
 
 **Example Variations:**
+
 - Main Site Design (header + nav + footer)
 - Landing Page Design (no nav, hero focused)
 - Blog Design (with sidebar)
 
 **To create a variation:**
+
 1. Create new layout
 2. Use similar structure but modify sections as needed
 3. Name clearly (e.g., "Landing Page Design")
@@ -923,11 +971,13 @@ This ensures proper rendering on mobile devices.
 ### 3. Keep Layouts Focused
 
 A Site Design should define:
+
 - ✅ Structure (header, nav, footer)
 - ✅ Responsive breakpoints
 - ✅ Global styles (typography, spacing)
 
 A Site Design should NOT:
+
 - ❌ Define page-specific content (that's for templates)
 - ❌ Include too much decorative code
 - ❌ Have hard-coded menu items (use dynamic navigation instead)
@@ -951,6 +1001,7 @@ A Site Design should NOT:
 ### 5. Test Responsive Behavior
 
 Before publishing, verify:
+
 - [ ] Mobile (320px, 480px)
 - [ ] Tablet (768px)
 - [ ] Desktop (1024px+)
@@ -993,6 +1044,7 @@ Before publishing, verify:
 ### When to Modify Existing Site Design
 
 You should edit an existing Site Design when:
+
 - ✅ Updating colors (maintain consistency)
 - ✅ Adjusting spacing or sizing
 - ✅ Adding minor CSS classes
@@ -1001,6 +1053,7 @@ You should edit an existing Site Design when:
 ### When to Create a New Site Design
 
 You should create a new Site Design when:
+
 - ✅ Pages need fundamentally different structure
 - ✅ A section needs different navigation or footer
 - ✅ Landing pages have a different visual approach
@@ -1040,6 +1093,7 @@ Then each template or page can include its own CSS framework, custom styles, and
 **SkyCMS is designed to place as few restrictions as possible on how web developers implement the UI and framework.** You have complete control over your technology choices, design approach, and implementation strategy. The system provides structure without limiting creativity or technical decisions.
 
 **Keep things as simple as possible.** Simpler Site Designs:
+
 - Load faster (better performance)
 - Are easier to maintain and update
 - Have fewer potential points of failure
@@ -1057,6 +1111,7 @@ Start minimal and add complexity only when necessary.
 **Recommendation:** Use Content Delivery Networks (CDNs) for popular CSS and JavaScript libraries.
 
 **Why CDNs improve performance:**
+
 ```html
 <!-- Good: Use CDN for popular libraries -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1064,6 +1119,7 @@ Start minimal and add complexity only when necessary.
 ```
 
 **Benefits:**
+
 1. **Browser caching** — Users likely already have these files cached from other sites
 2. **Reduced server load** — CDN handles delivery, not your server
 3. **Geographic distribution** — CDN serves files from nearest location
@@ -1073,25 +1129,30 @@ Start minimal and add complexity only when necessary.
 **When NOT to use CDNs:**
 
 ❌ **Version control concerns**
+
 - You need to lock specific library versions
 - You can't tolerate unexpected updates or changes
 - Your deployment process requires fixed dependencies
 
 ❌ **Privacy and data sovereignty**
+
 - You need to keep all web traffic private
 - Regulatory requirements prevent external requests
 - Corporate policies prohibit third-party resources
 
 ❌ **Custom libraries**
+
 - You've modified the library code
 - You have proprietary or internal-only libraries
 - You need libraries not available on CDNs
 
 ❌ **Offline/intranet applications**
+
 - App must work without internet access
 - Internal-only network with no external access
 
 **In these cases, self-host your CSS/JS libraries:**
+
 ```html
 <!-- Self-hosted alternative -->
 <link href="/css/vendor/bootstrap.min.css" rel="stylesheet">
@@ -1111,11 +1172,13 @@ Always minify resources before deployment:
 ```
 
 **Benefits:**
+
 - Reduces file size by 30-70%
 - Faster downloads and page loads
 - Less bandwidth consumption
 
 **Tools:**
+
 - CSS: cssnano, clean-css, UglifyCSS
 - JavaScript: UglifyJS, Terser, esbuild
 
@@ -1133,12 +1196,14 @@ Load images and resources only when needed:
 ```
 
 **What to lazy load:**
+
 - Below-the-fold images
 - Non-critical JavaScript
 - Social media widgets
 - Ads and tracking scripts
 
 **What NOT to lazy load:**
+
 - Above-the-fold images
 - Critical CSS
 - Core functionality scripts
@@ -1164,11 +1229,13 @@ Inline critical above-the-fold CSS to eliminate render-blocking:
 ```
 
 **Benefits:**
+
 - Faster initial render
 - Improved perceived performance
 - Better Core Web Vitals scores
 
 **Tools:**
+
 - Critical (npm package)
 - Penthouse
 - Critters (Next.js built-in)
@@ -1190,6 +1257,7 @@ Inline critical above-the-fold CSS to eliminate render-blocking:
 ```
 
 **Image optimization tips:**
+
 - Use WebP format (70-80% smaller than JPEG)
 - Implement responsive images with `srcset`
 - Compress images before upload
@@ -1209,6 +1277,7 @@ Inline critical above-the-fold CSS to eliminate render-blocking:
 ```
 
 **Strategies:**
+
 - Combine CSS files into one
 - Combine JavaScript files into one
 - Use CSS sprites for icons
@@ -1274,6 +1343,7 @@ body {
 ```
 
 **Benefits:**
+
 - Single source of truth for design values
 - Easy theme switching (including dark mode)
 - Consistent styling across site
@@ -1294,6 +1364,7 @@ body {
 ```
 
 **Why classes are better:**
+
 - Reusable across multiple elements
 - Easier to update globally
 - Better performance (classes are cached)
@@ -1365,6 +1436,7 @@ body div.container section.main-content article.post div.content p.text {
 ```
 
 **When to update version:**
+
 - After CSS changes
 - After JavaScript updates
 - After bug fixes
@@ -1406,6 +1478,7 @@ body div.container section.main-content article.post div.content p.text {
 ```
 
 **Benefits:**
+
 - Better screen reader support
 - Improved SEO
 - Clearer code structure
@@ -1452,6 +1525,7 @@ body div.container section.main-content article.post div.content p.text {
 ```
 
 **WCAG Standards:**
+
 - AA: 4.5:1 contrast ratio for normal text
 - AA: 3:1 contrast ratio for large text
 - AAA: 7:1 contrast ratio for normal text
@@ -1494,6 +1568,7 @@ input:focus {
 ```
 
 **How to get SRI hashes:**
+
 - Most CDNs provide them (jsdelivr, cdnjs, unpkg)
 - Generate with: `openssl dgst -sha384 -binary file.js | openssl base64 -A`
 
@@ -1524,6 +1599,7 @@ input:focus {
 ```
 
 **Benefits:**
+
 - Prevents XSS attacks
 - Restricts resource loading
 - Mitigates injection attacks
@@ -1571,6 +1647,7 @@ input:focus {
 ```
 
 **Why mobile-first:**
+
 - Majority of traffic is mobile
 - Easier to scale up than down
 - Better performance on mobile devices
@@ -1579,6 +1656,7 @@ input:focus {
 #### Test Across Browsers and Devices
 
 **Minimum testing matrix:**
+
 - [ ] Chrome (latest)
 - [ ] Firefox (latest)
 - [ ] Safari (latest)
@@ -1587,12 +1665,14 @@ input:focus {
 - [ ] Chrome Mobile (Android)
 
 **Screen sizes to test:**
+
 - [ ] Mobile: 375px, 414px (iPhone)
 - [ ] Tablet: 768px, 1024px (iPad)
 - [ ] Desktop: 1366px, 1920px
 - [ ] Large: 2560px+ (4K monitors)
 
 **Tools:**
+
 - Browser DevTools device emulation
 - BrowserStack or LambdaTest
 - Real device testing when possible
@@ -1622,6 +1702,7 @@ body {
 ```
 
 **Benefits:**
+
 - Better user experience
 - Reduces eye strain
 - Saves battery on OLED screens
@@ -1648,12 +1729,14 @@ body {
 ```
 
 **Font display options:**
+
 - `swap`: Show fallback immediately (best for most cases)
 - `block`: Wait briefly for font (can cause flash)
 - `fallback`: Show fallback, swap if font loads quickly
 - `optional`: Let browser decide based on connection speed
 
 **Best practices:**
+
 - Subset fonts (include only needed characters)
 - Use WOFF2 format (best compression)
 - Limit number of font families (1-2 max)
@@ -1673,7 +1756,8 @@ body {
 
 **Problem:** JavaScript for toggle button isn't loading or Bootstrap JS missing
 
-**Solution:** 
+**Solution:**
+
 - Verify `<script src="bootstrap.bundle.min.js"></script>` is included
 - Check that data attributes are correct: `data-bs-toggle="collapse"`
 
@@ -1682,6 +1766,7 @@ body {
 **Problem:** Bootstrap breakpoints don't match your wireframe
 
 **Solution:**
+
 - Test at Bootstrap's standard breakpoints (sm: 576px, md: 768px, lg: 992px, xl: 1200px)
 - Or customize breakpoints if using Tailwind
 
@@ -1690,6 +1775,7 @@ body {
 **Problem:** Content is shorter than viewport, footer floats
 
 **Solution:**
+
 ```css
 body {
     display: flex;
@@ -1721,6 +1807,7 @@ Always sanitize user input in layouts:
 ### Validate External Resources
 
 When including external CSS/JS:
+
 - ✅ Use HTTPS URLs only
 - ✅ Verify CDN integrity with Subresource Integrity (SRI)
 - ✅ Keep libraries updated
@@ -1784,6 +1871,7 @@ Once you've created your Site Design(s):
 - [Website Launch Workflow](./Website-Launch-Workflow.md) - Full overview
 
 ### Framework Documentation
+
 - [Bootstrap 5 Documentation](https://getbootstrap.com/docs/5.0/)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [MDN Web Docs: CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)

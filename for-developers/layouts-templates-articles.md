@@ -1,7 +1,22 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Article.cs, SkyCMS/Editor/Controllers/BaseController.cs -->
+---
+canonical_title: Layouts, Templates, and Articles
+description: Canonical developer guide to how layouts, templates, articles, and published pages relate in SkyCMS.
+audience:
+	- Backend Developers
+	- Full-Stack Developers
+doc_type: Explanation
+status: Canonical
+entities:
+	- layout
+	- template
+	- article
+	- published-page
+keywords:
+	- layouts templates articles
+	- pages vs articles
+	- content model
+source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Article.cs, SkyCMS/Editor/Controllers/BaseController.cs
+---
 
 # Layouts, Templates, and Articles
 
@@ -20,6 +35,17 @@ Use this guide when you need to:
 - Site-builder layout guide: [../for-site-builders/layouts.md](../for-site-builders/layouts.md)
 - Article lifecycle: [./article-lifecycle.md](./article-lifecycle.md)
 
+## Canonical terminology
+
+Use these terms consistently in developer-facing documentation:
+
+- **Layout**: the site-wide shell.
+- **Template**: an optional reusable structure inside a layout.
+- **Article**: the authored source record.
+- **Published Page**: the public projection created from an article when it is published.
+
+In editor and site-builder docs, the word **page** often refers to a general article. In developer docs, prefer the more precise terms **article** and **published page**.
+
 ## Hierarchy At A Glance
 
 The rendering hierarchy in SkyCMS is:
@@ -27,6 +53,7 @@ The rendering hierarchy in SkyCMS is:
 - Layout wraps everything.
 - Template (if used) sits inside the layout.
 - Article content sits inside the template.
+- Publishing creates the public `PublishedPage` projection.
 
 When no template is used:
 
@@ -60,6 +87,8 @@ If many articles need the same content structure, templates reduce duplication a
 
 An article is the authored content instance (page/post data and content) that ultimately renders for users.
 
+After publishing, the article produces a `PublishedPage` record used for public delivery.
+
 ## How They Work Together
 
 ### Path A: Article with Template
@@ -71,7 +100,7 @@ An article is the authored content instance (page/post data and content) that ul
 
 In short:
 
-- Layout -> Template -> Article
+- Layout -> Template -> Article -> Published Page
 
 ### Path B: Article without Template
 
@@ -80,7 +109,7 @@ In short:
 
 In short:
 
-- Layout -> Article
+- Layout -> Article -> Published Page
 
 ## When Templates Are Optional vs Recommended
 

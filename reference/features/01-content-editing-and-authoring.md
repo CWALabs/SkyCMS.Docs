@@ -66,7 +66,7 @@ A rich-text inline editing experience built on **CKEditor 5**. Content is edited
 Templates control which toolbar each editable region uses:
 
 | Profile | Purpose | Key Tools |
-|---------|---------|-----------|
+| --------- | --------- | ----------- |
 | `title` | Headings only | Bold, italic, underline |
 | `simple` | Basic formatting | Headings, bold, italic, lists, links, quotes, undo/redo |
 | `standard` | General content | All of simple + file links, images, media embeds, tables, to-do lists |
@@ -152,15 +152,16 @@ Pre-built component blocks organized by category:
 - Export HTML/CSS from the builder
 - Framework-aware: detects Bootstrap and Tailwind classes and provides matching block sets
 
-### Used For
+### AI Copilot Use Cases
 
 - **Layouts** — Creating site-wide header/footer/navigation shells
 - **Templates** — Building reusable page structures with editable regions
-- **Articles** — Composing individual page designs (Designer mode)
+- **Articles** — Composing individual page designs (Page Builder mode)
 
 > **Documentation:**
 >
 > - [Page Builder](../../for-editors/page-builder.md)
+> - [Layers Panel](../../for-editors/layers.md)
 > - [Page Builder Quickstart](../../for-editors/page-builder-quickstart.md)
 
 ---
@@ -283,7 +284,7 @@ A comprehensive in-browser image editing suite built on **Filerobot Image Editor
 ### Editing Tools
 
 | Tool | Description |
-|------|-------------|
+| ------ | ------------- |
 | **Crop** | Freeform, fixed aspect ratios (1:1, 4:3, 16:9, 21:9), social media presets |
 | **Rotate** | Free rotation and 90° increments |
 | **Flip** | Horizontal (Flip X) and vertical (Flip Y) |
