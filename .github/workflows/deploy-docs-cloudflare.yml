@@ -376,6 +376,7 @@ jobs:
             --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
       
       - name: Purge CloudFlare cache
+        id: purge_cache
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
@@ -389,6 +390,7 @@ jobs:
           else
             echo "CloudFlare cache purge skipped - credentials not configured"
           fi
+        continue-on-error: true
 
       - name: Validate live homepage assets
         run: |
@@ -465,8 +467,10 @@ jobs:
           echo "- Branch: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- Triggered by: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          if [ -n "${{ env.CLOUDFLARE_ZONE_ID }}" ]; then
+          if [ "${{ steps.purge_cache.outcome }}" = "success" ] && [ -n "${{ env.CLOUDFLARE_ZONE_ID }}" ]; then
             echo "- CDN Cache: ✅ Purged" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.purge_cache.outcome }}" = "failure" ]; then
+            echo "- CDN Cache: ⚠️ Purge failed; deployment still completed. Verify CLOUDFLARE_ZONE_ID and API token permissions." >> $GITHUB_STEP_SUMMARY
           else
             echo "- CDN Cache: ⏭️ Skipped (no Zone ID configured)" >> $GITHUB_STEP_SUMMARY
           fi
