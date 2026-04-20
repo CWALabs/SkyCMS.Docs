@@ -101,6 +101,7 @@ nav:
     - DocsPublisher: installation/docs-publisher.md
 
   - For Editors:
+    - Start Here: for-editors/index.md
     - Overview: for-editors/overview.md
     - Creating Articles: for-editors/creating-articles.md
     - Updating & Deleting: for-editors/updating-and-deleting-articles.md
@@ -137,6 +138,7 @@ nav:
       - Contact Management: for-editors/contact-management.md
 
   - For Site Builders:
+    - Start Here: for-site-builders/index.md
     - Overview: for-site-builders/overview.md
     - Layouts: for-site-builders/layouts.md
     - Layout Examples:
@@ -172,6 +174,7 @@ nav:
       - Table of Contents: for-site-builders/widgets/table-of-contents.md
 
   - For Developers:
+    - Start Here: for-developers/index.md
     - Overview: for-developers/overview.md
     - Architecture: for-developers/architecture.md
     - Middleware Pipeline: for-developers/middleware-pipeline.md
@@ -217,6 +220,9 @@ nav:
       - "Phase 6: Handoff": for-developers/website-launch/06-Preparing-for-Handoff.md
       - Modern Approach: for-developers/website-launch/SkyCMS-Modern-Approach.md
       - Creating Editable Areas: for-developers/website-launch/CreatingEditableAreas.md
+      - Checklists:
+        - Pre-Launch Checklist: for-developers/website-launch/Checklists/Pre-Launch-Checklist.md
+        - Content Creator Onboarding: for-developers/website-launch/Checklists/Content-Creator-Onboarding.md
       - Upload Secrets: for-developers/website-launch/UploadSecretsToGithubRepo.md
 
   - Configuration:
@@ -264,6 +270,7 @@ nav:
     - Licensing & Distribution: deployment/licensing-and-distribution.md
 
   - Reference:
+    - AI Context Pack: reference/ai-context-pack.md
     - FAQ: reference/faq.md
     - Glossary: reference/glossary.md
     - Troubleshooting: reference/troubleshooting.md

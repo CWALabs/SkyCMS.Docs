@@ -41,10 +41,10 @@ Common issues and solutions for SkyCMS setup, configuration, and operation.
 
 **Solutions:**
 - Verify the connection string format matches your provider:
-  - [Azure Cosmos DB](../configuration/legacy/Database-CosmosDB.md)
-  - [MS SQL Server / Azure SQL](../configuration/legacy/Database-SQLServer.md)
-  - [MySQL](../configuration/legacy/Database-MySQL.md)
-  - [SQLite](../configuration/legacy/Database-SQLite.md)
+  - [Azure Cosmos DB](../configuration/database/cosmos-db.md)
+  - [MS SQL Server / Azure SQL](../configuration/database/sql-server.md)
+  - [MySQL](../configuration/database/mysql.md)
+  - [SQLite](../configuration/database/sqlite.md)
 - Check that the database server is running and accessible from your SkyCMS instance
 - For Azure SQL, ensure your firewall rules allow your IP or enable "Allow Azure services and resources to access this server"
 - Test the connection string with the provider's CLI tool (e.g., `sqlcmd`, `mysql` client)
@@ -89,10 +89,10 @@ Common issues and solutions for SkyCMS setup, configuration, and operation.
 
 **Solutions:**
 - Verify the connection string format:
-  - [Azure Blob Storage](../configuration/legacy/Storage-AzureBlob.md)
-  - [Amazon S3](../configuration/legacy/Storage-S3.md)
-  - [Cloudflare R2](../configuration/legacy/Storage-Cloudflare.md)
-  - [Google Cloud Storage](../configuration/legacy/Storage-GoogleCloud.md)
+  - [Azure Blob Storage](../configuration/storage/azure-blob.md)
+  - [Amazon S3](../configuration/storage/s3.md)
+  - [Cloudflare R2](../configuration/storage/cloudflare-r2.md)
+  - [Google Cloud Storage](../configuration/storage/google-cloud.md)
 - Ensure the storage account/bucket exists
 - Verify credentials have read/write/delete permissions
 - Test credentials with provider CLI (e.g., `az storage`, `aws s3`, `gsutil`)
@@ -133,10 +133,10 @@ Common issues and solutions for SkyCMS setup, configuration, and operation.
 
 **Solutions:**
 - Verify credentials and IDs match the provider:
-  - [Azure Front Door](../configuration/legacy/CDN-AzureFrontDoor.md)
-  - [Cloudflare CDN](../configuration/legacy/CDN-Cloudflare.md)
-  - [Amazon CloudFront](../configuration/legacy/CDN-CloudFront.md)
-  - [Sucuri](../configuration/legacy/CDN-Sucuri.md)
+  - [Azure Front Door](../configuration/cdn/azure-front-door.md)
+  - [Cloudflare CDN](../configuration/cdn/cloudflare.md)
+  - [Amazon CloudFront](../configuration/cdn/cloudfront.md)
+  - [Sucuri](../configuration/cdn/sucuri.md)
 - Test credentials with provider CLI or API
 - Ensure role/policy allows cache invalidation/purge
 

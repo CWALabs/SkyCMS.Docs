@@ -42,7 +42,7 @@ Developers typically:
 - [Creating editable areas](./website-launch/CreatingEditableAreas.md)
 - [Layouts, templates, and articles](./layouts-templates-articles.md)
 - [Website launch workflow (phased guides)](./website-launch/index.md)
-- [Configuration guides (migrated)](../configuration/legacy/README.md)
+- [Configuration overview](../configuration/overview.md)
 - [Article lifecycle](./article-lifecycle.md)
 - [Middleware pipeline](./middleware-pipeline.md)
 - [Multi-tenancy deep dive](./multi-tenancy-deep-dive.md)

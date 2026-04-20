@@ -102,6 +102,6 @@ Both seed modules use `Microsoft.Resources/deploymentScripts` (Azure PowerShell 
 
 ## See Also
 
-- [Installation Guide](../installation/) — Full production installation
+- [Installation Guide](../installation/overview.md) — Full production installation
 - [Docker Deployment](docker.md) — Docker Compose deployment
 - [CI/CD Pipelines](cicd-pipelines.md) — Automated build and deployment workflows

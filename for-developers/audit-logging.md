@@ -127,4 +127,4 @@ External logging providers (Application Insights, Seq, Serilog, etc.) can be add
 
 - [Blog Architecture](blog-architecture.md) — Domain events in the blogging subsystem
 - [Site Settings](../for-editors/site-settings.md) — Settings that are subject to audit logging
-- [Installation Guide](../installation/) — Health check configuration during deployment
+- [Installation Guide](../installation/overview.md) — Health check configuration during deployment

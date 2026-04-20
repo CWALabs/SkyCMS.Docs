@@ -45,5 +45,5 @@ Do not keep production secrets in source-controlled files.
 
 ## Related guides
 
-- [Legacy Configuration Guides](./legacy/README.md)
+- [Configuration Reference by Area](../configuration/overview.md)
 - [For Developers](../for-developers/index.md)

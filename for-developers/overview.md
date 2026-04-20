@@ -19,7 +19,7 @@ Use this page when you need to:
 - Templates: [templates.md](templates.md)
 - Layout and content hierarchy: [layouts-templates-articles.md](layouts-templates-articles.md)
 - Website launch workflow (migrated): [website-launch/index.md](website-launch/index.md)
-- Configuration guides (migrated): [../configuration/legacy/README.md](../configuration/legacy/README.md)
+- Configuration overview: [../configuration/overview.md](../configuration/overview.md)
 - Article lifecycle: [article-lifecycle.md](article-lifecycle.md)
 
 ## Architecture map
