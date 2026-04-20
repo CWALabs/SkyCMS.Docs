@@ -10,6 +10,7 @@
 Use this guide when you need to:
 
 - create new page instances from templates,
+- create one-off articles directly inside a layout without using a template,
 - validate page composition and publish readiness,
 - diagnose page-level issues after template or layout changes.
 
@@ -27,12 +28,24 @@ Standard creation flow:
 
 Use templates by default; start from blank only when a page is truly one-off.
 
+## When to skip a template
+
+Creating an article without a page template is appropriate when:
+
+- the page is a genuine one-off,
+- the structure will not be reused across a content series,
+- the layout already provides enough framing,
+- speed matters more than building a reusable pattern first.
+
+This path should be the exception, not the default. If you notice the same article structure being recreated more than once, move that pattern into a template.
+
 ## Select template and layout
 
 Selection strategy:
 
 - Layout controls the site-wide shell.
 - Template controls the page-level content structure.
+- If no template is used, the article itself carries the page-level structure.
 
 When selecting:
 
@@ -46,10 +59,28 @@ For new sections:
 2. Create or adjust template.
 3. Create page instances from that template.
 
+For one-off pages:
+
+1. Validate layout fit first.
+2. Start from a blank or no-template article path.
+3. Build only the content structure needed for that single page.
+
 Related docs:
 
 - [Layouts](./layouts.md)
 - [Templates](./templates.md)
+
+## Example implementations
+
+These examples show how a stand-alone article can be authored directly inside a layout without relying on a reusable page template.
+
+- [Article Examples Overview](./article-examples/overview.md)
+- [Standalone Content Article Examples](./article-examples/standalone-content.md)
+- [Announcement and Update Article Examples](./article-examples/announcement-update.md)
+- [Resource Article with Table of Contents Examples](./article-examples/resource-with-toc.md)
+- [Event Page Article Examples](./article-examples/event-page.md)
+
+Use these patterns when a page is intentionally one-off and does not justify its own reusable template.
 
 ## Structure content sections
 
@@ -119,4 +150,5 @@ Common issues and checks:
 
 - [Layouts](./layouts.md)
 - [Templates](./templates.md)
+- [Article Examples Overview](./article-examples/overview.md)
 - [For Editors Overview](../for-editors/overview.md)

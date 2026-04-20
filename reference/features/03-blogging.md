@@ -68,7 +68,7 @@ Each blog post in the list provides quick actions:
 
 ## 3. Blog Templates
 
-> **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blog-templates) · [Templates (Site Builders)](../../for-site-builders/templates.md)
+> **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blog-templates) · [Templates (Site Builders)](../../for-site-builders/templates.md) · [Blog Post Template Examples](../../for-site-builders/template-examples/blog-post.md)
 
 SkyCMS provides dedicated blog-aware templates for consistent blog presentation.
 

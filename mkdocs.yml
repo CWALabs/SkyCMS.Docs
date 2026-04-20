@@ -138,8 +138,27 @@ nav:
   - For Site Builders:
     - Overview: for-site-builders/overview.md
     - Layouts: for-site-builders/layouts.md
+    - Layout Examples:
+      - Overview: for-site-builders/layout-examples/overview.md
+      - No Framework: for-site-builders/layout-examples/no-framework.md
+      - Bootstrap 5: for-site-builders/layout-examples/bootstrap-5.md
+      - Tailwind CSS: for-site-builders/layout-examples/tailwind.md
+      - Bulma: for-site-builders/layout-examples/bulma.md
+      - Foundation: for-site-builders/layout-examples/foundation.md
     - Templates: for-site-builders/templates.md
+    - Template Examples:
+      - Overview: for-site-builders/template-examples/overview.md
+      - Generic Article: for-site-builders/template-examples/generic-article.md
+      - Blog Post: for-site-builders/template-examples/blog-post.md
+      - Landing Page: for-site-builders/template-examples/landing-page.md
+      - Information Page with Secondary Navigation: for-site-builders/template-examples/information-page-secondary-nav.md
     - Pages: for-site-builders/pages.md
+    - Article Examples:
+      - Overview: for-site-builders/article-examples/overview.md
+      - Standalone Content: for-site-builders/article-examples/standalone-content.md
+      - Announcement and Update: for-site-builders/article-examples/announcement-update.md
+      - Resource with Table of Contents: for-site-builders/article-examples/resource-with-toc.md
+      - Event Page: for-site-builders/article-examples/event-page.md
     - Style Guide: for-site-builders/style-guide-template.md
     - Widgets:
       - Overview: for-site-builders/widgets/overview.md

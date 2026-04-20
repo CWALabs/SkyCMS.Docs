@@ -5,9 +5,11 @@
 
 # Layouts
 
-Use this page to define consistent page chrome (header, footer, navigation, spacing, typography foundations) across multiple templates and pages.
+Use this guide to create and manage consistent page structure across templates and pages, including the header, footer, navigation, spacing, and typography foundations.
 
-## When to use this page
+Layouts are intentionally framework-agnostic. You can build them with Bootstrap, Tailwind, Materialize, Metro, your own design system, or no framework at all. The goal is to give site builders, designers, and developers the flexibility to choose the approach that best fits the project.
+
+## When to use this guide
 
 Use this guide when you need to:
 
@@ -17,22 +19,22 @@ Use this guide when you need to:
 
 ## What a layout is
 
-A layout is the site-wide shell for rendered pages. In SkyCMS, layout sections map to:
+A layout is the site-wide shell that wraps rendered pages. In SkyCMS, layout sections typically map to:
 
 - Head content: injected into the HTML `head` tag.
 - Header content: shared top-of-page structure.
 - Footer content: shared bottom-of-page structure.
 
-Page and template content render between the header and footer shell.
+Page and template content render inside that shared structure, between the header and footer.
 
 ## Getting started
 
-First-time layout setup usually follows one of two paths:
+Most first-time layout work follows one of two paths:
 
 - Choose a pre-built layout: fastest path for teams that want a polished baseline.
 - Build a custom layout: best when you need full brand-specific control from the start.
 
-Recommended order:
+Recommended approach:
 
 1. Start with a pre-built layout if your team is moving quickly.
 2. Establish design tokens and navigation rules.
@@ -91,6 +93,19 @@ Validate with templates:
 Validate with real pages:
 
 - Test home, article, blog stream, blog post, and long-form content examples.
+
+## Example implementations
+
+If you want a starting point, these example layouts show how the same SkyCMS layout concept can be implemented with different CSS frameworks while keeping the structure server-rendered and framework-neutral.
+
+- [Layout Examples Overview](./layout-examples/overview.md)
+- [No-Framework Layout Example](./layout-examples/no-framework.md)
+- [Bootstrap 5 Layout Example](./layout-examples/bootstrap-5.md)
+- [Tailwind CSS Layout Example](./layout-examples/tailwind.md)
+- [Bulma Layout Example](./layout-examples/bulma.md)
+- [Foundation Layout Example](./layout-examples/foundation.md)
+
+Use these as reference implementations for layout structure, token placement, navigation patterns, and framework-specific utility choices.
 
 ## Working with the layout list
 
@@ -249,6 +264,7 @@ Common issues and checks:
 ## Related guides
 
 - [Site Builder Guide Overview](./overview.md)
+- [Layout Examples Overview](./layout-examples/overview.md)
 - [Pages](./pages.md)
 - [Templates](./templates.md)
 - Developer implementation guide: [../for-developers/layouts.md](../for-developers/layouts.md)

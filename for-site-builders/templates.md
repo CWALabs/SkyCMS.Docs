@@ -43,11 +43,24 @@ Typical workflow:
 Template patterns worth creating early:
 
 - content/article page,
+- blog post page,
 - landing page,
 - campaign page,
 - information page with secondary navigation.
 
 Use clear names and notes so editors can choose the right template quickly.
+
+## Example implementations
+
+These example templates show how common page types can be implemented across the same framework choices used in the layout examples.
+
+- [Template Examples Overview](./template-examples/overview.md)
+- [Generic Article Template Examples](./template-examples/generic-article.md)
+- [Blog Post Template Examples](./template-examples/blog-post.md)
+- [Landing Page Template Examples](./template-examples/landing-page.md)
+- [Information Page with Secondary Navigation Examples](./template-examples/information-page-secondary-nav.md)
+
+Use these examples to compare editable region strategy, semantic structure, and framework-specific markup choices before building your own production templates.
 
 ## Bind widgets and editable areas
 
@@ -179,6 +192,7 @@ Common issues and checks:
 ## Related guides
 
 - [Layouts](./layouts.md)
+- [Template Examples Overview](./template-examples/overview.md)
 - [Pages](./pages.md)
 - [Style Guide Template](./style-guide-template.md)
 - [Creating Editable Areas (developer implementation guide)](../for-developers/website-launch/CreatingEditableAreas.md)

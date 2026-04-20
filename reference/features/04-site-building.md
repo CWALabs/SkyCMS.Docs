@@ -43,7 +43,7 @@ SkyCMS uses a three-layer content architecture — **Layouts → Templates → P
 
 ## 2. Layouts
 
-> **Documentation:** [Layouts (Site Builders)](../../for-site-builders/layouts.md) · [Layouts (Developers)](../../for-developers/layouts.md) · [Creating Layouts (Website Launch)](../../for-developers/website-launch/02-Creating-Layouts.md)
+> **Documentation:** [Layouts (Site Builders)](../../for-site-builders/layouts.md) · [Layout Examples Overview](../../for-site-builders/layout-examples/overview.md) · [No-Framework Layout Example](../../for-site-builders/layout-examples/no-framework.md) · [Bootstrap 5 Layout Example](../../for-site-builders/layout-examples/bootstrap-5.md) · [Tailwind CSS Layout Example](../../for-site-builders/layout-examples/tailwind.md) · [Bulma Layout Example](../../for-site-builders/layout-examples/bulma.md) · [Foundation Layout Example](../../for-site-builders/layout-examples/foundation.md) · [Layouts (Developers)](../../for-developers/layouts.md) · [Creating Layouts (Website Launch)](../../for-developers/website-launch/02-Creating-Layouts.md)
 
 The **layout** is the outermost shell of every page — the consistent chrome that appears across the entire site (or a section of it).
 
@@ -95,7 +95,7 @@ Two editing modes:
 
 ## 3. Templates
 
-> **Documentation:** [Templates (Site Builders)](../../for-site-builders/templates.md) · [Templates (Developers)](../../for-developers/templates.md) · [Creating Templates (Website Launch)](../../for-developers/website-launch/03-Creating-Templates.md)
+> **Documentation:** [Templates (Site Builders)](../../for-site-builders/templates.md) · [Template Examples Overview](../../for-site-builders/template-examples/overview.md) · [Generic Article Template Examples](../../for-site-builders/template-examples/generic-article.md) · [Blog Post Template Examples](../../for-site-builders/template-examples/blog-post.md) · [Landing Page Template Examples](../../for-site-builders/template-examples/landing-page.md) · [Information Page with Secondary Navigation Examples](../../for-site-builders/template-examples/information-page-secondary-nav.md) · [Templates (Developers)](../../for-developers/templates.md) · [Creating Templates (Website Launch)](../../for-developers/website-launch/03-Creating-Templates.md)
 
 A **template** defines the reusable page structure within a layout. Templates contain **editable regions** where editors place content.
 
@@ -174,7 +174,7 @@ Common template patterns provided or recommended:
 
 ## 4. Pages
 
-> **Documentation:** [Pages (Site Builders)](../../for-site-builders/pages.md) · [Building the Home Page](../../for-developers/website-launch/04-Building-Home-Page.md) · [Building Initial Pages](../../for-developers/website-launch/05-Building-Initial-Pages.md)
+> **Documentation:** [Pages (Site Builders)](../../for-site-builders/pages.md) · [Article Examples Overview](../../for-site-builders/article-examples/overview.md) · [Standalone Content Article Examples](../../for-site-builders/article-examples/standalone-content.md) · [Announcement and Update Article Examples](../../for-site-builders/article-examples/announcement-update.md) · [Resource Article with Table of Contents Examples](../../for-site-builders/article-examples/resource-with-toc.md) · [Event Page Article Examples](../../for-site-builders/article-examples/event-page.md) · [Building the Home Page](../../for-developers/website-launch/04-Building-Home-Page.md) · [Building Initial Pages](../../for-developers/website-launch/05-Building-Initial-Pages.md)
 
 **Pages** are the concrete content instances that editors create and publish. Each page inherits structure from its layout and template.
 
@@ -191,6 +191,7 @@ Common template patterns provided or recommended:
 ### Page Types
 
 - Standard content pages
+- Stand-alone articles rendered directly in a layout without a template
 - Blog posts (managed through the blogging subsystem)
 - Home page (special designation, created via initial setup or promoted)
 - SPA (Single Page Application) deployments
