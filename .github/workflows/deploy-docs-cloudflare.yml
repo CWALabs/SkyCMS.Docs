@@ -104,6 +104,47 @@ jobs:
           rm mkdocs-ci.yml
           cd "${REPO_DIR}"
 
+      - name: Capture critical homepage assets
+        run: |
+          python << 'EOF'
+          import re
+          from pathlib import Path
+
+          site = Path('./site').resolve()
+          index_html = site / 'index.html'
+          if not index_html.exists():
+              raise SystemExit('❌ Missing generated site/index.html')
+
+          content = index_html.read_text(encoding='utf-8', errors='ignore')
+          assets = []
+
+          for pattern in (
+              r'href=["\'](assets/[^"\']+)["\']',
+              r'src=["\'](assets/[^"\']+)["\']',
+          ):
+              for match in re.findall(pattern, content, flags=re.IGNORECASE):
+                  asset = match.split('?', 1)[0].split('#', 1)[0]
+                  if asset not in assets:
+                      assets.append(asset)
+
+          if not assets:
+              raise SystemExit('❌ No local homepage assets were detected in site/index.html')
+
+          missing = [asset for asset in assets if not (site / asset).exists()]
+          if missing:
+              print('❌ Homepage references generated assets that are missing locally:')
+              for asset in missing:
+                  print(f'  {asset}')
+              raise SystemExit(1)
+
+          output = site / 'required-assets.txt'
+          output.write_text('\n'.join(assets) + '\n', encoding='utf-8')
+
+          print('✅ Captured homepage assets:')
+          for asset in assets:
+              print(f'  {asset}')
+          EOF
+
       - name: Disallow markdown hrefs in generated site
         run: |
           python << 'EOF'
@@ -269,6 +310,10 @@ jobs:
           check_key "index.html"
           check_key "getting-started/quick-start/index.html"
           check_key "for-editors/overview/index.html"
+          while IFS= read -r asset; do
+            [ -n "$asset" ] || continue
+            check_key "$asset"
+          done < ./site/required-assets.txt
           echo "✅ Verified key pages exist in R2"
 
       - name: Debug R2 key listing on verification failure
@@ -296,6 +341,64 @@ jobs:
           else
             echo "CloudFlare cache purge skipped - credentials not configured"
           fi
+
+      - name: Validate live homepage assets
+        run: |
+          python << 'EOF'
+          import time
+          from pathlib import Path
+          from urllib.parse import urljoin
+
+          import requests
+
+          site_url = 'https://docs.sky-cms.com/'
+          asset_file = Path('./site/required-assets.txt')
+          assets = [line.strip() for line in asset_file.read_text(encoding='utf-8').splitlines() if line.strip()]
+
+          failures = []
+          session = requests.Session()
+
+          def fetch_ok(url: str):
+              last_error = None
+              for attempt in range(1, 9):
+                  try:
+                      response = session.get(url, timeout=20)
+                      if response.status_code == 200:
+                          return response
+                      last_error = f'status={response.status_code}'
+                  except requests.RequestException as exc:
+                      last_error = str(exc)
+
+                  print(f'⏳ Waiting for {url} (attempt {attempt}/8): {last_error}')
+                  time.sleep(3)
+
+              raise RuntimeError(last_error or 'unknown error')
+
+          homepage = fetch_ok(f'{site_url}?cachebust={int(time.time())}')
+          print(f'✅ Homepage live check passed ({homepage.status_code})')
+
+          for asset in assets:
+              url = urljoin(site_url, asset)
+              cachebusted = f'{url}?cachebust={int(time.time())}'
+              try:
+                  response = fetch_ok(cachebusted)
+              except RuntimeError as exc:
+                  failures.append(f'{asset} -> {exc}')
+                  continue
+
+              content_type = response.headers.get('Content-Type', '')
+              if asset.endswith('.css') and 'text/css' not in content_type:
+                  failures.append(f'{asset} -> unexpected content type {content_type!r}')
+                  continue
+
+              print(f'✅ Live asset check passed: {asset} ({content_type or "no content-type"})')
+
+          if failures:
+              print('❌ Live asset validation failed:')
+              for failure in failures:
+                  print(f'  {failure}')
+              raise SystemExit(1)
+          EOF
       
       - name: Deployment summary
         run: |
@@ -303,8 +406,10 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Validation Checks:**" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ MkDocs build completed" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Homepage-linked assets verified in generated output" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ External links validated" >> $GITHUB_STEP_SUMMARY
           echo "- ✅ Internal anchors validated" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Live homepage assets validated after cache purge" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Deployment Details:**" >> $GITHUB_STEP_SUMMARY
           echo "- R2 Bucket authoritative sync target: \`${{ secrets.R2_BUCKET_NAME }}\` (root)" >> $GITHUB_STEP_SUMMARY
