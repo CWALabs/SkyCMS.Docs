@@ -145,6 +145,20 @@ jobs:
               print(f'  {asset}')
           EOF
 
+      - name: Debug generated homepage assets
+        run: |
+          echo "ℹ️ Required homepage assets:"
+          cat ./site/required-assets.txt
+          echo ""
+          echo "ℹ️ Generated stylesheet inventory:"
+          find ./site/assets/stylesheets -maxdepth 1 -type f -printf "%P %s bytes\n" | sort
+          echo ""
+          echo "ℹ️ Generated CSS inventory:"
+          find ./site/assets/css -maxdepth 1 -type f -printf "%P %s bytes\n" | sort
+          echo ""
+          echo "ℹ️ Generated JavaScript inventory:"
+          find ./site/assets/javascripts -maxdepth 2 -type f -printf "%P %s bytes\n" | sort
+
       - name: Disallow markdown hrefs in generated site
         run: |
           python << 'EOF'
@@ -285,6 +299,21 @@ jobs:
             --delete
           echo "✅ R2 bucket synchronized from ./site to bucket root"
 
+      - name: Force upload critical homepage assets
+        run: |
+          echo "📌 Force-uploading homepage-critical assets..."
+          while IFS= read -r asset; do
+            [ -n "$asset" ] || continue
+            if [ ! -f "./site/$asset" ]; then
+              echo "❌ Missing local asset before force upload: $asset"
+              exit 1
+            fi
+
+            aws s3 cp "./site/$asset" "s3://${{ secrets.R2_BUCKET_NAME }}/$asset" \
+              --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+            echo "✅ Force-uploaded $asset"
+          done < ./site/required-assets.txt
+
       - name: Verify critical pages in R2
         run: |
           check_key() {
@@ -321,6 +350,25 @@ jobs:
         run: |
           echo "ℹ️ Debug listing for root and key docs folders:"
           aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }} \
+            --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
+          echo ""
+          echo "ℹ️ Required homepage assets for this run:"
+          cat ./site/required-assets.txt
+          echo ""
+          echo "ℹ️ R2 assets root:"
+          aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/assets/ \
+            --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
+          echo ""
+          echo "ℹ️ R2 stylesheet assets:"
+          aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/assets/stylesheets/ \
+            --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
+          echo ""
+          echo "ℹ️ R2 CSS assets:"
+          aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/assets/css/ \
+            --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
+          echo ""
+          echo "ℹ️ R2 JavaScript assets:"
+          aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/assets/javascripts/ \
             --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
           aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/getting-started/ \
             --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
