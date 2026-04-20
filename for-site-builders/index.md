@@ -10,7 +10,7 @@
 Use this page when you need to:
 
 - understand site builder responsibilities,
-- find the right guide for layouts, templates, or pages,
+- find the right guide for layouts, templates, pages, or example implementations,
 - navigate quickly to implementation-partner docs.
 
 ## Role Overview
@@ -35,8 +35,11 @@ Site builders typically:
 
 - [Site Builder Guide Overview](./overview.md)
 - [Layouts](./layouts.md)
+- [Layout Examples Overview](./layout-examples/overview.md)
 - [Templates](./templates.md)
+- [Template Examples Overview](./template-examples/overview.md)
 - [Pages](./pages.md)
+- [Article Examples Overview](./article-examples/overview.md)
 - [Widgets](./widgets/overview.md)
 - [Style Guide Template](./style-guide-template.md)
 

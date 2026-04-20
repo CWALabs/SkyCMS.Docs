@@ -20,8 +20,9 @@ Use this guide when you need to:
 1. Define the layout direction and constraints.
 2. Build or update the layout shell.
 3. Build templates that run inside that layout.
-4. Validate pages against responsive and accessibility expectations.
-5. Handoff guidelines to editors and developers.
+4. Use example implementations to validate structural decisions before rollout.
+5. Validate pages against responsive and accessibility expectations.
+6. Handoff guidelines to editors and developers.
 
 ## Reusable design strategy
 
@@ -47,10 +48,21 @@ Document and share:
 - Known constraints and fallback behavior.
 - Example screenshots and validation notes.
 
+## Example libraries
+
+Use the example sections when you want to compare implementation patterns before creating production layouts, templates, or one-off articles.
+
+- [Layout Examples Overview](./layout-examples/overview.md)
+- [Template Examples Overview](./template-examples/overview.md)
+- [Article Examples Overview](./article-examples/overview.md)
+
 ## Related guides
 
 - [Layouts](./layouts.md)
 - [Templates](./templates.md)
 - [Pages](./pages.md)
+- [Layout Examples Overview](./layout-examples/overview.md)
+- [Template Examples Overview](./template-examples/overview.md)
+- [Article Examples Overview](./article-examples/overview.md)
 - [Widgets](./widgets/overview.md)
 - [Phased website launch workflow (developer-led)](../for-developers/website-launch/index.md)
