@@ -108,12 +108,13 @@ SkyCMS ships with six default roles:
 - Remove CDN configuration
 - CDN settings isolated per tenant
 
-### Copilot Configuration
+### AI Provider Configuration
 
-- Enable/disable AI Copilot per tenant
+- Enable/disable AI per tenant
 - Configure endpoint, model, access token
 - Tuning: temperature, max tokens, timeout
 - Status endpoint for client-side feature discovery
+- Model catalog endpoint for provider-aware model selection
 
 ---
 
@@ -213,7 +214,7 @@ Built-in rate limiting policies to prevent abuse:
 | `contact-form` | 3 req / 5 min (prod), 20 req / 1 min (dev) | Contact form submissions |
 | `deployment` | 10 req / 5 min | SPA deployment API |
 | `docs-import` | Configurable | Docs import API |
-| `copilot-inline` | Configurable | Copilot completion requests |
+| `copilot-inline` | Configurable | AI completion requests |
 
 ### SPA Deployment Security
 

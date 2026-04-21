@@ -9,7 +9,7 @@ SkyCMS provides four distinct editing experiences, allowing content creators to 
 - [Page Editor (WYSIWYG)](#1-page-editor-wysiwyg)
 - [Page Builder (Visual Drag-and-Drop)](#2-page-builder-visual-drag-and-drop)
 - [Code Editor](#3-code-editor)
-- [AI Copilot Integration](#4-ai-copilot-integration)
+- [AI Assistant Integration](#4-ai-assistant-integration)
 - [Image Editor](#5-image-editor)
 - [Real-Time Collaborative Editing](#6-real-time-collaborative-editing)
 
@@ -152,7 +152,7 @@ Pre-built component blocks organized by category:
 - Export HTML/CSS from the builder
 - Framework-aware: detects Bootstrap and Tailwind classes and provides matching block sets
 
-### AI Copilot Use Cases
+### AI Assistant Use Cases
 
 - **Layouts** — Creating site-wide header/footer/navigation shells
 - **Templates** — Building reusable page structures with editable regions
@@ -229,13 +229,13 @@ Full VS Code-compatible shortcut set including:
 
 ---
 
-## 4. AI Copilot Integration
+## 4. AI Assistant Integration
 
-AI-powered code assistance integrated into the Code Editor, providing inline completions and a chat interface.
+A tenant-aware AI assistant shared across Monaco, CKEditor, and the standalone AI Help Chat.
 
 ### Inline Code Completions
 
-- Ghost-text suggestions as you type (similar to GitHub Copilot in VS Code)
+- Ghost-text suggestions as you type
 - Context-aware: understands the language being edited (HTML, CSS, JS, etc.)
 - Tab to accept suggestion, continue typing to dismiss
 - Works within the Monaco code editor across all editing contexts
@@ -244,36 +244,44 @@ AI-powered code assistance integrated into the Code Editor, providing inline com
 
 - Conversational AI assistant within the editor
 - Ask questions about code, request generation, or get explanations
-- Integrated into the editor toolbar
+- Model selection when supported by the configured provider
+- Detach link to open the standalone AI Help Chat
+
+### CKEditor AI Writing Assistant
+
+- Region-scoped rich-text AI authoring inside the Page Editor
+- Improve selection, rewrite content, and replace the active block
+- Model selection when supported by the configured provider
+
+### AI Help Chat
+
+- Standalone AI help workspace launched from the editor menu
+- General help mode for SkyCMS and website guidance
+- Site-help mode for questions that should use current page/site context
+- Docked or detached usage
 
 ### Configuration (Admin-Managed)
 
 - Global enable/disable per tenant
-- **Endpoint flexibility** — works with any OpenAI-compatible API:
-  - GitHub Models (free tier available)
-  - Azure OpenAI
-  - OpenAI direct
-  - Ollama (local/self-hosted models)
-  - Any OpenAI-compatible proxy
-- Model selection (e.g., `gpt-4o-mini`, `codestral`, custom models)
+- **Endpoint flexibility** — works best with OpenAI-compatible chat-completions providers such as GitHub Models, OpenAI, Azure OpenAI, Ollama, and compatible gateways
+- Discovery states for live catalog, inferred deployment, unsupported, failed, and additional-configuration-needed paths
 - Access token management (masked after save, rotation supported)
 - Tuning parameters:
   - Temperature (0–2, default 0.2)
   - Max tokens per completion (16–1,024)
   - Timeout (1,000–60,000 ms)
 - Status endpoint for client-side feature discovery
+- Model catalog endpoint for provider-aware model picker loading
+- Per-user model preferences scoped by provider and editor context
 - Rate limiting on completion and chat endpoints
-
-### CKEditor AI Writing Assistant
-
-- AI-powered writing assistance within the WYSIWYG Page Editor
-- Region-scoped rich-text AI authoring
-- Available in standard and advanced toolbar profiles
 
 > **Documentation:**
 >
-> - [Copilot Setup Guide](../../for-editors/code-editor-copilot-setup.md)
-> - [Copilot Troubleshooting](../../for-editors/code-editor-copilot-troubleshooting.md)
+- - [AI Assistant](../../for-editors/ai-assistant.md)
+- - [AI Provider Setup](../../for-editors/ai-provider-setup.md)
+- - [AI Troubleshooting](../../for-editors/ai-troubleshooting.md)
+- - [AI Configuration Overview](../../configuration/ai/overview.md)
+- - [AI Integration Architecture](../../for-developers/ai-integration.md)
 
 ---
 

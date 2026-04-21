@@ -116,8 +116,9 @@ nav:
       - Layers Panel: for-editors/layers.md
       - Page Builder Quick Start: for-editors/page-builder-quickstart.md
       - Code Editor: for-editors/code-editor.md
-      - Code Editor Copilot Setup: for-editors/code-editor-copilot-setup.md
-      - Code Editor Copilot Troubleshooting: for-editors/code-editor-copilot-troubleshooting.md
+      - AI Assistant: for-editors/ai-assistant.md
+      - AI Provider Setup: for-editors/ai-provider-setup.md
+      - AI Troubleshooting: for-editors/ai-troubleshooting.md
       - Image Editing: for-editors/image-editing.md
     - Publishing:
       - Publishing Modes: for-editors/publishing-modes.md
@@ -194,6 +195,7 @@ nav:
     - Storage Provider Auto-Detection: for-developers/storage-provider-auto-detection.md
     - Roles & Permissions: for-developers/roles-and-permissions.md
     - Audit Logging: for-developers/audit-logging.md
+    - AI Integration: for-developers/ai-integration.md
     - Extending:
       - Custom Widgets: for-developers/extending/custom-widgets.md
       - FlexDb Identity: for-developers/extending/flex-db.md
@@ -229,6 +231,10 @@ nav:
     - Overview: configuration/overview.md
     - Proxy Settings: configuration/proxy-settings.md
     - Multi-Tenancy: configuration/multi-tenancy.md
+    - AI:
+      - Overview: configuration/ai/overview.md
+      - Provider Comparison: configuration/ai/provider-comparison.md
+      - Free Services: configuration/ai/free-services.md
     - Database:
       - Overview: configuration/database/overview.md
       - Cosmos DB: configuration/database/cosmos-db.md

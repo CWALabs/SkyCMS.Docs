@@ -33,6 +33,7 @@ Quick reference: [Article Lifecycle Quick Reference](./article-lifecycle-referen
 - [Page Editor](./page-editor.md): inline editing in page context.
 - [Page Builder](./page-builder.md): visual drag-and-drop page construction.
 - [Code Editor](./code-editor.md): precise HTML/CSS/JavaScript editing.
+- [AI Assistant](./ai-assistant.md): AI help in Monaco, CKEditor, and standalone help chat.
 - [Image Editing](./image-editing.md): crop, annotate, resize, and optimize assets.
 - [File Manager](./file-manager.md): upload, organise, and manage website assets.
 - [Page Scheduling](./page-scheduling.md): schedule publication windows.

@@ -22,7 +22,7 @@ The primary cache is an in-memory cache (`ICacheService<T>`) that stores frequen
 | `ArticleCatalog` | Site navigation catalog | `CatalogEntryUpdatedEvent`, `CatalogEntryDeletedEvent` |
 | `SiteMap` | XML sitemap | `ArticlePublishedEvent`, `ArticleUnpublishedEvent` |
 | Layouts | Page layout templates | `LayoutPublishedEvent` |
-| Copilot options | AI assistant config per tenant | Settings update (30-second TTL) |
+| AI provider options | AI assistant config per tenant | Settings update (30-second TTL) |
 
 ### Cache Operations
 
@@ -98,7 +98,7 @@ The Publisher component serves static files from blob storage with intelligent c
 - Cache keys include the tenant domain to prevent data leakage between tenants.
 - Each tenant has an isolated cache namespace.
 - CDN purge operations target only the affected tenant's content.
-- Copilot configuration caches use tenant-specific keys with a 30-second TTL.
+- AI provider configuration caches use tenant-specific keys with a 30-second TTL.
 
 ---
 

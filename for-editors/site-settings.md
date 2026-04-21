@@ -74,9 +74,9 @@ Navigate to **Settings → CDN** to configure content delivery network integrati
 
 ---
 
-## Copilot Configuration
+## AI Provider Configuration
 
-Navigate to **Settings → Copilot** to configure the AI assistant integration in the code editor.
+Navigate to **Settings -> AI Provider** to configure the tenant AI integration used by Monaco, CKEditor, and AI Help Chat.
 
 ### Provider Presets
 
@@ -85,17 +85,17 @@ Select a preset to auto-fill endpoint and model settings:
 | Preset | Endpoint | Description |
 |--------|----------|-------------|
 | **Custom** | User-provided | Any OpenAI-compatible API |
-| **Copilot (GitHub Models)** | `https://models.inference.ai.azure.com` | GitHub Models API |
-| **OpenAI** | `https://api.openai.com/v1` | OpenAI direct API |
-| **Azure AI** | User-provided | Azure OpenAI Service endpoint |
+| **GitHub Models** | `https://models.inference.ai.azure.com/chat/completions` | GitHub Models API |
+| **OpenAI** | `https://api.openai.com/v1/chat/completions` | OpenAI direct API |
+| **Azure OpenAI** | User-provided | Azure OpenAI deployment endpoint |
 
 ### Settings
 
 | Field | Range | Description |
 |-------|-------|-------------|
-| **Enabled** | on/off | Toggle Copilot availability for all editors |
-| **Endpoint URL** | URL | AI model API endpoint |
-| **Model** | text | Model identifier (e.g., `gpt-4o`, `gpt-3.5-turbo`) |
+| **Enabled** | on/off | Toggle AI availability for the tenant |
+| **Endpoint URL** | URL | Chat completions API endpoint |
+| **Model** | text | Model or deployment identifier |
 | **Access Token** | text | API key or token (stored encrypted in settings table) |
 | **Timeout** | 1000–60000 ms | Request timeout in milliseconds |
 | **Temperature** | 0–2 | Creativity parameter (lower = more deterministic) |
@@ -103,10 +103,10 @@ Select a preset to auto-fill endpoint and model settings:
 
 ### Actions
 
-- **Save** — Apply Copilot settings.
-- **Remove** — Disable and clear all Copilot settings.
+- **Save** — Apply AI provider settings.
+- **Remove** — Disable and clear all AI provider settings.
 
-> **Tip:** Settings are per-tenant in multi-tenant deployments. Each site can have its own Copilot configuration.
+> **Tip:** Settings are per-tenant in multi-tenant deployments. Each site can have its own AI provider configuration.
 
 ---
 
@@ -120,5 +120,6 @@ Settings are stored in the application database under a group key (e.g., `EDITOR
 
 - [Configuration Overview](../configuration/overview.md) — Full configuration reference
 - [CDN Overview](../configuration/cdn/overview.md) — Detailed CDN provider setup
-- [Code Editor Copilot Setup](code-editor-copilot-setup.md) — Copilot user guide
+- [AI Provider Setup](ai-provider-setup.md) — AI setup guide
+- [AI Assistant](ai-assistant.md) — editor-facing AI usage guide
 - [Proxy Settings](../configuration/proxy-settings.md) — Reverse proxy and CDN header configuration

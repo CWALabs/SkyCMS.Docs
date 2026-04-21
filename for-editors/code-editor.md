@@ -103,19 +103,22 @@ If a change causes issues:
 | Alt+Shift+Down | Add cursor below |
 | Alt+Shift+Up | Add cursor above |
 
-## Copilot inline assistance
+## AI assistance
 
-The code editor supports AI-powered inline completions. When configured and enabled by an administrator, the editor displays ghost-text suggestions as you type; press **Tab** to accept the current suggestion.
+The code editor supports both inline AI completions and a code-focused AI chat panel.
 
-The feature activates automatically at page load if the server is configured — no manual toggle is required.
+When AI is configured for the tenant:
 
-- Inline completions are context-aware: the model receives the current language, the text before the cursor, and a small window of text after the cursor.
-- Pressing **Tab** accepts the suggestion. Continuing to type dismisses it.
-- If the server is temporarily unreachable at load time, the editor retries quietly and continues to function normally without completions.
+- inline ghost-text suggestions can appear as you type,
+- the editor chat can explain, refactor, or generate code for the active field,
+- a model picker may be available if the configured provider supports user model selection,
+- the **Detach** action can open the broader AI Help Chat in a separate window.
 
-For setup instructions and field descriptions, see [Copilot Setup](./code-editor-copilot-setup.md).
+For full usage guidance, see [AI Assistant](./ai-assistant.md).
 
-For diagnosing issues, see [Copilot Troubleshooting](./code-editor-copilot-troubleshooting.md).
+For provider setup, see [AI Provider Setup](./ai-provider-setup.md).
+
+For diagnosing issues, see [AI Troubleshooting](./ai-troubleshooting.md).
 
 ## Related guides
 
@@ -123,5 +126,6 @@ For diagnosing issues, see [Copilot Troubleshooting](./code-editor-copilot-troub
 - [File Manager Quick Start](./file-manager-quickstart.md)
 - [Page Editor](./page-editor.md)
 - [Image Editing](./image-editing.md)
-- [Copilot Setup](./code-editor-copilot-setup.md)
-- [Copilot Troubleshooting](./code-editor-copilot-troubleshooting.md)
+- [AI Assistant](./ai-assistant.md)
+- [AI Provider Setup](./ai-provider-setup.md)
+- [AI Troubleshooting](./ai-troubleshooting.md)

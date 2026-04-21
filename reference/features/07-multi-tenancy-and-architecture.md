@@ -138,7 +138,7 @@ Settings are resolved in order (highest priority first):
 - Email provider settings
 - Multi-tenancy domain mappings
 - Proxy settings (for reverse proxies and CDNs)
-- Copilot AI endpoint settings
+- AI provider endpoint settings
 
 ---
 
@@ -161,7 +161,7 @@ Feature slices organized by domain:
 - `Features/Blogs/` — Blog stream and post management
 - `Features/Layouts/` — Layout creation, import, promotion
 - `Features/Templates/` — Template CRUD, publishing, metadata
-- `Features/Copilot/` — AI proxy configuration
+- `Features/Copilot/` — legacy-named AI proxy configuration feature area
 - `Features/Shared/` — Multi-tenant mediator wrapper
 
 ### Multi-Tenant Mediator

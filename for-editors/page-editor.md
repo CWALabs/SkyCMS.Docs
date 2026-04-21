@@ -76,10 +76,30 @@ Advanced editing operations:
   - Publish now for immediate go-live.
   - Publish later with the scheduling workflow.
 
+## AI assistance in the Page Editor
+
+The Page Editor includes region-scoped AI writing assistance.
+
+Use it when you want to:
+
+- improve a paragraph,
+- rewrite a selected block,
+- tighten or simplify copy,
+- generate more polished HTML for the active editor region.
+
+The page editor AI works differently from the code editor AI:
+
+- it is scoped to the active CKEditor region,
+- it focuses on writing and markup in that region,
+- it can include a model picker when the configured provider supports per-user model selection.
+
+For full guidance, see [AI Assistant](./ai-assistant.md).
+
 ## Related guides
 
 - [Page Editor Quick Start](./page-editor-quickstart.md)
 - [Page Editor Visual Guide](./page-editor-visual-guide.md)
 - [Page Editor Technical Reference](./page-editor-technical-reference.md)
 - [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md)
+- [AI Assistant](./ai-assistant.md)
 - [Scheduling Pages](./page-scheduling.md)
