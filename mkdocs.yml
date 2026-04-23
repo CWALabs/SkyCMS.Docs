@@ -178,6 +178,7 @@ nav:
     - Start Here: for-developers/index.md
     - Overview: for-developers/overview.md
     - Architecture: for-developers/architecture.md
+    - Architecture Decision Records (ADRs): for-developers/architecture-decision-records.md
     - Middleware Pipeline: for-developers/middleware-pipeline.md
     - Layouts & Templates:
       - Layouts: for-developers/layouts.md

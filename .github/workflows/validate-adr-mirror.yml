@@ -1,0 +1,64 @@
+name: Validate ADR Mirror Index
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'for-developers/architecture-decision-records.md'
+      - '.github/workflows/validate-adr-mirror.yml'
+  pull_request:
+    paths:
+      - 'for-developers/architecture-decision-records.md'
+      - '.github/workflows/validate-adr-mirror.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-adr-mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout docs repository
+        uses: actions/checkout@v4
+
+      - name: Validate ADR mirror includes all canonical ADR IDs
+        run: |
+          python << 'EOF'
+          import json
+          import re
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          # Canonical source: SkyCMS repo docs/adr folder
+          api_url = 'https://api.github.com/repos/CWALabs/SkyCMS/contents/docs/adr'
+          req = Request(api_url, headers={'Accept': 'application/vnd.github+json', 'User-Agent': 'adr-mirror-validator'})
+
+          with urlopen(req, timeout=30) as response:
+              payload = json.loads(response.read().decode('utf-8'))
+
+          canonical_ids = sorted({
+              m.group(1)
+              for item in payload
+              for m in [re.match(r'^(\d{4})-.*\.md$', item.get('name', ''))]
+              if m
+          })
+
+          mirror_path = Path('for-developers/architecture-decision-records.md')
+          mirror_text = mirror_path.read_text(encoding='utf-8')
+          mirror_ids = sorted(set(re.findall(r'ADR\s+(\d{4})\b', mirror_text)))
+
+          missing = [adr_id for adr_id in canonical_ids if adr_id not in mirror_ids]
+          extra = [adr_id for adr_id in mirror_ids if adr_id not in canonical_ids]
+
+          print('Canonical ADR IDs:', canonical_ids)
+          print('Mirror ADR IDs:', mirror_ids)
+
+          if missing:
+              print('Missing ADR IDs in mirror index:', missing)
+          if extra:
+              print('Extra ADR IDs in mirror index (not in canonical source):', extra)
+
+          if missing or extra:
+              raise SystemExit(1)
+
+          print('ADR mirror index is in sync with canonical ADR IDs.')
+          EOF
