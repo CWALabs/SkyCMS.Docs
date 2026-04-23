@@ -17,7 +17,7 @@ SkyCMS includes a dedicated blogging subsystem with support for multiple indepen
 
 ## 1. Blog Streams
 
-> **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blog-streams)
+ > **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blogs)
 
 A blog stream is a named collection of blog posts — similar to a blog category or publication channel. Sites can host multiple independent blog streams.
 
