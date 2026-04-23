@@ -60,15 +60,15 @@ Expected result:
 
 - The title is updated.
 - URL/title-related routing and redirect behavior is applied by the system.
-- Blog streams can also update child post paths when the stream path changes.
+- Blogs can also update child post paths when the blog path changes.
 
-### If you update a blog stream
+### If you update a blog
 
 Expected result:
 
-- Stream metadata is updated.
-- If stream URL path changes, child blog post URLs are updated to match the new stream path.
-- Publish state changes can cascade to posts in that stream.
+- Blog metadata is updated.
+- If blog URL path changes, child blog post URLs are updated to match the new blog path.
+- Publish state changes can cascade to posts in that blog.
 
 ## What Happens When You Unpublish An Article
 
@@ -120,13 +120,13 @@ Expected result:
 - The selected blog post (all versions) is marked deleted.
 - It is no longer treated as active content.
 
-### Blog stream delete
+### Blog delete
 
 Expected result:
 
-- Posts in that stream are deleted first.
-- The stream is then deleted.
-- Stream and post content follow the same cleanup behavior as other article deletes.
+- Posts in that blog are deleted first.
+- The blog is then deleted.
+- Blog and post content follow the same cleanup behavior as other article deletes.
 
 ### Home page protection
 
@@ -163,4 +163,4 @@ After update or delete, verify:
 
 - The article appears in the expected draft/published state.
 - The live URL renders the expected result (or returns not found after delete).
-- Blog stream/post URLs still match expected structure after stream title/path changes.
+- Blog/post URLs still match expected structure after blog title/path changes.

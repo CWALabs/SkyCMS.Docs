@@ -6,13 +6,13 @@ audience:
 doc_type: Explanation
 status: Draft
 entities:
-  - blog-stream
+  - blog
   - blog-post
   - article
   - published-page
 keywords:
   - blog architecture
-  - blog stream
+  - blog
   - blog post
   - cqrs
 source: SkyCMS blogging subsystem
@@ -24,26 +24,26 @@ Technical internals of the SkyCMS blogging subsystem for developers extending or
 
 ## Canonical terminology
 
-- Blog streams and blog posts are both **article** types.
+- Blogs and blog posts are both **article** types.
 - Their public output is delivered through **published pages**.
 
 ---
 
 ## Overview
 
-The blogging subsystem reuses the core `Article` entity and content pipeline but adds blog-specific organization, rendering, and URL routing. Blog streams group posts by a shared `BlogKey`, and a dedicated rendering service generates client-side-rendered stream pages.
+The blogging subsystem reuses the core `Article` entity and content pipeline but adds blog-specific organization, rendering, and URL routing. Blogs group posts by a shared `BlogKey`, and a dedicated rendering service generates client-side-rendered blog pages.
 
 ---
 
 ## Entity Model
 
-Blogs do not have their own database table. Both blog streams and blog posts are stored as `Article` records, distinguished by the `ArticleType` field:
+Blogs do not have their own database table. Both blogs and blog posts are stored as `Article` records, distinguished by the `ArticleType` field:
 
 | ArticleType | Value | Description |
 | ------------- | ------- | ------------- |
 | General | `0` | Standard content page |
 | BlogPost | `1` | Individual blog post |
-| BlogStream | `2` | Blog stream definition (metadata container) |
+| BlogStream | `2` | Blog definition — listing page and parent container (enum value retained for compatibility) |
 | SpaApp | `3` | Single Page Application |
 
 ### Key Fields for Blogging
@@ -67,25 +67,25 @@ Blog features follow the vertical-slice CQRS pattern used throughout SkyCMS.
 
 | Command | Handler Location | Purpose |
 | --------- | ----------------- | --------- |
-| `CreateBlogPostCommand` | `Editor/Features/Blogs/CreatePost/` | Create a new post in a stream |
+| `CreateBlogPostCommand` | `Editor/Features/Blogs/CreatePost/` | Create a new post in a blog |
 | `UpdateBlogPostCommand` | `Editor/Features/Blogs/UpdatePost/` | Update post content/metadata |
-| `UpdateBlogStreamCommand` | `Editor/Features/Blogs/UpdateStream/` | Update stream metadata, regenerate wrapper |
-| `DeleteBlogStreamCommand` | `Editor/Features/Blogs/DeleteStream/` | Soft-delete stream + cascade to entries |
+| `UpdateBlogCommand` | `Editor/Features/Blogs/UpdateBlog/` | Update blog metadata, regenerate wrapper |
+| `DeleteBlogCommand` | `Editor/Features/Blogs/DeleteBlog/` | Soft-delete blog + cascade to posts |
 | `DeleteBlogPostCommand` | `Editor/Features/Blogs/DeletePost/` | Soft-delete individual post |
 
 ### Queries
 
 | Query | Handler Location | Purpose |
 | ------- | ----------------- | --------- |
-| `GetBlogStreamQuery` | `Common/Features/Blogs/Queries/` | Fetch stream metadata + latest post + count |
+| `GetBlogQuery` | `Common/Features/Blogs/Queries/` | Fetch blog metadata + latest post + count |
 | `GetBlogPostQuery` | `Common/Features/Blogs/Queries/` | Fetch post content with prev/next navigation |
 | `GetBlogPostNavigationQuery` | `Common/Features/Blogs/Queries/` | Fetch previous/next post links for a post |
 
 ### Command Flow Example: Creating a Post
 
 ```text
-BlogController.CreateEntry(blogKey, title)
-  → Validate parent stream exists
+BlogController.CreatePost(blogKey, title)
+  → Validate parent blog exists
   → CreateBlogPostCommand { BlogKey, Title, UserId, Published=null }
     → CreateBlogPostCommandHandler
       → Delegates to CreateArticleCommand (reuses core article pipeline)
@@ -98,8 +98,8 @@ BlogController.CreateEntry(blogKey, title)
 
 ```text
 BlogController.Edit(id, model)
-  → UpdateBlogStreamCommand { Id, Title, Description, HeroImage, Published }
-    → UpdateBlogStreamHandler
+  → UpdateBlogCommand { Id, Title, Description, HeroImage, Published }
+    → UpdateBlogHandler
       → Validates title uniqueness
       → Updates article fields
       → Calls BlogStreamRenderingService.GenerateBlogStreamWrapperAsync()
@@ -124,7 +124,7 @@ BlogController.Edit(id, model)
 
 ### Client-Side Rendering Pattern
 
-Blog stream pages use a client-side rendering approach:
+Blog pages use a client-side rendering approach:
 
 ```text
 Server generates:
@@ -167,20 +167,25 @@ All blog CSS classes follow a BEM-like naming convention:
 
 | Action | HTTP | Route | Notes |
 | -------- | ------ | ------- | ------- |
-| `Index` | GET | `/editor/blogs` | Lists all streams |
-| `Create` | GET/POST | `/editor/blogs/create` | Create stream form + handler |
-| `Edit` | GET/POST | `/editor/blogs/{id:guid}/edit` | Edit stream form + handler |
+| `Index` | GET | `/editor/blogs` | Lists all blogs |
+| `Create` | GET/POST | `/editor/blogs/create` | Create blog form + handler |
+| `Edit` | GET/POST | `/editor/blogs/{id:guid}/edit` | Edit blog form + handler |
 | `Delete` | GET | `/editor/blogs/{id:guid}/delete` | Delete confirmation |
 | `ConfirmDelete` | POST | `/editor/blogs/{id:guid}/confirmdelete` | Execute delete |
-| `Entries` | GET | `/editor/blogs/{blogKey}/entries` | Lists posts in stream |
-| `CreateEntry` | GET | `/editor/blogs/{blogKey}/entries/create/{title}` | Creates post (see note below) |
-| `DeleteEntry` | GET | `/editor/blogs/{blogKey}/entries/{articleNumber:int}/delete` | Entry delete confirmation |
-| `ConfirmDeleteEntry` | POST | `/editor/blogs/{blogKey}/entries/{articleNumber:int}/confirmdeleteentry` | Execute entry delete |
+| `Posts` | GET | `/editor/blogs/{blogKey}/posts` | Lists posts in blog |
+| `Entries` | GET | `/editor/blogs/{blogKey}/entries` | Legacy alias for Posts |
+| `CreatePost` | POST | `/editor/blogs/{blogKey}/posts/create` | Creates post |
+| `CreateEntry` | POST | `/editor/blogs/{blogKey}/entries/create` | Legacy alias for CreatePost |
+| `DeletePost` | GET | `/editor/blogs/{blogKey}/posts/{articleNumber:int}/delete` | Post delete confirmation |
+| `DeleteEntry` | GET | `/editor/blogs/{blogKey}/entries/{articleNumber:int}/delete` | Legacy alias for DeletePost |
+| `ConfirmDeletePost` | POST | `/editor/blogs/{blogKey}/posts/{articleNumber:int}/confirmdelete` | Execute post delete |
+| `ConfirmDeleteEntry` | POST | `/editor/blogs/{blogKey}/entries/{articleNumber:int}/confirmdeleteentry` | Legacy alias for ConfirmDeletePost |
 | `PreviewStream` | GET | `/editor/blogs/{blogKey}/preview` | Anonymous preview |
-| `GetBlogs` | GET | `/editor/blogs/GetBlogs` | JSON: all streams |
-| `GetEntries` | GET | `/editor/blogs/{blogKey}/getentries` | JSON: posts in stream |
+| `GetBlogs` | GET | `/editor/blogs/GetBlogs` | JSON: all blogs |
+| `GetPosts` | GET | `/editor/blogs/{blogKey}/getposts` | JSON: posts in blog |
+| `GetEntries` | GET | `/editor/blogs/{blogKey}/getentries` | Legacy alias for GetPosts |
 
-> **Design note:** `CreateEntry` uses `[HttpGet]` but performs a database write (creates a new article). This is a side-effect on GET, which violates HTTP conventions. It is called from a JavaScript modal that navigates to the URL with the title embedded in the path.
+> **Design note:** `CreatePost` and the legacy `CreateEntry` alias use `[HttpPost]` and receive the post title via a form field.
 
 ---
 
@@ -188,7 +193,7 @@ All blog CSS classes follow a BEM-like naming convention:
 
 Blog queries follow the project-wide Cosmos DB compatibility rules:
 
-- No cross-container joins between streams and posts — queries are sequential with client-side correlation.
+- No cross-container joins between blogs and posts — queries are sequential with client-side correlation.
 - Enum-to-int conversions (e.g., `ArticleType.BlogStream`) are pre-computed into local variables before LINQ predicates.
 - The `GetBlogs` action fetches all blog-type articles, then groups by `ArticleNumber` client-side to get latest versions.
 

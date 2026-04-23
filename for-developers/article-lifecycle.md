@@ -131,7 +131,7 @@ Blog posts are typically created through CreateBlogPostCommandHandler, which del
 
 Expected behavior:
 
-- Parent blog stream must exist.
+- Parent blog must exist.
 - Blog post Article row is created with BlogKey and ArticleType = BlogPost.
 - Published = null.
 - No PublishedPage yet.
@@ -155,7 +155,7 @@ Typical command shape:
 
 ## ArticleType.BlogStream
 
-Blog streams are usually created from BlogController.Create.
+Blogs are usually created from BlogController.Create.
 
 Current default behavior in that path:
 
@@ -167,14 +167,14 @@ Current default behavior in that path:
 
 If BlogStream is created through CreateArticleCommand without Published:
 
-- Stream is created as draft.
+- Blog is created as draft.
 - No published page until publish occurs.
 
-### Create and Publish at the Same Time (Blog Stream)
+### Create and Publish at the Same Time (Blog)
 
 If Published is provided at create time:
 
-- Stream is created and published immediately.
+- Blog is created and published immediately.
 - Published page and TOC are updated.
 
 ## Publishing State Changes After Creation
@@ -187,15 +187,15 @@ For General and BlogPost edit/save paths using SaveArticleHandler:
 - Published != null triggers publish workflow.
 - Published = null keeps article unpublished.
 
-### Blog stream update cascade behavior
+### Blog update cascade behavior
 
-For BlogStream updates using UpdateBlogStreamHandler:
+For BlogStream updates using UpdateBlogHandler:
 
 - If command.Published has value:
-  - Stream is published.
+  - Blog is published.
   - Child BlogPost articles in same BlogKey are also published using same date.
 - If command.Published is null:
-  - Stream is unpublished.
+  - Blog is unpublished.
   - Child BlogPost articles in same BlogKey are unpublished.
 
 ## What Happens When An Article Is Updated
@@ -220,15 +220,15 @@ There are two update paths currently in code:
 - SaveArticleHandler path (editor save flow): same behavior as general updates.
 - UpdateBlogPostCommandHandler path: creates a new Article row version (instead of in-place update), copies stable routing fields (UrlPath and BlogKey), and persists Published from the command.
 
-### Blog stream updates (UpdateBlogStreamHandler)
+### Blog updates (UpdateBlogHandler)
 
-When editing a blog stream:
+When editing a blog:
 
-- Updates stream metadata (Title, UrlPath, BlogKey, description, hero image).
-- If stream UrlPath changes, rewrites child BlogPost UrlPath values to keep `stream-slug/post-slug` format.
-- If Published has a value, publishes the stream and all child posts with the same publish date.
-- If Published is null, unpublishes the stream and all child posts.
-- Regenerates stream wrapper content and processes title-change redirects.
+- Updates blog metadata (Title, UrlPath, BlogKey, description, hero image).
+- If blog UrlPath changes, rewrites child BlogPost UrlPath values to keep `blog-slug/post-slug` format.
+- If Published has a value, publishes the blog and all child posts with the same publish date.
+- If Published is null, unpublishes the blog and all child posts.
+- Regenerates blog wrapper content and processes title-change redirects.
 
 ## What Happens When An Article Is Unpublished
 
@@ -236,7 +236,7 @@ Unpublishing hides a published article from the public while retaining the artic
 
 ### Unpublish behavior
 
-When Published is set to null via SaveArticleCommand or UpdateBlogStreamHandler:
+When Published is set to null via SaveArticleCommand or UpdateBlogHandler:
 
 - The article's Published timestamp is cleared.
 - The PublishedPage entry for that ArticleNumber is removed (no longer accessible at its URL).
@@ -281,14 +281,14 @@ For DeleteBlogPostCommand:
 - Marks all matching versions as Deleted.
 - Does not physically remove rows.
 
-### Blog stream delete (DeleteBlogStreamHandler)
+### Blog delete (DeleteBlogHandler)
 
-For DeleteBlogStreamCommand:
+For DeleteBlogCommand:
 
-- Locates the stream by Id and BlogKey.
-- Finds all child entry article numbers in the same stream.
-- Deletes entries first, then deletes the stream (cascade behavior).
-- Uses shared article deletion logic so stream and entries follow the normal article deletion cleanup path.
+- Locates the blog by Id and BlogKey.
+- Finds all child post article numbers in the same blog.
+- Deletes posts first, then deletes the blog (cascade behavior).
+- Uses shared article deletion logic so blog and posts follow the normal article deletion cleanup path.
 
 ## What Happens When An Article Is Permanently Trashed
 
@@ -321,7 +321,7 @@ Use one of these patterns:
 
 1. General page: send `CreateArticleCommand` with `ArticleType = General` and `Published = now`.
 1. Blog post: send `CreateBlogPostCommand` with `Published = now`.
-1. Blog stream: keep current `BlogController.Create` behavior (already publish-now), or set `Published` explicitly when calling the handler directly.
+1. Blog: keep current `BlogController.Create` behavior (already publish-now), or set `Published` explicitly when calling the handler directly.
 1. Scheduled publication: set `Published` to a future `DateTimeOffset`; scheduler and publish logic activate on that timestamp.
 
 ## Verification Checklist
@@ -332,7 +332,7 @@ After create-and-publish, verify:
 - Exactly one active published version per ArticleNumber.
 - Pages has a PublishedPage row for that ArticleNumber.
 - ArticleCatalog.Published is set.
-- Blog stream and blog TOC files are regenerated for blog content.
+- Blog and TOC files are regenerated for blog content.
 - CDN purge result is recorded when CDN is configured.
 
 ## Code References
@@ -372,7 +372,7 @@ Use this as a starting map when debugging or extending lifecycle behavior.
   - Key actions: Create, CreateInitialHomePage, Save, PublishPage, UnpublishPage, Versions
 - Blog flows:
   - Editor/Controllers/BlogController.cs
-  - Key actions: Create (stream), Edit (stream), CreateEntry (post), Entries
+  - Key actions: Create (blog), Edit (blog), CreatePost (post), Posts
 
 ### Views (UI surfaces)
 
@@ -387,8 +387,8 @@ Use this as a starting map when debugging or extending lifecycle behavior.
 - Blog views:
   - Editor/Views/Blog/Create.cshtml
   - Editor/Views/Blog/Edit.cshtml
-  - Editor/Views/Blog/CreateEntry.cshtml
-  - Editor/Views/Blog/Entries.cshtml
+  - Editor/Views/Blog/CreatePost.cshtml
+  - Editor/Views/Blog/Posts.cshtml
 - Rendered published page template:
   - Sky.Shared.Razor/Views/Home/Index.cshtml
 
@@ -403,7 +403,7 @@ Use this as a starting map when debugging or extending lifecycle behavior.
 - Blog post creation:
   - Editor/Features/Blogs/CreatePost/CreateBlogPostCommand.cs
   - Editor/Features/Blogs/CreatePost/CreateBlogPostCommandHandler.cs
-- Blog stream updates and publish cascade:
+- Blog updates and publish cascade:
   - Editor/Features/Blogs/UpdateStream/UpdateBlogStreamCommand.cs
   - Editor/Features/Blogs/UpdateStream/UpdateBlogStreamHandler.cs
 - Blog post update/versioning:
@@ -439,5 +439,5 @@ Use this as a starting map when debugging or extending lifecycle behavior.
   - Tests/Editor/Features/Articles/Create/CreateArticleHandlerTests.cs
 - Save + publish interactions:
   - Tests/Features/Articles/Save/SaveArticlePublishingTests.cs
-- Blog stream publish/unpublish cascade:
+- Blog publish/unpublish cascade:
   - Tests/Features/Blogs/UpdateBlogStreamCommandTests.cs

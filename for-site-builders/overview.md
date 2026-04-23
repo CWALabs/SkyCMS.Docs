@@ -38,7 +38,7 @@ Validate before rollout:
 - Responsive behavior across mobile, tablet, and desktop.
 - Accessibility landmarks, keyboard flow, and contrast.
 - Performance impact of global assets.
-- Compatibility with article, blog stream, and blog post pages.
+- Compatibility with article, blog, and blog post pages.
 
 ## Handoff expectations
 

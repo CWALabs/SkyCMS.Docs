@@ -17,7 +17,7 @@ Use these role-based entry points for task-specific documentation:
 
 ## Article
 
-The primary authored content record in SkyCMS. An article is the source object stored in `Articles` and may represent a general page, a blog post, a blog stream, or other supported content type.
+The primary authored content record in SkyCMS. An article is the source object stored in `Articles` and may represent a general page, a blog post, a blog (listing page), or other supported content type.
 
 See also:
 
@@ -42,15 +42,15 @@ The classification of an article. It controls behavior, rendering expectations, 
 
 ## Blog Key
 
-The grouping key used to associate a blog stream with its child blog posts. For blog content, this is the value used to connect posts to their stream and to generate blog-specific output such as TOC content.
+The grouping key used to associate a blog with its blog posts. For blog content, this is the value used to connect posts to their parent blog and to generate blog-specific output such as TOC content.
 
 ## Blog Post
 
-An article with `ArticleType = BlogPost`. A blog post belongs to a blog stream through its `BlogKey`, can be created as a draft or published immediately, and renders as an individual published page.
+An article with `ArticleType = BlogPost`. A blog post belongs to a blog through its `BlogKey`, can be created as a draft or published immediately, and renders as an individual published page.
 
-## Blog Stream
+## Blog
 
-An article with `ArticleType = BlogStream`. A blog stream acts as the parent container for blog posts in a given `BlogKey` and can be saved as draft, published immediately, or scheduled like other articles.
+An article with `ArticleType = BlogStream` (the enum value is retained for compatibility). A blog acts as the parent container for blog posts in a given `BlogKey` and can be saved as draft, published immediately, or scheduled like other articles.
 
 ## Catalog Entry
 

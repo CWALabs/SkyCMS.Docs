@@ -1,6 +1,6 @@
 ---
 canonical_title: Key Concepts
-description: Canonical definitions for tenants, layouts, templates, articles, pages, blog streams, blog posts, published pages, widgets, and layers in SkyCMS.
+description: Canonical definitions for tenants, layouts, templates, articles, pages, blogs, blog posts, published pages, widgets, and layers in SkyCMS.
 audience:
   - All
 doc_type: Explanation
@@ -12,7 +12,7 @@ entities:
   - article
   - page
   - published-page
-  - blog-stream
+  - blog
   - blog-post
   - widget
   - layers-panel
@@ -20,7 +20,7 @@ keywords:
   - SkyCMS concepts
   - layouts templates articles
   - pages vs articles
-  - blog streams
+  - blogs
   - blog posts
   - layers panel
 source: SkyCMS/Common/Data/Article.cs, SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs
@@ -70,7 +70,7 @@ An article may represent:
 
 - a general content page,
 - a blog post,
-- a blog stream,
+- a blog,
 - a SPA deployment,
 - another supported content type.
 
@@ -88,15 +88,15 @@ Practical rule:
 - When discussing authoring, creation, editing, templates, or workflow, think **article**.
 - When discussing public output, routing, or published HTML, think **published page**.
 
-## Blog streams and blog posts
+## Blogs and blog posts
 
-A **blog stream** is an article with `ArticleType = BlogStream`. It acts as the parent container for a collection of blog posts grouped by `BlogKey`.
+A **blog** is an article with `ArticleType = BlogStream` (the enum value is retained for compatibility). It acts as the parent container for a collection of blog posts grouped by `BlogKey`.
 
-A **blog post** is an article with `ArticleType = BlogPost`. It belongs to a blog stream through the shared `BlogKey`.
+A **blog post** is an article with `ArticleType = BlogPost`. It belongs to a blog through the shared `BlogKey`.
 
 Important distinction:
 
-- Blog streams and blog posts are both article types.
+- Blogs and blog posts are both article types.
 - They use the same lifecycle fundamentals as other articles.
 - Their public output is still represented through published pages when content is published.
 

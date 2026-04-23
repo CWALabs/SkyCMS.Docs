@@ -32,7 +32,7 @@ The simplest workflow — publish a single page immediately.
 3. A `PublishedPage` snapshot is created (a read-optimized copy for the live site).
 4. If static pages are enabled, an HTML file is generated and uploaded to blob storage.
 5. The table of contents (TOC) is regenerated.
-6. If the page is a blog post, the blog stream TOC is also updated.
+6. If the page is a blog post, the blog TOC is also updated.
 7. The CDN cache is purged for the page's URL.
 
 ---

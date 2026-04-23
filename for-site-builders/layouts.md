@@ -118,7 +118,7 @@ Validate with templates:
 
 Validate with real pages:
 
-- Test home, article, blog stream, blog post, and long-form content examples.
+- Test home, article, blog, blog post, and long-form content examples.
 
 ## Example implementations
 

@@ -1,6 +1,6 @@
 ---
 canonical_title: Blogging
-description: Create and manage blog streams and blog posts in SkyCMS using the standard article lifecycle and blog-specific rendering rules.
+description: Create and manage blogs and blog posts in SkyCMS using the standard article lifecycle and blog-specific rendering rules.
 audience:
 	- Content Editors
 	- Authors
@@ -8,12 +8,11 @@ audience:
 doc_type: How-to
 status: Draft
 entities:
-	- blog-stream
+	- blog
 	- blog-post
 	- article
 keywords:
 	- blogs
-	- blog streams
 	- blog posts
 	- publish blog
 source: SkyCMS/Editor/Features/Blogs/
@@ -21,11 +20,11 @@ source: SkyCMS/Editor/Features/Blogs/
 
 # Blogging
 
-SkyCMS includes a dedicated blogging subsystem with support for multiple independent blog streams, post management, banner images, and public preview.
+SkyCMS includes a dedicated blogging subsystem with support for multiple independent blogs, post management, banner images, and public preview.
 
 ## Terminology note
 
-- A **blog stream** is an article with `ArticleType = BlogStream`.
+- A **blog** is an article with `ArticleType = BlogStream` (the enum value is retained for compatibility).
 - A **blog post** is an article with `ArticleType = BlogPost`.
 - Both use the standard article lifecycle and publishing workflow.
 
@@ -34,18 +33,18 @@ SkyCMS includes a dedicated blogging subsystem with support for multiple indepen
 ## Quick Start
 
 1. Navigate to **Editor → Blogs** from the sidebar.
-2. Click **Create** to set up a new blog stream.
+2. Click **Create** to set up a new blog.
 3. Give it a title, description, and optional banner image.
-4. Open the stream and click **New Entry** to write your first post.
+4. Open the blog and click **New Post** to write your first post.
 5. Edit the post in the standard page editor, then **Publish** when ready.
 
 ---
 
-## Blog Streams
+## Blogs
 
-A **blog stream** is a named collection of blog posts — similar to a blog category or publication channel. A single site can host multiple independent blog streams (e.g., "Company News", "Engineering Blog", "Product Updates").
+A **blog** is a named collection of blog posts — similar to a blog category or publication channel. A single site can host multiple independent blogs (e.g., "Company News", "Engineering Blog", "Product Updates").
 
-### Creating a Blog Stream
+### Creating a Blog
 
 1. Go to **Editor → Blogs**.
 2. Click **Create**.
@@ -61,36 +60,36 @@ A **blog stream** is a named collection of blog posts — similar to a blog cate
 
 1. Click **Create** to save.
 
-### Editing a Blog Stream
+### Editing a Blog
 
-1. From the blog list, click **Edit** on the stream row.
+1. From the blog list, click **Edit** on the blog row.
 2. Update any fields — title, description, banner image, or publish date.
 3. Click **Save**.
 
 > **Note:** Changing the title does not change the Blog Key. The key is permanent once created.
 
-### Deleting a Blog Stream
+### Deleting a Blog
 
-1. Click **Delete** on the stream row.
+1. Click **Delete** on the blog row.
 2. Review the confirmation page.
 3. Click **Confirm Delete**.
 
-> **Warning:** Deleting a blog stream also deletes all posts within it. This is a soft delete — the content is marked as deleted but may be recoverable by an administrator.
+> **Warning:** Deleting a blog also deletes all posts within it. This is a soft delete — the content is marked as deleted but may be recoverable by an administrator.
 
-### Default Blog Stream
+### Default Blog
 
-One blog stream can be designated as the site default. Use the **Make Default** action in the blog list to promote a stream. The default stream is used as the reassignment target for orphaned posts.
+One blog can be designated as the site default. Use the **Make Default** action in the blog list to promote a blog. The default blog is used as the reassignment target for orphaned posts.
 
 ---
 
 ## Blog Posts
 
-Blog posts are articles that belong to a blog stream. They use the same editing tools as standard pages (Page Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
+Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Page Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
 
 ### Creating a Blog Post
 
-1. Open the blog stream from **Editor → Blogs**.
-2. Click **New Entry**.
+1. Open the blog from **Editor → Blogs**.
+2. Click **New Post**.
 3. Enter a title in the modal dialog and click **Create**.
 4. You are redirected to the page editor with an empty post. Write your content.
 5. Optionally set a banner image, introduction text, and publish date.
@@ -102,14 +101,14 @@ Blog posts are articles that belong to a blog stream. They use the same editing 
 | ---------- | ------------- |
 | **Title** | Post headline (max 254 characters). The URL slug is auto-generated from the title. |
 | **Content** | The post body, edited with any of the standard editors. |
-| **Introduction** | Short excerpt or summary (max 512 characters). Shown in blog stream listings. |
+| **Introduction** | Short excerpt or summary (max 512 characters). Shown in blog listings. |
 | **Banner Image** | Featured image displayed at the top of the post and in listings. |
 | **Published** | Set a date/time to make the post live. Leave blank for draft. |
 | **Category** | Optional taxonomy label (max 64 characters). |
 
 ### Managing Posts
 
-From the blog entries list, each post has these quick actions:
+From the blog posts list, each post has these quick actions:
 
 | Action | Description |
 | -------- | ------------- |
@@ -125,7 +124,7 @@ Blog post URLs follow this pattern:
 /{blog-key}/{post-slug}
 ```
 
-For example, a post titled "Getting Started with SkyCMS" in the "engineering" blog stream would have the URL:
+For example, a post titled "Getting Started with SkyCMS" in the "engineering" blog would have the URL:
 
 ```text
 /engineering/getting-started-with-skycms
@@ -135,11 +134,11 @@ For example, a post titled "Getting Started with SkyCMS" in the "engineering" bl
 
 ## Blog Templates
 
-SkyCMS uses dedicated templates for blogs: the **Blog Stream** template and the **Blog Post** template. These templates use blog-specific CSS classes and editable regions.
+SkyCMS uses dedicated templates for blogs: the **Blog** template and the **Blog Post** template. These templates use blog-specific CSS classes and editable regions.
 
-### Blog Stream Template
+### Blog Template
 
-The stream template renders the blog index page with a list of posts. Key elements:
+The blog template renders the blog index page with a list of posts. Key elements:
 
 - Stream title and introduction text
 - Banner image (optional)
@@ -184,13 +183,13 @@ Legacy templates may still contain older class names or markup patterns, but new
 
 ## Blog Preview
 
-Each blog stream has an anonymous preview endpoint:
+Each blog has an anonymous preview endpoint:
 
 ```text
 /editor/blogs/{blog-key}/preview
 ```
 
-This renders a simplified view of the blog stream without requiring authentication. Use it to share a preview link with stakeholders who don't have editor accounts.
+This renders a simplified view of the blog without requiring authentication. Use it to share a preview link with stakeholders who don't have editor accounts.
 
 ---
 
@@ -198,9 +197,9 @@ This renders a simplified view of the blog stream without requiring authenticati
 
 ### Client-Side Architecture
 
-Blog streams use a client-side rendering pattern for performance:
+Blogs use a client-side rendering pattern for performance:
 
-1. The server generates a **wrapper HTML** containing the stream header, an empty post container, and an embedded JSON array of post metadata.
+1. The server generates a **wrapper HTML** containing the blog header, an empty post container, and an embedded JSON array of post metadata.
 2. The browser loads `/js/blog-stream-loader.js` which reads the embedded JSON.
 3. Posts are inserted into the `#post-list` container dynamically.
 4. Pagination is handled client-side via the `#pagination` nav element.

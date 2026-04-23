@@ -13,7 +13,7 @@ entities:
   - template
   - article
   - published-page
-  - blog-stream
+  - blog
   - blog-post
   - layers-panel
 keywords:
@@ -35,7 +35,7 @@ Use this page as the compact canonical reference when loading SkyCMS documentati
 - **Template**: reusable structure inside a layout.
 - **Article**: authored source record.
 - **Published Page**: public projection created from an article after publish.
-- **Blog Stream**: article with `ArticleType = BlogStream`.
+- **Blog**: article with `ArticleType = BlogStream` (enum value retained for compatibility).
 - **Blog Post**: article with `ArticleType = BlogPost`.
 - **Layers panel**: Page Builder hierarchy tree for nested elements.
 
@@ -86,7 +86,7 @@ Authoritative docs:
 - [Layouts, Templates, and Articles](../for-developers/layouts-templates-articles.md)
 - [Article Lifecycle Quick Reference](../for-editors/article-lifecycle-reference.md)
 
-### Blog Stream and Blog Post
+### Blog and Blog Post
 
 - Both are article types.
 - Blog-specific routing and rendering still flow through the article and published-page model.
@@ -110,5 +110,5 @@ Authoritative docs:
 
 - If asked what a page is, answer with the distinction between article and published page.
 - If asked how layouts, templates, and pages relate, answer with the canonical runtime model and explain the authored article versus public output distinction.
-- If asked about blog content, explain that blog streams and blog posts are article types.
+- If asked about blog content, explain that blogs and blog posts are article types.
 - If asked about layers, clarify whether the user means the Layers panel or the content architecture.
