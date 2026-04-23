@@ -6,7 +6,7 @@ SkyCMS provides four distinct editing experiences, allowing content creators to 
 
 **Jump to:**
 
-- [Page Editor (WYSIWYG)](#1-page-editor-wysiwyg)
+- [Visual Editor (WYSIWYG)](#1-visual-editor-wysiwyg)
 - [Page Builder (Visual Drag-and-Drop)](#2-page-builder-visual-drag-and-drop)
 - [Code Editor](#3-code-editor)
 - [AI Assistant Integration](#4-ai-assistant-integration)
@@ -15,7 +15,7 @@ SkyCMS provides four distinct editing experiences, allowing content creators to 
 
 ---
 
-## 1. Page Editor (WYSIWYG)
+## 1. Visual Editor (WYSIWYG)
 
 A rich-text inline editing experience built on **CKEditor 5**. Content is edited directly within the page's visual context — editors see exactly what the published page will look like.
 
@@ -82,11 +82,11 @@ Templates control which toolbar each editable region uses:
 
 > **Documentation:**
 >
-> - [Page Editor](../../for-editors/page-editor.md)
-> - [Page Editor Quickstart](../../for-editors/page-editor-quickstart.md)
-> - [Page Editor Toolbar Reference](../../for-editors/page-editor-toolbar-reference.md)
-> - [Page Editor Visual Guide](../../for-editors/page-editor-visual-guide.md)
-> - [Page Editor Technical Reference](../../for-editors/page-editor-technical-reference.md)
+> - [Visual Editor](../../for-editors/page-editor.md)
+> - [Visual Editor Quickstart](../../for-editors/page-editor-quickstart.md)
+> - [Visual Editor Toolbar Reference](../../for-editors/page-editor-toolbar-reference.md)
+> - [Visual Editor Visual Guide](../../for-editors/page-editor-visual-guide.md)
+> - [Visual Editor Technical Reference](../../for-editors/page-editor-technical-reference.md)
 
 ---
 
@@ -249,7 +249,7 @@ A tenant-aware AI assistant shared across Monaco, CKEditor, and the standalone A
 
 ### CKEditor AI Writing Assistant
 
-- Region-scoped rich-text AI authoring inside the Page Editor
+- Region-scoped rich-text AI authoring inside the Visual Editor
 - Improve selection, rewrite content, and replace the active block
 - Model selection when supported by the configured provider
 

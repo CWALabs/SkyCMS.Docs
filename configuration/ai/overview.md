@@ -19,7 +19,7 @@ SkyCMS now uses one tenant-aware AI configuration for multiple editor experience
 
 - Monaco code editor inline completions,
 - Monaco code editor AI chat,
-- CKEditor page editor region-scoped AI writing assistance,
+- CKEditor Visual Editor region-scoped AI writing assistance,
 - standalone AI Help Chat opened from the editor menu.
 
 The current implementation is centered on a shared AI proxy and provider metadata layer. Administrators configure the provider once per tenant, then editors can use the configured provider across supported editing surfaces.
@@ -40,7 +40,7 @@ The provider settings are tenant-scoped. In practice, that means:
 
 Turns the AI features on or off for the tenant.
 
-If disabled, the code editor, page editor AI tools, and AI Help Chat will all report that AI is unavailable.
+If disabled, the code editor, Visual Editor AI tools, and AI Help Chat will all report that AI is unavailable.
 
 ### Endpoint
 
@@ -256,7 +256,7 @@ After saving your provider settings:
 
 1. Reopen the code editor.
 2. Confirm the AI indicator shows the provider as available.
-3. Open AI chat in Monaco and in the page editor.
+3. Open AI chat in Monaco and in the Visual Editor.
 4. If supported, load or refresh models and verify the picker is populated.
 5. Open **Editor -> AI Help Chat** and verify general help responds.
 

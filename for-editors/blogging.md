@@ -36,7 +36,7 @@ SkyCMS includes a dedicated blogging subsystem with support for multiple indepen
 2. Click **Create** to set up a new blog.
 3. Give it a title, description, and optional banner image.
 4. Open the blog and click **New Post** to write your first post.
-5. Edit the post in the standard page editor, then **Publish** when ready.
+5. Edit the post in the standard Visual Editor, then **Publish** when ready.
 
 ---
 
@@ -84,14 +84,14 @@ One blog can be designated as the site default. Use the **Make Default** action 
 
 ## Blog Posts
 
-Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Page Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
+Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Visual Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
 
 ### Creating a Blog Post
 
 1. Open the blog from **Editor → Blogs**.
 2. Click **New Post**.
 3. Enter a title in the modal dialog and click **Create**.
-4. You are redirected to the page editor with an empty post. Write your content.
+4. You are redirected to the Visual Editor with an empty post. Write your content.
 5. Optionally set a banner image, introduction text, and publish date.
 6. Click **Publish** to make the post live, or save as a draft.
 
@@ -112,7 +112,7 @@ From the blog posts list, each post has these quick actions:
 
 | Action | Description |
 | -------- | ------------- |
-| **Edit** | Open the post in the page editor |
+| **Edit** | Open the post in the Visual Editor |
 | **Delete** | Soft-delete the post (with confirmation) |
 | **Preview on Site** | View the post as visitors will see it |
 
@@ -223,7 +223,7 @@ When viewing an individual blog post, previous/next navigation links appear at t
 
 ## See Also
 
-- [Page Editor](page-editor.md) — Editing blog post content
+- [Visual Editor](page-editor.md) — Editing blog post content
 - [File Manager](file-manager.md) — Uploading banner images
 - [Article Lifecycle Reference](article-lifecycle-reference.md) — Content states and publishing
 - [Page Scheduling](page-scheduling.md) — Scheduling blog posts for future publication

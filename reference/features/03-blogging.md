@@ -45,7 +45,7 @@ A blog stream is a named collection of blog posts — similar to a blog category
 
 > **Documentation:** [Blogging Guide (Editors)](../../for-editors/blogging.md#blog-posts)
 
-Blog posts are articles that belong to a blog stream. They use the same article editing pipeline (Page Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
+Blog posts are articles that belong to a blog stream. They use the same article editing pipeline (Visual Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
 
 ### Post Management
 

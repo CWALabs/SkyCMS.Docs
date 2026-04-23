@@ -10,7 +10,7 @@ SkyCMS AI is no longer limited to Monaco inline assistance. The current tenant A
 
 - Monaco inline completions,
 - Monaco AI chat,
-- CKEditor page editor AI writing assistance,
+- CKEditor Visual Editor AI writing assistance,
 - standalone AI Help Chat.
 
 The feature is off by default and requires an administrator to configure the tenant AI provider before it becomes available to editors.

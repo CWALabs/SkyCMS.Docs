@@ -89,5 +89,5 @@ The Filerobot editor provides the following tool tabs:
 
 - [File Manager](./file-manager.md)
 - [File Manager Quick Start](./file-manager-quickstart.md)
-- [Page Editor](./page-editor.md)
+- [Visual Editor](./page-editor.md)
 - [Code Editor](./code-editor.md)

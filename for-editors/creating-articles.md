@@ -69,7 +69,7 @@ General pages are `ArticleType = General` articles that appear as site pages aft
 3. Choose whether to start as **draft** or **publish now**.
    - **Draft**: Save your work as you edit; publish later when ready.
    - **Publish now**: Content becomes live immediately (or at a scheduled time).
-4. Enter your **content** using the page editor or code editor.
+4. Enter your **content** using the Visual Editor or Code Editor.
 5. Add optional metadata:
    - Banner image
    - Introduction/summary text
@@ -147,7 +147,7 @@ After creating an article, you can:
 
 - **Update content** – See [Updating Articles](./updating-and-deleting-articles.md#what-happens-when-you-update-an-article).
 - **Schedule publication** – See [Scheduling Pages](./page-scheduling.md).
-- **Preview changes** - Use the page editor preview mode.
+- **Preview changes** - Use the Visual Editor preview mode.
 - **Delete** – See [Deleting Articles](./updating-and-deleting-articles.md#what-happens-when-you-delete-an-article).
 
 ## Related guides

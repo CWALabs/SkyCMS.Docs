@@ -8,7 +8,7 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 
 | # | Section | What It Covers |
 | --- | --------- | --------------- |
-| 1 | [Content Editing & Authoring](01-content-editing-and-authoring.md) | Page Editor (WYSIWYG), Page Builder (drag-and-drop), Code Editor, AI Assistant, Image Editor, Real-time collaboration |
+| 1 | [Content Editing & Authoring](01-content-editing-and-authoring.md) | Visual Editor (WYSIWYG), Page Builder (drag-and-drop), Code Editor, AI Assistant, Image Editor, Real-time collaboration |
 | 2 | [Content Lifecycle & Publishing](02-content-lifecycle-and-publishing.md) | Article states, versioning, publishing modes, scheduling, URL management, export/import, CDN integration |
 | 3 | [Blogging](03-blogging.md) | Blog streams, blog posts, blog templates, rendering, blog API |
 | 4 | [Site Building](04-site-building.md) | Layouts, Templates, Pages, Widgets, Editable regions, Style guide support |
@@ -24,7 +24,7 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 
 ### For Content Creators & Editors
 
-- Four editing modes: WYSIWYG, drag-and-drop Page Builder, Code Editor, and AI-assisted editing/help
+- Four editing modes: Visual Editor (WYSIWYG), drag-and-drop Page Builder, Code Editor, and AI-assisted editing/help
 - In-browser image editing (crop, resize, filters, annotate, watermark)
 - Full version history with side-by-side comparison and restore
 - Scheduled publishing with timezone support

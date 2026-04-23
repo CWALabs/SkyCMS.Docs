@@ -154,7 +154,7 @@ Before rollout, validate:
 Recommended verification sequence:
 
 1. Create a fresh page from template.
-2. Edit with Page Editor and save/publish cycle.
+2. Edit with Visual Editor and save/publish cycle.
 3. Update template and re-apply to one existing page.
 4. Confirm preserved content and expected structural changes.
 5. Proceed to wider update only if checks pass.
@@ -208,7 +208,7 @@ What happens:
 Common issues and checks:
 
 - Template missing in page creation: ensure template is saved and associated with active layout context.
-- Page Editor not enabling as expected: verify editable region markup and non-nested structure.
+- Visual Editor not enabling as expected: verify editable region markup and non-nested structure.
 - Content loss after update: check whether editable IDs were changed or removed.
 - Save failure: validate markup and inspect console/server logs.
 

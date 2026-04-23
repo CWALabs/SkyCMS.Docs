@@ -55,9 +55,9 @@ Editors typically:
    - [Updating and deleting articles](./updating-and-deleting-articles.md)
    - [Scheduling pages](./page-scheduling.md)
 4. **Content editing**:
-   - [Using the page editor](./page-editor.md)
-   - [Page editor quick start](./page-editor-quickstart.md)
-   - [Page editor toolbar reference](./page-editor-toolbar-reference.md)
+   - [Using the Visual Editor](./page-editor.md)
+   - [Visual Editor quick start](./page-editor-quickstart.md)
+   - [Visual Editor toolbar reference](./page-editor-toolbar-reference.md)
    - [Page builder](./page-builder.md)
    - [Layers panel](./layers.md)
    - [Page builder quick start](./page-builder-quickstart.md)

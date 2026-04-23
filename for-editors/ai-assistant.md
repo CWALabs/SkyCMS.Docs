@@ -1,6 +1,6 @@
 ---
 canonical_title: Using the SkyCMS AI Assistant
-description: Use SkyCMS AI features in the code editor, page editor, and AI Help Chat, including model selection and provider-aware behavior.
+description: Use SkyCMS AI features in the Code Editor, Visual Editor, and AI Help Chat, including model selection and provider-aware behavior.
 audience:
   - Content Editors
   - Advanced Editors
@@ -36,7 +36,7 @@ Use this guide when you need to:
 SkyCMS currently exposes AI in three places:
 
 - **Code Editor (Monaco)** for inline completions and code-focused chat,
-- **Page Editor (CKEditor)** for region-scoped writing help,
+- **Visual Editor (CKEditor)** for region-scoped writing help,
 - **AI Help Chat** for broader product and site guidance.
 
 All three experiences use the same tenant AI provider settings.
@@ -65,9 +65,9 @@ The code editor also includes an AI chat panel for longer requests such as:
 
 The AI prompt is enriched with the current editor context, including the active field, document kind, and section kind.
 
-## Page Editor AI
+## Visual Editor AI
 
-The CKEditor-based page editor includes region-scoped writing assistance.
+The CKEditor-based Visual Editor includes region-scoped writing assistance.
 
 This is designed for editorial tasks such as:
 
@@ -167,7 +167,7 @@ SkyCMS combines cached results with explicit refresh requests, so a refresh is t
 ## Related guides
 
 - [Code Editor](./code-editor.md)
-- [Page Editor](./page-editor.md)
+- [Visual Editor](./page-editor.md)
 - [AI Provider Setup](./ai-provider-setup.md)
 - [AI Troubleshooting](./ai-troubleshooting.md)
 - [AI Configuration Overview](../configuration/ai/overview.md)

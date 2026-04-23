@@ -108,7 +108,7 @@ DELETED (Soft-Delete State)
 
 1. Create article (as **Draft**)
 2. Edit and save updates (stays **Draft**)
-3. Preview in page editor
+3. Preview in Visual Editor
 4. **Publish** → **Published** (goes live now or at scheduled time)
 
 ### Content Revision (Published)

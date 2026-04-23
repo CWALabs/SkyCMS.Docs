@@ -3,9 +3,9 @@
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Editors/LiveEditor/VisualGuide.md -->
 
-# Page Editor Visual Guide
+# Visual Editor Visual Guide
 
-This guide explains what editors should expect to see in the Page Editor interface.
+This guide explains what editors should expect to see in the Visual Editor interface.
 
 ## Open and Navigate the Editor
 
@@ -16,7 +16,7 @@ The quickest way to open the Visual Editor is directly from the page itself:
 1. Navigate to the page on the website while logged in.
 2. The SkyCMS navigation bar appears at the top of the page.
 3. Click **Edit** in the navigation bar. A dropdown loads with the available editors for that page.
-4. Click **Visual Editor** to open the Page Editor.
+4. Click **Visual Editor** to open the Visual Editor.
 
 > **Note:** **Visual Editor** only appears in the dropdown if the page template has rich-text editing enabled. If you see only **Page Builder** and **Code Editor**, the Visual Editor is not available for that page. Contact your site administrator if you need it enabled.
 
@@ -72,6 +72,6 @@ You can also reach the Visual Editor through the content management menu:
 
 ## Related Docs
 
-- [Page Editor](./page-editor.md)
-- [Page Editor Technical Reference](./page-editor-technical-reference.md)
-- [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md)
+- [Visual Editor](./page-editor.md)
+- [Visual Editor Technical Reference](./page-editor-technical-reference.md)
+- [Visual Editor Toolbar Reference](./page-editor-toolbar-reference.md)

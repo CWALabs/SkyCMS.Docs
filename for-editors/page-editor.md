@@ -1,6 +1,6 @@
 ---
-canonical_title: Using the Page Editor
-description: Edit article content directly in page context with the SkyCMS Page Editor, including formatting, preview, save, and publish workflows.
+canonical_title: Using the Visual Editor
+description: Edit article content directly in page context with the SkyCMS Visual Editor, including formatting, preview, save, and publish workflows.
 audience:
   - Content Editors
 doc_type: How-to
@@ -10,20 +10,20 @@ entities:
   - article
   - editable-region
 keywords:
-  - page editor
+  - visual editor
   - wysiwyg
   - ckeditor
   - edit page content
 source: SkyCMS/Docs/Editors/LiveEditor/
 ---
 
-# Using the Page Editor
+# Using the Visual Editor
 
 ## Terminology note
 
-The Page Editor is used to edit article content inside the page context supplied by the active layout and template.
+The Visual Editor is used to edit article content inside the page context supplied by the active layout and template.
 
-The Page Editor is SkyCMS's inline WYSIWYG editor for editing content directly in page context. It is built on CKEditor 5 and supports rich text formatting, links, media, tables, quick save, and collaboration.
+The Visual Editor is SkyCMS's inline WYSIWYG editor for editing content directly in page context. It is built on CKEditor 5 and supports rich text formatting, links, media, tables, quick save, and collaboration.
 
 ## When to use this page
 
@@ -76,9 +76,9 @@ Advanced editing operations:
   - Publish now for immediate go-live.
   - Publish later with the scheduling workflow.
 
-## AI assistance in the Page Editor
+## AI assistance in the Visual Editor
 
-The Page Editor includes region-scoped AI writing assistance.
+The Visual Editor includes region-scoped AI writing assistance.
 
 Use it when you want to:
 
@@ -87,7 +87,7 @@ Use it when you want to:
 - tighten or simplify copy,
 - generate more polished HTML for the active editor region.
 
-The page editor AI works differently from the code editor AI:
+The Visual Editor AI works differently from the code editor AI:
 
 - it is scoped to the active CKEditor region,
 - it focuses on writing and markup in that region,
@@ -97,9 +97,9 @@ For full guidance, see [AI Assistant](./ai-assistant.md).
 
 ## Related guides
 
-- [Page Editor Quick Start](./page-editor-quickstart.md)
-- [Page Editor Visual Guide](./page-editor-visual-guide.md)
-- [Page Editor Technical Reference](./page-editor-technical-reference.md)
-- [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md)
+- [Visual Editor Quick Start](./page-editor-quickstart.md)
+- [Visual Editor Visual Guide](./page-editor-visual-guide.md)
+- [Visual Editor Technical Reference](./page-editor-technical-reference.md)
+- [Visual Editor Toolbar Reference](./page-editor-toolbar-reference.md)
 - [AI Assistant](./ai-assistant.md)
 - [Scheduling Pages](./page-scheduling.md)

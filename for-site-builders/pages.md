@@ -49,7 +49,7 @@ Standard creation flow:
 1. Start from the page creation entry point.
 2. Set title and URL/path.
 3. Choose an appropriate template.
-4. Create the page and open it in Page Editor.
+4. Create the page and open it in the Visual Editor.
 5. Add and format content in the template's editable regions.
 
 Use templates by default; start from blank only when a page is truly one-off.
@@ -153,7 +153,7 @@ For release-quality pages, also validate:
 
 ## Ongoing page operations
 
-- Update page content in Page Editor.
+- Update page content in the Visual Editor.
 - Rebase page structure when template updates are promoted.
 - Unpublish/delete/trash through editorial lifecycle workflows when retiring content.
 

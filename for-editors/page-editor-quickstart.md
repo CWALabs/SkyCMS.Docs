@@ -3,7 +3,7 @@
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Editors/LiveEditor/QuickStart.md -->
 
-# Page Editor Quick Start
+# Visual Editor Quick Start
 
 ## Getting Started
 
@@ -44,6 +44,6 @@
 
 ## See Also
 
-- [Page Editor](./page-editor.md)
-- [Page Editor Visual Guide](./page-editor-visual-guide.md)
+- [Visual Editor](./page-editor.md)
+- [Visual Editor Visual Guide](./page-editor-visual-guide.md)
 - [Scheduling Pages](./page-scheduling.md)

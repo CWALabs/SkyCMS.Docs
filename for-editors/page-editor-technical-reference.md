@@ -3,9 +3,9 @@
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Editors/LiveEditor/TechnicalReference.md -->
 
-# Page Editor Technical Reference
+# Visual Editor Technical Reference
 
-This page captures technical details of the Page Editor implementation for developers and administrators.
+This page captures technical details of the Visual Editor implementation for developers and administrators.
 
 ## Architecture Summary
 
@@ -77,7 +77,7 @@ Advanced mode:
 <img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/indent.svg" alt="Indent" width="16" />
 <img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/outdent.svg" alt="Outdent" width="16" />
 
-For a tool-by-tool breakdown with mode availability, see [Page Editor Toolbar Reference](./page-editor-toolbar-reference.md).
+For a tool-by-tool breakdown with mode availability, see [Visual Editor Toolbar Reference](./page-editor-toolbar-reference.md).
 
 ## Toolbar Interaction Model
 
@@ -121,6 +121,6 @@ This keeps toolbars cleaner while preserving all insertion paths.
 
 ## Related Docs
 
-- [Page Editor](./page-editor.md)
+- [Visual Editor](./page-editor.md)
 - [Code Editor](./code-editor.md)
 - [Developer Article Lifecycle](../for-developers/article-lifecycle.md)
