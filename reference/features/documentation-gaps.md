@@ -42,7 +42,7 @@ Each entry links back to the feature catalog section where the gap was identifie
 
 ## Multi-Tenancy & Architecture
 
-*All multi-tenancy & architecture features now have dedicated documentation. See [Tenant Isolation Reference](../../for-developers/tenant-isolation-reference.md), [Publisher Architecture](../../for-developers/publisher-architecture.md), and [EF Cross-Provider Guide](../../for-developers/ef-cross-provider-guide.md).*
+*All multi-tenancy & architecture features now have dedicated documentation. See [Tenant Isolation Reference](../../for-developers/tenant-isolation-reference.md), [Publisher Architecture](../../for-developers/publisher-architecture.md), [Publisher Rendering Flow](../../for-developers/publisher-rendering-flow.md), and [EF Cross-Provider Guide](../../for-developers/ef-cross-provider-guide.md).*
 
 ## Deployment & Infrastructure
 

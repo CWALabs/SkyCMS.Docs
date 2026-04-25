@@ -200,7 +200,7 @@ Two boot paths depending on deployment mode:
 
 ## 6. Publisher Architecture
 
-> **Documentation:** [Publisher Architecture](../../for-developers/publisher-architecture.md) · [Publishing Workflow](../../deployment/publishing-workflow.md)
+> **Documentation:** [Publisher Architecture](../../for-developers/publisher-architecture.md) · [Publisher Rendering Flow](../../for-developers/publisher-rendering-flow.md) · [Publishing Workflow](../../deployment/publishing-workflow.md)
 
 The Publisher (public-facing site) operates in two modes:
 
@@ -217,6 +217,12 @@ The Publisher (public-facing site) operates in two modes:
 - Minimal server overhead — pages served from CDN edge
 - SPA fallback routing for single-page applications
 - Maximum performance for high-traffic sites
+
+### Hybrid Authenticated Static Delivery Pattern
+
+- Dynamic-capable Publisher host serving static artifacts through `PubControllerBase`
+- Optional authentication and article-level authorization for `/pub/articles/{articleNumber}` paths
+- Useful when teams want static-first delivery with protected content or dynamic extension endpoints
 
 ### Publisher Services
 

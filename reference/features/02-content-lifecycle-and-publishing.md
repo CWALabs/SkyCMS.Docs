@@ -129,7 +129,7 @@ Automate content publication at a future date and time.
 
 ## 5. Publishing Modes
 
-> **Documentation:** [Publishing Modes Guide](../../for-editors/publishing-modes.md) · [Publishing Workflow](../../deployment/publishing-workflow.md)
+> **Documentation:** [Publishing Modes Guide](../../for-editors/publishing-modes.md) · [Publishing Workflow](../../deployment/publishing-workflow.md) · [Publisher Rendering Flow (Developers)](../../for-developers/publisher-rendering-flow.md)
 
 SkyCMS supports multiple publishing strategies to fit different team sizes and deployment architectures.
 

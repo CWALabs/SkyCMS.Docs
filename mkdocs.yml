@@ -181,6 +181,7 @@ nav:
     - Architecture Decision Records (ADRs): for-developers/architecture-decision-records.md
     - Middleware Pipeline: for-developers/middleware-pipeline.md
     - Editor Rendering Flow: for-developers/editor-rendering-flow.md
+    - Publisher Rendering Flow: for-developers/publisher-rendering-flow.md
     - Layouts & Templates:
       - Layouts: for-developers/layouts.md
       - Templates: for-developers/templates.md

@@ -143,6 +143,7 @@ Both modes support multi-tenancy:
 
 ## See Also
 
+- [Publisher Rendering Flow](publisher-rendering-flow.md) — Request and rendering deep dive across static, dynamic, and hybrid authenticated static delivery
 - [Tenant Isolation Reference](tenant-isolation-reference.md) — How isolation works across layers
 - [Publishing Modes](../for-editors/publishing-modes.md) — Editor-side publishing workflows
 - [Preload & Caching](../for-editors/preload-and-caching.md) — Cache architecture
