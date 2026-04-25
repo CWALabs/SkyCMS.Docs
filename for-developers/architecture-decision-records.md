@@ -11,6 +11,7 @@ This page is a lightweight mirror index for discoverability in docs.
 
 ## ADR Index
 
+- [ADR 0000: Foundational Product Direction - Cloud-Native Multi-Mode CMS](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0000-foundational-product-direction-cloud-native-multi-mode-cms.md)
 - [ADR 0001: Editor Naming and Icon Standards](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0001-editor-naming-and-icon-standards.md)
 - [ADR 0002: Tenant Resolution and Domain Context Establishment](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0002-tenant-resolution-and-domain-context-establishment.md)
 - [ADR 0003: Editor Deployment Mode Split (Single-Tenant vs Multi-Tenant)](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0003-editor-deployment-mode-single-tenant-vs-multi-tenant.md)
