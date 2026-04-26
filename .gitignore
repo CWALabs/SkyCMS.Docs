@@ -27,4 +27,6 @@ _site/
 
 # Bundler (legacy)
 vendor/
+!assets/javascripts/vendor/
+!assets/javascripts/vendor/mermaid.min.js
 .bundle/
