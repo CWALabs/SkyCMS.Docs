@@ -11,7 +11,6 @@ This page is a lightweight mirror index for discoverability in docs.
 
 ## ADR Index
 
-- [ADR 0000: Foundational Product Direction - Cloud-Native Multi-Mode CMS](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0000-foundational-product-direction-cloud-native-multi-mode-cms.md)
 - [ADR 0001: Editor Naming and Icon Standards](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0001-editor-naming-and-icon-standards.md)
 - [ADR 0002: Tenant Resolution and Domain Context Establishment](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0002-tenant-resolution-and-domain-context-establishment.md)
 - [ADR 0003: Editor Deployment Mode Split (Single-Tenant vs Multi-Tenant)](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0003-editor-deployment-mode-single-tenant-vs-multi-tenant.md)
@@ -46,6 +45,8 @@ This page is a lightweight mirror index for discoverability in docs.
 - [ADR 0032: Environment-Specific Error Handling Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0032-environment-specific-error-handling-strategy.md)
 - [ADR 0033: Antiforgery Token Bootstrap Endpoint Pattern](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0033-antiforgery-token-bootstrap-endpoint-pattern.md)
 - [ADR 0034: Domain Events and Setup Audit Log Observability Model](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0034-domain-events-and-setup-audit-log-observability-model.md)
+- [ADR 0035: File Explorer Modernization and Connector Adapter Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0035-file-explorer-modernization-and-connector-adapter-strategy.md)
+- [ADR 0036: Layout Terminology Standardization and Documentation Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0036-layout-terminology-standardization-and-documentation-strategy.md)
 
 ## Architecture topic summaries
 
@@ -53,8 +54,12 @@ Use this section as a fast architecture map before diving into individual ADR fi
 
 ### 1. Platform direction and operating model
 
-- [ADR 0000](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0000-foundational-product-direction-cloud-native-multi-mode-cms.md): Defines SkyCMS as a cloud-native, multi-mode CMS with separated authoring and publishing responsibilities.
 - [ADR 0003](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0003-editor-deployment-mode-single-tenant-vs-multi-tenant.md): Establishes split deployment paths for single-tenant and multi-tenant editor operation.
+
+### 8. Editor modernization and terminology alignment
+
+- [ADR 0035](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0035-file-explorer-modernization-and-connector-adapter-strategy.md): Defines the file explorer modernization approach and connector adapter boundary.
+- [ADR 0036](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0036-layout-terminology-standardization-and-documentation-strategy.md): Standardizes layout terminology and docs strategy for editor consistency.
 
 ### 2. Tenant resolution and isolation
 
@@ -96,8 +101,8 @@ Use this section as a fast architecture map before diving into individual ADR fi
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
 flowchart LR
-  ADR0000[ADR 0000 Product direction] --> ADR0002[ADR 0002 Tenant resolution]
-  ADR0000 --> ADR0006[ADR 0006 Publisher modes]
+  ROOT[Foundational product direction] --> ADR0002[ADR 0002 Tenant resolution]
+  ROOT --> ADR0006[ADR 0006 Publisher modes]
   ADR0002 --> ADR0022[ADR 0022 Dynamic configuration provider]
   ADR0022 --> ADR0029[ADR 0029 Middleware ordering contract]
   ADR0004[ADR 0004 EF cross-provider query contract] --> ADR0005[ADR 0005 DB provider auto-detection]
