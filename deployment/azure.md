@@ -213,7 +213,7 @@ Current contract checks to run:
 1. Required configuration key alignment.
 
 - Confirm ApplicationDbContextConnection, CosmosAllowSetup, CosmosPublisherUrl, and AdminEmail are still consumed by current app startup/setup paths.
-- Source: [SkyCMS/Editor/Program.cs](../../SkyCMS/Editor/Program.cs), [SkyCMS/Editor/README.md](../../SkyCMS/Editor/README.md#L203).
+- Source: [SkyCMS/Editor/Program.cs](../../SkyCMS/Editor/Program.cs), [SkyCMS/Editor/README.md](https://github.com/CWALabs/SkyCMS/blob/main/Editor/README.md#L203).
 
 1. Database model and migration compatibility.
 

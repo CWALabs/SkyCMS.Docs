@@ -347,13 +347,19 @@ jobs:
 
       - name: Debug R2 key listing on verification failure
         if: failure()
+        continue-on-error: true
         run: |
+          set +e
           echo "ℹ️ Debug listing for root and key docs folders:"
           aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }} \
             --endpoint-url https://${{ secrets.CLOUD_FLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com | head -n 50
           echo ""
           echo "ℹ️ Required homepage assets for this run:"
-          cat ./site/required-assets.txt
+          if [ -f ./site/required-assets.txt ]; then
+            cat ./site/required-assets.txt
+          else
+            echo "(missing ./site/required-assets.txt)"
+          fi
           echo ""
           echo "ℹ️ R2 assets root:"
           aws s3 ls s3://${{ secrets.R2_BUCKET_NAME }}/assets/ \
