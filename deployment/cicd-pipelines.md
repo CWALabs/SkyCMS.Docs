@@ -26,6 +26,21 @@ SkyCMS uses GitHub Actions for continuous integration, testing, Docker image bui
 | `validate-screenshots.yml` | Manual | Validate documentation screenshots |
 | `update-badges.yml` | Manual | Update README status badges |
 
+## CI/CD topology
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+      Source[Repository changes] --> Build[Build and test workflows]
+      Build --> Docker[Docker image workflows]
+      Build --> NuGet[NuGet publish workflow]
+      Build --> Docs[Docs deploy workflow]
+      Docker --> Hub[Docker Hub]
+      NuGet --> NuGetOrg[NuGet.org]
+      Docs --> R2[Cloudflare R2 docs site]
+      Source --> Security[CodeQL and security checks]
+```
+
 ---
 
 ## Build & Test
@@ -160,6 +175,20 @@ The script:
 ---
 
 ## Workflow Dependencies
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+      DotnetBuild[dotnetbuild.yml] --> Decision{Build passes?}
+      Decision --> DockerImage[docker-image.yml]
+      Decision --> DockerVer[docker-with-ver.yml]
+      Decision --> NuGetPush[NuGetPush.yml]
+      Decision --> SkyTests[sky-tests.yml]
+      Decision --> FlexTests[identity-flexdb-tests.yml]
+      DockerImage --> Hub[Docker Hub images]
+      DockerVer --> Hub
+      Hub --> DemoDeploy[deploy-demo.ps1]
+```
 
 ```
 dotnetbuild.yml ──────────────── Build passes?

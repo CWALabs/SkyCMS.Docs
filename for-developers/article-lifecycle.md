@@ -48,6 +48,20 @@ At a high level, article lifecycle has two separate operations:
 1. Create or save the Article record in Articles.
 1. Publish or unpublish public output (Pages, static file output, TOC, CDN purge).
 
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+stateDiagram-v2
+  [*] --> Draft
+  Draft --> Scheduled: Publish with future date
+  Draft --> Published: Publish now
+  Scheduled --> Published: Scheduled timestamp reached
+  Published --> Draft: Unpublish
+  Published --> Deleted: Delete
+  Draft --> Deleted: Delete
+  Deleted --> Trashed: Permanent trash
+  Trashed --> [*]
+```
+
 Creation can happen in draft mode (Published = null) or publish-now mode (Published has a value).
 
 ## Shared Creation Pipeline
@@ -92,6 +106,27 @@ When an article is published (from create, save, or explicit publish):
 - Regenerates TOC.
 - Regenerates blog TOC when article type is BlogPost or BlogStream.
 - Purges CDN for the page path.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+  participant H as Handler
+  participant P as PublishingService
+  participant A as Articles table
+  participant Pg as PublishedPage table
+  participant S as Static file output
+  participant T as TOC
+  participant C as CDN
+
+  H->>P: PublishAsync(article)
+  P->>A: Ensure Published timestamp
+  P->>A: Unpublish previous versions
+  P->>Pg: Replace PublishedPage for ArticleNumber
+  P->>S: Generate static output when enabled
+  P->>T: Regenerate TOC (and blog TOC)
+  P->>C: Purge page path
+  P-->>H: Publish result
+```
 
 ## ArticleType.General
 

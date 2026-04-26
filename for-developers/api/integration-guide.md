@@ -2,7 +2,6 @@
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/Integration-Guide.md -->
-<!-- markdownlint-disable -->
 
 # Contact Form API Integration Guide
 
@@ -12,7 +11,7 @@ This guide shows developers how to integrate the Contact Form API into their Sky
 
 The Contact Form API is built into the Editor application. When you install and configure the Editor, the API is automatically available at:
 
-```
+```text
 /_api/contact/skycms-contact.js  (GET)   - JavaScript library
 /_api/contact/submit              (POST)  - Form submission endpoint
 ```
@@ -150,6 +149,7 @@ The first step is to load the SkyCMS Contact Form library:
 ```
 
 This single request:
+
 - Generates an anti-forgery token for CSRF protection
 - Loads your CAPTCHA configuration (if enabled)
 - Creates the global `SkyCmsContact` object
@@ -158,6 +158,7 @@ This single request:
 ### 2. Define Your Form HTML
 
 Create an HTML form with input fields. By default, the library expects fields named:
+
 - `name` - The visitor's name
 - `email` - The visitor's email
 - `message` - The visitor's message
@@ -352,7 +353,7 @@ The Contact Form API is configured in the Editor's Settings table in the databas
 The API reads configuration from the `Settings` table:
 
 | Group | Name | Value | Example |
-|-------|------|-------|---------|
+| --- | --- | --- | --- |
 | ContactApi | AdminEmail | Email address to receive submissions | `admin@example.com` |
 | ContactApi | MaxMessageLength | Maximum message length in characters | `5000` |
 | CAPTCHA | Config | JSON configuration for CAPTCHA | See below |
@@ -386,6 +387,7 @@ Or for reCAPTCHA v3:
 The API automatically uses the Editor's email configuration (SendGrid, Azure Communication Services, or SMTP). If no `ContactApi.AdminEmail` is configured, it falls back to the email service's `SenderEmail`.
 
 This means:
+
 - **Multi-tenant**: Each tenant can have its own admin email or use the email provider's default
 - **Flexible**: You can configure per-contact-form or rely on default email settings
 - **Reliable**: Falls back gracefully if ContactApi settings are missing
@@ -415,6 +417,7 @@ To adjust the rate limit, modify the Editor's configuration and restart the appl
 The API returns different messages based on the submission result:
 
 ### Success (200 OK)
+
 ```json
 {
   "success": true,
@@ -424,6 +427,7 @@ The API returns different messages based on the submission result:
 ```
 
 ### Validation Error (400 Bad Request)
+
 ```json
 {
   "success": false,
@@ -433,6 +437,7 @@ The API returns different messages based on the submission result:
 ```
 
 ### CAPTCHA Failed (400 Bad Request)
+
 ```json
 {
   "success": false,
@@ -442,6 +447,7 @@ The API returns different messages based on the submission result:
 ```
 
 ### Rate Limited (429 Too Many Requests)
+
 ```json
 {
   "success": false,
@@ -455,34 +461,41 @@ The API returns different messages based on the submission result:
 ### Form submissions aren't being received
 
 1. **Check AdminEmail configuration**:
+
    - Verify the `ContactApi.AdminEmail` setting exists in the database
    - If not configured, the API falls back to the email service's sender email
-   
+
 2. **Check email service**:
+
    - Verify email configuration is complete (SendGrid, Azure, or SMTP)
    - Check application logs for email sending errors
-   
+
 3. **Check email filters**:
+
    - Verify the admin email account isn't filtering the emails as spam
    - Check spam/junk folders
 
 4. **Check application logs**:
+
    - Look for errors in the Editor application logs
    - Check database connectivity and email service connectivity
 
 ### CAPTCHA not showing or failing
 
 1. **Verify CAPTCHA configuration**:
+
    - Check the CAPTCHA setting in the database
    - Ensure `RequireCaptcha` is set to `true`
    - Verify the provider (turnstile or recaptcha) is correct
 
 2. **Verify site and secret keys**:
+
    - Confirm the SiteKey and SecretKey are correct for your provider
-   - For Turnstile: https://dash.cloudflare.com/
-   - For reCAPTCHA: https://www.google.com/recaptcha/admin
+   - For Turnstile: <https://dash.cloudflare.com/>
+   - For reCAPTCHA: <https://www.google.com/recaptcha/admin>
 
 3. **Check browser console**:
+
    - Open browser developer tools (F12)
    - Look for JavaScript errors related to CAPTCHA loading
    - Check network tab to see if CAPTCHA script is loading
@@ -490,6 +503,7 @@ The API returns different messages based on the submission result:
 ### "Anti-forgery token is missing"
 
 This error occurs if:
+
 - The script endpoint (`/_api/contact/skycms-contact.js`) isn't being called first
 - The page is cached without the token
 - The form is submitted with a different domain
@@ -533,6 +547,7 @@ The default is 3 submissions per 5 minutes per IP. To adjust:
 ## Complete Example with Styling
 
 See the [ContactForm.md](./contact-form.md) documentation for more complete examples including:
+
 - CAPTCHA setup (Turnstile and reCAPTCHA)
 - Advanced JavaScript usage
 - cURL and fetch examples

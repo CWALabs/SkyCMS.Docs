@@ -8,20 +8,21 @@ SkyCMS provides a real-time multi-user editing environment built on ASP.NET Core
 
 ## How It Works
 
-```
-Editor A (lock holder)          Server                    Editor B (observer)
-  │                               │                          │
-  ├── JoinRoom ─────────────────►│◄──────── JoinRoom ───────┤
-  ├── SetArticleLock ───────────►│                           │
-  │                               ├── ArticleLock ──────────►│
-  │                               │   (shows "A is editing") │
-  │  (editing...)                 │                          │
-  ├── Save ─────────────────────►│                           │
-  │                               ├── ArticleReload ────────►│
-  │                               │   (reloads content)      │
-  ├── ClearLocks ───────────────►│                           │
-  │                               ├── ArticleLock ──────────►│
-  │                               │   (shows "Ready to Edit")│
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+    participant A as Editor A
+    participant S as SignalR server
+    participant B as Editor B
+
+    A->>S: JoinRoom
+    B->>S: JoinRoom
+    A->>S: SetArticleLock
+    S-->>B: ArticleLock (A is editing)
+    A->>S: Save
+    S-->>B: ArticleReload
+    A->>S: ClearLocks
+    S-->>B: ArticleLock (Ready to Edit)
 ```
 
 ### Editing Model
@@ -39,7 +40,7 @@ This is a **lock-based exclusive editing model**, not simultaneous collaborative
 Handles real-time content broadcasting between editors viewing the same article.
 
 | Method | Direction | Purpose |
-|--------|-----------|---------|
+| --- | --- | --- |
 | `JoinArticleGroup(articleNumber)` | Client → Server | Join an article-specific SignalR group |
 | `Notification(data)` | Client → Server | Broadcast commands (`join`, `save`, `SavePageProperties`) |
 | `UpdateEditors(editorId, data)` | Client → Server | Send content updates to other editors in the group |
@@ -55,7 +56,7 @@ Groups are formed by article number: `Article:{articleNumber}`. Content payloads
 Handles article locking, presence tracking, and in-editor chat messaging. Requires `[Authorize]`.
 
 | Method | Direction | Purpose |
-|--------|-----------|---------|
+| --- | --- | --- |
 | `JoinRoom(id, editorType)` | Client → Server | Join editing room for an article |
 | `SetArticleLock(id, editorType)` | Client → Server | Acquire exclusive edit lock |
 | `ClearLocks(id)` | Client → Server | Release locks for article/connection |
@@ -86,7 +87,7 @@ Covered separately in [Publishing Progress](publishing-progress.md). Tracks bulk
 Each lock is stored in the `ArticleLocks` database table:
 
 | Field | Type | Description |
-|-------|------|-------------|
+| --- | --- | --- |
 | `Id` | Guid | Lock record primary key |
 | `ArticleId` | Guid | The article's database record ID |
 | `UserEmail` | string | Email of the lock holder |
@@ -98,7 +99,7 @@ Each lock is stored in the `ArticleLocks` database table:
 ### Editor Types
 
 | EditorType | Context |
-|------------|---------|
+| --- | --- |
 | `ArticleEditor` | Standard article content editing |
 | `FileEditor` | File/code editing (loads from blob storage) |
 | `LayoutEditor` | Layout template editing |
@@ -117,7 +118,7 @@ Each lock is stored in the `ArticleLocks` database table:
 ### Lock Enforcement in the UI
 
 | Lock State | Button Color | Label | Behavior |
-|------------|-------------|-------|----------|
+| --- | --- | --- | --- |
 | Current user holds lock | Green | "Edit Mode" | Full editing enabled |
 | Another user holds lock | Red | "{email} is editing" | Read-only view |
 | No lock | Gray | "Ready to Edit" | Click to acquire lock |
@@ -222,7 +223,7 @@ builder.Services.AddSignalR(options =>
 ## Limitations
 
 | Limitation | Details |
-|------------|---------|
+| --- | --- |
 | **No simultaneous editing** | Only one user can edit at a time (lock-based, not CRDT/OT) |
 | **No lock timeout** | Locks persist until release or disconnect — a stuck connection could block editing |
 | **ChatHub not mapped** | The `/chat` endpoint is not currently registered in `Program.cs` |

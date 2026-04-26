@@ -9,13 +9,34 @@ This reference documents how SkyCMS isolates data, caches, cookies, blob storage
 ## Isolation Summary
 
 | Layer | Isolation Mechanism |
-|-------|-------------------|
+| --- | --- |
 | **Database** | EF Core query filters on tenant domain, captured at DbContext instantiation |
 | **Cache** | Tenant-prefixed cache keys (`TENANT_CACHE::{domain}::{key}`) |
 | **Cookies** | `CookieDomain` claim validation — mismatched domains trigger sign-out |
 | **Blob storage** | Tenant-specific connection strings and path prefixes |
 | **CDN** | Per-tenant CDN configuration; purge operations scoped to tenant |
 | **Request context** | `DomainMiddleware` establishes tenant before routing |
+
+## Isolation boundaries map
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+  Request[Incoming request] --> Domain[DomainMiddleware]
+  Domain --> Tenant[Tenant context]
+
+  Tenant --> DbScope[Database query filters]
+  Tenant --> CacheScope[Tenant-prefixed cache keys]
+  Tenant --> CookieScope[Cookie domain validation]
+  Tenant --> StorageScope[Blob path and connection scope]
+  Tenant --> CdnScope[Per-tenant CDN config and purge]
+
+  DbScope --> AppDb[IApplicationDbContext]
+  CacheScope --> Cache[(In-memory or distributed cache)]
+  CookieScope --> Principal[Validated auth principal]
+  StorageScope --> Blob[(Tenant storage)]
+  CdnScope --> Edge[(Tenant CDN edge)]
+```
 
 ---
 
@@ -47,6 +68,27 @@ Registered early in the middleware pipeline, `DomainMiddleware`:
 
 > **Health check paths** (`/healthz`, `/__healthz`) are excluded from domain validation, ensuring container orchestrators can probe the application without tenant context.
 
+### Tenant request gate sequence
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+  participant V as Visitor
+  participant M as DomainMiddleware
+  participant P as IDynamicConfigurationProvider
+  participant C as Controller pipeline
+
+  V->>M: HTTP request with host headers
+  M->>P: Resolve tenant from x-origin-hostname or Host
+  P-->>M: Tenant mapped or not mapped
+  alt Tenant mapped
+    M->>C: Set HttpContext.Items["Domain"]
+    C-->>V: Continue request processing
+  else Tenant not mapped
+    M-->>V: 404 Not Found
+  end
+```
+
 ---
 
 ## Database Isolation
@@ -75,13 +117,13 @@ In multi-tenant mode, each tenant can have its own database connection string. T
 
 `CacheService<T>` injects `IDynamicConfigurationProvider` and prefixes all cache keys with the tenant domain:
 
-```
+```text
 TENANT_CACHE::{tenant-domain}::{cache-key}
 ```
 
 For example, tenant `site-a.com` caching article redirects produces the key:
 
-```
+```text
 TENANT_CACHE::site-a.com::ArticleRedirects
 ```
 
@@ -100,7 +142,7 @@ SkyCMS uses a claims-based approach to cookie isolation:
 Cookie security settings:
 
 | Setting | Value |
-|---------|-------|
+| --- | --- |
 | **SameSite** | Lax |
 | **SecurePolicy** | Always (HTTPS) |
 | **HttpOnly** | true |

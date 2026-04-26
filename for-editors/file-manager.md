@@ -228,6 +228,7 @@ When inserting images into a page or article, File Manager enters image selectio
 ## Related guides
 
 - [File Manager Quick Start](./file-manager-quickstart.md)
+- [File Manager Toolbar Reference](./file-manager-toolbar-reference.md)
 - [Code Editor](./code-editor.md)
 - [Image Editing](./image-editing.md)
 - [Creating Articles](./creating-articles.md)

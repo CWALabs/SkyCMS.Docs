@@ -6,7 +6,7 @@ audience:
 doc_type: How-to
 status: Draft
 entities:
-  - page-editor
+  - visual-editor
   - article
   - editable-region
 keywords:
@@ -97,9 +97,9 @@ For full guidance, see [AI Assistant](./ai-assistant.md).
 
 ## Related guides
 
-- [Visual Editor Quick Start](./page-editor-quickstart.md)
-- [Visual Editor Visual Guide](./page-editor-visual-guide.md)
-- [Visual Editor Technical Reference](./page-editor-technical-reference.md)
-- [Visual Editor Toolbar Reference](./page-editor-toolbar-reference.md)
+- [Visual Editor Quick Start](./visual-editor-quickstart.md)
+- [Visual Editor Visual Guide](./visual-editor-visual-guide.md)
+- [Visual Editor Technical Reference](./visual-editor-technical-reference.md)
+- [Visual Editor Toolbar Reference](./visual-editor-toolbar-reference.md)
 - [AI Assistant](./ai-assistant.md)
 - [Scheduling Pages](./page-scheduling.md)

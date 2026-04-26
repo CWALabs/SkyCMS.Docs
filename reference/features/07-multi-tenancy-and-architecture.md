@@ -43,6 +43,22 @@ Resolution happens early in the middleware pipeline via `DomainMiddleware`, befo
 - `TenantContext` holds the resolved tenant for the current request
 - All data access is automatically filtered to the current tenant
 
+### Architecture relationship map
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+  Tenant[Tenant resolution] --> AppArch[Application architecture]
+  Tenant --> PublisherArch[Publisher architecture]
+  Tenant --> Config[Configuration system]
+  AppArch --> CQRS[CQRS and mediator]
+  AppArch --> Middleware[Middleware ordering]
+  PublisherArch --> Delivery[Delivery modes]
+  PublisherArch --> Cdn[CDN integration]
+  Config --> DbProvider[Database provider selection]
+  DbProvider --> EfCompat[EF cross-provider constraints]
+```
+
 ---
 
 ## 2. Tenant Isolation
@@ -52,7 +68,7 @@ Resolution happens early in the middleware pipeline via `DomainMiddleware`, befo
 ### Data Isolation
 
 | Layer | Isolation Mechanism |
-|-------|-------------------|
+| --- | --- |
 | **Content** | Pages, articles, media scoped to tenant via `IApplicationDbContext` |
 | **Settings** | Settings queries filtered by tenant domain |
 | **Users** | Per-tenant user stores and roles |
@@ -86,7 +102,7 @@ SkyCMS identity storage uses a flexible database provider system that auto-selec
 ### Supported Database Providers
 
 | Provider | Priority | Best For |
-|----------|----------|----------|
+| --- | --- | --- |
 | **Azure Cosmos DB** | 10 (highest) | Global scale, NoSQL, multi-region replication |
 | **SQL Server / Azure SQL** | 20 | Enterprise ACID compliance, complex queries |
 | **MySQL** | 30 | Open-source relational database |
@@ -144,7 +160,7 @@ Settings are resolved in order (highest priority first):
 
 ## 5. Application Architecture
 
-> **Documentation:** [Architecture (Developers)](../../for-developers/architecture.md) · [Middleware Pipeline](../../for-developers/middleware-pipeline.md)
+> **Documentation:** [Architecture (Developers)](../../for-developers/architecture.md) · [Architecture Executive Summary](../../for-developers/architecture-executive-summary.md) · [Core Platform Architecture](../../for-developers/architecture-core-platform.md) · [Architecture Decision Matrix](../../for-developers/architecture-decision-matrix.md) · [Architecture Mode Selection Worksheet](../../for-developers/architecture-mode-selection-worksheet.md) · [Architecture Route Inventory Templates](../../for-developers/architecture-route-inventory-templates.md) · [Architecture Review Checklist](../../for-developers/architecture-review-checklist.md) · [Architecture Change Log](../../for-developers/architecture-change-log.md) · [Middleware Pipeline](../../for-developers/middleware-pipeline.md)
 
 ### CQRS + Mediator Pattern
 
@@ -174,7 +190,7 @@ Feature slices organized by domain:
 Three SignalR hubs for real-time features:
 
 | Hub | Purpose | Authorization |
-|-----|---------|--------------|
+| --- | --- | --- |
 | **ChatHub** | Editor chat, article locking, save notifications, typing indicators | Authenticated users |
 | **LiveEditorHub** | Multi-user editing groups, live content updates, editor presence | Authenticated users |
 | **PublishingProgressHub** | Bulk publish progress streaming | Editors, Administrators |
@@ -200,7 +216,7 @@ Two boot paths depending on deployment mode:
 
 ## 6. Publisher Architecture
 
-> **Documentation:** [Publisher Architecture](../../for-developers/publisher-architecture.md) · [Publisher Rendering Flow](../../for-developers/publisher-rendering-flow.md) · [Publishing Workflow](../../deployment/publishing-workflow.md)
+> **Documentation:** [Publisher Architecture](../../for-developers/publisher-architecture.md) · [Publisher Rendering Flow](../../for-developers/publisher-rendering-flow.md) · [Static Delivery Architecture Profile](../../for-developers/architecture-profile-static.md) · [Dynamic Delivery Architecture Profile](../../for-developers/architecture-profile-dynamic.md) · [Hybrid Delivery Architecture Profile](../../for-developers/architecture-profile-hybrid.md) · [Publishing Workflow](../../deployment/publishing-workflow.md)
 
 The Publisher (public-facing site) operates in two modes:
 
@@ -227,7 +243,7 @@ The Publisher (public-facing site) operates in two modes:
 ### Publisher Services
 
 | Service | Purpose |
-|---------|---------|
+| --- | --- |
 | `ViewRenderingService` | Render Razor views to HTML strings |
 | `IPublishingService` | Orchestrate publish operations |
 | `IPublishingProgressReporter` | Track and report publish progress |
@@ -254,7 +270,7 @@ All EF Core queries are designed to work across all four supported database prov
 ### Database Contexts
 
 | Context | Purpose |
-|---------|---------|
+| --- | --- |
 | `ApplicationDbContext` | Main content storage (articles, templates, layouts, blogs, contacts) |
 | `DynamicConfigDbContext` | Tenant configuration and domain mappings |
 | `CosmosIdentityDbContext` | ASP.NET Core Identity storage (users, roles, claims) |

@@ -552,7 +552,7 @@ Continue building your home page content by following these guides in order:
 - **Previous Phase:** [Creating Templates](03-Creating-Templates.md)
 - **Parallel Reading:** [Pages Documentation](../../getting-started/quick-start.md)
 - **Template Reference:** [Templates Guide](../../for-site-builders/templates.md)
-- **Visual Editor Guide:** [Using the Visual Editor](../../for-editors/page-editor.md)
+- **Visual Editor Guide:** [Using the Visual Editor](../../for-editors/visual-editor.md)
 
 ---
 
@@ -1283,7 +1283,7 @@ Continue building your home page by adding featured content, service highlights,
 
 - **Template Patterns:** [Phase 3 - Creating Templates](03-Creating-Templates.md)
 - **Responsive Design:** [Phase 2 - Creating Layouts](02-Creating-Layouts.md)
-- **Visual Editor Details:** [Visual Editor Guide](../../for-editors/page-editor.md)
+- **Visual Editor Details:** [Visual Editor Guide](../../for-editors/visual-editor.md)
 - **Image Management:** [File Manager Guide](../../for-editors/file-manager.md)
 
 ---

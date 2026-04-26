@@ -223,7 +223,7 @@ When viewing an individual blog post, previous/next navigation links appear at t
 
 ## See Also
 
-- [Visual Editor](page-editor.md) — Editing blog post content
+- [Visual Editor](visual-editor.md) — Editing blog post content
 - [File Manager](file-manager.md) — Uploading banner images
 - [Article Lifecycle Reference](article-lifecycle-reference.md) — Content states and publishing
 - [Page Scheduling](page-scheduling.md) — Scheduling blog posts for future publication

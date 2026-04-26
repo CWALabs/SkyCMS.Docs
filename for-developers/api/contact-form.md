@@ -2,7 +2,7 @@
 <!-- Type: Reference -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/ContactForm.md -->
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable MD013 -->
 
 # Contact Form API Documentation
 
@@ -25,7 +25,7 @@ See a complete copy-ready implementation in [Contact Form API Example (HTML)](./
 
 The Contact Form API is typically deployed behind a **CloudFlare Worker** that acts as a reverse proxy. This architecture provides several benefits:
 
-```
+```text
 ┌─────────────────────────┐
 │  Public Website Domain  │
 │  (visitor.example.com)  │
@@ -65,7 +65,7 @@ The CloudFlare Worker is configured with:
 - **Routes**: Matches `/_api/contact/*` requests on your domain
 - **Method Restrictions**: Only allows GET (for form scripts) and POST (for submissions)
 - **CORS Validation**: Restricts requests to your configured zone domain
-- **Header Management**: 
+- **Header Management**:
   - Sets `host` to backend hostname
   - Sets `x-origin-hostname` for multi-tenant routing
   - Forwards all other headers to backend
@@ -84,17 +84,20 @@ Returns a JavaScript library that handles client-side CAPTCHA setup and form sub
 **Authentication**: None required
 
 **Response**:
+
 - **Status**: 200 OK
 - **Content-Type**: `application/javascript`
 - **Body**: JavaScript code with embedded CAPTCHA configuration
 
 **Example Request**:
+
 ```javascript
 // Load the script in your HTML
 <script src="/_api/contact/skycms-contact.js"></script>
 ```
 
 **What it provides**:
+
 - Embedded anti-forgery token for form submission
 - CAPTCHA configuration (provider type, site key)
 - Complete JavaScript library with `SkyCmsContact` object
@@ -134,6 +137,7 @@ SkyCmsContact.config = {
 Initializes the contact form with automatic submission handling.
 
 **Parameters**:
+
 - `formSelector` (string | HTMLFormElement): CSS selector or HTML element reference for the form
 - `options` (Object, optional): Configuration overrides
   - `fieldNames` (Object, optional): Custom field name mapping
@@ -147,6 +151,7 @@ Initializes the contact form with automatic submission handling.
 **Returns**: undefined
 
 **Example**:
+
 ```javascript
 // Initialize with default field names
 SkyCmsContact.init('#contactForm');
@@ -186,6 +191,7 @@ SkyCmsContact.init(form, {
 
 **Expected Form Structure (Default Field Names)**:
 The form should contain input fields with these **exact names** (unless overridden with `fieldNames` option):
+
 - `name` - Sender's name
 - `email` - Sender's email
 - `message` - Message content
@@ -227,18 +233,21 @@ If your form uses different field names, simply specify them in the options:
 Handles form submission (called automatically by `init()`). Can also be called manually.
 
 **Parameters**:
+
 - `form` (HTMLFormElement): The form to submit
 - `config` (Object): Configuration object
 
-**Returns**: Promise<void>
+**Returns**: `Promise<void>`
 
 **Behavior**:
+
 1. Extracts form data (name, email, message)
 2. Obtains CAPTCHA token if required
 3. Sends POST request to `submitEndpoint`
 4. Calls `onSuccess` or `onError` callback with result
 
 **Example**:
+
 ```javascript
 const form = document.getElementById('contactForm');
 SkyCmsContact.handleSubmit(form, SkyCmsContact.config)
@@ -250,16 +259,19 @@ SkyCmsContact.handleSubmit(form, SkyCmsContact.config)
 Loads the CAPTCHA library script (called automatically by `init()`).
 
 **Parameters**:
+
 - `config` (Object): Configuration object with `captchaProvider` and `captchaSiteKey`
 
 **Returns**: undefined
 
 **Behavior**:
+
 - For Turnstile: Loads `https://challenges.cloudflare.com/turnstile/v0/api.js`
 - For reCAPTCHA: Loads `https://www.google.com/recaptcha/api.js?render={siteKey}`
 - For none: Does nothing
 
 **Example**:
+
 ```javascript
 SkyCmsContact.loadCaptcha(SkyCmsContact.config);
 ```
@@ -269,19 +281,23 @@ SkyCmsContact.loadCaptcha(SkyCmsContact.config);
 Obtains a CAPTCHA validation token from the configured provider.
 
 **Parameters**:
+
 - `config` (Object): Configuration object with `captchaProvider` and `captchaSiteKey`
 
-**Returns**: Promise<string> - CAPTCHA token
+**Returns**: `Promise<string>` - CAPTCHA token
 
 **Behavior**:
+
 - **Turnstile**: Renders widget and waits for user validation
 - **reCAPTCHA**: Executes reCAPTCHA v3 (invisible)
 - **None**: Returns empty string
 
 **Throws**:
+
 - Error if CAPTCHA validation fails or times out (after 10 seconds)
 
 **Example**:
+
 ```javascript
 try {
   const token = await SkyCmsContact.getCaptchaToken(SkyCmsContact.config);
@@ -657,11 +673,13 @@ Submits a contact form message.
 **Rate Limit**: 5 requests per minute per IP address
 
 **Request Header**:
-```
+
+```text
 Content-Type: application/json
 ```
 
 **Request Body**:
+
 ```json
 {
   "name": "John Doe",
@@ -674,13 +692,14 @@ Content-Type: application/json
 **Request Field Descriptions**:
 
 | Field | Type | Required | Validation | Description |
-|-------|------|----------|-----------|-------------|
+| --- | --- | --- | --- | --- |
 | name | string | Yes | 2-100 characters | Sender's name |
 | email | string | Yes | Valid email format | Sender's email address |
 | message | string | Yes | 10-5000 characters | Contact message content |
 | captchaToken | string | Conditional | Required if `RequireCaptcha` is true | CAPTCHA verification token |
 
 **Response - Success (200 OK)**:
+
 ```json
 {
   "success": true,
@@ -690,6 +709,7 @@ Content-Type: application/json
 ```
 
 **Response - Validation Error (400 Bad Request)**:
+
 ```json
 {
   "success": false,
@@ -699,6 +719,7 @@ Content-Type: application/json
 ```
 
 **Response - CAPTCHA Failed (400 Bad Request)**:
+
 ```json
 {
   "success": false,
@@ -708,6 +729,7 @@ Content-Type: application/json
 ```
 
 **Response - Rate Limited (429 Too Many Requests)**:
+
 ```json
 {
   "success": false,
@@ -717,6 +739,7 @@ Content-Type: application/json
 ```
 
 **Response - Email Delivery Failed (400 Bad Request)**:
+
 ```json
 {
   "success": false,
@@ -726,6 +749,7 @@ Content-Type: application/json
 ```
 
 **Response - Server Error (500 Internal Server Error)**:
+
 ```json
 {
   "success": false,
@@ -791,6 +815,7 @@ The simplest way to use the Contact Form API is to load the generated JavaScript
 ```
 
 The library handles:
+
 - Form data extraction (supports custom field names via `fieldNames` option)
 - CAPTCHA validation (if configured)
 - Anti-forgery token inclusion
@@ -800,12 +825,14 @@ The library handles:
 ### cURL
 
 **Get Script**:
+
 ```bash
 curl -X GET "https://yourdomain.com/_api/contact/skycms-contact.js" \
   -H "Accept: application/javascript"
 ```
 
 **Submit Form**:
+
 ```bash
 curl -X POST "https://yourdomain.com/_api/contact/submit" \
   -H "Content-Type: application/json" \
@@ -873,9 +900,11 @@ submitContactForm(
 The API supports Cloudflare Turnstile for bot protection.
 
 **Setup**:
-1. Create a Turnstile account at https://dash.cloudflare.com/
+
+1. Create a Turnstile account at <https://dash.cloudflare.com/>
 2. Add a Turnstile site
 3. Configure in your application:
+
    ```json
    {
      "ContactApi": {
@@ -888,6 +917,7 @@ The API supports Cloudflare Turnstile for bot protection.
    ```
 
 **Client-Side Implementation**:
+
 ```html
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
@@ -923,9 +953,11 @@ The API supports Cloudflare Turnstile for bot protection.
 The API supports Google reCAPTCHA v3 for invisible bot protection.
 
 **Setup**:
-1. Register at https://www.google.com/recaptcha/admin
+
+1. Register at <https://www.google.com/recaptcha/admin>
 2. Create a reCAPTCHA v3 site
 3. Configure in your application:
+
    ```json
    {
      "ContactApi": {
@@ -938,6 +970,7 @@ The API supports Google reCAPTCHA v3 for invisible bot protection.
    ```
 
 **Client-Side Implementation**:
+
 ```html
 <script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -976,7 +1009,7 @@ The API supports Google reCAPTCHA v3 for invisible bot protection.
 The API returns meaningful error messages for common issues:
 
 | Error | Status Code | Cause | Solution |
-|-------|-------------|-------|----------|
+| --- | --- | --- | --- |
 | "Name is required" | 400 | Name field is empty | Provide a name |
 | "Name must be between 2 and 100 characters" | 400 | Name is too short/long | Adjust name length |
 | "Invalid email address" | 400 | Email format is invalid | Use a valid email |
@@ -989,6 +1022,7 @@ The API returns meaningful error messages for common issues:
 ## Logging
 
 All submissions are logged with the following information:
+
 - Submitter's email address
 - Submitter's IP address
 - Submission timestamp
@@ -996,6 +1030,7 @@ All submissions are logged with the following information:
 - Error details (if applicable)
 
 This can be used for:
+
 - Audit trails
 - Abuse detection and prevention
 - Debugging issues
@@ -1020,20 +1055,24 @@ This can be used for:
 ## Troubleshooting
 
 ### "Anti-forgery token is missing"
+
 - Ensure you're calling the script endpoint first to get the token
 - Check that the token is being sent in the request header or body
 
 ### "CAPTCHA token is invalid"
+
 - Verify the token is fresh (some providers have expiration)
 - Ensure the token matches the configured provider
 - Check that site/secret keys are correct
 
 ### Submissions not arriving
+
 - Verify `AdminEmail` is configured correctly
 - Check email service logs in the host application
 - Ensure email isn't being filtered as spam
 
 ### Rate limiting too strict
+
 - This is configured per IP address
 - If requests are being blocked, wait 1 minute before retrying
 - Contact your administrator to adjust limits if needed
@@ -1041,6 +1080,7 @@ This can be used for:
 ## Future Enhancements
 
 Potential future features:
+
 - File attachment support
 - Custom field support
 - Webhook notifications

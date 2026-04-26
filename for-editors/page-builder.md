@@ -89,6 +89,6 @@ See [Layers Panel](./layers.md) for the dedicated guide.
 
 - [Page Builder Quick Start](./page-builder-quickstart.md)
 - [Layers Panel](./layers.md)
-- [Visual Editor](./page-editor.md)
+- [Visual Editor](./visual-editor.md)
 - [Code Editor](./code-editor.md)
 - [For Site Builders: Layouts](../for-site-builders/layouts.md)

@@ -104,8 +104,8 @@ For complete connection string formats, configuration methods, security best pra
 
 ## See Also
 
-- **[LEARNING_PATHS: DevOps](../LEARNING_PATHS.md#devops--system-administrator)** - Database setup as part of DevOps journey
+- **[Developer Overview](../../for-developers/overview.md)** - Role-based entry point for developers and DevOps
 - **[Storage Configuration](./Storage-Overview.md)** - Companion guide for file storage setup
 - **[CDN Configuration](./CDN-Overview.md)** - Performance optimization
-- **[Authentication & Authorization](../Authentication-Overview.md)** - User and role management
-- **[Troubleshooting Guide](../Troubleshooting.md)** - General troubleshooting
+- **[Authentication](../../for-editors/authentication.md)** - User and role management
+- **[Troubleshooting Guide](../../reference/troubleshooting.md)** - General troubleshooting

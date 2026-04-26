@@ -1,4 +1,4 @@
-# Architecture Decision Records (ADRs)
+﻿# Architecture Decision Records (ADRs)
 
 SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source of truth.
 
@@ -46,6 +46,66 @@ This page is a lightweight mirror index for discoverability in docs.
 - [ADR 0032: Environment-Specific Error Handling Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0032-environment-specific-error-handling-strategy.md)
 - [ADR 0033: Antiforgery Token Bootstrap Endpoint Pattern](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0033-antiforgery-token-bootstrap-endpoint-pattern.md)
 - [ADR 0034: Domain Events and Setup Audit Log Observability Model](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0034-domain-events-and-setup-audit-log-observability-model.md)
+
+## Architecture topic summaries
+
+Use this section as a fast architecture map before diving into individual ADR files.
+
+### 1. Platform direction and operating model
+
+- [ADR 0000](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0000-foundational-product-direction-cloud-native-multi-mode-cms.md): Defines SkyCMS as a cloud-native, multi-mode CMS with separated authoring and publishing responsibilities.
+- [ADR 0003](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0003-editor-deployment-mode-single-tenant-vs-multi-tenant.md): Establishes split deployment paths for single-tenant and multi-tenant editor operation.
+
+### 2. Tenant resolution and isolation
+
+- [ADR 0002](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0002-tenant-resolution-and-domain-context-establishment.md): Makes early domain-based tenant resolution a first-order architectural constraint.
+- [ADR 0022](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0022-dynamic-configuration-provider-singleton-with-proxy-aware-domain-resolution.md): Standardizes proxy-aware domain resolution through a singleton dynamic configuration provider.
+- [ADR 0008](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0008-cookie-domain-isolation-for-multi-tenant-auth.md): Prevents cross-tenant authentication leakage via cookie-domain isolation strategy.
+
+### 3. Data portability and provider strategy
+
+- [ADR 0004](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0004-ef-cross-provider-cosmos-safe-query-contract.md): Requires cross-provider query safety, including Cosmos-compatible query constraints.
+- [ADR 0005](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0005-database-provider-auto-detection-strategy.md): Defines provider auto-detection strategy for portable database runtime behavior.
+- [ADR 0017](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0017-storage-provider-auto-detection-by-connection-pattern.md): Aligns storage provider selection with connection-pattern detection.
+
+### 4. Publishing and delivery patterns
+
+- [ADR 0006](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0006-publisher-operating-modes-dynamic-vs-static.md): Formalizes publisher operating modes and startup mode selection.
+- [ADR 0007](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0007-content-delivery-path-segregation.md): Splits content delivery paths to support performance, security, and mode flexibility.
+- [ADR 0024](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0024-editor-publisher-separation-with-shared-data-and-storage.md): Confirms editor-publisher separation with shared data and storage contracts.
+
+### 5. Runtime correctness and security posture
+
+- [ADR 0029](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0029-middleware-ordering-contract-for-tenant-and-security-correctness.md): Locks middleware ordering as an architecture-level correctness contract.
+- [ADR 0026](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0026-cookie-and-transport-security-defaults.md): Sets secure transport and cookie defaults as baseline security posture.
+- [ADR 0011](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0011-policy-based-rate-limiting-architecture.md): Standardizes policy-based rate limiting for abuse protection.
+
+### 6. Startup safety and setup governance
+
+- [ADR 0018](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0018-early-configuration-validation-and-diagnostic-only-mode.md): Adds early validation and diagnostic-only startup mode to reduce misconfiguration risk.
+- [ADR 0031](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0031-setup-enablement-gate-via-cosmosallowsetup.md): Gates setup entry through explicit setup enablement configuration.
+- [ADR 0019](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0019-health-probe-endpoint-exemptions-in-setup-middleware.md): Protects operational health checks during setup gating.
+
+### 7. Architecture operations and observability
+
+- [ADR 0016](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0016-tenant-scoped-caching-lifecycle-strategy.md): Defines tenant-scoped cache lifecycle behavior.
+- [ADR 0034](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0034-domain-events-and-setup-audit-log-observability-model.md): Captures domain-event and setup-audit observability model.
+
+## ADR decision dependency map
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+  ADR0000[ADR 0000 Product direction] --> ADR0002[ADR 0002 Tenant resolution]
+  ADR0000 --> ADR0006[ADR 0006 Publisher modes]
+  ADR0002 --> ADR0022[ADR 0022 Dynamic configuration provider]
+  ADR0022 --> ADR0029[ADR 0029 Middleware ordering contract]
+  ADR0004[ADR 0004 EF cross-provider query contract] --> ADR0005[ADR 0005 DB provider auto-detection]
+  ADR0005 --> ADR0020[ADR 0020 ApplicationDbContext abstraction]
+  ADR0006 --> ADR0007[ADR 0007 Content delivery path segregation]
+  ADR0007 --> ADR0024[ADR 0024 Editor-publisher separation]
+  ADR0024 --> ADR0034[ADR 0034 Domain events and setup audit observability]
+```
 
 ## Mirror Policy
 

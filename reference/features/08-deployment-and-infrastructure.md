@@ -25,6 +25,24 @@ SkyCMS supports multiple deployment targets and hosting models — from one-clic
 
 ### Azure App Service
 
+### Deployment capability map
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+  Hosting[Hosting options] --> Azure[Azure App Service]
+  Hosting --> Docker[Docker]
+  Hosting --> Aws[AWS]
+  Hosting --> Cloudflare[Cloudflare edge]
+  Setup[Setup wizard] --> Database[Database configuration]
+  Setup --> Storage[Cloud storage]
+  Setup --> Cdn[CDN configuration]
+  Setup --> Email[Email provider]
+  Delivery[Operations] --> Demo[Demo deployment]
+  Delivery --> Docs[DocsPublisher]
+  Delivery --> Cicd[CI/CD and DevOps]
+```
+
 - **Azure Marketplace deployment** — One-click ARM template deployment with 9 pre-configured resources
 - Customizable template with subscription, resource group, and region selection
 - Configurable parameters: email provider, web app plan tier, storage account type
@@ -76,7 +94,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 ### Setup Steps
 
 | Step | Purpose |
-|------|---------|
+| --- | --- |
 | **Welcome** | Introduction and prerequisites check |
 | **Step 1: Storage** | Configure cloud storage connection (Azure Blob, S3, R2) |
 | **Step 2: Admin Account** | Create the initial administrator user |
@@ -108,7 +126,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 ### Supported Databases
 
 | Database | Use Case | Connection |
-|----------|----------|------------|
+| --- | --- | --- |
 | **Azure Cosmos DB** | Production, global scale, multi-region | Cosmos DB connection string |
 | **SQL Server / Azure SQL** | Enterprise, ACID compliance | SQL Server connection string |
 | **MySQL** | Open-source relational | MySQL connection string |
@@ -128,10 +146,10 @@ An interactive, step-by-step setup experience for initial site configuration.
 
 > **Documentation:** [Storage Overview](../../configuration/storage/overview.md) · [Azure Blob Storage](../../configuration/storage/azure-blob.md) · [Amazon S3](../../configuration/storage/s3.md) · [Cloudflare R2](../../configuration/storage/cloudflare-r2.md) · [Google Cloud Storage](../../configuration/storage/google-cloud.md) · [Storage Configuration Reference](../../configuration/storage/configuration-reference.md) · [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md)
 
-### Supported Providers
+### Supported Cloud Storage Providers
 
 | Provider | Connection Method |
-|----------|------------------|
+| --- | --- |
 | **Azure Blob Storage** | Azure storage connection string |
 | **Amazon S3** | AWS access key + secret |
 | **Cloudflare R2** | S3-compatible endpoint + credentials |
@@ -153,7 +171,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 ### Supported CDN Providers
 
 | Provider | Integration Type |
-|----------|-----------------|
+| --- | --- |
 | **Azure CDN / Azure Front Door** | API-based cache purge |
 | **Cloudflare** | API-based cache purge, edge hosting |
 | **AWS CloudFront** | API-based cache invalidation |
@@ -176,7 +194,7 @@ An interactive, step-by-step setup experience for initial site configuration.
 ### Supported Providers
 
 | Provider | Features |
-|----------|----------|
+| --- | --- |
 | **Azure Communication Services** | Azure-native, high-volume delivery |
 | **SendGrid (Twilio)** | Template support, delivery analytics |
 | **SMTP** | Self-hosted, TLS support, username/password auth |
@@ -201,7 +219,7 @@ PowerShell + Bicep automation for one-command demo site deployment to Azure.
 ### What Gets Deployed
 
 | Resource | Purpose |
-|----------|---------|
+| --- | --- |
 | **App Service Plan** | Compute (default P1v3 SKU) |
 | **Web App** | Docker-hosted SkyCMS Editor |
 | **Storage Account** | Blob storage for media assets |
@@ -229,7 +247,7 @@ A ready-to-run tool for syncing Markdown documentation into SkyCMS.
 ### Features
 
 | Feature | Description |
-|---------|-------------|
+| --- | --- |
 | **Markdown → HTML** | Automatic conversion of `.md` files to HTML content |
 | **Asset upload** | Images and files uploaded to `/pub/docs` storage path |
 | **Idempotent sync** | Hash tracking prevents duplicate uploads (`.skycms/docs-import-map.json`) |
@@ -266,7 +284,7 @@ article_type: documentation
 ### GitHub Actions Workflows
 
 | Workflow | Purpose |
-|----------|---------|
+| --- | --- |
 | **Docker Image Build** | Build and publish Docker images |
 | **NuGet Push** | Publish NuGet packages (AspNetCore.Identity.FlexDb, etc.) |
 | **Docs Cloudflare Deploy** | Deploy documentation to Cloudflare Pages |

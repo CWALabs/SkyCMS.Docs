@@ -24,9 +24,9 @@ SkyCMS is a multi-tenant ASP.NET Core content management system that combines vi
 
 | Role | Start Here | Key Topics |
 | ------ | ----------- | ------------ |
-| **Content Editors** | [Editor Overview](for-editors/overview.md) | [Visual Editor](for-editors/page-editor.md) · [Blogging](for-editors/blogging.md) · [Publishing](for-editors/publishing-modes.md) · [File Manager](for-editors/file-manager.md) |
+| **Content Editors** | [Editor Overview](for-editors/overview.md) | [Visual Editor](for-editors/visual-editor.md) · [Blogging](for-editors/blogging.md) · [Publishing](for-editors/publishing-modes.md) · [File Manager](for-editors/file-manager.md) |
 | **Site Builders** | [Builder Overview](for-site-builders/overview.md) | [Layouts](for-site-builders/layouts.md) · [Layout Examples](for-site-builders/layout-examples/overview.md) · [Templates](for-site-builders/templates.md) · [Template Examples](for-site-builders/template-examples/overview.md) · [Article Examples](for-site-builders/article-examples/overview.md) · [Widgets](for-site-builders/widgets/overview.md) |
-| **Developers** | [Developer Overview](for-developers/overview.md) | [Architecture](for-developers/architecture.md) · [API Reference](for-developers/api/overview.md) · [Multi-Tenancy](for-developers/multi-tenancy-deep-dive.md) |
+| **Developers** | [Developer Overview](for-developers/overview.md) | [Architecture](for-developers/architecture.md) · [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) · [API Reference](for-developers/api/overview.md) · [Multi-Tenancy](for-developers/multi-tenancy-deep-dive.md) |
 | **Administrators** | [Configuration](configuration/overview.md) | [Database](configuration/database/overview.md) · [Storage](configuration/storage/overview.md) · [Deployment](deployment/overview.md) |
 
 ---
@@ -49,3 +49,4 @@ SkyCMS is a multi-tenant ASP.NET Core content management system that combines vi
 - [Changelog](reference/changelog.md)
 - [Feature Catalog](reference/features/index.md) — 56 features across 8 categories
 - [AI Context Pack](reference/ai-context-pack.md) — canonical terminology and AI retrieval shortcut
+- [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) — central Mermaid table of contents across architecture, AI, deployment, and API docs

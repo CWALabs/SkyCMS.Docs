@@ -1,4 +1,4 @@
-# Publisher Rendering Flow
+﻿# Publisher Rendering Flow
 
 **Audience:** Backend Developers, Platform Engineers  
 **Type:** Deep Dive / Reference
@@ -45,7 +45,7 @@ Static and dynamic are startup modes. Hybrid behavior is achieved in the dynamic
 
 When `CosmosStaticWebPages=true`, the Publisher uses `StaticProxyController`.
 
-### Request Path
+### Static-first request path
 
 ```text
 GET /docs/getting-started
@@ -71,7 +71,7 @@ GET /docs/getting-started
 
 When `CosmosStaticWebPages=false`, `HomeController.Index` serves pages on request.
 
-### Request Path
+### Dynamic request path
 
 ```text
 GET /some/page
@@ -126,6 +126,27 @@ This pattern is especially relevant when pure platform static hosting cannot sat
 Static delivery depends on Editor publishing pipelines writing HTML artifacts to storage.
 
 ### End-to-End Publish Path
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+  participant E as Editor user
+  participant P as PublishingService
+  participant D as PublishedPage store
+  participant V as IViewRenderService
+  participant S as Storage
+  participant C as CDN service
+
+  E->>P: Publish content
+  P->>D: Create or update PublishedPage
+  P->>V: Render Razor view to HTML
+  V-->>P: HTML artifact
+  P->>S: Upload static HTML and related files
+  P->>S: Update TOC artifacts
+  P->>C: Purge affected cache paths
+  C-->>P: Purge result
+  P-->>E: Publish completion status
+```
 
 ```text
 Editor publish action

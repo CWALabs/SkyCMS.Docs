@@ -62,4 +62,4 @@ In title mode, the main toolbar has no standard action buttons. Only the title m
 
 - Toolbar composition can be customized per tenant, template, or region.
 - If a tool is missing in your environment, your current mode or permissions may not allow it.
-- For mode overview visuals, see [Visual Editor Technical Reference](./page-editor-technical-reference.md).
+- For mode overview visuals, see [Visual Editor Technical Reference](./visual-editor-technical-reference.md).

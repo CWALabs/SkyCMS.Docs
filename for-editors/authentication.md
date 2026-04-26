@@ -25,12 +25,35 @@ SkyCMS supports passwordless authentication via FIDO2-compatible security keys a
 Passkey behavior is configured in `Program.cs`:
 
 | Setting | Default | Description |
-|---------|---------|-------------|
+| --- | --- | --- |
 | **AuthenticatorTimeout** | 3 minutes | Time limit for the user to complete the passkey challenge |
 | **ChallengeSize** | 64 bytes | Cryptographic challenge size |
 | **ServerDomain** | Auto-detected | Relying Party (RP) identifier. In single-tenant mode, can be set via `CosmosPasskeyServerDomain` config key. In multi-tenant mode, derived per request from the tenant domain. |
 
-#### User Actions
+## Authentication flow map
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+  participant U as User
+  participant L as Login page
+  participant I as Identity pipeline
+  participant O as OAuth or passkey provider
+  participant A as Authorization checks
+
+  U->>L: Choose sign-in method
+  alt Email and password
+    L->>I: Validate credentials
+  else Passkey or OAuth
+    L->>O: Start provider challenge
+    O-->>I: Return verified identity
+  end
+  I->>I: Apply 2FA and cookie rules
+  I->>A: Evaluate roles and tenant cookie domain
+  A-->>U: Grant session or reject access
+```
+
+### User Actions
 
 - Users can register passkeys from their account management page.
 - Multiple passkeys can be registered per account.
@@ -90,13 +113,14 @@ Enable Microsoft authentication:
 ```
 
 | Field | Description |
-|-------|-------------|
+| --- | --- |
 | **ClientId** | Azure App Registration application (client) ID |
 | **ClientSecret** | Client secret from the app registration |
 | **TenantId** | Azure AD tenant ID. Use `common` for multi-tenant apps. |
 | **CallbackDomain** | The domain for OAuth redirect URLs. Required when behind a reverse proxy or CDN. |
 
 The provider uses standard OAuth 2.0 endpoints:
+
 - Authorization: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize`
 - Token: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`
 
@@ -115,7 +139,7 @@ Configure the required groups in your application settings.
 ## Cookie Configuration
 
 | Cookie | Purpose | Expiration |
-|--------|---------|------------|
+| --- | --- | --- |
 | **Application** | Primary session cookie | 1 hour idle timeout (configurable) |
 | **External** | Temporary cookie during external OAuth flow | Short-lived |
 | **TwoFactorRememberMe** | Persists 2FA approval across sessions | Browser session |
@@ -132,7 +156,7 @@ In multi-tenant deployments, the `CookieDomain` claim in the user's identity con
 ### Environment Variables
 
 | Variable | Purpose |
-|----------|---------|
+| --- | --- |
 | `GoogleOAuth__ClientId` | Google OAuth client ID |
 | `GoogleOAuth__ClientSecret` | Google OAuth client secret |
 | `MicrosoftOAuth__ClientId` | Microsoft/Entra ID client ID |

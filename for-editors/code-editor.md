@@ -124,7 +124,7 @@ For diagnosing issues, see [AI Troubleshooting](./ai-troubleshooting.md).
 
 - [File Manager](./file-manager.md)
 - [File Manager Quick Start](./file-manager-quickstart.md)
-- [Visual Editor](./page-editor.md)
+- [Visual Editor](./visual-editor.md)
 - [Image Editing](./image-editing.md)
 - [AI Assistant](./ai-assistant.md)
 - [AI Provider Setup](./ai-provider-setup.md)

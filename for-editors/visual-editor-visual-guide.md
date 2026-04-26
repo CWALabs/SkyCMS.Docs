@@ -72,6 +72,6 @@ You can also reach the Visual Editor through the content management menu:
 
 ## Related Docs
 
-- [Visual Editor](./page-editor.md)
-- [Visual Editor Technical Reference](./page-editor-technical-reference.md)
-- [Visual Editor Toolbar Reference](./page-editor-toolbar-reference.md)
+- [Visual Editor](./visual-editor.md)
+- [Visual Editor Technical Reference](./visual-editor-technical-reference.md)
+- [Visual Editor Toolbar Reference](./visual-editor-toolbar-reference.md)

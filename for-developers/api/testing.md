@@ -2,7 +2,6 @@
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/TESTING.md -->
-<!-- markdownlint-disable -->
 
 # Testing Guide - Sky.Cms.Api.Shared
 
@@ -14,7 +13,7 @@ This guide covers testing strategies for the Sky.Cms.Api.Shared API, including u
 
 The test project (`AspNetCore.Identity.FlexDb.Tests` or similar) should follow this structure:
 
-```
+```text
 Tests/
 ├── Features/
 │   └── ContactForm/
@@ -36,7 +35,7 @@ Tests/
 
 ### Testing a Handler
 
-**Example: SubmitContactFormHandler**
+#### Example: SubmitContactFormHandler
 
 ```csharp
 namespace Sky.Cms.Api.Shared.Tests.Features.ContactForm.Submit;
@@ -151,7 +150,7 @@ public class SubmitContactFormHandlerTests
 
 ### Testing a Service
 
-**Example: ContactService CAPTCHA Validation**
+#### Example: ContactService CAPTCHA Validation
 
 ```csharp
 namespace Sky.Cms.Api.Shared.Tests.Services;
@@ -550,6 +549,7 @@ Create a Postman collection with these requests:
    - Method: POST
    - URL: `{{base_url}}/_api/contact/submit`
    - Body (JSON):
+
      ```json
      {
        "name": "Test User",
@@ -562,6 +562,7 @@ Create a Postman collection with these requests:
    - Method: POST
    - URL: `{{base_url}}/_api/contact/submit`
    - Body (JSON):
+
      ```json
      {
        "name": "Test User",
@@ -576,7 +577,7 @@ Create a Postman collection with these requests:
 Aim for the following coverage targets:
 
 | Component | Target Coverage |
-|-----------|-----------------|
+| --- | --- |
 | Handlers | 90%+ |
 | Services | 90%+ |
 | Models/DTOs | 100% (validation) |

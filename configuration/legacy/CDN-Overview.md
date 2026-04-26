@@ -9,8 +9,6 @@ stage: stable
 read_time: 4
 ---
 
-# CDN Integration Overview
-
 SkyCMS can purge CDN caches after publish so fresh content appears immediately. Supported providers:
 
 - Azure Front Door
@@ -19,23 +17,28 @@ SkyCMS can purge CDN caches after publish so fresh content appears immediately. 
 - Sucuri CDN/WAF
 
 ## When to use this
+
 - You publish via SkyCMS and need CDN cache purges to make changes visible immediately.
 - You must choose or configure a CDN provider (Front Door, Cloudflare, CloudFront, Sucuri).
 
 ## Why this matters
+
 - Without cache purging, visitors may see stale content after publish.
 - Correct scoping of credentials reduces risk while enabling automated invalidations.
 
 ## Key takeaways
+
 - Configure CDN settings in Editor → Settings → CDN; use least-privilege tokens/roles.
 - Purge failures don’t block publish; they only affect cache freshness.
 - Each provider requires specific IDs/tokens; validate with the test button before go-live.
 
 ## Prerequisites
+
 - Active CDN distribution/zone and credentials with purge/invalidation rights only.
 - Target URLs/paths you plan to purge and awareness of propagation delays.
 
 ## Quick path
+
 1. Select provider and gather required IDs/tokens (see table below).
 2. Enter credentials in Settings → CDN and run **Save and test settings**.
 3. Publish content and confirm cache invalidation completes; monitor CDN logs if available.
@@ -75,7 +78,7 @@ SkyCMS can purge CDN caches after publish so fresh content appears immediately. 
 - **[Database Configuration](./Database-Overview.md)** - Companion configuration guide
 - **[Storage Configuration](./Storage-Overview.md)** - Companion configuration guide
 - **[Configuration Overview](./README.md)** - Index of all configuration documentation
-- **[LEARNING_PATHS: DevOps](../LEARNING_PATHS.md#devops--system-administrator)** - CDN setup for DevOps professionals
-- **[Publishing Overview](../Publishing-Overview.md)** - Publishing workflow with CDN cache purging
-- **[Troubleshooting Guide](../Troubleshooting.md)** - CDN troubleshooting
-- **[Main Documentation Hub](../index.md)** - Browse all documentation
+- **[Developer Overview](../../for-developers/overview.md)** - Role-based entry point for developers and DevOps
+- **[Publishing Overview](../../deployment/publishing-workflow.md)** - Publishing workflow with CDN cache purging
+- **[Troubleshooting Guide](../../reference/troubleshooting.md)** - CDN troubleshooting
+- **[Main Documentation Hub](../../index.md)** - Browse all documentation

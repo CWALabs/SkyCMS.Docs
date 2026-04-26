@@ -35,10 +35,25 @@ The first non-empty value becomes the active storage connection string.
 Storage driver selection is pattern-based. SkyCMS does not require a separate `StorageProvider` flag for the current blob storage path.
 
 | Pattern in connection string | Detected provider | Driver |
-| ---------------------------- | ----------------- | ------ |
+| --- | --- | --- |
 | Starts with `DefaultEndpointsProtocol=` | Azure Blob Storage | `AzureStorage` |
 | Contains `AccountId` and `Bucket` | Cloudflare R2 | `AmazonStorage` |
 | Contains `Bucket` and `Region` | Amazon S3-compatible path | `AmazonStorage` |
+
+## Provider detection flow
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+  Config[Resolve active storage connection string] --> Detect[ConnectionStringParser.DetermineProvider]
+  Detect --> Azure{Azure pattern?}
+  Azure -- Yes --> AzureDriver[Create AzureStorage driver]
+  Azure -- No --> S3{S3-compatible pattern?}
+  S3 -- Yes --> AmazonDriver[Create AmazonStorage driver]
+  S3 -- No --> Unsupported[Throw UnsupportedStorageProviderException]
+  TenantMode[Multi-tenant mode] --> Config
+  Config --> Cache[Cache driver by connection string hash]
+```
 
 Google Cloud Storage is typically configured through an S3-compatible connection pattern, so it follows the same S3-compatible driver path instead of a dedicated GCS-specific runtime detector.
 

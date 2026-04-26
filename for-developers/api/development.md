@@ -2,7 +2,6 @@
 <!-- Type: How-to -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/DEVELOPMENT.md -->
-<!-- markdownlint-disable -->
 
 # Development Guide - Sky.Cms.Api.Shared
 
@@ -61,7 +60,7 @@ public class MyFeatureResponse
 
 Create a folder in `Features/` for your feature:
 
-```
+```text
 Features/MyFeature/
 ├── Submit/
 │   ├── MyFeatureCommand.cs
@@ -70,6 +69,7 @@ Features/MyFeature/
 ```
 
 **MyFeatureCommand.cs**:
+
 ```csharp
 // Features/MyFeature/Submit/MyFeatureCommand.cs
 namespace Sky.Cms.Api.Shared.Features.MyFeature.Submit;
@@ -99,6 +99,7 @@ public class MyFeatureCommand : ICommand<MyFeatureResponse>
 ```
 
 **MyFeatureHandler.cs**:
+
 ```csharp
 // Features/MyFeature/Submit/MyFeatureHandler.cs
 namespace Sky.Cms.Api.Shared.Features.MyFeature.Submit;
@@ -327,6 +328,7 @@ Example: Validating a CAPTCHA token (no side effects, just returns result)
 To make your feature configurable:
 
 1. **Add properties to a config class**:
+
    ```csharp
    public class MyFeatureConfig
    {
@@ -336,11 +338,13 @@ To make your feature configurable:
    ```
 
 2. **Register in DI**:
+
    ```csharp
    services.Configure<MyFeatureConfig>(configuration.GetSection("MyFeature"));
    ```
 
 3. **Use in your service**:
+
    ```csharp
    public MyFeatureService(IOptions<MyFeatureConfig> config)
    {
@@ -349,6 +353,7 @@ To make your feature configurable:
    ```
 
 4. **Configure in appsettings.json**:
+
    ```json
    {
      "MyFeature": {
@@ -517,18 +522,22 @@ public class CallExternalApiHandler : ICommandHandler<CallExternalApiCommand, My
 ## Troubleshooting Development
 
 ### Handler not being called
+
 - Verify it's registered in `AddContactApi()` in `ContactApiServiceExtensions.cs`
 - Check that the handler type matches the command/query type
 
 ### Configuration not loading
+
 - Verify the section name in `appsettings.json` matches the configuration property
 - Check that configuration is registered with `services.Configure<T>`
 
 ### Dependency injection errors
+
 - Verify all constructor parameters are registered in DI
 - Check for circular dependencies
 
 ### Test failures
+
 - Ensure mock objects are set up correctly
 - Verify async/await usage is correct
 - Check that test data is valid

@@ -44,6 +44,6 @@
 
 ## See Also
 
-- [Visual Editor](./page-editor.md)
-- [Visual Editor Visual Guide](./page-editor-visual-guide.md)
+- [Visual Editor](./visual-editor.md)
+- [Visual Editor Visual Guide](./visual-editor-visual-guide.md)
 - [Scheduling Pages](./page-scheduling.md)

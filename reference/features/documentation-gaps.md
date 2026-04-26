@@ -53,7 +53,7 @@ Each entry links back to the feature catalog section where the gap was identifie
 ## Summary
 
 | Category | Documented | Gaps |
-|----------|-----------|------|
+| --- | --- | --- |
 | Content Editing & Authoring | 6 of 6 features | 0 |
 | Content Lifecycle & Publishing | 10 of 10 features | 0 |
 | Blogging | 6 of 6 features | 0 |
@@ -65,3 +65,49 @@ Each entry links back to the feature catalog section where the gap was identifie
 | **Total** | **56 of 56 features** | **0** |
 
 **All gaps have been filled.** Every feature in the catalog now has dedicated documentation.
+
+---
+
+## Mermaid Diagram Backlog
+
+This backlog captures high-value pages that currently have no Mermaid diagrams but would benefit from visual relationships, flows, or decision maps.
+
+### Priority 1 (high impact)
+
+| Status | Page | Suggested diagram(s) | Why it helps |
+| --- | --- | --- | --- |
+| TODO | [for-developers/tenant-isolation-reference.md](../../for-developers/tenant-isolation-reference.md) | Isolation boundary map, request-to-tenant sequence | Core correctness and security comprehension |
+| TODO | [for-developers/content-delivery-architecture.md](../../for-developers/content-delivery-architecture.md) | Delivery topology, route-to-runtime map | Clarifies static/dynamic/hybrid runtime ownership |
+| TODO | [deployment/publishing-workflow.md](../../deployment/publishing-workflow.md) | Publish sequence, failure and retry flow | Operations and incident response clarity |
+| TODO | [deployment/cicd-pipelines.md](../../deployment/cicd-pipelines.md) | Pipeline stages and artifact flow | Faster onboarding for release process |
+| TODO | [reference/features/07-multi-tenancy-and-architecture.md](../../reference/features/07-multi-tenancy-and-architecture.md) | Feature-to-architecture relationship graph | Improves catalog scanning and concept linking |
+| TODO | [for-developers/publisher-architecture.md](../../for-developers/publisher-architecture.md) | Component dependency graph | Complements rendering-flow deep dive |
+| TODO | [for-developers/article-lifecycle.md](../../for-developers/article-lifecycle.md) | Lifecycle state machine | Faster understanding of content state transitions |
+
+### Priority 2 (strong value)
+
+| Status | Page | Suggested diagram(s) | Why it helps |
+| --- | --- | --- | --- |
+| DONE | [for-editors/publishing-modes.md](../../for-editors/publishing-modes.md) | Mode decision tree, scheduling timeline | Better editor decision support |
+| DONE | [for-editors/preload-and-caching.md](../../for-editors/preload-and-caching.md) | Cache layers flow, invalidation map | Reduces cache-related confusion |
+| DONE | [for-editors/authentication.md](../../for-editors/authentication.md) | Sign-in and role-check sequence | Easier support and troubleshooting |
+| DONE | [configuration/multi-tenancy.md](../../configuration/multi-tenancy.md) | Configuration precedence flow | Helps administrators debug tenant config |
+| DONE | [for-developers/ef-cross-provider-guide.md](../../for-developers/ef-cross-provider-guide.md) | Query compatibility decision flow | Makes provider-safe query choices explicit |
+| DONE | [for-developers/storage-provider-auto-detection.md](../../for-developers/storage-provider-auto-detection.md) | Provider auto-detection flowchart | Clearer diagnostics for provider selection |
+| DONE | [reference/features/08-deployment-and-infrastructure.md](../../reference/features/08-deployment-and-infrastructure.md) | Feature-to-deployment capability map | Better cross-reference for planning |
+
+### Priority 3 (nice to have)
+
+| Status | Page | Suggested diagram(s) | Why it helps |
+| --- | --- | --- | --- |
+| DONE | [configuration/ai/overview.md](../../configuration/ai/overview.md) | AI provider integration topology | Visual comparison of provider paths |
+| DONE | [for-developers/ai-integration.md](../../for-developers/ai-integration.md) | AI request/response architecture sequence | Faster developer adoption |
+| DONE | [for-editors/collaborative-editing.md](../../for-editors/collaborative-editing.md) | Collaboration session sequence | Explains locking and live updates |
+| DONE | [for-developers/api/overview.md](../../for-developers/api/overview.md) | API domain map | Improves API discovery |
+| DONE | [installation/docs-publisher.md](../../installation/docs-publisher.md) | DocsPublisher runtime topology | Clarifies deployment model |
+
+### Execution notes
+
+1. Start with Priority 1 pages and keep each page to one primary diagram plus one optional sequence diagram.
+2. Reuse the existing Mermaid init theme pattern used in architecture docs for visual consistency.
+3. Validate each batch with markdown diagnostics and link checks after edits.

@@ -10,7 +10,7 @@ status: Draft
 entities:
   - ai-assistant
   - code-editor
-  - page-editor
+  - visual-editor
   - ai-help-chat
 keywords:
   - ai assistant
@@ -167,7 +167,7 @@ SkyCMS combines cached results with explicit refresh requests, so a refresh is t
 ## Related guides
 
 - [Code Editor](./code-editor.md)
-- [Visual Editor](./page-editor.md)
+- [Visual Editor](./visual-editor.md)
 - [AI Provider Setup](./ai-provider-setup.md)
 - [AI Troubleshooting](./ai-troubleshooting.md)
 - [AI Configuration Overview](../configuration/ai/overview.md)

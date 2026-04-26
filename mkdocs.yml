@@ -63,11 +63,18 @@ markdown_extensions:
   - meta
   - tables
   - pymdownx.emoji:
+      # NOTE: These python/name tags are required by pymdownx for Material emoji support.
+      # Some generic YAML validators report unresolved-tag diagnostics for them.
+      # Workspace mitigation is configured in .vscode/settings.json via yaml.customTags.
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - assets/css/mkdocs-logo.css
+
+extra_javascript:
+  - assets/javascripts/vendor/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
 
 # Navigation structure
 nav:
@@ -107,11 +114,11 @@ nav:
     - Updating & Deleting: for-editors/updating-and-deleting-articles.md
     - Article Lifecycle: for-editors/article-lifecycle-reference.md
     - Editors:
-      - Page Editor: for-editors/page-editor.md
-      - Page Editor Quick Start: for-editors/page-editor-quickstart.md
-      - Toolbar Reference: for-editors/page-editor-toolbar-reference.md
-      - Visual Guide: for-editors/page-editor-visual-guide.md
-      - Technical Reference: for-editors/page-editor-technical-reference.md
+      - Visual Editor: for-editors/visual-editor.md
+      - Visual Editor Quick Start: for-editors/visual-editor-quickstart.md
+      - Visual Editor Toolbar Reference: for-editors/visual-editor-toolbar-reference.md
+      - Visual Editor Visual Guide: for-editors/visual-editor-visual-guide.md
+      - Visual Editor Technical Reference: for-editors/visual-editor-technical-reference.md
       - Page Builder: for-editors/page-builder.md
       - Layers Panel: for-editors/layers.md
       - Page Builder Quick Start: for-editors/page-builder-quickstart.md
@@ -129,6 +136,7 @@ nav:
     - Blogging: for-editors/blogging.md
     - File Manager: for-editors/file-manager.md
     - File Manager Quick Start: for-editors/file-manager-quickstart.md
+    - File Manager Toolbar Reference: for-editors/file-manager-toolbar-reference.md
     - Content Export & Import: for-editors/content-export-import.md
     - Preload & Caching: for-editors/preload-and-caching.md
     - Collaborative Editing: for-editors/collaborative-editing.md
@@ -178,6 +186,14 @@ nav:
     - Start Here: for-developers/index.md
     - Overview: for-developers/overview.md
     - Architecture: for-developers/architecture.md
+    - Architecture Diagram Catalog: for-developers/architecture-diagram-catalog.md
+    - Architecture Executive Summary: for-developers/architecture-executive-summary.md
+    - Core Platform Architecture: for-developers/architecture-core-platform.md
+    - Architecture Decision Matrix: for-developers/architecture-decision-matrix.md
+    - Architecture Mode Selection Worksheet: for-developers/architecture-mode-selection-worksheet.md
+    - Architecture Route Inventory Templates: for-developers/architecture-route-inventory-templates.md
+    - Architecture Review Checklist: for-developers/architecture-review-checklist.md
+    - Architecture Change Log: for-developers/architecture-change-log.md
     - Architecture Decision Records (ADRs): for-developers/architecture-decision-records.md
     - Middleware Pipeline: for-developers/middleware-pipeline.md
     - Editor Rendering Flow: for-developers/editor-rendering-flow.md

@@ -2,7 +2,6 @@
 <!-- Type: Overview -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/README.md -->
-<!-- markdownlint-disable -->
 
 # Sky.Cms.Api.Shared Documentation
 
@@ -24,12 +23,24 @@ The API follows a modular architecture organized by features:
 - **Models**: Data transfer objects and configuration classes
 - **Extensions**: Dependency injection setup and configuration
 
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+   Consumer[Browser or external site] --> Controller[Controllers]
+   Controller --> Features[Feature commands and queries]
+   Features --> Services[Services]
+   Services --> Models[DTOs and config models]
+   Features --> Extensions[DI and configuration extensions]
+```
+
 See [Architecture Overview](./architecture.md) for detailed information about the design patterns and structure.
 
 ## Features
 
 ### Contact Form API
+
 A complete contact form submission system with:
+
 - Email notifications to administrators
 - CAPTCHA validation (reCAPTCHA or Cloudflare Turnstile)
 - Rate limiting per IP address
@@ -44,17 +55,20 @@ See [Contact Form API Documentation](./contact-form.md) for complete endpoint de
 ### Installation & Configuration
 
 1. **Register the API services** in your host application's `Program.cs`:
+
    ```csharp
    builder.Services.AddContactApi(builder.Configuration);
    ```
 
 2. **Configure rate limiting** middleware:
+
    ```csharp
    app.UseRateLimiter();
    app.MapControllers();
    ```
 
 3. **Add configuration** to `appsettings.json`:
+
    ```json
    {
      "ContactApi": {
@@ -77,6 +91,7 @@ See [Configuration Guide](./configuration.md) for all configuration options and 
 ## API Endpoints
 
 ### Contact Form
+
 - **GET** `/_api/contact/skycms-contact.js` - Returns JavaScript library with embedded configuration
 - **POST** `/_api/contact/submit` - Submit a contact form
 
@@ -95,6 +110,7 @@ See [Contact Form API](./contact-form.md) for request/response schemas and examp
 ## Future Enhancements
 
 The API is designed to be extensible. Future endpoints may include:
+
 - Additional contact types or specialized forms
 - API authentication and authorization
 - More complex business logic operations

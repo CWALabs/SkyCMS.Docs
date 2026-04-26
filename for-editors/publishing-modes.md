@@ -9,11 +9,27 @@ SkyCMS supports multiple publishing workflows — from single-click direct publi
 ## Overview
 
 | Mode | Description | Best For |
-|------|-------------|----------|
+| --- | --- | --- |
 | **Direct publish** | Publish a single page immediately | Blog posts, quick updates |
 | **Scheduled publish** | Set a future date for automatic activation | Embargoed content, campaigns |
 | **Static site generation** | Generate HTML files and upload to blob storage | High-performance sites, CDN delivery |
 | **Bulk publish** | Publish multiple pages simultaneously with progress tracking | Site-wide template changes, migrations |
+
+## Choosing a publishing mode
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+   Need[Publishing need] --> Immediate{Need it live now?}
+   Immediate -- Yes --> Single{Single page or many pages?}
+   Single -- Single page --> Direct[Direct publish]
+   Single -- Many pages --> Bulk[Bulk publish]
+   Immediate -- No --> Scheduled{Timed activation needed?}
+   Scheduled -- Yes --> Timed[Scheduled publish]
+   Scheduled -- No --> Delivery{Optimizing for static delivery?}
+   Delivery -- Yes --> Static[Static site generation]
+   Delivery -- No --> Direct
+```
 
 ---
 

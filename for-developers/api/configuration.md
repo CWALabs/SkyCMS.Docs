@@ -2,7 +2,6 @@
 <!-- Type: Reference -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/Configuration.md -->
-<!-- markdownlint-disable -->
 
 # Configuration Guide - Sky.Cms.Api.Shared
 
@@ -30,6 +29,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 ## Configuration Options
 
 ### AdminEmail
+
 - **Type**: `string`
 - **Required**: Yes
 - **Description**: The email address where contact form submissions will be sent
@@ -37,6 +37,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 - **Environment Variable**: `ContactApi__AdminEmail`
 
 ### MaxMessageLength
+
 - **Type**: `int`
 - **Default**: `5000`
 - **Required**: No
@@ -45,6 +46,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 - **Environment Variable**: `ContactApi__MaxMessageLength`
 
 ### RequireCaptcha
+
 - **Type**: `bool`
 - **Default**: `false`
 - **Required**: No
@@ -53,6 +55,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 - **Environment Variable**: `ContactApi__RequireCaptcha`
 
 ### CaptchaProvider
+
 - **Type**: `string` (optional)
 - **Allowed Values**: `"turnstile"` or `"recaptcha"`
 - **Default**: Auto-detected based on available keys
@@ -64,6 +67,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 - **Environment Variable**: `ContactApi__CaptchaProvider`
 
 ### CaptchaSiteKey
+
 - **Type**: `string` (optional)
 - **Description**: Public CAPTCHA key
 - **For reCAPTCHA**: Your reCAPTCHA v3 site key
@@ -73,6 +77,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
   - `TURNSTILE_SITE_KEY` or `ContactApi__CaptchaSiteKey`
 
 ### CaptchaSecretKey
+
 - **Type**: `string` (optional)
 - **Description**: Private CAPTCHA key for server-side validation
 - **For reCAPTCHA**: Your reCAPTCHA secret key
@@ -161,6 +166,7 @@ $env:TURNSTILE_SECRET_KEY = "your-turnstile-secret-key"
 ```
 
 With environment variables:
+
 ```bash
 export TURNSTILE_SITE_KEY="your-site-key"
 export TURNSTILE_SECRET_KEY="your-secret-key"
@@ -178,6 +184,7 @@ Rate limiting is configured in `ContactApiServiceExtensions.cs` and is not user-
 - **Queue Limit**: 0 (excess requests are rejected immediately)
 
 To modify rate limits, you would need to change the code in:
+
 ```csharp
 public static void ConfigureContactApiRateLimiting(RateLimiterOptions options)
 {
@@ -213,6 +220,7 @@ dotnet user-secrets list
 For production deployments:
 
 **Azure App Service**: Use Application Settings in Azure Portal or Azure CLI
+
 ```bash
 az webapp config appsettings set --name myapp --resource-group mygroup \
   --settings ContactApi__AdminEmail="support@yourdomain.com" \
@@ -220,6 +228,7 @@ az webapp config appsettings set --name myapp --resource-group mygroup \
 ```
 
 **Docker/Kubernetes**: Use environment variables or secrets management systems
+
 ```yaml
 env:
   - name: ContactApi__AdminEmail
@@ -246,21 +255,25 @@ If configuration is invalid, check application logs for detailed error messages.
 ## Troubleshooting Configuration Issues
 
 ### "CAPTCHA validation failed"
+
 - Verify CAPTCHA keys are correctly configured
 - Ensure keys match the provider type (don't mix Turnstile and reCAPTCHA keys)
 - Check that `RequireCaptcha` is set to true
 
 ### "Email delivery failed"
+
 - Verify `AdminEmail` is a valid email address
 - Check email service configuration in the host application
 - Review email service logs for failures
 
 ### Rate limiting rejecting legitimate requests
+
 - Verify client IP address isn't being masked by a proxy
 - Check rate limit configuration if custom changes were made
 - Review logs for actual request rates
 
 ### No CAPTCHA appearing in client
+
 - Verify `CaptchaSiteKey` is configured and correct
 - Ensure the JavaScript library endpoint is accessible: `/_api/contact/skycms-contact.js`
 - Check browser console for JavaScript errors

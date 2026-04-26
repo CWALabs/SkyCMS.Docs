@@ -547,8 +547,8 @@ Assert.Throws<InvalidOperationException>(() =>
 - [Configuration Overview](./README.md) - All configuration options
 - [Database Configuration](./Database-Overview.md) - Database setup per tenant
 - [Storage Configuration](./Storage-Overview.md) - Storage setup per tenant
-- [Installation Overview](../Installation/README.md) - General installation
-- [Minimum Required Settings](../Installation/MinimumRequiredSettings.md) - Multi-tenant requirements
+- [Installation Overview](../../installation/overview.md) - General installation
+- [Minimum Required Settings](../../installation/minimum-required-settings.md) - Multi-tenant requirements
 
 ## Code References
 

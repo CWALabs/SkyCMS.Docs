@@ -24,6 +24,24 @@ SkyCMS now uses one tenant-aware AI configuration for multiple editor experience
 
 The current implementation is centered on a shared AI proxy and provider metadata layer. Administrators configure the provider once per tenant, then editors can use the configured provider across supported editing surfaces.
 
+## AI provider integration topology
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+   Admin[Administrator] --> Settings[Tenant AI settings]
+   Settings --> Proxy[AiProxyController]
+   Proxy --> Metadata[AiProviderMetadataResolver]
+   Proxy --> Catalog[AiProviderModelCatalogService]
+   Proxy --> Prefs[AiUserPreferenceService]
+   Proxy --> Github[GitHub Models]
+   Proxy --> OpenAI[OpenAI]
+   Proxy --> Azure[Azure OpenAI]
+   Proxy --> Local[Local OpenAI-compatible server]
+   Catalog --> Editors[Monaco, CKEditor, AI Help Chat]
+   Prefs --> Editors
+```
+
 ## Where to configure AI
 
 Open **Settings -> AI Provider** in the SkyCMS editor/admin UI.

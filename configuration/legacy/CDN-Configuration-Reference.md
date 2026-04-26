@@ -9,30 +9,33 @@ stage: stable
 read_time: 6
 ---
 
-# CDN Configuration Reference
-
 Complete reference for CDN cache purging configuration options, credentials, and settings for all supported providers.
 
 SkyCMS integrates with CDN providers to automatically purge caches after publishing, ensuring fresh content appears immediately. Configuration is managed through **Editor → Settings → CDN**.
 
 ## When to use this
+
 - You’re configuring CDN cache purging and need exact fields/permissions per provider.
 - You want least-privilege examples for Front Door, Cloudflare, CloudFront, or Sucuri.
 
 ## Why this matters
+
 - Wrong tokens/roles cause purge failures and stale content after publish.
 - Provider-specific scopes prevent over-permissioning and security risk.
 
 ## Key takeaways
+
 - Configure in Editor → Settings → CDN; validate with the built-in test before go-live.
 - Scope credentials narrowly (zone/distribution/profile) with purge-only rights.
 - Purge failures don’t block publish; they only affect cache freshness.
 
 ## Prerequisites
+
 - Active CDN property (zone/distribution/profile) and ability to create scoped credentials.
 - Paths/URLs you plan to purge and awareness of provider propagation times.
 
 ## Quick path
+
 1. Select provider and gather required IDs/tokens/roles (see tables below).
 2. Enter values in Settings → CDN and run **Save and test settings**.
 3. Publish content and confirm invalidations complete via provider logs.
@@ -48,7 +51,7 @@ SkyCMS integrates with CDN providers to automatically purge caches after publish
 
 ## Azure Front Door
 
-### Configuration Values
+### Azure Front Door Configuration Values
 
 | Setting | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -58,13 +61,13 @@ SkyCMS integrates with CDN providers to automatically purge caches after publish
 | **Profile Name** | String | ✅ Yes | Front Door profile name |
 | **Endpoint Name** | String | ✅ Yes | Endpoint name inside the profile to purge |
 
-### Required Permissions
+### Azure Front Door Required Permissions
 
 - **Recommended role**: CDN Endpoint Contributor (or Contributor on the profile)
 - Grants rights to purge endpoint cache
 - Can be assigned to service principal or managed identity
 
-### How to Find Values
+### Azure Front Door How to Find Values
 
 1. Azure Portal → **Front Door and CDN profiles** → select your profile
 2. Copy **Subscription ID** (shown in Essentials)
@@ -72,13 +75,13 @@ SkyCMS integrates with CDN providers to automatically purge caches after publish
 4. Copy **Profile name**
 5. Go to **Endpoints** tab → copy the **Endpoint name**
 
-### Configuration in SkyCMS
+### Azure Front Door Configuration in SkyCMS
 
 Navigate to **Editor → Settings → CDN → Microsoft** section and enter all required values.
 
-### Example Values
+### Azure Front Door Example Values
 
-```
+```text
 Is Azure Front Door: ✓ Enabled
 Subscription ID: a1b2c3d4-e5f6-7890-abcd-ef1234567890
 Resource Group: myResourceGroup
@@ -90,7 +93,7 @@ Endpoint Name: myEndpoint
 
 ## Cloudflare CDN
 
-### Configuration Values
+### Cloudflare Configuration Values
 
 | Setting | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -100,6 +103,7 @@ Endpoint Name: myEndpoint
 ### Required Permissions
 
 API Token must have:
+
 - **Permission**: Zone → Cache Purge → Purge
 - **Zone Resources**: Specific zone (recommended) or All zones
 
@@ -116,18 +120,18 @@ API Token must have:
 1. Cloudflare Dashboard → select your domain
 2. Right sidebar (Overview) → copy **Zone ID**
 
-### Configuration in SkyCMS
+### Cloudflare Configuration in SkyCMS
 
 Navigate to **Editor → Settings → CDN → Cloudflare** section and enter both values.
 
-### Example Values
+### Cloudflare Example Values
 
-```
+```text
 API Token: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8
 Zone ID: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 ```
 
-### Security Tips
+### Cloudflare Security Tips
 
 - Keep token scoped to a single zone for least privilege
 - Rotate token periodically and update SkyCMS
@@ -137,7 +141,7 @@ Zone ID: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 
 ## Amazon CloudFront
 
-### Configuration Values
+### Amazon CloudFront Configuration Values
 
 | Setting | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -181,20 +185,20 @@ Replace `<DISTRIBUTION_ID>` with your actual distribution ID:
 3. **Region**:
    - Use `us-east-1` (recommended for CloudFront API)
 
-### Configuration in SkyCMS
+### Amazon CloudFront Configuration in SkyCMS
 
 Navigate to **Editor → Settings → CDN → Amazon CloudFront CDN** section and enter all values.
 
-### Example Values
+### Amazon CloudFront Example Values
 
-```
+```text
 Distribution ID: E1234567890ABC
 AWS Access Key ID: AKIAIOSFODNN7EXAMPLE
 Secret Access Key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 AWS Region: us-east-1
 ```
 
-### Security Tips
+### Amazon CloudFront Security Tips
 
 - Scope IAM policy to specific distribution ARN
 - Rotate IAM keys periodically
@@ -205,7 +209,7 @@ AWS Region: us-east-1
 
 ## Sucuri CDN/WAF
 
-### Configuration Values
+### Sucuri Configuration Values
 
 | Setting | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -219,18 +223,18 @@ AWS Region: us-east-1
 3. Go to **API** (or Account → API)
 4. Copy **API Key** and **API Secret** for the site
 
-### Configuration in SkyCMS
+### Sucuri Configuration in SkyCMS
 
 Navigate to **Editor → Settings → CDN → Sucuri CDN/Firewall** section and enter both values.
 
-### Example Values
+### Sucuri Example Values
 
-```
+```text
 API Key: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
 API Secret: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
 ```
 
-### Security Tips
+### Sucuri Security Tips
 
 - Store credentials in secret manager
 - Rotate credentials periodically
@@ -242,7 +246,7 @@ API Secret: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
 
 For automated deployments, CDN configuration can be set via environment variables instead of the Setup Wizard:
 
-### Azure Front Door
+### Azure Front Door environment variables
 
 ```powershell
 $env:AzureFrontDoor__IsAzureFrontDoor = "true"
@@ -259,7 +263,7 @@ $env:Cloudflare__ApiToken = "your-api-token"
 $env:Cloudflare__ZoneId = "your-zone-id"
 ```
 
-### Amazon CloudFront
+### Amazon CloudFront environment variables
 
 ```powershell
 $env:CloudFront__DistributionId = "E1234567890ABC"
@@ -293,36 +297,43 @@ After entering configuration values in **Editor → Settings → CDN**:
 
 ## Troubleshooting
 
-### Azure Front Door
+### Azure Front Door troubleshooting
 
 **Error**: `AccessDenied` or `Forbidden`
+
 - **Solution**: Verify CDN Endpoint Contributor role is assigned to the identity
 - Check subscription ID, resource group, profile name, and endpoint name are correct
 
 **Error**: `ResourceNotFound`
+
 - **Solution**: Verify profile name and endpoint name match exactly (case-sensitive)
 
-### Cloudflare
+### Cloudflare troubleshooting
 
 **Error**: `Invalid API token`
+
 - **Solution**: Regenerate token with Zone → Cache Purge → Purge permission
 - Verify zone ID matches the domain being purged
 
 **Error**: `Zone not found`
+
 - **Solution**: Double-check zone ID from Cloudflare dashboard
 
-### CloudFront
+### CloudFront troubleshooting
 
 **Error**: `AccessDenied`
+
 - **Solution**: Verify IAM policy includes both `CreateInvalidation` and `GetInvalidation`
 - Check distribution ARN matches policy resource
 
 **Error**: `NoSuchDistribution`
+
 - **Solution**: Verify distribution ID is correct (check CloudFront console)
 
-### Sucuri
+### Sucuri troubleshooting
 
 **Error**: `Authentication failed`
+
 - **Solution**: Verify API key and secret are correct
 - Ensure site is active in Sucuri dashboard
 
@@ -346,6 +357,6 @@ After entering configuration values in **Editor → Settings → CDN**:
 - **[Amazon CloudFront CDN](./CDN-CloudFront.md)** - Detailed CloudFront guide
 - **[Sucuri CDN/WAF](./CDN-Sucuri.md)** - Detailed Sucuri guide
 - **[Configuration Overview](./README.md)** - Index of all configuration documentation
-- **[Publishing Overview](../Publishing-Overview.md)** - Publishing workflow with CDN cache purging
-- **[Troubleshooting Guide](../Troubleshooting.md)** - General troubleshooting
-- **[Main Documentation Hub](../index.md)** - Browse all documentation
+- **[Publishing Overview](../../deployment/publishing-workflow.md)** - Publishing workflow with CDN cache purging
+- **[Troubleshooting Guide](../../reference/troubleshooting.md)** - General troubleshooting
+- **[Main Documentation Hub](../../index.md)** - Browse all documentation

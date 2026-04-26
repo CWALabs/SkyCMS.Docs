@@ -115,8 +115,8 @@ Then call `Duplicator.create(element)` on each clone container in script.
 ## See Also
 
 - Templates guide: [../../for-site-builders/templates.md](../../for-site-builders/templates.md)
-- Visual Editor reference: [../../for-editors/page-editor.md](../../for-editors/page-editor.md)
-- Visual Editor technical reference: [../../for-editors/page-editor-technical-reference.md](../../for-editors/page-editor-technical-reference.md)
+- Visual Editor reference: [../../for-editors/visual-editor.md](../../for-editors/visual-editor.md)
+- Visual Editor technical reference: [../../for-editors/visual-editor-technical-reference.md](../../for-editors/visual-editor-technical-reference.md)
 - Duplicator code: [SkyCMS source on GitHub](https://github.com/CWALabs/SkyCMS/blob/main/Editor/wwwroot/lib/cosmos/dublicator/dublicator.js)
 - Image widget code: [SkyCMS source on GitHub](https://github.com/CWALabs/SkyCMS/blob/main/Editor/wwwroot/lib/cosmos/image-widget/image-widget.js)
 - CKEditor content CSS: [SkyCMS source on GitHub](https://github.com/CWALabs/SkyCMS/blob/main/Editor/wwwroot/lib/ckeditor/ckeditor5-content.css)

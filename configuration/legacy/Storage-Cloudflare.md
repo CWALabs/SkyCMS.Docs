@@ -127,7 +127,7 @@ For maximum performance, use Cloudflare R2 with origin-less hosting (no origin s
 
 1. Bind your R2 bucket to your domain in Cloudflare.
 2. Set up Cloudflare Rules for routing (index document, 404 handling, rewrites).
-3. See [Cloudflare Edge Hosting](../Installation/CloudflareEdgeHosting.md) for detailed setup.
+3. See [Cloudflare Edge Hosting](../../installation/cloudflare-edge-hosting.md) for detailed setup.
 
 ## Best practices
 
@@ -151,4 +151,4 @@ For maximum performance, use Cloudflare R2 with origin-less hosting (no origin s
 ## Further reading
 
 - [Cloudflare R2 Access Keys Guide](./Cloudflare-R2-AccessKeys.md) — Detailed step-by-step for obtaining credentials
-- [Cloudflare Edge Hosting](../Installation/CloudflareEdgeHosting.md) — Origin-less static website setup with R2 and Cloudflare Rules
+- [Cloudflare Edge Hosting](../../installation/cloudflare-edge-hosting.md) — Origin-less static website setup with R2 and Cloudflare Rules

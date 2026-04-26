@@ -13,11 +13,27 @@ SkyCMS supports four database providers through a single codebase: **MS SQL Serv
 `CosmosDbOptionsBuilder` uses a strategy pattern to automatically detect the database provider from a connection string:
 
 | Strategy | Detection Pattern | Provider |
-|----------|-------------------|----------|
+| --- | --- | --- |
 | `CosmosDbConfigurationStrategy` | `AccountEndpoint=` in connection string | Azure Cosmos DB |
 | `SqlServerConfigurationStrategy` | `Server=` or `Data Source=` (case-insensitive) | MS SQL Server |
 | `MySqlConfigurationStrategy` | `server=` (lowercase) with MySQL-specific patterns | MySQL |
 | `SqliteConfigurationStrategy` | `.db` file extension or SQLite-specific data source | SQLite |
+
+## Query compatibility decision flow
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+    Query[New LINQ query] --> Join{Uses cross-entity join?}
+    Join -- Yes --> Sequential[Rewrite to sequential queries and in-memory correlation]
+    Join -- No --> Cast{Uses inline casts in predicate?}
+    Cast -- Yes --> Precompute[Pre-compute values into locals before query]
+    Cast -- No --> Async{Uses async EF operations?}
+    Async -- No --> ConvertAsync[Convert to async execution]
+    Async -- Yes --> ProviderSafe[Provider-safe query shape]
+    Sequential --> ProviderSafe
+    Precompute --> ProviderSafe
+```
 
 The first matching strategy configures the `DbContextOptionsBuilder`. If no strategy matches, an exception is thrown.
 
@@ -84,7 +100,7 @@ This applies to all enum-to-int conversions and any similar cast expressions wit
 `ApplicationDbContext.OnConfiguring()` detects the provider and suppresses appropriate warnings:
 
 | Provider | Suppressed Warning | Reason |
-|----------|--------------------|--------|
+| --- | --- | --- |
 | **Cosmos DB** | `CosmosEventId.SyncNotSupported` | Cosmos requires async operations |
 | **Relational** | `RelationalEventId.PendingModelChangesWarning` | Multi-provider migrations coexist in the same assembly |
 

@@ -17,12 +17,29 @@ The primary cache is an in-memory cache (`ICacheService<T>`) that stores frequen
 **Cached data includes:**
 
 | Cache Key | Data | Invalidated By |
-|-----------|------|----------------|
+| --- | --- | --- |
 | `ArticleRedirects` | All redirect mappings | `RedirectCreatedEvent` |
 | `ArticleCatalog` | Site navigation catalog | `CatalogEntryUpdatedEvent`, `CatalogEntryDeletedEvent` |
 | `SiteMap` | XML sitemap | `ArticlePublishedEvent`, `ArticleUnpublishedEvent` |
 | Layouts | Page layout templates | `LayoutPublishedEvent` |
 | AI provider options | AI assistant config per tenant | Settings update (30-second TTL) |
+
+## Cache layers and invalidation flow
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+   ContentChange[Publish, unpublish, or settings change] --> Events[Domain events]
+   Events --> InMemory[In-memory cache invalidation]
+   Events --> StaticProxy[Static proxy refresh path]
+   Events --> CdnPurge[CDN purge]
+   Preload[Admin preload] --> InMemory
+   Preload --> CdnWarm[Optional CDN warming]
+   Visitor[Visitor request] --> InMemory
+   InMemory --> Db[(Database)]
+   Visitor --> Edge[CDN edge]
+   Edge --> StaticProxy
+```
 
 ### Cache Operations
 
@@ -48,7 +65,7 @@ When a CDN is configured (Cloudflare, Azure CDN, CloudFront, or Sucuri), publish
 Caches are invalidated automatically through domain events:
 
 | Event | Caches Cleared |
-|-------|---------------|
+| --- | --- |
 | `ArticlePublishedEvent` | Redirects, Catalog, SiteMap |
 | `ArticleUnpublishedEvent` | Redirects, Catalog, SiteMap |
 | `LayoutPublishedEvent` | Layouts, Catalog |

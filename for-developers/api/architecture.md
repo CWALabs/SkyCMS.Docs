@@ -2,7 +2,6 @@
 <!-- Type: Explanation -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/ARCHITECTURE.md -->
-<!-- markdownlint-disable -->
 
 # Sky.Cms.Api.Shared Architecture
 
@@ -22,6 +21,7 @@ The API separates read and write operations:
 - **Mediator**: Acts as a dispatcher between controllers and handlers
 
 This pattern provides:
+
 - Clear separation of concerns
 - Easier unit testing
 - Better maintainability as the API grows
@@ -30,19 +30,21 @@ This pattern provides:
 ### Service Layer Pattern
 
 Services encapsulate business logic and external integrations:
+
 - `IContactService` - Handles contact form processing and CAPTCHA validation
 - `ICaptchaValidator` - Abstract interface for CAPTCHA validation strategies
 
 ### Dependency Injection
 
 All dependencies are registered in `ContactApiServiceExtensions.cs`, making the code:
+
 - Loosely coupled
 - Testable with mock implementations
 - Easy to swap implementations (e.g., different CAPTCHA providers)
 
 ## Directory Structure
 
-```
+```text
 Sky.Cms.Api.Shared/
 ├── Controllers/
 │   └── ContactApiController.cs          # HTTP API endpoints
@@ -81,7 +83,7 @@ Sky.Cms.Api.Shared/
 
 ### Contact Form Submission
 
-```
+```text
 1. HTTP POST /_api/contact/submit
    ↓
 2. ContactApiController.Submit()
@@ -104,7 +106,7 @@ Sky.Cms.Api.Shared/
 
 ### CAPTCHA Validation
 
-```
+```text
 1. Client requests CAPTCHA token validation
    ↓
 2. Dispatch ValidateCaptchaQuery via IMediator
@@ -120,18 +122,21 @@ Sky.Cms.Api.Shared/
 ## Key Components
 
 ### ContactApiController
+
 - Exposes HTTP endpoints
 - Handles anti-forgery token management
 - Coordinates CQRS dispatch
 - Returns standardized responses
 
 ### ContactService
+
 - Implements core business logic
 - Integrates with email service (ICosmosEmailSender)
 - Supports multiple CAPTCHA providers
 - Includes comprehensive error handling
 
 ### Feature Handlers
+
 - **SubmitContactFormHandler**: Processes contact form submissions
 - **ValidateCaptchaHandler**: Validates CAPTCHA tokens
 
@@ -149,6 +154,7 @@ Adding new endpoints is straightforward:
 ## Configuration-Driven Behavior
 
 The API uses configuration (via `ContactApiConfig`) to control behavior:
+
 - **CAPTCHA Provider**: Auto-detected from configuration
 - **Email Target**: Configurable admin email
 - **Message Length**: Configurable via `MaxMessageLength`
@@ -168,6 +174,7 @@ This makes the API flexible without code changes.
 ## Error Handling
 
 Errors are handled at multiple levels:
+
 1. **Controller level**: Invalid model state, framework errors
 2. **Handler level**: Validation and processing errors
 3. **Service level**: External API failures, email sending failures
@@ -177,11 +184,13 @@ All errors are logged with contextual information (IP address, email, etc.) for 
 ## Logging
 
 Comprehensive logging is implemented using standard `ILogger<T>`:
+
 - `Information`: Successful operations
 - `Warning`: Validation failures, external API issues
 - `Error`: Service failures, exceptions
 
 Access logs include:
+
 - Submitted email address
 - Remote IP address
 - Timestamp

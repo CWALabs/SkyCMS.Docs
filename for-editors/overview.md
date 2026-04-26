@@ -30,7 +30,7 @@ Quick reference: [Article Lifecycle Quick Reference](./article-lifecycle-referen
 
 ## Tooling Map
 
-- [Visual Editor](./page-editor.md): inline editing in page context.
+- [Visual Editor](./visual-editor.md): inline editing in page context.
 - [Page Builder](./page-builder.md): visual drag-and-drop page construction.
 - [Code Editor](./code-editor.md): precise HTML/CSS/JavaScript editing.
 - [AI Assistant](./ai-assistant.md): AI help in Monaco, CKEditor, and standalone help chat.

@@ -447,9 +447,9 @@ SkyCMS includes a test configuration method in the setup wizard:
 
 ## See Also
 
-- [Email Provider Overview](./Email-Overview.md) - Provider comparison
-- [Email SendGrid Setup](./Email-SendGrid.md) - SendGrid-specific guide
-- [Email Azure Communication Setup](./Email-AzureCommunicationServices.md) - Azure setup
-- [Email SMTP Setup](./Email-SMTP.md) - SMTP provider guide
-- [Email No-Op Setup](./Email-None.md) - Development provider
-- [Installation Guide](../Installation/MinimumRequiredSettings.md) - Configuration in setup
+- **[Email Provider Overview](./Email-Overview.md)** - Provider comparison
+- **[SendGrid Email](./Email-SendGrid.md)** - SendGrid setup guide
+- **[Azure Communication Services Email](./Email-AzureCommunicationServices.md)** - Azure setup guide
+- **[SMTP Email](./Email-SMTP.md)** - SMTP setup guide
+- **[No-Op Email](./Email-None.md)** - Development/test provider
+- **[Installation Guide](../../installation/minimum-required-settings.md)** - Configuration in setup

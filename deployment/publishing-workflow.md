@@ -2,31 +2,34 @@
 <!-- Type: Explanation -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Publishing-Overview.md -->
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable MD013 MD051 -->
 # Publishing in SkyCMS
 
 Publishing is the process of making content live on your website. SkyCMS supports multiple publishing modes and workflows to fit different content strategies and team structures.
 
-
-
 ## When to use this
+
 - You need to choose a publishing mode (Direct, Staged, Static Generation, Git-Based) for your team and hosting model.
 - You want a concise view of workflows, approvals, and rollback options before configuring environments.
 
 ## Why this matters
+
 - Picking the right mode balances speed, safety, and operational overhead.
 - Aligns editors, reviewers, and DevOps on environments and promotion paths to avoid production mistakes.
 
 ## Key takeaways
+
 - Direct is fastest but riskiest; Staged/Git-based add review and rollback; Static suits edge/static hosting.
 - CDN purge issues don’t block publication; they only affect cache freshness.
 - Keep Editor/Staging/Production URLs distinct to avoid cross-environment confusion.
 
 ## Prerequisites
+
 - Defined environments (staging/production) and access to storage/CDN where content is deployed.
 - Decision on approval requirements and who can publish/promote.
 
 ## Quick path
+
 1. Pick a mode (Direct, Staged, Static, or Git-Based) based on team/process.
 2. Configure targets and approvals as shown in each mode’s section.
 3. Validate end-to-end: publish, verify on target, and confirm CDN cache behavior.
@@ -46,8 +49,8 @@ Publishing is the process of making content live on your website. SkyCMS support
 - [Publishing Modes](#publishing-modes)
 - [Publishing Workflows](#publishing-workflows)
 - [Publishing Steps](#publishing-steps)
-- [Scheduling & Automation](#scheduling--automation)
-- [Unpublishing & Archiving](#unpublishing--archiving)
+- [Scheduling & Automation](#scheduling-automation)
+- [Unpublishing & Archiving](#unpublishing-archiving)
 - [Best Practices](#best-practices)
 
 ---
@@ -59,13 +62,13 @@ Publishing makes content visible to your website visitors. Before publishing, co
 ### Content States {#content-states}
 
 | State | Visibility | Audience | Can Edit |
-|-------|-----------|----------|----------|
+| --- | --- | --- | --- |
 | **Draft** | Private | Editors only | Yes |
 | **Scheduled** | Private | Editors only | No |
 | **Published** | Public | All visitors | Depends |
 | **Archived** | Private | Editors only | No |
 
-### Publishing Modes {#publishing-modes}
+### Publishing Mode Summary {#publishing-mode-summary}
 
 SkyCMS supports different publishing modes to accommodate various hosting and workflow needs:
 
@@ -78,32 +81,50 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 ## Publishing Modes {#publishing-modes}
 
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+   TeamNeeds[Team requirements] --> Decision{Choose publishing mode}
+   Decision --> Direct[Direct publishing]
+   Decision --> Staged[Staged publishing]
+   Decision --> StaticGen[Static generation]
+   Decision --> GitBased[Git-based publishing]
 
+   Direct --> OutcomeDirect[Fastest path, lowest process overhead]
+   Staged --> OutcomeStaged[Review gates and safer promotion]
+   StaticGen --> OutcomeStatic[Edge-friendly static deployment]
+   GitBased --> OutcomeGit[Full Git history and CI/CD integration]
+```
 
 ### 1. Direct Publishing {#direct-publishing}
 
 **How it works:**
+
 - Content is published directly to live website
 - Changes appear immediately
 - No intermediate steps
 
 **When to use:**
+
 - Small teams with trusted editors
 - Rapid content updates needed
 - Real-time content (news, breaking announcements)
 - Development/testing environments
 
 **Advantages:**
+
 - Fast: Changes live in seconds
 - Simple: No complex workflows
 - Immediate: No waiting for CI/CD
 
 **Disadvantages:**
+
 - Risky: Mistakes immediately visible
 - No review process: Can't vet changes before publishing
 - No rollback: Errors require immediate fixing
 
 **Configuration:**
+
 ```json
 {
   "Publishing": {
@@ -118,30 +139,35 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ### 2. Staged Publishing {#staged-publishing}
 
 **How it works:**
+
 - Content published to staging environment first
 - Review, test, and verify on staging
 - Promote to production when ready
 - Rollback possible if issues found
 
 **When to use:**
+
 - Teams requiring review before publishing
 - Complex content with dependencies
 - High-visibility websites
 - Regulated industries (finance, healthcare)
 
 **Advantages:**
+
 - Safe: Review before going live
 - Testable: Verify on staging first
 - Reversible: Rollback if needed
 - Auditable: Track all changes
 
 **Disadvantages:**
+
 - Slower: Additional approval steps
 - Complex: Multiple environments to manage
 - Overhead: More process required
 
 **Workflow:**
-```
+
+```text
 1. Edit in Editor (Draft)
    ↓
 2. Request Publication (Pending Review)
@@ -156,6 +182,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ```
 
 **Configuration:**
+
 ```json
 {
   "Publishing": {
@@ -172,12 +199,14 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ### 3. Static Generation {#static-generation}
 
 **How it works:**
+
 - Content generates static HTML files
 - Static files hosted on any web server or CDN
 - Fast, secure, scalable deployment
 - Typical JAMstack approach
 
 **When to use:**
+
 - High-traffic sites
 - Security-critical content
 - CDN distribution needed
@@ -185,6 +214,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 - Migrating from JAMstack
 
 **Advantages:**
+
 - Fast: Static files are very fast
 - Secure: No server-side processing
 - Scalable: Minimal server resources
@@ -192,13 +222,15 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 - Migrates to existing static host easily
 
 **Disadvantages:**
+
 - Build time: Generation takes seconds/minutes
 - Complexity: Requires build process
 - Limitations: Some dynamic features not available
 - Stale content: Needs regeneration for updates
 
 **Workflow:**
-```
+
+```text
 1. Edit in Editor
    ↓
 2. Publish (triggers generation)
@@ -211,6 +243,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ```
 
 **Configuration:**
+
 ```json
 {
   "Publishing": {
@@ -228,12 +261,14 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ### 4. Git-Based Publishing {#git-based-publishing}
 
 **How it works:**
+
 - Content stored as files in Git repository
 - Publishing commits changes to repository
 - CI/CD pipeline deploys from repository
 - Familiar workflow for developers
 
 **When to use:**
+
 - Developer-focused teams
 - Existing CI/CD pipelines
 - Migrating from Git-based systems
@@ -241,6 +276,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 - Content in source repository
 
 **Advantages:**
+
 - Version control: Full Git history
 - CI/CD: Integrate with existing pipelines
 - Familiar: Git workflows
@@ -248,13 +284,15 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 - Reversible: Easy rollback via Git
 
 **Disadvantages:**
+
 - Complexity: Requires Git understanding
 - Overhead: More process
 - Limited UI: Less visual preview
 - Technical: Requires developer involvement
 
 **Workflow:**
-```
+
+```text
 1. Edit in SkyCMS Editor
    ↓
 2. Publish → Commit to Git
@@ -267,6 +305,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 ```
 
 **Configuration:**
+
 ```json
 {
   "Publishing": {
@@ -283,11 +322,24 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 ## Publishing Workflows {#publishing-workflows}
 
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+   participant E as Editor
+   participant R as Reviewer
+   participant S as Staging
+   participant P as Production
+   E->>S: Publish candidate content
+   R->>S: Validate and approve
+   S->>P: Promote approved release
+   P-->>E: Publish confirmation
+```
+
 ### Simple Workflow (Small Teams) {#simple-workflow}
 
 **For:** Single editor, rapid updates, no review needed
 
-```
+```text
 1. Edit Page/Post
 2. Click "Publish"
 3. Content is live
@@ -303,7 +355,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 **For:** Multiple editors, need review, want quality control
 
-```
+```text
 1. Editor creates content (Draft)
 2. Editor requests publication
 3. Reviewer checks on Staging
@@ -324,7 +376,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 **For:** Large teams, complex dependencies, regulated environments
 
-```
+```text
 1. Author writes content (Draft)
 2. Editor reviews and requests changes
 3. Author updates content
@@ -425,7 +477,7 @@ SkyCMS supports different publishing modes to accommodate various hosting and wo
 
 ---
 
-## Scheduling & Automation {#scheduling--automation}
+## Scheduling & Automation
 
 ### Scheduled Publishing
 
@@ -439,17 +491,38 @@ Publish content at a specific future date and time:
 - **How do I get approvals before go-live?** Use Staged Publishing or Git-Based workflows with review on staging before promoting to production.
 - **What if CDN purge fails?** Content is already in storage; retry purge or wait for TTL. Publishing isn’t blocked by purge failures.
 
-<script type="application/ld+json">
+```json
 {
    "@context": "https://schema.org",
    "@type": "FAQPage",
    "mainEntity": [
-      {"@type": "Question", "name": "Which mode is best for fast edits?", "acceptedAnswer": {"@type": "Answer", "text": "Direct Publishing is fastest; use it for low-risk content with small trusted teams."}},
-      {"@type": "Question", "name": "How do I get approvals before go-live?", "acceptedAnswer": {"@type": "Answer", "text": "Use Staged Publishing or Git-Based workflows so reviewers can validate on staging before promoting to production."}},
-      {"@type": "Question", "name": "What if CDN purge fails?", "acceptedAnswer": {"@type": "Answer", "text": "Publishing still writes to storage. Retry the CDN purge or wait for TTL; the site will catch up once cache clears."}}
+      {
+         "@type": "Question",
+         "name": "Which mode is best for fast edits?",
+         "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direct Publishing is fastest; use it for low-risk content with small trusted teams."
+         }
+      },
+      {
+         "@type": "Question",
+         "name": "How do I get approvals before go-live?",
+         "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use Staged Publishing or Git-Based workflows so reviewers can validate on staging before promoting to production."
+         }
+      },
+      {
+         "@type": "Question",
+         "name": "What if CDN purge fails?",
+         "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Publishing still writes to storage. Retry the CDN purge or wait for TTL; the site will catch up once cache clears."
+         }
+      }
    ]
 }
-</script>
+```
 
 1. **Set Publish Date** - Choose when content should go live
 2. **Verify Timezone** - Ensure correct timezone selected
@@ -457,6 +530,7 @@ Publish content at a specific future date and time:
 4. **Set & Forget** - SkyCMS publishes automatically
 
 **Use Cases:**
+
 - Blog posts at specific time
 - News announcements at launch
 - Promotional content on schedule
@@ -464,7 +538,8 @@ Publish content at a specific future date and time:
 - Content drip campaigns
 
 **Configuration:**
-```
+
+```text
 Publishing Date: December 25, 2025
 Publishing Time: 10:00 AM
 Timezone: Eastern Time (US)
@@ -474,13 +549,14 @@ Timezone: Eastern Time (US)
 
 Automatically republish content on schedule:
 
-```
+```text
 Publish: Every Monday at 9:00 AM
 Frequency: Weekly
 Keep: Previous version archived
 ```
 
 **Use Cases:**
+
 - Weekly blog features
 - Regular newsletter content
 - Rotating promotions
@@ -491,7 +567,7 @@ Keep: Previous version archived
 
 Publish based on conditions:
 
-```
+```text
 If URL contains "/summer/"
   Then set visibility to public
   And add category "Seasonal"
@@ -500,7 +576,7 @@ If URL contains "/summer/"
 
 ---
 
-## Unpublishing & Archiving {#unpublishing--archiving}
+## Unpublishing & Archiving
 
 ### Unpublishing Content
 
@@ -534,6 +610,7 @@ When replacing or removing pages, set up redirects:
 4. **Save** - Redirect now active
 
 **Best Practices:**
+
 - Always redirect old URLs
 - Use permanent (301) for content moves
 - Use temporary (302) for short-term changes

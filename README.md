@@ -15,14 +15,14 @@ The site is organized by **audience role** so readers find content relevant to t
 
 | Folder | Audience | Topics | Description |
 | -------- | ---------- | -------- | ------------- |
-| [getting-started/](getting-started/) | Everyone | 3 | What is SkyCMS, key concepts, quick start |
+| [getting-started/](getting-started/quick-start.md) | Everyone | 3 | What is SkyCMS, key concepts, quick start |
 | [for-editors/](for-editors/) | Editors, Authors | 30 | Content creation, all four editors, blogging, publishing, collaboration, file management |
 | [for-site-builders/](for-site-builders/) | Site Builders | 7 | Layouts, templates, pages, widgets, style guides |
 | [for-developers/](for-developers/) | Developers | 18 | Architecture, APIs, multi-tenancy, EF Core cross-provider, middleware pipeline |
-| [installation/](installation/) | Administrators | 14 | Setup wizard (6 steps), Azure/AWS/Docker/Cloudflare deployment, local dev |
-| [configuration/](configuration/) | Administrators | 7+ | Database, storage, CDN, email providers, multi-tenancy, proxy settings |
-| [deployment/](deployment/) | DevOps | 8 | Cloud hosting, CI/CD pipelines, Docker, demo deployment, licensing |
-| [reference/](reference/) | All | 9 | Feature catalog, changelog, FAQ, glossary, troubleshooting, templates |
+| [installation/](installation/overview.md) | Administrators | 14 | Setup wizard (6 steps), Azure/AWS/Docker/Cloudflare deployment, local dev |
+| [configuration/](configuration/overview.md) | Administrators | 7+ | Database, storage, CDN, email providers, multi-tenancy, proxy settings |
+| [deployment/](deployment/overview.md) | DevOps | 8 | Cloud hosting, CI/CD pipelines, Docker, demo deployment, licensing |
+| [reference/](reference/features/index.md) | All | 9 | Feature catalog, changelog, FAQ, glossary, troubleshooting, templates |
 
 ### Catalog Overview
 
@@ -45,7 +45,7 @@ The [Feature Catalog](reference/features/index.md) provides a comprehensive inve
 - [Developer Index](for-developers/index.md)
 - [Architecture Overview](for-developers/architecture.md)
 - [Website Launch Workflow](for-developers/website-launch/index.md)
-- [API Reference](for-developers/api/)
+- [API Reference](for-developers/api/overview.md)
 - [AI Context Pack](reference/ai-context-pack.md)
 
 ### AI Ingestion Shortcut
@@ -154,6 +154,43 @@ When adding or updating documentation for a SkyCMS feature, also update the corr
 - **Use tables for structured data** — Configuration options, parameters, comparison matrices.
 - **Include code examples** — Use fenced code blocks with language identifiers (`csharp`, `bash`, `powershell`, `yaml`, `json`).
 - **Add "See Also" sections** — End pages with links to related documentation.
+
+---
+
+## Known Editor Diagnostics
+
+- `mkdocs.yml` uses MkDocs Material/PyMdown custom YAML tags for emoji configuration:
+
+  - `!!python/name:material.extensions.emoji.twemoji`
+  - `!!python/name:material.extensions.emoji.to_svg`
+
+- Some generic YAML validators report unresolved-tag warnings for these lines.
+- This is expected and does not indicate a build or runtime issue for MkDocs.
+- Workspace mitigation is configured in `.vscode/settings.json` using `yaml.customTags`.
+
+### Mermaid runtime dependency policy
+
+- Mermaid rendering uses vendored local assets, not a CDN.
+- Runtime script path: `assets/javascripts/vendor/mermaid.min.js`
+- Initializer path: `assets/javascripts/mermaid-init.js`
+- `mkdocs.yml` references these local files via `extra_javascript`.
+
+### Mermaid authoring conventions
+
+- Prefer one primary diagram per page section, with one optional secondary diagram when it explains a materially different flow.
+- Use the shared theme init block already established in the docs so diagrams stay visually consistent.
+- Prefer `flowchart` for topology, ownership, or decision maps; `sequenceDiagram` for request, event, or collaboration timelines; `stateDiagram-v2` for lifecycle behavior.
+- Indent Mermaid blocks with spaces, not tabs, to avoid markdownlint `MD010` failures.
+- Add or update entries in [for-developers/architecture-diagram-catalog.md](for-developers/architecture-diagram-catalog.md) when a Mermaid diagram becomes a durable navigation aid.
+- Validate changes with diagnostics and `./.tmp-link-check.ps1` after editing pages that add new anchors or catalog links.
+
+Example theme preamble:
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+  Start[Author diagram] --> Catalog[Update diagram catalog if needed]
+```
 
 ---
 

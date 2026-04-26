@@ -2,7 +2,6 @@
 <!-- Type: Quick Start -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/Tutorial.md -->
-<!-- markdownlint-disable -->
 
 # Tutorial: Adding a Contact Form to Your Website
 
@@ -18,7 +17,7 @@ This step-by-step tutorial walks you through adding a working contact form to yo
 
 Before adding a contact form, ensure the Editor has email configured so submissions can be delivered.
 
-### In the Editor Admin Panel:
+### In the Editor Admin Panel
 
 1. Log in to your SkyCMS Editor
 2. Go to Settings → Email Configuration
@@ -31,7 +30,7 @@ Before adding a contact form, ensure the Editor has email configured so submissi
 
 5. Save the configuration
 
-### Or Set Environment Variables:
+### Or Set Environment Variables
 
 If you prefer environment variables, set one of these before starting the Editor:
 
@@ -366,24 +365,24 @@ For production websites, it's recommended to add CAPTCHA protection. The API sup
 
 ### Using Cloudflare Turnstile
 
-1. Go to https://dash.cloudflare.com/ and create a free account
+1. Go to <https://dash.cloudflare.com/> and create a free account
 2. Create a Turnstile site to get your **Site Key** and **Secret Key**
 3. In the SkyCMS Editor, add database settings:
 
 | Group | Name | Value |
-|-------|------|-------|
+| --- | --- | --- |
 | CAPTCHA | Config | `{"Provider":"turnstile","SiteKey":"your-site-key","SecretKey":"your-secret-key","RequireCaptcha":true}` |
 
 The JavaScript library will automatically load Turnstile and validate the CAPTCHA.
 
 ### Using Google reCAPTCHA v3
 
-1. Go to https://www.google.com/recaptcha/admin and sign in with your Google account
+1. Go to <https://www.google.com/recaptcha/admin> and sign in with your Google account
 2. Create a new reCAPTCHA v3 site to get your **Site Key** and **Secret Key**
 3. In the SkyCMS Editor, add database settings:
 
 | Group | Name | Value |
-|-------|------|-------|
+| --- | --- | --- |
 | CAPTCHA | Config | `{"Provider":"recaptcha","SiteKey":"your-site-key","SecretKey":"your-secret-key","RequireCaptcha":true}` |
 
 The JavaScript library will automatically load reCAPTCHA and validate.
@@ -421,11 +420,13 @@ Just copy the form code into any `.html` file on your website.
 Include the form in your server templates:
 
 **ASP.NET Razor**:
+
 ```razor
 @await Html.PartialAsync("ContactForm")
 ```
 
 **PHP**:
+
 ```php
 <?php include 'contact-form.php'; ?>
 ```
@@ -435,6 +436,7 @@ Include the form in your server templates:
 Create a component that loads the library:
 
 **React**:
+
 ```jsx
 useEffect(() => {
     const script = document.createElement('script');
@@ -451,6 +453,7 @@ useEffect(() => {
 ```
 
 **Vue**:
+
 ```javascript
 mounted() {
     const script = document.createElement('script');
@@ -471,16 +474,19 @@ mounted() {
 ### Form submits but emails aren't received
 
 **Check email configuration**:
+
 1. Log into the Editor
 2. Go to Settings → Email
 3. Verify SendGrid, Azure, or SMTP settings are correct
 4. Test sending an email from the admin panel
 
 **Check spam folder**:
+
 - Emails might be filtered as spam
 - Add the Editor's sender email to your contacts
 
 **Check browser console**:
+
 - Open DevTools (F12)
 - Look for JavaScript errors
 - The error details will help diagnose the issue
@@ -500,6 +506,7 @@ mounted() {
 ### Rate limit errors
 
 This means the form was submitted more than 3 times in 5 minutes from your IP:
+
 - Wait 5 minutes before trying again
 - Check if someone is spam-testing your form
 

@@ -712,7 +712,7 @@ your new website to the world.
 
 **GreenLeaf Consulting** - 40% increase in qualified leads  
 See how we transformed their outdated website into a lead 
-generation machine. [Read Case Study →](/case-studies/greenleaf)
+generation machine. [Read Case Study →](https://example.com/case-studies/greenleaf)
 ```
 
 #### Step 8: Add Pricing (Optional)
@@ -735,7 +735,7 @@ If you show pricing:
 
 All packages include responsive design, SEO setup, and training.
 
-[Get a Custom Quote →](/contact)
+[Get a Custom Quote →](https://example.com/contact)
 ```
 
 **Example (Starting Price):**
@@ -750,7 +750,7 @@ Every project includes discovery, design, development, testing,
 and launch support. Contact us for a detailed quote based on 
 your specific needs.
 
-[Schedule a Consultation →](/contact)
+[Schedule a Consultation →](https://example.com/contact)
 ```
 
 #### Step 9: Add Call-to-Action
@@ -766,7 +766,7 @@ your specific needs.
 Let's discuss your project and create a website that helps 
 your business grow.
 
-[Get a Free Consultation →](/contact) [View Our Portfolio →](/portfolio)
+[Get a Free Consultation →](https://example.com/contact) [View Our Portfolio →](https://example.com/portfolio)
 ```
 
 #### Step 10: Save, Preview, and Publish
@@ -1160,11 +1160,11 @@ Internal links connect your pages and improve SEO.
 **Example - Adding Links to About Page:**
 
 ```markdown
-We specialize in [web design](/services/web-design), 
-[SEO](/services/seo), and [digital marketing](/services/marketing). 
+We specialize in [web design](https://example.com/services/web-design), 
+[SEO](https://example.com/services/seo), and [digital marketing](https://example.com/services/marketing). 
 Our team has helped over 150 businesses grow their online presence.
 
-Ready to work together? [Get in touch](/contact) to discuss your project.
+Ready to work together? [Get in touch](https://example.com/contact) to discuss your project.
 ```
 
 ### Adding Internal Links in SkyCMS
@@ -1406,7 +1406,7 @@ See: Monthly Maintenance Tasks *(coming soon)*
 ### SkyCMS Documentation
 
 - [Creating Pages](../../getting-started/quick-start.md)
-- [Visual Editor Guide](../../for-editors/page-editor.md)
+- [Visual Editor Guide](../../for-editors/visual-editor.md)
 - [Templates Guide](../../for-site-builders/templates.md)
 - [File Manager](../../for-editors/file-manager.md)
 - [SkyCMS Official Docs](https://www.moonrise.net/cosmos/documentation/)

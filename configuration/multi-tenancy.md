@@ -17,6 +17,21 @@ Use this guide when you need to:
 
 SkyCMS resolves tenant context from incoming host/domain information and uses that context for settings, content access, and publishing behavior.
 
+## Configuration precedence and request flow
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+  Request[Incoming request] --> Headers{Host source}
+  Headers -- x-origin-hostname --> Provider[IDynamicConfigurationProvider]
+  Headers -- Host --> Provider
+  Provider --> Mapping[Domain-to-tenant mapping]
+  Mapping --> Config[Per-tenant configuration]
+  Config --> Runtime[Database, storage, publish, and cache behavior]
+  Env[Environment variables and secrets] --> Config
+  AppSettings[appsettings files] --> Config
+```
+
 ## Required settings
 
 - tenant domain entries,

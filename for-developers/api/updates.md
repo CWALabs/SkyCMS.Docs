@@ -2,7 +2,6 @@
 <!-- Type: Reference -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/Api/UPDATES.md -->
-<!-- markdownlint-disable -->
 
 # Sky.Cms.Api.Shared Integration Updates
 
@@ -26,17 +25,20 @@ The Contact Form API is now fully integrated into the SkyCMS Editor web applicat
 The email configuration has been centralized and made multi-tenant aware:
 
 **Before**:
+
 - Email settings scattered across multiple locations
 - EmailSettings and IEmailConfigurationService were in Sky.Editor
 
 **After**:
+
 - Unified `IEmailConfigurationService` in `Cosmos.Common`
 - Shared `EmailSettings` model available to all projects
 - `TenantAwareEmailSender` dynamically selects email provider at runtime
 - Each tenant can have different email configurations
 
 **Files Changed**:
-```
+
+```text
 Common/Services/Email/
 ├── IEmailConfigurationService.cs  (NEW - moved from Editor)
 └── EmailSettings.cs               (NEW - moved from Editor)
@@ -76,7 +78,7 @@ options.AddFixedWindowLimiter("contact-form", opt =>
 
 Comprehensive unit tests for the integrated API:
 
-```
+```text
 Tests/
 ├── Controllers/ContactApiControllerTests.cs
 ├── Features/ContactForm/SubmitContactFormHandlerTests.cs
@@ -84,6 +86,7 @@ Tests/
 ```
 
 **Test Coverage**:
+
 - Controller endpoints
 - Email configuration fallback
 - CAPTCHA integration
@@ -95,11 +98,13 @@ Tests/
 ### New Documentation Files
 
 1. **[Integration-Guide.md](./integration-guide.md)**
+
    - How to integrate the API into your website
    - Configuration options
    - Troubleshooting
 
 2. **[Tutorial.md](./tutorial.md)**
+
    - Step-by-step guide to adding a contact form
    - Complete working examples
    - Email setup instructions
@@ -108,10 +113,12 @@ Tests/
 ### Updated Documentation Files
 
 1. **[README.md](./overview.md)**
+
    - Added links to new Tutorial and Integration Guide
    - Updated "For Developers" section
 
 2. **[ContactForm.md](./contact-form.md)**
+
    - Complete reference documentation
    - Already comprehensive; no changes needed
 
@@ -120,6 +127,7 @@ Tests/
 ### For Website Developers
 
 1. **Add a contact form to your website**:
+
    ```html
    <form id="contactForm">
      <input type="text" name="name" required>
@@ -135,10 +143,12 @@ Tests/
    ```
 
 2. **Configure email**:
+
    - In Editor admin panel, configure email service
    - Optionally set `ContactApi.AdminEmail` in database settings
 
 3. **Optional: Enable CAPTCHA**:
+
    - Get Turnstile or reCAPTCHA keys
    - Add CAPTCHA configuration to database settings
 
@@ -153,7 +163,7 @@ Tests/
 
 ### Email Configuration Flow
 
-```
+```text
 Program.cs (Editor)
     ↓
 Registers IEmailConfigurationService
@@ -175,7 +185,7 @@ Used by:
 
 ### Contact Form Request Flow
 
-```
+```text
 Browser
     ↓
 GET /_api/contact/skycms-contact.js
@@ -245,12 +255,14 @@ VALUES
 Each tenant can have different email configurations:
 
 **Tenant A**:
+
 - Uses SendGrid with key A
-- Admin email: support-a@domaina.com
+- Admin email: `support-a@domaina.com`
 
 **Tenant B**:
+
 - Uses Azure Communication Services
-- Admin email: support-b@domainb.com
+- Admin email: `support-b@domainb.com`
 
 The `TenantAwareEmailSender` automatically selects the correct provider based on the current tenant's database context.
 
@@ -267,6 +279,7 @@ dotnet test Tests/Controllers/ContactApiControllerTests.cs
 ```
 
 **Test Results Expected**:
+
 - ✓ Controller tests (form submission, script generation)
 - ✓ Handler tests (email sending, fallback behavior)
 - ✓ Model tests (configuration parsing)
@@ -306,6 +319,7 @@ All changes are backwards compatible:
 ## Questions?
 
 Refer to:
+
 - **Getting started**: [Tutorial.md](./tutorial.md)
 - **Integration details**: [Integration-Guide.md](./integration-guide.md)
 - **API reference**: [ContactForm.md](./contact-form.md)

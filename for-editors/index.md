@@ -8,7 +8,7 @@ status: Draft
 entities:
    - editor
    - article-lifecycle
-   - page-editor
+   - visual-editor
    - page-builder
    - layers-panel
 keywords:
@@ -55,9 +55,9 @@ Editors typically:
    - [Updating and deleting articles](./updating-and-deleting-articles.md)
    - [Scheduling pages](./page-scheduling.md)
 4. **Content editing**:
-   - [Using the Visual Editor](./page-editor.md)
-   - [Visual Editor quick start](./page-editor-quickstart.md)
-   - [Visual Editor toolbar reference](./page-editor-toolbar-reference.md)
+   - [Using the Visual Editor](./visual-editor.md)
+   - [Visual Editor quick start](./visual-editor-quickstart.md)
+   - [Visual Editor toolbar reference](./visual-editor-toolbar-reference.md)
    - [Page builder](./page-builder.md)
    - [Layers panel](./layers.md)
    - [Page builder quick start](./page-builder-quickstart.md)

@@ -99,5 +99,6 @@ Deletion is permanent — verify your selection first.
 ## Related guides
 
 - [File Manager Reference](./file-manager.md)
+- [File Manager Toolbar Reference](./file-manager-toolbar-reference.md)
 - [Code Editor](./code-editor.md)
 - [Image Editing](./image-editing.md)

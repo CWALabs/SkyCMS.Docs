@@ -2,7 +2,7 @@
 <!-- Type: Reference -->
 <!-- Status: Draft -->
 <!-- Source: SkyCMS/Docs/FAQ.md -->
-<!-- markdownlint-disable -->
+
 # SkyCMS FAQ — Frequently Asked Questions
 
 Quick answers to common questions about SkyCMS, comparisons, use cases, and decision-making.
@@ -16,6 +16,7 @@ Quick answers to common questions about SkyCMS, comparisons, use cases, and deci
 SkyCMS is an **Edge-Native CMS** — a modern alternative to traditional CMSs, static site generators, and headless CMSs. It combines the **ease-of-use of WordPress** with the **performance of static sites** and **flexibility of modern architectures**.
 
 Key features:
+
 - WYSIWYG editor (CKEditor 5) + visual page builder (GrapesJS)
 - Static file generation with instant publishing (< 5 seconds)
 - Multi-cloud deployment (AWS, Azure, Cloudflare)
@@ -29,6 +30,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### Who should use SkyCMS?
 
 **Best for:**
+
 - Small to medium sites (1-1000 pages)
 - Teams mixing developers and non-technical content creators
 - Projects requiring fast, predictable performance
@@ -36,6 +38,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 - Sites needing low operational overhead
 
 **Less ideal for:**
+
 - Very large monolithic platforms (100k+ pages)
 - Projects requiring deep WordPress plugin ecosystem
 - Mobile-first apps (SkyCMS is primarily web-focused)
@@ -47,7 +50,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### How does SkyCMS compare to WordPress?
 
 | Aspect | SkyCMS | WordPress |
-|--------|--------|-----------|
+| --- | --- | --- |
 | **Performance** | ⭐⭐⭐⭐⭐ Static (~50ms TTFB) | ⭐⭐ Dynamic (~300ms+ TTFB) |
 | **Editor UX** | ⭐⭐⭐⭐⭐ Modern (WYSIWYG + Visual) | ⭐⭐⭐⭐⭐ Mature (Gutenberg) |
 | **Setup Time** | 15-30 min | 5-15 min (hosting varies) |
@@ -63,7 +66,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### How does SkyCMS compare to Jekyll/Hugo?
 
 | Aspect | SkyCMS | Jekyll/Hugo |
-|--------|--------|------------|
+| --- | --- | --- |
 | **Non-Tech Users** | ✅ Yes | ❌ No (Git required) |
 | **Publishing Speed** | < 5 sec | 5-30 min (rebuild + deploy) |
 | **Setup** | Visual wizard | CLI + config files |
@@ -77,7 +80,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### How does SkyCMS compare to Gatsby?
 
 | Aspect | SkyCMS | Gatsby |
-|--------|--------|--------|
+| --- | --- | --- |
 | **Content Editor** | ✅ Built-in WYSIWYG | ❌ Requires separate CMS |
 | **Setup Time** | 15-30 min | 20-45 min (+ data source setup) |
 | **Learning Curve** | Low | High (React + GraphQL) |
@@ -91,7 +94,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### How does SkyCMS compare to Contentful/Sanity?
 
 | Aspect | SkyCMS | Contentful/Sanity |
-|--------|--------|------------------|
+| --- | --- | --- |
 | **Content Editor** | ✅ Full UI | ✅ Modern UI |
 | **Setup** | 15-30 min | 30-60 min (+ frontend) |
 | **Frontend Required** | ❌ No (builds HTML) | ✅ Yes (React/Next.js/etc.) |
@@ -108,6 +111,7 @@ Yes. SkyCMS is licensed under **GPL v2.0** — free to use, modify, and distribu
 ### What cloud providers does SkyCMS support?
 
 SkyCMS supports:
+
 - **Object Storage:** AWS S3, Azure Blob, Cloudflare R2, Google Cloud Storage
 - **Databases:** MySQL, MS SQL Server, SQLite, Azure Cosmos DB
 - **Hosting Modes:** Static (cloud storage + CDN), Dynamic (server-rendered), Edge (origin-less via Cloudflare)
@@ -116,6 +120,7 @@ SkyCMS supports:
 ### Can I deploy SkyCMS on-premise?
 
 Yes. SkyCMS runs as a Docker container, so you can deploy to:
+
 - Kubernetes clusters
 - Virtual machines (on-premise or cloud)
 - Managed container services (ECS, Container Instances, etc.)
@@ -123,6 +128,7 @@ Yes. SkyCMS runs as a Docker container, so you can deploy to:
 ### How much does hosting cost?
 
 For a small site (10k pageviews/month):
+
 - **SkyCMS (S3 + CloudFront):** $0-50/year
 - **SkyCMS (Azure Blob + CDN):** $0-50/year
 - **SkyCMS (Cloudflare R2):** $0-20/year (origin-less edge hosting)
@@ -150,6 +156,7 @@ Yes. SkyCMS generates static HTML, so performance is excellent even under load (
 ### Can I use SkyCMS with custom code?
 
 Yes. You can:
+
 - Write custom HTML/CSS for layouts
 - Add JavaScript for interactivity
 - Integrate with external APIs
@@ -158,6 +165,7 @@ Yes. You can:
 ### Does SkyCMS support SEO?
 
 Yes. SkyCMS includes:
+
 - Page titles, meta descriptions, canonical URLs
 - Heading hierarchy management
 - Alt text for images
@@ -168,6 +176,7 @@ Yes. SkyCMS includes:
 ### Can I migrate from WordPress to SkyCMS? {#wordpress-migration}
 
 Yes, but it requires custom tooling. You would:
+
 1. Export WordPress posts/pages
 2. Map fields to SkyCMS templates
 3. Import via API or bulk operations
@@ -182,6 +191,7 @@ We recommend consulting with the SkyCMS community or a developer for migration p
 ### Does SkyCMS support multiple editors?
 
 Yes. SkyCMS includes:
+
 - Multi-user support with role-based access control
 - Draft/review/publish workflows
 - Approval gates
@@ -191,6 +201,7 @@ Yes. SkyCMS includes:
 ### Can I set up approval workflows?
 
 Yes. SkyCMS supports:
+
 - Draft → Review → Publish pipelines
 - Role-based permissions (editor, reviewer, publisher)
 - Custom approval workflows (via templates)
@@ -199,6 +210,7 @@ Yes. SkyCMS supports:
 ### Can I train non-technical content creators?
 
 Absolutely. SkyCMS is designed for this. We provide:
+
 - [Training Document Template](./training-template.md)
 - [Content Creator Onboarding Checklist](../for-developers/website-launch/Checklists/Content-Creator-Onboarding.md)
 - [Phase 6: Preparing for Handoff Guide](../for-developers/website-launch/06-Preparing-for-Handoff.md)
@@ -212,6 +224,7 @@ Content creators typically need 1-2 hours to get productive.
 ### How long does it take to launch a site with SkyCMS?
 
 **Timeline (typical 10-page site):**
+
 - Week 1: Design, planning, layouts, templates (35-55 hours developer time)
 - Week 2: Build home page, initial pages, SEO setup (25-35 hours developer time)
 - Week 3: Testing, training, launch prep (10-20 hours)
@@ -227,6 +240,7 @@ Content creators typically need 1-2 hours to get productive.
 ### What are the prerequisites?
 
 Before launching SkyCMS, you need:
+
 - Installed and running SkyCMS (Docker)
 - Administrator account
 - Database configured
@@ -246,7 +260,7 @@ Yes. SkyCMS is free and open source. Deploy it locally or to a cloud provider to
 ### Where can I get help?
 
 - **Documentation:** [SkyCMS Docs](../index.md)
-- **GitHub:** https://github.com/CWALabs/SkyCMS
+- **GitHub:** <https://github.com/CWALabs/SkyCMS>
 - **Issues:** Report bugs on GitHub Issues
 - **Community:** Check GitHub Discussions for community support
 
@@ -257,6 +271,7 @@ Yes. SkyCMS is actively developed with regular updates. Check the [Changelog](./
 ### Can I contribute?
 
 Yes! SkyCMS is open source (GPL 2.0). Contributions are welcome:
+
 - Report issues on GitHub
 - Submit pull requests
 - Improve documentation
@@ -266,9 +281,10 @@ Yes! SkyCMS is open source (GPL 2.0). Contributions are welcome:
 
 ## Decision Framework
 
-### Should I use SkyCMS if...
+### Should I use SkyCMS if
 
 **YES, SkyCMS is a good fit if:**
+
 - ✅ You need fast time-to-launch
 - ✅ You have non-technical content creators
 - ✅ You want low maintenance burden
@@ -279,6 +295,7 @@ Yes! SkyCMS is open source (GPL 2.0). Contributions are welcome:
 - ✅ Site is primarily web-focused
 
 **Consider alternatives if:**
+
 - ❌ You need massive plugin ecosystem (use WordPress)
 - ❌ Your team is entirely developer-first (consider Jekyll/Hugo)
 - ❌ You require multi-channel delivery (use Contentful/Sanity)

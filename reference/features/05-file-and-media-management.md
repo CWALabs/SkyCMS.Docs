@@ -15,7 +15,7 @@ SkyCMS provides a browser-based file manager for uploading, organizing, editing,
 
 ## 1. File Manager
 
-> **Documentation:** [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md)
+> **Documentation:** [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md) · [File Manager Toolbar Reference](../../for-editors/file-manager-toolbar-reference.md)
 
 A full-featured browser-based file management interface for all site assets.
 

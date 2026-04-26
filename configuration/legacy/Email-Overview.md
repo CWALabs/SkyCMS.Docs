@@ -159,5 +159,5 @@ Each provider guide includes instructions to:
 - **[Storage Configuration](./Storage-Overview.md)** - Companion configuration guide
 - **[CDN Configuration](./CDN-Overview.md)** - Companion configuration guide
 - **[Configuration Overview](./README.md)** - Index of all configuration documentation
-- **[Installation Guide](../Installation/MinimumRequiredSettings.md)** - Email in setup wizard
-- **[Main Documentation Hub](../index.md)** - Browse all documentation
+- **[Installation Guide](../../installation/minimum-required-settings.md)** - Email in setup wizard
+- **[Main Documentation Hub](../../index.md)** - Browse all documentation

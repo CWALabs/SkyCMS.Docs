@@ -82,11 +82,11 @@ Templates control which toolbar each editable region uses:
 
 > **Documentation:**
 >
-> - [Visual Editor](../../for-editors/page-editor.md)
-> - [Visual Editor Quickstart](../../for-editors/page-editor-quickstart.md)
-> - [Visual Editor Toolbar Reference](../../for-editors/page-editor-toolbar-reference.md)
-> - [Visual Editor Visual Guide](../../for-editors/page-editor-visual-guide.md)
-> - [Visual Editor Technical Reference](../../for-editors/page-editor-technical-reference.md)
+> - [Visual Editor](../../for-editors/visual-editor.md)
+> - [Visual Editor Quickstart](../../for-editors/visual-editor-quickstart.md)
+> - [Visual Editor Toolbar Reference](../../for-editors/visual-editor-toolbar-reference.md)
+> - [Visual Editor Visual Guide](../../for-editors/visual-editor-visual-guide.md)
+> - [Visual Editor Technical Reference](../../for-editors/visual-editor-technical-reference.md)
 
 ---
 

@@ -25,6 +25,27 @@ The current design has five main layers:
 4. prompt context enrichment,
 5. editor clients for Monaco, CKEditor, and AI Help Chat.
 
+## AI request and response sequence
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+sequenceDiagram
+  participant E as Editor client
+  participant P as AiProxyController
+  participant M as Metadata and model catalog
+  participant C as Context services
+  participant U as Upstream AI provider
+
+  E->>P: Send chat or completion request
+  P->>M: Resolve provider metadata and effective model
+  M-->>P: Provider classification and model
+  P->>C: Gather documentation or layout context
+  C-->>P: Enriched prompt context
+  P->>U: Send normalized AI request
+  U-->>P: Response payload
+  P-->>E: Return result plus model metadata
+```
+
 ## Main entry point
 
 The central server entry point is `AiProxyController`.

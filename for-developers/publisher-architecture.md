@@ -11,17 +11,27 @@ The Publisher (Sky.Publisher) is the public-facing component of SkyCMS that serv
 The Publisher's mode is determined at startup by the `CosmosStaticWebPages` configuration key:
 
 | Mode | Config Value | Description |
-|------|-------------|-------------|
+| --- | --- | --- |
 | **Dynamic** | `false` (default) | Full EF integration, real-time content from the database |
 | **Static** | `true` | Serves pre-generated HTML from blob storage |
 
 ### Startup Decision
 
-```
+```text
 Program.cs
   └─ CosmosStaticWebPages == true?
        ├─ Yes → StaticWebsiteProxy.Boot()
        └─ No  → DynamicPublisherWebsite.Boot()
+```
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+   Start[Program startup] --> Decision{CosmosStaticWebPages == true?}
+   Decision -- Yes --> StaticBoot[StaticWebsiteProxy.Boot]
+   Decision -- No --> DynamicBoot[DynamicPublisherWebsite.Boot]
+   StaticBoot --> StaticRuntime[Static mode runtime]
+   DynamicBoot --> DynamicRuntime[Dynamic mode runtime]
 ```
 
 ---
@@ -33,7 +43,7 @@ In dynamic mode, the Publisher is a full ASP.NET Core application with database 
 ### Services Registered
 
 | Service | Purpose |
-|---------|---------|
+| --- | --- |
 | **Core services** | Logging, configuration, DI |
 | **CORS** | Cross-origin request handling |
 | **Database** | EF Core with `ApplicationDbContext` (tenant-filtered) |
@@ -63,7 +73,7 @@ In dynamic mode, the Publisher is a full ASP.NET Core application with database 
 
 In static mode, the Publisher is a lightweight proxy that serves pre-generated HTML files from blob storage. No database queries are needed for page rendering.
 
-### StaticProxyController
+### StaticProxyController endpoint
 
 The main controller in static mode handles all incoming requests:
 
@@ -109,12 +119,27 @@ The Publisher and Editor are separate applications that share:
 
 The Publisher does **not** communicate with the Editor via HTTP. They are independently deployable.
 
+## Editor and publisher shared platform model
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart LR
+   Editor[Sky.Editor] --> Db[(ApplicationDbContext)]
+   Publisher[Sky.Publisher] --> Db
+   Editor --> Storage[(Tenant blob storage)]
+   Publisher --> Storage
+   Editor --> Pages[(PublishedPage records)]
+   Publisher --> Pages
+   Editor --> Cdn[Cdn purge services]
+   Publisher --> Cdn
+```
+
 ---
 
 ## Health Checks
 
 | Endpoint | Description |
-|----------|-------------|
+| --- | --- |
 | `/healthz` | Returns `200 OK` when the Publisher is running |
 
 Health check paths are excluded from `DomainMiddleware` — they respond without tenant context, which is critical for container orchestrators and load balancers.
@@ -124,7 +149,7 @@ Health check paths are excluded from `DomainMiddleware` — they respond without
 ## Configuration
 
 | Key | Type | Default | Description |
-|-----|------|---------|-------------|
+| --- | --- | --- | --- |
 | `CosmosStaticWebPages` | bool | `false` | Enable static proxy mode |
 | Authentication expiry | TimeSpan | Configurable | Session timeout for authenticated content |
 | Cookie name | string | Configurable | Authentication cookie identifier |
