@@ -11,6 +11,9 @@ on:
       - '.github/workflows/deploy-docs-cloudflare.yml'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Prevent concurrent deployments
 concurrency:
   group: "cloudflare-r2-docs"
@@ -22,10 +25,10 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
