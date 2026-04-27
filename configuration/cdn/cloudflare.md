@@ -14,6 +14,15 @@ Use Cloudflare when your site is fronted by a Cloudflare zone and you want publi
 - zone ID,
 - API token with Zone Cache Purge permissions for the target zone.
 
+## Credential setup
+
+Use [Create a Cloudflare API Token for Cache Purge](./cloudflare-token-for-cache-purge.md) for step-by-step instructions on:
+
+- finding the correct zone ID,
+- choosing between user and account-owned tokens,
+- creating a least-privilege token,
+- verifying the token before using it in SkyCMS.
+
 ## Routing and cache rules
 
 Recommended rules:
@@ -32,3 +41,4 @@ Recommended rules:
 
 - [CDN Overview](./overview.md)
 - [CDN Configuration Reference](./configuration-reference.md)
+- [Create a Cloudflare API Token for Cache Purge](./cloudflare-token-for-cache-purge.md)

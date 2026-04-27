@@ -48,6 +48,18 @@ Each entry links back to the feature catalog section where the gap was identifie
 
 *All deployment & infrastructure features now have dedicated documentation. See [Demo Deployment](../../deployment/demo-deployment.md), [CI/CD Pipelines](../../deployment/cicd-pipelines.md), and [Cloudflare Edge Hosting](../../deployment/cloudflare.md).*
 
+### Provider credential setup backlog
+
+This follow-up backlog tracks places where SkyCMS depends on provider-issued API tokens, access keys, or service credentials and should provide easy-to-find step-by-step creation instructions.
+
+| Status | Area | Scope |
+| --- | --- | --- |
+| DONE | [Cloudflare CDN cache purge](../../configuration/cdn/cloudflare-token-for-cache-purge.md) | Create least-privilege Cloudflare purge token and find the correct zone ID |
+| DONE | [Cloudflare R2 credentials](../../configuration/storage/cloudflare-r2-api-credentials.md) | Create bucket-scoped R2 credentials for SkyCMS storage and docs deployment |
+| TODO | Azure credentials and deployment identities | Document concrete setup for Azure service principals, managed identities, and deployment secrets |
+| TODO | AWS credentials | Document concrete setup for S3, CloudFront, and related IAM credentials used by SkyCMS |
+| TODO | Email and third-party provider tokens | Document token or secret creation for providers such as SendGrid and other external integrations |
+
 ---
 
 ## Summary

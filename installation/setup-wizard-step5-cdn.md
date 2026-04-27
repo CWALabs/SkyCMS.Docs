@@ -23,6 +23,8 @@ Configure CDN cache invalidation integration for published content.
 - Validate provider IDs and resource names.
 - If not ready, skip and configure later.
 
+If you are using Cloudflare, start with [Create a Cloudflare API Token for Cache Purge](../configuration/cdn/cloudflare-token-for-cache-purge.md).
+
 ## Next step
 
 Proceed to [setup-wizard-step6-review.md](setup-wizard-step6-review.md).
@@ -31,3 +33,4 @@ Proceed to [setup-wizard-step6-review.md](setup-wizard-step6-review.md).
 
 - [../configuration/cdn/overview.md](../configuration/cdn/overview.md)
 - [../configuration/cdn/configuration-reference.md](../configuration/cdn/configuration-reference.md)
+- [../configuration/cdn/cloudflare-token-for-cache-purge.md](../configuration/cdn/cloudflare-token-for-cache-purge.md)

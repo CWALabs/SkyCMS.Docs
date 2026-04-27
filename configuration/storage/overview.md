@@ -49,5 +49,6 @@ For the developer-focused code walkthrough, see [Storage Provider Auto-Detection
 - [Azure Blob](./azure-blob.md)
 - [S3-Compatible](./s3.md)
 - [Cloudflare R2](./cloudflare-r2.md)
+- [Create Cloudflare R2 API Credentials](./cloudflare-r2-api-credentials.md)
 - [Google Cloud Storage](./google-cloud.md)
 - [Storage Provider Auto-Detection](../../for-developers/storage-provider-auto-detection.md)

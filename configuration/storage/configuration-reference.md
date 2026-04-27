@@ -75,6 +75,8 @@ If the connection string does not match a supported pattern, SkyCMS throws a sto
 - key ID/key,
 - bucket name.
 
+See [Create Cloudflare R2 API Credentials](./cloudflare-r2-api-credentials.md) for the exact Cloudflare dashboard steps and endpoint guidance.
+
 ### Google Cloud Storage fields
 
 - interoperable S3-style credentials when using the S3-compatible path,

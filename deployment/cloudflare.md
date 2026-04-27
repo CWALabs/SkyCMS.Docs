@@ -55,7 +55,10 @@ Before deploying, configure these six secrets in your GitHub repository:
 
 > **Security:** Never commit secrets to source control. Use `UploadSecretsToGithubRepo.ps1` to sync local secrets to GitHub. Rotate tokens every 90 days and use minimum required permissions.
 
-See [CLOUDFLARE_SECRETS_SETUP.md](https://github.com/user/repo/.github/CLOUDFLARE_SECRETS_SETUP.md) in the `.github` folder for detailed setup instructions.
+Credential setup guides:
+
+- [Create a Cloudflare API Token for Cache Purge](../configuration/cdn/cloudflare-token-for-cache-purge.md)
+- [Create Cloudflare R2 API Credentials](../configuration/storage/cloudflare-r2-api-credentials.md)
 
 ---
 
@@ -74,6 +77,8 @@ Cloudflare R2 provides S3-compatible object storage without egress fees.
 
 See [Cloudflare R2 Configuration](../configuration/storage/cloudflare-r2.md) for SkyCMS storage provider settings.
 
+For the credential creation steps, use [Create Cloudflare R2 API Credentials](../configuration/storage/cloudflare-r2-api-credentials.md).
+
 ---
 
 ## CDN Cache Management
@@ -87,6 +92,8 @@ When an article is published, the CMS sends a cache purge request to Cloudflare'
 ### Configuration
 
 See [Cloudflare CDN Configuration](../configuration/cdn/cloudflare.md) for purge API settings and cache rule configuration.
+
+For the token creation steps, use [Create a Cloudflare API Token for Cache Purge](../configuration/cdn/cloudflare-token-for-cache-purge.md).
 
 ---
 
@@ -127,6 +134,8 @@ After deploying, verify:
 ## See Also
 
 - [R2 Storage Configuration](../configuration/storage/cloudflare-r2.md)
+- [Create Cloudflare R2 API Credentials](../configuration/storage/cloudflare-r2-api-credentials.md)
 - [CDN Configuration](../configuration/cdn/cloudflare.md)
+- [Create a Cloudflare API Token for Cache Purge](../configuration/cdn/cloudflare-token-for-cache-purge.md)
 - [CI/CD Pipelines](cicd-pipelines.md) — Full pipeline reference
 - [Demo Deployment](demo-deployment.md) — One-command Azure demo

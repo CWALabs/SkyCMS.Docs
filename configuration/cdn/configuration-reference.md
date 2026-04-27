@@ -19,6 +19,8 @@
 - zone ID
 - API token with cache purge permission
 
+See [Create a Cloudflare API Token for Cache Purge](./cloudflare-token-for-cache-purge.md) for the exact Cloudflare dashboard steps.
+
 ### CloudFront
 
 - distribution ID

@@ -266,12 +266,14 @@ nav:
       - Azure Blob: configuration/storage/azure-blob.md
       - Amazon S3: configuration/storage/s3.md
       - Cloudflare R2: configuration/storage/cloudflare-r2.md
+      - Cloudflare R2 API Credentials: configuration/storage/cloudflare-r2-api-credentials.md
       - Google Cloud: configuration/storage/google-cloud.md
       - Reference: configuration/storage/configuration-reference.md
     - CDN:
       - Overview: configuration/cdn/overview.md
       - Azure Front Door: configuration/cdn/azure-front-door.md
       - Cloudflare: configuration/cdn/cloudflare.md
+      - Cloudflare Token for Cache Purge: configuration/cdn/cloudflare-token-for-cache-purge.md
       - CloudFront: configuration/cdn/cloudfront.md
       - Sucuri: configuration/cdn/sucuri.md
       - Reference: configuration/cdn/configuration-reference.md

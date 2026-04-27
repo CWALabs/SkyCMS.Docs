@@ -32,5 +32,6 @@ SkyCMS can issue cache purge/invalidation requests after publish so content chan
 - [CDN Configuration Reference](./configuration-reference.md)
 - [Azure Front Door](./azure-front-door.md)
 - [Cloudflare](./cloudflare.md)
+- [Create a Cloudflare API Token for Cache Purge](./cloudflare-token-for-cache-purge.md)
 - [CloudFront](./cloudfront.md)
 - [Sucuri](./sucuri.md)
