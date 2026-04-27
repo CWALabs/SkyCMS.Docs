@@ -28,4 +28,5 @@ Use environment variables or secret stores for API keys. Avoid storing keys in s
 ## Related guides
 
 - [Email Overview](./overview.md)
+- [SendGrid API Key](./sendgrid-api-key.md)
 - [Email Configuration Reference](./configuration-reference.md)

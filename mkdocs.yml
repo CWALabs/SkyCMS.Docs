@@ -267,6 +267,8 @@ nav:
       - Amazon S3: configuration/storage/s3.md
       - Cloudflare R2: configuration/storage/cloudflare-r2.md
       - Cloudflare R2 API Credentials: configuration/storage/cloudflare-r2-api-credentials.md
+      - AWS S3 IAM Credentials: configuration/storage/aws-s3-iam-credentials.md
+      - Azure Blob Credentials: configuration/storage/azure-blob-credentials.md
       - Google Cloud: configuration/storage/google-cloud.md
       - Reference: configuration/storage/configuration-reference.md
     - CDN:
@@ -275,12 +277,16 @@ nav:
       - Cloudflare: configuration/cdn/cloudflare.md
       - Cloudflare Token for Cache Purge: configuration/cdn/cloudflare-token-for-cache-purge.md
       - CloudFront: configuration/cdn/cloudfront.md
+      - CloudFront IAM Credentials: configuration/cdn/aws-cloudfront-iam-credentials.md
+      - Azure Front Door Credentials: configuration/cdn/azure-front-door-credentials.md
       - Sucuri: configuration/cdn/sucuri.md
       - Reference: configuration/cdn/configuration-reference.md
     - Email:
       - Overview: configuration/email/overview.md
       - Azure Communication Services: configuration/email/azure-communication-services.md
       - SendGrid: configuration/email/sendgrid.md
+      - SendGrid API Key: configuration/email/sendgrid-api-key.md
+      - Azure Communication Services Credentials: configuration/email/azure-communication-services-credentials.md
       - SMTP: configuration/email/smtp.md
       - NoOp Provider: configuration/email/none.md
       - Environment Variables: configuration/email/environment-variables.md

@@ -57,8 +57,9 @@ This follow-up backlog tracks places where SkyCMS depends on provider-issued API
 | DONE | [Cloudflare CDN cache purge](../../configuration/cdn/cloudflare-token-for-cache-purge.md) | Create least-privilege Cloudflare purge token and find the correct zone ID |
 | DONE | [Cloudflare R2 credentials](../../configuration/storage/cloudflare-r2-api-credentials.md) | Create bucket-scoped R2 credentials for SkyCMS storage and docs deployment |
 | TODO | Azure credentials and deployment identities | Document concrete setup for Azure service principals, managed identities, and deployment secrets |
-| TODO | AWS credentials | Document concrete setup for S3, CloudFront, and related IAM credentials used by SkyCMS |
-| TODO | Email and third-party provider tokens | Document token or secret creation for providers such as SendGrid and other external integrations |
+| DONE | Azure credentials — [Azure Blob Credentials](../../configuration/storage/azure-blob-credentials.md), [Azure Front Door Credentials](../../configuration/cdn/azure-front-door-credentials.md), [ACS Credentials](../../configuration/email/azure-communication-services-credentials.md) | Service principal, managed identity, and connection string setup for Azure storage, CDN, and email providers |
+| DONE | AWS credentials — [S3 IAM Credentials](../../configuration/storage/aws-s3-iam-credentials.md), [CloudFront IAM Credentials](../../configuration/cdn/aws-cloudfront-iam-credentials.md) | IAM user, policy, and access key setup for S3 storage and CloudFront CDN invalidation |
+| DONE | Email and third-party provider tokens — [SendGrid API Key](../../configuration/email/sendgrid-api-key.md) | API key creation and permission scoping for SendGrid transactional email |
 
 ---
 

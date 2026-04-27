@@ -28,4 +28,5 @@ Store the ACS connection string in secret stores and inject it via environment v
 ## Related guides
 
 - [Email Overview](./overview.md)
+- [Azure Communication Services Credentials](./azure-communication-services-credentials.md)
 - [Email Configuration Reference](./configuration-reference.md)

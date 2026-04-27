@@ -28,4 +28,5 @@ Keep connection strings in secret stores. Prefer managed identity patterns where
 ## Related guides
 
 - [Storage Overview](./overview.md)
+- [Azure Blob Credentials](./azure-blob-credentials.md)
 - [Storage Configuration Reference](./configuration-reference.md)

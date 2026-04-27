@@ -33,4 +33,5 @@ Recommended rules:
 ## Related guides
 
 - [CDN Overview](./overview.md)
+- [CloudFront IAM Credentials](./aws-cloudfront-iam-credentials.md)
 - [CDN Configuration Reference](./configuration-reference.md)

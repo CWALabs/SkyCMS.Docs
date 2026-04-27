@@ -34,4 +34,5 @@ Recommended rules:
 ## Related guides
 
 - [CDN Overview](./overview.md)
+- [Azure Front Door Credentials](./azure-front-door-credentials.md)
 - [CDN Configuration Reference](./configuration-reference.md)
