@@ -55,10 +55,13 @@ For an account-owned token:
 
 1. Choose `Create Custom Token`.
 2. Give the token a descriptive name such as `SkyCMS Cloudflare Purge - Production`.
-3. In the permissions section, add:
-   - `Zone`
-   - `Cache Purge`
-4. In the resource scope section, restrict the token to the specific production zone used by SkyCMS.
+3. In `Permissions`, set the first dropdown to `Zone`.
+4. In `Permissions`, set the second dropdown to `Cache Purge`.
+5. In `Permissions`, set the third dropdown to `Purge`.
+6. In `Zone Resources`, set the first dropdown to `Include`.
+7. In `Zone Resources`, set the second dropdown to `Specific zone`.
+8. In `Zone Resources`, set the third dropdown to your target zone (for example, `sky-cms.com`).
+9. Leave `Client IP Address Filtering` empty unless you have stable egress IPs for automation.
 
 Do not grant `All zones` unless you have a strong operational reason and have reviewed the security impact.
 
