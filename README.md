@@ -102,15 +102,25 @@ Place new documentation based on the target audience:
 
 Use YAML frontmatter at the top of every new or materially revised documentation file. This gives MkDocs, search, and AI ingestion a stable, parseable metadata block.
 
+Canonical schema reference:
+
+- [Documentation Metadata Schema v1](for-developers/documentation-metadata-schema.md)
+
 ```yaml
 ---
 canonical_title: Page Builder
 description: Visual drag-and-drop composition in SkyCMS using GrapesJS.
+doc_type: How-to
+product_area: editing
+user_intent: build-pages-with-page-builder
 audience:
   - Content Editors
   - Site Builders
-doc_type: How-to
-status: Draft
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
 entities:
   - page-builder
   - layers-panel
@@ -126,14 +136,31 @@ keywords:
 | `canonical_title` | Canonical page title used by search and AI context extraction |
 | `description` | One-sentence summary for search snippets and retrieval |
 | `audience` | Intended readers, as a YAML list |
-| `doc_type` | `How-to`, `Explanation`, `Reference`, `Tutorial`, or `Quickstart` |
-| `status` | `Draft`, `Canonical`, `Reference`, `Deprecated`, or other explicit state |
+| `doc_type` | `How-to`, `Explanation`, `Reference`, or `Tutorial` |
+| `product_area` | Product surface such as editing, deployment, configuration, architecture |
+| `user_intent` | Primary reader goal as a concise slug |
+| `difficulty` | `beginner`, `intermediate`, or `advanced` |
+| `version` | Version scope such as `current` or a release range |
+| `status` | `draft`, `active`, `deprecated`, or `archived` |
+| `owner` | Team or individual accountable for page correctness |
+| `last_reviewed` | Review date in `yyyy-mm-dd` format |
 | `entities` | Canonical SkyCMS concepts covered by the page |
 | `keywords` | Synonyms, aliases, and common search phrases |
 
 Optional fields may be added when helpful, such as `source`, `aliases`, `related_topics`, or `tags`.
 
 Legacy HTML comments may be retained for internal provenance, but they should not replace YAML frontmatter on new or substantially updated pages.
+
+### Quality Gates
+
+Before opening or updating a PR, run:
+
+```powershell
+./.tmp-link-check.ps1
+./scripts/validate-doc-metadata.ps1
+```
+
+CI enforces these checks on changed Markdown files via the Docs Quality Gates workflow.
 
 ### File Naming
 

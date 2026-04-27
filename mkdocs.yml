@@ -185,6 +185,13 @@ nav:
   - For Developers:
     - Start Here: for-developers/index.md
     - Overview: for-developers/overview.md
+    - Documentation Standards:
+      - Standards Stack v1: for-developers/documentation-standards-stack-v1.md
+      - Metadata Schema v1: for-developers/documentation-metadata-schema.md
+      - Templates: for-developers/documentation-templates.md
+      - PR Checklist: for-developers/documentation-pr-checklist.md
+      - Rollout Plan (30-60-90): for-developers/documentation-rollout-plan.md
+      - Gap Review and Upgrade Plan (2026-04): for-developers/documentation-standards-gap-review-2026-04.md
     - Architecture: for-developers/architecture.md
     - Architecture Diagram Catalog: for-developers/architecture-diagram-catalog.md
     - Architecture Executive Summary: for-developers/architecture-executive-summary.md

@@ -34,6 +34,12 @@ Developers typically:
 ## Start Here
 
 - [Developer guide overview](./overview.md)
+- [Documentation standards stack v1](./documentation-standards-stack-v1.md)
+- [Documentation metadata schema v1](./documentation-metadata-schema.md)
+- [Documentation templates](./documentation-templates.md)
+- [Documentation PR checklist](./documentation-pr-checklist.md)
+- [Documentation rollout plan](./documentation-rollout-plan.md)
+- [Documentation standards gap review and upgrade plan (2026-04)](./documentation-standards-gap-review-2026-04.md)
 - [API docs](./api/overview.md)
 - [Architecture](./architecture.md)
 - [Architecture diagram catalog](./architecture-diagram-catalog.md)

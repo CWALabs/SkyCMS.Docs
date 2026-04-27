@@ -1,0 +1,90 @@
+name: Docs Quality Gates
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.tmp-link-check.ps1'
+      - 'scripts/validate-doc-metadata.ps1'
+      - '.github/workflows/docs-quality-gates.yml'
+  push:
+    branches: ["main"]
+    paths:
+      - '**/*.md'
+      - '.tmp-link-check.ps1'
+      - 'scripts/validate-doc-metadata.ps1'
+      - '.github/workflows/docs-quality-gates.yml'
+  workflow_dispatch:
+
+jobs:
+  links-and-metadata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Run internal markdown link and anchor checks
+        shell: pwsh
+        run: |
+          ./.tmp-link-check.ps1
+          $issues = Get-Content -Raw ./.tmp-link-issues.json | ConvertFrom-Json
+          $count = @($issues).Count
+          if ($count -gt 0) {
+            Write-Host "Found $count link/anchor issue(s)." -ForegroundColor Red
+            @($issues) | Select-Object -First 50 | ConvertTo-Json -Depth 5
+            exit 1
+          }
+          Write-Host "No link/anchor issues found." -ForegroundColor Green
+
+      - name: Collect changed markdown files
+        id: changed
+        shell: pwsh
+        run: |
+          if ('${{ github.event_name }}' -eq 'pull_request') {
+            $base = '${{ github.event.pull_request.base.sha }}'
+            $head = '${{ github.event.pull_request.head.sha }}'
+          } elseif ('${{ github.event_name }}' -eq 'push') {
+            $base = '${{ github.event.before }}'
+            $head = '${{ github.sha }}'
+          } else {
+            $base = ''
+            $head = ''
+          }
+
+          if ([string]::IsNullOrWhiteSpace($base) -or [string]::IsNullOrWhiteSpace($head)) {
+            $files = Get-ChildItem -Recurse -File -Filter *.md | ForEach-Object { $_.FullName }
+            $added = $files
+          } else {
+            $files = git diff --name-only --diff-filter=ACMR $base $head -- '*.md'
+            $added = git diff --name-only --diff-filter=A $base $head -- '*.md'
+          }
+
+          $files = @($files) | Where-Object { $_ -and $_ -notmatch '^site/' }
+          $added = @($added) | Where-Object { $_ -and $_ -notmatch '^site/' }
+          $joined = ($files -join "`n")
+          $addedJoined = ($added -join "`n")
+          "markdown_files<<EOF" >> $env:GITHUB_OUTPUT
+          $joined >> $env:GITHUB_OUTPUT
+          "EOF" >> $env:GITHUB_OUTPUT
+          "added_markdown_files<<EOF" >> $env:GITHUB_OUTPUT
+          $addedJoined >> $env:GITHUB_OUTPUT
+          "EOF" >> $env:GITHUB_OUTPUT
+          "count=$($files.Count)" >> $env:GITHUB_OUTPUT
+
+      - name: Validate metadata schema on changed markdown files
+        if: steps.changed.outputs.count != '0'
+        shell: pwsh
+        run: |
+          $files = @'
+          ${{ steps.changed.outputs.markdown_files }}
+          '@ -split "`n" | Where-Object { $_ -and $_.Trim().Length -gt 0 }
+
+          $addedFiles = @'
+          ${{ steps.changed.outputs.added_markdown_files }}
+          '@ -split "`n" | Where-Object { $_ -and $_.Trim().Length -gt 0 }
+
+          Write-Host "Validating metadata for $($files.Count) changed markdown file(s)."
+          ./scripts/validate-doc-metadata.ps1 -Files $files -RequireFrontMatterFiles $addedFiles

@@ -14,7 +14,7 @@ SkyCMS supports multiple deployment targets and hosting models — from one-clic
 - [Email Provider Configuration](#6-email-provider-configuration)
 - [Demo Deployment](#7-demo-deployment)
 - [Documentation Publishing (DocsPublisher)](#8-documentation-publishing-docspublisher)
-- [CI/CD & DevOps](#9-cicd-devops)
+- [CI/CD and DevOps](#9-cicd-and-devops)
 - [Licensing](#10-licensing)
 
 ---
@@ -238,7 +238,7 @@ PowerShell + Bicep automation for one-command demo site deployment to Azure.
 
 ## 8. Documentation Publishing (DocsPublisher)
 
-> **Documentation:** [DocsPublisher Installation](../../installation/docs-publisher.md) · [DocsPublisher README](https://github.com/CWALabs/SkyCMS.DocsPublisher) · [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublisher/blob/main/QUICK_START.md)
+> **Documentation:** [DocsPublisher Installation](../../installation/docs-publisher.md) · [DocsPublisher README](https://github.com/CWALabs/SkyCMS.DocsPublisher) · [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublisher/blob/main/QUICK_START.md) · [Documentation Standards Stack v1](../../for-developers/documentation-standards-stack-v1.md) · [Documentation Metadata Schema v1](../../for-developers/documentation-metadata-schema.md) · [Documentation Templates](../../for-developers/documentation-templates.md) · [Documentation PR Checklist](../../for-developers/documentation-pr-checklist.md) · [Documentation Rollout Plan](../../for-developers/documentation-rollout-plan.md) · [Documentation Gap Review and Upgrade Plan](../../for-developers/documentation-standards-gap-review-2026-04.md)
 
 ### Markdown-to-CMS Pipeline
 
@@ -277,7 +277,7 @@ article_type: documentation
 
 ---
 
-## 9. CI/CD & DevOps
+## 9. CI/CD and DevOps
 
 > **Documentation:** [CI/CD Pipelines Guide](../../deployment/cicd-pipelines.md) · [Deployment Overview](../../deployment/overview.md)
 

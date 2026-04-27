@@ -46,7 +46,7 @@ Each entry links back to the feature catalog section where the gap was identifie
 
 ## Deployment & Infrastructure
 
-*All deployment & infrastructure features now have dedicated documentation. See [Demo Deployment](../../deployment/demo-deployment.md), [CI/CD Pipelines](../../deployment/cicd-pipelines.md), and [Cloudflare Edge Hosting](../../deployment/cloudflare.md).*
+*All deployment & infrastructure features now have dedicated documentation. See [Demo Deployment](../../deployment/demo-deployment.md), [CI/CD Pipelines](../../deployment/cicd-pipelines.md), [Cloudflare Edge Hosting](../../deployment/cloudflare.md), and the documentation operations package: [Standards Stack](../../for-developers/documentation-standards-stack-v1.md), [Metadata Schema](../../for-developers/documentation-metadata-schema.md), [Templates](../../for-developers/documentation-templates.md), [PR Checklist](../../for-developers/documentation-pr-checklist.md), [Rollout Plan](../../for-developers/documentation-rollout-plan.md), and [Gap Review](../../for-developers/documentation-standards-gap-review-2026-04.md).*
 
 ### Provider credential setup backlog
 

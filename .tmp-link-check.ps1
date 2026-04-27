@@ -81,6 +81,11 @@ foreach ($file in $mdFiles) {
   }
 }
 
-$issues | Sort-Object Source,Target,Type | ConvertTo-Json -Depth 4 | Set-Content -Path '.tmp-link-issues.json' -Encoding UTF8
+$sortedIssues = @($issues | Sort-Object Source,Target,Type)
+$json = $sortedIssues | ConvertTo-Json -Depth 4
+if ([string]::IsNullOrWhiteSpace($json)) {
+  $json = '[]'
+}
+Set-Content -Path '.tmp-link-issues.json' -Value $json -Encoding UTF8
 Write-Output "Total markdown files scanned: $($mdFiles.Count)"
 Write-Output "Total issues: $($issues.Count)"

@@ -1,14 +1,1 @@
-[
-  {
-    "Type": "MISSING_ANCHOR",
-    "Source": "D:\\source\\SkyCMS.Docs\\deployment\\publishing-workflow.md",
-    "Target": "#scheduling--automation",
-    "Resolved": "D:\\source\\SkyCMS.Docs\\deployment\\publishing-workflow.md"
-  },
-  {
-    "Type": "MISSING_ANCHOR",
-    "Source": "D:\\source\\SkyCMS.Docs\\deployment\\publishing-workflow.md",
-    "Target": "#unpublishing--archiving",
-    "Resolved": "D:\\source\\SkyCMS.Docs\\deployment\\publishing-workflow.md"
-  }
-]
+[]

@@ -25,7 +25,7 @@ az account show
 
 ## Provision infrastructure
 
-Primary deployment source is [SkyCMS/InstallScripts/Azure](../../SkyCMS/InstallScripts/Azure) with:
+Primary deployment source is [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1) with:
 
 - [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1)
 - [SkyCMS/InstallScripts/Azure/bicep/main.bicep](../../SkyCMS/InstallScripts/Azure/bicep/main.bicep)
@@ -192,7 +192,7 @@ Treat these files as source of truth for current installs:
 
 - [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1)
 - [SkyCMS/InstallScripts/Azure/bicep/main.bicep](../../SkyCMS/InstallScripts/Azure/bicep/main.bicep)
-- [SkyCMS/InstallScripts/Azure/bicep/modules](../../SkyCMS/InstallScripts/Azure/bicep/modules)
+- [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep)
 
 ### Validating templates against current SkyCMS version
 
@@ -208,7 +208,7 @@ Current contract checks to run:
 1. Health endpoint alignment.
 
 - Confirm /___healthz remains valid in current SkyCMS.
-- Source: [SkyCMS/Editor/Program.cs](../../SkyCMS/Editor/Program.cs#L810).
+- Source: [SkyCMS Editor Program.cs](https://github.com/CWALabs/SkyCMS/blob/main/Editor/Program.cs#L815).
 
 1. Required configuration key alignment.
 
