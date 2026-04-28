@@ -60,7 +60,7 @@ Editorial readiness is established when you can:
 - confirm live output after publication,
 - follow role-based approval constraints correctly.
 
-## Related links
+## Related guides
 
 - [For Editors](./index.md)
 - [Creating Articles](./creating-articles.md)

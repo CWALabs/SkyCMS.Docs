@@ -85,7 +85,7 @@ When validating changes:
 - Architecture-first reading reduces implementation mistakes but may slow quick fixes.
 - Task-first links from this page are designed to reduce context switching.
 
-## Related links
+## Related guides
 
 - [For Developers Start Here](./index.md)
 - [API Overview](./api/overview.md)

@@ -255,9 +255,8 @@ nav:
         - "Phase 6: Handoff": for-developers/website-launch/06-Preparing-for-Handoff.md
         - Modern Approach: for-developers/website-launch/SkyCMS-Modern-Approach.md
         - Creating Editable Areas: for-developers/website-launch/CreatingEditableAreas.md
-        - Checklists:
-          - Pre-Launch Checklist: for-developers/website-launch/Checklists/Pre-Launch-Checklist.md
-          - Content Creator Onboarding: for-developers/website-launch/Checklists/Content-Creator-Onboarding.md
+        - Pre-Launch Checklist: for-developers/website-launch/Checklists/Pre-Launch-Checklist.md
+        - Content Creator Onboarding: for-developers/website-launch/Checklists/Content-Creator-Onboarding.md
         - Upload Secrets: for-developers/website-launch/UploadSecretsToGithubRepo.md
     - Deployment:
       - Overview: deployment/overview.md

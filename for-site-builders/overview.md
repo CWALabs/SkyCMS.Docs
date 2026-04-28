@@ -76,7 +76,7 @@ Before rollout, verify:
 
 This guide is working when you can map a content goal to the right layout or template work, apply the relevant quality gates, and hand off clear editor-safe structure with supporting examples.
 
-## Related links
+## Related guides
 
 - [For Site Builders](./index.md)
 - [Layouts](./layouts.md)

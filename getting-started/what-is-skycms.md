@@ -86,7 +86,7 @@ For AI assistants, search pipelines, and prompt-grounding workflows, use:
 - [Key Concepts](key-concepts.md) as the canonical vocabulary source,
 - [AI Context Pack](../reference/ai-context-pack.md) for compact authoritative retrieval paths.
 
-## Related links
+## Related guides
 
 - [Quick Start](./quick-start.md)
 - [Key Concepts](./key-concepts.md)

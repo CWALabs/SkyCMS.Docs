@@ -84,7 +84,7 @@ When setting up a new environment:
 - [Multi-Tenancy Configuration](./multi-tenancy.md)
 - [Proxy Settings](./proxy-settings.md)
 
-## Related links
+## Related guides
 
 - [Minimum Required Settings](../installation/minimum-required-settings.md)
 - [Installation Overview](../installation/overview.md)

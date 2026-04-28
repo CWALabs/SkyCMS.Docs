@@ -86,7 +86,7 @@ flowchart LR
 - Save issue: retry manual save and verify network connectivity.
 - Upload issue: verify file type and file size policy.
 
-## Related links
+## Related guides
 
 - [Visual Editor](./visual-editor.md)
 - [Visual Editor Visual Guide](./visual-editor-visual-guide.md)

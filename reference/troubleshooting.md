@@ -212,7 +212,7 @@ Before opening an issue, collect:
 
 This guide is working when you can narrow an issue to the correct diagnostic layer, run the matching checks, and either resolve the problem or produce a useful escalation package without repeating broad trial-and-error steps.
 
-## Related links
+## Related guides
 
 - [Configuration Overview](../configuration/overview.md)
 - [Minimum Required Settings](../installation/minimum-required-settings.md)

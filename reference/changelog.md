@@ -61,7 +61,7 @@ Use this structure for new entries:
   - [Documentation Visual Style Standard](../for-developers/documentation-visual-style-standard.md)
   - [Documentation Adoption Priority Plan](../for-developers/documentation-adoption-priority-plan.md)
 
-## Related links
+## Related guides
 
 - [Documentation Rollout Plan](../for-developers/documentation-rollout-plan.md)
 - [Deployment Overview](../deployment/overview.md)

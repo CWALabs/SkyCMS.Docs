@@ -149,7 +149,7 @@ If storage actions fail:
 
 - [Licensing and Distribution](./licensing-and-distribution.md)
 
-## Related links
+## Related guides
 
 - [Installation Overview](../installation/overview.md)
 - [Local Development Installation](../installation/local-development.md)

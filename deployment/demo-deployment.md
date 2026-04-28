@@ -97,7 +97,7 @@ deploy-demo.ps1
 - avoid long-lived demo environments without cost monitoring,
 - destroy stale demo resource groups after validation activities.
 
-## Related links
+## Related guides
 
 - [Installation Guide](../installation/overview.md)
 - [Deploy with Docker](docker.md)

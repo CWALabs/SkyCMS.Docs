@@ -148,7 +148,7 @@ Yes. SkyCMS is open source and community contribution is supported.
 
 This FAQ is doing its job when a reader can answer common evaluation or adoption questions quickly and identify the correct follow-up guide without searching the full documentation tree.
 
-## Related links
+## Related guides
 
 - [What Is SkyCMS?](../getting-started/what-is-skycms.md)
 - [Key Concepts](../getting-started/key-concepts.md)

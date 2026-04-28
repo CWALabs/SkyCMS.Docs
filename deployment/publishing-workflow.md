@@ -151,7 +151,7 @@ You have selected and applied the right workflow when your team can explain the 
 - scheduled content does not go live:
   - publishing worker not running at scheduled time.
 
-## Related links
+## Related guides
 
 - [Publishing Modes](../for-editors/publishing-modes.md)
 - [Deployment Overview](overview.md)

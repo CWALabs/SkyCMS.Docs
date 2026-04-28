@@ -67,7 +67,7 @@ Move to deployment and release maturity:
 - [Publishing Workflow](../deployment/publishing-workflow.md)
 - [CI/CD Pipelines](../deployment/cicd-pipelines.md)
 
-## Related links
+## Related guides
 
 - [Setup Wizard](setup-wizard.md)
 - [Minimum Required Settings](minimum-required-settings.md)

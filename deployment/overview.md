@@ -82,7 +82,7 @@ After first successful deployment, implement:
 
 - [Licensing and Distribution](./licensing-and-distribution.md)
 
-## Related links
+## Related guides
 
 - [Configuration Overview](../configuration/overview.md)
 - [Post-Installation Configuration](../installation/post-installation.md)

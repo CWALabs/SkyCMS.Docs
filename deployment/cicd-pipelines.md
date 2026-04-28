@@ -175,7 +175,7 @@ Use the repository script to upload local secret values to GitHub Actions secret
 - Docs deploy fails:
   - check docs link and metadata gate outputs before rerunning deployment.
 
-## Related links
+## Related guides
 
 - [Deployment Overview](overview.md)
 - [Publishing Workflow](publishing-workflow.md)

@@ -91,7 +91,7 @@ Installation is successful when:
 
 For hardening and operational follow-up, continue to [Post-Installation Configuration](post-installation.md).
 
-## Related links
+## Related guides
 
 - [Minimum Required Settings](minimum-required-settings.md)
 - [Setup Wizard](setup-wizard.md)

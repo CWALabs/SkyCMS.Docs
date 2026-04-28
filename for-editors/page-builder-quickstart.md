@@ -84,7 +84,7 @@ flowchart LR
 - Undo: `Ctrl+Z` or `Cmd+Z`
 - Redo: `Ctrl+Shift+Z` or `Cmd+Shift+Z`
 
-## Related links
+## Related guides
 
 - [Page Builder](./page-builder.md)
 - [Layers Panel](./layers.md)

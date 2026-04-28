@@ -176,7 +176,7 @@ All publishing operations are scoped to the current tenant:
 
 This guide is working when you can explain why one publishing mode is safer or faster for a given release, run that mode intentionally, and anticipate the downstream effects on static output, cache state, and related pages.
 
-## Related links
+## Related guides
 
 - [Visual Editor Quick Start](visual-editor-quickstart.md)
 - [Page Builder Quick Start](page-builder-quickstart.md)

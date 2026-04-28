@@ -84,7 +84,7 @@ Use these templates for new pages and major rewrites.
 ## Troubleshooting
 - <Issue>: <Resolution>
 
-## Related links
+## Related guides
 - <Link>
 ````
 
@@ -120,7 +120,7 @@ Use these templates for new pages and major rewrites.
 ## Constraints
 - <constraint>
 
-## Related links
+## Related guides
 - <Link>
 ````
 
@@ -150,6 +150,6 @@ Use these templates for new pages and major rewrites.
 - <decision>
 - <tradeoff>
 
-## Related links
+## Related guides
 - <Link>
 ````

@@ -44,13 +44,13 @@ az account show
 
 ## Provision infrastructure
 
-Primary deployment source is [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1) with:
+Primary deployment source is [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/deploy-skycms.ps1) with:
 
-- [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1)
-- [SkyCMS/InstallScripts/Azure/bicep/main.bicep](../../SkyCMS/InstallScripts/Azure/bicep/main.bicep)
-- [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep)
-- [SkyCMS/InstallScripts/Azure/bicep/modules/sqlDatabase.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/sqlDatabase.bicep)
-- [SkyCMS/InstallScripts/Azure/bicep/modules/keyVault.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/keyVault.bicep)
+- [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/deploy-skycms.ps1)
+- [SkyCMS/InstallScripts/Azure/bicep/main.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/main.bicep)
+- [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/modules/webApp.bicep)
+- [SkyCMS/InstallScripts/Azure/bicep/modules/sqlDatabase.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/modules/sqlDatabase.bicep)
+- [SkyCMS/InstallScripts/Azure/bicep/modules/keyVault.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/modules/keyVault.bicep)
 
 Interactive deployment:
 
@@ -131,7 +131,7 @@ flowchart TB
 
 ## Deploy application
 
-The deployment script performs a resource group deployment using [SkyCMS/InstallScripts/Azure/bicep/main.bicep](../../SkyCMS/InstallScripts/Azure/bicep/main.bicep), creates a temporary parameters JSON file, retries up to 3 times on transient failures, and prints output URLs.
+The deployment script performs a resource group deployment using [SkyCMS/InstallScripts/Azure/bicep/main.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/main.bicep), creates a temporary parameters JSON file, retries up to 3 times on transient failures, and prints output URLs.
 
 Direct Bicep deployment is also possible:
 
@@ -197,7 +197,7 @@ Invoke-WebRequest https://<storage>.z13.web.core.windows.net
 
 ### Teardown
 
-Use [SkyCMS/InstallScripts/Azure/destroy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/destroy-skycms.ps1) for full cleanup.
+Use [SkyCMS/InstallScripts/Azure/destroy-skycms.ps1](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/destroy-skycms.ps1) for full cleanup.
 
 ```powershell
 .\destroy-skycms.ps1 -ResourceGroupName <rg-name>
@@ -209,9 +209,9 @@ The Azure folder contains some historical docs/scripts that reference older Cont
 
 Treat these files as source of truth for current installs:
 
-- [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](../../SkyCMS/InstallScripts/Azure/deploy-skycms.ps1)
-- [SkyCMS/InstallScripts/Azure/bicep/main.bicep](../../SkyCMS/InstallScripts/Azure/bicep/main.bicep)
-- [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep)
+- [SkyCMS/InstallScripts/Azure/deploy-skycms.ps1](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/deploy-skycms.ps1)
+- [SkyCMS/InstallScripts/Azure/bicep/main.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/main.bicep)
+- [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/modules/webApp.bicep)
 
 ### Validating templates against current SkyCMS version
 
@@ -222,7 +222,7 @@ Current contract checks to run:
 1. Runtime and port alignment.
 
 - Confirm the active Editor container listens on 8080 as expected by webApp.bicep and Dockerfile.
-- Sources: [SkyCMS/Editor/Dockerfile](../../SkyCMS/Editor/Dockerfile), [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](../../SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep).
+- Sources: [SkyCMS/Editor/Dockerfile](https://github.com/CWALabs/SkyCMS/blob/main/Editor/Dockerfile), [SkyCMS/InstallScripts/Azure/bicep/modules/webApp.bicep](https://github.com/CWALabs/SkyCMS/blob/main/InstallScripts/Azure/bicep/modules/webApp.bicep).
 
 1. Health endpoint alignment.
 
@@ -232,7 +232,7 @@ Current contract checks to run:
 1. Required configuration key alignment.
 
 - Confirm ApplicationDbContextConnection, CosmosAllowSetup, CosmosPublisherUrl, and AdminEmail are still consumed by current app startup/setup paths.
-- Source: [SkyCMS/Editor/Program.cs](../../SkyCMS/Editor/Program.cs), [SkyCMS/Editor/README.md](https://github.com/CWALabs/SkyCMS/blob/main/Editor/README.md#L203).
+- Source: [SkyCMS/Editor/Program.cs](https://github.com/CWALabs/SkyCMS/blob/main/Editor/Program.cs), [SkyCMS/Editor/README.md](https://github.com/CWALabs/SkyCMS/blob/main/Editor/README.md#L203).
 
 1. Database model and migration compatibility.
 
@@ -260,10 +260,10 @@ az bicep build --file .\bicep\main.bicep
 az deployment group what-if --resource-group <rg> --template-file .\bicep\main.bicep --parameters @.\skycms-params-temp.json
 ```
 
-Automated in CI by [../../SkyCMS/.github/workflows/azure-install-validation.yml](../../SkyCMS/.github/workflows/azure-install-validation.yml), which runs both:
+Automated in CI by [SkyCMS/](https://github.com/CWALabs/SkyCMS/blob/main/), which runs both:
 
-- [../../SkyCMS/InstallScripts/Azure/validate-bicep.ps1](../../SkyCMS/InstallScripts/Azure/validate-bicep.ps1)
-- [../../SkyCMS/InstallScripts/Azure/validate-template-contracts.ps1](../../SkyCMS/InstallScripts/Azure/validate-template-contracts.ps1)
+- [SkyCMS/](https://github.com/CWALabs/SkyCMS/blob/main/)
+- [SkyCMS/](https://github.com/CWALabs/SkyCMS/blob/main/)
 
 1. Parameter contract tests:
 
@@ -275,7 +275,7 @@ Deploy to a temporary resource group in CI, run smoke tests (health endpoint, se
 
 1. Drift checks against app source:
 
-Automated checks compare template assumptions to current Editor source for health path, exposed port, required config keys, and setup mode flags. Use [../../SkyCMS/InstallScripts/Azure/validate-template-contracts.ps1](../../SkyCMS/InstallScripts/Azure/validate-template-contracts.ps1).
+Automated checks compare template assumptions to current Editor source for health path, exposed port, required config keys, and setup mode flags. Use [SkyCMS/](https://github.com/CWALabs/SkyCMS/blob/main/).
 
 1. Release gate:
 
