@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Configure the object storage provider for uploaded files and media.
 
+## Outcome
+
+After completing this step, SkyCMS will have a validated object storage configuration ready for media uploads and published artifacts.
+
 ## Supported providers
 
 - Azure Blob

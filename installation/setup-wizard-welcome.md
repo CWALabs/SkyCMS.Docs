@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 The welcome screen validates prerequisites before entering the guided setup flow.
 
+## Outcome
+
+After completing this step, you will have confirmed that setup is enabled and the database is reachable, and you can proceed to Step 1.
+
 ## Before you continue
 
 - `CosmosAllowSetup=true`

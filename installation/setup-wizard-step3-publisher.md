@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Configure public URL and publishing behavior.
 
+## Outcome
+
+After completing this step, the public URL and publishing behavior will be set so SkyCMS can generate correct output paths on first publish.
+
 ## Key fields
 
 - `PublisherUrl`

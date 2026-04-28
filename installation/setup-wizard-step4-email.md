@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Configure transactional email delivery for account workflows and notifications.
 
+## Outcome
+
+After completing this step, outbound email will be configured (or explicitly skipped) for account notifications and workflow emails.
+
 ## Provider options
 
 - SendGrid

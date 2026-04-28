@@ -1,9 +1,9 @@
 ---
 canonical_title: SkyCMS Docs Publisher
-description: Understand when to use SkyCMS.DocsPublisher and how it supports standalone documentation synchronization into SkyCMS.
+description: When to use SkyCMS.DocsPublisher and how it supports standalone documentation synchronization into SkyCMS.
 doc_type: Explanation
 product_area: installation
-user_intent: understand-and-adopt-skycms-docspublisher
+user_intent: adopt-skycms-docspublisher-for-standalone-documentation
 audience:
   - Developers
   - Documentation Maintainers

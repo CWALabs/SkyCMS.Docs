@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Configure CDN cache invalidation integration for published content.
 
+## Outcome
+
+After completing this step, CDN cache invalidation will be configured (or explicitly skipped) so publish actions can purge cached content automatically.
+
 ## Provider options
 
 - Azure Front Door

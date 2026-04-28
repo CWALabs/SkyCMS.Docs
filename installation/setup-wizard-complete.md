@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 The wizard has finished writing the initial configuration. Your next job is to confirm the environment is usable, setup is locked down again, and first publish succeeds.
 
+## Outcome
+
+After completing this guide, SkyCMS will be fully operational: the application will restart cleanly, the administrator account will be usable, and a test publish will succeed with setup disabled.
+
 ## What to do next
 
 1. Restart application services.

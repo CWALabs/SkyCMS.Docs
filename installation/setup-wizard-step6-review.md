@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Review all selected settings and finalize setup.
 
+## Outcome
+
+After completing this step, the initial configuration will be persisted, the administrator account created, and setup locked down — leaving SkyCMS ready for first use.
+
 ## What finalize does
 
 - Persists configuration.
