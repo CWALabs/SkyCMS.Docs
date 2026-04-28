@@ -313,6 +313,8 @@ nav:
       - NoOp Provider: configuration/email/none.md
       - Environment Variables: configuration/email/environment-variables.md
       - Reference: configuration/email/configuration-reference.md
+    - Deployment Identity:
+      - Azure Deployment Credentials: configuration/deployment/azure-deployment-credentials.md
 
   - Reference:
     - AI Context Pack: reference/ai-context-pack.md

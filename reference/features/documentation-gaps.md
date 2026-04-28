@@ -72,7 +72,7 @@ This follow-up backlog tracks places where SkyCMS depends on provider-issued API
 | --- | --- | --- |
 | DONE | [Cloudflare CDN cache purge](../../configuration/cdn/cloudflare-token-for-cache-purge.md) | Create least-privilege Cloudflare purge token and find the correct zone ID |
 | DONE | [Cloudflare R2 credentials](../../configuration/storage/cloudflare-r2-api-credentials.md) | Create bucket-scoped R2 credentials for SkyCMS storage and docs deployment |
-| TODO | Azure credentials and deployment identities | Document concrete setup for Azure service principals, managed identities, and deployment secrets |
+| DONE | Azure credentials and deployment identities — [Azure Deployment Credentials](../../configuration/deployment/azure-deployment-credentials.md) | Service principal, managed identity, and deployment secret setup for Azure deployments |
 | DONE | Azure credentials — [Azure Blob Credentials](../../configuration/storage/azure-blob-credentials.md), [Azure Front Door Credentials](../../configuration/cdn/azure-front-door-credentials.md), [ACS Credentials](../../configuration/email/azure-communication-services-credentials.md) | Service principal, managed identity, and connection string setup for Azure storage, CDN, and email providers |
 | DONE | AWS credentials — [S3 IAM Credentials](../../configuration/storage/aws-s3-iam-credentials.md), [CloudFront IAM Credentials](../../configuration/cdn/aws-cloudfront-iam-credentials.md) | IAM user, policy, and access key setup for S3 storage and CloudFront CDN invalidation |
 | DONE | Email and third-party provider tokens — [SendGrid API Key](../../configuration/email/sendgrid-api-key.md) | API key creation and permission scoping for SendGrid transactional email |
@@ -105,13 +105,13 @@ This backlog captures high-value pages that currently have no Mermaid diagrams b
 
 | Status | Page | Suggested diagram(s) | Why it helps |
 | --- | --- | --- | --- |
-| TODO | [for-developers/tenant-isolation-reference.md](../../for-developers/tenant-isolation-reference.md) | Isolation boundary map, request-to-tenant sequence | Core correctness and security comprehension |
-| TODO | [for-developers/content-delivery-architecture.md](../../for-developers/content-delivery-architecture.md) | Delivery topology, route-to-runtime map | Clarifies static/dynamic/hybrid runtime ownership |
-| TODO | [deployment/publishing-workflow.md](../../deployment/publishing-workflow.md) | Publish sequence, failure and retry flow | Operations and incident response clarity |
-| TODO | [deployment/cicd-pipelines.md](../../deployment/cicd-pipelines.md) | Pipeline stages and artifact flow | Faster onboarding for release process |
-| TODO | [reference/features/07-multi-tenancy-and-architecture.md](../../reference/features/07-multi-tenancy-and-architecture.md) | Feature-to-architecture relationship graph | Improves catalog scanning and concept linking |
-| TODO | [for-developers/publisher-architecture.md](../../for-developers/publisher-architecture.md) | Component dependency graph | Complements rendering-flow deep dive |
-| TODO | [for-developers/article-lifecycle.md](../../for-developers/article-lifecycle.md) | Lifecycle state machine | Faster understanding of content state transitions |
+| DONE | [for-developers/tenant-isolation-reference.md](../../for-developers/tenant-isolation-reference.md) | Isolation boundary map, request-to-tenant sequence | Core correctness and security comprehension |
+| DONE | [for-developers/content-delivery-architecture.md](../../for-developers/content-delivery-architecture.md) | Delivery topology, route-to-runtime map | Clarifies static/dynamic/hybrid runtime ownership |
+| DONE | [deployment/publishing-workflow.md](../../deployment/publishing-workflow.md) | Publish sequence, failure and retry flow | Operations and incident response clarity |
+| DONE | [deployment/cicd-pipelines.md](../../deployment/cicd-pipelines.md) | Pipeline stages and artifact flow | Faster onboarding for release process |
+| DONE | [reference/features/07-multi-tenancy-and-architecture.md](../../reference/features/07-multi-tenancy-and-architecture.md) | Feature-to-architecture relationship graph | Improves catalog scanning and concept linking |
+| DONE | [for-developers/publisher-architecture.md](../../for-developers/publisher-architecture.md) | Component dependency graph | Complements rendering-flow deep dive |
+| DONE | [for-developers/article-lifecycle.md](../../for-developers/article-lifecycle.md) | Lifecycle state machine | Faster understanding of content state transitions |
 
 ### Priority 2 (strong value)
 
