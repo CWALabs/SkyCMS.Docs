@@ -53,10 +53,10 @@ Then open `http://localhost:5000/___setup`, or the local URL you configured.
 
 ## Verify setup
 
-- the setup wizard completes,
-- admin login works,
-- file upload succeeds,
-- a test page publishes and renders.
+1. Complete the setup wizard at `http://localhost:5000/___setup` and confirm all steps pass.
+2. Sign in with the administrator account and verify the editor loads.
+3. Upload a test file and confirm it is accessible at the expected URL.
+4. Create and publish a test page and verify it renders correctly.
 
 ## Related guides
 

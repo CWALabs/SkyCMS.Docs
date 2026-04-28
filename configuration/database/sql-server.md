@@ -24,6 +24,14 @@ Use SQL Server or Azure SQL when you want enterprise-grade relational features, 
 
 After completing this guide, SkyCMS will connect to SQL Server or Azure SQL and use it as the primary relational data store.
 
+## Steps
+
+1. Set `ConnectionStrings__ApplicationDbContextConnection` in `appsettings.json` or as an environment variable with the server, database, and authentication values.
+2. Review the common configuration patterns below for SQL Server and Azure SQL.
+3. Start or restart SkyCMS to apply the configuration.
+4. Complete the setup wizard if this is a fresh installation.
+5. Verify the connection using the checklist below.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` with server, database, and authentication values.

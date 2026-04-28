@@ -25,6 +25,15 @@ This example shows a SkyCMS layout implemented with Tailwind CSS. It is a good f
 
 After working through this example, you should have a Tailwind-based layout shell with reusable structural utilities and clear extension points for design tokens.
 
+## Steps
+
+1. Create a new layout file in your SkyCMS site or theme folder.
+2. Copy the example HTML below as a starting point.
+3. Replace `{{ page.content }}` with your SkyCMS content region binding if not already present.
+4. Update the navigation links and color tokens to match your site structure and design system.
+5. Save the file and assign the layout to your target pages or sections in SkyCMS.
+6. Preview a page using the new layout and confirm styling and navigation render correctly.
+
 ## Good fit when
 
 - you already use a token-based design system,

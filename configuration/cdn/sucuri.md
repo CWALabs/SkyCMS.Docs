@@ -24,6 +24,13 @@ Use Sucuri when your site is protected or accelerated through Sucuri and you nee
 
 After completing this guide, SkyCMS will purge the Sucuri cache on publish using the configured API key and secret.
 
+## Steps
+
+1. Navigate to **Settings → CDN** in the SkyCMS admin panel.
+2. Select **Sucuri** as the provider.
+3. Enter the API key and API secret.
+4. Click **Test Connection** to confirm credentials, then click **Save**.
+
 ## Required settings
 
 - Sucuri API key,

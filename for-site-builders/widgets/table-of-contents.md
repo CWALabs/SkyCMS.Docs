@@ -30,6 +30,14 @@ Helpers to render navigation lists from the SkyCMS Table of Contents API and to 
 
 After completing this guide, you should be able to render a page-aware ToC and breadcrumb trail using the widget API.
 
+## Steps
+
+1. Add the page path meta tag to the document `<head>`: `<meta name="cwps-meta-path-url" content="section/page" />`.
+2. Add a container element for the ToC list to your markup (e.g., `<ul id="ulToc"></ul>`).
+3. Include `toc.js` in your layout or page template: `<script src="/lib/cosmos/toc.js"></script>`.
+4. Call `cosmos_cms_build_toc_default('ulToc')` for automatic path detection, or `cosmos_cms_build_toc(pagePath, ...)` to specify a root path manually.
+5. Load the page and verify navigation items and active link highlighting render correctly.
+
 ## API endpoints
 
 - GET `/Home/GetTOC?page=/{pagePath}`

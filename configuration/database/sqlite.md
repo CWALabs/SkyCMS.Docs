@@ -23,6 +23,13 @@ Use SQLite for local development, demos, and lightweight single-instance environ
 
 After completing this guide, SkyCMS will connect to the configured SQLite database file and use it for local development or demo workloads.
 
+## Steps
+
+1. Set `ConnectionStrings__ApplicationDbContextConnection` in `appsettings.json` or as an environment variable with a file-based data source path (e.g., `Data Source=skycms.db`).
+2. Confirm the file path is writable by the application process.
+3. Start or restart SkyCMS to apply the configuration.
+4. Verify the connection using the checklist below.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` to a file-based data source.

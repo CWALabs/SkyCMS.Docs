@@ -24,6 +24,13 @@ Configure transactional email delivery for account workflows and notifications.
 
 After completing this step, outbound email will be configured (or explicitly skipped) for account notifications and workflow emails.
 
+## Steps
+
+1. Select your email provider, or select **None** to skip email setup for now.
+2. Enter the required credentials and verified sender address for your chosen provider.
+3. Click **Test** to send a test email and confirm delivery.
+4. Click **Continue** once delivery is confirmed, or skip intentionally by selecting **None**.
+
 ## Provider options
 
 - SendGrid

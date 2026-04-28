@@ -24,6 +24,14 @@ Configure the object storage provider for uploaded files and media.
 
 After completing this step, SkyCMS will have a validated object storage configuration ready for media uploads and published artifacts.
 
+## Steps
+
+1. Select your storage provider from the dropdown.
+2. Enter the connection string for your chosen provider.
+3. Enter the public URL where storage objects are served, or `/` if serving from the site root.
+4. Click **Test Connection** to validate credentials and bucket or container access.
+5. Click **Continue** when the test succeeds.
+
 ## Supported providers
 
 - Azure Blob

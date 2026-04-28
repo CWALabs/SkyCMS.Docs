@@ -33,6 +33,14 @@ Client-side helpers for a simple search form that posts to the SkyCMS search end
 
 After completing this guide, you should have a working search form that sends requests to the SkyCMS endpoint and renders ordered search results with links.
 
+## Steps
+
+1. Add the required HTML elements with the expected IDs: `frmSearch`, `searchTxt`, `btnReset`, and `divResults`.
+2. Include `search.js` and the Font Awesome CSS in your layout or page template.
+3. Wire the form's `submit` event to a handler function that calls `postSearchData()`.
+4. Render results from the returned JSON array using `buildOrderedList`.
+5. Load the page and confirm the search form returns and displays results correctly.
+
 ## Endpoint
 
 - POST `/Home/CCMS___SEARCH`

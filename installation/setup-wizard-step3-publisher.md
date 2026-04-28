@@ -24,6 +24,13 @@ Configure public URL and publishing behavior.
 
 After completing this step, the public URL and publishing behavior will be set so SkyCMS can generate correct output paths on first publish.
 
+## Steps
+
+1. Enter the public URL for your site (e.g., `https://www.example.com`).
+2. Choose static or dynamic publishing mode based on your intended site architecture.
+3. Configure authentication requirements and allowed file types as needed.
+4. Click **Continue** when the URL and publishing settings are confirmed.
+
 ## Key fields
 
 - `PublisherUrl`

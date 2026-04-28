@@ -24,6 +24,14 @@ Use this provider when deploying in Google Cloud environments or when your organ
 
 After completing this guide, SkyCMS will store media and published artifacts in the configured Google Cloud Storage bucket using the provided service account credentials.
 
+## Steps
+
+1. Create or identify a service account with read and write access to the target bucket.
+2. Set `ConnectionStrings__StorageConnectionString` with the bucket name and service account credentials.
+3. Set `AzureBlobStorageEndPoint` to the public object URL base for the bucket.
+4. Start or restart SkyCMS to load the new settings.
+5. Verify operations using the checklist below.
+
 ## Required settings
 
 - bucket name,

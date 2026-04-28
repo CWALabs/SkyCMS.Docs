@@ -27,6 +27,15 @@ Builds breadcrumb navigation from the current page title and a meta tag that enc
 
 After completing this guide, you should be able to render a working breadcrumb trail that matches page-path metadata.
 
+## Steps
+
+1. Define the `breadCrumbId` variable in a `<script>` block before loading `crumbs.js` (e.g., `const breadCrumbId = 'olCrumbs';`).
+2. Add the path meta tag to the document `<head>`: `<meta name="cwps-meta-path-url" content="section/subsection/page" />`.
+3. Set `document.title` to a slash-separated breadcrumb string matching the path segments.
+4. Add the container element to your markup: `<ol id="olCrumbs"></ol>`.
+5. Include `crumbs.js` after the variable definition: `<script src="/lib/cosmos/crumbs.js"></script>`.
+6. Load the page and verify breadcrumb items render in order with working links.
+
 ## How it works
 
 The script expects these inputs:

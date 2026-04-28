@@ -24,6 +24,14 @@ Use Azure Blob Storage when deploying in Azure and you want managed object stora
 
 After completing this guide, SkyCMS will store media and published artifacts in the configured Azure Blob Storage container.
 
+## Steps
+
+1. Set `ConnectionStrings__StorageConnectionString` in `appsettings.json` or as an environment variable with your Azure Blob Storage connection string.
+2. Set `AzureBlobStorageEndPoint` to the blob or CDN URL where container objects are publicly served.
+3. Start or restart SkyCMS to load the new settings.
+4. Upload a test file and confirm it is accessible at the expected public URL.
+5. Verify operations using the checklist below.
+
 ## Required settings
 
 - blob connection string,

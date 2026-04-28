@@ -24,6 +24,14 @@ Review all selected settings and finalize setup.
 
 After completing this step, the initial configuration will be persisted, the administrator account created, and setup locked down — leaving SkyCMS ready for first use.
 
+## Steps
+
+1. Review the configuration summary for each section: storage, publisher URL, email, and CDN.
+2. Verify all values are correct before proceeding.
+3. Click **Finalize** to persist the configuration and initialize SkyCMS.
+4. Wait for the confirmation screen before closing the browser window.
+5. Proceed to post-installation steps shown on the completion screen.
+
 ## What finalize does
 
 - Persists configuration.

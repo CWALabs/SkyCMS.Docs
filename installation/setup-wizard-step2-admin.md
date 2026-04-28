@@ -24,6 +24,13 @@ Create the initial administrator account used to manage SkyCMS.
 
 After completing this step, the first administrator account will be created and ready to sign in after setup finishes.
 
+## Steps
+
+1. Enter the administrator email address.
+2. Set a strong password meeting the complexity requirements shown on screen.
+3. Confirm the password in the second field.
+4. Click **Continue** to create the administrator account.
+
 ## Required fields
 
 - Admin email

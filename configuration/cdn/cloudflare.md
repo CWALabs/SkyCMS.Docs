@@ -24,6 +24,14 @@ Use Cloudflare when your site is fronted by a Cloudflare zone and you want publi
 
 After completing this guide, SkyCMS will purge the Cloudflare zone cache on publish using the configured API token and zone ID.
 
+## Steps
+
+1. Follow the [Create a Cloudflare API Token](./cloudflare-token-for-cache-purge.md) guide to generate a token with Zone Cache Purge permissions.
+2. Navigate to **Settings → CDN** in the SkyCMS admin panel.
+3. Select **Cloudflare** as the provider.
+4. Enter the zone ID and API token.
+5. Click **Test Connection** to confirm permissions, then click **Save**.
+
 ## Required settings
 
 - zone ID,

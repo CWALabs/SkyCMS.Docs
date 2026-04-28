@@ -24,6 +24,14 @@ Use Azure Cosmos DB when you need elastic scale, low-latency global distribution
 
 After completing this guide, SkyCMS will connect to Azure Cosmos DB and use it as the primary data store for content, identity, and runtime state.
 
+## Steps
+
+1. Set `ConnectionStrings__ApplicationDbContextConnection` in `appsettings.json` or as an environment variable, including the Cosmos DB account endpoint, account key, and database name.
+2. Review the data modeling and partitioning guidance below before seeding data.
+3. Start or restart SkyCMS to apply the configuration.
+4. Complete the setup wizard if this is a fresh installation.
+5. Verify the connection using the checklist below.
+
 ## Data modeling guidance
 
 - design for partition-aware access patterns,

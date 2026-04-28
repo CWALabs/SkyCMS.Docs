@@ -24,6 +24,14 @@ Use Azure Front Door when you need global edge routing and Azure-native cache pu
 
 After completing this guide, SkyCMS will purge the Azure Front Door cache on the configured endpoint after each content publish.
 
+## Steps
+
+1. Navigate to **Settings → CDN** in the SkyCMS admin panel.
+2. Select **Azure Front Door** as the provider.
+3. Enter the subscription ID, resource group, Front Door profile name, and endpoint name.
+4. Assign the identity or service principal with cache purge rights as described in the routing section below.
+5. Click **Test Connection** to confirm permissions, then click **Save**.
+
 ## Required settings
 
 - subscription ID,

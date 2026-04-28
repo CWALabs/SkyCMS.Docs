@@ -27,6 +27,14 @@ Builds a simple list of links (child pages) under a given root path using the Sk
 
 After completing this guide, you should be able to render a navigation list for any valid root path and style it with optional list and anchor classes.
 
+## Steps
+
+1. Add a `<ul>` or `<ol>` container element with the target `id` to your page markup.
+2. Include `nav-builder.js` in your layout or page template: `<script src="/lib/cosmos/nav-builder.js"></script>`.
+3. Call `ccms___NavBuilder(pagePath, navElementId)` after the DOM is ready, using the desired root path without a leading slash.
+4. Optionally pass `liClassName` and `anchorClassName` to apply CSS classes to generated list items and links.
+5. Load the page and verify the navigation list renders with the correct child-page links.
+
 ## How it works
 
 - Fetches `/Home/GetTOC?page=/{pagePath}` (GET) and expects JSON with an `Items` array.

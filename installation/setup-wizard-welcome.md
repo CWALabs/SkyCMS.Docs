@@ -24,6 +24,13 @@ The welcome screen validates prerequisites before entering the guided setup flow
 
 After completing this step, you will have confirmed that setup is enabled and the database is reachable, and you can proceed to Step 1.
 
+## Steps
+
+1. Confirm `CosmosAllowSetup=true` is set in your environment configuration.
+2. Confirm a valid database connection string is present in `ConnectionStrings__ApplicationDbContextConnection`.
+3. Navigate to `/___setup` on your SkyCMS site to open the wizard.
+4. Click **Continue** when all prerequisite checks pass.
+
 ## Before you continue
 
 - `CosmosAllowSetup=true`

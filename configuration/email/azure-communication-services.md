@@ -24,6 +24,14 @@ Use Azure Communication Services when you want Azure-managed email delivery and 
 
 After completing this guide, SkyCMS will deliver outbound email through Azure Communication Services using the configured connection string and verified sender identity.
 
+## Steps
+
+1. Navigate to **Settings → Email** in the SkyCMS admin panel.
+2. Select **Azure Communication Services** as the provider.
+3. Enter your ACS connection string and verified sender domain or address.
+4. Click **Test** to send a test message and confirm delivery.
+5. Click **Save** and verify using the checklist below.
+
 ## Required settings
 
 - ACS connection string,

@@ -24,6 +24,14 @@ Use SMTP when integrating with an existing mail relay or provider that exposes a
 
 After completing this guide, SkyCMS will deliver outbound email through the configured SMTP relay using the supplied host, port, and authentication settings.
 
+## Steps
+
+1. Navigate to **Settings → Email** in the SkyCMS admin panel.
+2. Select **SMTP** as the provider.
+3. Enter the required fields: host, port, username, password, sender address, and TLS or SSL mode.
+4. Click **Test** to send a test message and confirm delivery.
+5. Click **Save** and verify using the checklist below.
+
 ## Required settings
 
 - SMTP host,

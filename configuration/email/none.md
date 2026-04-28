@@ -24,6 +24,13 @@ Use this mode when outbound email is intentionally disabled for local developmen
 
 After completing this guide, SkyCMS will run without outbound email delivery, and workflows that depend on email will continue without sending.
 
+## Steps
+
+1. Navigate to **Settings → Email** in the SkyCMS admin panel.
+2. Select **None** as the provider.
+3. Click **Save** to disable outbound email.
+4. Verify that email-dependent workflows continue running without delivery errors in application logs.
+
 ## Behavior
 
 - no provider send calls are executed,

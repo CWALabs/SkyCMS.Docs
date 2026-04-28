@@ -30,6 +30,15 @@ Small helpers for posting forms with the Cosmos antiforgery token and basic elem
 
 After completing this guide, you should be able to submit forms through SkyCMS with a valid antiforgery token and clear error handling.
 
+## Steps
+
+1. Add a `<form>` element with a `name` attribute to your page.
+2. Include `forms.js` in your layout or page template: `<script src="/lib/cosmos/forms.js"></script>`.
+3. Attach a `submit` event listener that calls `event.preventDefault()`.
+4. Inside the handler, call `await ccms___PostForm(endpoint, formName)` with your API endpoint and form name.
+5. Check `response.ok` and surface errors to the user as needed.
+6. Verify that a valid submission reaches the endpoint and passes antiforgery validation.
+
 ## Requirements
 
 - Server endpoint `/ccms__antiforgery/token` must return a response with an `XSRF-TOKEN` header.

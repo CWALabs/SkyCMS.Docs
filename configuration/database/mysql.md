@@ -24,6 +24,13 @@ Use MySQL when your team or hosting platform is MySQL-centric and you want relat
 
 After completing this guide, SkyCMS will connect to MySQL and use it as the primary relational data store.
 
+## Steps
+
+1. Set `ConnectionStrings__ApplicationDbContextConnection` in `appsettings.json` or as an environment variable using the Server, Port, Uid, Pwd, and Database values.
+2. Start or restart SkyCMS to apply the configuration.
+3. Complete the setup wizard if this is a fresh installation.
+4. Verify the connection using the checklist below.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` with server, port, user, password, and database.
