@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use MySQL when your team or hosting platform is MySQL-centric and you want relational persistence for SkyCMS workloads.
 
+## Outcome
+
+After completing this guide, SkyCMS will connect to MySQL and use it as the primary relational data store.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` with server, port, user, password, and database.

@@ -3,7 +3,7 @@ canonical_title: SkyCMS Configuration Overview
 description: Learn how SkyCMS configuration is organized, where to set required values, and how to validate readiness before deployment.
 doc_type: Explanation
 product_area: configuration
-user_intent: understand-and-apply-skycms-configuration
+user_intent: plan-skycms-configuration
 audience:
 	- Developers
 	- Administrators

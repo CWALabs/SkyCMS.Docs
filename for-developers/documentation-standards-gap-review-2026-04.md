@@ -1,9 +1,9 @@
 ---
 canonical_title: SkyCMS Documentation Standards Gap Review (2026-04)
-description: This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.
+description: Compliance audit of SkyCMS documentation against Documentation Standards Stack v1, with a phased implementation plan and progress tracking.
 doc_type: Reference
 product_area: development
-user_intent: understand-skycms-documentation-standards-gap-review-2026-04
+user_intent: review-skycms-documentation-standards-gap-and-implementation-plan
 audience:
   - Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.
+Compliance audit of SkyCMS documentation against Documentation Standards Stack v1, with a phased implementation plan and progress tracking.
 
 ## Scope and method
 

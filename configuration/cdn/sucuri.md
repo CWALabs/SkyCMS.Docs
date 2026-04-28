@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Sucuri when your site is protected or accelerated through Sucuri and you need cache purge integration after publish.
 
+## Outcome
+
+After completing this guide, SkyCMS will purge the Sucuri cache on publish using the configured API key and secret.
+
 ## Required settings
 
 - Sucuri API key,

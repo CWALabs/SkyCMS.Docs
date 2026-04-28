@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Azure Blob Storage when deploying in Azure and you want managed object storage with robust access control and lifecycle options.
 
+## Outcome
+
+After completing this guide, SkyCMS will store media and published artifacts in the configured Azure Blob Storage container.
+
 ## Required settings
 
 - blob connection string,

@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs a connection string to send email through Azure Communication Services (ACS).
 
+## Outcome
+
+After completing this guide, you will have an Azure Communication Services connection string ready to store as a SkyCMS email secret.
+
 ## What SkyCMS needs
 
 SkyCMS uses an ACS connection string to authenticate against the email send API. The required value is:

@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use SMTP when integrating with an existing mail relay or provider that exposes authenticated SMTP endpoints.
 
+## Outcome
+
+After completing this guide, SkyCMS will deliver outbound email through the configured SMTP relay using the supplied host, port, and authentication settings.
+
 ## Required settings
 
 - SMTP host,

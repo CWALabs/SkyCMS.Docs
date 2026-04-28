@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs credentials to connect to Azure Blob Storage for media or asset storage.
 
+## Outcome
+
+After completing this guide, you will have the connection string and container name needed to configure SkyCMS Azure Blob Storage.
+
 ## What SkyCMS needs
 
 SkyCMS uses a connection string for Azure Blob Storage. The connection string bundles the account name, key, and endpoint into a single value.

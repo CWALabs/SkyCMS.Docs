@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs to purge the Azure Front Door cache after content is published.
 
+## Outcome
+
+After completing this guide, you will have a service principal with the required RBAC role and a client secret, along with the subscription, resource group, Front Door profile, and endpoint identifiers needed for SkyCMS Azure Front Door cache purging.
+
 ## What SkyCMS needs
 
 SkyCMS uses a service principal with the appropriate RBAC role to call the Azure Front Door purge API. The required values are:

@@ -24,6 +24,10 @@ Use this guide when you need to:
 - map hostnames to tenant configuration,
 - validate data and content isolation across tenants.
 
+## Outcome
+
+After completing this guide, SkyCMS will resolve tenant context from incoming domain headers, apply per-tenant configuration, and isolate content and settings across tenant boundaries.
+
 ## Tenant resolution model
 
 SkyCMS resolves tenant context from incoming host/domain information and uses that context for settings, content access, and publishing behavior.

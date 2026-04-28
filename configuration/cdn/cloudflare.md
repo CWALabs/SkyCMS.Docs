@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Cloudflare when your site is fronted by a Cloudflare zone and you want publish-time cache purging with scoped API tokens.
 
+## Outcome
+
+After completing this guide, SkyCMS will purge the Cloudflare zone cache on publish using the configured API token and zone ID.
+
 ## Required settings
 
 - zone ID,

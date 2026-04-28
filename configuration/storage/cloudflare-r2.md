@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Cloudflare R2 when you need S3-compatible object storage with Cloudflare ecosystem integration and egress-friendly economics.
 
+## Outcome
+
+After completing this guide, SkyCMS will store media and published artifacts in the configured Cloudflare R2 bucket using S3-compatible access.
+
 ## Required settings
 
 - account-specific endpoint,

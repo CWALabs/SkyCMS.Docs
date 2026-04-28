@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use CloudFront when hosting behind AWS edge distributions and you want automated invalidations after content publish.
 
+## Outcome
+
+After completing this guide, SkyCMS will trigger CloudFront cache invalidations on publish using the configured IAM credentials and distribution ID.
+
 ## Required settings
 
 - distribution ID,

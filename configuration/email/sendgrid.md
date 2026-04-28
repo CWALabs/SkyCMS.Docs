@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use SendGrid when you need managed transactional email delivery with API-key authentication.
 
+## Outcome
+
+After completing this guide, SkyCMS will deliver outbound email through SendGrid using the configured API key and verified sender identity.
+
 ## Required settings
 
 - provider mode set to SendGrid,

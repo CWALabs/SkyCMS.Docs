@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use SQL Server or Azure SQL when you want enterprise-grade relational features, mature tooling, and straightforward operational workflows.
 
+## Outcome
+
+After completing this guide, SkyCMS will connect to SQL Server or Azure SQL and use it as the primary relational data store.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` with server, database, and authentication values.

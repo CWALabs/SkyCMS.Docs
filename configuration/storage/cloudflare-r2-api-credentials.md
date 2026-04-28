@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs Cloudflare R2 credentials for documentation assets, media storage, or other S3-compatible object storage flows.
 
+## Outcome
+
+After completing this guide, you will have a bucket-scoped Cloudflare R2 access key pair and endpoint ready to store as SkyCMS storage credentials.
+
 ## What SkyCMS needs
 
 SkyCMS needs these R2 values:

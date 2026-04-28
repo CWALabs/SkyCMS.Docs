@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Azure Front Door when you need global edge routing and Azure-native cache purging after publish.
 
+## Outcome
+
+After completing this guide, SkyCMS will purge the Azure Front Door cache on the configured endpoint after each content publish.
+
 ## Required settings
 
 - subscription ID,

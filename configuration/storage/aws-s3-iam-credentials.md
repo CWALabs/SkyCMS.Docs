@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs AWS credentials to read and write objects in an S3 bucket used for media storage or asset delivery.
 
+## Outcome
+
+After completing this guide, you will have a least-privilege IAM user with an access key scoped to read and write operations on the target S3 bucket, ready to store as SkyCMS storage credentials.
+
 ## What SkyCMS needs
 
 SkyCMS needs these values for S3 storage:

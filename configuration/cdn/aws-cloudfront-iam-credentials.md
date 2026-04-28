@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs AWS credentials to trigger CloudFront cache invalidations after content is published.
 
+## Outcome
+
+After completing this guide, you will have a least-privilege IAM user with an access key scoped to CloudFront cache invalidation on the target distribution, ready to store as SkyCMS CDN credentials.
+
 ## What SkyCMS needs
 
 SkyCMS needs these values for CloudFront CDN purge:

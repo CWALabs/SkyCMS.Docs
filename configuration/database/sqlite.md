@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Use SQLite for local development, demos, and lightweight single-instance environments.
 
+## Outcome
+
+After completing this guide, SkyCMS will connect to the configured SQLite database file and use it for local development or demo workloads.
+
 ## Required settings
 
 Set `ConnectionStrings:ApplicationDbContextConnection` to a file-based data source.

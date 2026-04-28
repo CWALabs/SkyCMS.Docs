@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use this guide when SkyCMS needs a SendGrid API key to send transactional email such as contact form notifications, account emails, or workflow alerts.
 
+## Outcome
+
+After completing this guide, you will have a least-privilege SendGrid API key scoped to Mail Send, ready to store as a SkyCMS email secret.
+
 ## What SkyCMS needs
 
 SkyCMS needs one value for SendGrid email delivery:

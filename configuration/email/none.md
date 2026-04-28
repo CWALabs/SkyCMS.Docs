@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use this mode when outbound email is intentionally disabled for local development, isolated test environments, or deployments that do not require notifications.
 
+## Outcome
+
+After completing this guide, SkyCMS will run without outbound email delivery, and workflows that depend on email will continue without sending.
+
 ## Behavior
 
 - no provider send calls are executed,

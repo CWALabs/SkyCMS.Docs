@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Azure Cosmos DB when you need elastic scale, low-latency global distribution, and document-oriented storage patterns.
 
+## Outcome
+
+After completing this guide, SkyCMS will connect to Azure Cosmos DB and use it as the primary data store for content, identity, and runtime state.
+
 ## Data modeling guidance
 
 - design for partition-aware access patterns,

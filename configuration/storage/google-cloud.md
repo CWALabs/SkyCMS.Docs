@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use this provider when deploying in Google Cloud environments or when your organization standardizes on GCS buckets and IAM.
 
+## Outcome
+
+After completing this guide, SkyCMS will store media and published artifacts in the configured Google Cloud Storage bucket using the provided service account credentials.
+
 ## Required settings
 
 - bucket name,

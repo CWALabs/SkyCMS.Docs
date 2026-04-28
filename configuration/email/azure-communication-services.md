@@ -20,6 +20,10 @@ last_reviewed: 2026-04-27
 
 Use Azure Communication Services when you want Azure-managed email delivery and centralized Azure operations.
 
+## Outcome
+
+After completing this guide, SkyCMS will deliver outbound email through Azure Communication Services using the configured connection string and verified sender identity.
+
 ## Required settings
 
 - ACS connection string,
