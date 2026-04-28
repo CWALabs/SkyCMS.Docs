@@ -1,3 +1,19 @@
+---
+canonical_title: Feature Catalog: Blogging
+description: Feature inventory for SkyCMS blogging — blog streams, post management, banner images, rendering, and the Blog API.
+doc_type: Reference
+product_area: blogging
+user_intent: reference-blogging-features
+audience:
+  - Editors
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Blogging
 
 SkyCMS includes a dedicated blogging subsystem with support for multiple independent blog streams, post management, banner images, and rendering via dedicated blog templates.

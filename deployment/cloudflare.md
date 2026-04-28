@@ -1,7 +1,28 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Deploy with Cloudflare
+description: Configure SkyCMS to use Cloudflare for CDN caching, R2 object storage, and automated documentation deployment.
+doc_type: How-to
+product_area: deployment
+user_intent: deploy-skycms-with-cloudflare
+audience:
+  - Administrators
+  - DevOps Engineers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Deploy with Cloudflare
+
+## Summary
+
+Configure SkyCMS to use Cloudflare for CDN caching, R2 object storage, and automated documentation deployment.
+
+## Outcome
+
+After completing this guide, SkyCMS will purge Cloudflare edge caches on publish, serve static docs and media from R2, and deploy documentation automatically via the GitHub Actions workflow.
 
 Cloudflare provides edge hosting, CDN caching, and static asset storage for SkyCMS. This guide covers R2 object storage for docs and media, CDN cache purging, and the automated documentation deployment pipeline.
 

@@ -1,3 +1,20 @@
+---
+canonical_title: Feature Catalog: File & Media Management
+description: Feature inventory for SkyCMS file management — browser-based file manager, multi-cloud blob storage, image processing, and content delivery.
+doc_type: Reference
+product_area: file-management
+user_intent: reference-file-and-media-management-features
+audience:
+  - Editors
+  - Administrators
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # File & Media Management
 
 SkyCMS provides a browser-based file manager for uploading, organizing, editing, and serving media assets and code files. Files are stored in cloud blob storage with a unified abstraction layer that supports multiple cloud providers.

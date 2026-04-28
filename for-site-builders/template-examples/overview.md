@@ -19,7 +19,7 @@ last_reviewed: 2026-04-27
 
 ## Summary
 
-This section provides example page templates for common SkyCMS page types using the same framework options featured in the layout examples.
+Example SkyCMS page templates for common page types — landing pages, blog posts, generic articles, and information pages — using the same framework options as the layout examples.
 
 The goal is not to prescribe one exact implementation, but to show how the same content model can be expressed with different framework conventions while preserving clear editable regions and safe template structure.
 

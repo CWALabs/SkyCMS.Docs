@@ -1,3 +1,20 @@
+---
+canonical_title: Feature Catalog: Multi-Tenancy & Architecture
+description: Feature inventory for SkyCMS multi-tenancy and architecture — tenant resolution, data isolation, FlexDb, CQRS, SignalR, and Publisher architecture.
+doc_type: Reference
+product_area: architecture
+user_intent: reference-multi-tenancy-and-architecture-features
+audience:
+  - Developers
+  - Administrators
+  - Evaluators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Multi-Tenancy & Architecture
 
 SkyCMS is designed as a multi-tenant platform from the ground up. A single deployment can serve multiple independent websites, each with its own content, users, storage, database, and configuration — while sharing the same application infrastructure.

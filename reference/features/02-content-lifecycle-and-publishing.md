@@ -1,3 +1,20 @@
+---
+canonical_title: Feature Catalog: Content Lifecycle & Publishing
+description: Feature inventory for SkyCMS content lifecycle — article states, versioning, publishing modes, scheduling, URL management, and CDN integration.
+doc_type: Reference
+product_area: publishing
+user_intent: reference-content-lifecycle-and-publishing-features
+audience:
+  - Editors
+  - Administrators
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Content Lifecycle & Publishing
 
 SkyCMS provides a structured content lifecycle from draft creation through publication, with versioning, scheduling, URL management, and multiple publishing modes to fit different team workflows.

@@ -1,9 +1,9 @@
 ---
 canonical_title: Development Guide - Sky.Cms.Api.Shared
-description: This guide explains how to extend the Sky.Cms.Api.Shared API with new endpoints and features.
-doc_type: Reference
+description: How to extend Sky.Cms.Api.Shared with new endpoints — from model and handler creation through DI registration and controller wiring.
+doc_type: How-to
 product_area: development
-user_intent: understand-development-guide-sky-cms-api-shared
+user_intent: extend-sky-cms-api-shared-with-new-endpoints
 audience:
   - Backend Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This guide explains how to extend the Sky.Cms.Api.Shared API with new endpoints and features.
+How to extend Sky.Cms.Api.Shared with new endpoints — from model and handler creation through DI registration and controller wiring.
 
 ## Overview
 

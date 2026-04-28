@@ -1,6 +1,6 @@
 ---
 canonical_title: EF Cross-Provider Compatibility Guide
-description: SkyCMS supports four database providers through a single codebase: **MS SQL Server**, **MySQL**, **SQLite**, and **Azure Cosmos DB**. This guide documents the query restrictions, patterns, and provider detection strategy that maintain compatibility across all four.
+description: Query restrictions, EF patterns, and provider detection strategy for maintaining compatibility across MS SQL Server, MySQL, SQLite, and Azure Cosmos DB.
 doc_type: How-to
 product_area: development
 user_intent: implement-ef-cross-provider-compatibility-guide
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-SkyCMS supports four database providers through a single codebase: **MS SQL Server**, **MySQL**, **SQLite**, and **Azure Cosmos DB**. This guide documents the query restrictions, patterns, and provider detection strategy that maintain compatibility across all four.
+Query restrictions, EF patterns, and provider detection strategy for maintaining compatibility across MS SQL Server, MySQL, SQLite, and Azure Cosmos DB.
 
 ## Provider Detection
 

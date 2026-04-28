@@ -3,7 +3,7 @@ canonical_title: Blog API Reference
 description: JSON API endpoints for programmatic access to SkyCMS blog data.
 doc_type: Reference
 product_area: development
-user_intent: understand-blog-api-reference
+user_intent: reference-blog-api-endpoints
 audience:
   - Developers
 difficulty: intermediate

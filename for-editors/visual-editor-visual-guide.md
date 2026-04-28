@@ -19,8 +19,6 @@ last_reviewed: 2026-04-27
 
 Use this guide to recognize the main parts of the Visual Editor before you start editing or when you need to explain the interface to other editors.
 
-This guide explains what editors should expect to see in the Visual Editor interface.
-
 ## Open and Navigate the Editor
 
 ### From the page you want to edit

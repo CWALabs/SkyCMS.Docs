@@ -1,7 +1,20 @@
-<!-- Audience: All -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Common/ArticleType.cs, SkyCMS/Common/Data/Article.cs, SkyCMS/Editor/Services/Publishing/PublishingService.cs, SkyCMS/Editor/Data/Logic/ArticleEditLogic.cs -->
+---
+canonical_title: Glossary
+description: Definitions for core SkyCMS terms used throughout the documentation.
+doc_type: Reference
+product_area: platform
+user_intent: look-up-skycms-terminology
+audience:
+  - Developers
+  - Editors
+  - Site Builders
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Glossary
 

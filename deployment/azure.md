@@ -1,9 +1,28 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/InstallScripts/Azure -->
+---
+canonical_title: Deploy to Azure
+description: Provision and deploy SkyCMS to Azure using the PowerShell install script and Bicep infrastructure templates.
+doc_type: How-to
+product_area: deployment
+user_intent: deploy-skycms-to-azure
+audience:
+  - Administrators
+  - DevOps Engineers
+difficulty: intermediate
+version: current
+status: draft
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Deploy to Azure
+
+## Summary
+
+Provision and deploy SkyCMS to Azure using the PowerShell install script and Bicep infrastructure templates.
+
+## Outcome
+
+After completing this guide, SkyCMS Editor will be running in Azure App Service backed by Azure SQL, Key Vault, and a managed identity, with optional blob storage, email, and Application Insights.
 
 ## Prerequisites
 

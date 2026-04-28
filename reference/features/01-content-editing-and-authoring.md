@@ -1,3 +1,19 @@
+---
+canonical_title: Feature Catalog: Content Editing & Authoring
+description: Feature inventory for SkyCMS editing experiences — Visual Editor, Page Builder, Code Editor, AI Assistant, Image Editor, and real-time collaborative editing.
+doc_type: Reference
+product_area: content-editing
+user_intent: reference-content-editing-and-authoring-features
+audience:
+  - Editors
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Content Editing & Authoring
 
 SkyCMS provides four distinct editing experiences, allowing content creators to choose the tool that matches their skill level and task. All editors share a common save/publish pipeline, version history, and real-time collaboration layer.

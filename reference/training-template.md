@@ -1,7 +1,19 @@
-<!-- Audience: Trainers, Project Managers, Team Leads -->
-<!-- Type: Reference Template -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Templates/Training-Document-Template.md -->
+---
+canonical_title: Training Document Template
+description: Copyable template for SkyCMS training documentation — learning outcomes, module-by-module instruction, exercises, troubleshooting, and quick reference cards.
+doc_type: Reference
+product_area: platform
+user_intent: write-training-documentation-using-skycms-template
+audience:
+  - Administrators
+  - Trainers
+  - Team Leads
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Training Document Template
 

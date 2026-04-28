@@ -21,8 +21,6 @@ last_reviewed: 2026-04-27
 
 Use this page when you need to identify a toolbar control, understand which editing modes expose it, or confirm how a formatting or insert action behaves.
 
-This page explains what each common toolbar button or dropdown does, how to use it, and where it is available.
-
 ## Mode legend
 
 - `T` = title mode

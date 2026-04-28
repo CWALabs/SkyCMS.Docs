@@ -1,9 +1,25 @@
-<!-- Audience: DevOps, Release Managers, and Maintainers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/LICENSES-DISTRIBUTION.md -->
+---
+canonical_title: Licensing and Distribution
+description: Licensing model, distribution requirements, and pre-release checklist for SkyCMS deployments and release builds.
+doc_type: Reference
+product_area: release-management
+user_intent: verify-licensing-compliance-for-skycms-deployment
+audience:
+  - Administrators
+  - DevOps Engineers
+  - Release Managers
+difficulty: beginner
+version: current
+status: draft
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Licensing and Distribution
+
+## Summary
+
+Licensing model, distribution requirements, and pre-release checklist for SkyCMS deployments and release builds.
 
 ## When to use this page
 

@@ -1,3 +1,20 @@
+---
+canonical_title: Feature Catalog: Deployment & Infrastructure
+description: Feature inventory for SkyCMS deployment — Azure, AWS, Docker, Cloudflare, Setup Wizard, DocsPublisher, CI/CD pipelines, and licensing.
+doc_type: Reference
+product_area: deployment
+user_intent: reference-deployment-and-infrastructure-features
+audience:
+  - Administrators
+  - Developers
+  - Evaluators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Deployment & Infrastructure
 
 SkyCMS supports multiple deployment targets and hosting models — from one-click Azure Marketplace installs to Docker containers, AWS, and Cloudflare edge hosting. The system includes a guided setup wizard, automated demo provisioning, and a documentation publishing pipeline.

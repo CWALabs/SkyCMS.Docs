@@ -19,7 +19,7 @@ last_reviewed: 2026-04-27
 
 ## Summary
 
-This page records notable changes for SkyCMS documentation and release-adjacent guidance.
+Notable SkyCMS documentation and platform release changes, in reverse chronological order.
 
 ## Versioning policy
 

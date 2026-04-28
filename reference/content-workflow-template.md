@@ -1,7 +1,19 @@
-<!-- Audience: Content Managers, Editors, Team Leads -->
-<!-- Type: Reference Template -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Templates/Content-Workflow-Template.md -->
+---
+canonical_title: Content Workflow Template
+description: Copyable template for documenting a content creation process, covering assignment, drafting, review, revision, and publication stages.
+doc_type: Reference
+product_area: content-editing
+user_intent: document-content-workflow-using-skycms-template
+audience:
+  - Administrators
+  - Content Managers
+  - Team Leads
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Content Workflow Template
 

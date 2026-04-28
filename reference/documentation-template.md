@@ -1,7 +1,18 @@
-<!-- Audience: All Contributors -->
-<!-- Type: Reference Template -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Templates/Documentation-Template.md -->
+---
+canonical_title: Documentation Page Template
+description: Standard template for new SkyCMS documentation pages — required frontmatter fields, section structure, and writing conventions.
+doc_type: Reference
+product_area: platform
+user_intent: write-new-documentation-page-using-skycms-template
+audience:
+  - Contributors
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Documentation Page Template
 

@@ -3,7 +3,7 @@ canonical_title: Contact Form API Documentation
 description: Configure, deploy, and extend the SkyCMS Contact Form API — including CAPTCHA validation, rate limiting, and email notification.
 doc_type: Reference
 product_area: development
-user_intent: understand-contact-form-api-documentation
+user_intent: configure-and-extend-contact-form-api
 audience:
   - Backend Developers
 difficulty: intermediate

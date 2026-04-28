@@ -1,3 +1,19 @@
+---
+canonical_title: Documentation Gaps
+description: Running inventory of SkyCMS features that lack dedicated documentation or need improvement, organized by functional area.
+doc_type: Reference
+product_area: platform
+user_intent: identify-and-prioritize-documentation-gaps
+audience:
+  - Contributors
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Documentation Gaps
 
 A running inventory of SkyCMS features that lack dedicated documentation or need improvement. Use this list to prioritize documentation work.

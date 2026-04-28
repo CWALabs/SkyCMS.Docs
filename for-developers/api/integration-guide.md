@@ -1,9 +1,9 @@
 ---
 canonical_title: Contact Form API Integration Guide
-description: This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.
+description: How to integrate the Contact Form API into the SkyCMS Editor web app — library include, form submission endpoint, and multi-tenant header setup.
 doc_type: How-to
 product_area: development
-user_intent: understand-contact-form-api-integration-guide
+user_intent: integrate-contact-form-api-into-skycms-editor
 audience:
   - Full-Stack Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.
+How to integrate the Contact Form API into the SkyCMS Editor web app — library include, form submission endpoint, and multi-tenant header setup.
 
 ## Overview
 

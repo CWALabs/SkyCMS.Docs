@@ -1,3 +1,22 @@
+---
+canonical_title: SkyCMS Feature Catalog
+description: Comprehensive inventory of every feature built into SkyCMS, organized by functional area for developers, editors, site builders, and administrators.
+doc_type: Reference
+product_area: platform
+user_intent: explore-skycms-feature-catalog
+audience:
+  - Developers
+  - Editors
+  - Site Builders
+  - Administrators
+  - Evaluators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # SkyCMS Feature Catalog
 
 A comprehensive inventory of every feature built into SkyCMS, organized by functional area. This catalog is intended for developers, editors, site builders, administrators, and anyone evaluating SkyCMS as a content management platform.

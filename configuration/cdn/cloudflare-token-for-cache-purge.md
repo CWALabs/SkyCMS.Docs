@@ -1,9 +1,28 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Create a Cloudflare API Token for Cache Purge
+description: How to create and scope a Cloudflare API token for SkyCMS cache purge integration — including Zone ID lookup, permission selection, and secret storage.
+doc_type: How-to
+product_area: cdn
+user_intent: create-cloudflare-token-for-skycms-cache-purge
+audience:
+  - Administrators
+  - DevOps Engineers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Create a Cloudflare API Token for Cache Purge
 
-Use this guide when SkyCMS needs to purge cached pages from Cloudflare after publish.
+## Summary
+
+How to create and scope a Cloudflare API token for SkyCMS cache purge integration — including Zone ID lookup, permission selection, and secret storage.
+
+## Outcome
+
+After completing this guide, you will have a Cloudflare API token with the correct `Zone -> Cache Purge` permission scoped to your target zone, stored as `CLOUDFLARE_API_TOKEN` alongside the matching `CLOUDFLARE_ZONE_ID`.
 
 ## What SkyCMS needs
 

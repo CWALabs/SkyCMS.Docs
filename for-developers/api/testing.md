@@ -1,9 +1,9 @@
 ---
 canonical_title: Testing Guide - Sky.Cms.Api.Shared
-description: This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.
+description: Testing strategies for Sky.Cms.Api.Shared — unit tests with Moq, integration tests with TestServer, and recommended project structure.
 doc_type: How-to
 product_area: development
-user_intent: understand-testing-guide-sky-cms-api-shared
+user_intent: write-and-run-tests-for-sky-cms-api-shared
 audience:
   - Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.
+Testing strategies for Sky.Cms.Api.Shared — unit tests with Moq, integration tests with TestServer, and recommended project structure.
 
 ## Overview
 

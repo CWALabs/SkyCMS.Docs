@@ -1,3 +1,20 @@
+---
+canonical_title: Feature Catalog: Site Building
+description: Feature inventory for SkyCMS site building — the Layouts-Templates-Articles architecture, published pages, widgets, editable regions, and style guide support.
+doc_type: Reference
+product_area: site-building
+user_intent: reference-site-building-features
+audience:
+  - Site Builders
+  - Developers
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Site Building
 
 SkyCMS uses a three-layer authoring architecture — **Layouts → Templates → Articles** — with **Published Pages** as the public output. This separates site-wide structure from reusable content patterns and authored content while keeping the public delivery model explicit.

@@ -19,7 +19,7 @@ last_reviewed: 2026-04-27
 
 ## Summary
 
-This section provides example SkyCMS layout implementations using several widely adopted CSS frameworks.
+Example SkyCMS layout implementations using Bootstrap 5, Tailwind CSS, Bulma, Foundation, and a no-framework approach.
 
 These examples are intentionally focused on **server-rendered page layouts**, not single-page application shells. Each example shows how to structure a layout with:
 

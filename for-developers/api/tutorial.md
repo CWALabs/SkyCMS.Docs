@@ -1,9 +1,9 @@
 ---
 canonical_title: Tutorial: Adding a Contact Form to Your Website
-description: This step-by-step tutorial walks you through adding a working contact form to your website using the SkyCMS Contact Form API.
+description: Step-by-step tutorial for adding a working contact form to your website using the SkyCMS Contact Form API.
 doc_type: How-to
 product_area: development
-user_intent: understand-tutorial-adding-a-contact-form-to-your-website
+user_intent: add-contact-form-to-website-using-skycms-api
 audience:
   - Full-Stack Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This step-by-step tutorial walks you through adding a working contact form to your website using the SkyCMS Contact Form API.
+Step-by-step tutorial for adding a working contact form to your website using the SkyCMS Contact Form API.
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@ canonical_title: Contact Form API Example (HTML)
 description: Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.
 doc_type: Reference
 product_area: development
-user_intent: understand-contact-form-api-example-html
+user_intent: implement-contact-form-using-skycms-api-example
 audience:
   - Full-Stack Developers
 difficulty: intermediate
@@ -21,7 +21,7 @@ Use this example when you want a complete, copy-ready contact form implementatio
 
 ## When to use this page
 
-Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.
+Use this example as a starting point rather than building the form from scratch. It works with standard server-rendered websites using the SkyCMS JavaScript client library. If your site uses a JavaScript framework such as React or Vue, adapt the event handling and submission logic accordingly.
 
 ## Complete example
 

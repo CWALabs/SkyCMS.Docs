@@ -19,7 +19,7 @@ last_reviewed: 2026-04-27
 
 ## Summary
 
-This section provides examples for articles that do not use a page template.
+Examples of articles that define page-level structure without a reusable template — useful for one-off pages where creating a template adds more overhead than value.
 
 In this rendering path, the active layout still provides the outer shell, but the article itself defines the page-level structure. These examples are useful for one-off pages where creating a reusable template would add more overhead than value.
 

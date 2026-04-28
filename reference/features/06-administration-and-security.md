@@ -1,3 +1,19 @@
+---
+canonical_title: Feature Catalog: Administration & Security
+description: Feature inventory for SkyCMS administration — user management, RBAC, site configuration, email, contacts, authentication, rate limiting, and audit logs.
+doc_type: Reference
+product_area: administration
+user_intent: reference-administration-and-security-features
+audience:
+  - Administrators
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Administration & Security
 
 SkyCMS provides comprehensive administration tools for user management, role-based access control, site configuration, email, contact management, and security hardening.

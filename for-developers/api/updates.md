@@ -1,9 +1,9 @@
 ---
 canonical_title: Sky.Cms.Api.Shared Integration Updates
-description: This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.
+description: Integration changes added to SkyCMS Editor when Sky.Cms.Api.Shared was incorporated — covering new API endpoints, DI registration, and middleware wiring.
 doc_type: Explanation
 product_area: development
-user_intent: understand-sky-cms-api-shared-integration-updates
+user_intent: track-sky-cms-api-shared-integration-changes
 audience:
   - Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-28
 
 ## Summary
 
-This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.
+Integration changes added to SkyCMS Editor when Sky.Cms.Api.Shared was incorporated — covering new API endpoints, DI registration, and middleware wiring.
 
 ## Recent Changes (January 2026)
 
