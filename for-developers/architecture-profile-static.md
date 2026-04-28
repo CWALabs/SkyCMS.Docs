@@ -3,7 +3,7 @@ canonical_title: Static Delivery Architecture Profile
 description: Architecture profile for static-first SkyCMS deployments using generated artifacts and edge caching.
 doc_type: Explanation
 product_area: architecture
-user_intent: understand-static-delivery-architecture-profile
+user_intent: reference-static-delivery-architecture-profile
 audience:
   - Developers
 difficulty: advanced

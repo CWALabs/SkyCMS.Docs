@@ -3,7 +3,7 @@ canonical_title: Dynamic Delivery Architecture Profile
 description: Architecture profile for dynamic SkyCMS deployments with on-demand rendering and richer runtime behavior.
 doc_type: Explanation
 product_area: architecture
-user_intent: understand-dynamic-delivery-architecture-profile
+user_intent: reference-dynamic-delivery-architecture-profile
 audience:
   - Developers
 difficulty: advanced

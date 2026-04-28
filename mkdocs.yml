@@ -202,6 +202,9 @@ nav:
       - Core Platform Architecture: for-developers/architecture-core-platform.md
       - Architecture Decision Matrix: for-developers/architecture-decision-matrix.md
       - Architecture Mode Selection Worksheet: for-developers/architecture-mode-selection-worksheet.md
+      - Static Delivery Architecture Profile: for-developers/architecture-profile-static.md
+      - Dynamic Delivery Architecture Profile: for-developers/architecture-profile-dynamic.md
+      - Hybrid Delivery Architecture Profile: for-developers/architecture-profile-hybrid.md
       - Architecture Route Inventory Templates: for-developers/architecture-route-inventory-templates.md
       - Architecture Review Checklist: for-developers/architecture-review-checklist.md
       - Architecture Change Log: for-developers/architecture-change-log.md
