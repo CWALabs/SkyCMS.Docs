@@ -1,9 +1,9 @@
 ---
 canonical_title: What Is SkyCMS?
-description: Understand what SkyCMS is, who it is for, and why teams use it for multi-tenant content publishing.
+description: What SkyCMS is, who it is for, and why teams use it for multi-tenant content publishing.
 doc_type: Explanation
 product_area: getting-started
-user_intent: understand-what-skycms-is-and-when-to-use-it
+user_intent: evaluate-skycms-fit-for-your-team
 audience:
 	- All
 difficulty: beginner

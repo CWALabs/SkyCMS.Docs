@@ -1,9 +1,9 @@
 ---
 canonical_title: Middleware Pipeline
-description: Understand SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.
+description: SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.
 doc_type: Reference
 product_area: architecture
-user_intent: understand-and-debug-skycms-middleware
+user_intent: reference-skycms-middleware-pipeline
 audience:
   - Developers
 difficulty: intermediate
@@ -17,7 +17,7 @@ last_reviewed: 2026-04-27
 
 ## Summary
 
-Understand SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.
+SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.
 
 ## Request flow overview
 
