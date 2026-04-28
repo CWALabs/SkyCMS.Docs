@@ -388,9 +388,33 @@ All 6 pages flagged by automated sweep as containing TODO markers reviewed:
 
 **Phase 3 complete — 2026-04-28**
 
-All sections fully audited and corrected. MkDocs strict build: 17 pre-existing warnings only, zero new issues. Standards compliance at 100% for `user_intent`, `description`, and `## Outcome` fields across all pages.
+All sections fully audited and corrected. MkDocs strict build: zero warnings — first fully clean strict build. Standards compliance at 100% for `user_intent`, `description`, and `## Outcome` fields across all 256 pages.
+
+Final Phase 3 finishing pass (commit `52a48a0`):
+
+- `## Related links` → `## Related guides` on all 19 affected pages (canonical heading form).
+- `mkdocs.yml` nav depth reduced from 5 to 4 levels by removing the `- Checklists:` sub-grouping wrapper in Website Launch Workflow.
+- `deployment/azure.md` — 17 cross-repo relative path warnings resolved by converting all `../../SkyCMS/` references to absolute GitHub URLs (`https://github.com/CWALabs/SkyCMS/blob/main/...`).
+
+### Phase 4 — Governance hardening (commit `ccaba78`) — 2026-04-28
+
+**Phase 4 — Governance scripts**
+
+Four governance tools created and committed:
+
+- `scripts/docs-kpi-report.ps1` — monthly KPI report covering metadata coverage %, stale pages by cadence window, doc_type and status distribution, and internal link health. Accepts `-OutputMarkdown` to write a Markdown artefact.
+- `scripts/review-cadence-check.ps1` — lists all active pages overdue for review against two cadence targets: high-traffic pages (90-day default) and all active pages (180-day default). Accepts `-FailIfOverdue` to use as a gate.
+- `scripts/deprecation-audit.ps1` — audits pages with `status: deprecated` or `status: archived` for `superseded_by` completeness, validates that `archived` pages are removed from the `mkdocs.yml` nav, and scans active pages for links pointing to deprecated or archived targets.
+- `.github/workflows/docs-monthly-kpi.yml` — scheduled GitHub Actions workflow (first of each month, 08:00 UTC) that runs the KPI report, cadence check, and deprecation audit and writes the results to the GitHub Actions job summary.
+
+`validate-doc-metadata.ps1` updated: `status: deprecated` pages now require a `superseded_by` field (enforced in PR quality gate).
+
+`superseded_by` added to `.github/PULL_REQUEST_TEMPLATE.md` Deprecation checklist section.
+
+**Phase 4 complete — 2026-04-28**
 
 ## Notes
 
 - Keep feature catalog synchronization in place for all additions or major rewrites under reference/features.
-- Keep .tmp-link-check.ps1 as a required pre-merge quality gate.
+- Keep `.tmp-link-check.ps1` as a required pre-merge quality gate.
+- `superseded_by` is an optional recommended field for all pages but required when `status: deprecated`; the validator enforces this.
