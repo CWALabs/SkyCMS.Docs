@@ -144,6 +144,23 @@ You have selected and applied the right workflow when your team can explain the 
 
 ## Common failure patterns
 
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
+flowchart TD
+  Pub[Publish action triggered] --> Result{Outcome?}
+  Result -- Success --> Verify[Verify rendered output]
+  Verify --> Stale{Content stale on live site?}
+  Stale -- No --> Done[Release complete]
+  Stale -- Yes --> Purge[Trigger CDN or cache purge manually]
+  Purge --> Verify
+  Result -- Storage error --> StorageCheck[Check storage connectivity and permissions]
+  StorageCheck --> RetryPub[Retry publish]
+  RetryPub --> Result
+  Result -- Scheduled miss --> WorkerCheck[Check publishing worker is running]
+  WorkerCheck --> Reschedule[Reschedule or trigger publish manually]
+  Reschedule --> Result
+```
+
 - content published but appears stale:
   - CDN/cache invalidation delay.
 - publish operation fails:
