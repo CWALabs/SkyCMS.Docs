@@ -1,0 +1,75 @@
+name: Docs Monthly KPI Report
+
+on:
+  schedule:
+    # First day of each month at 08:00 UTC
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+    inputs:
+      output_markdown:
+        description: 'Write Markdown report to this filename (e.g. kpi-2026-05.md). Leave blank for console output only.'
+        required: false
+        default: ''
+
+jobs:
+  kpi-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install MkDocs dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run internal link check
+        id: link_check
+        shell: pwsh
+        run: |
+          ./.tmp-link-check.ps1
+
+      - name: Generate KPI report
+        id: kpi
+        shell: pwsh
+        run: |
+          $outputArg = @{}
+          if ('${{ inputs.output_markdown }}') {
+            $outputArg['OutputMarkdown'] = '${{ inputs.output_markdown }}'
+          }
+          ./scripts/docs-kpi-report.ps1 @outputArg
+
+      - name: Run review cadence check
+        shell: pwsh
+        run: |
+          ./scripts/review-cadence-check.ps1
+
+      - name: Run deprecation audit
+        shell: pwsh
+        run: |
+          ./scripts/deprecation-audit.ps1
+
+      - name: Write job summary
+        if: always()
+        shell: pwsh
+        run: |
+          $date = (Get-Date).ToString('yyyy-MM-dd')
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "## SkyCMS Docs Monthly KPI — $date"
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "See the **KPI report** step output above for the full metrics summary."
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "### Quick triage commands (run locally)"
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value '```powershell'
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "./scripts/docs-kpi-report.ps1 -OutputMarkdown kpi-$(Get-Date -Format 'yyyy-MM').md"
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "./scripts/review-cadence-check.ps1"
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "./scripts/deprecation-audit.ps1"
+          Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value '```'

@@ -23,6 +23,13 @@ Run these locally before requesting review:
 - [ ] Metadata check passed (`validate-doc-metadata.ps1`)
 - [ ] New or materially revised pages follow metadata schema in `for-developers/documentation-metadata-schema.md`
 
+## Deprecation (when deprecating or archiving pages)
+
+- [ ] `status` field set to `deprecated` or `archived`
+- [ ] `superseded_by` field added pointing to replacement page (required for deprecated pages)
+- [ ] Deprecated page is removed from `mkdocs.yml` nav (or `archived` page confirmed absent)
+- [ ] Run `./scripts/deprecation-audit.ps1` and confirm no unresolved issues
+
 ## Metadata and Standards Confirmation
 
 - [ ] Page type uses one of: `Tutorial`, `How-to`, `Reference`, `Explanation`

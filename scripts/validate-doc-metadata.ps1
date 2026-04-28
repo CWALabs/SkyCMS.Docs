@@ -140,6 +140,10 @@ foreach ($file in $targets) {
         if ($allowedStatus -notcontains $status) {
             $errors.Add("${relative}: invalid status '$($keys['status'])' (allowed: draft, active, deprecated, archived)")
         }
+        # deprecated pages must carry a superseded_by field
+        if ($status -eq 'deprecated' -and (-not $keys.ContainsKey('superseded_by') -or [string]::IsNullOrWhiteSpace((Strip-WrappingQuotes $keys['superseded_by'])))) {
+            $errors.Add("${relative}: status=deprecated requires a 'superseded_by' field pointing to the replacement page")
+        }
     }
 
     if ($keys.ContainsKey('last_reviewed')) {
