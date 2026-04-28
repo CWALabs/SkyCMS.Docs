@@ -326,6 +326,70 @@ All 64 `for-developers` pages reviewed. Completed fixes applied across two sessi
 - `md_in_html` markdown extension added (required for Material grid cards on home page).
 - MkDocs strict build confirmed: 17 pre-existing warnings in `deployment/azure.md` only; zero new warnings.
 
+**Phase 3 — for-editors and for-site-builders sections**
+
+All pages in `for-editors/` and `for-site-builders/` reviewed and fixed:
+
+- `user_intent` corrected from `understand-` prefix to action-verb form on all affected pages.
+- `description` passive openers ("This guide/page/document...") replaced with direct statements.
+- `## Outcome` section added to all How-to and Tutorial pages that lacked it.
+
+**Phase 3 — reference section**
+
+All pages in `reference/` reviewed and fixed:
+
+- `user_intent` and `description` passive openers corrected.
+- Reference pages confirmed to not require `## Outcome` sections (correct per standards).
+- `reference/changelog.md` upgraded from TODO state to complete state (commit referenced in changelog entry).
+
+**Phase 3 — deployment section**
+
+All pages in `deployment/` reviewed and fixed:
+
+- `deployment/overview.md` and `deployment/docker.md` confirmed complete (stub state already resolved).
+- `user_intent` and `description` passive openers corrected on all affected pages.
+- `## Outcome` sections added to all How-to pages that lacked them.
+- Pre-existing 17 cross-repo link warnings in `deployment/azure.md` confirmed as intentional (Phase 4 governance item).
+
+**Phase 3 — configuration section (39 pages)**
+
+All 39 `configuration/` pages reviewed:
+
+- Metadata compliance confirmed complete across all pages.
+- `configuration/overview.md` `user_intent` corrected: `understand-and-apply-skycms-configuration` → `plan-skycms-configuration`.
+- `## Outcome` section added to 24 How-to pages that lacked it (multi-tenancy, all CDN, database, email, and storage provider pages).
+- Gap review doc itself (`documentation-standards-gap-review-2026-04.md`) fixed: passive description opener removed, `user_intent` corrected to `review-skycms-documentation-standards-gap-and-implementation-plan`.
+
+**Phase 3 — installation section (19 pages)**
+
+All 19 `installation/` pages reviewed:
+
+- Metadata compliance confirmed complete across all pages.
+- `installation/docs-publisher.md` passive description and `understand-` user_intent fixed.
+- `## Outcome` section added to all 7 setup wizard step pages and the setup wizard complete page (8 pages total).
+
+**Phase 3 — architecture profile pages (3 pages)**
+
+Three architecture profile pages were not listed in `mkdocs.yml` nav:
+
+- `for-developers/architecture-profile-static.md`
+- `for-developers/architecture-profile-dynamic.md`
+- `for-developers/architecture-profile-hybrid.md`
+
+All three added to nav under Developers tab (after Architecture Mode Selection Worksheet). `user_intent` corrected from `understand-` prefix to `reference-*-delivery-architecture-profile` on all three.
+
+**Phase 3 — TODO/stub page audit**
+
+All 6 pages flagged by automated sweep as containing TODO markers reviewed:
+
+- `getting-started/quick-start.md`, `deployment/docker.md`, `deployment/overview.md`, `for-developers/extending/custom-widgets.md` — confirmed complete, no TODO content remaining.
+- `getting-started/what-is-skycms.md` — `understand-` user_intent and passive description fixed.
+- `for-developers/middleware-pipeline.md` — `understand-` user_intent, passive description, and passive Summary opening fixed.
+
+**Phase 3 complete — 2026-04-28**
+
+All sections fully audited and corrected. MkDocs strict build: 17 pre-existing warnings only, zero new issues. Standards compliance at 100% for `user_intent`, `description`, and `## Outcome` fields across all pages.
+
 ## Notes
 
 - Keep feature catalog synchronization in place for all additions or major rewrites under reference/features.
