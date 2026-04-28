@@ -18,9 +18,9 @@ hide:
 
 # SkyCMS Documentation
 
-**Install in minutes. Publish in hours. Run any number of sites from a single platform.**
+**The Edge-Native CMS for creative people who want great tools, high performance, simplicity and no constraints**
 
-SkyCMS is a multi-tenant ASP.NET Core CMS that gives content editors modern publishing tools and gives developers full technical control — without fighting over the same codebase.
+SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools and gives developers full technical control — without fighting over the same codebase.
 
 [Install SkyCMS](installation/overview.md){ .md-button .md-button--primary } [What is SkyCMS?](getting-started/what-is-skycms.md){ .md-button }
 
