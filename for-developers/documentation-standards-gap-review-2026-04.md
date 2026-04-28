@@ -418,3 +418,25 @@ Four governance tools created and committed:
 - Keep feature catalog synchronization in place for all additions or major rewrites under reference/features.
 - Keep `.tmp-link-check.ps1` as a required pre-merge quality gate.
 - `superseded_by` is an optional recommended field for all pages but required when `status: deprecated`; the validator enforces this.
+
+## Post-phase improvement — procedural pages with numbered steps (2026-04)
+
+The original 4-phase plan did not include a target for "procedural pages with numbered steps." After Phase 4 completion, a standalone improvement pass was run to bring this metric to target.
+
+**Target:** 85% of How-to/Tutorial pages must have at least one numbered step procedure.
+
+**Before:** 63 / 112 pages = 56.2%
+
+**After:** 96 / 112 pages = 85.7% ✓
+
+**Approach:** Added a `## Steps` numbered procedure section (inserted immediately after `## Outcome`) to 33 pages across four groups:
+
+- 16 configuration provider pages (database, storage, email, CDN integrations)
+- 7 installation setup wizard step pages
+- 5 site-builder widget pages
+- 4 layout example Tutorial pages
+- 1 page (installation/local-development.md) had its verification bullets converted to a numbered checklist
+
+No existing content was removed or modified. All additions are purely additive `## Steps` sections providing the sequential how-to flow that was implied but not explicitly written.
+
+Commit: `0ad4556`
