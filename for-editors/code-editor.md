@@ -1,11 +1,21 @@
-<!-- Audience: Advanced Editors -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/CodeEditor/ -->
+---
+canonical_title: Code Editor Basics
+description: Use the SkyCMS code editor safely for targeted HTML, CSS, JavaScript, and template changes.
+doc_type: How-to
+product_area: editing
+user_intent: make-safe-source-level-edits-in-skycms
+audience:
+	- Advanced Editors
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Code Editor Basics
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
@@ -13,7 +23,11 @@ Use this guide when you need to:
 - apply a safe edit-validate-publish workflow,
 - recover quickly from problematic source-level changes.
 
-## When to use code editor
+## Outcome
+
+After completing this guide, you should be able to make small source-level edits confidently, validate them before publish, and recover quickly if a change causes regressions.
+
+## When to use the code editor
 
 Use the code editor when visual editing is not enough and you need precise control of markup, styles, or scripts.
 
@@ -36,9 +50,13 @@ The editor is Monaco-based (the same core editor used by VS Code), so you get sy
 
 Tips:
 
-- Use Emmet snippets for faster HTML/CSS authoring.
-- Keep code blocks organized and readable.
+- Use Emmet snippets for faster HTML and CSS authoring.
+- Keep code blocks organised and readable.
 - Prefer small, testable changes over large rewrites.
+
+## Verification
+
+Code editor workflows are working when you can save changes successfully, preview the result without layout or script regressions, and publish only after the updated page or template behaves as expected.
 
 ## Validation steps
 

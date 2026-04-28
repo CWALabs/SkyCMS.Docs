@@ -1,8 +1,24 @@
-<!-- Audience: Administrators and Advanced Editors -->
-<!-- Type: Troubleshooting / Reference -->
-<!-- Status: Draft -->
+---
+canonical_title: AI Troubleshooting
+description: Diagnose and resolve common SkyCMS AI availability, model, and response-quality issues across editor surfaces.
+doc_type: Reference
+product_area: editing
+user_intent: troubleshoot-ai-setup-and-runtime-issues
+audience:
+  - Administrators
+  - Advanced Editors
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # AI Troubleshooting
+
+## Summary
+
+Use this reference to triage AI availability, status endpoint failures, model catalog issues, and response-quality problems in Monaco, CKEditor, and AI Help Chat.
 
 ## "AI unavailable" in the editor
 
@@ -173,3 +189,6 @@ Increase **Max Tokens**. The default (160) is suitable for single-line and short
 
 Start with [AI Configuration Overview](../configuration/ai/overview.md) if the issue may be tenant setup rather than editor behavior. For editor-specific guidance, see [Code Editor Basics](./code-editor.md), [AI Assistant](./ai-assistant.md), and [AI Provider Setup](./ai-provider-setup.md).
 
+## Verification
+
+Troubleshooting is complete when status and model endpoints return expected results, editor AI features are available for authorized users, and completion or chat requests succeed with acceptable quality and latency.

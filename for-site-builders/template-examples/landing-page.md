@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Landing Page Template Examples
+description: Implement campaign-focused landing page templates with clear messaging hierarchy and controlled CTA-focused editable regions.
+doc_type: Tutorial
+product_area: site-building
+user_intent: build-landing-page-template-with-cta-structure
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Landing Page Template Examples
 
+## Summary
+
 Landing page templates are useful for campaigns, product launches, lead generation pages, and focused marketing pages with a clear message hierarchy.
+
+## Outcome
+
+After completing this guide, you should be able to implement a conversion-focused landing template with intentionally scoped hero, proof, and CTA regions.
 
 ## Recommended editable regions
 
@@ -129,3 +149,7 @@ Landing page templates are useful for campaigns, product launches, lead generati
 - [Generic Article Template Examples](./generic-article.md)
 - [Blog Post Template Examples](./blog-post.md)
 - [Information Page with Secondary Navigation Examples](./information-page-secondary-nav.md)
+
+## Verification
+
+This example is successful when hero messaging, feature/proof sections, and CTA regions are clearly separated and editors can update campaign content without breaking template structure.

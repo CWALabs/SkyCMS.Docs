@@ -1,45 +1,65 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Database-Overview.md -->
+---
+canonical_title: Database Overview
+description: Choose a SkyCMS database provider and configure connection settings for reliable startup and publishing.
+doc_type: Explanation
+product_area: configuration
+user_intent: choose-and-configure-skycms-database
+audience:
+  - Developers
+  - Administrators
+  - DevOps
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Database Overview
 
-## When to use this page
+## Summary
 
-Use this guide when choosing a SkyCMS database provider and planning connection-string setup.
+SkyCMS supports multiple database providers and selects behavior from your configured connection settings.
+
+Use this page to choose the right provider and follow the safest setup order.
 
 ## Supported providers
 
-- Azure Cosmos DB,
-- SQL Server/Azure SQL,
-- MySQL,
-- SQLite (development-focused).
+- Azure Cosmos DB
+- SQL Server or Azure SQL
+- MySQL
+- SQLite (primarily for local and demo scenarios)
 
-## Selection guidance
+## Provider selection guidance
 
-- choose provider aligned to team expertise and operational model,
-- use managed services for production whenever possible,
-- reserve SQLite for local development and simple demos.
+| Scenario | Recommended provider |
+| --- | --- |
+| Production managed relational workloads | SQL Server or Azure SQL |
+| Existing MySQL operations footprint | MySQL |
+| Cloud-native NoSQL pattern with Cosmos alignment | Azure Cosmos DB |
+| Local development and quick demos | SQLite |
 
-## Configuration key
+## Configuration model
 
-Use `ConnectionStrings:ApplicationDbContextConnection` to configure the active provider.
+Primary key:
 
-## Automatic provider detection
+- `ConnectionStrings:ApplicationDbContextConnection`
 
-SkyCMS does not require a separate provider flag for the main database. It inspects the configured connection string and automatically selects the matching EF Core provider at startup.
+SkyCMS uses provider inference from connection string characteristics, so a separate provider flag is generally not required for the primary database path.
 
-- Cosmos DB connection strings are detected from Cosmos-style account endpoint patterns.
-- SQL Server and Azure SQL connection strings are detected from SQL Server connection-string patterns.
-- MySQL connection strings are detected from MySQL-style server, database, and credential patterns.
-- SQLite is detected from file-based data source patterns.
+## Setup sequence
 
-This behavior is implemented by the FlexDb strategy system used by SkyCMS identity and related multi-provider components.
+1. Select provider based on operations model and team expertise.
+2. Configure application database connection string.
+3. Validate startup and connectivity.
+4. Run first sign-in and first publish verification.
 
-For exact connection-string shapes, see [Database Configuration Reference](./configuration-reference.md).
+## Validation checklist
 
-For the developer-focused explanation of how provider auto-detection works in code, see [EF Cross-Provider Compatibility Guide](../../for-developers/ef-cross-provider-guide.md).
+- the app starts with no provider configuration errors,
+- authentication and identity operations succeed,
+- content save and publish operations succeed,
+- logs show no persistent database connectivity failures.
 
 ## Related guides
 

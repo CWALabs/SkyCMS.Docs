@@ -1,12 +1,32 @@
-# URL & Redirect Management
+---
+canonical_title: URL and Redirect Management
+description: Manage URL paths, automatic and manual redirects, and reserved paths in SkyCMS.
+doc_type: How-to
+product_area: editing
+user_intent: manage-urls-and-redirects
+audience:
+  - Content Editors
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# URL and redirect management
+
+## Summary
+
+Use this guide when you need to:
+
+- understand how SkyCMS generates URL paths from page titles,
+- view, edit, or delete redirects,
+- manage reserved paths that protect system-level URLs.
 
 SkyCMS provides tools for managing URL paths, automatic redirects when page titles change, manual redirect creation, and reserved path protection.
 
-**Audience:** Editors, Administrators
-
----
-
-## URL Paths (Slugs)
+## URL paths (slugs)
 
 Every page has a URL path (slug) derived from its title and position in the site hierarchy. For example, a page titled "Getting Started" under "Documentation" might have the URL path `/documentation/getting-started`.
 
@@ -14,13 +34,11 @@ Every page has a URL path (slug) derived from its title and position in the site
 - Changing a page's title updates its URL path.
 - When a URL path changes, a redirect is automatically created from the old path to the new one.
 
----
-
 ## Redirects
 
 Redirects ensure visitors and search engines find content that has moved. SkyCMS supports both automatic and manual redirects.
 
-### Automatic Redirects
+### Automatic redirects
 
 When a page title changes, the system:
 
@@ -31,13 +49,13 @@ When a page title changes, the system:
 
 This happens transparently — editors don't need to manage redirects for title changes.
 
-### Viewing Redirects
+### Viewing redirects
 
 1. Navigate to **Redirects** in the editor menu (or go to `/Editor/Redirects`).
 2. A paginated list shows all redirects with their source and destination URLs.
 3. Sort by column headers to find specific redirects.
 
-### Editing a Redirect
+### Editing a redirect
 
 1. From the redirects list, click on a redirect entry.
 2. Modify the **From URL** or **To URL** fields.
@@ -45,20 +63,18 @@ This happens transparently — editors don't need to manage redirects for title 
 
 > **Validation:** The `[RedirectUrl]` attribute validates that redirect URLs are well-formed.
 
-### Deleting a Redirect
+### Deleting a redirect
 
 1. From the redirects list, find the redirect to remove.
 2. Click **Delete** to permanently remove the redirect.
 
-> **Note:** Deleting a redirect means visitors using the old URL will receive a 404 error. Only delete redirects when you're certain the old URL is no longer in use.
+> **Note:** Deleting a redirect means visitors using the old URL will receive a 404 error. Only delete redirects when you are certain the old URL is no longer in use.
 
----
-
-## Reserved Paths
+## Reserved paths
 
 Reserved paths prevent content from being created at system-level URLs (e.g., `/admin`, `/api`, `/_api`). This protects application routes from being overwritten by content pages.
 
-### Viewing Reserved Paths
+### Viewing reserved paths
 
 Navigate to **Reserved Paths** (or go to `/Editor/ReservedPaths`) to see the list of protected URL paths. The list supports:
 
@@ -66,7 +82,7 @@ Navigate to **Reserved Paths** (or go to `/Editor/ReservedPaths`) to see the lis
 - Sorting
 - Text filtering
 
-### Managing Reserved Paths
+### Managing reserved paths
 
 Administrators can:
 
@@ -77,26 +93,22 @@ Administrators can:
 Each reserved path entry includes:
 
 | Field | Description |
-|-------|-------------|
+| ----- | ----------- |
 | **Path** | The protected URL path |
 | **Notes** | Explanation of why this path is reserved |
 | **CosmosRequired** | Whether this path requires Cosmos DB availability |
 
----
-
-## How Redirects Are Stored
+## How redirects are stored
 
 Redirects are stored as Article records with a special status code (Redirect). The redirect's fields map as follows:
 
 | Article Field | Redirect Usage |
-|---------------|---------------|
+| ------------- | -------------- |
 | **UrlPath** | The source ("from") URL |
 | **BannerImage** | The destination ("to") URL |
 | **StatusCode** | Set to Redirect (4) |
 
 This design means redirects participate in the same versioning, tenant isolation, and query infrastructure as regular content.
-
----
 
 ## Caching
 
@@ -106,17 +118,13 @@ Redirect lookups are cached in memory to avoid database queries on every request
 - Automatically invalidated when a `RedirectCreatedEvent` fires.
 - Optional cache duration configurable per query.
 
----
-
-## Multi-Tenancy
+## Multi-tenancy
 
 - Each tenant has its own set of redirects and reserved paths.
 - URL uniqueness is enforced per tenant — the same URL path can exist in different tenants.
 - Redirect queries are automatically filtered by the current tenant.
 
----
-
-## See Also
+## See also
 
 - [Version History](version-history.md) — Title changes that trigger automatic redirects
 - [Publishing Modes](publishing-modes.md) — How redirects interact with publish/unpublish

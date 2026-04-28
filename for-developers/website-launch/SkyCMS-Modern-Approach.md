@@ -1,9 +1,21 @@
-<!-- Audience: Developers, Architects, Decision Makers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/SkyCMS-Modern-Approach.md -->
+---
+canonical_title: SkyCMS & Modern Approach (Deep Dive)
+description: A practical overview of how SkyCMS facilitates modern website development: modular structure, content workflows, and evergreen quality practices.
+doc_type: Explanation
+product_area: development
+user_intent: understand-skycms-modern-approach-deep-dive
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # SkyCMS & Modern Approach (Deep Dive)
+
+## Summary
 
 A practical overview of how SkyCMS facilitates modern website development: modular structure, content workflows, and evergreen quality practices.
 

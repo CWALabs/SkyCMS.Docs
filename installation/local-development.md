@@ -1,11 +1,21 @@
-<!-- Audience: Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/README.md -->
+---
+canonical_title: Local Development Installation
+description: Run SkyCMS locally for feature development, debugging, and first-pass workflow validation.
+doc_type: How-to
+product_area: installation
+user_intent: run-skycms-locally-for-development
+audience:
+	- Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Local Development Installation
 
-## When to use this page
+## Summary
 
 Use this guide when you want to run SkyCMS locally for feature development or debugging.
 
@@ -15,9 +25,13 @@ Use this guide when you want to run SkyCMS locally for feature development or de
 - A local or remote database connection string.
 - A storage connection string (or test storage account/bucket).
 
+## Outcome
+
+After completing this guide, you should be able to run SkyCMS locally, complete setup, and verify a first publish flow.
+
 ## Configure environment variables
 
-Set at least the required values:
+Set at least the required values shown below:
 
 ```powershell
 $env:CosmosAllowSetup = "true"
@@ -35,17 +49,17 @@ From the repository root:
 dotnet run --project Sky.Editor.csproj
 ```
 
-Then open `http://localhost:5000/___setup` (or your configured local URL).
+Then open `http://localhost:5000/___setup`, or the local URL you configured.
 
 ## Verify setup
 
-- Setup wizard completes.
-- Admin login works.
-- File upload succeeds.
-- A test page publishes and renders.
+- the setup wizard completes,
+- admin login works,
+- file upload succeeds,
+- a test page publishes and renders.
 
 ## Related guides
 
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [setup-wizard.md](setup-wizard.md)
-- [post-installation.md](post-installation.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Setup Wizard](setup-wizard.md)
+- [Post-Installation Configuration](post-installation.md)

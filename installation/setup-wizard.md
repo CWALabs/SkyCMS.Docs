@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/SetupWizard.md -->
+---
+canonical_title: Setup Wizard Installation Guide
+description: Complete first-time single-tenant SkyCMS setup through the interactive setup wizard.
+doc_type: How-to
+product_area: installation
+user_intent: complete-skycms-first-time-setup-with-wizard
+audience:
+	- Developers
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Setup Wizard Installation Guide
 
-## When to use this page
+## Summary
 
 Use this guide for first-time, single-tenant setup through the interactive UI.
 
@@ -14,6 +25,10 @@ Use this guide for first-time, single-tenant setup through the interactive UI.
 - `CosmosAllowSetup=true`
 - `ConnectionStrings__ApplicationDbContextConnection`
 - Application deployed and reachable
+
+## Outcome
+
+After completing this flow, you should be able to sign in with the created admin account and proceed to post-install validation.
 
 ## Start setup
 
@@ -40,10 +55,10 @@ Values provided via environment variables are treated as source-of-truth and app
 
 - Restart the application.
 - Sign in with the created admin account.
-- Run validation steps in [post-installation.md](post-installation.md).
+- Run validation steps in [Post-Installation Configuration](post-installation.md).
 - Set `CosmosAllowSetup=false`.
 
 ## Related guides
 
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [post-installation.md](post-installation.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Post-Installation Configuration](post-installation.md)

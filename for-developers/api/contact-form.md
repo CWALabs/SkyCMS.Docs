@@ -1,10 +1,23 @@
-<!-- Audience: Backend Developers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/ContactForm.md -->
-<!-- markdownlint-disable MD013 -->
+---
+canonical_title: Contact Form API Documentation
+description: Configure, deploy, and extend the SkyCMS Contact Form API — including CAPTCHA validation, rate limiting, and email notification.
+doc_type: Reference
+product_area: development
+user_intent: understand-contact-form-api-documentation
+audience:
+  - Backend Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Contact Form API Documentation
+
+## Summary
+
+Configure, deploy, and extend the SkyCMS Contact Form API — including CAPTCHA validation, rate limiting, and email notification.
 
 ## Overview
 

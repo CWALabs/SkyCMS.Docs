@@ -1,7 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Create Cloudflare R2 API Credentials
+description: Create bucket-scoped Cloudflare R2 credentials for SkyCMS object storage access.
+doc_type: How-to
+product_area: configuration
+user_intent: create-cloudflare-r2-credentials-for-skycms
+audience:
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Create Cloudflare R2 API Credentials
+
+## Summary
 
 Use this guide when SkyCMS needs Cloudflare R2 credentials for documentation assets, media storage, or other S3-compatible object storage flows.
 

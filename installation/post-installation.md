@@ -1,49 +1,77 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/Post-Installation.md -->
+---
+canonical_title: Post-Installation Configuration
+description: Validate your SkyCMS installation and apply baseline security and operations hardening before production usage.
+doc_type: How-to
+product_area: installation
+user_intent: verify-and-harden-skycms-after-setup
+audience:
+  - Developers
+  - Administrators
+  - DevOps
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Post-Installation Configuration
 
-## When to use this page
+## Summary
 
-Use this guide immediately after setup is complete to validate your deployment and harden production settings.
+Use this guide immediately after setup to verify functionality and establish a safe operational baseline.
+
+## Outcome
+
+After completing this page, your environment should be ready for controlled team usage with clear verification evidence.
 
 ## Verification checklist
 
-- Application restarts successfully after setup.
-- Admin account can sign in.
-- File upload works.
-- Publisher URL is reachable.
-- First page publish succeeds.
-- Email test passes (if configured).
-- CDN purge works (if configured).
+Confirm that all checks pass:
 
-## First publish test
+1. Application restarts cleanly after setup.
+2. Admin account sign-in works.
+3. File upload succeeds.
+4. Publisher URL responds.
+5. First test page publish succeeds.
+6. Email test succeeds if email is configured.
+7. CDN purge works if CDN is configured.
 
-1. Create a simple page.
+## First publish validation
+
+1. Create a simple page with text and one media asset.
 2. Publish the page.
-3. Open the expected URL on your public site.
-4. Confirm content and linked assets load correctly.
+3. Open the expected public URL.
+4. Confirm page content and linked assets are served correctly.
 
-## Security hardening
+## Security hardening baseline
 
-- Rotate and protect credentials.
-- Restrict allowed upload file types to required formats.
-- Create least-privilege non-admin accounts for day-to-day editing.
-- Ensure HTTPS is enforced on public endpoints.
-- Disable setup by ensuring `CosmosAllowSetup=false`.
+1. Confirm setup is disabled: `CosmosAllowSetup=false`.
+2. Rotate setup-time credentials where applicable.
+3. Apply least-privilege user roles for day-to-day editors.
+4. Enforce HTTPS on public and admin entry points.
+5. Restrict allowed upload types to required formats.
 
-## Operational checks
+## Operational readiness checks
 
-- Confirm logs are available and monitored.
-- Validate backup/restore strategy for database and storage.
-- Document runbook steps for cache purge and incident response.
+1. Confirm logs are available and retained.
+2. Confirm database and storage backup strategy is defined and testable.
+3. Confirm cache/CDN purge runbook steps are documented.
+4. Confirm incident escalation and ownership are clear.
 
-## Related guides
+## Next steps
 
-- [setup-wizard.md](setup-wizard.md)
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [../configuration/email/overview.md](../configuration/email/overview.md)
-- [../configuration/cdn/overview.md](../configuration/cdn/overview.md)
-- [../configuration/storage/overview.md](../configuration/storage/overview.md)
+Move to deployment and release maturity:
+
+- [Deployment Overview](../deployment/overview.md)
+- [Publishing Workflow](../deployment/publishing-workflow.md)
+- [CI/CD Pipelines](../deployment/cicd-pipelines.md)
+
+## Related links
+
+- [Setup Wizard](setup-wizard.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Configuration Overview](../configuration/overview.md)
+- [Email Overview](../configuration/email/overview.md)
+- [CDN Overview](../configuration/cdn/overview.md)
+- [Storage Overview](../configuration/storage/overview.md)

@@ -1,24 +1,23 @@
 ---
 canonical_title: Architecture Route Inventory Templates
 description: Copy-ready route classification templates for static, dynamic, and hybrid SkyCMS architecture reviews.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-architecture-route-inventory-templates
 audience:
   - Developers
-  - Architects
-  - Platform Engineers
-doc_type: Reference
-status: Draft
-entities:
-  - route-inventory
-  - route-classification
-  - delivery-mode
-keywords:
-  - route inventory
-  - static routes
-  - dynamic routes
-  - hybrid routes
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Route Inventory Templates
+
+## Summary
+
+Copy-ready route classification templates for static, dynamic, and hybrid SkyCMS architecture reviews.
 
 ## Purpose
 

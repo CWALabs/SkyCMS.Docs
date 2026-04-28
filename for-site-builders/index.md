@@ -1,19 +1,31 @@
-<!-- Audience: Site Builders, Designers, and Front-End Developers -->
-<!-- Type: Overview -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Site-Builders/ -->
+---
+canonical_title: For Site Builders
+description: Start here for layout, template, page, and widget implementation workflows in SkyCMS.
+doc_type: Explanation
+product_area: site-building
+user_intent: find-site-builder-workflows-and-guides
+audience:
+	- Site Builders
+	- Designers
+	- Front-End Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # For Site Builders
 
-## When to use this page
+## Summary
 
 Use this page when you need to:
 
 - understand site builder responsibilities,
 - find the right guide for layouts, templates, pages, or example implementations,
-- navigate quickly to implementation-partner docs.
+- navigate quickly to the supporting implementation guides.
 
-## Role Overview
+## Role overview
 
 SkyCMS content roles work together like this:
 
@@ -31,7 +43,7 @@ Site builders typically:
 - Collaborate with editors on authoring patterns and handoff.
 - Coordinate with developers when implementation changes are required.
 
-## Start Here
+## Start here
 
 - [Site Builder Guide Overview](./overview.md)
 - [Layouts](./layouts.md)
@@ -42,6 +54,14 @@ Site builders typically:
 - [Article Examples Overview](./article-examples/overview.md)
 - [Widgets](./widgets/overview.md)
 - [Style Guide Template](./style-guide-template.md)
+
+## Verification
+
+You are in the right workflow when you can:
+
+- identify the right layout or template for a content goal,
+- apply or update a page structure safely,
+- hand off editor-ready regions with clear usage guidance.
 
 ## Related guides
 

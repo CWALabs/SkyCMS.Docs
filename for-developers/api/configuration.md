@@ -1,13 +1,27 @@
-<!-- Audience: Backend Developers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/Configuration.md -->
+---
+canonical_title: Configuration Guide - Sky.Cms.Api.Shared
+description: The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings are defined in the `ContactApiConfig` class and can be configured via `appsettings.json` or environment variables.
+doc_type: Reference
+product_area: development
+user_intent: understand-configuration-guide-sky-cms-api-shared
+audience:
+  - Backend Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Configuration Guide - Sky.Cms.Api.Shared
 
-## Overview
+## Summary
 
 The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings are defined in the `ContactApiConfig` class and can be configured via `appsettings.json` or environment variables.
+
+## Overview
+
+All settings are read from `ContactApiConfig` and can be supplied via `appsettings.json` or environment variable overrides.
 
 ## Configuration Structure
 
@@ -92,7 +106,7 @@ The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings ar
 Instead of `appsettings.json`, you can use environment variables. The format follows ASP.NET Core conventions:
 
 ```bash
-# Linux/macOS
+
 export ContactApi__AdminEmail="support@yourdomain.com"
 export ContactApi__MaxMessageLength="5000"
 export ContactApi__RequireCaptcha="true"
@@ -101,7 +115,7 @@ export TURNSTILE_SECRET_KEY="your-turnstile-secret-key"
 ```
 
 ```powershell
-# Windows PowerShell
+
 $env:ContactApi__AdminEmail = "support@yourdomain.com"
 $env:ContactApi__MaxMessageLength = "5000"
 $env:ContactApi__RequireCaptcha = "true"
@@ -204,14 +218,12 @@ public static void ConfigureContactApiRateLimiting(RateLimiterOptions options)
 For local development with secrets, use the .NET User Secrets manager:
 
 ```bash
-# Navigate to the host application directory
+
 cd YourWebApp
 
-# Set secrets
 dotnet user-secrets set "ContactApi:CaptchaSiteKey" "your-dev-key"
 dotnet user-secrets set "ContactApi:CaptchaSecretKey" "your-dev-secret"
 
-# List secrets
 dotnet user-secrets list
 ```
 

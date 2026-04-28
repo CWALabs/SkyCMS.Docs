@@ -1,9 +1,22 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/Image-Widget.md -->
+---
+canonical_title: Image Widget
+description: Configure and integrate the SkyCMS image widget for uploads, replacement, metadata editing, and image lifecycle events.
+doc_type: How-to
+product_area: site-building
+user_intent: integrate-and-customize-the-image-widget
+audience:
+  - Site Builders
+  - Front-End Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Image Widget
+# Image Widget
+
+## Summary
 
 Interactive image upload and management widget used by the Sky Editor. It provides drag‑and‑drop uploads (via FilePond), an image library picker, in-place replacement, and an alt-text editor, then saves the widget’s HTML back to the editor region.
 
@@ -11,6 +24,10 @@ Interactive image upload and management widget used by the Sky Editor. It provid
   - `image-widget.js`
   - `image-widget.css`
 - Auto-init: On `DOMContentLoaded`, any `<div data-editor-config="image-widget">` on the page is initialized automatically.
+
+## Outcome
+
+After completing this guide, you should be able to initialize the widget, upload or replace images, and react to image lifecycle events through the widget event system.
 
 ## Features
 
@@ -287,3 +304,13 @@ window.CCMSImageWidgetEvents.off('imageChanged', myHandler);
 - Upload fails: verify `/FileManager/UploadImage` is reachable and returns the image URL as the response body. Check max size/type on server.
 - Library empty: confirm `/FileManager/GetImageAssets?path=...` returns a JSON array of image URLs for the resolved path.
 - Need to save changes: implement a listener using `window.CCMSImageWidgetEvents.on('imageChanged', ...)` to respond to upload and deletion events.
+
+## Verification
+
+This integration is complete when image upload and replacement flows succeed, metadata edits persist, delete returns the widget to upload state, and `imageChanged` events fire with the expected payload.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [File Manager](../../for-editors/file-manager.md)
+- [Image Editing](../../for-editors/image-editing.md)

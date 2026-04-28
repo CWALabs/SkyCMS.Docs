@@ -6,21 +6,22 @@ audience:
   - Front-End Developers
   - Site Builders
 doc_type: How-to
-status: Draft
-entities:
-  - template
-  - article
-  - editable-region
-  - page
-keywords:
-  - templates
-  - editable regions
-  - page templates
-  - template rollout
-source: SkyCMS/Docs/Templates/
+product_area: site-building
+user_intent: create-and-update-templates-safely
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
 ---
 
 # Templates
+
+## Summary
+
+Use templates to define reusable page structures that editors can safely fill with content.
+
+If you are new to SkyCMS, treat templates as the bridge between layout-level design and page-level authoring.
 
 ## Terminology note
 
@@ -87,6 +88,14 @@ Use these examples to compare editable region strategy, semantic structure, and 
 
 ## Bind widgets and editable areas
 
+```mermaid
+flowchart TD
+  Create[Create template structure] --> Regions[Define stable editable region IDs]
+  Regions --> Test[Test with one real page]
+  Test --> Update[Update template safely]
+  Update --> Preserve[Preserve existing page content]
+```
+
 Editable region rules are critical for safe template updates.
 
 Use stable editable IDs (for example via `data-ccms-ceid`) and avoid renaming them unless migration is intentional.
@@ -109,6 +118,16 @@ Safe rollout strategy:
 1. Update one representative page first.
 2. Validate content preservation.
 3. Perform broader updates only after verification.
+
+## Quick safety checklist
+
+Before publishing template changes used by existing pages:
+
+- [ ] Editable region IDs that must preserve content are unchanged.
+- [ ] New regions are intentional and documented.
+- [ ] One representative page was updated and reviewed.
+- [ ] Visual Editor save/publish cycle passed after the update.
+- [ ] Rollback path is known before bulk update.
 
 ### Editable region attribute reference
 
@@ -158,6 +177,14 @@ Recommended verification sequence:
 3. Update template and re-apply to one existing page.
 4. Confirm preserved content and expected structural changes.
 5. Proceed to wider update only if checks pass.
+
+## Pre-rollout checklist
+
+- [ ] Template renders correctly in target layout.
+- [ ] Editable regions are practical for editors.
+- [ ] Responsive checks pass for common page types.
+- [ ] Existing page content preservation is verified.
+- [ ] Template usage notes are updated.
 
 ## Manage template pages
 

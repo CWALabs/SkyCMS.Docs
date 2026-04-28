@@ -1,17 +1,28 @@
-<!-- Audience: Content Editors, Administrators -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/FileManagement/README.md -->
+---
+canonical_title: File Manager
+description: Reference the SkyCMS File Manager for uploads, organization, editing, permissions, and common troubleshooting.
+doc_type: Reference
+product_area: editing
+user_intent: understand-file-manager-capabilities-and-operations
+audience:
+	- Content Editors
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # File Manager
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
 - upload, organise, move, or delete files and folders,
 - understand which file operations are available and to whom,
-- troubleshoot File Manager behaviour (upload failures, editor issues).
+- troubleshoot File Manager behaviour such as upload failures or editor issues.
 
 ## Overview
 
@@ -25,6 +36,10 @@ Key capabilities:
 - Bulk move, copy, and delete operations.
 - Thumbnail gallery view for images.
 - Copy-to-clipboard URL shortcut for any file.
+
+## What this page covers
+
+Use this page as the operational reference for everyday file work. If you want a shorter onboarding path, start with [File Manager Quick Start](./file-manager-quickstart.md) and return here when you need more detail.
 
 ### Permissions
 
@@ -224,6 +239,15 @@ When inserting images into a page or article, File Manager enters image selectio
 - Reduce items per page.
 - Switch from thumbnail view to list view.
 - Close unused browser tabs.
+
+## Verification
+
+File Manager is working as expected when you can:
+
+- open the correct folder path,
+- upload and retrieve files successfully,
+- rename, move, or delete items with the expected permissions,
+- launch the code or image editor for supported file types.
 
 ## Related guides
 

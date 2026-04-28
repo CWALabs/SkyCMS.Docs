@@ -1,9 +1,21 @@
-<!-- Audience: Full-Stack Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/Integration-Guide.md -->
+---
+canonical_title: Contact Form API Integration Guide
+description: This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.
+doc_type: How-to
+product_area: development
+user_intent: understand-contact-form-api-integration-guide
+audience:
+  - Full-Stack Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Contact Form API Integration Guide
+
+## Summary
 
 This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.
 

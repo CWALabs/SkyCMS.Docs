@@ -1,20 +1,39 @@
-# User Management
-
-Guide to managing user accounts, roles, and author profiles from the SkyCMS admin dashboard.
-
-**Audience:** Administrators
-
+---
+canonical_title: User Management
+description: Manage user accounts, roles, and author profiles from the SkyCMS admin dashboard.
+doc_type: How-to
+product_area: administration
+user_intent: manage-users-roles-and-author-profiles
+audience:
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
-## Accessing User Management
+# User management
+
+## Summary
+
+Use this guide when you need to:
+
+- create, confirm, or delete user accounts,
+- assign or change roles,
+- manage author profile information.
+
+SkyCMS provides an admin dashboard for managing user accounts, roles, and author profiles.
+
+## Accessing user management
 
 Navigate to **Editor → Users** from the sidebar. User management is restricted to users with the **Administrator** role.
 
 ---
 
-## User Accounts
+## User accounts
 
-### Viewing Users
+### Viewing users
 
 The user inventory page displays a paginated, sortable table with:
 
@@ -26,7 +45,7 @@ The user inventory page displays a paginated, sortable table with:
 
 Use the pagination and sort controls to navigate large user lists.
 
-### Creating a User
+### Creating a user
 
 1. Click **Create** on the user list page.
 2. Enter the user's email address.
@@ -34,7 +53,7 @@ Use the pagination and sort controls to navigate large user lists.
 4. Click **Create**.
 5. A confirmation page is displayed. If email delivery is configured, the user receives a confirmation email.
 
-### Confirming Emails
+### Confirming emails
 
 If a user hasn't confirmed their email:
 
@@ -42,11 +61,11 @@ If a user hasn't confirmed their email:
 - Click **Resend Confirmation** to send a new verification email.
 - Click **Unconfirm Email** to revoke confirmation status.
 
-### Password Resets
+### Password resets
 
 Click **Send Password Reset** next to any user to email them a password reset link. This requires a working email provider configuration.
 
-### Deleting Users
+### Deleting users
 
 1. Select one or more users using the checkboxes.
 2. Click **Delete** in the bulk actions bar.
@@ -56,13 +75,13 @@ Click **Send Password Reset** next to any user to email them a password reset li
 
 ---
 
-## Role Assignment
+## Role assignment
 
-### Viewing a User's Roles
+### Viewing a user's roles
 
 Click **Roles** next to any user to see their current role membership.
 
-### Assigning Roles
+### Assigning roles
 
 1. Open the **Role Assignment** page for a user.
 2. Toggle roles on or off.
@@ -70,7 +89,7 @@ Click **Roles** next to any user to see their current role membership.
 
 Users can belong to multiple roles simultaneously. See [Roles & Permissions](../for-developers/roles-and-permissions.md) for the full permission matrix.
 
-### Bulk Role Actions
+### Bulk role actions
 
 From the user list, select multiple users and use the bulk actions **Add Role** or **Remove Role** to modify roles in batch.
 
@@ -90,16 +109,16 @@ Author profiles contain biographical information displayed on blog posts and art
    - Social media links (Twitter, Instagram)
 4. Click **Save**.
 
-### Deleting Author Profiles
+### Deleting author profiles
 
 Click **Delete** next to an author profile to remove it. This removes the profile data only — the associated user account is not affected.
 
 ---
 
-## Built-in Roles
+## Built-in roles
 
 | Role | Purpose |
-|------|---------|
+| ---- | ------- |
 | **Administrator** | Full system access — user management, settings, CDN, storage, audit logs |
 | **Editor** | Full content creation and publishing, template/layout management, file manager |
 | **Author** | Create and edit own content, submit for review, file manager access |
@@ -111,7 +130,7 @@ Administrators can also create custom roles. See [Roles & Permissions](../for-de
 
 ---
 
-## See Also
+## See also
 
 - [Roles & Permissions](../for-developers/roles-and-permissions.md) — Full permission matrix and role architecture
 - [Authentication & SSO](authentication.md) — Login methods, 2FA, passkeys, OAuth providers

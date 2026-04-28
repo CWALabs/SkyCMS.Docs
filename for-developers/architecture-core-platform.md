@@ -1,23 +1,23 @@
-﻿---
-canonical_title: Core Platform Architecture
+---
+canonical_title: Core platform architecture
 description: Stable architecture model for SkyCMS independent of static, dynamic, or hybrid delivery mode.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-core-platform-architecture
 audience:
   - Developers
-  - Architects
-doc_type: Explanation
-status: Draft
-entities:
-  - multi-tenancy
-  - editor-publisher-separation
-  - tenant-isolation
-  - publishing-pipeline
-keywords:
-  - platform architecture
-  - system context
-  - request lifecycle
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
-# Core Platform Architecture
+# Core platform architecture
+
+## Summary
+
+Stable architecture model for SkyCMS independent of static, dynamic, or hybrid delivery mode.
 
 ## Purpose
 

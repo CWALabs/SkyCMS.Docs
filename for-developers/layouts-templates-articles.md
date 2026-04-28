@@ -1,24 +1,23 @@
 ---
 canonical_title: Layouts, Templates, and Articles
 description: Canonical developer guide to how layouts, templates, articles, and published pages relate in SkyCMS.
-audience:
-	- Backend Developers
-	- Full-Stack Developers
 doc_type: Explanation
-status: Canonical
-entities:
-	- layout
-	- template
-	- article
-	- published-page
-keywords:
-	- layouts templates articles
-	- pages vs articles
-	- content model
-source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Article.cs, SkyCMS/Editor/Controllers/BaseController.cs
+product_area: development
+user_intent: understand-layouts-templates-and-articles
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Layouts, Templates, and Articles
+
+## Summary
+
+Canonical developer guide to how layouts, templates, articles, and published pages relate in SkyCMS.
 
 ## When to use this page
 

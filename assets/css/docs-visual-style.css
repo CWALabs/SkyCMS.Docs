@@ -1,0 +1,220 @@
+/*
+ * Documentation Visual Style Standard (DVSS)
+ * Improves readability and parent/child hierarchy in docs navigation and TOC.
+ */
+
+:root {
+  --dvss-nav-active: #0b57d0;
+  --dvss-nav-active-bg: color-mix(in srgb, var(--dvss-nav-active) 12%, transparent);
+  --dvss-nav-branch: color-mix(in srgb, var(--dvss-nav-active) 45%, transparent);
+  --dvss-nav-branch-soft: color-mix(in srgb, var(--md-default-fg-color) 16%, transparent);
+  --dvss-nav-text: color-mix(in srgb, var(--md-default-fg-color) 92%, black);
+  --dvss-header-bg: #212529;
+  --dvss-header-bg-strong: #1b1f23;
+  --dvss-header-text: #f8f9fa;
+  --dvss-header-muted: rgba(248, 249, 250, 0.78);
+  --dvss-header-border: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] {
+  --dvss-nav-active: #8ab4f8;
+  --dvss-nav-active-bg: color-mix(in srgb, var(--dvss-nav-active) 18%, transparent);
+  --dvss-nav-branch: color-mix(in srgb, var(--dvss-nav-active) 55%, transparent);
+  --dvss-nav-branch-soft: color-mix(in srgb, var(--md-default-fg-color) 24%, transparent);
+  --dvss-nav-text: color-mix(in srgb, var(--md-default-fg-color) 96%, white);
+  --dvss-header-bg: #212529;
+  --dvss-header-bg-strong: #161a1d;
+  --dvss-header-text: #f8f9fa;
+  --dvss-header-muted: rgba(248, 249, 250, 0.82);
+  --dvss-header-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Top shell: align docs header with the Editor's dark navbar treatment. */
+.md-header {
+  background: var(--dvss-header-bg);
+  color: var(--dvss-header-text);
+  border-bottom: 1px solid var(--dvss-header-border);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.md-tabs {
+  background: var(--dvss-header-bg-strong);
+  color: var(--dvss-header-text);
+  border-bottom: 1px solid var(--dvss-header-border);
+}
+
+.md-header__button,
+.md-header__title,
+.md-header__topic,
+.md-tabs__link,
+.md-search__icon,
+.md-search__input::placeholder {
+  color: var(--dvss-header-text);
+}
+
+.md-tabs__link {
+  opacity: 0.88;
+}
+
+.md-tabs__link:hover,
+.md-tabs__item--active .md-tabs__link,
+.md-header__button:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.md-search__form {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.md-search__form:hover,
+.md-search__form:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.md-search__input {
+  color: var(--dvss-header-text);
+}
+
+.md-header__source {
+  color: var(--dvss-header-muted);
+}
+
+.md-header__source:hover {
+  color: var(--dvss-header-text);
+}
+
+/* Left sidebar hierarchy (primary nav) */
+.md-sidebar--primary .md-nav__link {
+  color: var(--dvss-nav-text);
+  line-height: 1.35;
+}
+
+.md-sidebar--primary .md-nav__item > .md-nav__link {
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding-top: 0.18rem;
+  padding-bottom: 0.18rem;
+}
+
+.md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.md-sidebar--primary .md-nav .md-nav {
+  margin-left: 0.2rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--dvss-nav-branch-soft);
+}
+
+.md-sidebar--primary .md-nav .md-nav .md-nav__link {
+  font-size: 0.8rem;
+  font-weight: 460;
+  padding-left: 0.62rem;
+  border-left: 2px solid transparent;
+}
+
+.md-sidebar--primary .md-nav .md-nav .md-nav .md-nav__link {
+  font-size: 0.77rem;
+  font-weight: 430;
+  padding-left: 0.92rem;
+}
+
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+  color: var(--dvss-nav-active);
+  background: var(--dvss-nav-active-bg);
+  border-radius: 0.25rem;
+}
+
+.md-sidebar--primary .md-nav__item--active .md-nav .md-nav__link {
+  border-left-color: var(--dvss-nav-branch);
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  background: color-mix(in srgb, var(--dvss-nav-active) 8%, transparent);
+  border-radius: 0.2rem;
+}
+
+/* Right sidebar table of contents (secondary nav) */
+.md-sidebar--secondary .md-nav__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.md-sidebar--secondary .md-nav__link {
+  font-size: 0.79rem;
+  line-height: 1.35;
+  padding-top: 0.18rem;
+  padding-bottom: 0.18rem;
+}
+
+.md-sidebar--secondary .md-nav .md-nav__link {
+  font-size: 0.75rem;
+  padding-left: 0.55rem;
+  border-left: 2px solid transparent;
+}
+
+.md-sidebar--secondary .md-nav .md-nav {
+  margin-left: 0.18rem;
+  padding-left: 0.48rem;
+  border-left: 1px solid var(--dvss-nav-branch-soft);
+}
+
+.md-sidebar--secondary .md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+  color: var(--dvss-nav-active);
+}
+
+.md-sidebar--secondary .md-nav__item--active .md-nav .md-nav__link {
+  border-left-color: var(--dvss-nav-branch);
+}
+
+.md-sidebar--secondary .md-nav__link:hover {
+  color: var(--dvss-nav-active);
+}
+
+/* Improve keyboard discoverability for nav links */
+.md-sidebar .md-nav__link:focus-visible {
+  outline: 2px solid var(--dvss-nav-active);
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+}
+
+/* Content typography rhythm */
+.md-typeset h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 650;
+  margin-top: 2rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 1.6rem;
+}
+
+.md-typeset h4 {
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.md-typeset p,
+.md-typeset li {
+  max-width: 85ch;
+}
+
+.md-typeset p {
+  margin-top: 0.65em;
+  margin-bottom: 0.75em;
+}

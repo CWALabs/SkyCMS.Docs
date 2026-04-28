@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Multi-Tenant-Configuration.md -->
+---
+canonical_title: Multi-Tenancy Configuration
+description: Configure tenant-aware behavior in SkyCMS using domain mapping, tenant-scoped settings, and isolation validation.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-multi-tenancy-by-domain
+audience:
+  - Developers
+  - Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Multi-Tenancy Configuration
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
@@ -51,8 +62,8 @@ Recommended mapping approach:
 Validate with at least two tenant domains:
 
 - each domain resolves the expected tenant,
-- content/settings do not leak between tenants,
-- publish and cache purge actions affect only intended tenant assets.
+- content and settings do not leak between tenants,
+- publish and cache purge actions affect only the intended tenant assets.
 
 ## Troubleshooting
 
@@ -64,3 +75,4 @@ Validate with at least two tenant domains:
 
 - [Configuration Overview](./overview.md)
 - [Proxy Settings](./proxy-settings.md)
+- [Troubleshooting](../reference/troubleshooting.md)

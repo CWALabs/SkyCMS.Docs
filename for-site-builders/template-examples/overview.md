@@ -1,11 +1,31 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Reference + Example -->
+---
+canonical_title: Template Examples
+description: Explore SkyCMS template examples across common page types and frameworks while preserving safe editable region contracts.
+doc_type: Explanation
+product_area: site-building
+user_intent: choose-and-adapt-template-examples
+audience:
+	- Site Builders
+	- Designers
+	- Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Template Examples
+
+## Summary
 
 This section provides example page templates for common SkyCMS page types using the same framework options featured in the layout examples.
 
 The goal is not to prescribe one exact implementation, but to show how the same content model can be expressed with different framework conventions while preserving clear editable regions and safe template structure.
+
+## Outcome
+
+After completing this guide, you should be able to choose the right page-type template example and adapt it to your selected framework.
 
 ## Included page types
 
@@ -66,3 +86,7 @@ Information pages with secondary navigation are useful when a single page contai
 - [Layout Examples Overview](../layout-examples/overview.md)
 - [Blogging](../../for-editors/blogging.md)
 - [Blog Architecture](../../for-developers/blog-architecture.md)
+
+## Verification
+
+This page is working as intended when you can map a page requirement to one template example and confirm the corresponding editable-region strategy before implementation.

@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-SendGrid.md -->
+---
+canonical_title: Email: SendGrid
+description: Configure SendGrid email delivery for SkyCMS using API-key-based transactional email.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-sendgrid-email
+audience:
+	- Developers
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email: SendGrid
 
-## When to use SendGrid
+## Summary
 
 Use SendGrid when you need managed transactional email delivery with API-key authentication.
 
@@ -24,6 +35,13 @@ Use environment variables or secret stores for API keys. Avoid storing keys in s
 - send a test message from settings,
 - verify sender identity status,
 - review provider dashboard logs for delivery and bounce events.
+
+## Validation checklist
+
+- test send succeeds,
+- sender identity is verified,
+- dashboard logs show acceptance and expected delivery behavior,
+- no repeated auth or quota errors appear in runtime logs.
 
 ## Related guides
 

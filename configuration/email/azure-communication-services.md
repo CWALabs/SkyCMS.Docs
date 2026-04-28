@@ -1,18 +1,29 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-AzureCommunicationServices.md -->
+---
+canonical_title: Email: Azure Communication Services
+description: Configure Azure Communication Services email delivery for SkyCMS in Azure-managed environments.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-azure-communication-services-email
+audience:
+	- Developers
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email: Azure Communication Services
 
-## When to use ACS email
+## Summary
 
 Use Azure Communication Services when you want Azure-managed email delivery and centralized Azure operations.
 
 ## Required settings
 
 - ACS connection string,
-- verified sender domain/address,
+- verified sender domain or address,
 - provider mode set to Azure Communication Services.
 
 ## Example configuration
@@ -24,6 +35,13 @@ Store the ACS connection string in secret stores and inject it via environment v
 - run send test from settings,
 - verify sender identity status in ACS,
 - check ACS diagnostics for throttling or authentication failures.
+
+## Validation checklist
+
+- test send succeeds,
+- sender identity is verified,
+- ACS diagnostics show acceptance of messages,
+- no repeated throttling or auth errors appear in runtime logs.
 
 ## Related guides
 

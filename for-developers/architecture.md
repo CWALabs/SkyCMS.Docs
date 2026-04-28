@@ -1,27 +1,23 @@
-﻿---
-canonical_title: SkyCMS Architecture Overview
+---
+canonical_title: SkyCMS architecture overview
 description: Core architecture map for SkyCMS with deployment mode profiles and a selection matrix.
-audience:
-	- Developers
-	- Architects
 doc_type: Explanation
-status: Canonical
-entities:
-	- architecture
-	- multi-tenancy
-	- publishing
-	- static-mode
-	- dynamic-mode
-	- hybrid-mode
-keywords:
-	- architecture overview
-	- static publishing
-	- dynamic rendering
-	- hybrid delivery
-	- decision matrix
+product_area: architecture
+user_intent: understand-skycms-architecture-overview
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
-# Architecture Overview
+# SkyCMS architecture overview
+
+## Summary
+
+Core architecture map for SkyCMS with deployment mode profiles and a selection matrix.
 
 ## When to use this page
 

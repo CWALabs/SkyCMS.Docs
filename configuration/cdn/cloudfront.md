@@ -1,11 +1,22 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/CDN-CloudFront.md -->
+---
+canonical_title: CDN: CloudFront
+description: Configure CloudFront invalidation for SkyCMS publish workflows in AWS-backed environments.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-cloudfront-invalidation
+audience:
+	- DevOps
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # CDN: CloudFront
 
-## When to use CloudFront
+## Summary
 
 Use CloudFront when hosting behind AWS edge distributions and you want automated invalidations after content publish.
 
@@ -14,7 +25,7 @@ Use CloudFront when hosting behind AWS edge distributions and you want automated
 - distribution ID,
 - IAM access key and secret,
 - region (commonly `us-east-1` for CloudFront API operations),
-- IAM policy allowing create/get invalidation on target distribution.
+- IAM policy allowing create and get invalidation on target distribution.
 
 ## Routing and cache rules
 
@@ -26,7 +37,7 @@ Recommended rules:
 
 ## Validation checklist
 
-- credentials pass save/test,
+- credentials pass save or test,
 - invalidation entries appear in CloudFront console after publish,
 - refreshed content reaches edge locations as expected.
 

@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-None.md -->
+---
+canonical_title: Email: No Provider
+description: Disable outbound email for local, isolated, or notification-free SkyCMS environments.
+doc_type: How-to
+product_area: configuration
+user_intent: disable-outbound-email-in-skycms
+audience:
+	- Developers
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email: No Provider
 
-## When to use no provider
+## Summary
 
 Use this mode when outbound email is intentionally disabled for local development, isolated test environments, or deployments that do not require notifications.
 

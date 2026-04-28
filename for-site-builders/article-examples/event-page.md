@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Event Page Article Examples
+description: Build one-off event pages with structured schedule details, registration guidance, and optional hero imagery.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-one-off-event-article-page
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Event Page Article Examples
 
+## Summary
+
 This pattern is useful for one-off webinars, launch events, training sessions, meetups, or registration pages that need schedule and location details but do not justify a reusable template.
+
+## Outcome
+
+After completing this guide, you should be able to implement an event page with clear details, body content, and registration next-step regions.
 
 ## Recommended editable regions
 
@@ -142,3 +162,7 @@ If the event page needs a managed hero image, speaker photo, or venue image, use
 
 - [Announcement and Update Article Examples](./announcement-update.md)
 - [Resource Article with Table of Contents Examples](./resource-with-toc.md)
+
+## Verification
+
+This example is successful when event details are easy to scan, registration guidance is explicit, and optional media integrations support the page without disrupting essential event information.

@@ -1,24 +1,23 @@
 ---
 canonical_title: Blogging
 description: Create and manage blogs and blog posts in SkyCMS using the standard article lifecycle and blog-specific rendering rules.
-audience:
-	- Content Editors
-	- Authors
-	- Administrators
 doc_type: How-to
-status: Draft
-entities:
-	- blog
-	- blog-post
-	- article
-keywords:
-	- blogs
-	- blog posts
-	- publish blog
-source: SkyCMS/Editor/Features/Blogs/
+product_area: publishing
+user_intent: create-and-manage-blogs-and-blog-posts
+audience:
+  - Content Editors
+  - Authors
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Blogging
+
+## Summary
 
 SkyCMS includes a dedicated blogging subsystem with support for multiple independent blogs, post management, banner images, and public preview.
 
@@ -30,7 +29,7 @@ SkyCMS includes a dedicated blogging subsystem with support for multiple indepen
 
 ---
 
-## Quick Start
+## Quick start
 
 1. Navigate to **Editor → Blogs** from the sidebar.
 2. Click **Create** to set up a new blog.
@@ -44,7 +43,7 @@ SkyCMS includes a dedicated blogging subsystem with support for multiple indepen
 
 A **blog** is a named collection of blog posts — similar to a blog category or publication channel. A single site can host multiple independent blogs (e.g., "Company News", "Engineering Blog", "Product Updates").
 
-### Creating a Blog
+### Creating a blog
 
 1. Go to **Editor → Blogs**.
 2. Click **Create**.
@@ -60,7 +59,7 @@ A **blog** is a named collection of blog posts — similar to a blog category or
 
 1. Click **Create** to save.
 
-### Editing a Blog
+### Editing a blog
 
 1. From the blog list, click **Edit** on the blog row.
 2. Update any fields — title, description, banner image, or publish date.
@@ -68,7 +67,7 @@ A **blog** is a named collection of blog posts — similar to a blog category or
 
 > **Note:** Changing the title does not change the Blog Key. The key is permanent once created.
 
-### Deleting a Blog
+### Deleting a blog
 
 1. Click **Delete** on the blog row.
 2. Review the confirmation page.
@@ -76,17 +75,17 @@ A **blog** is a named collection of blog posts — similar to a blog category or
 
 > **Warning:** Deleting a blog also deletes all posts within it. This is a soft delete — the content is marked as deleted but may be recoverable by an administrator.
 
-### Default Blog
+### Default blog
 
 One blog can be designated as the site default. Use the **Make Default** action in the blog list to promote a blog. The default blog is used as the reassignment target for orphaned posts.
 
 ---
 
-## Blog Posts
+## Blog posts
 
 Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Visual Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
 
-### Creating a Blog Post
+### Creating a blog post
 
 1. Open the blog from **Editor → Blogs**.
 2. Click **New Post**.
@@ -95,7 +94,7 @@ Blog posts are articles that belong to a blog. They use the same editing tools a
 5. Optionally set a banner image, introduction text, and publish date.
 6. Click **Publish** to make the post live, or save as a draft.
 
-### Post Properties
+### Post properties
 
 | Property | Description |
 | ---------- | ------------- |
@@ -106,7 +105,7 @@ Blog posts are articles that belong to a blog. They use the same editing tools a
 | **Published** | Set a date/time to make the post live. Leave blank for draft. |
 | **Category** | Optional taxonomy label (max 64 characters). |
 
-### Managing Posts
+### Managing posts
 
 From the blog posts list, each post has these quick actions:
 
@@ -132,11 +131,11 @@ For example, a post titled "Getting Started with SkyCMS" in the "engineering" bl
 
 ---
 
-## Blog Templates
+## Blog templates
 
 SkyCMS uses dedicated templates for blogs: the **Blog** template and the **Blog Post** template. These templates use blog-specific CSS classes and editable regions.
 
-### Blog Template
+### Blog template
 
 The blog template renders the blog index page with a list of posts. Key elements:
 
@@ -145,7 +144,7 @@ The blog template renders the blog index page with a list of posts. Key elements
 - Paginated post listing with title, excerpt, date, and thumbnail
 - Navigation controls (previous/next page)
 
-### Blog Post Template
+### Blog post template
 
 The post template renders individual blog posts. Key elements:
 
@@ -181,7 +180,7 @@ Legacy templates may still contain older class names or markup patterns, but new
 
 ---
 
-## Blog Preview
+## Blog preview
 
 Each blog has an anonymous preview endpoint:
 
@@ -193,9 +192,9 @@ This renders a simplified view of the blog without requiring authentication. Use
 
 ---
 
-## Blog Rendering
+## Blog rendering
 
-### Client-Side Architecture
+### Client-side architecture
 
 Blogs use a client-side rendering pattern for performance:
 
@@ -204,7 +203,7 @@ Blogs use a client-side rendering pattern for performance:
 3. Posts are inserted into the `#post-list` container dynamically.
 4. Pagination is handled client-side via the `#pagination` nav element.
 
-### Post Display
+### Post display
 
 Each post in the stream listing shows:
 
@@ -215,7 +214,7 @@ Each post in the stream listing shows:
 
 Posts are sorted by publication date (newest first), then by title.
 
-### Post Navigation
+### Post navigation
 
 When viewing an individual blog post, previous/next navigation links appear at the bottom of the page. Navigation order follows publication date.
 

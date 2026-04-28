@@ -1,11 +1,28 @@
+---
+canonical_title: SkyCMS Documentation Templates
+description: Use these templates for new pages and major rewrites.
+doc_type: Reference
+product_area: development
+user_intent: understand-skycms-documentation-templates
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # SkyCMS Documentation Templates
+
+## Summary
 
 Use these templates for new pages and major rewrites.
 
 ## 1) Tutorial template
 
 ````markdown
-# <Title>
+
 
 ## Summary
 <One sentence on what the reader will achieve>
@@ -38,7 +55,7 @@ Use these templates for new pages and major rewrites.
 ## 2) How-to template
 
 ````markdown
-# <Title>
+
 
 ## Summary
 <One sentence on the task>
@@ -74,7 +91,7 @@ Use these templates for new pages and major rewrites.
 ## 3) Reference template
 
 ````markdown
-# <Title>
+
 
 ## Summary
 <One sentence on scope>
@@ -110,7 +127,7 @@ Use these templates for new pages and major rewrites.
 ## 4) Explanation template
 
 ````markdown
-# <Title>
+
 
 ## Summary
 <One sentence on concept and value>

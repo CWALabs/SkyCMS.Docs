@@ -1,12 +1,24 @@
-<!-- Audience: Administrators and Advanced Editors -->
-<!-- Type: How-to / Reference -->
-<!-- Status: Draft -->
+---
+canonical_title: AI Provider Setup
+description: Configure the tenant AI provider in SkyCMS so editors can use AI features in Monaco, Visual Editor, and AI Help Chat.
+doc_type: How-to
+product_area: editing
+user_intent: configure-tenant-ai-provider-for-editor-features
+audience:
+	- Administrators
+	- Advanced Editors
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # AI Provider Setup
 
-## Overview
+## Summary
 
-SkyCMS AI is no longer limited to Monaco inline assistance. The current tenant AI configuration powers:
+SkyCMS AI covers more than Monaco inline completions. The current tenant AI configuration powers:
 
 - Monaco inline completions,
 - Monaco AI chat,
@@ -14,6 +26,10 @@ SkyCMS AI is no longer limited to Monaco inline assistance. The current tenant A
 - standalone AI Help Chat.
 
 The feature is off by default and requires an administrator to configure the tenant AI provider before it becomes available to editors.
+
+## Outcome
+
+After completing this guide, tenant AI should be enabled with a valid endpoint and credentials, and editor-facing AI features should be available where supported.
 
 ## Where to configure
 
@@ -129,6 +145,10 @@ Once settings are saved with **Enabled** on and a valid endpoint/token:
 2. CKEditor can enable its region-scoped AI assistant.
 3. AI Help Chat can open from the editor menu.
 4. If supported, model pickers can load live model options.
+
+## Verification
+
+Configuration is successful when AI status is enabled and configured, editor surfaces can invoke AI actions, and provider-backed responses are returned without authentication or endpoint errors.
 
 ## Recommended next step
 

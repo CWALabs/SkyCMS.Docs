@@ -1,0 +1,17 @@
+[
+  {
+    "file": "d:/source/SkyCMS.Docs/for-developers/ai-integration.md",
+    "frontmatter": {
+      "canonical_title": "AI integration architecture",
+      "description": "Understand how SkyCMS AI components are wired together, including provider selection, model resolution, and editor client integration.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "understand-ai-integration-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": 

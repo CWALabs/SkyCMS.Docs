@@ -1,7 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
+---
+canonical_title: Create a SendGrid API Key
+description: Create a least-privilege SendGrid API key for SkyCMS transactional email delivery.
+doc_type: How-to
+product_area: configuration
+user_intent: create-sendgrid-api-key-for-skycms
+audience:
+  - Developers
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Create a SendGrid API Key
+
+## Summary
 
 Use this guide when SkyCMS needs a SendGrid API key to send transactional email such as contact form notifications, account emails, or workflow alerts.
 
@@ -32,10 +47,10 @@ The API key is a 69-character string that SkyCMS includes as the `Authorization:
 
 Selecting **Restricted Access** is important. Full Access grants the key permission to modify account settings, billing, and other areas SkyCMS does not need.
 
-4. Scroll down to the permissions list. Locate **Mail Send**.
-5. Set **Mail Send** to **Full Access**. All other categories can remain at **No Access**.
-6. Select **Create & View**.
-7. Copy the displayed API key immediately.
+1. Scroll down to the permissions list. Locate **Mail Send**.
+2. Set **Mail Send** to **Full Access**. All other categories can remain at **No Access**.
+3. Select **Create & View**.
+4. Copy the displayed API key immediately.
 
 SendGrid shows the API key exactly once. Store it in your secret manager before closing this page. You cannot retrieve the value again — only revoke and recreate.
 

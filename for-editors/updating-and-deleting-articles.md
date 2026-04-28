@@ -1,17 +1,31 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Explanation + How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Editor/Features/Articles/Save/SaveArticleHandler.cs, SkyCMS/Editor/Features/Articles/Delete/DeleteArticleHandler.cs, SkyCMS/Editor/Features/Blogs/UpdateStream/UpdateBlogStreamHandler.cs, SkyCMS/Editor/Features/Blogs/DeleteStream/DeleteBlogStreamHandler.cs -->
+---
+canonical_title: Updating and Deleting Articles
+description: Update, unpublish, delete, and permanently trash SkyCMS articles with a clear understanding of the expected lifecycle results.
+doc_type: How-to
+product_area: editing
+user_intent: manage-article-lifecycle-actions-safely
+audience:
+	- Content Editors
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Updating and Deleting Articles
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
 - update published or draft content safely,
-- unpublish/delete/trash articles correctly,
+- unpublish, delete, or trash articles correctly,
 - verify expected outcomes after lifecycle actions.
+
+## Outcome
+
+After completing this guide, you should understand which lifecycle action to use, what each action changes in live content and editor history, and what to verify afterward.
 
 ## Related guides
 
@@ -34,7 +48,7 @@ Set a future date and time; the article automatically publishes at that moment.
 
 See also: [Scheduling Pages](./page-scheduling.md)
 
-## What Happens When You Update An Article
+## What happens when you update an article
 
 When you update an article, SkyCMS saves your edits to the article record and keeps version history.
 
@@ -70,7 +84,7 @@ Expected result:
 - If blog URL path changes, child blog post URLs are updated to match the new blog path.
 - Publish state changes can cascade to posts in that blog.
 
-## What Happens When You Unpublish An Article
+## What happens when you unpublish an article
 
 Unpublishing hides a published article from the live site while keeping the editable content.
 
@@ -100,7 +114,7 @@ To bring an unpublished article back to live:
 2. Select **Publish** (immediately or schedule a date).
 3. The article becomes visible on the live site again.
 
-## What Happens When You Delete An Article
+## What happens when you delete an article
 
 Deleting uses a soft-delete model and removes public artifacts for that article.
 
@@ -135,7 +149,7 @@ Important:
 - The `root` home page cannot be deleted directly.
 - Replace it first, then delete the old page if needed.
 
-## What Happens When You Permanently Trash An Article
+## What happens when you permanently trash an article
 
 Trashing is different from deletion. Use it when you are certain an article should be irreversibly removed.
 
@@ -157,10 +171,14 @@ Typical scenarios:
 - An article was created by mistake and should be completely erased from history.
 - Storage or compliance retention policies require permanent removal.
 
-## Editor Checklist
+## Editor checklist
 
 After update or delete, verify:
 
 - The article appears in the expected draft/published state.
 - The live URL renders the expected result (or returns not found after delete).
 - Blog/post URLs still match expected structure after blog title/path changes.
+
+## Verification
+
+Lifecycle actions are working as expected when the editor shows the intended state, the live site reflects the chosen action, and related navigation or blog paths remain consistent.

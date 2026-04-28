@@ -1,17 +1,23 @@
-<!-- Audience: Developers and Architects -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
+---
+canonical_title: AI integration architecture
+description: Understand how SkyCMS AI components are wired together, including provider selection, model resolution, and editor client integration.
+doc_type: Explanation
+product_area: development
+user_intent: understand-ai-integration-architecture
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
-# AI Integration Architecture
+# AI integration architecture
 
-## When to use this page
+## Summary
 
-Use this guide when you need to:
-
-- understand how SkyCMS AI is wired together,
-- extend the current AI features,
-- troubleshoot provider-specific behavior in code,
-- reason about model discovery and per-user model selection.
+Understand how SkyCMS AI components are wired together, including provider selection, model resolution, and editor client integration.
 
 ## Current architecture summary
 

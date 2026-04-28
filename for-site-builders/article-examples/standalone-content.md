@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Standalone Content Article Examples
+description: Implement one-off article pages with clear editable regions when a reusable template is unnecessary.
+doc_type: Tutorial
+product_area: site-building
+user_intent: build-one-off-article-structure-with-safe-editable-regions
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Standalone Content Article Examples
 
+## Summary
+
 This pattern is useful for pages that need clear structure but do not justify a reusable page template, such as a one-off policy page, a founder letter, or a special editorial page.
+
+## Outcome
+
+After completing this guide, you should be able to create a one-off article page with a predictable title, summary, body, and optional callout structure.
 
 ## Recommended editable regions
 
@@ -140,3 +160,7 @@ Use this when the page needs a managed image, but do not add an image widget jus
 - [Announcement and Update Article Examples](./announcement-update.md)
 - [Resource Article with Table of Contents Examples](./resource-with-toc.md)
 - [Event Page Article Examples](./event-page.md)
+
+## Verification
+
+This example is successful when content regions render in the intended order, optional callouts remain non-blocking, and the page structure can be maintained without converting to a reusable template.

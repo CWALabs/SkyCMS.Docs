@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/docker-compose.yml -->
+---
+canonical_title: Install with Docker
+description: Run SkyCMS in containers for local development, testing, or self-hosted deployments.
+doc_type: How-to
+product_area: installation
+user_intent: install-skycms-with-docker
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Install with Docker
 
-## When to use this page
+## Summary
 
 Use this guide when running SkyCMS in containers for local testing, development, or self-hosted deployments.
 
@@ -14,6 +25,10 @@ Use this guide when running SkyCMS in containers for local testing, development,
 - Docker and Docker Compose.
 - Environment variables or mounted configuration for required SkyCMS settings.
 - Persistent volume strategy for database/content where applicable.
+
+## Outcome
+
+After completing this guide, your containers should be running, setup should be complete, and the environment should be ready for post-install validation.
 
 ## Compose configuration
 
@@ -41,6 +56,10 @@ Open the application URL and navigate to `/___setup` to complete configuration.
 2. Finalize and allow the container to restart.
 3. Sign in with the admin account created during setup.
 
+## Verification
+
+This installation is complete when the containers remain healthy after setup, administrator sign-in works, and publish and upload flows succeed.
+
 ## Common Docker issues
 
 - App restarts repeatedly: verify required environment variables and connection strings.
@@ -49,7 +68,7 @@ Open the application URL and navigate to `/___setup` to complete configuration.
 
 ## Related guides
 
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [setup-wizard.md](setup-wizard.md)
-- [post-installation.md](post-installation.md)
-- [../deployment/docker.md](../deployment/docker.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Setup Wizard](setup-wizard.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Docker Deployment](../deployment/docker.md)

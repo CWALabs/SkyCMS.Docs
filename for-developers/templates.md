@@ -1,25 +1,23 @@
 ---
 canonical_title: Templates
 description: Developer guide to template entities, versioning, editable region contracts, save flows, and rollout behavior in SkyCMS.
-audience:
-	- Backend Developers
-	- Full-Stack Developers
 doc_type: Explanation
-status: Draft
-entities:
-	- template
-	- article
-	- editable-region
-	- page-design-version
-keywords:
-	- templates
-	- page design version
-	- editable regions
-	- template publish
-source: SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/PageDesignVersion.cs, SkyCMS/Editor/Controllers/TemplatesController.cs, SkyCMS/Editor/Features/Templates/Create/CreatePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/GetEditable/GetEditablePageDesignVersionHandler.cs, SkyCMS/Editor/Features/Templates/Save/SavePageDesignVersionHandler.cs
+product_area: development
+user_intent: understand-templates
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Templates
+
+## Summary
+
+Developer guide to template entities, versioning, editable region contracts, save flows, and rollout behavior in SkyCMS.
 
 ## When to use this page
 

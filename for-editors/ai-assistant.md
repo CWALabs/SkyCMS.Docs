@@ -1,28 +1,23 @@
 ---
 canonical_title: Using the SkyCMS AI Assistant
 description: Use SkyCMS AI features in the Code Editor, Visual Editor, and AI Help Chat, including model selection and provider-aware behavior.
+doc_type: How-to
+product_area: editing
+user_intent: use-ai-features-in-skycms-editors
 audience:
   - Content Editors
   - Advanced Editors
   - Administrators
-doc_type: How-to
-status: Draft
-entities:
-  - ai-assistant
-  - code-editor
-  - visual-editor
-  - ai-help-chat
-keywords:
-  - ai assistant
-  - ai chat
-  - model selection
-  - editor ai
-source: SkyCMS editor AI integration
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Using the SkyCMS AI Assistant
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
@@ -141,7 +136,7 @@ SkyCMS combines cached results with explicit refresh requests, so a refresh is t
 - small HTML scaffolds,
 - CSS fixes,
 - JavaScript cleanup,
-- head/meta suggestions,
+- head or meta suggestions,
 - explaining unfamiliar markup or scripts.
 
 ### Best uses for AI in CKEditor
@@ -149,13 +144,13 @@ SkyCMS combines cached results with explicit refresh requests, so a refresh is t
 - rewriting copy,
 - improving readability,
 - restructuring paragraphs,
-- turning rough content into cleaner publish-ready copy.
+- turning rough notes into cleaner publish-ready copy.
 
 ### Best uses for AI Help Chat
 
 - asking where content should live,
 - understanding SkyCMS workflows,
-- getting quick website guidance without editing a field directly.
+- getting quick website guidance without opening an editor field.
 
 ## Limitations to keep in mind
 

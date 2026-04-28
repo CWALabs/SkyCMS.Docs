@@ -1,13 +1,25 @@
-<!-- Audience: Developers, Content Creators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/04-Building-Home-Page.md -->
+---
+canonical_title: Phase 4: Building Your Home Page
+description: Create the home page article in SkyCMS using a layout and template, and understand the page creation workflow.
+doc_type: How-to
+product_area: development
+user_intent: implement-phase-4-building-your-home-page
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Phase 4: Building Your Home Page
 
-## Overview
+## Summary
 
-Your home page is the most important page on your website—it's often the first impression visitors have of your brand, and it serves as the gateway to the rest of your site. In this phase, you'll transform your Site Design (layout) and templates into a fully functional, content-rich home page.
+Create the home page article in SkyCMS using a layout and template, and understand the page creation workflow.
+
+## Overview
 
 **What You'll Accomplish:**
 - Create a new home page using a template

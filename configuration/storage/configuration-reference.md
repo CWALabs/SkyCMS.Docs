@@ -1,9 +1,24 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Storage-Configuration-Reference.md -->
+---
+canonical_title: Storage Configuration Reference
+description: Reference for SkyCMS storage connection keys, provider patterns, and storage backend detection behavior.
+doc_type: Reference
+product_area: configuration
+user_intent: find-storage-connection-and-provider-patterns
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Storage Configuration Reference
+
+## Summary
+
+Use this page for exact storage connection keys, provider patterns, and validation rules used by SkyCMS storage runtime.
 
 ## Configuration keys
 

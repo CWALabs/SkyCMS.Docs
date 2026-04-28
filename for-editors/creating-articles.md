@@ -1,26 +1,27 @@
 ---
 canonical_title: Creating Articles
 description: Create general articles, blog posts, and blogs in SkyCMS and choose the correct initial publish state.
-audience:
-   - Content Editors
 doc_type: How-to
-status: Draft
-entities:
-   - article
-   - general-article
-   - blog-post
-   - blog
-keywords:
-   - create page
-   - create article
-   - create blog post
-   - create blog
-source: SkyCMS/Editor/Features/Articles/Create/CreateArticleHandler.cs
+product_area: editing
+user_intent: create-articles-pages-and-blogs
+audience:
+  - Content Editors
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Creating Articles
 
-This guide covers how to create new articles (pages or blog posts) and set their initial publish state.
+## Summary
+
+Use this guide to create new articles, pages, blog posts, and blogs in SkyCMS and choose the right initial publish state.
+
+## Outcome
+
+After completing this guide, you should be able to create the right content type, choose the appropriate initial publish state, and hand off cleanly into review, scheduling, or update workflows.
 
 ## When to use this page
 
@@ -30,7 +31,7 @@ Use this guide when you need to:
 - choose the right initial publish state,
 - hand off cleanly into update and publish workflows.
 
-## Before You Start
+## Before you start
 
 - You have editor access to SkyCMS.
 - For blog posts, the parent blog already exists.
@@ -76,7 +77,7 @@ General pages are `ArticleType = General` articles that appear as site pages aft
    - Category
 6. Click **Save**.
 
-### What Happens
+### What happens
 
 - If you chose **draft**: The article is saved but not visible on the live site.
 - If you chose **publish now**: The article is immediately made visible (or scheduled for a future date).
@@ -91,7 +92,7 @@ Blog posts are child articles within a blog.
 
 - The parent blog must exist.
 
-### Steps for Blog Posts
+### Steps for blog posts
 
 1. From the blog page, select **New Post**.
 2. Enter a **title** for the post.
@@ -100,7 +101,7 @@ Blog posts are child articles within a blog.
 5. Add optional metadata (banner image, introduction, category).
 6. Click **Save**.
 
-### What Happens for Blog Posts
+### What happens for blog posts
 
 - The post is created within the parent blog.
 - If draft: Not visible on the live site until published.
@@ -110,7 +111,7 @@ Blog posts are child articles within a blog.
 
 A blog is an article with `ArticleType = BlogStream` that organizes related blog posts.
 
-### Steps for Creating a Blog
+### Steps for creating a blog
 
 1. In the editor, select **Create** > **Blog**.
 2. Enter a **title** for the blog (e.g., "News & Updates").
@@ -120,28 +121,28 @@ A blog is an article with `ArticleType = BlogStream` that organizes related blog
    - Set **Publish Date** to publish immediately or schedule publication.
 5. Click **Save**.
 
-### What Happens for a Blog
+### What happens for a blog
 
 - A blog article is created.
 - The blog URL is derived from the title.
 - If no publish date is set, the blog remains draft until published.
 - Blog posts can now be added to this blog.
 
-## Initial Publish State Best Practices
+## Initial publish state best practices
 
-### Use Draft When
+### Use draft when
 
 - **Content is incomplete** – Save your work and continue editing.
 - **Awaiting review** – Let others preview before going live.
 - **Scheduled for future** – Prepare content in advance and publish later.
 
-### Use Publish Now When
+### Use publish now when
 
 - **Content is final** – Ready for live visibility.
 - **Scheduled publish** – Plan a specific date/time for go-live.
 - **Blogs** – Often published soon after creation so the blog has a live landing page.
 
-## What's Next
+## Next steps
 
 After creating an article, you can:
 

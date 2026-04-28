@@ -1,23 +1,23 @@
 ---
 canonical_title: Architecture Executive Summary
 description: Stakeholder-level summary of SkyCMS architecture, deployment patterns, and governance model.
-audience:
-  - Product Leaders
-  - Technical Leads
-  - Architects
 doc_type: Explanation
-status: Draft
-entities:
-  - architecture-summary
-  - deployment-patterns
-  - governance
-keywords:
-  - executive summary
-  - architecture snapshot
-  - static dynamic hybrid
+product_area: architecture
+user_intent: understand-architecture-executive-summary
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Executive Summary
+
+## Summary
+
+Stakeholder-level summary of SkyCMS architecture, deployment patterns, and governance model.
 
 ## One-page summary
 

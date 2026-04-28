@@ -1,9 +1,24 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: Technical Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/LiveEditor/TechnicalReference.md -->
+---
+canonical_title: Visual Editor Technical Reference
+description: Technical implementation details for SkyCMS Visual Editor architecture, toolbar modes, save flow, and extension points.
+doc_type: Reference
+product_area: editing
+user_intent: understand-visual-editor-technical-design-and-integration-points
+audience:
+  - Developers
+  - Administrators
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Visual Editor Technical Reference
+
+## Summary
+
+Use this reference when you need implementation-level details for Visual Editor runtime behavior, mode-specific tooling, save flow, and server integration.
 
 This page captures technical details of the Visual Editor implementation for developers and administrators.
 
@@ -35,47 +50,47 @@ Main toolbar: no standard action buttons. A title mode indicator can appear.
 
 Selection balloon tools:
 
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/bold.svg" alt="Bold" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/italic.svg" alt="Italic" width="16" />
+![Bold](../assets/images/ckeditor/toolbar-icons/bold.svg)
+![Italic](../assets/images/ckeditor/toolbar-icons/italic.svg)
 
 Simple mode:
 
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/paragraph.svg" alt="Paragraph" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/bold.svg" alt="Bold" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/italic.svg" alt="Italic" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/underline.svg" alt="Underline" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/bulleted-list.svg" alt="Bulleted list" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/numbered-list.svg" alt="Numbered list" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/link.svg" alt="Link" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/quote.svg" alt="Quote" width="16" />
+![Paragraph](../assets/images/ckeditor/toolbar-icons/paragraph.svg)
+![Bold](../assets/images/ckeditor/toolbar-icons/bold.svg)
+![Italic](../assets/images/ckeditor/toolbar-icons/italic.svg)
+![Underline](../assets/images/ckeditor/toolbar-icons/underline.svg)
+![Bulleted list](../assets/images/ckeditor/toolbar-icons/bulleted-list.svg)
+![Numbered list](../assets/images/ckeditor/toolbar-icons/numbered-list.svg)
+![Link](../assets/images/ckeditor/toolbar-icons/link.svg)
+![Quote](../assets/images/ckeditor/toolbar-icons/quote.svg)
 
 Standard mode:
 
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/heading2.svg" alt="Heading" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/undo.svg" alt="Undo" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/redo.svg" alt="Redo" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/bold.svg" alt="Bold" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/italic.svg" alt="Italic" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/underline.svg" alt="Underline" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/link.svg" alt="Link" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/paper-clip.svg" alt="File link" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/image-upload.svg" alt="Image upload" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/media.svg" alt="Media" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/quote.svg" alt="Quote" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/todo-list.svg" alt="Todo list" width="16" />
+![Heading](../assets/images/ckeditor/toolbar-icons/heading2.svg)
+![Undo](../assets/images/ckeditor/toolbar-icons/undo.svg)
+![Redo](../assets/images/ckeditor/toolbar-icons/redo.svg)
+![Bold](../assets/images/ckeditor/toolbar-icons/bold.svg)
+![Italic](../assets/images/ckeditor/toolbar-icons/italic.svg)
+![Underline](../assets/images/ckeditor/toolbar-icons/underline.svg)
+![Link](../assets/images/ckeditor/toolbar-icons/link.svg)
+![File link](../assets/images/ckeditor/toolbar-icons/paper-clip.svg)
+![Image upload](../assets/images/ckeditor/toolbar-icons/image-upload.svg)
+![Media](../assets/images/ckeditor/toolbar-icons/media.svg)
+![Quote](../assets/images/ckeditor/toolbar-icons/quote.svg)
+![Todo list](../assets/images/ckeditor/toolbar-icons/todo-list.svg)
 
 Advanced mode:
 
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/heading2.svg" alt="Heading" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/link.svg" alt="Link" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/image-upload.svg" alt="Image upload" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/image.svg" alt="Image style" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/caption.svg" alt="Toggle image caption" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/table.svg" alt="Table" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/media.svg" alt="Media" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/code-block.svg" alt="Code block" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/indent.svg" alt="Indent" width="16" />
-<img style="background:var(--ck-color-toolbar-background, #f3f4f6);border:1px solid var(--ck-color-toolbar-border, var(--ck-color-base-border, #d0d7de));border-radius:4px;padding:2px;vertical-align:middle;" src="../assets/images/ckeditor/toolbar-icons/outdent.svg" alt="Outdent" width="16" />
+![Heading](../assets/images/ckeditor/toolbar-icons/heading2.svg)
+![Link](../assets/images/ckeditor/toolbar-icons/link.svg)
+![Image upload](../assets/images/ckeditor/toolbar-icons/image-upload.svg)
+![Image style](../assets/images/ckeditor/toolbar-icons/image.svg)
+![Toggle image caption](../assets/images/ckeditor/toolbar-icons/caption.svg)
+![Table](../assets/images/ckeditor/toolbar-icons/table.svg)
+![Media](../assets/images/ckeditor/toolbar-icons/media.svg)
+![Code block](../assets/images/ckeditor/toolbar-icons/code-block.svg)
+![Indent](../assets/images/ckeditor/toolbar-icons/indent.svg)
+![Outdent](../assets/images/ckeditor/toolbar-icons/outdent.svg)
 
 For a tool-by-tool breakdown with mode availability, see [Visual Editor Toolbar Reference](./visual-editor-toolbar-reference.md).
 
@@ -84,12 +99,12 @@ For a tool-by-tool breakdown with mode availability, see [Visual Editor Toolbar 
 Recent UX updates consolidate insertion flows into unified dropdowns:
 
 - Link insertion uses a single `Insert link` dropdown with:
-	- `From website page`
-	- `From another website`
+  - `From website page`
+  - `From another website`
 - Image insertion uses a single image dropdown with:
-	- `From computer`
-	- `From website storage`
-	- `From another website`
+  - `From computer`
+  - `From website storage`
+  - `From another website`
 
 This keeps toolbars cleaner while preserving all insertion paths.
 
@@ -124,3 +139,7 @@ This keeps toolbars cleaner while preserving all insertion paths.
 - [Visual Editor](./visual-editor.md)
 - [Code Editor](./code-editor.md)
 - [Developer Article Lifecycle](../for-developers/article-lifecycle.md)
+
+## Verification
+
+This technical reference has served its purpose when you can map editor mode behavior to configured toolsets, trace the save lifecycle end to end, and identify where to extend or troubleshoot server and client integration points.

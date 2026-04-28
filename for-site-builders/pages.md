@@ -1,25 +1,24 @@
 ---
 canonical_title: Pages
 description: Create and maintain page instances in SkyCMS, including template-backed general articles and one-off content paths.
-audience:
-	- Designers
-	- Front-End Developers
 doc_type: How-to
-status: Draft
-entities:
-	- page
-	- article
-	- template
-	- published-page
-keywords:
-	- pages
-	- articles
-	- templates
-	- one-off pages
-source: SkyCMS/Docs/ContentCreation-QuickStart.md
+product_area: site-building
+user_intent: create-and-manage-pages
+audience:
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Pages
+
+## Summary
+
+Pages are concrete content instances built from articles, optionally backed by templates, and rendered in layouts.
 
 ## When to use this page
 

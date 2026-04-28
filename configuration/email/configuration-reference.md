@@ -1,9 +1,24 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-Configuration-Reference.md -->
+---
+canonical_title: Email Configuration Reference
+description: Reference for SkyCMS email provider settings, credential requirements, and validation checks.
+doc_type: Reference
+product_area: configuration
+user_intent: find-email-provider-settings-and-credentials
+audience:
+	- Developers
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email Configuration Reference
+
+## Summary
+
+Use this page for exact email provider settings and validation requirements before enabling outbound email in production.
 
 ## Core settings
 

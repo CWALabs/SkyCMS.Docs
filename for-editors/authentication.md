@@ -1,14 +1,34 @@
-# Authentication & SSO
+---
+canonical_title: Authentication and SSO
+description: Configure SkyCMS authentication — email/password, passkeys, two-factor authentication, and enterprise SSO with Google and Microsoft Entra ID.
+doc_type: Reference
+product_area: administration
+user_intent: configure-skycms-authentication-methods
+audience:
+  - Administrators
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Authentication and SSO
+
+## Summary
+
+Use this reference when you need to:
+
+- understand the supported authentication methods,
+- configure passkeys, two-factor authentication, or OAuth providers,
+- set up cookie isolation for multi-tenant deployments.
 
 SkyCMS supports multiple authentication methods — from standard email/password accounts to passwordless passkeys, two-factor authentication, and enterprise SSO with Microsoft Entra ID and Google.
 
-**Audience:** Administrators, Developers
+## Authentication methods
 
----
-
-## Authentication Methods
-
-### Email & Password
+### Email and password
 
 The default authentication method. Users register with an email address and password.
 
@@ -53,14 +73,14 @@ sequenceDiagram
   A-->>U: Grant session or reject access
 ```
 
-### User Actions
+### User actions
 
 - Users can register passkeys from their account management page.
 - Multiple passkeys can be registered per account.
 - Passkeys can be removed individually.
 - Works across all supported database providers (SQL Server, MySQL, SQLite, Cosmos DB).
 
-### Two-Factor Authentication (2FA)
+### Two-factor authentication (2FA)
 
 TOTP-based second factor using authenticator apps (Google Authenticator, Microsoft Authenticator, Authy, etc.).
 
@@ -80,9 +100,9 @@ TOTP-based second factor using authenticator apps (Google Authenticator, Microso
 
 ---
 
-## OAuth / SSO Providers
+## OAuth / SSO providers
 
-### Google Sign-In
+### Google sign-in
 
 Enable Google authentication by adding these settings to `appsettings.json` or environment variables:
 
@@ -97,7 +117,7 @@ Enable Google authentication by adding these settings to `appsettings.json` or e
 
 The provider is automatically registered when both values are present. Users see a "Sign in with Google" button on the login page.
 
-### Microsoft Account / Entra ID
+### Microsoft account / Entra ID
 
 Enable Microsoft authentication:
 
@@ -124,7 +144,7 @@ The provider uses standard OAuth 2.0 endpoints:
 - Authorization: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize`
 - Token: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`
 
-### Microsoft Graph Integration
+### Microsoft Graph integration
 
 When using Entra ID, SkyCMS can authorize users based on Azure AD group membership:
 
@@ -136,7 +156,7 @@ Configure the required groups in your application settings.
 
 ---
 
-## Cookie Configuration
+## Cookie configuration
 
 | Cookie | Purpose | Expiration |
 | --- | --- | --- |
@@ -145,15 +165,15 @@ Configure the required groups in your application settings.
 | **TwoFactorRememberMe** | Persists 2FA approval across sessions | Browser session |
 | **TwoFactorUserId** | Holds partial login state during 2FA verification | Short-lived |
 
-### Multi-Tenant Cookie Isolation
+### Multi-tenant cookie isolation
 
 In multi-tenant deployments, the `CookieDomain` claim in the user's identity controls cookie scoping. This prevents session leakage between tenants sharing the same application. See [Multi-Tenancy Configuration](../configuration/multi-tenancy.md) for details.
 
 ---
 
-## Configuration Reference
+## Configuration reference
 
-### Environment Variables
+### Environment variables
 
 | Variable | Purpose |
 | --- | --- |
@@ -165,13 +185,13 @@ In multi-tenant deployments, the `CookieDomain` claim in the user's identity con
 | `MicrosoftOAuth__CallbackDomain` | OAuth callback domain |
 | `CosmosPasskeyServerDomain` | Passkey relying party domain (single-tenant only) |
 
-### Identity Pages
+### Identity pages
 
 User-facing identity pages (login, register, manage account, 2FA setup) are provided by ASP.NET Core Identity default UI under the `/Identity/Account/` path. These pages are customizable via the standard ASP.NET Core Identity scaffolding approach.
 
 ---
 
-## See Also
+## See also
 
 - [Roles & Permissions](../for-developers/roles-and-permissions.md) — Authorization model
 - [User Management](user-management.md) — Admin user management guide

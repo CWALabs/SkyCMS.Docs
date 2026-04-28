@@ -1,24 +1,30 @@
-<!-- Audience: Backend Developers and Architects -->
-<!-- Type: Explanation + How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Editor/Features/Articles/Create/CreateArticleHandler.cs, SkyCMS/Editor/Features/Articles/Save/SaveArticleHandler.cs, SkyCMS/Editor/Features/Articles/Delete/DeleteArticleHandler.cs, SkyCMS/Editor/Services/Publishing/PublishingService.cs, SkyCMS/Editor/Features/Blogs/CreatePost/CreateBlogPostCommandHandler.cs, SkyCMS/Editor/Features/Blogs/UpdatePost/UpdateBlogPostCommandHandler.cs, SkyCMS/Editor/Features/Blogs/UpdateStream/UpdateBlogStreamHandler.cs, SkyCMS/Editor/Features/Blogs/DeletePost/DeleteBlogPostCommandHandler.cs, SkyCMS/Editor/Features/Blogs/DeleteStream/DeleteBlogStreamHandler.cs, SkyCMS/Editor/Features/Articles/Trash/TrashArticleHandler.cs -->
+---
+canonical_title: Article lifecycle
+description: Understand article command/handler lifecycle behavior and how create, update, and delete actions affect publishing artifacts.
+doc_type: Explanation
+product_area: publishing
+user_intent: understand-article-lifecycle-and-publishing-effects
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
-# Article Lifecycle (General, BlogPost, BlogStream)
+# Article lifecycle
 
-## When to use this page
+## Summary
 
-Use this guide when you need to:
-
-- understand article command/handler lifecycle behavior,
-- trace publish/unpublish/delete effects on runtime artifacts,
-- verify implementation expectations across article types.
+Understand article command/handler lifecycle behavior and how create, update, and delete actions affect publishing artifacts.
 
 ## Related guides
 
 - Editor guide: [Updating and Deleting Articles](../for-editors/updating-and-deleting-articles.md)
 - Glossary: [../reference/glossary.md](../reference/glossary.md)
 
-## What An Article Is
+## What an article is
 
 In SkyCMS, an [article](../reference/glossary.md#article) is the core content record the system uses to represent authored content.
 
@@ -41,7 +47,7 @@ Scope:
 - ArticleType.BlogPost
 - ArticleType.BlogStream
 
-## Lifecycle Model
+## Lifecycle model
 
 At a high level, article lifecycle has two separate operations:
 
@@ -64,7 +70,7 @@ stateDiagram-v2
 
 Creation can happen in draft mode (Published = null) or publish-now mode (Published has a value).
 
-## Shared Creation Pipeline
+## Shared creation pipeline
 
 Most creation paths eventually use CreateArticleCommand handled by CreateArticleHandler.
 
@@ -94,7 +100,7 @@ Key behavior during creation:
 - Upserts ArticleCatalog.
 - If Published has value, triggers PublishAsync.
 
-## What PublishAsync Does
+## What PublishAsync does
 
 When an article is published (from create, save, or explicit publish):
 
@@ -212,7 +218,7 @@ If Published is provided at create time:
 - Blog is created and published immediately.
 - Published page and TOC are updated.
 
-## Publishing State Changes After Creation
+## Publishing state changes after creation
 
 ### SaveArticleCommand behavior
 
@@ -233,7 +239,7 @@ For BlogStream updates using UpdateBlogHandler:
   - Blog is unpublished.
   - Child BlogPost articles in same BlogKey are unpublished.
 
-## What Happens When An Article Is Updated
+## What happens when an article is updated
 
 Update behavior depends on the command path used.
 
@@ -265,7 +271,7 @@ When editing a blog:
 - If Published is null, unpublishes the blog and all child posts.
 - Regenerates blog wrapper content and processes title-change redirects.
 
-## What Happens When An Article Is Unpublished
+## What happens when an article is unpublished
 
 Unpublishing hides a published article from the public while retaining the article and its editable content.
 
@@ -292,7 +298,7 @@ Unpublish is distinct from delete:
 - **Unpublish** removes public visibility but keeps data and editability.
 - **Delete** marks as deleted and removes PublishedPage; initiates final cleanup.
 
-## What Happens When An Article Is Deleted
+## What happens when an article is deleted
 
 Delete behavior is a soft-delete of draft versions plus cleanup of public artifacts.
 
@@ -325,7 +331,7 @@ For DeleteBlogCommand:
 - Deletes posts first, then deletes the blog (cascade behavior).
 - Uses shared article deletion logic so blog and posts follow the normal article deletion cleanup path.
 
-## What Happens When An Article Is Permanently Trashed
+## What happens when an article is permanently trashed
 
 Trash is distinct from soft-delete: trash is permanent, irreversible removal from all system layers.
 
@@ -350,7 +356,7 @@ Editor workflows typically follow this pattern:
 1. Later, empty or review the trash/deleted items.
 1. Permanently trash the article (irreversible): all versions, metadata, and artifacts are removed.
 
-## Practical Options for "Create + Publish"
+## Practical options for "Create + Publish"
 
 Use one of these patterns:
 
@@ -359,7 +365,7 @@ Use one of these patterns:
 1. Blog: keep current `BlogController.Create` behavior (already publish-now), or set `Published` explicitly when calling the handler directly.
 1. Scheduled publication: set `Published` to a future `DateTimeOffset`; scheduler and publish logic activate on that timestamp.
 
-## Verification Checklist
+## Verification checklist
 
 After create-and-publish, verify:
 
@@ -370,7 +376,7 @@ After create-and-publish, verify:
 - Blog and TOC files are regenerated for blog content.
 - CDN purge result is recorded when CDN is configured.
 
-## Code References
+## Code references
 
 - Creation:
   - Editor/Features/Articles/Create/CreateArticleHandler.cs
@@ -396,7 +402,7 @@ After create-and-publish, verify:
   - Tests/Features/Blogs/DeleteBlogStreamCommandTests.cs
   - Tests/Features/Blogs/UpdateBlogStreamCommandTests.cs
 
-## Quick Code Map (Where to Look)
+## Quick code map (where to look)
 
 Use this as a starting map when debugging or extending lifecycle behavior.
 

@@ -1,9 +1,23 @@
-<!-- Audience: Full-Stack Developers -->
-<!-- Type: Example -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Examples/contact-form-example.html -->
+---
+canonical_title: Contact Form API Example (HTML)
+description: Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.
+doc_type: Reference
+product_area: development
+user_intent: understand-contact-form-api-example-html
+audience:
+  - Full-Stack Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Contact Form API Example (HTML)
+
+## Summary
+
+Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.
 
 ## When to use this page
 

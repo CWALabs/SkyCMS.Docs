@@ -1,10 +1,23 @@
+---
+canonical_title: Tenant Isolation Reference
+description: This reference documents how SkyCMS isolates data, caches, cookies, blob storage, and CDN operations between tenants in a multi-tenant deployment.
+doc_type: Reference
+product_area: administration
+user_intent: understand-tenant-isolation-reference
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Tenant Isolation Reference
 
+## Summary
+
 This reference documents how SkyCMS isolates data, caches, cookies, blob storage, and CDN operations between tenants in a multi-tenant deployment.
-
-**Audience:** Developers, Administrators
-
----
 
 ## Isolation Summary
 

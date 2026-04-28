@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Storage-GoogleCloud.md -->
+---
+canonical_title: Storage: Google Cloud Storage
+description: Configure Google Cloud Storage for SkyCMS assets and published artifacts in GCP-aligned environments.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-google-cloud-storage
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Storage: Google Cloud Storage
 
-## When to use Google Cloud Storage
+## Summary
 
 Use this provider when deploying in Google Cloud environments or when your organization standardizes on GCS buckets and IAM.
 
@@ -19,7 +30,7 @@ Use this provider when deploying in Google Cloud environments or when your organ
 
 - application can upload and read objects,
 - object permissions align with intended access model,
-- publish/remove workflows update storage correctly.
+- publish and remove workflows update storage correctly.
 
 ## Related guides
 

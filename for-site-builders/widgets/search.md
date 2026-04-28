@@ -1,9 +1,22 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/Search-Widget.md -->
+---
+canonical_title: Search Widget
+description: Implement the SkyCMS search widget to post queries and render client-side search results.
+doc_type: How-to
+product_area: site-building
+user_intent: implement-a-working-search-form-with-widget-helpers
+audience:
+  - Site Builders
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Search Widget
+# Search Widget
+
+## Summary
 
 Client-side helpers for a simple search form that posts to the SkyCMS search endpoint and renders results.
 
@@ -15,6 +28,10 @@ Client-side helpers for a simple search form that posts to the SkyCMS search end
   - `divResults` — results container
 
 > Note: The current script contains two minor issues in naming/wiring (a missing submit handler reference and a function name mismatch). The example below shows a corrected wiring using `postSearchData()` and a proper `handleSearch` function.
+
+## Outcome
+
+After completing this guide, you should have a working search form that sends requests to the SkyCMS endpoint and renders ordered search results with links.
 
 ## Endpoint
 
@@ -78,3 +95,12 @@ Client-side helpers for a simple search form that posts to the SkyCMS search end
 ## Rendering helper
 
 The included `buildOrderedList(links)` returns an `<ol>` of result entries and appends a Font Awesome icon to each. Include FA as shown above.
+
+## Verification
+
+This integration is complete when a query returns expected results, no-result states render clearly, and the reset flow returns the UI to its initial state.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [Forms Helpers](./forms.md)

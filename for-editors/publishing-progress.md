@@ -1,12 +1,29 @@
-# Publishing Progress
+---
+canonical_title: Publishing progress
+description: Real-time SignalR-based progress tracking for bulk publishing operations in SkyCMS.
+doc_type: Reference
+product_area: publishing
+user_intent: monitor-bulk-publishing-progress
+audience:
+  - Editors
+  - Administrators
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Publishing progress
+
+## Summary
 
 SkyCMS uses SignalR to provide real-time progress updates during bulk publishing operations. Editors and administrators see live feedback as pages are generated and deployed.
 
-**Audience:** Editors, Administrators, Developers
-
 ---
 
-## How It Works
+## How it works
 
 When you trigger a bulk publish operation (e.g., regenerating static pages for the entire site or publishing a template change that affects multiple pages), the system:
 
@@ -17,9 +34,9 @@ When you trigger a bulk publish operation (e.g., regenerating static pages for t
 
 ---
 
-## Using Bulk Publish
+## Using bulk publish
 
-### From the Editor
+### From the editor
 
 1. Navigate to the publish interface.
 2. Select the pages you want to regenerate, or leave the selection empty to process all published pages.
@@ -30,7 +47,7 @@ When you trigger a bulk publish operation (e.g., regenerating static pages for t
    - Status of each page (success or error)
 5. A completion message appears when the operation finishes.
 
-### Template Publish Cascade
+### Template publish cascade
 
 When you publish a template (page design) version, the system automatically:
 
@@ -42,9 +59,9 @@ This can affect many pages — the progress indicator helps you track the operat
 
 ---
 
-## Technical Architecture
+## Technical architecture
 
-### SignalR Hub
+### SignalR hub
 
 The `PublishingProgressHub` provides the real-time communication channel:
 
@@ -52,16 +69,16 @@ The `PublishingProgressHub` provides the real-time communication channel:
 - **Connection:** Established automatically when you open the publish interface.
 - **Messages:** Progress updates and completion notifications are pushed from server to client.
 
-### Progress Messages
+### Progress messages
 
 The hub broadcasts:
 
 | Message | Payload | When |
-|---------|---------|------|
+| ------- | ------- | ---- |
 | `PublishProgress` | Article ID, status, completed count, total count | After each page is processed |
 | `PublishComplete` | Final count, success/failure summary | When all pages are done |
 
-### Bulk Publish Endpoint
+### Bulk publish endpoint
 
 `POST /Editor/PublishStaticPages`
 
@@ -71,7 +88,7 @@ The hub broadcasts:
 
 ---
 
-## Multi-Tenancy
+## Multi-tenancy
 
 - SignalR connections are scoped to the current tenant.
 - Progress updates are only sent to clients connected from the same tenant.

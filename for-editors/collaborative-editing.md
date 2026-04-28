@@ -1,12 +1,28 @@
-# Real-Time Collaborative Editing
+---
+canonical_title: Real-time collaborative editing
+description: SignalR-based exclusive article locking and live presence indicators for multi-user editing in SkyCMS.
+doc_type: Reference
+product_area: editing
+user_intent: understand-real-time-collaborative-editing-and-article-locking
+audience:
+  - Developers
+  - Editors
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Real-time collaborative editing
+
+## Summary
 
 SkyCMS provides a real-time multi-user editing environment built on ASP.NET Core SignalR. The system uses **exclusive article locking** — one user edits at a time while other editors see live status updates and receive automatic content reloads when changes are saved.
 
-**Audience:** Developers, Editors
-
 ---
 
-## How It Works
+## How it works
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
@@ -25,13 +41,13 @@ sequenceDiagram
     S-->>B: ArticleLock (Ready to Edit)
 ```
 
-### Editing Model
+### Editing model
 
 This is a **lock-based exclusive editing model**, not simultaneous collaborative editing (like Google Docs). Only the lock holder can save changes. Other editors receive notifications and content reloads but cannot modify the article until the lock is released.
 
 ---
 
-## SignalR Hubs
+## SignalR hubs
 
 ### LiveEditorHub
 
@@ -80,9 +96,9 @@ Covered separately in [Publishing Progress](publishing-progress.md). Tracks bulk
 
 ---
 
-## Article Locking
+## Article locking
 
-### Lock Model
+### Lock model
 
 Each lock is stored in the `ArticleLocks` database table:
 
@@ -96,7 +112,7 @@ Each lock is stored in the `ArticleLocks` database table:
 | `EditorType` | string | Editor context (see below) |
 | `FilePath` | string | File path (for file editor locks) |
 
-### Editor Types
+### Editor types
 
 | EditorType | Context |
 | --- | --- |
@@ -105,7 +121,7 @@ Each lock is stored in the `ArticleLocks` database table:
 | `LayoutEditor` | Layout template editing |
 | `TemplateEditor` | Page template editing |
 
-### Lock Lifecycle
+### Lock lifecycle
 
 1. **Acquisition** — Client calls `SetArticleLock`. Server checks for existing lock on the article. If none exists, creates a lock record and broadcasts `ArticleLock` to the group.
 2. **Hold** — Lock persists while the user edits. Only the lock holder can save.
@@ -115,7 +131,7 @@ Each lock is stored in the `ArticleLocks` database table:
    - User saves and the save handler clears locks
 4. **No timeout** — Locks persist indefinitely until explicitly released or the connection drops. There is no automatic time-based expiry.
 
-### Lock Enforcement in the UI
+### Lock enforcement in the UI
 
 | Lock State | Button Color | Label | Behavior |
 | --- | --- | --- | --- |
@@ -125,13 +141,13 @@ Each lock is stored in the `ArticleLocks` database table:
 
 ---
 
-## Presence Indicators
+## Presence indicators
 
-### Editing Status
+### Editing status
 
 The lock state doubles as a presence indicator. All editors viewing the same article see who currently holds the lock via the `ArticleLock` server-to-client event.
 
-### Typing Indicators
+### Typing indicators
 
 When an editor types in the chat panel:
 
@@ -141,9 +157,9 @@ When an editor types in the chat panel:
 
 ---
 
-## Client-Side Integration
+## Client-side integration
 
-### Connection Setup
+### Connection setup
 
 ```javascript
 window.ccsmsChatHub = new signalR.HubConnectionBuilder()
@@ -154,7 +170,7 @@ window.ccsmsChatHub = new signalR.HubConnectionBuilder()
 
 Automatic reconnect uses progressive backoff: immediate, 2s, 5s, 10s, 15s, 30s.
 
-### Signal Dispatch
+### Signal dispatch
 
 All hub invocations go through a central dispatcher:
 
@@ -166,7 +182,7 @@ async function ccmsSendSignal(method) {
 }
 ```
 
-### Content Reload Flow
+### Content reload flow
 
 When a save occurs:
 
@@ -190,7 +206,7 @@ function cosmosSignalUpdateEditor(data) {
 
 ---
 
-## Multi-Tenant Isolation
+## Multi-tenant isolation
 
 SignalR connections are tenant-isolated via a custom `IUserIdProvider`:
 
@@ -207,7 +223,7 @@ public class SubClaimUserIdProvider : IUserIdProvider
 
 This maps each connection to the user's `sub` claim, ensuring that lock records and group messages stay within the correct tenant context.
 
-### SignalR Configuration
+### SignalR configuration
 
 ```csharp
 builder.Services.AddSignalR(options =>

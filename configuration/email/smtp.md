@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-SMTP.md -->
+---
+canonical_title: Email: SMTP
+description: Configure SMTP email delivery for SkyCMS notifications and workflow emails.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-smtp-email
+audience:
+	- Developers
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email: SMTP
 
-## When to use SMTP
+## Summary
 
 Use SMTP when integrating with an existing mail relay or provider that exposes authenticated SMTP endpoints.
 
@@ -15,7 +26,7 @@ Use SMTP when integrating with an existing mail relay or provider that exposes a
 - port,
 - username and password,
 - sender address,
-- TLS/SSL mode.
+- TLS or SSL mode.
 
 ## Example configuration
 
@@ -26,6 +37,13 @@ Configure values through environment variables for production environments and r
 - test connection and send action in settings,
 - verify TLS mode and firewall egress access,
 - inspect server logs for authentication or relay errors.
+
+## Validation checklist
+
+- test email sends successfully,
+- sender address is accepted,
+- TLS and auth mode match provider requirements,
+- runtime logs show no repeated relay or auth failures.
 
 ## Related guides
 

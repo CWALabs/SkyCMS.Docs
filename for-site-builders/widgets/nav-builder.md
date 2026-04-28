@@ -1,14 +1,31 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/Nav-Builder-Widget.md -->
+---
+canonical_title: Nav Builder Widget
+description: Render child-page navigation lists from the SkyCMS table-of-contents API with the nav builder helper.
+doc_type: How-to
+product_area: site-building
+user_intent: build-navigation-list-from-toc-data
+audience:
+  - Site Builders
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Nav Builder
+# Nav Builder Widget
+
+## Summary
 
 Builds a simple list of links (child pages) under a given root path using the SkyCMS Table of Contents API.
 
 - Location (source): `Editor/wwwroot/lib/cosmos/nav-builder.js`
 - Primary API: `ccms___NavBuilder(pagePath, navElementId, liClassName?, anchorClassName?)`
+
+## Outcome
+
+After completing this guide, you should be able to render a navigation list for any valid root path and style it with optional list and anchor classes.
 
 ## How it works
 
@@ -34,3 +51,12 @@ Builds a simple list of links (child pages) under a given root path using the Sk
 - Ensure the element with `navElementId` exists before invoking.
 - `pagePath` should not include a leading slash.
 - You can omit `liClassName` and/or `anchorClassName` to avoid adding classes.
+
+## Verification
+
+This integration is complete when the helper renders expected child-page links and each generated URL resolves to the intended page.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [Table of Contents Widget](./table-of-contents.md)

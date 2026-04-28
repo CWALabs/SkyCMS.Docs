@@ -1,13 +1,27 @@
-<!-- Audience: Backend Developers, QA -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/TESTING.md -->
+---
+canonical_title: Testing Guide - Sky.Cms.Api.Shared
+description: This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.
+doc_type: How-to
+product_area: development
+user_intent: understand-testing-guide-sky-cms-api-shared
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Testing Guide - Sky.Cms.Api.Shared
 
-## Overview
+## Summary
 
 This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.
+
+## Overview
+
+Recommended project structure for test files, plus unit and integration test patterns using Moq and TestServer.
 
 ## Test Structure
 
@@ -522,11 +536,10 @@ public class ContactApiPerformanceTests
 ### cURL Commands
 
 ```bash
-# Get contact script
+
 curl -X GET "https://localhost:5001/_api/contact/skycms-contact.js" \
   -H "Accept: application/javascript"
 
-# Submit contact form
 curl -X POST "https://localhost:5001/_api/contact/submit" \
   -H "Content-Type: application/json" \
   -d '{
@@ -636,18 +649,14 @@ jobs:
 ## Running Tests
 
 ```bash
-# Run all tests
+
 dotnet test
 
-# Run specific test class
 dotnet test --filter "ClassName=MyTest"
 
-# Run with coverage
 dotnet test /p:CollectCoverage=true /p:CoverageFormat=opencover
 
-# Run in verbose mode
 dotnet test --verbosity normal
 
-# Run with watch mode (auto-run on file changes)
 dotnet watch test
 ```

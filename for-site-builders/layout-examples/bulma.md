@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Bulma Layout Example
+description: Implement a SkyCMS layout shell with Bulma’s class-based responsive structure and minimal JavaScript assumptions.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-a-bulma-based-layout-shell
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Bulma Layout Example
 
+## Summary
+
 This example shows a SkyCMS layout implemented with Bulma. It is a good fit for teams that want a clean class-based CSS framework with minimal JavaScript assumptions and readable HTML structure.
+
+## Outcome
+
+After working through this example, you should have a Bulma-based layout shell with reusable header, content, and footer structure.
 
 ## Good fit when
 
@@ -100,3 +120,7 @@ This example shows a SkyCMS layout implemented with Bulma. It is a good fit for 
 - [Bootstrap 5 Layout Example](./bootstrap-5.md)
 - [Tailwind CSS Layout Example](./tailwind.md)
 - [Foundation Layout Example](./foundation.md)
+
+## Verification
+
+This example is successful when Bulma layout classes render expected spacing and alignment, navigation remains usable across screen sizes, and page content inserts cleanly in the main region.

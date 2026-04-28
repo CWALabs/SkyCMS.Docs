@@ -1,10 +1,31 @@
+---
+canonical_title: Publishing Modes
+description: Choose the right SkyCMS publishing mode and understand how each mode affects timing, review, and delivery.
+doc_type: How-to
+product_area: publishing
+user_intent: choose-right-publishing-mode
+audience:
+   - Editors
+   - Administrators
+   - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
+
 # Publishing Modes
 
-SkyCMS supports multiple publishing workflows — from single-click direct publishing to bulk static site generation. Choose the approach that best fits your content delivery requirements.
+## Summary
 
-**Audience:** Editors, Administrators, Developers
+SkyCMS supports multiple publishing workflows, from immediate single-page publishing to bulk static generation.
 
----
+If you are new to SkyCMS, use this page to pick the safest mode for your release goal.
+
+## Outcome
+
+After using this guide, you should be able to choose the right publishing mode for a release, understand its operational effects, and avoid using a broader-impact workflow than the change requires.
 
 ## Overview
 
@@ -16,6 +37,13 @@ SkyCMS supports multiple publishing workflows — from single-click direct publi
 | **Bulk publish** | Publish multiple pages simultaneously with progress tracking | Site-wide template changes, migrations |
 
 ## Choosing a publishing mode
+
+Use this quick decision logic:
+
+- Need one page live immediately: Direct publish.
+- Need content live at a specific future time: Scheduled publish.
+- Need high-performance static output: Static site generation.
+- Need many pages updated together: Bulk publish.
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#eef6ff","primaryTextColor":"#0f172a","primaryBorderColor":"#2563eb","lineColor":"#334155","secondaryColor":"#f8fafc","tertiaryColor":"#ffffff","fontFamily":"Segoe UI, Arial, sans-serif"}}}%%
@@ -31,9 +59,7 @@ flowchart TD
    Delivery -- No --> Direct
 ```
 
----
-
-## Direct Publishing
+## Direct publishing
 
 The simplest workflow — publish a single page immediately.
 
@@ -41,7 +67,7 @@ The simplest workflow — publish a single page immediately.
 2. Click **Publish** (or navigate to the publish dialog).
 3. The page is immediately available on the live site.
 
-### What Happens Behind the Scenes
+### What happens behind the scenes
 
 1. The article's `Published` timestamp is set to now.
 2. Any previously published version of the same page is unpublished.
@@ -51,9 +77,7 @@ The simplest workflow — publish a single page immediately.
 6. If the page is a blog post, the blog TOC is also updated.
 7. The CDN cache is purged for the page's URL.
 
----
-
-## Scheduled Publishing
+## Scheduled publishing
 
 Set a future date and time to publish content automatically.
 
@@ -63,13 +87,11 @@ Set a future date and time to publish content automatically.
 
 You can also set an **expiration date** to automatically retire content after a certain date.
 
----
-
-## Static Site Generation
+## Static site generation
 
 For performance-critical sites, SkyCMS can generate static HTML files that are served directly from blob storage or a CDN — no server-side rendering required for each visitor request.
 
-### Enabling Static Pages
+### Enabling static pages
 
 Static page generation is enabled at the site/tenant level. When enabled:
 
@@ -78,7 +100,7 @@ Static page generation is enabled at the site/tenant level. When enabled:
 - A `toc.json` file is generated with the site's table of contents.
 - The Publisher component serves these static files.
 
-### Bulk Static Generation
+### Bulk static generation
 
 Administrators can regenerate static pages in bulk:
 
@@ -89,7 +111,7 @@ Administrators can regenerate static pages in bulk:
 
 After bulk generation completes, a full CDN purge is triggered to ensure visitors see the latest content.
 
-### Table of Contents (TOC)
+### Table of contents (TOC)
 
 The TOC is a JSON file (`toc.json`) that represents the site's navigation structure:
 
@@ -98,8 +120,6 @@ The TOC is a JSON file (`toc.json`) that represents the site's navigation struct
 - Uploaded to blob storage at `/toc.json` or `/pub/---toc/{prefix}/toc.json`.
 - Only generated when static pages are enabled.
 
----
-
 ## Unpublishing
 
 To remove a page from the live site:
@@ -107,7 +127,7 @@ To remove a page from the live site:
 1. Open the page in the editor.
 2. Click **Unpublish** (or navigate to `/Editor/UnpublishPage/{articleNumber}`).
 
-### What Happens
+### What happens
 
 1. The article's `Published` field is cleared.
 2. The `PublishedPage` record is removed (redirect entries are preserved).
@@ -115,9 +135,7 @@ To remove a page from the live site:
 4. The CDN cache is purged for each affected URL.
 5. The TOC is regenerated.
 
----
-
-## Template Publishing
+## Template publishing
 
 Templates (page designs) have their own versioning and publishing workflow:
 
@@ -131,9 +149,9 @@ Templates (page designs) have their own versioning and publishing workflow:
 
 > **Important:** Publishing a template triggers changes to every page that uses it. This is a high-impact operation — review template changes carefully before publishing.
 
----
+For first-time users, test template updates on one representative page before broad rollout.
 
-## Publishing Progress
+## Publishing progress
 
 Bulk operations report progress in real-time via SignalR:
 
@@ -145,9 +163,7 @@ This feature requires the SignalR `PublishingProgressHub` connection (establishe
 
 **Access:** Editors and Administrators only.
 
----
-
-## Multi-Tenancy
+## Multi-tenancy
 
 All publishing operations are scoped to the current tenant:
 
@@ -156,10 +172,14 @@ All publishing operations are scoped to the current tenant:
 - TOC generation includes only the current tenant's published articles.
 - The `PublishedPage` table is filtered by tenant domain.
 
----
+## Verification
 
-## See Also
+This guide is working when you can explain why one publishing mode is safer or faster for a given release, run that mode intentionally, and anticipate the downstream effects on static output, cache state, and related pages.
 
+## Related links
+
+- [Visual Editor Quick Start](visual-editor-quickstart.md)
+- [Page Builder Quick Start](page-builder-quickstart.md)
 - [Version History](version-history.md) — How versions relate to publishing
 - [Preload & Caching](preload-and-caching.md) — Cache warming and CDN pre-loading
 - [URL Management](url-management.md) — How redirects interact with publishing

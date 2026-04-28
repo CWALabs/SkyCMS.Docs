@@ -1,13 +1,23 @@
-﻿<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Workflow -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/Website-Launch-Workflow.md -->
+---
+canonical_title: Website Launch Workflow Guide
+description: Take a SkyCMS installation from zero to ready for content creators in 6 structured phases.
+doc_type: How-to
+product_area: development
+user_intent: implement-website-launch-workflow-guide
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Website Launch Workflow Guide
 
-**Take your SkyCMS installation from zero to ready for content creators in 6 structured phases.**
+## Summary
 
-This guide provides a complete roadmap for developers launching a new SkyCMS website. It covers the journey from initial design through handing off to non-technical content creators, with phase-specific deep dives, checklists, and templates included.
+Take a SkyCMS installation from zero to ready for content creators in 6 structured phases.
 
 ## Table of Contents
 - [Overview](#overview)

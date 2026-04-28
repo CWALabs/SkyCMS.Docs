@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Foundation Layout Example
+description: Build a SkyCMS layout shell using Foundation grid and structural primitives for traditional multi-page websites.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-a-foundation-based-layout-shell
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Foundation Layout Example
 
+## Summary
+
 This example shows a SkyCMS layout implemented with Foundation. It is a good fit for teams that want a mature responsive grid system, a structured component approach, and strong support for traditional multi-page site layouts.
+
+## Outcome
+
+After working through this example, you should have a Foundation-based layout shell that supports consistent page structure and responsive behavior.
 
 ## Good fit when
 
@@ -107,3 +127,7 @@ This example shows a SkyCMS layout implemented with Foundation. It is a good fit
 - [Bootstrap 5 Layout Example](./bootstrap-5.md)
 - [Tailwind CSS Layout Example](./tailwind.md)
 - [Bulma Layout Example](./bulma.md)
+
+## Verification
+
+This example is successful when Foundation grid structure renders correctly across breakpoints, shared header/footer regions remain stable, and page content loads inside the layout container without style conflicts.

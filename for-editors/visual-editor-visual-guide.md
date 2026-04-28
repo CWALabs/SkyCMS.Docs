@@ -1,9 +1,23 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/LiveEditor/VisualGuide.md -->
+---
+canonical_title: Visual Editor Visual Guide
+description: Learn what the SkyCMS Visual Editor interface looks like and how to recognize its main zones, modes, and visual states.
+doc_type: Reference
+product_area: editing
+user_intent: understand-the-visual-editor-interface-before-editing
+audience:
+   - Content Editors
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Visual Editor Visual Guide
+
+## Summary
+
+Use this guide to recognize the main parts of the Visual Editor before you start editing or when you need to explain the interface to other editors.
 
 This guide explains what editors should expect to see in the Visual Editor interface.
 
@@ -35,6 +49,10 @@ You can also reach the Visual Editor through the content management menu:
 - **Administrators** and **Editors** can access all editor types.
 - **Authors** can access the Visual Editor where it is enabled.
 - **Reviewers** do not have access to any editor — the **Edit** dropdown is not shown for reviewer accounts.
+
+## Outcome
+
+After reading this guide, you should be able to open the Visual Editor through the right entry point and identify the main editing zones and states.
 
 ## Main Zones
 
@@ -69,6 +87,10 @@ You can also reach the Visual Editor through the content management menu:
 - Use region highlight cues to avoid editing the wrong section.
 - Use block tools for structure and inline tools for text refinement.
 - Confirm save status before closing editor.
+
+## Verification
+
+This guide has served its purpose when you can locate the Visual Editor, recognize the current mode, and distinguish the toolbar, content canvas, inline tools, and block tools during an editing session.
 
 ## Related Docs
 

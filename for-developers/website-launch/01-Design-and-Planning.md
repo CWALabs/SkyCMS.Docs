@@ -1,30 +1,23 @@
 ---
 canonical_title: Phase 1: Design & Planning Guide
 description: Plan the SkyCMS site structure, information architecture, layouts, templates, and article types before implementation.
-audience:
-  - Backend Developers
-  - Full-Stack Developers
-  - Designers
-  - Project Managers
 doc_type: How-to
-status: Draft
-entities:
-  - layout
-  - template
-  - article
-  - published-page
-keywords:
-  - design planning
-  - information architecture
-  - layouts templates articles
-source: SkyCMS/Docs/Developer-Guides/01-Design-and-Planning.md
+product_area: development
+user_intent: implement-phase-1-design-planning-guide
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Phase 1: Design & Planning Guide
 
-**Timeline:** 3-5 hours  
-**Typical Effort:** Design-first approach, 1-2 stakeholders  
-**Output:** Architecture diagram, site structure outline, content inventory
+## Summary
+
+Plan the SkyCMS site structure, information architecture, layouts, templates, and article types before implementation.
 
 ## Overview
 

@@ -1,0 +1,1370 @@
+[
+  {
+    "file": "ai-integration.md",
+    "frontmatter": {
+      "canonical_title": "AI integration architecture",
+      "description": "Understand how SkyCMS AI components are wired together, including provider selection, model resolution, and editor client integration.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "understand-ai-integration-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 14,
+    "broken_snippets": false,
+    "summary": "Understand how SkyCMS AI components are wired together, including provider selection, model resolution, and editor client integration.",
+    "content_len": 6797
+  },
+  {
+    "file": "architecture-change-log.md",
+    "frontmatter": {
+      "canonical_title": "Architecture change log",
+      "description": "Track significant architecture-document and architecture-direction changes by release.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "track-architecture-changes-by-release",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "Track significant architecture-document and architecture-direction changes by release.",
+    "content_len": 2265
+  },
+  {
+    "file": "architecture-core-platform.md",
+    "frontmatter": {
+      "canonical_title": "Core platform architecture",
+      "description": "Stable architecture model for SkyCMS independent of static, dynamic, or hybrid delivery mode.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-core-platform-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 17,
+    "broken_snippets": false,
+    "summary": "Stable architecture model for SkyCMS independent of static, dynamic, or hybrid delivery mode.",
+    "content_len": 11953
+  },
+  {
+    "file": "architecture-decision-matrix.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Decision Matrix",
+      "description": "Decision guide for choosing static, dynamic, or hybrid SkyCMS delivery architecture.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-decision-matrix",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "Decision guide for choosing static, dynamic, or hybrid SkyCMS delivery architecture.",
+    "content_len": 4869
+  },
+  {
+    "file": "architecture-decision-records.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Decision Records (ADRs)",
+      "description": "SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source of truth.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-decision-records-adrs",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source of truth.",
+    "content_len": 12678
+  },
+  {
+    "file": "architecture-diagram-catalog.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Diagram Catalog",
+      "description": "Central table of contents for Mermaid architecture diagrams across SkyCMS documentation.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-diagram-catalog",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 12,
+    "broken_snippets": false,
+    "summary": "Central table of contents for Mermaid architecture diagrams across SkyCMS documentation.",
+    "content_len": 6721
+  },
+  {
+    "file": "architecture-executive-summary.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Executive Summary",
+      "description": "Stakeholder-level summary of SkyCMS architecture, deployment patterns, and governance model.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-executive-summary",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 7,
+    "broken_snippets": false,
+    "summary": "Stakeholder-level summary of SkyCMS architecture, deployment patterns, and governance model.",
+    "content_len": 2547
+  },
+  {
+    "file": "architecture-mode-selection-worksheet.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Mode Selection Worksheet",
+      "description": "Practical worksheet to select static, dynamic, or hybrid delivery mode for a SkyCMS workload.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-mode-selection-worksheet",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "Practical worksheet to select static, dynamic, or hybrid delivery mode for a SkyCMS workload.",
+    "content_len": 2694
+  },
+  {
+    "file": "architecture-profile-dynamic.md",
+    "frontmatter": {
+      "canonical_title": "Dynamic Delivery Architecture Profile",
+      "description": "Architecture profile for dynamic SkyCMS deployments with on-demand rendering and richer runtime behavior.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-dynamic-delivery-architecture-profile",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Architecture profile for dynamic SkyCMS deployments with on-demand rendering and richer runtime behavior.",
+    "content_len": 4839
+  },
+  {
+    "file": "architecture-profile-hybrid.md",
+    "frontmatter": {
+      "canonical_title": "Hybrid Delivery Architecture Profile",
+      "description": "Architecture profile for combining static artifact delivery with dynamic authorization or extension endpoints in SkyCMS.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-hybrid-delivery-architecture-profile",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Architecture profile for combining static artifact delivery with dynamic authorization or extension endpoints in SkyCMS.",
+    "content_len": 5402
+  },
+  {
+    "file": "architecture-profile-static.md",
+    "frontmatter": {
+      "canonical_title": "Static Delivery Architecture Profile",
+      "description": "Architecture profile for static-first SkyCMS deployments using generated artifacts and edge caching.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-static-delivery-architecture-profile",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Architecture profile for static-first SkyCMS deployments using generated artifacts and edge caching.",
+    "content_len": 4802
+  },
+  {
+    "file": "architecture-review-checklist.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Review Checklist",
+      "description": "Practical checklist for reviewing SkyCMS changes that affect tenant, publishing, and delivery architecture behavior.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-review-checklist",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "Practical checklist for reviewing SkyCMS changes that affect tenant, publishing, and delivery architecture behavior.",
+    "content_len": 4006
+  },
+  {
+    "file": "architecture-route-inventory-templates.md",
+    "frontmatter": {
+      "canonical_title": "Architecture Route Inventory Templates",
+      "description": "Copy-ready route classification templates for static, dynamic, and hybrid SkyCMS architecture reviews.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-architecture-route-inventory-templates",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 8,
+    "broken_snippets": false,
+    "summary": "Copy-ready route classification templates for static, dynamic, and hybrid SkyCMS architecture reviews.",
+    "content_len": 3203
+  },
+  {
+    "file": "architecture.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS architecture overview",
+      "description": "Core architecture map for SkyCMS with deployment mode profiles and a selection matrix.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-skycms-architecture-overview",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Core architecture map for SkyCMS with deployment mode profiles and a selection matrix.",
+    "content_len": 6206
+  },
+  {
+    "file": "article-lifecycle.md",
+    "frontmatter": {
+      "canonical_title": "Article lifecycle",
+      "description": "Understand article command/handler lifecycle behavior and how create, update, and delete actions affect publishing artifacts.",
+      "doc_type": "Explanation",
+      "product_area": "publishing",
+      "user_intent": "understand-article-lifecycle-and-publishing-effects",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 19,
+    "broken_snippets": false,
+    "summary": "Understand article command/handler lifecycle behavior and how create, update, and delete actions affect publishing artifacts.",
+    "content_len": 16884
+  },
+  {
+    "file": "audit-logging.md",
+    "frontmatter": {
+      "canonical_title": "Audit & Logging",
+      "description": "SkyCMS uses structured logging, domain events, and a dedicated setup audit log to provide visibility into system activity. Health check endpoints support uptime monitoring.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-audit-logging",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "SkyCMS uses structured logging, domain events, and a dedicated setup audit log to provide visibility into system activity. Health check endpoints support uptime monitoring.",
+    "content_len": 5702
+  },
+  {
+    "file": "blog-architecture.md",
+    "frontmatter": {
+      "canonical_title": "Blog Architecture",
+      "description": "Developer reference for the SkyCMS blogging subsystem, including article types, CQRS flows, rendering, routing, and published output behavior.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-blog-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "Developer reference for the SkyCMS blogging subsystem, including article types, CQRS flows, rendering, routing, and published output behavior.",
+    "content_len": 8862
+  },
+  {
+    "file": "content-delivery-architecture.md",
+    "frontmatter": {
+      "canonical_title": "Content Delivery Architecture",
+      "description": "This document describes how SkyCMS serves files, pages, and assets to site visitors \u2014 from blob storage through the application layer to CDN edge caches.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-content-delivery-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "This document describes how SkyCMS serves files, pages, and assets to site visitors \u2014 from blob storage through the application layer to CDN edge caches.",
+    "content_len": 8377
+  },
+  {
+    "file": "documentation-adoption-priority-plan.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Adoption Priority Plan",
+      "description": "Adoption-first documentation execution plan prioritizing installation/configuration and first-website-build success.",
+      "doc_type": "Explanation",
+      "product_area": "documentation",
+      "user_intent": "prioritize-doc-work-for-adoption",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 16,
+    "broken_snippets": false,
+    "summary": "Adoption-first documentation execution plan prioritizing installation/configuration and first-website-build success.",
+    "content_len": 5761
+  },
+  {
+    "file": "documentation-metadata-schema.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Metadata Schema v1",
+      "description": "Required YAML front matter schema and validation rules for SkyCMS documentation pages.",
+      "doc_type": "Reference",
+      "product_area": "documentation",
+      "user_intent": "apply-documentation-metadata-schema",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 17,
+    "broken_snippets": false,
+    "summary": "Required YAML front matter schema and validation rules for SkyCMS documentation pages.",
+    "content_len": 2423
+  },
+  {
+    "file": "documentation-pr-checklist.md",
+    "frontmatter": {
+      "canonical_title": "Documentation PR Checklist",
+      "description": "Use this checklist for documentation pull requests.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-documentation-pr-checklist",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "Use this checklist for documentation pull requests.",
+    "content_len": 1759
+  },
+  {
+    "file": "documentation-rollout-plan.md",
+    "frontmatter": {
+      "canonical_title": "Documentation Standards Rollout Plan (30-60-90)",
+      "description": "This rollout plan applies the Documentation Standards Stack v1 in measured phases.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-documentation-standards-rollout-plan-30-60-90",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 5,
+    "broken_snippets": false,
+    "summary": "This rollout plan applies the Documentation Standards Stack v1 in measured phases.",
+    "content_len": 1715
+  },
+  {
+    "file": "documentation-standards-gap-review-2026-04.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Standards Gap Review (2026-04)",
+      "description": "This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-skycms-documentation-standards-gap-review-2026-04",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 22,
+    "broken_snippets": false,
+    "summary": "This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.",
+    "content_len": 9875
+  },
+  {
+    "file": "documentation-standards-stack-v1.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Standards Stack v1",
+      "description": "This standard defines how SkyCMS documentation is structured, written, reviewed, and improved.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-skycms-documentation-standards-stack-v1",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 15,
+    "broken_snippets": false,
+    "summary": "This standard defines how SkyCMS documentation is structured, written, reviewed, and improved.",
+    "content_len": 5375
+  },
+  {
+    "file": "documentation-templates.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Templates",
+      "description": "Use these templates for new pages and major rewrites.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-skycms-documentation-templates",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 33,
+    "broken_snippets": false,
+    "summary": "Use these templates for new pages and major rewrites.",
+    "content_len": 2199
+  },
+  {
+    "file": "documentation-visual-style-standard.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Documentation Visual Style Standard (DVSS)",
+      "description": "Visual and typographic standards for SkyCMS documentation, including heading hierarchy, paragraph readability, and navigation/TOC clarity.",
+      "doc_type": "Reference",
+      "product_area": "documentation",
+      "user_intent": "apply-documentation-visual-style-standard",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 14,
+    "broken_snippets": false,
+    "summary": "Visual and typographic standards for SkyCMS documentation, including heading hierarchy, paragraph readability, and navigation/TOC clarity.",
+    "content_len": 5521
+  },
+  {
+    "file": "editor-rendering-flow.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 8,
+    "broken_snippets": false,
+    "summary": "**Audience:** Backend Developers",
+    "content_len": 10589
+  },
+  {
+    "file": "ef-cross-provider-guide.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 9,
+    "broken_snippets": false,
+    "summary": "SkyCMS supports four database providers through a single codebase: **MS SQL Server**, **MySQL**, **SQLite**, and **Azure Cosmos DB**. This guide documents the query restrictions, patterns, and provide...",
+    "content_len": 7913
+  },
+  {
+    "file": "image-processing-api.md",
+    "frontmatter": {
+      "canonical_title": "Image Processing API",
+      "description": "SkyCMS provides server-side image processing for generating thumbnails on demand. The File Manager uses this to display image previews, and the API is available to any authenticated user with file access.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-image-processing-api",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 7,
+    "broken_snippets": false,
+    "summary": "SkyCMS provides server-side image processing for generating thumbnails on demand. The File Manager uses this to display image previews, and the API is available to any authenticated user with file acc...",
+    "content_len": 4381
+  },
+  {
+    "file": "index.md",
+    "frontmatter": {
+      "canonical_title": "For Developers",
+      "description": "Start here for SkyCMS developer architecture, API, lifecycle, and implementation guidance.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "find-developer-guides-and-reference-docs",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 5,
+    "broken_snippets": false,
+    "summary": "Start here for SkyCMS developer architecture, API, lifecycle, and implementation guidance.",
+    "content_len": 3753
+  },
+  {
+    "file": "layouts-templates-articles.md",
+    "frontmatter": {
+      "canonical_title": "Layouts, Templates, and Articles",
+      "description": "Canonical developer guide to how layouts, templates, articles, and published pages relate in SkyCMS.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "understand-layouts-templates-and-articles",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Canonical developer guide to how layouts, templates, articles, and published pages relate in SkyCMS.",
+    "content_len": 4701
+  },
+  {
+    "file": "layouts.md",
+    "frontmatter": {
+      "canonical_title": "Layouts",
+      "description": "Developer reference for layout entities, versioning, runtime resolution, import flows, and layout-to-template binding in SkyCMS.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-layouts",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 15,
+    "broken_snippets": false,
+    "summary": "Developer reference for layout entities, versioning, runtime resolution, import flows, and layout-to-template binding in SkyCMS.",
+    "content_len": 8802
+  },
+  {
+    "file": "middleware-pipeline.md",
+    "frontmatter": {
+      "canonical_title": "Middleware Pipeline",
+      "description": "Understand SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-and-debug-skycms-middleware",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 8,
+    "broken_snippets": false,
+    "summary": "Understand SkyCMS middleware ordering, tenant and security behavior, customization points, and debugging practices.",
+    "content_len": 3368
+  },
+  {
+    "file": "multi-tenancy-deep-dive.md",
+    "frontmatter": {
+      "canonical_title": "Multi-Tenancy Deep Dive",
+      "description": "Detailed view of tenant resolution, isolation boundaries, and multi-tenant runtime behavior in SkyCMS.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "understand-multi-tenancy-deep-dive",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 9,
+    "broken_snippets": false,
+    "summary": "Detailed view of tenant resolution, isolation boundaries, and multi-tenant runtime behavior in SkyCMS.",
+    "content_len": 4474
+  },
+  {
+    "file": "overview.md",
+    "frontmatter": {
+      "canonical_title": "SkyCMS Developer Guide Overview",
+      "description": "Navigate SkyCMS developer documentation by architecture, extension area, workflow stage, and implementation task.",
+      "doc_type": "Explanation",
+      "product_area": "developer-experience",
+      "user_intent": "find-right-skycms-developer-guide",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 9,
+    "broken_snippets": false,
+    "summary": "Navigate SkyCMS developer documentation by architecture, extension area, workflow stage, and implementation task.",
+    "content_len": 3245
+  },
+  {
+    "file": "publisher-architecture.md",
+    "frontmatter": {
+      "canonical_title": "Publisher Architecture",
+      "description": "The Publisher (Sky.Publisher) is the public-facing component of SkyCMS that serves published content to site visitors. It operates in one of two modes \u2014 **dynamic** or **static** \u2014 depending on deployment configuration.",
+      "doc_type": "Explanation",
+      "product_area": "architecture",
+      "user_intent": "understand-publisher-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "The Publisher (Sky.Publisher) is the public-facing component of SkyCMS that serves published content to site visitors. It operates in one of two modes \u2014 **dynamic** or **static** \u2014 depending on deploy...",
+    "content_len": 7568
+  },
+  {
+    "file": "publisher-rendering-flow.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "**Audience:** Backend Developers, Platform Engineers",
+    "content_len": 7252
+  },
+  {
+    "file": "roles-and-permissions.md",
+    "frontmatter": {
+      "canonical_title": "Role-based access control and authorization",
+      "description": "Understand SkyCMS role-based authorization model, built-in roles, permission matrix, and best practices for managing user access.",
+      "doc_type": "Reference",
+      "product_area": "administration",
+      "user_intent": "manage-user-roles-and-permissions",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Understand SkyCMS role-based authorization model, built-in roles, permission matrix, and best practices for managing user access.",
+    "content_len": 9799
+  },
+  {
+    "file": "storage-provider-auto-detection.md",
+    "frontmatter": {
+      "canonical_title": "Storage provider auto-detection",
+      "description": "Understand how SkyCMS selects a blob storage driver from connection string configuration and tenant-specific settings.",
+      "doc_type": "Explanation",
+      "product_area": "infrastructure",
+      "user_intent": "understand-storage-provider-selection-and-detection",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "Understand how SkyCMS selects a blob storage driver from connection string configuration and tenant-specific settings.",
+    "content_len": 5622
+  },
+  {
+    "file": "templates.md",
+    "frontmatter": {
+      "canonical_title": "Templates",
+      "description": "Developer guide to template entities, versioning, editable region contracts, save flows, and rollout behavior in SkyCMS.",
+      "doc_type": "Explanation",
+      "product_area": "development",
+      "user_intent": "understand-templates",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Developer guide to template entities, versioning, editable region contracts, save flows, and rollout behavior in SkyCMS.",
+    "content_len": 6148
+  },
+  {
+    "file": "tenant-isolation-reference.md",
+    "frontmatter": {
+      "canonical_title": "Tenant Isolation Reference",
+      "description": "This reference documents how SkyCMS isolates data, caches, cookies, blob storage, and CDN operations between tenants in a multi-tenant deployment.",
+      "doc_type": "Explanation",
+      "product_area": "administration",
+      "user_intent": "understand-tenant-isolation-reference",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "This reference documents how SkyCMS isolates data, caches, cookies, blob storage, and CDN operations between tenants in a multi-tenant deployment.",
+    "content_len": 7534
+  },
+  {
+    "file": "api/architecture.md",
+    "frontmatter": {
+      "canonical_title": "Sky.Cms.Api.Shared Architecture",
+      "description": "Sky.Cms.Api.Shared uses a custom CQRS (Command Query Responsibility Segregation) pattern combined with dependency injection to create a clean, testable, and maintainable API architecture.",
+      "doc_type": "Reference",
+      "product_area": "architecture",
+      "user_intent": "understand-sky-cms-api-shared-architecture",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "advanced",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "Sky.Cms.Api.Shared uses a custom CQRS (Command Query Responsibility Segregation) pattern combined with dependency injection to create a clean, testable, and maintainable API architecture.",
+    "content_len": 6604
+  },
+  {
+    "file": "api/blog-api.md",
+    "frontmatter": {
+      "canonical_title": "Blog API Reference",
+      "description": "JSON API endpoints for programmatic access to SkyCMS blog data.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-blog-api-reference",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "JSON API endpoints for programmatic access to SkyCMS blog data.",
+    "content_len": 4746
+  },
+  {
+    "file": "api/configuration.md",
+    "frontmatter": {
+      "canonical_title": "Configuration Guide - Sky.Cms.Api.Shared",
+      "description": "The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings are defined in the `ContactApiConfig` class and can be configured via `appsettings.json` or environment variables.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-configuration-guide-sky-cms-api-shared",
+      "audience": [
+        "Backend Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "The Sky.Cms.Api.Shared API uses a configuration-driven approach. All settings are defined in the `ContactApiConfig` class and can be configured via `appsettings.json` or environment variables.",
+    "content_len": 8369
+  },
+  {
+    "file": "api/contact-form-example.md",
+    "frontmatter": {
+      "canonical_title": "Contact Form API Example (HTML)",
+      "description": "Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-contact-form-api-example-html",
+      "audience": [
+        "Full-Stack Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 4,
+    "broken_snippets": false,
+    "summary": "Use this example when you want a complete, copy-ready contact form implementation that integrates with the SkyCMS Contact Form API JavaScript client.",
+    "content_len": 5162
+  },
+  {
+    "file": "api/contact-form.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 13,
+    "broken_snippets": false,
+    "summary": "The Contact Form API provides a complete, production-ready solution for handling visitor messages on your website. It includes:",
+    "content_len": 30071
+  },
+  {
+    "file": "api/development.md",
+    "frontmatter": {
+      "canonical_title": "Development Guide - Sky.Cms.Api.Shared",
+      "description": "This guide explains how to extend the Sky.Cms.Api.Shared API with new endpoints and features.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-development-guide-sky-cms-api-shared",
+      "audience": [
+        "Backend Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "This guide explains how to extend the Sky.Cms.Api.Shared API with new endpoints and features.",
+    "content_len": 15048
+  },
+  {
+    "file": "api/integration-guide.md",
+    "frontmatter": {
+      "canonical_title": "Contact Form API Integration Guide",
+      "description": "This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-contact-form-api-integration-guide",
+      "audience": [
+        "Full-Stack Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 14,
+    "broken_snippets": false,
+    "summary": "This guide shows developers how to integrate the Contact Form API into their SkyCMS Editor web app and website pages.",
+    "content_len": 14903
+  },
+  {
+    "file": "api/overview.md",
+    "frontmatter": {
+      "canonical_title": "Sky.Cms.Api.Shared Documentation",
+      "description": "Welcome to the Sky.Cms.Api.Shared documentation. This shared API library provides common endpoints used across both the Editor and Publisher web applications within the SkyCMS solution.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-sky-cms-api-shared-documentation",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 9,
+    "broken_snippets": false,
+    "summary": "Welcome to the Sky.Cms.Api.Shared documentation. This shared API library provides common endpoints used across both the Editor and Publisher web applications within the SkyCMS solution.",
+    "content_len": 4826
+  },
+  {
+    "file": "api/testing.md",
+    "frontmatter": {
+      "canonical_title": "Testing Guide - Sky.Cms.Api.Shared",
+      "description": "This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-testing-guide-sky-cms-api-shared",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "This guide covers testing strategies for the Sky.Cms.Api.Shared API, including unit tests, integration tests, and manual testing approaches.",
+    "content_len": 18019
+  },
+  {
+    "file": "api/tutorial.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 12,
+    "broken_snippets": false,
+    "summary": "This step-by-step tutorial walks you through adding a working contact form to your website using the SkyCMS Contact Form API.",
+    "content_len": 16221
+  },
+  {
+    "file": "api/updates.md",
+    "frontmatter": {
+      "canonical_title": "Sky.Cms.Api.Shared Integration Updates",
+      "description": "This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-sky-cms-api-shared-integration-updates",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 13,
+    "broken_snippets": false,
+    "summary": "This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.",
+    "content_len": 9035
+  },
+  {
+    "file": "extending/custom-widgets.md",
+    "frontmatter": {
+      "canonical_title": "Extending SkyCMS with Custom Widgets",
+      "description": "Build, integrate, and validate custom widget behavior for SkyCMS editing experiences.",
+      "doc_type": "How-to",
+      "product_area": "extensibility",
+      "user_intent": "create-and-integrate-custom-widgets",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-27"
+    },
+    "h1_count": 1,
+    "h2_count": 8,
+    "broken_snippets": false,
+    "summary": "Build, integrate, and validate custom widget behavior for SkyCMS editing experiences.",
+    "content_len": 2733
+  },
+  {
+    "file": "extending/flex-db.md",
+    "frontmatter": {
+      "canonical_title": "Extending FlexDb",
+      "description": "Extend FlexDb when the built-in provider strategies are not enough for your application.",
+      "doc_type": "Reference",
+      "product_area": "development",
+      "user_intent": "understand-extending-flexdb",
+      "audience": [
+        "Backend Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 9,
+    "broken_snippets": false,
+    "summary": "Extend FlexDb when the built-in provider strategies are not enough for your application.",
+    "content_len": 5061
+  },
+  {
+    "file": "website-launch/01-Design-and-Planning.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 12,
+    "broken_snippets": false,
+    "summary": "Plan the SkyCMS site structure, information architecture, layouts, templates, and article types before implementation.",
+    "content_len": 20707
+  },
+  {
+    "file": "website-launch/02-Creating-Layouts.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 17,
+    "broken_snippets": false,
+    "summary": "Build site-wide layout shells in SkyCMS and understand how shared structure reduces duplication across templates and articles.",
+    "content_len": 50881
+  },
+  {
+    "file": "website-launch/03-Creating-Templates.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 15,
+    "broken_snippets": false,
+    "summary": "Build reusable templates in SkyCMS with editable regions and understand how template changes affect authored articles and published output.",
+    "content_len": 38391
+  },
+  {
+    "file": "website-launch/04-Building-Home-Page.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 20,
+    "broken_snippets": false,
+    "summary": "Your home page is the most important page on your website\u2014it's often the first impression visitors have of your brand, and it serves as the gateway to the rest of your site. In this phase, you'll tran...",
+    "content_len": 76020
+  },
+  {
+    "file": "website-launch/05-Building-Initial-Pages.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 27,
+    "broken_snippets": false,
+    "summary": "Create the first published content set in SkyCMS by building core articles, organizing hierarchy, and configuring internal linking and navigation.",
+    "content_len": 39657
+  },
+  {
+    "file": "website-launch/06-Preparing-for-Handoff.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 19,
+    "broken_snippets": true,
+    "summary": "Prepare SkyCMS sites for team handoff with roles, documentation, training, and sustainable publishing workflows.",
+    "content_len": 31285
+  },
+  {
+    "file": "website-launch/CreatingEditableAreas.md",
+    "frontmatter": {
+      "canonical_title": "Creating Editable Areas",
+      "description": "A practical guide for developers to define editable regions in templates and stand-alone articles, using the code editor (Monaco) with CKEditor-based Visual Editor.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-creating-editable-areas",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "intermediate",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 11,
+    "broken_snippets": false,
+    "summary": "A practical guide for developers to define editable regions in templates and stand-alone articles, using the code editor (Monaco) with CKEditor-based Visual Editor.",
+    "content_len": 7385
+  },
+  {
+    "file": "website-launch/index.md",
+    "frontmatter": {
+      "canonical_title": "Website Launch Workflow (Migrated Guides)",
+      "description": "These guides were migrated from the legacy `SkyCMS/Docs/Developer-Guides` set because they provide practical, end-to-end implementation workflows.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-website-launch-workflow-migrated-guides",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 5,
+    "broken_snippets": false,
+    "summary": "These guides were migrated from the legacy `SkyCMS/Docs/Developer-Guides` set because they provide practical, end-to-end implementation workflows.",
+    "content_len": 1606
+  },
+  {
+    "file": "website-launch/README.md",
+    "frontmatter": {
+      "canonical_title": "Developer Guides",
+      "description": "Complete workflows and best practices for developers building and maintaining SkyCMS sites.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-developer-guides",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 13,
+    "broken_snippets": false,
+    "summary": "Complete workflows and best practices for developers building and maintaining SkyCMS sites.",
+    "content_len": 9409
+  },
+  {
+    "file": "website-launch/SkyCMS-Modern-Approach.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 6,
+    "broken_snippets": false,
+    "summary": "A practical overview of how SkyCMS facilitates modern website development: modular structure, content workflows, and evergreen quality practices.",
+    "content_len": 3314
+  },
+  {
+    "file": "website-launch/UploadSecretsToGithubRepo.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 10,
+    "broken_snippets": false,
+    "summary": "`UploadSecretsToGithubRepo.ps1` is a PowerShell script designed to automate the process of copying secrets from a local secrets file and uploading them as GitHub repository secrets. This is useful for...",
+    "content_len": 6576
+  },
+  {
+    "file": "website-launch/Website-Launch-Workflow.md",
+    "frontmatter": {},
+    "h1_count": 1,
+    "h2_count": 16,
+    "broken_snippets": false,
+    "summary": "**Take your SkyCMS installation from zero to ready for content creators in 6 structured phases.**",
+    "content_len": 18917
+  },
+  {
+    "file": "website-launch/Checklists/Content-Creator-Onboarding.md",
+    "frontmatter": {
+      "canonical_title": "Content Creator Onboarding Checklist",
+      "description": "Use this checklist to onboard new content creators and ensure they're confident using SkyCMS to manage your website content.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-content-creator-onboarding-checklist",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 14,
+    "broken_snippets": false,
+    "summary": "Use this checklist to onboard new content creators and ensure they're confident using SkyCMS to manage your website content.",
+    "content_len": 14824
+  },
+  {
+    "file": "website-launch/Checklists/Pre-Launch-Checklist.md",
+    "frontmatter": {
+      "canonical_title": "Pre-Launch Checklist",
+      "description": "Before launching your website to the public, conduct thorough testing and verification using this comprehensive checklist. This ensures your site is reliable, secure, fast, and ready for visitors.",
+      "doc_type": "How-to",
+      "product_area": "development",
+      "user_intent": "implement-pre-launch-checklist",
+      "audience": [
+        "Developers"
+      ],
+      "difficulty": "beginner",
+      "version": "current",
+      "status": "active",
+      "owner": "docs-platform",
+      "last_reviewed": "2026-04-28"
+    },
+    "h1_count": 1,
+    "h2_count": 16,
+    "broken_snippets": false,
+    "summary": "Before launching your website to the public, conduct thorough testing and verification using this comprehensive checklist. This ensures your site is reliable, secure, fast, and ready for visitors.",
+    "content_len": 21024
+  }
+]

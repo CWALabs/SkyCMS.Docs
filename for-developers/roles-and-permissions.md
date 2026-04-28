@@ -1,22 +1,23 @@
-<!-- Audience: Backend Developers, Administrators -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Administration/Roles-and-Permissions.md -->
+---
+canonical_title: Role-based access control and authorization
+description: Understand SkyCMS role-based authorization model, built-in roles, permission matrix, and best practices for managing user access.
+doc_type: Reference
+product_area: administration
+user_intent: understand-skycms-rbac-authorization-model
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
-# Role-Based Access Control (RBAC) and Authorization
+# Role-based access control and authorization
 
-SkyCMS uses ASP.NET Core Identity with role-based authorization to control access to administrative and content management features. This guide explains the authorization model, available roles, permission matrix, and best practices for managing user access.
+## Summary
 
-## Table of contents
-
-- [Authorization model](#authorization-model)
-- [Built-in roles](#built-in-roles)
-- [Permission matrix](#permission-matrix)
-- [Role assignment](#role-assignment)
-- [Creating custom roles](#creating-custom-roles)
-- [Authorization at different levels](#authorization-at-different-levels)
-- [Best practices](#best-practices)
-- [Troubleshooting authorization issues](#troubleshooting-authorization-issues)
+Understand SkyCMS role-based authorization model, built-in roles, permission matrix, and best practices for managing user access.
 
 ## Authorization model
 

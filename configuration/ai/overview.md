@@ -1,10 +1,22 @@
-<!-- Audience: Administrators and Developers -->
-<!-- Type: How-to / Reference -->
-<!-- Status: Draft -->
+---
+canonical_title: AI Configuration Overview
+description: Configure tenant-scoped AI providers, model selection, and validation for SkyCMS editor experiences.
+doc_type: Explanation
+product_area: configuration
+user_intent: configure-ai-provider-and-models-in-skycms
+audience:
+   - Administrators
+   - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # AI Configuration Overview
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 

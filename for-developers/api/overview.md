@@ -1,11 +1,23 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Overview -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/README.md -->
+---
+canonical_title: Sky.Cms.Api.Shared Documentation
+description: Reference for Sky.Cms.Api.Shared — the shared contact form API used across Editor and Publisher, including endpoints, architecture, and configuration.
+doc_type: Reference
+product_area: development
+user_intent: integrate-or-extend-sky-cms-api-shared
+audience:
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Sky.Cms.Api.Shared Documentation
 
-Welcome to the Sky.Cms.Api.Shared documentation. This shared API library provides common endpoints used across both the Editor and Publisher web applications within the SkyCMS solution.
+## Summary
+
+Reference for Sky.Cms.Api.Shared — the shared contact form API used across Editor and Publisher, including endpoints, architecture, and configuration.
 
 ## Overview
 

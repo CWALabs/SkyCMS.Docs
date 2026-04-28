@@ -1,7 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
+---
+canonical_title: Get Azure Communication Services Credentials
+description: Create or retrieve Azure Communication Services connection details for SkyCMS email delivery.
+doc_type: How-to
+product_area: configuration
+user_intent: get-acs-credentials-for-skycms-email
+audience:
+   - Developers
+   - Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Get Azure Communication Services Credentials
+
+## Summary
 
 Use this guide when SkyCMS needs a connection string to send email through Azure Communication Services (ACS).
 

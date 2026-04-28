@@ -1,201 +1,228 @@
-<!-- Audience: Designers, Site Builders, Brand Managers -->
-<!-- Type: Reference Template -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Templates/Style-Guide-Template.md -->
+---
+canonical_title: Style Guide Template
+description: Use this template to define brand standards for typography, color, imagery, UI components, and accessibility.
+doc_type: Reference
+product_area: site-building
+user_intent: create-or-refresh-a-website-style-guide
+audience:
+  - Designers
+  - Site Builders
+  - Brand Managers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Style Guide Template
 
-## When to use this page
+## Summary
 
-Copy and customise this template when you need to create or consolidate your website's brand standards. It covers logos, colour palette, typography, imagery, iconography, buttons, spacing, tone of voice, components, and accessibility guidelines.
+Copy and customize this template when you need to create or consolidate website brand standards across content, design, and UI implementation.
 
----
+## Outcome
+
+After completing this template, your team should have a shared style-guide source of truth for brand identity, visual system decisions, and component-level consistency.
+
+## When To Use This Page
+
+Use this template for:
+
+- New brand launches.
+- Rebranding projects.
+- Consolidating fragmented visual standards.
+- Aligning content, design, and front-end implementation.
+
+## Verification
+
+This template is complete when:
+
+- Key brand decisions are documented.
+- Example values are replaced with organization-specific values.
+- Teams can execute design and content work without undocumented assumptions.
+
 ## Document Information
 
-**Organization**: [Your Organization Name]  
-**Website**: [Your Website URL]  
-**Last Updated**: [Date]  
-**Version**: 1.0  
-**Owner**: [Brand/Marketing Team]  
-**Approved By**: [Manager/Executive]
+Fill in and keep current:
 
----
+- Organization: [Your Organization Name]
+- Website: [Your Website URL]
+- Last Updated: [Date]
+- Version: 1.0
+- Owner: [Brand/Marketing Team]
+- Approved By: [Manager/Executive]
 
 ## 1. Brand Overview
 
 ### Brand Mission
-[Describe what your organization does and why. This is the core reason your brand exists.]
 
-**Example**: *At [Company], we help [target audience] [achieve goal] by [what makes you unique].*
+Describe what your organization does and why.
 
-**Your Mission**:  
+Example:
+
+At [Company], we help [target audience] [achieve goal] by [what makes you unique].
+
+Your mission:
+
 [Fill in your brand mission here]
 
----
-
 ### Brand Values
-List the core values that define your brand. These should influence all communication and design decisions.
 
-**Example Values**: 
+List the values that define your brand.
+
+Example values:
+
 - Innovation
 - Transparency
-- Customer-Focused
+- Customer-focused
 - Sustainability
 
-**Your Brand Values**:
+Your brand values:
+
 1. [Value 1]: [Brief description]
 2. [Value 2]: [Brief description]
 3. [Value 3]: [Brief description]
 4. [Value 4]: [Brief description]
 
----
-
 ### Brand Personality
-Describe your brand's personality using adjectives. How would you describe your brand if it were a person?
 
-**Example**: Professional yet approachable, innovative but trusted, modern and forward-thinking.
+Describe your brand as if it were a person.
 
-**Your Brand Personality**:  
-[Describe your brand's personality]
+Example:
 
----
+Professional yet approachable, innovative but trusted, modern and forward-thinking.
 
-## 2. Logo & Visual Identity
+Your brand personality:
+
+[Describe your brand personality]
+
+## 2. Logo And Visual Identity
 
 ### Logo
-Include logo image here or link to logo files.
 
-**Logo File Locations**:
-- Full Color: [file path/link]
-- Black & White: [file path/link]
-- Icon Version: [file path/link]
+Include logo images or links to logo files.
+
+Logo file locations:
+
+- Full color: [file path/link]
+- Black and white: [file path/link]
+- Icon version: [file path/link]
 - Favicon: [file path/link]
 
 ### Logo Usage Guidelines
 
-**✅ DO**:
-- Use official logo files provided above
-- Maintain clear space around logo (minimum [X] pixels)
-- Use on contrasting backgrounds
-- Maintain aspect ratio when resizing
+Do:
 
-**❌ DON'T**:
-- Rotate or skew the logo
-- Change logo colors
-- Add effects (shadows, gradients, outlines)
-- Use low-resolution versions
-- Combine logo with other graphics
+- Use official logo files.
+- Maintain clear space around the logo (minimum [X] pixels).
+- Use on contrasting backgrounds.
+- Maintain aspect ratio when resizing.
+
+Do not:
+
+- Rotate or skew the logo.
+- Change logo colors.
+- Add effects (shadows, gradients, outlines).
+- Use low-resolution versions.
+- Combine logo with unrelated graphics.
 
 ### Clear Space
-The minimum clear space around the logo should be equal to the height of the "X" in the logo (or [X] pixels).
+
+The minimum clear space around the logo should equal the height of the "X" in the logo (or [X] pixels).
 
 ### Logo Sizing
-- **Minimum Size**: [X] pixels wide
-- **Preferred Sizes**: [sizes for different applications]
-- **File Formats**: PNG (recommended), SVG, EPS, PDF
 
----
+- Minimum size: [X] pixels wide.
+- Preferred sizes: [sizes for different applications].
+- File formats: PNG (recommended), SVG, EPS, PDF.
 
 ## 3. Color Palette
 
 ### Primary Colors
 
-These colors should appear most frequently in your design. Use these for main UI elements, headers, and primary CTAs.
+Use primary colors for major UI elements and primary calls to action.
 
-| Color Name | Color Code | RGB | CMYK | Usage |
-|------------|-----------|-----|------|-------|
-| Primary Blue | #[CODE] | R:[X] G:[X] B:[X] | C:[X] M:[X] Y:[X] K:[X] | Main headers, CTAs |
-| Primary Orange | #[CODE] | R:[X] G:[X] B:[X] | C:[X] M:[X] Y:[X] K:[X] | Accents, highlights |
-| Neutral Gray | #[CODE] | R:[X] G:[X] B:[X] | C:[X] M:[X] Y:[X] K:[X] | Text, backgrounds |
+- Primary blue: #[CODE] (RGB R:[X] G:[X] B:[X], CMYK C:[X] M:[X] Y:[X] K:[X])
+- Primary orange: #[CODE] (RGB R:[X] G:[X] B:[X], CMYK C:[X] M:[X] Y:[X] K:[X])
+- Neutral gray: #[CODE] (RGB R:[X] G:[X] B:[X], CMYK C:[X] M:[X] Y:[X] K:[X])
 
-**Example Primary Palette**:
+Example primary palette:
+
 ```html
-<!-- Primary Blue -->
-<div style="background-color: #0066CC; color: white; padding: 20px;">
-  Primary Blue #0066CC
-</div>
-
-<!-- Primary Orange -->
-<div style="background-color: #FF6600; color: white; padding: 20px;">
-  Primary Orange #FF6600
-</div>
-
-<!-- Neutral Gray -->
-<div style="background-color: #333333; color: white; padding: 20px;">
-  Neutral Gray #333333
-</div>
+<div style="background-color: #0066CC; color: white; padding: 20px;">Primary Blue #0066CC</div>
+<div style="background-color: #FF6600; color: white; padding: 20px;">Primary Orange #FF6600</div>
+<div style="background-color: #333333; color: white; padding: 20px;">Neutral Gray #333333</div>
 ```
 
 ### Secondary Colors
 
-Support colors that complement primary colors. Use for secondary elements and variations.
+Use secondary colors for accents and supporting UI.
 
-| Color Name | Color Code | RGB | Usage |
-|------------|-----------|-----|-------|
-| Light Blue | #[CODE] | R:[X] G:[X] B:[X] | Background fills, light accents |
-| Dark Gray | #[CODE] | R:[X] G:[X] B:[X] | Dark text, borders |
-| Accent Green | #[CODE] | R:[X] G:[X] B:[X] | Success states, confirmations |
+- Light blue: #[CODE] (background fills, light accents)
+- Dark gray: #[CODE] (dark text, borders)
+- Accent green: #[CODE] (success states, confirmations)
 
 ### Functional Colors
 
-Colors with specific meanings throughout the interface.
+Use functional colors consistently:
 
-| Function | Color | Code | Usage |
-|----------|-------|------|-------|
-| Success | Green | #[CODE] | Confirmations, valid states |
-| Warning | Yellow/Orange | #[CODE] | Alerts, warnings |
-| Error | Red | #[CODE] | Errors, dangerous actions |
-| Disabled | Light Gray | #[CODE] | Disabled states, inactive items |
-| Information | Blue | #[CODE] | Information messages, hints |
+- Success: green #[CODE]
+- Warning: yellow/orange #[CODE]
+- Error: red #[CODE]
+- Disabled: light gray #[CODE]
+- Information: blue #[CODE]
 
 ### Color Contrast
-All text must maintain minimum WCAG AA contrast ratio:
-- **Normal Text**: Minimum 4.5:1 contrast ratio
-- **Large Text (18pt+)**: Minimum 3:1 contrast ratio
 
-**Tools for Testing**: [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+All text must maintain at least WCAG AA contrast:
 
-### Don'ts with Color
-- ❌ Don't use more than 5 primary colors
-- ❌ Don't rely only on color to convey information (also use icons, text labels)
-- ❌ Don't use pure black (#000000) for main text (use #333333)
-- ❌ Don't forget about colorblind users (test with accessibility tools)
+- Normal text: minimum 4.5:1.
+- Large text (18pt+): minimum 3:1.
 
----
+Testing tool:
+
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
+### Color Guardrails
+
+- Do not use more than five primary colors.
+- Do not rely on color alone to convey information.
+- Do not use pure black (#000000) for main body text; prefer softer dark values like #333333.
+- Test color decisions for color-vision accessibility.
 
 ## 4. Typography
 
 ### Font Family
 
-**Primary Font** (Headlines, Large Text):
-- **Font Name**: [e.g., Roboto, Open Sans]
-- **File Name/Source**: [Where to get it]
-- **Font Weight**: Bold (700), Semi-bold (600), Regular (400)
-- **Usage**: H1, H2, H3, headers, CTAs
+Primary font (headlines, large text):
 
-**Example**: *"Roboto" from Google Fonts*
+- Font name: [e.g., Roboto, Open Sans]
+- Source: [Where to get it]
+- Weights: Bold (700), Semi-bold (600), Regular (400)
+- Usage: H1, H2, H3, headers, CTAs
 
-**Secondary Font** (Body Text, Small Text):
-- **Font Name**: [e.g., Open Sans, Lato]
-- **File Name/Source**: [Where to get it]
-- **Font Weight**: Regular (400), Light (300)
-- **Usage**: Body paragraphs, lists, small text
+Secondary font (body text, small text):
 
-**Example**: *"Open Sans" from Google Fonts*
+- Font name: [e.g., Open Sans, Lato]
+- Source: [Where to get it]
+- Weights: Regular (400), Light (300)
+- Usage: Body paragraphs, lists, helper text
 
-### Font Sizing & Hierarchy
+### Font Sizing And Hierarchy
 
-| Element | Font Size | Font Weight | Line Height | Letter Spacing | Usage |
-|---------|-----------|-----------|------------|-----------------|-------|
-| H1 | [X]px / [X]rem | Bold (700) | [X] | [X] | Page titles, main headlines |
-| H2 | [X]px / [X]rem | Semi-bold (600) | [X] | [X] | Section headers |
-| H3 | [X]px / [X]rem | Semi-bold (600) | [X] | [X] | Sub-section headers |
-| Body | [X]px / [X]rem | Regular (400) | [X] | [X] | Paragraph text, main content |
-| Small | [X]px / [X]rem | Regular (400) | [X] | [X] | Captions, helper text, labels |
-| Button | [X]px / [X]rem | Semi-bold (600) | [X] | [X] | Button text, CTAs |
+Define and enforce a clear scale:
 
-**Example Hierarchy** (16px base):
-```
+- H1: [X]px / [X]rem, weight 700, line-height [X]
+- H2: [X]px / [X]rem, weight 600, line-height [X]
+- H3: [X]px / [X]rem, weight 600, line-height [X]
+- Body: [X]px / [X]rem, weight 400, line-height [X]
+- Small: [X]px / [X]rem, weight 400, line-height [X]
+- Button: [X]px / [X]rem, weight 600, line-height [X]
+
+Example hierarchy (16px base):
+
+```text
 H1: 32px / 2rem (Bold)
 H2: 24px / 1.5rem (Semi-bold)
 H3: 20px / 1.25rem (Semi-bold)
@@ -204,150 +231,154 @@ Small: 14px / 0.875rem (Regular)
 ```
 
 ### Line Height
-- **Headlines**: 1.2x font size (tighter, more impactful)
-- **Body Text**: 1.6x font size (easier to read in large blocks)
-- **Small Text**: 1.5x font size
+
+- Headlines: 1.2x.
+- Body text: 1.6x.
+- Small text: 1.5x.
 
 ### Letter Spacing
-- **Headlines**: 0 to -0.02em (slightly tight for impact)
-- **Body**: 0 to 0.02em (normal, readable)
-- **All Caps**: 0.1em to 0.15em (slightly expanded)
+
+- Headlines: 0 to -0.02em.
+- Body: 0 to 0.02em.
+- All caps labels: 0.1em to 0.15em.
 
 ### Font Pairing Example
 
 ```html
-<h1 style="font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 700; line-height: 1.2;">
-  Headline Using Roboto
-</h1>
-
-<p style="font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.6;">
-  This is body text using Open Sans. It should be easy to read in large blocks of text 
-  for comfortable reading on screens and printed materials.
-</p>
+<h1 style="font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 700; line-height: 1.2;">Headline Using Roboto</h1>
+<p style="font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.6;">Body text should remain comfortable to read in longer blocks.</p>
 ```
 
-### Don'ts with Typography
-- ❌ Don't use more than 2-3 font families
-- ❌ Don't use all caps for body text (hard to read)
-- ❌ Don't use very small fonts (<12px for body text)
-- ❌ Don't forget about responsive sizing (smaller on mobile)
-- ❌ Don't use low contrast text (see Color Contrast section)
+### Typography Guardrails
 
----
+- Use no more than two to three font families.
+- Do not use all caps for body paragraphs.
+- Keep body text at readable sizes (typically 14px to 18px).
+- Ensure responsive scaling for smaller devices.
+- Preserve adequate text contrast.
 
 ## 5. Image Guidelines
 
 ### Photography Style
 
-**Overall Aesthetic**: [Describe your photography style]
+Define your visual style and keep it consistent.
 
-**Examples**: 
-- Professional headshots with consistent background and lighting
-- Candid team collaboration photos
-- High-quality product photography on white background
-- Lifestyle/lifestyle photos showing real people using product
+Your photography style:
 
-**Your Photography Style**:  
 [Fill in your photography style here]
 
-### Image Types & Usage
+### Image Types And Usage
 
-#### Hero Images (Large banners, backgrounds)
-- **Size**: Minimum 1920 x 1080px (16:9 aspect ratio)
-- **File Format**: JPG or WebP for web optimization
-- **File Size**: 100-300KB
-- **Style**: [Your specific hero image style]
+Hero images:
 
-#### Product Images
-- **Size**: [Standard size] px
-- **Background**: [White, Transparent, Styled - specify]
-- **Angles**: [Specify which angles are required]
-- **File Format**: PNG or JPG
-- **File Size**: [Target file size]
+- Size: minimum 1920 x 1080px (16:9)
+- Format: JPG or WebP
+- Target size: 100KB to 300KB
 
-#### Team/People Photos
-- **Size**: [Standard size] px
-- **Background**: [Solid color, gradient, blurred - specify]
-- **Clothing**: [Guidelines for professional attire]
-- **File Format**: JPG or WebP
-- **File Size**: [Target file size]
+Product images:
 
-#### Icons & Illustrations
-- **Size**: [Standard size] px
-- **Style**: Flat, 3D, Minimalist, etc.
-- **File Format**: SVG (preferred), PNG
-- **Color**: Use primary color palette
+- Size: [Standard size] px
+- Background: [White, transparent, styled]
+- Format: PNG or JPG
+- Target size: [Target file size]
+
+Team and people photos:
+
+- Size: [Standard size] px
+- Background guidance: [Specify]
+- Format: JPG or WebP
+- Target size: [Target file size]
+
+Icons and illustrations:
+
+- Size: [Standard size] px
+- Style: Flat, 3D, minimalist, etc.
+- Format: SVG preferred, PNG acceptable
+- Color: align to primary palette
 
 ### Image Optimization
-All images must be optimized for web:
-- **JPG**: 70-85% quality compression
-- **PNG**: Use for images requiring transparency
-- **WebP**: Modern format for better compression
-- **Maximum file size**: 200KB for standard images, 300KB for hero images
-- **Responsive images**: Provide multiple sizes for different devices
 
-### Don'ts with Images
-- ❌ Don't use low-quality or pixelated images
-- ❌ Don't use overly edited or fake-looking photos
-- ❌ Don't forget alt text for accessibility
-- ❌ Don't mix photography styles inconsistently
-- ❌ Don't use copyrighted images without permission
+- JPG: 70% to 85% quality.
+- PNG: use when transparency is required.
+- WebP: use where supported for efficient delivery.
+- Standard images: target up to 200KB.
+- Hero images: target up to 300KB.
+- Provide responsive image variants.
+
+### Image Guardrails
+
+- Do not use low-quality or pixelated images.
+- Do not use unlicensed or copyrighted media.
+- Include meaningful alt text for accessibility.
+- Maintain one coherent visual style.
 
 ### Image Sources
-**Approved Stock Photo Services**: [List any approved providers]
-- [Service 1]: [URL]
-- [Service 2]: [URL]
-- [Custom Photography]: [Who to contact]
 
----
+Approved sources:
 
-## 6. Icons & Buttons
+- Service 1: URL
+- Service 2: URL
+- Custom photography contact: [Who to contact]
+
+## 6. Icons And Buttons
 
 ### Icons
 
-**Icon Library**: [Name and source, e.g., "Font Awesome Pro", "Material Design Icons", "Custom SVG set"]
+Icon library:
 
-**Icon Size Standards**:
-- Small icons: 16x16px
-- Standard icons: 24x24px
-- Large icons: 32x32px
-- Extra large icons: 48x48px+
+[Name and source, e.g., Font Awesome Pro, Material Design Icons, or custom SVG set]
 
-**Icon Color**: 
-- Primary: Use primary color from palette
-- Hover/Active: Slightly lighter/darker shade
-- Disabled: Use light gray (#CCCCCC)
+Icon size standards:
 
-**Icon Example**:
+- Small: 16x16px
+- Standard: 24x24px
+- Large: 32x32px
+- Extra large: 48x48px and above
+
+Color behavior:
+
+- Primary: use palette primary colors.
+- Hover/active: use clear tonal variation.
+- Disabled: use neutral disabled tone (for example #CCCCCC).
+
+Icon example:
+
 ```html
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
-  <!-- Icon SVG code here -->
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2"></svg>
 ```
 
 ### Buttons
 
-#### Primary Button
-Used for main CTAs (Sign Up, Get Started, Buy Now)
+Primary button:
 
-**Appearance**:
-- Background Color: [Primary Color]
-- Text Color: [Contrasting color, usually white]
-- Text Style: [Font details]
-- Padding: [X]px horizontal, [X]px vertical
-- Border Radius: [X]px
+- Use for highest-priority actions (Sign Up, Get Started, Buy Now).
+- Define background, text color, padding, radius, and all interaction states.
 
-**States**:
-- Default: [Description]
-- Hover: [Description - usually slightly darker]
-- Active/Pressed: [Description]
-- Disabled: [Description - grayed out]
+Secondary button:
 
-**Example CSS**:
+- Use for lower-priority actions.
+- Often outlined or subtle-filled.
+
+Tertiary button:
+
+- Use for minimal emphasis actions.
+- Usually text-forward with a hover underline.
+
+Button states to define:
+
+- Default
+- Hover
+- Active
+- Disabled
+- Loading
+- Focus (keyboard-visible)
+
+Example CSS:
+
 ```css
 .btn-primary {
   background-color: #0066CC;
-  color: white;
+  color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 4px;
   font-weight: 600;
@@ -369,379 +400,278 @@ Used for main CTAs (Sign Up, Get Started, Buy Now)
 }
 ```
 
-#### Secondary Button
-Used for less important actions (Learn More, Cancel)
-
-**Appearance**:
-- Background Color: Light gray or transparent
-- Text Color: Primary color or dark gray
-- Border: 2px solid primary color
-- Padding: [X]px horizontal, [X]px vertical
-- Border Radius: [X]px
-
-#### Tertiary Button
-Used for minimal-emphasis actions
-
-**Appearance**:
-- Background: Transparent
-- Text Color: Primary color
-- No border (optional subtle underline on hover)
-- Text decoration: Underline on hover
-
-### Button States
-
-All buttons must support these states:
-
-| State | Description | Visual Change |
-|-------|-------------|--------------|
-| Default | Normal button state | Standard styling |
-| Hover | Mouse over button | Slightly darker/lighter color |
-| Active | Button pressed | More pronounced color change |
-| Disabled | Button cannot be used | Grayed out, no cursor change |
-| Loading | Processing action | [Show loading spinner/indicator] |
-| Focus | Keyboard focus (accessibility) | Visible outline/border |
-
----
-
-## 7. Spacing & Layout
+## 7. Spacing And Layout
 
 ### Spacing System
 
-Use a consistent spacing scale throughout design. Based on 8px grid system:
+Use a consistent spacing scale based on an 8px grid:
 
-| Scale | Size | Usage |
-|-------|------|-------|
-| XS | 4px | Very tight spacing, micro-interactions |
-| S | 8px | Tight spacing, element padding |
-| M | 16px | Standard spacing, general padding |
-| L | 24px | Generous spacing, section spacing |
-| XL | 32px | Large spacing, major sections |
-| 2XL | 48px | Extra large spacing, page sections |
+- XS: 4px
+- S: 8px
+- M: 16px
+- L: 24px
+- XL: 32px
+- 2XL: 48px
 
-**Example Usage**:
-```
-Component Padding (Internal): 16px (M)
-Component Margin (External): 24px (L)
-Section Spacing: 48px (2XL)
+Example usage:
+
+```text
+Component padding: 16px (M)
+Component margin: 24px (L)
+Section spacing: 48px (2XL)
 ```
 
 ### Grid System
 
-**Column Structure**: [Specify grid layout - e.g., 12 column, responsive]
+Define your responsive structure:
 
-**Breakpoints** (Responsive Design):
-- Mobile: 320px - 767px
-- Tablet: 768px - 1023px
-- Desktop: 1024px - 1440px
-- Large: 1441px+
+- Column structure: [e.g., 12-column responsive grid]
+- Mobile: 320px to 767px
+- Tablet: 768px to 1023px
+- Desktop: 1024px to 1440px
+- Large desktop: 1441px and above
 
 ### Max Content Width
 
-**Maximum content width**: [Value, e.g., 1200px]  
-This ensures long lines of text don't become hard to read on very large screens.
+- Maximum content width: [Value, e.g., 1200px]
 
----
-
-## 8. Tone of Voice & Content Guidelines
+## 8. Tone Of Voice And Content Guidelines
 
 ### Brand Voice
 
-How should we communicate with our audience? Use 3-5 adjectives to describe the voice.
+Choose three to five adjectives.
 
-**Example**: Professional, friendly, approachable, trustworthy, innovative
+Example:
 
-**Your Brand Voice**:  
+Professional, friendly, approachable, trustworthy, innovative.
+
+Your brand voice:
+
 [Describe your brand voice]
 
 ### Writing Guidelines
 
-#### Headline Guidelines
-- Start with action or benefit
-- Be specific and clear
-- Avoid jargon
-- Maximum headline length: 70 characters
-- **Example**: "Increase Productivity by 40% in 30 Days" ✅ vs "Our Product is Good" ❌
+Headline guidance:
 
-#### Body Text Guidelines
-- Use short paragraphs (3-4 sentences max)
-- Use simple, clear language (8th grade reading level)
-- Active voice over passive voice
-- Break up text with subheadings and bullet points
-- Avoid marketing hype (be honest and authentic)
+- Start with action or benefit.
+- Be specific and clear.
+- Avoid jargon.
+- Keep headlines short (around 70 characters max).
 
-#### CTA Text Guidelines
-- Action-oriented verbs (Sign Up, Learn More, Get Started)
-- Specific benefit when possible (Get Free Trial, Download Guide)
-- First person perspective ("Get my free guide" vs "Get the free guide")
-- 2-4 words maximum
+Body text guidance:
 
-### Tone Variations
+- Use short paragraphs.
+- Prefer plain language.
+- Prefer active voice.
+- Break content with subheadings and bullets.
+- Avoid hype language.
 
-**For Different Contexts**:
+CTA guidance:
 
-| Context | Tone | Example |
-|---------|------|---------|
-| Error Messages | Helpful, clear | "Email not found. Try another address or create an account." |
-| Success Messages | Encouraging, positive | "Great! Your account is ready. Let's get started." |
-| Warnings | Cautious but not alarming | "This action cannot be undone. Are you sure?" |
-| Help Text | Friendly, supportive | "Need help? Check out our guides or contact support." |
-| Legal/Privacy | Clear, transparent | [Standard legal language] |
+- Use action verbs.
+- Include a clear benefit where possible.
+- Keep CTA copy concise (typically two to four words).
 
-### Don'ts with Tone & Content
-- ❌ Don't use excessive exclamation marks (max 1 per section)
-- ❌ Don't use ALL CAPS for emphasis (use bold or italics)
-- ❌ Don't use corporate jargon or buzzwords
-- ❌ Don't make claims you can't back up
-- ❌ Don't ignore your audience's needs (be user-centric)
+### Tone Variations By Context
+
+- Error message tone: helpful and clear.
+- Success message tone: encouraging and concise.
+- Warning tone: cautious but not alarmist.
+- Help text tone: friendly and supportive.
+- Legal/privacy tone: clear and transparent.
+
+### Tone Guardrails
+
+- Avoid excessive exclamation marks.
+- Avoid all-caps emphasis.
+- Avoid corporate buzzword language.
+- Avoid unsubstantiated claims.
+- Keep language user-centered.
 
 ### Terminology
 
-Create a glossary of approved terms and how to use them:
+Maintain an approved glossary:
 
-| Term | Definition | Approved Usage | Don't Use |
-|------|-----------|-----------------|----------|
-| [Term 1] | [Definition] | [Approved way to write it] | [Incorrect ways] |
-| [Term 2] | [Definition] | [Approved way to write it] | [Incorrect ways] |
-
-**Example**:
-| Term | Definition | Usage | Avoid |
-|------|-----------|-------|-------|
-| Product | Our main offering | "Our product helps you..." | "Our solution", "Our app", "Our tool" |
-| User | Person using the product | "Users can...", "User dashboard" | "Customers", "Client" (in this context) |
-
----
+- [Term 1]: [Definition], approved usage [phrase], avoid [phrase]
+- [Term 2]: [Definition], approved usage [phrase], avoid [phrase]
 
 ## 9. Component Styles
 
-### Forms & Input Fields
+### Forms And Input Fields
 
-**Text Input**:
+Text input baseline:
+
 - Border: 1px solid #CCCCCC
 - Padding: 12px
-- Border Radius: 4px
-- Font Size: 16px
-- Hover: Light gray background (#F5F5F5)
-- Focus: Blue border (#0066CC), box shadow
+- Radius: 4px
+- Font size: 16px
+- Hover: subtle background tint
+- Focus: clear border + focus treatment
 
-**Labels**:
-- Font Weight: 600
-- Font Size: 14px
+Labels:
+
+- Weight: 600
+- Size: 14px
 - Color: #333333
-- Margin Bottom: 8px
+- Spacing below: 8px
 
 ### Cards
 
-**Appearance**:
-- Background: White (#FFFFFF)
-- Border: 1px solid #EEEEEE
-- Border Radius: 8px
-- Padding: 24px
-- Box Shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+Card baseline:
 
-**Hover State**:
-- Box Shadow: 0 4px 16px rgba(0, 0, 0, 0.15)
-- Transform: Slightly elevate (y: -2px)
+- Background: #FFFFFF
+- Border: 1px solid #EEEEEE
+- Radius: 8px
+- Padding: 24px
+- Shadow: subtle elevation
+
+Hover state:
+
+- Slightly stronger shadow
+- Optional subtle upward translate
 
 ### Navigation
 
-**Main Navigation**:
-- Background: [Color]
-- Text: [Color]
-- Font Weight: 600
-- Padding: 16px 24px (horizontal)
-- Active/Current: Underline or highlight with primary color
+Main navigation:
 
-**Mobile Navigation**:
-- Hamburger menu icon (3 horizontal lines)
-- Slide-out sidebar or dropdown
-- Close button to dismiss
+- Background and text colors defined by brand system
+- Weight: 600
+- Horizontal spacing: 16px to 24px
+- Active state: visible underline or highlight
 
----
+Mobile navigation:
+
+- Use a recognizable menu trigger.
+- Ensure close and back controls are obvious.
+- Ensure keyboard navigation and focus order are valid.
 
 ## 10. Accessibility Requirements
 
-All web content must meet WCAG 2.1 Level AA standards:
+Target baseline: WCAG 2.1 AA.
 
-### Color & Contrast
-- ✅ Do: Minimum 4.5:1 contrast ratio for text
-- ✅ Do: Don't rely only on color (use icons, labels)
-- ✅ Do: Test with color blindness simulator
+Color and contrast:
 
-### Images & Icons
-- ✅ Do: Include alt text for all images
-- ✅ Do: Describe image purpose, not just "image of"
-- ✅ Do: Use meaningful icon labels/tooltips
+- Maintain minimum 4.5:1 text contrast.
+- Do not rely only on color to convey meaning.
 
-### Typography
-- ✅ Do: Use semantic HTML (H1, H2, not styled divs)
-- ✅ Do: Ensure proper heading hierarchy
-- ✅ Do: Use adequate font sizes (minimum 12px for body)
+Images and icons:
 
-### Interactive Elements
-- ✅ Do: Ensure keyboard navigation works
-- ✅ Do: Provide visible focus indicators
-- ✅ Do: Test with screen readers
+- Provide meaningful alt text.
+- Label icon-only controls.
 
-### Accessibility Testing Tools
+Typography and structure:
+
+- Use semantic headings and landmarks.
+- Preserve valid heading hierarchy.
+
+Interactive elements:
+
+- Ensure full keyboard access.
+- Provide visible focus states.
+- Validate behavior with assistive technologies.
+
+Accessibility testing tools:
+
 - [WAVE Browser Extension](https://wave.webaim.org/extension/)
 - [Lighthouse (Chrome DevTools)](https://developers.google.com/web/tools/lighthouse)
 - [Axe DevTools](https://www.deque.com/axe/devtools/)
-
----
 
 ## 11. Application Examples
 
 ### Home Page Example
 
 ```html
-<header style="background-color: #0066CC; color: white; padding: 48px 24px;">
-  <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 16px;">
-    Welcome to [Company]
-  </h1>
-  <p style="font-size: 18px; margin-bottom: 32px;">
-    [Your company mission statement]
-  </p>
-  <button style="background-color: #FF6600; color: white; padding: 12px 24px; 
-                 border-radius: 4px; font-weight: 600; border: none; cursor: pointer;">
-    Get Started
-  </button>
+<header style="background-color: #0066CC; color: #FFFFFF; padding: 48px 24px;">
+  <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 16px;">Welcome to [Company]</h1>
+  <p style="font-size: 18px; margin-bottom: 32px;">[Your company mission statement]</p>
+  <button style="background-color: #FF6600; color: #FFFFFF; padding: 12px 24px; border-radius: 4px; font-weight: 600; border: none; cursor: pointer;">Get Started</button>
 </header>
-
-<section style="padding: 48px 24px; max-width: 1200px; margin: 0 auto;">
-  <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 32px;">
-    What We Offer
-  </h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-    <!-- Cards go here -->
-  </div>
-</section>
 ```
 
 ### Contact Form Example
 
 ```html
 <form style="max-width: 500px; margin: 0 auto; padding: 24px;">
-  <label for="name" style="display: block; font-weight: 600; font-size: 14px; 
-                           color: #333333; margin-bottom: 8px;">
-    Full Name
-  </label>
-  <input type="text" id="name" placeholder="John Doe" 
-         style="width: 100%; padding: 12px; border: 1px solid #CCCCCC; 
-                border-radius: 4px; font-size: 16px; margin-bottom: 24px;" />
-  
-  <label for="email" style="display: block; font-weight: 600; font-size: 14px; 
-                            color: #333333; margin-bottom: 8px;">
-    Email Address
-  </label>
-  <input type="email" id="email" placeholder="john@example.com" 
-         style="width: 100%; padding: 12px; border: 1px solid #CCCCCC; 
-                border-radius: 4px; font-size: 16px; margin-bottom: 24px;" />
-  
-  <button type="submit" style="background-color: #0066CC; color: white; 
-                              padding: 12px 24px; border-radius: 4px; 
-                              font-weight: 600; border: none; cursor: pointer; width: 100%;">
-    Send Message
-  </button>
+  <label for="name" style="display: block; font-weight: 600; font-size: 14px; color: #333333; margin-bottom: 8px;">Full Name</label>
+  <input type="text" id="name" placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid #CCCCCC; border-radius: 4px; font-size: 16px; margin-bottom: 24px;" />
+
+  <label for="email" style="display: block; font-weight: 600; font-size: 14px; color: #333333; margin-bottom: 8px;">Email Address</label>
+  <input type="email" id="email" placeholder="john@example.com" style="width: 100%; padding: 12px; border: 1px solid #CCCCCC; border-radius: 4px; font-size: 16px; margin-bottom: 24px;" />
+
+  <button type="submit" style="background-color: #0066CC; color: #FFFFFF; padding: 12px 24px; border-radius: 4px; font-weight: 600; border: none; cursor: pointer; width: 100%;">Send Message</button>
 </form>
 ```
 
----
+## 12. Brand Don\'ts
 
-## 12. Brand Don'ts
+Never:
 
-### Never Do These Things
+- Use unauthorized logo versions.
+- Change brand colors without approval.
+- Use unapproved fonts.
+- Mix incompatible photography styles.
+- Ignore accessibility requirements.
+- Ignore spacing and hierarchy standards.
 
-- ❌ Use unauthorized logo versions
-- ❌ Change brand colors without approval
-- ❌ Use unbranded fonts
-- ❌ Mix photography styles
-- ❌ Use overly aggressive sales language
-- ❌ Ignore accessibility requirements
-- ❌ Deviate from spacing guidelines
-- ❌ Use more than 5 colors in a design
-- ❌ Forget alt text on images
-- ❌ Make content hard to read with poor contrast
+## 13. Resources And Files
 
----
+Download resources:
 
-## 13. Resources & Files
+- Logo files: [Link to logo downloads]
+- Font files: [Link to font source]
+- Color palette (Adobe, Figma, etc.): [Link to design file]
+- Template files: [Link to templates]
+- Icon set: [Link to icon library]
 
-### Download Resources
+Tools and software:
 
-- **Logo Files**: [Link to logo downloads]
-- **Font Files**: [Link to Google Fonts or font files]
-- **Color Palette** (Adobe, Figma, etc.): [Link to design file]
-- **Template Files**: [Link to templates]
-- **Icon Set**: [Link to icon library]
+- Figma (design)
+- Adobe Creative Suite (design production)
+- Google Fonts (font source)
+- Coolors (palette support)
+- Contrast Checker (accessibility validation)
 
-### Tools & Software
-
-| Tool | Purpose | Cost |
-|------|---------|------|
-| Figma | Design tool | Free/Paid |
-| Adobe Creative Suite | Design suite | Subscription |
-| Google Fonts | Free fonts | Free |
-| Coolors | Color palette generator | Free |
-| Contrast Checker | Accessibility testing | Free |
-
-### Related Documentation
+Related documentation:
 
 - [SkyCMS Templates Guide](templates.md)
 - [SkyCMS Layouts Documentation](layouts.md)
 - [Phase 2: Creating Layouts](../for-developers/website-launch/02-Creating-Layouts.md)
 - [Phase 3: Creating Templates](../for-developers/website-launch/03-Creating-Templates.md)
 
-### Contact Information
+Contact information:
 
-**Questions about the style guide?**
+- Design lead: [Name] - [Email] - [Phone]
+- Marketing manager: [Name] - [Email] - [Phone]
+- Brand owner: [Name] - [Email] - [Phone]
+- Slack channel: [Channel name or N/A]
 
-- **Design Lead**: [Name] - [Email] - [Phone]
-- **Marketing Manager**: [Name] - [Email] - [Phone]
-- **Brand Owner**: [Name] - [Email] - [Phone]
+## 14. Change Log And Version Control
 
-**Slack Channel**: [Channel name or N/A if not applicable]
+- Version 1.0 - [Date] - Initial style guide - [Name]
 
----
-
-## 14. Change Log & Version Control
-
-| Version | Date | Changes | Updated By |
-|---------|------|---------|-----------|
-| 1.0 | [Date] | Initial style guide | [Name] |
-| | | | |
-
----
-
-## Approval & Sign-Off
+## Approval And Sign-Off
 
 This style guide has been reviewed and approved by:
 
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| Design Lead | _________________ | _________________ | _______ |
-| Marketing Manager | _________________ | _________________ | _______ |
-| Brand Owner | _________________ | _________________ | _______ |
+- Design Lead: [Name] - Signature: [Signature] - Date: [Date]
+- Marketing Manager: [Name] - Signature: [Signature] - Date: [Date]
+- Brand Owner: [Name] - Signature: [Signature] - Date: [Date]
 
----
+## How To Use This Template
 
-## How to Use This Template
+1. Replace all bracketed placeholders with project values.
+2. Replace example values with official brand values.
+3. Remove example-only notes if not needed.
+4. Add or remove sections to fit organizational scope.
+5. Publish assets in durable, shared locations.
+6. Share and train teams on this guide.
+7. Review at least annually or when brand changes.
 
-1. **Fill in all bracketed sections** [like this] with your specific information
-2. **Update all example colors, fonts, and values** to match your brand
-3. **Remove "Example" sections** after filling in your own
-4. **Add or remove sections** as needed for your organization
-5. **Upload logo and other brand assets** to appropriate locations
-6. **Share with your team** and train them on these standards
-7. **Review and update annually** or when brand changes
+Tips:
 
-**Tips**:
-- Keep this document accessible to all team members
-- Use version control to track changes
-- Reference this guide during all design decisions
-- Train new team members on the brand standards
-- Update whenever brand guidelines change
+- Keep this document accessible to all teams.
+- Use version control to track updates.
+- Reference this guide during design and content reviews.
+- Include this guide in onboarding for new contributors.
 
----
-
-**Remember**: A strong, consistent brand comes from following these guidelines consistently across all touchpoints. When everyone follows the same standards, your brand becomes recognizable, trustworthy, and professional.
+A strong brand is built by consistent implementation across all touchpoints.

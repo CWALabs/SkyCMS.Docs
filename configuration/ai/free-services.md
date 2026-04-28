@@ -1,10 +1,23 @@
-<!-- Audience: Administrators, Developers, and Evaluators -->
-<!-- Type: Reference / Comparison -->
-<!-- Status: Draft -->
+---
+canonical_title: Possible Free AI Services for SkyCMS
+description: Review low-cost and free-first AI provider options for evaluating SkyCMS AI features.
+doc_type: Reference
+product_area: configuration
+user_intent: find-free-or-low-cost-ai-options-for-skycms
+audience:
+	- Administrators
+	- Developers
+	- Evaluators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Possible Free AI Services for SkyCMS
 
-## When to use this page
+## Summary
 
 Use this page when you need to:
 

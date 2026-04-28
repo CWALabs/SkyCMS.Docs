@@ -1,9 +1,23 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Editor/Views/Shared/FileExplorer/IndexModern.cshtml -->
+---
+canonical_title: File Manager Toolbar Reference
+description: Reference each control in the modern SkyCMS File Manager toolbar, including behavior, icon, and expected server interaction.
+doc_type: Reference
+product_area: editing
+user_intent: understand-what-each-file-manager-toolbar-control-does
+audience:
+  - Content Editors
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # File Manager Toolbar Reference
+
+## Summary
+
+Use this page when you need a control-by-control reference for the modern File Manager toolbar.
 
 This page documents each button currently shown in the modern SkyCMS File Manager toolbar, including the icon used for each button.
 
@@ -69,6 +83,10 @@ SkyCMS uses a hybrid upload model:
 - Some buttons are disabled when no item is selected or when current permissions do not allow the action.
 - Reviewer role is read-only and may see disabled create/edit/delete controls.
 - In integration modes (for example image picker), available actions can be filtered.
+
+## Verification
+
+Use this reference successfully when you can match a visible toolbar control to its expected action and determine whether it changes only the client UI or also calls the file connector.
 
 ## Related guides
 

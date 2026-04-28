@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Resource Article with Table of Contents Examples
+description: Build long-form resource articles with internal navigation and optional reference callouts using manual or widget-backed ToC approaches.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-resource-article-with-internal-navigation
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Resource Article with Table of Contents Examples
 
+## Summary
+
 This pattern is useful for long-form guides, help articles, onboarding documents, and process documentation that benefit from internal navigation.
+
+## Outcome
+
+After completing this guide, you should be able to implement a resource article with reliable in-page navigation and optional reference/support content regions.
 
 ## Recommended editable regions
 
@@ -178,3 +198,7 @@ Use this approach when the article should reflect the actual published page tree
 - [Standalone Content Article Examples](./standalone-content.md)
 - [Announcement and Update Article Examples](./announcement-update.md)
 - [Event Page Article Examples](./event-page.md)
+
+## Verification
+
+This example is successful when table-of-contents navigation maps accurately to article sections, body content remains readable, and reference callouts stay secondary to the main reading path.

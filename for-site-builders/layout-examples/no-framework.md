@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: No-Framework Layout Example
+description: Build a lightweight SkyCMS layout shell with plain HTML and custom CSS variables, without a third-party CSS framework.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-a-layout-without-css-framework-dependencies
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # No-Framework Layout Example
 
+## Summary
+
 This example shows a SkyCMS layout built with plain HTML and custom CSS, without relying on a third-party CSS framework. It is a good fit for teams that want a lightweight baseline, already have an internal design system, or prefer to define every styling decision themselves.
+
+## Outcome
+
+After working through this example, you should have a framework-free layout shell that supports shared navigation, content rendering, and footer structure.
 
 ## Good fit when
 
@@ -192,3 +212,7 @@ This example shows a SkyCMS layout built with plain HTML and custom CSS, without
 - [Tailwind CSS Layout Example](./tailwind.md)
 - [Bulma Layout Example](./bulma.md)
 - [Foundation Layout Example](./foundation.md)
+
+## Verification
+
+This example is successful when shared layout regions render consistently across pages, responsive behavior works on mobile and desktop, and page content inserts correctly into `{{ page.content }}`.

@@ -1,4 +1,21 @@
+---
+canonical_title: SkyCMS Documentation Standards Stack v1
+description: This standard defines how SkyCMS documentation is structured, written, reviewed, and improved.
+doc_type: Reference
+product_area: development
+user_intent: understand-skycms-documentation-standards-stack-v1
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # SkyCMS Documentation Standards Stack v1
+
+## Summary
 
 This standard defines how SkyCMS documentation is structured, written, reviewed, and improved.
 
@@ -164,6 +181,19 @@ Post-publish metrics:
 - Stale page count
 - Duplicate topic count
 
+## Layer 10: Visual style standard (DVSS)
+
+- Apply a consistent typography scale for H1-H4 and body text.
+- Ensure parent and child navigation levels are visually distinct.
+- Keep active state cues clear in both left navigation and page TOC.
+- Preserve keyboard focus visibility for navigation links.
+- Maintain contrast and readability in light and dark themes.
+
+Policy:
+
+- Use DVSS as the source of truth for documentation visual hierarchy.
+- Validate major style updates against DVSS checklist criteria.
+
 ## 90-day targets
 
 - Reduce top 20 failed search queries by 30 percent.
@@ -176,4 +206,5 @@ Post-publish metrics:
 - Templates are required for new and updated docs.
 - Metadata is present on active pages.
 - Intent-first entry paths are live.
+- DVSS is applied to docs navigation and content typography.
 - Baseline reporting is active.

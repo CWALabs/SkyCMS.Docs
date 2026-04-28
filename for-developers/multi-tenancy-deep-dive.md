@@ -1,23 +1,23 @@
-﻿---
+---
 canonical_title: Multi-Tenancy Deep Dive
 description: Detailed view of tenant resolution, isolation boundaries, and multi-tenant runtime behavior in SkyCMS.
-audience:
-	- Developers
-	- Architects
 doc_type: Explanation
-status: Draft
-entities:
-	- multi-tenancy
-	- tenant-resolution
-	- domain-middleware
-	- cookie-isolation
-keywords:
-	- tenant context
-	- domain resolution
-	- isolation model
+product_area: development
+user_intent: understand-multi-tenancy-deep-dive
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Multi-Tenancy Deep Dive
+
+## Summary
+
+Detailed view of tenant resolution, isolation boundaries, and multi-tenant runtime behavior in SkyCMS.
 
 ## Purpose
 

@@ -1,13 +1,25 @@
-<!-- Audience: Backend Developers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Components/AspNetCore.Identity.FlexDb.md -->
+---
+canonical_title: Extending FlexDb
+description: Extend FlexDb when the built-in provider strategies are not enough for your application.
+doc_type: Reference
+product_area: development
+user_intent: understand-extending-flexdb
+audience:
+  - Backend Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Extending FlexDb
 
-## When to extend FlexDb
+## Summary
 
 Extend FlexDb when the built-in provider strategies are not enough for your application.
+
+## When to extend FlexDb
 
 Common reasons include:
 

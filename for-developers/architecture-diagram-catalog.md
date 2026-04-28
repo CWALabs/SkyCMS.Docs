@@ -1,24 +1,23 @@
 ---
 canonical_title: Architecture Diagram Catalog
 description: Central table of contents for Mermaid architecture diagrams across SkyCMS documentation.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-architecture-diagram-catalog
 audience:
   - Developers
-  - Architects
-  - Administrators
-doc_type: Reference
-status: Draft
-entities:
-  - diagram-catalog
-  - architecture-visuals
-keywords:
-  - mermaid diagrams
-  - architecture toc
-  - visual references
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Diagram Catalog
 
-Use this page as the central table of contents for Mermaid diagrams across architecture, deployment, and related reference docs.
+## Summary
+
+Central table of contents for Mermaid architecture diagrams across SkyCMS documentation.
 
 ## Quick filters
 

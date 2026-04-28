@@ -1,23 +1,23 @@
-﻿---
+---
 canonical_title: Hybrid Delivery Architecture Profile
 description: Architecture profile for combining static artifact delivery with dynamic authorization or extension endpoints in SkyCMS.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-hybrid-delivery-architecture-profile
 audience:
   - Developers
-  - Platform Engineers
-  - Administrators
-doc_type: Explanation
-status: Draft
-entities:
-  - hybrid-delivery
-  - pubcontroller
-  - authenticated-static
-keywords:
-  - hybrid architecture
-  - authenticated static delivery
-  - mixed mode delivery
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Hybrid Delivery Architecture Profile
+
+## Summary
+
+Architecture profile for combining static artifact delivery with dynamic authorization or extension endpoints in SkyCMS.
 
 ## Intended use cases
 

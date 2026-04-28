@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Blog Post Template Examples
+description: Implement blog post templates that stay aligned with SkyCMS blog metadata and built-in rendering conventions.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-blog-template-with-compatible-region-ids
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Blog Post Template Examples
 
+## Summary
+
 Blog post templates should stay close to the structure expected by SkyCMS blog editing and rendering flows. Unlike a generic article, a blog post is not just a free-form page with a body region.
+
+## Outcome
+
+After completing this guide, you should be able to implement a blog post template that preserves built-in metadata and compatible `skycms-blog-post-*` region identifiers.
 
 ## Blog post structure to preserve
 
@@ -200,3 +220,7 @@ In the examples below, title, date, category, and introduction are shown as fixe
 - [Generic Article Template Examples](./generic-article.md)
 - [Landing Page Template Examples](./landing-page.md)
 - [Information Page with Secondary Navigation Examples](./information-page-secondary-nav.md)
+
+## Verification
+
+This example is successful when blog metadata renders correctly, `skycms-blog-post-*` regions remain intact, and post content displays consistently in editor and published views.

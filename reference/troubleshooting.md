@@ -1,395 +1,220 @@
 ---
-title: Troubleshooting Guide
-description: Common issues and solutions for SkyCMS setup, configuration, and operation
-keywords: troubleshooting, errors, debugging, solutions, configuration, database, storage, cdn
-audience: [developers, administrators]
-version: 2.0
-updated: 2025-12-20
-canonical: /Troubleshooting.html
-aliases: []
-scope:
-  platforms: [azure, aws, cloudflare, local]
-  tenancy: [single, multi]
-status: stable
-chunk_hint: 360
----
-<!-- markdownlint-disable MD003 MD013 -->
-
-Common issues and solutions for SkyCMS setup, configuration, and operation.
-
-## Key facts {#key-facts}
-
-- Diagnose by layer: database → storage → CDN → publishing → auth → platform.
-- Keep provider CLIs handy (az, aws, gcloud, cloudflare) to validate credentials and connectivity.
-- The setup wizard is for single-tenant; DynamicConfig for multi-tenant—misuse leads to wizard failures.
-- Most "cannot connect" issues are credentials, firewall, or missing roles; start there.
-
-## Database Configuration Issues {#database-issues}
-
-### "Connection string validation failed" or "Cannot connect to database"
-
-**Causes:**
-
-- Incorrect connection string format
-- Database server is unreachable
-- Firewall rules block access
-- Invalid credentials
-
-**Solutions:**
-
-- Verify the connection string format matches your provider:
-  - [Azure Cosmos DB](../configuration/database/cosmos-db.md)
-  - [MS SQL Server / Azure SQL](../configuration/database/sql-server.md)
-  - [MySQL](../configuration/database/mysql.md)
-  - [SQLite](../configuration/database/sqlite.md)
-- Check that the database server is running and accessible from your SkyCMS instance
-- For Azure SQL, ensure your firewall rules allow your IP or enable "Allow Azure services and resources to access this server"
-- Test the connection string with the provider's CLI tool (e.g., `sqlcmd`, `mysql` client)
-- Verify username, password, and database name are correct
-
-### "Database does not exist" or "Table not found"
-
-**Causes:**
-
-- Database hasn't been created yet
-- Entity Framework migrations haven't run
-
-**Solutions:**
-
-- For first-time setup, use the SkyCMS Setup Wizard to create the database automatically
-- If using manual configuration, run Entity Framework migrations:
-
-  ```bash
-  dotnet ef database update
-  ```
-
-- Ensure the connection string includes the correct database name
-
-### "Access denied" or "Login failed"
-
-**Causes:**
-
-- User credentials lack required permissions
-- Authentication method mismatch (SQL auth vs. Azure AD)
-
-**Solutions:**
-
-- For SQL Server: verify user login and password; ensure user has db_owner or equivalent permissions
-- For Azure SQL: if using Azure AD, ensure managed identity or service principal is assigned the correct role (Contributor or higher on the database)
-- For MySQL: ensure user has appropriate privileges: `GRANT ALL PRIVILEGES ON database.* TO 'user'@'host';`
-
+canonical_title: Troubleshooting
+description: Diagnose and resolve common SkyCMS setup, publishing, and runtime issues using a layer-by-layer triage approach.
+doc_type: Reference
+product_area: operations
+user_intent: diagnose-and-fix-skycms-issues
+audience:
+  - Developers
+  - Administrators
+  - DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
 ---
 
-## Storage Configuration Issues {#storage-issues}
+# Troubleshooting
 
-### "Storage validation failed" or "Cannot write to storage"
+## Summary
 
-**Causes:**
+Use this guide when SkyCMS setup, publishing, or runtime behavior fails unexpectedly.
 
-- Incorrect connection string format
-- Storage account/bucket doesn't exist
-- Credentials lack write permissions
-- Network/firewall blocks access
+## Outcome
 
-**Solutions:**
+After using this guide, you should be able to identify the failing layer, run the most relevant diagnostic checks, and gather the right escalation details if the issue is not resolved immediately.
 
-- Verify the connection string format:
-  - [Azure Blob Storage](../configuration/storage/azure-blob.md)
-  - [Amazon S3](../configuration/storage/s3.md)
-  - [Cloudflare R2](../configuration/storage/cloudflare-r2.md)
-  - [Google Cloud Storage](../configuration/storage/google-cloud.md)
-- Ensure the storage account/bucket exists
-- Verify credentials have read/write/delete permissions
-- Test credentials with provider CLI (e.g., `az storage`, `aws s3`, `gsutil`)
-- Check security groups, firewall rules, or IP allowlists
+The fastest diagnosis pattern is layer-by-layer:
 
-### "Access denied" when writing to storage
+1. Database
+2. Storage
+3. CDN/cache
+4. Publishing pipeline
+5. Authentication/permissions
+6. Runtime/container platform
 
-**Causes:**
+## Quick triage flow
 
-- IAM policy or role is missing required permissions
-- Credentials are read-only
-
-**Solutions:**
-
-- For Azure: ensure managed identity or connection string account has **Storage Blob Data Contributor** role
-- For S3: verify IAM user policy includes `s3:PutObject`, `s3:DeleteObject`, `s3:GetObject`, `s3:ListBucket`
-- For Cloudflare R2: ensure API token has **Object Read & Write** and **Bucket List** permissions
-- For GCS: verify service account has **Storage Object Admin** role
-
-### "Container/Bucket does not exist"
-
-**Causes:**
-
-- Storage container/bucket wasn't created beforehand
-
-**Solutions:**
-
-- Create the container/bucket before starting SkyCMS
-- For Azure: SkyCMS can auto-create containers if the account has permissions
-- For S3/R2/GCS: manually create the bucket in the provider's console
-
----
-
-## CDN Configuration Issues {#cdn-issues}
-
-### "CDN validation failed" or "Cannot purge cache"
-
-**Causes:**
-
-- Invalid credentials or distribution ID
-- Permissions are insufficient
-- Provider is unreachable
-
-**Solutions:**
-
-- Verify credentials and IDs match the provider:
-  - [Azure Front Door](../configuration/cdn/azure-front-door.md)
-  - [Cloudflare CDN](../configuration/cdn/cloudflare.md)
-  - [Amazon CloudFront](../configuration/cdn/cloudfront.md)
-  - [Sucuri](../configuration/cdn/sucuri.md)
-- Test credentials with provider CLI or API
-- Ensure role/policy allows cache invalidation/purge
-
-### CloudFront: "AccessDenied" on invalidation
-
-**Cause:** IAM user lacks CloudFront permissions
-
-**Solution:** Ensure IAM policy includes:
-
-```json
-{
-  "Effect": "Allow",
-  "Action": [
-    "cloudfront:CreateInvalidation",
-    "cloudfront:GetInvalidation"
-  ],
-  "Resource": "arn:aws:cloudfront::*:distribution/YOUR_DISTRIBUTION_ID"
-}
+```mermaid
+flowchart TD
+  Start[Issue observed] --> Category{Where does it fail?}
+  Category --> DB[Database]
+  Category --> Storage[Storage]
+  Category --> CDN[CDN or cache]
+  Category --> Publish[Publishing workflow]
+  Category --> Auth[Auth or permissions]
+  Category --> Runtime[Runtime or container]
+  DB --> Verify[Verify credentials, connectivity, permissions]
+  Storage --> Verify
+  CDN --> Verify
+  Publish --> Verify
+  Auth --> Verify
+  Runtime --> Verify
+  Verify --> Resolve[Apply fix and re-test]
 ```
 
-### Azure Front Door: "Role assignment not found"
+## Most common root causes
 
-**Cause:** Managed identity doesn't have the required role
+- Incorrect connection strings or secret values.
+- Missing provider permissions or IAM roles.
+- Firewall/network restrictions.
+- Publishing worker downtime.
+- Cache invalidation delay after publish.
 
-**Solution:** In Azure Portal, assign **CDN Endpoint Contributor** role to the identity on the Front Door profile
+## Database issues
 
-### Cloudflare: "Invalid Zone ID"
+### Database symptoms
 
-**Cause:** Zone ID doesn't match the domain
+- "Cannot connect to database"
+- "Login failed" or "Access denied"
+- setup wizard cannot validate database step
 
-**Solution:** Verify Zone ID in Cloudflare Dashboard → select domain → copy Zone ID from Overview
+### Database checks
 
----
+1. Confirm provider-specific connection string format.
+2. Confirm network/firewall access from runtime host.
+3. Confirm credential validity and database permissions.
+4. Confirm target database exists and is reachable.
 
-## Publishing & Content Issues {#publishing-issues}
+### Database references
 
-### "Publish failed" or "Content not updating"
+- [Cosmos DB configuration](../configuration/database/cosmos-db.md)
+- [SQL Server configuration](../configuration/database/sql-server.md)
+- [MySQL configuration](../configuration/database/mysql.md)
+- [SQLite configuration](../configuration/database/sqlite.md)
 
-**Causes:**
+## Storage issues
 
-- Storage is unreachable
-- CDN purge failed (but content still published)
-- Permissions issue on storage
+### Storage symptoms
 
-**Solutions:**
+- file upload fails
+- publish succeeds but asset writes fail
+- setup wizard storage validation fails
 
-- Check storage connectivity (see Storage Configuration Issues above)
-- Verify the publish log in the Editor for specific errors
-- CDN purge failures don't block publishing; content is still updated in storage
-- Clear your browser cache or wait for CDN TTL to expire
-- Manually purge CDN cache if automated purge fails
+### Storage checks
 
-### "File upload fails"
+1. Verify storage account/bucket/container exists.
+2. Verify read/write/delete permissions for configured identity.
+3. Validate credentials using provider CLI tools.
+4. Check region/network allowlists.
 
-**Cause:** Storage permissions or size limits
+### Storage references
 
-**Solutions:**
+- [Azure Blob storage configuration](../configuration/storage/azure-blob.md)
+- [S3 storage configuration](../configuration/storage/s3.md)
+- [Cloudflare R2 storage configuration](../configuration/storage/cloudflare-r2.md)
+- [Google Cloud storage configuration](../configuration/storage/google-cloud.md)
 
-- Verify storage credentials have write permissions
-- Check file size against provider limits (most providers support multi-part uploads for large files)
-- Check disk space on storage account/bucket
-- Verify file format is allowed
+## CDN and cache issues
 
-### "Scheduled page didn't publish"
+### CDN symptoms
 
-**Causes:**
+- publish appears successful but site still shows old content
+- purge/invalidation errors in logs
 
-- Publisher process wasn't running at scheduled time
-- Publisher crashed or was restarted
+### Key point
 
-**Solutions:**
+CDN purge failures usually do not block publication to storage. They delay freshness at edge nodes.
 
-- Ensure Publisher application is running continuously
-- Check Publisher logs for errors around the scheduled time
-- Manually publish the page from the Editor
-- Configure a monitoring/alerting system to detect Publisher downtime
+### CDN checks
 
-### "Cannot reach database during wizard" {#wizard-db}
+1. Confirm CDN credentials and zone/distribution identifiers.
+2. Re-run purge/invalidation for affected paths.
+3. Validate cache TTL behavior.
+4. Confirm origin content is updated before debugging CDN edge state.
 
-**Causes:**
+## Publishing workflow issues
 
-- Connection string incorrect or missing
-- Database firewall blocks the Editor app
-- Required provider client libraries not present
+### Publishing symptoms
 
-**Solutions:**
+- publish action fails
+- scheduled publish does not run
+- template update produces unexpected output
 
-- Verify the connection string in environment variables before launching the wizard
-- For Azure SQL, allow the App Service outbound IPs or enable "Allow Azure services" temporarily
-- For local SQLite demos, ensure the volume path exists and is writable
+### Publishing checks
 
-### "Wizard fails at the Review step" {#wizard-review}
+1. Confirm publishing service/worker is running.
+2. Confirm storage target is writable.
+3. Confirm page/template permissions for acting user.
+4. Reproduce with one minimal page to isolate workflow from content complexity.
 
-**Causes:**
+### Publishing references
 
-- Required fields missing (storage, admin, publisher URL)
-- Storage/CDN credentials invalid
+- [Publishing Workflow](../deployment/publishing-workflow.md)
+- [Publishing Modes](../for-editors/publishing-modes.md)
 
-**Solutions:**
+## Authentication and permission issues
 
-- Re-enter storage/CDN credentials and verify permissions
-- Confirm all wizard steps show green check marks before Review
-- Restart the app after fixing inputs and rerun `/Setup`
+### Authentication symptoms
 
----
+- login fails for known user
+- editor actions unavailable despite expected role
 
-## Authentication & User Issues {#auth-issues}
+### Authentication checks
 
-### "Login fails with correct credentials"
+1. Verify user exists and is active.
+2. Verify role assignment for required action.
+3. Verify identity backend connectivity.
+4. Reset credential or rotate secret if authentication backend changed.
 
-**Causes:**
+## Runtime and container issues
 
-- User account doesn't exist
-- Password is incorrect or reset needed
-- User role lacks access
+### Runtime symptoms
 
-**Solutions:**
+- app fails to start
+- setup URL unavailable
+- intermittent runtime crashes
 
-- Verify user account exists in database
-- For first-time setup, the first user is created during the wizard
-- Reset password through database (consult [Authentication docs](../for-editors/authentication.md))
-- Verify user has appropriate roles (Editor, Admin, etc.)
+### Runtime checks
 
-### "Cannot create new users"
+1. Confirm required environment variables are set.
+2. Confirm port and host binding are valid.
+3. Review container/runtime logs for startup exceptions.
+4. Confirm volume mount paths and permissions.
 
-**Causes:**
+## Setup wizard specific issues
 
-- Admin user doesn't have permission
-- Identity database isn't configured
+### Wizard cannot proceed to review
 
-**Solutions:**
+Likely causes:
 
-- Ensure admin user has sufficient privileges
-- Check Identity Framework is properly configured with the database
-- Verify identity tables were created during wizard/migration
+- missing required values,
+- invalid storage/CDN credentials,
+- failed prior validation step.
 
----
+Action:
 
-## Performance Issues {#performance-issues}
+1. Re-check each wizard step for success state.
+2. Re-enter provider credentials.
+3. Restart app and retry setup path.
 
-### "Slow page load" or "high CDN latency"
+### Wizard not available after first run
 
-**Causes:**
+Expected behavior: setup is disabled after successful completion.
 
-- CDN not configured or purging inefficiently
-- Static assets aren't being cached
-- Origin database is slow
+Action:
 
-**Solutions:**
+- temporarily enable setup mode only when intentional re-run is required,
+- disable again immediately after setup tasks are complete.
 
-- Verify CDN is configured (see [CDN Integration Overview](../configuration/cdn/overview.md))
-- Check CDN cache hit ratio in provider dashboard
-- Enable cache headers on static assets
-- Review database query performance; optimize slow queries
-- Check network latency to origin
+## Escalation package
 
-### "Slow publishing"
+Before opening an issue, collect:
 
-**Causes:**
+- exact error text and timestamp,
+- affected environment and tenant,
+- relevant log excerpt,
+- recent configuration changes,
+- reproduction steps.
 
-- Storage is distant or slow
-- Large number of files being published
-- CDN purge is slow
+## Verification
 
-**Solutions:**
+This guide is working when you can narrow an issue to the correct diagnostic layer, run the matching checks, and either resolve the problem or produce a useful escalation package without repeating broad trial-and-error steps.
 
-- Choose a storage region close to your users
-- Consider using a faster storage tier (if available)
-- Optimize the number of files being published
-- CDN purge can take time; large invalidations may take minutes
+## Related links
 
----
-
-## Container & Deployment Issues {#container-issues}
-
-### "Container fails to start"
-
-**Causes:**
-
-- Missing environment variables
-- Port is already in use
-- Volume mount issues
-
-**Solutions:**
-
-- Verify all required connection strings are set as environment variables
-- Check port (default 5000) isn't in use by another process
-- For Docker, ensure volumes are properly mounted and have correct permissions
-- Check container logs: `docker logs <container-id>`
-
-### "Multiple instances lose data"
-
-**Cause:** SQLite database being used (file-based, doesn't support concurrent writes)
-
-**Solution:** Migrate to a centralized database (Azure SQL, Cosmos DB, MySQL)
-
----
-
-## FAQ {#faq}
-
-- **What’s the most common cause of setup failures?** Misconfigured connection strings or firewall blocks for database/storage.
-- **Why does publishing succeed but CDN shows stale content?** CDN purge failed or is delayed; content is already in storage—retry purge or wait for TTL.
-- **Why does the wizard stop working after first run?** It disables itself; set `CosmosAllowSetup=true` temporarily only when you need to rerun it.
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What’s the most common cause of setup failures?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Misconfigured connection strings or firewall blocks for database or storage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does publishing succeed but CDN shows stale content?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "CDN purge failed or is delayed; the content is already in storage. Retry purge or wait for TTL."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does the wizard stop working after first run?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The wizard disables itself after completion. Temporarily set CosmosAllowSetup=true, rerun /Setup, then set it back to false."
-      }
-    }
-  ]
-}
-```
-
-## Getting More Help {#getting-help}
-
-- **GitHub Issues**: [Report bugs or ask questions](https://github.com/CWALabs/SkyCMS/issues)
-- **Community Discussions**: [Engage with the community](https://github.com/CWALabs/SkyCMS/discussions)
-- **Provider-specific Help**:
-  - Azure: [Azure Documentation](https://learn.microsoft.com/en-us/azure/)
-  - AWS: [AWS Documentation](https://docs.aws.amazon.com/)
-  - Cloudflare: [Cloudflare Documentation](https://developers.cloudflare.com/)
+- [Configuration Overview](../configuration/overview.md)
+- [Minimum Required Settings](../installation/minimum-required-settings.md)
+- [Deployment Overview](../deployment/overview.md)
+- [FAQ](faq.md)

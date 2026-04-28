@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/MinimumRequiredSettings.md -->
+---
+canonical_title: Minimum Required Settings
+description: Reference the minimum SkyCMS settings required to start setup and complete a first successful publish.
+doc_type: Reference
+product_area: installation
+user_intent: find-minimum-settings-required-to-start-skycms
+audience:
+	- Developers
+	- DevOps
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Minimum Required Settings
 
-## When to use this page
+## Summary
 
 Use this reference when preparing any SkyCMS deployment before running setup.
 
@@ -52,19 +63,19 @@ AccountId=<account-id>;Bucket=<bucket>;AccessKeyId=<access-key-id>;SecretAccessK
 - Setup wizard is designed for single-tenant initialization.
 - Multi-tenant deployments should use centralized tenant configuration and disable setup after initialization.
 
-See [../configuration/multi-tenancy.md](../configuration/multi-tenancy.md).
+See [Multi-Tenancy Configuration](../configuration/multi-tenancy.md).
 
 ## Validation checklist
 
-- App starts without configuration exceptions.
-- `/___setup` is reachable when `CosmosAllowSetup=true`.
-- Storage connection test succeeds in Step 1.
-- Admin creation succeeds in Step 2.
-- First publish succeeds after setup.
+- the app starts without configuration exceptions,
+- `/___setup` is reachable when `CosmosAllowSetup=true`,
+- the storage connection test succeeds in step 1,
+- admin creation succeeds in step 2,
+- the first publish succeeds after setup.
 
 ## Related guides
 
-- [overview.md](overview.md)
-- [setup-wizard.md](setup-wizard.md)
-- [post-installation.md](post-installation.md)
-- [../configuration/storage/overview.md](../configuration/storage/overview.md)
+- [Installation Overview](overview.md)
+- [Setup Wizard](setup-wizard.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Storage Overview](../configuration/storage/overview.md)

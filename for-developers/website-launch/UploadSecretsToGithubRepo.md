@@ -1,15 +1,27 @@
-﻿<!-- Audience: Developers, DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/UploadSecretsToGithubRepo.md -->
+---
+canonical_title: UploadSecretsToGithubRepo.ps1 Documentation
+description: PowerShell script that reads local secrets.json and uploads entries as GitHub repository secrets for CI/CD use.
+doc_type: Reference
+product_area: development
+user_intent: understand-uploadsecretstogithubrepo-ps1-documentation
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # UploadSecretsToGithubRepo.ps1 Documentation
 
+## Summary
+
+PowerShell script that reads `secrets.json` and uploads entries as GitHub repository secrets for CI/CD use.
+
 ## Overview
 
-`UploadSecretsToGithubRepo.ps1` is a PowerShell script designed to automate the process of copying secrets from a local secrets file and uploading them as GitHub repository secrets. This is useful for synchronizing sensitive configuration values between your local development environment and your GitHub repository, ensuring that your CI/CD pipelines and GitHub Actions have access to the required secrets.
-
-The script now includes built-in verification to confirm that all secrets were successfully uploaded to GitHub.
+The script includes built-in verification to confirm all secrets were successfully uploaded.
 
 ## How It Works
 

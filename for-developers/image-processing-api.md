@@ -1,10 +1,23 @@
+---
+canonical_title: Image Processing API
+description: SkyCMS provides server-side image processing for generating thumbnails on demand. The File Manager uses this to display image previews, and the API is available to any authenticated user with file access.
+doc_type: Reference
+product_area: development
+user_intent: understand-image-processing-api
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Image Processing API
 
+## Summary
+
 SkyCMS provides server-side image processing for generating thumbnails on demand. The File Manager uses this to display image previews, and the API is available to any authenticated user with file access.
-
-**Audience:** Developers, Editors
-
----
 
 ## Thumbnail Endpoint
 

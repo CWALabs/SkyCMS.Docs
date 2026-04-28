@@ -1,11 +1,31 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Reference + Example -->
+---
+canonical_title: Article Examples
+description: Use one-off article examples for unique pages that do not need reusable templates, while preserving safe editing patterns.
+doc_type: Explanation
+product_area: site-building
+user_intent: choose-direct-article-implementation-vs-template
+audience:
+	- Site Builders
+	- Designers
+	- Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Article Examples
+
+## Summary
 
 This section provides examples for articles that do not use a page template.
 
 In this rendering path, the active layout still provides the outer shell, but the article itself defines the page-level structure. These examples are useful for one-off pages where creating a reusable template would add more overhead than value.
+
+## Outcome
+
+After completing this guide, you should be able to decide whether a page should stay as a direct article or be promoted into a reusable template.
 
 ## When this approach makes sense
 
@@ -69,3 +89,7 @@ Some examples in this section also show direct article pages using built-in widg
 - [Image Widget](../widgets/image.md)
 - [Table of Contents Widget](../widgets/table-of-contents.md)
 - [Layouts, Templates, and Articles](../../for-developers/layouts-templates-articles.md)
+
+## Verification
+
+This page is successful when you can select an appropriate article example for a unique page and justify whether template promotion is necessary for reuse.

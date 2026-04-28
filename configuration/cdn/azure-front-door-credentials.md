@@ -1,7 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Set Up Azure Front Door Credentials for Cache Purge
+description: Create Azure service principal credentials and RBAC access for SkyCMS Azure Front Door cache purging.
+doc_type: How-to
+product_area: configuration
+user_intent: set-up-azure-front-door-credentials-for-skycms
+audience:
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Set Up Azure Front Door Credentials for Cache Purge
+
+## Summary
 
 Use this guide when SkyCMS needs to purge the Azure Front Door cache after content is published.
 

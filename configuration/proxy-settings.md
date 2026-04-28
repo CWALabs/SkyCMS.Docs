@@ -1,13 +1,29 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/ProxySettings.md -->
+---
+canonical_title: Proxy Settings
+description: Configure SkyCMS correctly behind reverse proxies, load balancers, and edge gateways.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-behind-reverse-proxy
+audience:
+  - Developers
+  - Administrators
+  - DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Proxy Settings
 
-## When to use this page
+## Summary
 
-Use this guide when SkyCMS runs behind reverse proxies, load balancers, or edge gateways.
+Use this guide when SkyCMS is deployed behind a reverse proxy, ingress controller, or edge gateway.
+
+## Outcome
+
+After completing this page, forwarded headers, URL generation, redirects, and tenant mapping should behave correctly in proxied environments.
 
 ## Common proxy requirements
 
@@ -16,20 +32,29 @@ Use this guide when SkyCMS runs behind reverse proxies, load balancers, or edge 
 - enforce HTTPS forwarding behavior,
 - keep origin and proxy path assumptions consistent.
 
-## Recommended checks
+## Configuration checks
 
 1. Confirm forwarded headers are enabled correctly.
-2. Verify generated URLs use expected host/scheme.
+2. Verify generated URLs use expected host and scheme.
 3. Validate authentication callbacks and redirects behind proxy.
-4. Confirm tenant/domain resolution still maps correctly.
+4. Confirm tenant and domain resolution behavior remains correct.
 
 ## Troubleshooting
 
-- wrong redirect scheme: verify X-Forwarded-Proto handling,
-- wrong host in links: verify forwarded host header behavior,
-- tenant mismatch behind proxy: verify canonical host forwarding.
+If redirect scheme is wrong:
+
+- verify forwarded proto handling and HTTPS forwarding config.
+
+If links show wrong host:
+
+- verify forwarded host header behavior and trusted proxy settings.
+
+If tenant/domain resolution is incorrect:
+
+- verify canonical host forwarding and tenant header/path assumptions.
 
 ## Related guides
 
 - [Configuration Overview](./overview.md)
 - [Multi-Tenancy Configuration](./multi-tenancy.md)
+- [Troubleshooting](../reference/troubleshooting.md)

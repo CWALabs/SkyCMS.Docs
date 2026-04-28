@@ -1,28 +1,23 @@
 ---
 canonical_title: Phase 3: Creating Templates Guide
 description: Build reusable templates in SkyCMS with editable regions and understand how template changes affect authored articles and published output.
-audience:
-  - Backend Developers
-  - Full-Stack Developers
 doc_type: How-to
-status: Draft
-entities:
-  - template
-  - article
-  - editable-region
-  - published-page
-keywords:
-  - creating templates
-  - editable regions
-  - template hierarchy
-source: SkyCMS/Docs/Developer-Guides/03-Creating-Templates.md
+product_area: development
+user_intent: implement-phase-3-creating-templates-guide
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Phase 3: Creating Templates Guide
 
-**Timeline:** 8-16 hours  
-**Typical Effort:** 4-8 templates for varied content types  
-**Output:** Complete template library with editable regions for content editors
+## Summary
+
+Build reusable templates in SkyCMS with editable regions and understand how template changes affect authored articles and published output.
 
 ## Overview
 

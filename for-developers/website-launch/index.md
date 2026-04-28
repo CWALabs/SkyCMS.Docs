@@ -1,13 +1,23 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Workflow -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/ -->
+---
+canonical_title: Website Launch Workflow (Migrated Guides)
+description: Phased implementation guides for building and launching a SkyCMS website, from design and planning through content creator handoff.
+doc_type: How-to
+product_area: development
+user_intent: implement-website-launch-workflow-migrated-guides
+audience:
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Website Launch Workflow (Migrated Guides)
 
-These guides were migrated from the legacy `SkyCMS/Docs/Developer-Guides` set because they provide practical, end-to-end implementation workflows.
+## Summary
 
-Use this section for a structured phase-based launch path.
+Phased implementation guides for building and launching a SkyCMS website, from design and planning through content creator handoff.
 
 ## Start Here
 

@@ -1,17 +1,31 @@
-<!-- Audience: Content Editors -->
-<!-- Type: Quick Start -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/FileManagement/Quick-Start.md -->
+---
+canonical_title: File Manager Quick Start
+description: Get productive in the SkyCMS File Manager quickly with the most common upload, edit, and organize tasks.
+doc_type: Tutorial
+product_area: editing
+user_intent: complete-common-file-manager-tasks-quickly
+audience:
+	- Content Editors
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # File Manager Quick Start
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
-- get up and running with the File Manager in a few minutes,
+- get productive in the File Manager in a few minutes,
 - perform the most common file operations quickly,
 - find the right keyboard shortcuts without reading the full reference.
+
+## Outcome
+
+After completing this quick start, you should be able to open File Manager, upload content, create folders, edit common file types, and copy file URLs confidently.
 
 ## Access the File Manager
 
@@ -61,7 +75,7 @@ See [Image Editing](./image-editing.md) for the full feature guide.
 
 1. Find the file in the list.
 2. Click the clipboard icon next to it.
-3. The URL is copied to your clipboard — paste it anywhere.
+3. The URL is copied to your clipboard so you can paste it wherever you need it.
 
 ## Delete files
 
@@ -84,6 +98,10 @@ Deletion is permanent — verify your selection first.
 - **Thumbnail view** — click **Show image thumbnails** to see image previews as cards.
 - **Review selection** — click **Show Selected** to audit items before bulk operations.
 - **Save early, save often** — use Ctrl+S frequently when editing code files.
+
+## Verification
+
+This quick start is complete when you can upload at least one file, create a folder, edit either a code or image file, and copy a public file URL successfully.
 
 ## Keyboard shortcuts
 

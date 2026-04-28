@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/CloudflareEdgeHosting.md -->
+---
+canonical_title: Cloudflare Edge Hosting
+description: Host SkyCMS static output with Cloudflare R2 and edge rules in an origin-less delivery pattern.
+doc_type: How-to
+product_area: installation
+user_intent: host-skycms-output-with-cloudflare-edge-rules-and-r2
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Cloudflare Edge Hosting
 
-## When to use this page
+## Summary
 
 Use this guide when hosting a static SkyCMS output with Cloudflare R2 and Cloudflare edge rules in an origin-less pattern.
 
@@ -14,6 +25,10 @@ Use this guide when hosting a static SkyCMS output with Cloudflare R2 and Cloudf
 - Cloudflare account with R2.
 - Bucket, API credentials, and custom domain capability.
 - SkyCMS publishing configured to target R2.
+
+## Outcome
+
+After completing this guide, published SkyCMS content should resolve through Cloudflare using the intended rewrite and redirect rules.
 
 ## Core setup flow
 
@@ -37,8 +52,12 @@ AccountId=<account-id>;Bucket=<bucket>;AccessKeyId=<access-key-id>;SecretAccessK
 - Validate rewrite behavior with trace tools before going live.
 - Use cache rules separately for desired TTL behavior.
 
+## Verification
+
+This setup is complete when directory-style URLs resolve to the expected static content, HTTPS redirects work, and edge rules do not create loops or unexpected cache misses.
+
 ## Related guides
 
-- [cloudflare-cloud-connector.md](cloudflare-cloud-connector.md)
-- [../configuration/storage/cloudflare-r2.md](../configuration/storage/cloudflare-r2.md)
-- [../deployment/cloudflare.md](../deployment/cloudflare.md)
+- [Cloudflare Cloud Connector](cloudflare-cloud-connector.md)
+- [Cloudflare R2 Storage](../configuration/storage/cloudflare-r2.md)
+- [Cloudflare Deployment](../deployment/cloudflare.md)

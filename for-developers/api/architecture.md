@@ -1,13 +1,27 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/ARCHITECTURE.md -->
+---
+canonical_title: Sky.Cms.Api.Shared Architecture
+description: CQRS, handler, and service layer design used in Sky.Cms.Api.Shared, with directory structure and dependency injection wiring.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-sky-cms-api-shared-architecture
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Sky.Cms.Api.Shared Architecture
 
-## Overview
+## Summary
 
 Sky.Cms.Api.Shared uses a custom CQRS (Command Query Responsibility Segregation) pattern combined with dependency injection to create a clean, testable, and maintainable API architecture.
+
+## Overview
+
+The API organizes commands, queries, and handlers by feature area, with dependency injection wired in `ContactApiServiceExtensions.cs`.
 
 ## Design Patterns
 

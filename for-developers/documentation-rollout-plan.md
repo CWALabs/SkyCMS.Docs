@@ -1,4 +1,21 @@
+---
+canonical_title: Documentation Standards Rollout Plan (30-60-90)
+description: This rollout plan applies the Documentation Standards Stack v1 in measured phases.
+doc_type: How-to
+product_area: development
+user_intent: implement-documentation-standards-rollout-plan-30-60-90
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Documentation Standards Rollout Plan (30-60-90)
+
+## Summary
 
 This rollout plan applies the Documentation Standards Stack v1 in measured phases.
 

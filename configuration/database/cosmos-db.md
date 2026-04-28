@@ -1,13 +1,24 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Database-CosmosDB.md -->
+---
+canonical_title: Database: Azure Cosmos DB
+description: Configure SkyCMS to use Azure Cosmos DB for globally distributed, document-oriented data storage.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-cosmos-db-database
+audience:
+	- Developers
+	- DevOps
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Database: Azure Cosmos DB
 
-## When to use Cosmos DB
+## Summary
 
-Use Cosmos DB when you need elastic scale, low-latency global distribution, and document-oriented storage patterns.
+Use Azure Cosmos DB when you need elastic scale, low-latency global distribution, and document-oriented storage patterns.
 
 ## Data modeling guidance
 
@@ -17,9 +28,7 @@ Use Cosmos DB when you need elastic scale, low-latency global distribution, and 
 
 ## Required settings
 
-Use `ConnectionStrings:ApplicationDbContextConnection` with:
-
-`AccountEndpoint`, `AccountKey`, and `Database` values.
+Use `ConnectionStrings:ApplicationDbContextConnection` with `AccountEndpoint`, `AccountKey`, and `Database` values.
 
 ## Partitioning and throughput
 
@@ -29,9 +38,16 @@ Recommended practices:
 - monitor RU consumption and tune throughput based on workload,
 - capture diagnostics for high-latency or unexpected status responses.
 
+## Validation checklist
+
+- application starts successfully with Cosmos connectivity,
+- sign-in and content operations succeed,
+- RU consumption remains within expected range,
+- no persistent throttling or partition hot-spot behavior appears in logs.
+
 ## Diagnostics and troubleshooting
 
-- startup failure: verify endpoint/key/database name,
+- startup failure: verify endpoint, key, and database name,
 - high RU usage: inspect query patterns and partition distribution,
 - throttling (`429`): use retry strategy and review throughput settings.
 

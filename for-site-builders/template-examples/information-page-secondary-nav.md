@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Information Page with Secondary Navigation Examples
+description: Build long-form information templates that separate section navigation from body content while preserving editor-safe region contracts.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-information-page-template-with-secondary-navigation
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Information Page with Secondary Navigation Examples
 
+## Summary
+
 Information pages with secondary navigation work well for help centers, policy pages, product documentation, service overviews, and other long-form content that benefits from an internal table of contents or section menu.
+
+## Outcome
+
+After completing this guide, you should be able to implement an information template with reliable secondary navigation and clear separation between navigation and body content.
 
 ## Recommended editable regions
 
@@ -159,3 +179,7 @@ These templates are designed to:
 
 - [Generic Article Template Examples](./generic-article.md)
 - [Landing Page Template Examples](./landing-page.md)
+
+## Verification
+
+This example is successful when secondary navigation remains usable across breakpoints, section links are trustworthy, and body/callout regions remain editor-friendly and structurally stable.

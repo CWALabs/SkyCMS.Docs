@@ -1,11 +1,23 @@
+---
+canonical_title: Editor Rendering Flow
+description: How SkyCMS HomeController resolves layout context, authentication, and rendering path for editor views.
+doc_type: Reference
+product_area: infrastructure
+user_intent: understand-editor-rendering-flow
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Editor Rendering Flow
 
-**Audience:** Backend Developers  
-**Type:** Deep Dive / Reference
+## Summary
 
-This document explains exactly how the SkyCMS editor serves pages at the root URL (`/`) and in preview mode. The architecture is unusual — it uses a thin shell view (`Wrapper.cshtml`) with a server-rendered iframe rather than a standard Razor layout — and that decision ripples through several areas including authentication, layout selection, and shared UI components.
-
----
+How SkyCMS `HomeController` resolves layout context, authentication, and rendering path for editor views.
 
 ## The Three Layout Contexts
 

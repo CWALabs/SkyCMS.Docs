@@ -1,7 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Get Azure Blob Storage Credentials
+description: Retrieve Azure Blob Storage connection details for SkyCMS media and asset storage.
+doc_type: How-to
+product_area: configuration
+user_intent: get-azure-blob-credentials-for-skycms
+audience:
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Get Azure Blob Storage Credentials
+
+## Summary
 
 Use this guide when SkyCMS needs credentials to connect to Azure Blob Storage for media or asset storage.
 

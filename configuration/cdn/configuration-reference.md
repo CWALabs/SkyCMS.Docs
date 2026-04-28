@@ -1,9 +1,24 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/CDN-Configuration-Reference.md -->
+---
+canonical_title: CDN Configuration Reference
+description: Reference for required CDN provider fields, security requirements, and validation checks for SkyCMS cache purging.
+doc_type: Reference
+product_area: configuration
+user_intent: find-required-cdn-provider-fields
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # CDN Configuration Reference
+
+## Summary
+
+Use this page for exact provider field requirements and operational validation checks for SkyCMS CDN integrations.
 
 ## Required fields by provider
 

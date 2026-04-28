@@ -1,13 +1,23 @@
-<!-- Audience: Developers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Cosmos.BlobService -->
+---
+canonical_title: Storage provider auto-detection
+description: Understand how SkyCMS selects a blob storage driver from connection string configuration and tenant-specific settings.
+doc_type: Explanation
+product_area: infrastructure
+user_intent: understand-storage-provider-selection-and-detection
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
-# Storage Provider Auto-Detection
+# Storage provider auto-detection
 
-## When to use this page
+## Summary
 
-Use this guide when you need to understand how SkyCMS selects a blob storage driver from configuration, or when you are debugging why a tenant resolved to the wrong storage backend.
+Understand how SkyCMS selects a blob storage driver from connection string configuration and tenant-specific settings.
 
 ## Where detection happens
 

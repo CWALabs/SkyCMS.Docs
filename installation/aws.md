@@ -1,11 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/AWSInstall.md -->
+---
+canonical_title: Install on AWS
+description: Deploy SkyCMS on AWS with the interactive CDK-based workflow or a manual S3-backed setup path.
+doc_type: How-to
+product_area: installation
+user_intent: install-skycms-on-aws
+audience:
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Install on AWS
 
-## When to use this page
+## Summary
 
 Use this guide when deploying SkyCMS on AWS with the interactive CDK script or a manual S3-backed setup.
 
@@ -16,6 +26,10 @@ Use this guide when deploying SkyCMS on AWS with the interactive CDK script or a
 - Node.js and npm.
 - Docker.
 - PowerShell.
+
+## Outcome
+
+After completing this guide, SkyCMS should be deployed on AWS, the setup wizard should be finished, and storage or publisher integrations should be working for the selected path.
 
 ## Recommended path: interactive CDK deployment
 
@@ -50,6 +64,10 @@ If you only need object storage integration:
 3. Set `ConnectionStrings__StorageConnectionString` using S3 format.
 4. Continue with standard setup wizard flow.
 
+## Verification
+
+This installation is complete when the editor is reachable, setup finishes successfully, uploads work, and published output is reachable through the expected AWS path.
+
 ## Troubleshooting
 
 - CDK deploy fails: confirm permissions and AWS CLI identity.
@@ -59,8 +77,8 @@ If you only need object storage integration:
 
 ## Related guides
 
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [setup-wizard.md](setup-wizard.md)
-- [post-installation.md](post-installation.md)
-- [../configuration/storage/s3.md](../configuration/storage/s3.md)
-- [../configuration/email/overview.md](../configuration/email/overview.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Setup Wizard](setup-wizard.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Amazon S3 Storage](../configuration/storage/s3.md)
+- [Email Overview](../configuration/email/overview.md)

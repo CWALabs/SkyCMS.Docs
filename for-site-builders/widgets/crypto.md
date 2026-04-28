@@ -1,9 +1,21 @@
-<!-- Audience: Front-End Developers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/Crypto-Widget.md -->
+---
+canonical_title: Crypto Widget Helpers
+description: Reference client-side AES helper functions used by SkyCMS UI customizations, including usage and security caveats.
+doc_type: Reference
+product_area: site-building
+user_intent: understand-client-side-encrypt-decrypt-helper-behavior
+audience:
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Crypto Widget (AES helpers)
+# Crypto Widget Helpers
+
+## Summary
 
 Lightweight client-side helpers for encrypting and decrypting short strings in the Editor UI or custom pages. Uses CryptoJS AES-128/CBC/PKCS7 with Base64 output.
 
@@ -13,6 +25,10 @@ Lightweight client-side helpers for encrypting and decrypting short strings in t
   - `decryptData(cipherText: string): string`
 
 > Note: This utility is intended for convenience and UI-level obfuscation. Do not rely on static client-side keys for protecting sensitive data in production.
+
+## Outcome
+
+After using this reference, you should understand how the helper works, how to integrate it correctly, and why server-side protection is still required for sensitive data.
 
 ## Features
 
@@ -113,3 +129,12 @@ The current implementation in `cryptpo-js-encrypt.js` does the following:
 - For decryption, calls `CryptoJS.AES.decrypt` with the same key/IV and converts to UTF-8 string.
 
 If you need stronger security or configuration, consider refactoring to accept key/iv parameters and sourcing them securely (not embedded).
+
+## Verification
+
+This helper is functioning when `encryptData` returns Base64 ciphertext and `decryptData` restores the original input under the same key and IV.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [Forms Helpers Widget](./forms.md)

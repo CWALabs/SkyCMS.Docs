@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Announcement and Update Article Examples
+description: Build concise announcement and release-update pages with structured status, summary, and follow-up link regions.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-announcement-and-update-article-pattern
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Announcement and Update Article Examples
 
+## Summary
+
 This pattern works well for release notes, operational updates, service notices, editorial announcements, or milestone communications that need stronger emphasis on status and timing than a normal content page.
+
+## Outcome
+
+After completing this guide, you should be able to implement a concise update page with clear kicker, summary, body, and follow-up links.
 
 ## Recommended editable regions
 
@@ -109,3 +129,7 @@ This pattern works well for release notes, operational updates, service notices,
 
 - [Standalone Content Article Examples](./standalone-content.md)
 - [Resource Article with Table of Contents Examples](./resource-with-toc.md)
+
+## Verification
+
+This example is successful when status and timing information are scannable, update body content is clear, and follow-up links point readers to the right next actions.

@@ -1,21 +1,16 @@
 ---
 canonical_title: Article Lifecycle Quick Reference
 description: Reference for article states, transitions, and the effects of publish, unpublish, delete, and trash actions in SkyCMS.
+doc_type: Reference
+product_area: editing
+user_intent: understand-article-lifecycle-states-and-transitions
 audience:
   - Content Editors
-doc_type: Reference
-status: Draft
-entities:
-  - article
-  - published-page
-  - publishing
-keywords:
-  - article lifecycle
-  - draft
-  - publish
-  - unpublish
-  - delete
-source: SkyCMS/Editor lifecycle workflows
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Article Lifecycle Quick Reference
@@ -30,7 +25,7 @@ Use this reference when you need to:
 - choose the right operation for publish/unpublish/delete/trash,
 - verify expected behavior during common editorial workflows.
 
-## State Diagram
+## State diagram
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -62,7 +57,7 @@ DELETED (Soft-Delete State)
   └─→ Trash ────→ Permanently Removed (irreversible)
 ```
 
-## Quick State Reference
+## Quick state reference
 
 - **Draft**: Content saved, not scheduled. User sees editable content. Public sees nothing.
 - **Published**: Content scheduled or live now. User sees version history and can edit a new version. Public sees live page.
@@ -70,7 +65,7 @@ DELETED (Soft-Delete State)
 - **Deleted**: Soft-deleted and recoverable. User sees it outside active lists. Public sees nothing.
 - **Trashed**: Permanently removed and unrecoverable. Public sees nothing.
 
-## Operations by State
+## Operations by state
 
 ### From **Draft**
 
@@ -102,36 +97,36 @@ DELETED (Soft-Delete State)
 
 - *(No operations – data is gone)*
 
-## Common Workflows
+## Common workflows
 
-### Content Creation & Publication
+### Content creation and publication
 
 1. Create article (as **Draft**)
 2. Edit and save updates (stays **Draft**)
 3. Preview in Visual Editor
 4. **Publish** → **Published** (goes live now or at scheduled time)
 
-### Content Revision (Published)
+### Content revision (published)
 
 1. Article is **Published** (live)
 2. Edit content (creates new draft version)
 3. Review changes
 4. Republish → replaces public version
 
-### Retire Content
+### Retire content
 
 1. Article is **Published** (live)
 2. **Unpublish** → **Unpublished** (hidden; data retained)
 3. Later, **Delete** → **Deleted** (soft-delete; in trash)
 4. After retention period, **Trash** → Permanently removed
 
-### Accidental Create / Wrong Content
+### Accidental create or wrong content
 
 1. Article is **Draft** (never published)
 2. **Delete** → **Deleted** (soft-delete; recoverable)
 3. **Trash** → Permanently removed (if certain)
 
-## Key Distinctions
+## Key distinctions
 
 - **Unpublish**: Hides from public and keeps content editable. Reversible by republish.
 - **Delete**: Soft-deletes content into trash. Reversible if restore is supported.

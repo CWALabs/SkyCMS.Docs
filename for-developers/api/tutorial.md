@@ -1,9 +1,21 @@
-<!-- Audience: Full-Stack Developers -->
-<!-- Type: Quick Start -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/Tutorial.md -->
+---
+canonical_title: Tutorial: Adding a Contact Form to Your Website
+description: This step-by-step tutorial walks you through adding a working contact form to your website using the SkyCMS Contact Form API.
+doc_type: How-to
+product_area: development
+user_intent: understand-tutorial-adding-a-contact-form-to-your-website
+audience:
+  - Full-Stack Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Tutorial: Adding a Contact Form to Your Website
+
+## Summary
 
 This step-by-step tutorial walks you through adding a working contact form to your website using the SkyCMS Contact Form API.
 
@@ -35,14 +47,12 @@ Before adding a contact form, ensure the Editor has email configured so submissi
 If you prefer environment variables, set one of these before starting the Editor:
 
 ```bash
-# SendGrid
+
 SENDGRIDAPIKEY=your-api-key
 SENDEREMAIL=noreply@yourdomain.com
 
-# Azure Communication Services
 AZUREEMAILCONNECTIONSTRING=endpoint=https://...
 
-# SMTP
 SMTPHOST=smtp.example.com
 SMTPPORT=587
 SMTPUSERNAME=your-username

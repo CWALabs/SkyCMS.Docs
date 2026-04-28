@@ -1,9 +1,23 @@
-﻿<!-- Audience: Developers, QA, Project Managers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/Checklists/Pre-Launch-Checklist.md -->
+---
+canonical_title: Pre-Launch Checklist
+description: Before launching your website to the public, conduct thorough testing and verification using this comprehensive checklist. This ensures your site is reliable, secure, fast, and ready for visitors.
+doc_type: How-to
+product_area: deployment
+user_intent: implement-pre-launch-checklist
+audience:
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Pre-Launch Checklist
+
+## Summary
+
+Before launching your website to the public, conduct thorough testing and verification using this comprehensive checklist. This ensures your site is reliable, secure, fast, and ready for visitors.
 
 ## Overview
 

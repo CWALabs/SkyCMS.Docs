@@ -1,10 +1,23 @@
-<!-- Audience: Administrators, Developers, and Evaluators -->
-<!-- Type: Comparison -->
-<!-- Status: Draft -->
+---
+canonical_title: AI Provider Comparison for SkyCMS
+description: Compare AI provider options for SkyCMS by setup effort, discovery support, governance fit, and evaluation cost.
+doc_type: Reference
+product_area: configuration
+user_intent: compare-ai-providers-for-skycms
+audience:
+	- Administrators
+	- Developers
+	- Evaluators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # AI Provider Comparison for SkyCMS
 
-## When to use this page
+## Summary
 
 Use this page when you need to:
 

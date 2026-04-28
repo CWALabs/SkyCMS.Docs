@@ -1,11 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/AzureInstall.md -->
+---
+canonical_title: Install on Azure
+description: Deploy SkyCMS on Azure App Service or a comparable Azure-hosted runtime and complete first-time setup.
+doc_type: How-to
+product_area: installation
+user_intent: install-skycms-on-azure
+audience:
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Install on Azure
 
-## When to use this page
+## Summary
 
 Use this guide when deploying SkyCMS to Azure App Service or an equivalent Azure-hosted runtime.
 
@@ -15,6 +25,10 @@ Use this guide when deploying SkyCMS to Azure App Service or an equivalent Azure
 - App hosting target (for example, App Service) and optional storage/CDN resources.
 - Connection strings and settings for database and blob storage.
 
+## Outcome
+
+After completing this guide, SkyCMS should be running on Azure, the setup wizard should be complete, and the site should be ready for post-installation validation.
+
 ## Deploy resources
 
 1. Provision your application host.
@@ -23,8 +37,8 @@ Use this guide when deploying SkyCMS to Azure App Service or an equivalent Azure
 
 Reference deployment guidance in:
 
-- [../deployment/azure.md](../deployment/azure.md)
-- [../deployment/overview.md](../deployment/overview.md)
+- [Azure Deployment](../deployment/azure.md)
+- [Deployment Overview](../deployment/overview.md)
 
 ## Configure application settings
 
@@ -36,7 +50,7 @@ Set required app settings (App Service Configuration or equivalent):
 - `CosmosPublisherUrl`
 - `CosmosAllowSetup=true` (temporary)
 
-See [minimum-required-settings.md](minimum-required-settings.md).
+See [Minimum Required Settings](minimum-required-settings.md).
 
 ## Run setup flow
 
@@ -45,7 +59,7 @@ See [minimum-required-settings.md](minimum-required-settings.md).
 3. Configure optional email and CDN settings.
 4. Finalize setup.
 
-See [setup-wizard.md](setup-wizard.md).
+See [Setup Wizard](setup-wizard.md).
 
 ## Validate deployment
 
@@ -55,7 +69,7 @@ See [setup-wizard.md](setup-wizard.md).
 - Publish a test page and verify the public URL.
 - Send a test email if email provider is configured.
 
-See [post-installation.md](post-installation.md).
+See [Post-Installation Configuration](post-installation.md).
 
 ## Troubleshooting
 
@@ -66,7 +80,7 @@ See [post-installation.md](post-installation.md).
 
 ## Related guides
 
-- [minimum-required-settings.md](minimum-required-settings.md)
-- [setup-wizard.md](setup-wizard.md)
-- [post-installation.md](post-installation.md)
-- [../deployment/azure.md](../deployment/azure.md)
+- [Minimum Required Settings](minimum-required-settings.md)
+- [Setup Wizard](setup-wizard.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Azure Deployment](../deployment/azure.md)

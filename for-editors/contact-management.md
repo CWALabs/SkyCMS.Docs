@@ -1,23 +1,43 @@
-# Contact Management
-
-Guide to viewing, exporting, and managing contact form submissions in the SkyCMS admin dashboard.
-
-**Audience:** Administrators, Editors
-
+---
+canonical_title: Contact Management
+description: View, export, and manage contact form submissions in the SkyCMS admin dashboard, including MailChimp integration.
+doc_type: How-to
+product_area: administration
+user_intent: manage-contact-form-submissions
+audience:
+  - Administrators
+  - Content Editors
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
-## Accessing Contacts
+# Contact management
+
+## Summary
+
+Use this guide when you need to:
+
+- view contact form submissions,
+- export submissions to CSV,
+- configure MailChimp synchronization.
+
+SkyCMS captures contact form submissions and provides tools for viewing, exporting, and syncing them to external services.
+
+## Accessing contacts
 
 Navigate to **Editor → Contacts** from the sidebar. Contact management is available to **Administrators** and **Editors**.
 
 ---
 
-## Viewing Submissions
+## Viewing submissions
 
 The contacts page displays all form submissions in a data table with the following columns:
 
 | Column | Description |
-|--------|-------------|
+| ------ | ----------- |
 | **Email** | Submitter's email address |
 | **First Name** | Submitter's first name |
 | **Last Name** | Submitter's last name |
@@ -27,7 +47,7 @@ The contacts page displays all form submissions in a data table with the followi
 
 ---
 
-## Alert Notifications
+## Alert notifications
 
 Toggle the **Enable Alerts** switch to control whether administrators receive email notifications when new contact form submissions arrive.
 
@@ -36,7 +56,7 @@ Toggle the **Enable Alerts** switch to control whether administrators receive em
 
 ---
 
-## Exporting Contacts
+## Exporting contacts
 
 Click **Export to CSV** to download all contact submissions as a CSV file. The export includes all columns shown in the data table. This is useful for importing contacts into CRM or email marketing tools.
 
@@ -65,11 +85,12 @@ Click **Remove MailChimp** to disconnect the integration and clear the stored AP
 
 The public-facing contact form submits data via:
 
-```
+```text
 POST /_api/contact/submit
 ```
 
 This endpoint is:
+
 - **Rate limited:** 3 requests per 5 minutes in production, 20 per minute in development.
 - **Anti-forgery protected:** Requires a valid anti-forgery token.
 - **reCAPTCHA validated:** Optional CAPTCHA verification via `POST /_api/contact/captcha-validate`.

@@ -1,26 +1,56 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-Overview.md -->
+---
+canonical_title: Email Overview
+description: Choose and configure an email delivery mode for SkyCMS notifications and workflow messages.
+doc_type: Explanation
+product_area: configuration
+user_intent: choose-and-configure-skycms-email
+audience:
+  - Developers
+  - Administrators
+  - DevOps
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email Overview
 
-## When to use this page
+## Summary
 
-Use this guide when choosing an email delivery provider for SkyCMS notifications and workflow emails.
+Use this page to select an email delivery approach and validate outbound email behavior in your environment.
 
 ## Supported modes
 
-- SMTP,
-- SendGrid,
-- Azure Communication Services,
-- none (disable outbound email).
+- SMTP
+- SendGrid
+- Azure Communication Services
+- none (disable outbound email)
 
-## Provider selection
+## Provider selection guidance
 
-- use existing organization-standard provider where possible,
-- keep credentials in secret stores,
-- test delivery and sender identity before production go-live.
+| Scenario | Recommended mode |
+| --- | --- |
+| Existing enterprise mail relay | SMTP |
+| API-based transactional mail | SendGrid |
+| Azure-native communication stack | Azure Communication Services |
+| No email requirement | none |
+
+## Setup sequence
+
+1. Select provider aligned with organizational standards.
+2. Configure credentials in secure configuration stores.
+3. Configure sender identity and routing values.
+4. Run delivery test from a non-production mailbox.
+5. Validate workflow emails in target environment.
+
+## Validation checklist
+
+- the test email sends successfully,
+- the sender identity is accepted by the provider,
+- workflow notifications arrive as expected,
+- no persistent auth or quota errors appear in logs.
 
 ## Related guides
 
@@ -29,3 +59,4 @@ Use this guide when choosing an email delivery provider for SkyCMS notifications
 - [SendGrid](./sendgrid.md)
 - [Azure Communication Services](./azure-communication-services.md)
 - [No Email Provider](./none.md)
+- [Post-Installation Configuration](../../installation/post-installation.md)

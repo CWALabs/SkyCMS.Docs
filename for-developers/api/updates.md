@@ -1,13 +1,27 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Api/UPDATES.md -->
+---
+canonical_title: Sky.Cms.Api.Shared Integration Updates
+description: This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.
+doc_type: Explanation
+product_area: development
+user_intent: understand-sky-cms-api-shared-integration-updates
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Sky.Cms.Api.Shared Integration Updates
 
-## Recent Changes (January 2026)
+## Summary
 
 This document summarizes the recent integration of the Sky.Cms.Api.Shared project into the SkyCMS Editor application.
+
+## Recent Changes (January 2026)
+
+The January 2026 integration adds the following to the SkyCMS Editor application:
 
 ## What Changed
 
@@ -271,10 +285,9 @@ The `TenantAwareEmailSender` automatically selects the correct provider based on
 Run the new unit tests:
 
 ```bash
-# Test all Contact API tests
+
 dotnet test Tests/ --filter "Category=ContactApi"
 
-# Or specific test class
 dotnet test Tests/Controllers/ContactApiControllerTests.cs
 ```
 

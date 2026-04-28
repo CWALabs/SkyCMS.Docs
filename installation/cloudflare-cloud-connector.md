@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/CloudflareCloudConnector.md -->
+---
+canonical_title: Cloudflare Cloud Connector
+description: Route SkyCMS storage traffic through Cloudflare Cloud Connector instead of building the full edge rule set manually.
+doc_type: How-to
+product_area: installation
+user_intent: configure-cloudflare-cloud-connector-for-skycms-storage
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Cloudflare Cloud Connector
 
-## When to use this page
+## Summary
 
 Use this guide when you want Cloudflare to route to object storage using Cloud Connector instead of manually creating full edge routing rules.
 
@@ -18,6 +29,10 @@ Cloud Connector simplifies storage routing by automatically handling host header
 - Cloudflare account with Cloud Connector availability.
 - Public cloud storage bucket.
 - Proxied domain in Cloudflare.
+
+## Outcome
+
+After completing this guide, Cloudflare should be able to route requests to the backing storage target with less manual edge-rule work.
 
 ## Setup flow
 
@@ -32,9 +47,13 @@ Cloud Connector simplifies storage routing by automatically handling host header
 - Cloud Connector: faster setup, less boilerplate.
 - Manual rules: more direct control over path and host-specific logic.
 
-For manual rule configuration patterns, see [cloudflare-edge-hosting.md](cloudflare-edge-hosting.md).
+For manual rule configuration patterns, see [Cloudflare Edge Hosting](cloudflare-edge-hosting.md).
+
+## Verification
+
+This setup is complete when production-like requests resolve through Cloudflare correctly and the expected content paths map to the target bucket without host or TLS errors.
 
 ## Related guides
 
-- [cloudflare-edge-hosting.md](cloudflare-edge-hosting.md)
-- [../configuration/storage/cloudflare-r2.md](../configuration/storage/cloudflare-r2.md)
+- [Cloudflare Edge Hosting](cloudflare-edge-hosting.md)
+- [Cloudflare R2 Storage](../configuration/storage/cloudflare-r2.md)

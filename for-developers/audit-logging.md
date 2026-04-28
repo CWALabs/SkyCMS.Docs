@@ -1,10 +1,23 @@
+---
+canonical_title: Audit and logging
+description: SkyCMS uses structured logging, domain events, and a dedicated setup audit log to provide visibility into system activity. Health check endpoints support uptime monitoring.
+doc_type: Reference
+product_area: development
+user_intent: understand-audit-logging
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Audit & Logging
 
+## Summary
+
 SkyCMS uses structured logging, domain events, and a dedicated setup audit log to provide visibility into system activity. Health check endpoints support uptime monitoring.
-
-**Audience:** Developers, Administrators
-
----
 
 ## Domain Events
 

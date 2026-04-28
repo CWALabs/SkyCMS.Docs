@@ -1,4 +1,21 @@
+---
+canonical_title: Documentation PR Checklist
+description: Use this checklist for documentation pull requests.
+doc_type: How-to
+product_area: development
+user_intent: implement-documentation-pr-checklist
+audience:
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Documentation PR Checklist
+
+## Summary
 
 Use this checklist for documentation pull requests.
 
@@ -21,6 +38,14 @@ Use this checklist for documentation pull requests.
 - [ ] Images with meaning have alt text.
 - [ ] Tables include clear headers.
 - [ ] Instructions are not image-only.
+
+## Visual style checks (DVSS)
+
+- [ ] Parent and child navigation levels are visually distinguishable.
+- [ ] Active navigation state is clear in both left nav and page TOC.
+- [ ] Heading and paragraph spacing supports quick scanning.
+- [ ] Link hover and focus states are visible and consistent.
+- [ ] Color contrast remains readable in light and dark modes.
 
 ## Freshness and ownership checks
 

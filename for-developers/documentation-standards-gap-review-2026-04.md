@@ -1,4 +1,21 @@
+---
+canonical_title: SkyCMS Documentation Standards Gap Review (2026-04)
+description: This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.
+doc_type: Reference
+product_area: development
+user_intent: understand-skycms-documentation-standards-gap-review-2026-04
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # SkyCMS Documentation Standards Gap Review (2026-04)
+
+## Summary
 
 This review evaluates current SkyCMS documentation against the Documentation Standards Stack v1 and defines a practical implementation plan.
 
@@ -76,14 +93,14 @@ Interpretation:
 
 Known TODO-bearing files include:
 
-- deployment/docker.md
-- deployment/overview.md
-- for-developers/middleware-pipeline.md
-- for-developers/overview.md
-- for-developers/extending/custom-widgets.md
-- getting-started/quick-start.md
-- getting-started/what-is-skycms.md
-- reference/changelog.md
+- [deployment/docker.md](../deployment/docker.md)
+- [deployment/overview.md](../deployment/overview.md)
+- [for-developers/middleware-pipeline.md](./middleware-pipeline.md)
+- [for-developers/overview.md](./overview.md)
+- [for-developers/extending/custom-widgets.md](./extending/custom-widgets.md)
+- [getting-started/quick-start.md](../getting-started/quick-start.md)
+- [getting-started/what-is-skycms.md](../getting-started/what-is-skycms.md)
+- [reference/changelog.md](../reference/changelog.md)
 
 ### Navigation and IA signal
 
@@ -278,6 +295,36 @@ Exit criteria:
 1. Add a docs validation script that fails on missing required metadata fields.
 1. Upgrade deployment/overview.md and getting-started/quick-start.md from stub to full pages using new templates.
 1. Upgrade for-developers/overview.md and reference/changelog.md from TODO state to complete state.
+
+## Implementation progress
+
+### Completed — 2026-04-28
+
+**Phase 2 — Home page (index.md)**
+
+- `index.md` fully rewritten: outcome-focused tagline, hero CTAs, role-picker card grid, structured adoption sequence with Mermaid diagram, popular-pages card grid, and Get Help footer row.
+- `hide: toc` added to frontmatter (portal page does not need a TOC rail).
+
+**Phase 2 + Phase 3 — for-developers section polish**
+
+All 64 `for-developers` pages reviewed. Completed fixes applied across two sessions:
+
+- Duplicate `## Overview` headings removed and replaced with unique, content-specific summary sentences on all affected pages.
+- `doc_type` values corrected from `Reference` to appropriate `How-to`, `Explanation`, or `Reference` per page content.
+- `description` and `## Summary` fields rewritten to remove passive openers, strip Markdown from YAML values, and ensure unique, scannable summaries.
+- `user_intent` values corrected to reflect actual user goals rather than internal labels.
+- `product_area` corrected where misclassified (e.g., checklist pages pointing at wrong domain).
+- `audience` expanded on checklist pages to include Administrators.
+- Title-case headings normalized to sentence case in `article-lifecycle.md` (13 headings).
+- `canonical_title` normalized in `audit-logging.md`.
+- Duplicate opening sentence removed from `extending/flex-db.md`.
+- `for-developers/index.md` duplicate link removed; accidentally removed lines restored.
+
+**Nav restructure**
+
+- `mkdocs.yml` `nav:` restructured from 9 flat top-level items to 5 named tabs: Get Started · User Guides · Developers · Configuration · Reference.
+- `md_in_html` markdown extension added (required for Material grid cards on home page).
+- MkDocs strict build confirmed: 17 pre-existing warnings in `deployment/azure.md` only; zero new warnings.
 
 ## Notes
 

@@ -1,9 +1,22 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/ToC-Widget.md -->
+---
+canonical_title: Table of Contents Widget
+description: Build navigation lists and breadcrumbs from the SkyCMS table-of-contents API using client-side widget helpers.
+doc_type: How-to
+product_area: site-building
+user_intent: render-navigation-and-breadcrumbs-from-toc-data
+audience:
+  - Site Builders
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Table of Contents (ToC) Widgets
+# Table of Contents Widget
+
+## Summary
 
 Helpers to render navigation lists from the SkyCMS Table of Contents API and to build breadcrumbs automatically.
 
@@ -12,6 +25,10 @@ Helpers to render navigation lists from the SkyCMS Table of Contents API and to 
   - `cosmos_cms_build_toc_default(navElementId, anchorClassName?, activeCssClass?)`
   - `cosmos_cms_build_toc(pagePath, navElementId, liClassName?, anchorClassName?, activeCssClass?)`
   - `cosmos_cms_build_breadcrumbs(breadCrumbId)`
+
+## Outcome
+
+After completing this guide, you should be able to render a page-aware ToC and breadcrumb trail using the widget API.
 
 ## API endpoints
 
@@ -78,3 +95,13 @@ Example:
 - Link text uses the last segment of `item.Title`.
 - Link href uses `"/" + item.UrlPath`.
 - When `activeCssClass` is provided, the script will compare `href` to the current path (case-insensitive) and add the class when it matches.
+
+## Verification
+
+This integration is complete when the widget renders expected links from `/Home/GetTOC`, applies the active class on the current page, and breadcrumbs match the page path metadata.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [Nav Builder Widget](./nav-builder.md)
+- [Breadcrumbs Widget](./breadcrumbs.md)

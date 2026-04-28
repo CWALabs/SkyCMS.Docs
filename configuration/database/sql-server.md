@@ -1,13 +1,24 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Database-SQLServer.md -->
+---
+canonical_title: Database: SQL Server
+description: Configure SkyCMS to use SQL Server or Azure SQL for relational persistence and production-ready operations.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-sql-server-database
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Database: SQL Server
 
-## When to use SQL Server
+## Summary
 
-Use SQL Server (or Azure SQL) for enterprise-grade relational features, mature tooling, and straightforward operational workflows.
+Use SQL Server or Azure SQL when you want enterprise-grade relational features, mature tooling, and straightforward operational workflows.
 
 ## Required settings
 
@@ -15,10 +26,17 @@ Set `ConnectionStrings:ApplicationDbContextConnection` with server, database, an
 
 ## Example configuration
 
-Examples:
+Common patterns include:
 
 - local trusted connection,
 - Azure SQL with `Encrypt=True` and explicit credentials.
+
+## Validation checklist
+
+- application starts successfully,
+- sign-in and content save work,
+- publish flow completes without database errors,
+- firewall and authentication settings allow runtime connectivity.
 
 ## Connection troubleshooting
 

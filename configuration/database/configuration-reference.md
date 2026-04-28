@@ -1,9 +1,24 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Database-Configuration-Reference.md -->
+---
+canonical_title: Database Configuration Reference
+description: Reference for SkyCMS database connection-string keys, provider patterns, and validation guidance.
+doc_type: Reference
+product_area: configuration
+user_intent: find-database-connection-and-provider-patterns
+audience:
+	- Developers
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Database Configuration Reference
+
+## Summary
+
+Use this page for exact database connection-string keys and provider pattern expectations used by SkyCMS.
 
 ## Configuration key
 
@@ -34,7 +49,7 @@ SkyCMS uses this connection string to auto-detect the database provider. You do 
 SkyCMS selects the provider by evaluating the configured connection string against known provider patterns.
 
 | Provider | Typical pattern | Notes |
-|----------|-----------------|-------|
+| --- | --- | --- |
 | Cosmos DB | `AccountEndpoint=...;AccountKey=...;Database=...;` | Best for globally distributed NoSQL deployments |
 | SQL Server / Azure SQL | `Server=...;Database=...;User ID=...;Password=...;` | Used for SQL Server and Azure SQL Database |
 | MySQL | `Server=...;Port=3306;Uid=...;Pwd=...;Database=...;` | Open-source relational option |

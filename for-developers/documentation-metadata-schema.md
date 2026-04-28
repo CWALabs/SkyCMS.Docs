@@ -5,7 +5,6 @@ doc_type: Reference
 product_area: documentation
 user_intent: apply-documentation-metadata-schema
 audience:
-  - Contributors
   - Developers
 difficulty: intermediate
 version: current
@@ -16,7 +15,9 @@ last_reviewed: 2026-04-27
 
 # SkyCMS Documentation Metadata Schema v1
 
-This schema defines the required YAML front matter for all new or materially revised documentation pages.
+## Summary
+
+Required YAML front matter schema and validation rules for SkyCMS documentation pages.
 
 ## Canonical format
 

@@ -1,7 +1,23 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Reference + Example -->
+---
+canonical_title: Layout Examples
+description: Compare framework-based SkyCMS layout examples and choose a layout approach that fits your team and design constraints.
+doc_type: Explanation
+product_area: site-building
+user_intent: compare-layout-framework-examples
+audience:
+	- Site Builders
+	- Designers
+	- Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Layout Examples
+
+## Summary
 
 This section provides example SkyCMS layout implementations using several widely adopted CSS frameworks.
 
@@ -21,6 +37,10 @@ Use these pages when you want to:
 - bootstrap a new layout with a familiar CSS system,
 - see how layout responsibilities map into real markup,
 - adapt a framework-based design into SkyCMS without committing to SPA architecture.
+
+## Outcome
+
+After completing this guide, you should be able to choose a layout example that matches your framework preferences and implementation constraints.
 
 ## Included examples
 
@@ -58,3 +78,7 @@ No matter which framework you choose, SkyCMS layouts should still:
 - [Templates](../templates.md)
 - [Pages](../pages.md)
 - [Layouts (Developers)](../../for-developers/layouts.md)
+
+## Verification
+
+This page is successful when you can pick one framework path confidently and identify the matching layout example to start implementation.

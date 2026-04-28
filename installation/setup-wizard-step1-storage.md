@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/SetupWizard-Step1-Storage.md -->
+---
+canonical_title: Setup Wizard Step 1 Storage
+description: Configure and validate the storage provider used for uploaded files and media during initial SkyCMS setup.
+doc_type: How-to
+product_area: installation
+user_intent: configure-storage-during-initial-setup
+audience:
+	- Developers
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Setup Wizard: Step 1 Storage
 
-## Purpose
+## Summary
 
 Configure the object storage provider for uploaded files and media.
 
@@ -21,6 +32,10 @@ Configure the object storage provider for uploaded files and media.
 - `StorageConnectionString`
 - `BlobPublicUrl` (often `/`)
 
+## What to decide here
+
+Choose the same storage provider and bucket or container strategy you expect to use after setup. Changing providers later is possible, but it adds migration work and retesting.
+
 ## Test before continuing
 
 Use the built-in connection test to confirm credentials and bucket/container accessibility.
@@ -32,11 +47,15 @@ Use the built-in connection test to confirm credentials and bucket/container acc
 
 When preconfigured, wizard fields appear masked or read-only.
 
+## Verification
+
+This step is complete when the storage test succeeds and the wizard lets you continue without a provider or credential error.
+
 ## Next step
 
-Proceed to [setup-wizard-step2-admin.md](setup-wizard-step2-admin.md).
+Proceed to [Setup Wizard: Step 2 Admin Account](setup-wizard-step2-admin.md).
 
 ## Related guides
 
-- [../configuration/storage/overview.md](../configuration/storage/overview.md)
-- [minimum-required-settings.md](minimum-required-settings.md)
+- [Storage Overview](../configuration/storage/overview.md)
+- [Minimum Required Settings](minimum-required-settings.md)

@@ -2,24 +2,26 @@
 canonical_title: Layouts
 description: Create and manage site-wide layout shells in SkyCMS, including shared structure, versioning expectations, and layout-to-template boundaries.
 audience:
-	- Designers
-	- Front-End Developers
-	- Site Builders
+  - Designers
+  - Front-End Developers
+  - Site Builders
 doc_type: How-to
-status: Draft
-entities:
-	- layout
-	- template
-	- article
-keywords:
-	- layouts
-	- site design
-	- layout shell
-	- header footer navigation
-source: SkyCMS/Docs/Layouts/
+product_area: site-building
+user_intent: create-and-manage-layouts
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
 ---
 
 # Layouts
+
+## Summary
+
+Use layouts to define site-wide structure shared by all pages, such as header, footer, and navigation.
+
+If you are new to SkyCMS, decide first what belongs globally in a layout and what belongs in templates.
 
 ## Terminology note
 
@@ -66,6 +68,16 @@ Recommended approach:
 2. Establish design tokens and navigation rules.
 3. Create a custom variant only when your requirements exceed the starter design.
 
+## Quick workflow
+
+Use this sequence when creating or revising a production layout:
+
+1. Define layout goals and constraints.
+2. Map shared regions (head, header, main, footer).
+3. Implement token-driven styling.
+4. Validate with templates and representative pages.
+5. Publish and document handoff guidance.
+
 ## Layout responsibilities
 
 Layouts should own:
@@ -84,6 +96,13 @@ Layouts should avoid owning:
 
 ## Layout vs template vs page
 
+```mermaid
+flowchart LR
+  Layout[Layout\nGlobal shell] --> Template[Template\nReusable page pattern]
+  Template --> Page[Article or Page\nAuthored content]
+  Page --> Published[Published page\nPublic output]
+```
+
 - Layout: site-wide shell and shared visual framework.
 - Template: reusable content pattern rendered inside a layout.
 - Page: a concrete content instance authored by editors; canonically this is an article before publish and a published page after publish.
@@ -96,6 +115,8 @@ Rule of thumb:
 
 ## Create a layout
 
+### Plan and map shared regions
+
 Define goals:
 
 - Capture brand direction, readability, accessibility, and performance constraints.
@@ -107,6 +128,8 @@ Map shared regions:
 Define tokens first:
 
 - Establish CSS custom properties for color, spacing, radius, and typography.
+
+### Build and validate
 
 Build responsive structure:
 
@@ -269,6 +292,14 @@ Before rollout, validate:
 - Image-heavy and blog pages inside the layout.
 - Empty-state and error-state rendering.
 - Keyboard, focus, and contrast accessibility checks.
+
+## Pre-publish checklist
+
+- [ ] Responsive checks pass at project breakpoints.
+- [ ] Global navigation and footer behavior are consistent.
+- [ ] Core template/page types render correctly.
+- [ ] Accessibility checks pass for landmarks, focus, and contrast.
+- [ ] Handoff notes are updated for editors and developers.
 
 ## Handoff checklist
 

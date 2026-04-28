@@ -1,9 +1,21 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: Overview -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/README.md -->
+---
+canonical_title: Developer Guides
+description: Complete workflows and best practices for developers building and maintaining SkyCMS sites.
+doc_type: How-to
+product_area: development
+user_intent: implement-developer-guides
+audience:
+  - Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Developer Guides
+
+## Summary
 
 Complete workflows and best practices for developers building and maintaining SkyCMS sites.
 
@@ -302,17 +314,3 @@ Is this a site-wide element?
 
 ---
 
-## Summary
-
-This documentation provides everything you need to:
-
-1. ✅ Plan and design a new SkyCMS website
-2. ✅ Build layouts and templates
-3. ✅ Create initial content pages
-4. ✅ Train non-technical content creators
-5. ✅ Launch with confidence
-6. ✅ Maintain the site after launch
-
-**Start here:** [Website Launch Workflow](./Website-Launch-Workflow.md)
-
-**Questions?** See the [FAQ in the main workflow guide](./Website-Launch-Workflow.md#faq)

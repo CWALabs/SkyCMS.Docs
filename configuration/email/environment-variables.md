@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Email-Environment-Variables.md -->
+---
+canonical_title: Email Environment Variables
+description: Reference the common email-related environment variable groups used for SkyCMS deployment-time configuration.
+doc_type: Reference
+product_area: configuration
+user_intent: find-email-environment-variable-groups-for-skycms
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Email Environment Variables
 
-## When to use this page
+## Summary
 
 Use this reference when configuring email settings via deployment-time environment variables.
 

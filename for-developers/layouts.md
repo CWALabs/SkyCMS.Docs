@@ -1,25 +1,23 @@
 ---
 canonical_title: Layouts
 description: Developer reference for layout entities, versioning, runtime resolution, import flows, and layout-to-template binding in SkyCMS.
-audience:
-	- Backend Developers
-	- Full-Stack Developers
 doc_type: Reference
-status: Draft
-entities:
-	- layout
-	- template
-	- article
-	- published-page
-keywords:
-	- layouts
-	- layout resolution
-	- layout versioning
-	- site design
-source: SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs, SkyCMS/Common/Data/Logic/LayoutHelper.cs, SkyCMS/Editor/Features/Layouts/Create/CreateLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Delete/DeleteLayoutHandler.cs, SkyCMS/Editor/Features/Layouts/Import/ImportLayoutHandler.cs, SkyCMS/Editor/Services/Layouts/LayoutTemplateService.cs, SkyCMS/Editor/Services/Layouts/LayoutVersioningService.cs, SkyCMS/Editor/Services/Layouts/LayoutImportService.cs, SkyCMS/Editor/Controllers/LayoutsController.cs, SkyCMS/Editor/Controllers/BaseController.cs
+product_area: development
+user_intent: understand-layouts
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Layouts
+
+## Summary
+
+Developer reference for layout entities, versioning, runtime resolution, import flows, and layout-to-template binding in SkyCMS.
 
 ## When to use this page
 

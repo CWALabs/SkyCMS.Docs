@@ -1,8 +1,23 @@
-﻿# Architecture Decision Records (ADRs)
+---
+canonical_title: Architecture Decision Records (ADRs)
+description: SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source of truth.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-architecture-decision-records-adrs
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Architecture Decision Records (ADRs)
+
+## Summary
 
 SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source of truth.
-
-This page is a lightweight mirror index for discoverability in docs.
 
 ## Canonical ADR Location
 

@@ -1,14 +1,31 @@
-# Content Export & Import
+---
+canonical_title: Content export and import
+description: Export pages as HTML and import content programmatically via the Docs Import API for backup, migration, and CI/CD workflows.
+doc_type: How-to
+product_area: publishing
+user_intent: export-pages-and-import-content-via-docs-import-api
+audience:
+  - Editors
+  - Developers
+  - Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Content export and import
+
+## Summary
 
 SkyCMS supports exporting pages as HTML files and importing content programmatically via the Docs Import API. These features enable backup, migration, and CI/CD-driven content workflows.
 
-**Audience:** Editors, Developers, Administrators
-
 ---
 
-## Exporting Pages
+## Exporting pages
 
-### HTML Export
+### HTML export
 
 Export any page version as a standalone HTML file:
 
@@ -27,9 +44,9 @@ Export any page version as a standalone HTML file:
 
 ---
 
-## Importing Content
+## Importing content
 
-### Docs Import API
+### Docs import API
 
 SkyCMS provides a REST API for programmatically importing content. This is primarily used by the **DocsPublisher** tool for CI/CD documentation pipelines, but can be used by any integration.
 
@@ -40,7 +57,7 @@ SkyCMS provides a REST API for programmatically importing content. This is prima
 The API uses key-based authentication:
 
 | Configuration Key | Description |
-|-------------------|-------------|
+| ----------------- | ----------- |
 | `DocsImport:ApiKey` | API key for authenticating import requests |
 | `DocsImport:UserId` | User ID to attribute imported content to |
 
@@ -55,7 +72,7 @@ Set these in `appsettings.json` or environment variables:
 }
 ```
 
-#### Request Format
+#### Request format
 
 ```json
 {
@@ -69,7 +86,7 @@ Set these in `appsettings.json` or environment variables:
 ```
 
 | Field | Required | Description |
-|-------|----------|-------------|
+| ----- | -------- | ----------- |
 | **SourceKey** | Yes | Stable identifier for the document (e.g., file path). Used for upsert matching. |
 | **Title** | Yes | Page title |
 | **Content** | Yes | HTML body content |
@@ -77,18 +94,18 @@ Set these in `appsettings.json` or environment variables:
 | **Category** | No | Content category for organization |
 | **Introduction** | No | Brief description or excerpt |
 
-#### Upsert Behavior
+#### Upsert behavior
 
 - If a page with the given `SourceKey` already exists, the latest version is updated (or a new version is created).
 - If no matching `SourceKey` is found, a new article is created.
 - Embedded images and assets in the HTML are extracted and uploaded to blob storage automatically.
 
-#### Rate Limiting
+#### Rate limiting
 
 The import endpoint is rate-limited:
 
 | Environment | Limit |
-|-------------|-------|
+| ----------- | ----- |
 | Production | 3 requests / 5 minutes |
 | Development | 20 requests / 1 minute |
 
@@ -96,7 +113,7 @@ The import endpoint is rate-limited:
 
 ---
 
-## DocsPublisher Integration
+## DocsPublisher integration
 
 The **SkyCMS.DocsPublisher** project provides a CLI/pipeline tool for bulk-importing documentation files into SkyCMS:
 
@@ -109,7 +126,7 @@ See the [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublis
 
 ---
 
-## Multi-Tenancy
+## Multi-tenancy
 
 - Exported pages come from the current tenant's content.
 - Imported pages are assigned to the current tenant via the database context filter.
@@ -118,7 +135,7 @@ See the [DocsPublisher Quick Start](https://github.com/CWALabs/SkyCMS.DocsPublis
 
 ---
 
-## See Also
+## See also
 
 - [Version History](version-history.md) — Imports create new article versions
 - [Publishing Modes](publishing-modes.md) — Imported pages arrive as drafts; publish separately

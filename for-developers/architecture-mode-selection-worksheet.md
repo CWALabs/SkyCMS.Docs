@@ -1,23 +1,23 @@
 ---
 canonical_title: Architecture Mode Selection Worksheet
 description: Practical worksheet to select static, dynamic, or hybrid delivery mode for a SkyCMS workload.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-architecture-mode-selection-worksheet
 audience:
   - Developers
-  - Architects
-  - Platform Engineers
-doc_type: Reference
-status: Draft
-entities:
-  - worksheet
-  - architecture-selection
-  - deployment-mode
-keywords:
-  - selection worksheet
-  - static dynamic hybrid
-  - decision record input
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Mode Selection Worksheet
+
+## Summary
+
+Practical worksheet to select static, dynamic, or hybrid delivery mode for a SkyCMS workload.
 
 ## Purpose
 

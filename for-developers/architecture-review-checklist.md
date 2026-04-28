@@ -1,23 +1,23 @@
-﻿---
+---
 canonical_title: Architecture Review Checklist
 description: Practical checklist for reviewing SkyCMS changes that affect tenant, publishing, and delivery architecture behavior.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-architecture-review-checklist
 audience:
   - Developers
-  - Reviewers
-  - Architects
-doc_type: Reference
-status: Draft
-entities:
-  - architecture-review
-  - pull-request-checklist
-  - tenant-isolation
-keywords:
-  - architecture checklist
-  - PR review
-  - design review
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Review Checklist
+
+## Summary
+
+Practical checklist for reviewing SkyCMS changes that affect tenant, publishing, and delivery architecture behavior.
 
 ## Purpose
 

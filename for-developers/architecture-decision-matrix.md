@@ -1,24 +1,23 @@
-﻿---
+---
 canonical_title: Architecture Decision Matrix
 description: Decision guide for choosing static, dynamic, or hybrid SkyCMS delivery architecture.
+doc_type: Reference
+product_area: architecture
+user_intent: understand-architecture-decision-matrix
 audience:
   - Developers
-  - Architects
-  - Platform Engineers
-doc_type: Reference
-status: Draft
-entities:
-  - decision-matrix
-  - static-mode
-  - dynamic-mode
-  - hybrid-mode
-keywords:
-  - architecture selection
-  - deployment pattern
-  - mode comparison
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Architecture Decision Matrix
+
+## Summary
+
+Decision guide for choosing static, dynamic, or hybrid SkyCMS delivery architecture.
 
 ## Purpose
 

@@ -1,7 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Create AWS IAM Credentials for CloudFront Cache Invalidation
+description: Create least-privilege AWS IAM credentials for SkyCMS CloudFront invalidation after publish.
+doc_type: How-to
+product_area: configuration
+user_intent: create-aws-iam-credentials-for-cloudfront-purging
+audience:
+  - DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Create AWS IAM Credentials for CloudFront Cache Invalidation
+
+## Summary
 
 Use this guide when SkyCMS needs AWS credentials to trigger CloudFront cache invalidations after content is published.
 
@@ -55,9 +69,9 @@ SkyCMS needs these values for CloudFront CDN purge:
 
 Replace `ACCOUNT-ID` with your 12-digit AWS account ID and `YOUR-DISTRIBUTION-ID` with the ID from Step 1.
 
-6. Select **Next**.
-7. Enter a descriptive name such as `SkyCMS-CloudFront-Invalidation-Production`.
-8. Select **Create policy**.
+1. Select **Next**.
+2. Enter a descriptive name such as `SkyCMS-CloudFront-Invalidation-Production`.
+3. Select **Create policy**.
 
 To find your account ID: open the account menu in the top-right corner of the AWS console. The ID appears under your account name.
 

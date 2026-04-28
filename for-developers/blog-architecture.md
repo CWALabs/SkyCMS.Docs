@@ -1,26 +1,23 @@
 ---
 canonical_title: Blog Architecture
 description: Developer reference for the SkyCMS blogging subsystem, including article types, CQRS flows, rendering, routing, and published output behavior.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-blog-architecture
 audience:
   - Developers
-doc_type: Explanation
-status: Draft
-entities:
-  - blog
-  - blog-post
-  - article
-  - published-page
-keywords:
-  - blog architecture
-  - blog
-  - blog post
-  - cqrs
-source: SkyCMS blogging subsystem
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Blog Architecture
 
-Technical internals of the SkyCMS blogging subsystem for developers extending or maintaining it.
+## Summary
+
+Developer reference for the SkyCMS blogging subsystem, including article types, CQRS flows, rendering, routing, and published output behavior.
 
 ## Canonical terminology
 

@@ -1,9 +1,24 @@
-<!-- Audience: Project Managers, Trainers -->
-<!-- Type: Reference -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/Checklists/Content-Creator-Onboarding.md -->
+---
+canonical_title: Content Creator Onboarding Checklist
+description: Use this checklist to onboard new content creators and ensure they're confident using SkyCMS to manage your website content.
+doc_type: How-to
+product_area: content-management
+user_intent: onboard-content-creators-to-skycms
+audience:
+  - Developers
+  - Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Content Creator Onboarding Checklist
+
+## Summary
+
+Use this checklist to onboard new content creators and ensure they're confident using SkyCMS to manage your website content.
 
 ## Overview
 

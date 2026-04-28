@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/SetupWizard-Step6-Review.md -->
+---
+canonical_title: Setup Wizard Step 6 Review and Complete
+description: Review the selected SkyCMS settings and finalize initial setup.
+doc_type: How-to
+product_area: installation
+user_intent: review-and-finalize-the-setup-wizard
+audience:
+	- Developers
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Setup Wizard: Step 6 Review and Complete
 
-## Purpose
+## Summary
 
 Review all selected settings and finalize setup.
 
@@ -22,16 +33,24 @@ Review all selected settings and finalize setup.
 - Confirm optional email/CDN values if entered.
 - Confirm admin email and password policy compliance.
 
+## What to expect
+
+Finalization writes the selected configuration, provisions initial application data, and closes the setup path until you explicitly enable it again.
+
 ## Common issues
 
 - Finalize errors due to invalid credentials or unavailable resources.
 - Setup remains enabled because of environment-variable override.
 
+## Verification
+
+This step is complete when finalization succeeds without an application error and the wizard advances to the completion screen.
+
 ## Next step
 
-Proceed to [setup-wizard-complete.md](setup-wizard-complete.md).
+Proceed to [Setup Wizard Complete](setup-wizard-complete.md).
 
 ## Related guides
 
-- [post-installation.md](post-installation.md)
-- [minimum-required-settings.md](minimum-required-settings.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Minimum Required Settings](minimum-required-settings.md)

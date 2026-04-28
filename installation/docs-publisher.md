@@ -1,11 +1,22 @@
-<!-- Audience: Developers and Documentation Maintainers -->
-<!-- Type: Explanation -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/DocsPublisher.md -->
+---
+canonical_title: SkyCMS Docs Publisher
+description: Understand when to use SkyCMS.DocsPublisher and how it supports standalone documentation synchronization into SkyCMS.
+doc_type: Explanation
+product_area: installation
+user_intent: understand-and-adopt-skycms-docspublisher
+audience:
+  - Developers
+  - Documentation Maintainers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # SkyCMS Docs Publisher
 
-## When to use this page
+## Summary
 
 Use this page when you want documentation content managed in a standalone repository and synchronized into SkyCMS.
 
@@ -37,6 +48,15 @@ flowchart LR
 - Support independent documentation workflows.
 - Reuse a proven structure for Markdown import into SkyCMS.
 
+## Verification
+
+DocsPublisher is set up correctly when:
+
+- content is committed in the standalone docs repository,
+- required secrets are configured,
+- sync or publish workflow runs successfully,
+- published documentation appears in the target SkyCMS environment.
+
 ## Next steps
 
 1. Clone the SkyCMS.DocsPublisher repository.
@@ -46,6 +66,6 @@ flowchart LR
 
 ## Related guides
 
-- [overview.md](overview.md)
-- [post-installation.md](post-installation.md)
-- [../deployment/publishing-workflow.md](../deployment/publishing-workflow.md)
+- [Installation Overview](overview.md)
+- [Post-Installation Configuration](post-installation.md)
+- [Publishing Workflow](../deployment/publishing-workflow.md)

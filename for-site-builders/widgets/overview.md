@@ -1,9 +1,22 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: Overview -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/README.md -->
+---
+canonical_title: Widgets Overview
+description: Understand the available SkyCMS widgets and choose the right widget guide for navigation, media, forms, search, and utility scenarios.
+doc_type: Explanation
+product_area: site-building
+user_intent: choose-the-right-widget-doc-for-the-task
+audience:
+	- Site Builders
+	- Front-End Developers
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Widgets
+
+## Summary
 
 Developer docs for SkyCMS widgets. Each widget provides focused, reusable UI behavior used by the Editor and runtime views.
 
@@ -15,4 +28,12 @@ Developer docs for SkyCMS widgets. Each widget provides focused, reusable UI beh
 - [Search Widget](./search.md) — basic search form wiring and result rendering.
 - [ToC Widget](./table-of-contents.md) — build table-of-contents lists and breadcrumbs.
 
+## Outcome
+
+After using this page, you should be able to pick the appropriate widget guide and jump directly to implementation details.
+
 If you add new widgets, list them here and link their docs.
+
+## Verification
+
+This overview is working as intended when each listed widget link opens a dedicated guide and the guide set reflects the widgets currently available in SkyCMS.

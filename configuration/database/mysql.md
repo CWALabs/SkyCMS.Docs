@@ -1,11 +1,22 @@
-<!-- Audience: Developers and DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/Database-MySQL.md -->
+---
+canonical_title: Database: MySQL
+description: Configure SkyCMS to use MySQL for relational persistence in MySQL-centric environments.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-mysql-database
+audience:
+	- Developers
+	- DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Database: MySQL
 
-## When to use MySQL
+## Summary
 
 Use MySQL when your team or hosting platform is MySQL-centric and you want relational persistence for SkyCMS workloads.
 
@@ -19,10 +30,17 @@ Example:
 
 `Server=my-host;Port=3306;Uid=my-user;Pwd=my-password;Database=SkyCMS;`
 
+## Validation checklist
+
+- application starts without provider mismatch errors,
+- credentials and grants allow normal read/write behavior,
+- sign-in and publish operations succeed,
+- host, port, and TLS settings match provider requirements.
+
 ## Connection troubleshooting
 
 - login failures: verify credentials and user grants,
-- SSL/connection failures: validate host, port, and TLS requirements,
+- SSL or connection failures: validate host, port, and TLS requirements,
 - startup provider mismatch: confirm connection string format is MySQL.
 
 ## Related guides

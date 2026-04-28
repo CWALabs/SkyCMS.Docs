@@ -1,23 +1,23 @@
 ---
-canonical_title: Architecture Change Log
+canonical_title: Architecture change log
 description: Track significant architecture-document and architecture-direction changes by release.
+doc_type: Reference
+product_area: architecture
+user_intent: track-architecture-changes-by-release
 audience:
   - Developers
-  - Architects
-  - Technical Leads
-doc_type: Reference
-status: Draft
-entities:
-  - architecture-governance
-  - release-tracking
-  - documentation-governance
-keywords:
-  - architecture changelog
-  - release notes
-  - architecture evolution
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
-# Architecture Change Log
+# Architecture change log
+
+## Summary
+
+Track significant architecture-document and architecture-direction changes by release.
 
 ## Purpose
 

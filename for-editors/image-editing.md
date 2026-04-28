@@ -1,11 +1,21 @@
-<!-- Audience: Content Editors -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Editors/ImageEditing/ -->
+---
+canonical_title: Image Editing
+description: Edit SkyCMS media assets in the browser, prepare them for publication, and verify accessibility and performance basics.
+doc_type: How-to
+product_area: editing
+user_intent: edit-images-inside-skycms-before-publishing
+audience:
+	- Content Editors
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Image Editing
 
-## When to use this page
+## Summary
 
 Use this guide when you need to:
 
@@ -13,7 +23,11 @@ Use this guide when you need to:
 - apply edits without external image software,
 - verify accessibility and performance for media assets.
 
-## Upload images
+## Outcome
+
+After completing this guide, you should be able to open the in-browser editor, make common adjustments, and save images that are ready for content use.
+
+## Open an image for editing
 
 1. Open File Manager.
 2. Select an image (`.png`, `.jpg`, `.jpeg`, `.gif`, or `.webp`).
@@ -58,8 +72,12 @@ When adding edited images to pages:
 Troubleshooting quick checks:
 
 - If save fails, verify folder write permissions.
-- If image does not load, verify format and size.
-- If editor is slow, reduce image dimensions and close extra browser tabs.
+- If the image does not load, verify format and size.
+- If the editor is slow, reduce image dimensions and close extra browser tabs.
+
+## Verification
+
+Image editing is working when you can open a supported image, save the revised version successfully, and confirm the updated asset renders correctly in the file list or target page.
 
 ## Available editing tools
 

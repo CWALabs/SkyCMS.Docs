@@ -1,9 +1,21 @@
-<!-- Audience: Backend and Full-Stack Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Developer-Guides/CreatingEditableAreas.md -->
+---
+canonical_title: Creating Editable Areas
+description: A practical guide for developers to define editable regions in templates and stand-alone articles, using the code editor (Monaco) with CKEditor-based Visual Editor.
+doc_type: How-to
+product_area: development
+user_intent: implement-creating-editable-areas
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
 
 # Creating Editable Areas
+
+## Summary
 
 A practical guide for developers to define editable regions in templates and stand-alone articles, using the code editor (Monaco) with CKEditor-based Visual Editor.
 

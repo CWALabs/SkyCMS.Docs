@@ -1,9 +1,22 @@
-<!-- Audience: Site Builders and Front-End Developers -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Widgets/Forms-Widget.md -->
+---
+canonical_title: Forms Helpers Widget
+description: Submit forms with SkyCMS antiforgery support using client-side form helper utilities.
+doc_type: How-to
+product_area: site-building
+user_intent: post-forms-with-antiforgery-token-from-widget-helper
+audience:
+  - Site Builders
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
-# Cosmos CMS Forms Helpers
+# Forms Helpers Widget
+
+## Summary
 
 Small helpers for posting forms with the Cosmos antiforgery token and basic element checks.
 
@@ -12,6 +25,10 @@ Small helpers for posting forms with the Cosmos antiforgery token and basic elem
   - `ccms___ElementExists(element: any): boolean`
   - `ccms___GetXsrfToken(): Promise<string>` — fetches an antiforgery token from `/ccms__antiforgery/token` response header `XSRF-TOKEN`
   - `ccms___PostForm(endpoint: string, formName: string): Promise<Response>` — posts the named form with header `RequestVerificationToken`
+
+## Outcome
+
+After completing this guide, you should be able to submit forms through SkyCMS with a valid antiforgery token and clear error handling.
 
 ## Requirements
 
@@ -47,3 +64,12 @@ Small helpers for posting forms with the Cosmos antiforgery token and basic elem
 
 - `ccms___PostForm` builds a `FormData(form)` and sends it with header `RequestVerificationToken` using the value retrieved from `ccms___GetXsrfToken()`.
 - Handle errors by checking `response.ok` and reading body as needed.
+
+## Verification
+
+This integration is complete when form submission succeeds for valid input, antiforgery validation passes, and failed requests surface actionable errors to users.
+
+## Related guides
+
+- [Widgets Overview](./overview.md)
+- [Search Widget](./search.md)

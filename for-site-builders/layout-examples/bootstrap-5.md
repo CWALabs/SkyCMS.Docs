@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Bootstrap 5 Layout Example
+description: Implement a SkyCMS layout shell using Bootstrap 5 grid, utilities, and navigation patterns.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-a-bootstrap-based-layout-shell
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Bootstrap 5 Layout Example
 
+## Summary
+
 This example shows a SkyCMS layout implemented with Bootstrap 5. It is a good fit for teams that want a familiar responsive grid, reusable utility classes, and a broad set of common UI patterns.
+
+## Outcome
+
+After working through this example, you should have a responsive Bootstrap-based layout shell with shared navigation and footer regions.
 
 ## Good fit when
 
@@ -109,3 +129,7 @@ This example shows a SkyCMS layout implemented with Bootstrap 5. It is a good fi
 - [Tailwind CSS Layout Example](./tailwind.md)
 - [Bulma Layout Example](./bulma.md)
 - [Foundation Layout Example](./foundation.md)
+
+## Verification
+
+This example is successful when Bootstrap styles load globally, navigation and layout regions are responsive, and templates render cleanly within the shared container.

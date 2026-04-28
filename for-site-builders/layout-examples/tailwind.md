@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Tailwind CSS Layout Example
+description: Compose a SkyCMS layout shell with Tailwind CSS utilities and token-friendly configuration.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-a-tailwind-based-layout-shell
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Tailwind CSS Layout Example
 
+## Summary
+
 This example shows a SkyCMS layout implemented with Tailwind CSS. It is a good fit for teams that prefer utility-first composition and want tight control over spacing, typography, and responsive behavior.
+
+## Outcome
+
+After working through this example, you should have a Tailwind-based layout shell with reusable structural utilities and clear extension points for design tokens.
 
 ## Good fit when
 
@@ -91,3 +111,7 @@ This example shows a SkyCMS layout implemented with Tailwind CSS. It is a good f
 - [Bootstrap 5 Layout Example](./bootstrap-5.md)
 - [Bulma Layout Example](./bulma.md)
 - [Foundation Layout Example](./foundation.md)
+
+## Verification
+
+This example is successful when Tailwind utilities apply consistently, layout regions respond correctly across breakpoints, and page content renders in the intended section container.

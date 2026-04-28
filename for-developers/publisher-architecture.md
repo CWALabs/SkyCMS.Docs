@@ -1,10 +1,23 @@
+---
+canonical_title: Publisher Architecture
+description: Sky.Publisher is the public-facing SkyCMS component that serves published content to site visitors in either dynamic or static mode depending on deployment configuration.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-publisher-architecture
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Publisher Architecture
 
-The Publisher (Sky.Publisher) is the public-facing component of SkyCMS that serves published content to site visitors. It operates in one of two modes — **dynamic** or **static** — depending on deployment configuration.
+## Summary
 
-**Audience:** Developers, Administrators
-
----
+Sky.Publisher is the public-facing SkyCMS component that serves published content to site visitors in either dynamic or static mode depending on deployment configuration.
 
 ## Operating Modes
 

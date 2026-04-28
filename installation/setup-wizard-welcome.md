@@ -1,18 +1,35 @@
-<!-- Audience: Developers and Administrators -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Installation/SetupWizard-Welcome.md -->
+---
+canonical_title: Setup Wizard Welcome
+description: Confirm prerequisites before entering the guided SkyCMS setup flow.
+doc_type: How-to
+product_area: installation
+user_intent: validate-setup-prerequisites-before-starting-the-wizard
+audience:
+	- Developers
+	- Administrators
+difficulty: beginner
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Setup Wizard: Welcome
 
-## Purpose
+## Summary
 
 The welcome screen validates prerequisites before entering the guided setup flow.
 
-## Required before continuing
+## Before you continue
 
 - `CosmosAllowSetup=true`
 - Valid database connection string in `ConnectionStrings__ApplicationDbContextConnection`
+
+## What to confirm on this screen
+
+- setup is still enabled for this environment,
+- the application can connect to the configured database,
+- you are ready to move through the remaining setup steps in one session.
 
 ## Common issues
 
@@ -20,11 +37,15 @@ The welcome screen validates prerequisites before entering the guided setup flow
 - Setup not allowed: enable `CosmosAllowSetup` and restart.
 - Database connection missing: provide required connection string.
 
+## Verification
+
+This step is complete when the wizard allows you to continue to storage configuration without an access or prerequisite error.
+
 ## Next step
 
-Proceed to [setup-wizard-step1-storage.md](setup-wizard-step1-storage.md).
+Proceed to [Setup Wizard: Step 1 Storage](setup-wizard-step1-storage.md).
 
 ## Related guides
 
-- [setup-wizard.md](setup-wizard.md)
-- [minimum-required-settings.md](minimum-required-settings.md)
+- [Setup Wizard](setup-wizard.md)
+- [Minimum Required Settings](minimum-required-settings.md)

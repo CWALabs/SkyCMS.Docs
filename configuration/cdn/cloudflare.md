@@ -1,11 +1,22 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/CDN-Cloudflare.md -->
+---
+canonical_title: CDN: Cloudflare
+description: Configure Cloudflare cache purge integration for SkyCMS publish workflows.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-cloudflare-cdn-purging
+audience:
+	- DevOps
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # CDN: Cloudflare
 
-## When to use Cloudflare
+## Summary
 
 Use Cloudflare when your site is fronted by a Cloudflare zone and you want publish-time cache purging with scoped API tokens.
 
@@ -33,7 +44,7 @@ Recommended rules:
 
 ## Validation checklist
 
-- token and zone ID pass save/test,
+- token and zone ID pass save or test,
 - publish triggers purge successfully,
 - updated pages appear without stale cache artifacts.
 

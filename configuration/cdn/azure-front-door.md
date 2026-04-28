@@ -1,11 +1,22 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
-<!-- Status: Draft -->
-<!-- Source: SkyCMS/Docs/Configuration/CDN-AzureFrontDoor.md -->
+---
+canonical_title: CDN: Azure Front Door
+description: Configure Azure Front Door cache purge integration for SkyCMS publish workflows.
+doc_type: How-to
+product_area: configuration
+user_intent: configure-skycms-azure-front-door-purging
+audience:
+	- DevOps
+	- Administrators
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # CDN: Azure Front Door
 
-## When to use Front Door
+## Summary
 
 Use Azure Front Door when you need global edge routing and Azure-native cache purging after publish.
 
@@ -15,7 +26,7 @@ Use Azure Front Door when you need global edge routing and Azure-native cache pu
 - resource group,
 - Front Door profile name,
 - endpoint name,
-- identity/role with endpoint cache purge rights.
+- identity or role with endpoint cache purge rights.
 
 ## Routing and cache rules
 
@@ -27,7 +38,7 @@ Recommended rules:
 
 ## Validation checklist
 
-- settings save/test succeeds,
+- settings save or test succeeds,
 - endpoint identifiers resolve correctly,
 - post-publish changes become visible without manual hard-refresh.
 

@@ -62,6 +62,7 @@ markdown_extensions:
   - footnotes
   - meta
   - tables
+  - md_in_html
   - pymdownx.emoji:
       # NOTE: These python/name tags are required by pymdownx for Material emoji support.
       # Some generic YAML validators report unresolved-tag diagnostics for them.
@@ -71,6 +72,7 @@ markdown_extensions:
 
 extra_css:
   - assets/css/mkdocs-logo.css
+  - assets/css/docs-visual-style.css
 
 extra_javascript:
   - assets/javascripts/vendor/mermaid.min.js
@@ -78,180 +80,191 @@ extra_javascript:
 
 # Navigation structure
 nav:
-  - Home: index.md
+  - Get Started:
+    - Home: index.md
+    - Getting Started:
+      - What Is SkyCMS?: getting-started/what-is-skycms.md
+      - Key Concepts: getting-started/key-concepts.md
+      - Quick Start: getting-started/quick-start.md
+    - Installation:
+      - Overview: installation/overview.md
+      - Azure: installation/azure.md
+      - AWS: installation/aws.md
+      - Docker: installation/docker.md
+      - Local Development: installation/local-development.md
+      - Setup Wizard:
+        - Overview: installation/setup-wizard.md
+        - Welcome: installation/setup-wizard-welcome.md
+        - "Step 1: Storage": installation/setup-wizard-step1-storage.md
+        - "Step 2: Admin Account": installation/setup-wizard-step2-admin.md
+        - "Step 3: Publisher": installation/setup-wizard-step3-publisher.md
+        - "Step 4: Email": installation/setup-wizard-step4-email.md
+        - "Step 5: CDN": installation/setup-wizard-step5-cdn.md
+        - "Step 6: Review": installation/setup-wizard-step6-review.md
+        - Complete: installation/setup-wizard-complete.md
+      - Post-Installation: installation/post-installation.md
+      - Minimum Required Settings: installation/minimum-required-settings.md
+      - Cloudflare Cloud Connector: installation/cloudflare-cloud-connector.md
+      - Cloudflare Edge Hosting: installation/cloudflare-edge-hosting.md
+      - DocsPublisher: installation/docs-publisher.md
 
-  - Getting Started:
-    - What Is SkyCMS?: getting-started/what-is-skycms.md
-    - Key Concepts: getting-started/key-concepts.md
-    - Quick Start: getting-started/quick-start.md
+  - User Guides:
+    - For Editors:
+      - Start Here: for-editors/index.md
+      - Overview: for-editors/overview.md
+      - Creating Articles: for-editors/creating-articles.md
+      - Updating & Deleting: for-editors/updating-and-deleting-articles.md
+      - Article Lifecycle: for-editors/article-lifecycle-reference.md
+      - Editors:
+        - Visual Editor: for-editors/visual-editor.md
+        - Visual Editor Quick Start: for-editors/visual-editor-quickstart.md
+        - Visual Editor Toolbar Reference: for-editors/visual-editor-toolbar-reference.md
+        - Visual Editor Visual Guide: for-editors/visual-editor-visual-guide.md
+        - Visual Editor Technical Reference: for-editors/visual-editor-technical-reference.md
+        - Page Builder: for-editors/page-builder.md
+        - Layers Panel: for-editors/layers.md
+        - Page Builder Quick Start: for-editors/page-builder-quickstart.md
+        - Code Editor: for-editors/code-editor.md
+        - AI Assistant: for-editors/ai-assistant.md
+        - AI Provider Setup: for-editors/ai-provider-setup.md
+        - AI Troubleshooting: for-editors/ai-troubleshooting.md
+        - Image Editing: for-editors/image-editing.md
+      - Publishing:
+        - Publishing Modes: for-editors/publishing-modes.md
+        - Page Scheduling: for-editors/page-scheduling.md
+        - Publishing Progress: for-editors/publishing-progress.md
+        - Version History: for-editors/version-history.md
+        - URL Management: for-editors/url-management.md
+      - Blogging: for-editors/blogging.md
+      - File Manager: for-editors/file-manager.md
+      - File Manager Quick Start: for-editors/file-manager-quickstart.md
+      - File Manager Toolbar Reference: for-editors/file-manager-toolbar-reference.md
+      - Content Export & Import: for-editors/content-export-import.md
+      - Preload & Caching: for-editors/preload-and-caching.md
+      - Collaborative Editing: for-editors/collaborative-editing.md
+      - Administration:
+        - Authentication & SSO: for-editors/authentication.md
+        - User Management: for-editors/user-management.md
+        - Site Settings: for-editors/site-settings.md
+        - Contact Management: for-editors/contact-management.md
+    - For Site Builders:
+      - Start Here: for-site-builders/index.md
+      - Overview: for-site-builders/overview.md
+      - Layouts: for-site-builders/layouts.md
+      - Layout Examples:
+        - Overview: for-site-builders/layout-examples/overview.md
+        - No Framework: for-site-builders/layout-examples/no-framework.md
+        - Bootstrap 5: for-site-builders/layout-examples/bootstrap-5.md
+        - Tailwind CSS: for-site-builders/layout-examples/tailwind.md
+        - Bulma: for-site-builders/layout-examples/bulma.md
+        - Foundation: for-site-builders/layout-examples/foundation.md
+      - Templates: for-site-builders/templates.md
+      - Template Examples:
+        - Overview: for-site-builders/template-examples/overview.md
+        - Generic Article: for-site-builders/template-examples/generic-article.md
+        - Blog Post: for-site-builders/template-examples/blog-post.md
+        - Landing Page: for-site-builders/template-examples/landing-page.md
+        - Information Page with Secondary Navigation: for-site-builders/template-examples/information-page-secondary-nav.md
+      - Pages: for-site-builders/pages.md
+      - Article Examples:
+        - Overview: for-site-builders/article-examples/overview.md
+        - Standalone Content: for-site-builders/article-examples/standalone-content.md
+        - Announcement and Update: for-site-builders/article-examples/announcement-update.md
+        - Resource with Table of Contents: for-site-builders/article-examples/resource-with-toc.md
+        - Event Page: for-site-builders/article-examples/event-page.md
+      - Style Guide: for-site-builders/style-guide-template.md
+      - Widgets:
+        - Overview: for-site-builders/widgets/overview.md
+        - Breadcrumbs: for-site-builders/widgets/breadcrumbs.md
+        - Crypto: for-site-builders/widgets/crypto.md
+        - Forms: for-site-builders/widgets/forms.md
+        - Image: for-site-builders/widgets/image.md
+        - Nav Builder: for-site-builders/widgets/nav-builder.md
+        - Search: for-site-builders/widgets/search.md
+        - Table of Contents: for-site-builders/widgets/table-of-contents.md
 
-  - Installation:
-    - Overview: installation/overview.md
-    - Azure: installation/azure.md
-    - AWS: installation/aws.md
-    - Docker: installation/docker.md
-    - Local Development: installation/local-development.md
-    - Setup Wizard:
-      - Overview: installation/setup-wizard.md
-      - Welcome: installation/setup-wizard-welcome.md
-      - "Step 1: Storage": installation/setup-wizard-step1-storage.md
-      - "Step 2: Admin Account": installation/setup-wizard-step2-admin.md
-      - "Step 3: Publisher": installation/setup-wizard-step3-publisher.md
-      - "Step 4: Email": installation/setup-wizard-step4-email.md
-      - "Step 5: CDN": installation/setup-wizard-step5-cdn.md
-      - "Step 6: Review": installation/setup-wizard-step6-review.md
-      - Complete: installation/setup-wizard-complete.md
-    - Post-Installation: installation/post-installation.md
-    - Minimum Required Settings: installation/minimum-required-settings.md
-    - Cloudflare Cloud Connector: installation/cloudflare-cloud-connector.md
-    - Cloudflare Edge Hosting: installation/cloudflare-edge-hosting.md
-    - DocsPublisher: installation/docs-publisher.md
-
-  - For Editors:
-    - Start Here: for-editors/index.md
-    - Overview: for-editors/overview.md
-    - Creating Articles: for-editors/creating-articles.md
-    - Updating & Deleting: for-editors/updating-and-deleting-articles.md
-    - Article Lifecycle: for-editors/article-lifecycle-reference.md
-    - Editors:
-      - Visual Editor: for-editors/visual-editor.md
-      - Visual Editor Quick Start: for-editors/visual-editor-quickstart.md
-      - Visual Editor Toolbar Reference: for-editors/visual-editor-toolbar-reference.md
-      - Visual Editor Visual Guide: for-editors/visual-editor-visual-guide.md
-      - Visual Editor Technical Reference: for-editors/visual-editor-technical-reference.md
-      - Page Builder: for-editors/page-builder.md
-      - Layers Panel: for-editors/layers.md
-      - Page Builder Quick Start: for-editors/page-builder-quickstart.md
-      - Code Editor: for-editors/code-editor.md
-      - AI Assistant: for-editors/ai-assistant.md
-      - AI Provider Setup: for-editors/ai-provider-setup.md
-      - AI Troubleshooting: for-editors/ai-troubleshooting.md
-      - Image Editing: for-editors/image-editing.md
-    - Publishing:
-      - Publishing Modes: for-editors/publishing-modes.md
-      - Page Scheduling: for-editors/page-scheduling.md
-      - Publishing Progress: for-editors/publishing-progress.md
-      - Version History: for-editors/version-history.md
-      - URL Management: for-editors/url-management.md
-    - Blogging: for-editors/blogging.md
-    - File Manager: for-editors/file-manager.md
-    - File Manager Quick Start: for-editors/file-manager-quickstart.md
-    - File Manager Toolbar Reference: for-editors/file-manager-toolbar-reference.md
-    - Content Export & Import: for-editors/content-export-import.md
-    - Preload & Caching: for-editors/preload-and-caching.md
-    - Collaborative Editing: for-editors/collaborative-editing.md
-    - Administration:
-      - Authentication & SSO: for-editors/authentication.md
-      - User Management: for-editors/user-management.md
-      - Site Settings: for-editors/site-settings.md
-      - Contact Management: for-editors/contact-management.md
-
-  - For Site Builders:
-    - Start Here: for-site-builders/index.md
-    - Overview: for-site-builders/overview.md
-    - Layouts: for-site-builders/layouts.md
-    - Layout Examples:
-      - Overview: for-site-builders/layout-examples/overview.md
-      - No Framework: for-site-builders/layout-examples/no-framework.md
-      - Bootstrap 5: for-site-builders/layout-examples/bootstrap-5.md
-      - Tailwind CSS: for-site-builders/layout-examples/tailwind.md
-      - Bulma: for-site-builders/layout-examples/bulma.md
-      - Foundation: for-site-builders/layout-examples/foundation.md
-    - Templates: for-site-builders/templates.md
-    - Template Examples:
-      - Overview: for-site-builders/template-examples/overview.md
-      - Generic Article: for-site-builders/template-examples/generic-article.md
-      - Blog Post: for-site-builders/template-examples/blog-post.md
-      - Landing Page: for-site-builders/template-examples/landing-page.md
-      - Information Page with Secondary Navigation: for-site-builders/template-examples/information-page-secondary-nav.md
-    - Pages: for-site-builders/pages.md
-    - Article Examples:
-      - Overview: for-site-builders/article-examples/overview.md
-      - Standalone Content: for-site-builders/article-examples/standalone-content.md
-      - Announcement and Update: for-site-builders/article-examples/announcement-update.md
-      - Resource with Table of Contents: for-site-builders/article-examples/resource-with-toc.md
-      - Event Page: for-site-builders/article-examples/event-page.md
-    - Style Guide: for-site-builders/style-guide-template.md
-    - Widgets:
-      - Overview: for-site-builders/widgets/overview.md
-      - Breadcrumbs: for-site-builders/widgets/breadcrumbs.md
-      - Crypto: for-site-builders/widgets/crypto.md
-      - Forms: for-site-builders/widgets/forms.md
-      - Image: for-site-builders/widgets/image.md
-      - Nav Builder: for-site-builders/widgets/nav-builder.md
-      - Search: for-site-builders/widgets/search.md
-      - Table of Contents: for-site-builders/widgets/table-of-contents.md
-
-  - For Developers:
-    - Start Here: for-developers/index.md
-    - Overview: for-developers/overview.md
-    - Documentation Standards:
-      - Standards Stack v1: for-developers/documentation-standards-stack-v1.md
-      - Metadata Schema v1: for-developers/documentation-metadata-schema.md
-      - Templates: for-developers/documentation-templates.md
-      - PR Checklist: for-developers/documentation-pr-checklist.md
-      - Rollout Plan (30-60-90): for-developers/documentation-rollout-plan.md
-      - Gap Review and Upgrade Plan (2026-04): for-developers/documentation-standards-gap-review-2026-04.md
-    - Architecture: for-developers/architecture.md
-    - Architecture Diagram Catalog: for-developers/architecture-diagram-catalog.md
-    - Architecture Executive Summary: for-developers/architecture-executive-summary.md
-    - Core Platform Architecture: for-developers/architecture-core-platform.md
-    - Architecture Decision Matrix: for-developers/architecture-decision-matrix.md
-    - Architecture Mode Selection Worksheet: for-developers/architecture-mode-selection-worksheet.md
-    - Architecture Route Inventory Templates: for-developers/architecture-route-inventory-templates.md
-    - Architecture Review Checklist: for-developers/architecture-review-checklist.md
-    - Architecture Change Log: for-developers/architecture-change-log.md
-    - Architecture Decision Records (ADRs): for-developers/architecture-decision-records.md
-    - Middleware Pipeline: for-developers/middleware-pipeline.md
-    - Editor Rendering Flow: for-developers/editor-rendering-flow.md
-    - Publisher Rendering Flow: for-developers/publisher-rendering-flow.md
-    - Layouts & Templates:
-      - Layouts: for-developers/layouts.md
-      - Templates: for-developers/templates.md
-      - Layouts, Templates & Articles: for-developers/layouts-templates-articles.md
-    - Article Lifecycle: for-developers/article-lifecycle.md
-    - Multi-Tenancy:
-      - Deep Dive: for-developers/multi-tenancy-deep-dive.md
-      - Tenant Isolation Reference: for-developers/tenant-isolation-reference.md
-    - Publisher Architecture: for-developers/publisher-architecture.md
-    - Content Delivery Architecture: for-developers/content-delivery-architecture.md
-    - Blog Architecture: for-developers/blog-architecture.md
-    - Image Processing API: for-developers/image-processing-api.md
-    - EF Cross-Provider Guide: for-developers/ef-cross-provider-guide.md
-    - Storage Provider Auto-Detection: for-developers/storage-provider-auto-detection.md
-    - Roles & Permissions: for-developers/roles-and-permissions.md
-    - Audit Logging: for-developers/audit-logging.md
-    - AI Integration: for-developers/ai-integration.md
-    - Extending:
-      - Custom Widgets: for-developers/extending/custom-widgets.md
-      - FlexDb Identity: for-developers/extending/flex-db.md
-    - API Reference:
-      - Overview: for-developers/api/overview.md
-      - Architecture: for-developers/api/architecture.md
-      - Configuration: for-developers/api/configuration.md
-      - Blog API: for-developers/api/blog-api.md
-      - Contact Form API: for-developers/api/contact-form.md
-      - Contact Form Example: for-developers/api/contact-form-example.md
-      - Integration Guide: for-developers/api/integration-guide.md
-      - Tutorial: for-developers/api/tutorial.md
-      - Development: for-developers/api/development.md
-      - Testing: for-developers/api/testing.md
-      - Updates: for-developers/api/updates.md
-    - Website Launch Workflow:
-      - Overview: for-developers/website-launch/index.md
-      - Full Workflow: for-developers/website-launch/Website-Launch-Workflow.md
-      - "Phase 1: Design & Planning": for-developers/website-launch/01-Design-and-Planning.md
-      - "Phase 2: Creating Layouts": for-developers/website-launch/02-Creating-Layouts.md
-      - "Phase 3: Creating Templates": for-developers/website-launch/03-Creating-Templates.md
-      - "Phase 4: Building Home Page": for-developers/website-launch/04-Building-Home-Page.md
-      - "Phase 5: Building Pages": for-developers/website-launch/05-Building-Initial-Pages.md
-      - "Phase 6: Handoff": for-developers/website-launch/06-Preparing-for-Handoff.md
-      - Modern Approach: for-developers/website-launch/SkyCMS-Modern-Approach.md
-      - Creating Editable Areas: for-developers/website-launch/CreatingEditableAreas.md
-      - Checklists:
-        - Pre-Launch Checklist: for-developers/website-launch/Checklists/Pre-Launch-Checklist.md
-        - Content Creator Onboarding: for-developers/website-launch/Checklists/Content-Creator-Onboarding.md
-      - Upload Secrets: for-developers/website-launch/UploadSecretsToGithubRepo.md
+  - Developers:
+    - For Developers:
+      - Start Here: for-developers/index.md
+      - Overview: for-developers/overview.md
+      - Documentation Standards:
+        - Standards Stack v1: for-developers/documentation-standards-stack-v1.md
+        - Visual Style Standard (DVSS): for-developers/documentation-visual-style-standard.md
+        - Metadata Schema v1: for-developers/documentation-metadata-schema.md
+        - Templates: for-developers/documentation-templates.md
+        - PR Checklist: for-developers/documentation-pr-checklist.md
+        - Adoption Priority Plan: for-developers/documentation-adoption-priority-plan.md
+        - Rollout Plan (30-60-90): for-developers/documentation-rollout-plan.md
+        - Gap Review and Upgrade Plan (2026-04): for-developers/documentation-standards-gap-review-2026-04.md
+      - Architecture: for-developers/architecture.md
+      - Architecture Diagram Catalog: for-developers/architecture-diagram-catalog.md
+      - Architecture Executive Summary: for-developers/architecture-executive-summary.md
+      - Core Platform Architecture: for-developers/architecture-core-platform.md
+      - Architecture Decision Matrix: for-developers/architecture-decision-matrix.md
+      - Architecture Mode Selection Worksheet: for-developers/architecture-mode-selection-worksheet.md
+      - Architecture Route Inventory Templates: for-developers/architecture-route-inventory-templates.md
+      - Architecture Review Checklist: for-developers/architecture-review-checklist.md
+      - Architecture Change Log: for-developers/architecture-change-log.md
+      - Architecture Decision Records (ADRs): for-developers/architecture-decision-records.md
+      - Middleware Pipeline: for-developers/middleware-pipeline.md
+      - Editor Rendering Flow: for-developers/editor-rendering-flow.md
+      - Publisher Rendering Flow: for-developers/publisher-rendering-flow.md
+      - Layouts & Templates:
+        - Layouts: for-developers/layouts.md
+        - Templates: for-developers/templates.md
+        - Layouts, Templates & Articles: for-developers/layouts-templates-articles.md
+      - Article Lifecycle: for-developers/article-lifecycle.md
+      - Multi-Tenancy:
+        - Deep Dive: for-developers/multi-tenancy-deep-dive.md
+        - Tenant Isolation Reference: for-developers/tenant-isolation-reference.md
+      - Publisher Architecture: for-developers/publisher-architecture.md
+      - Content Delivery Architecture: for-developers/content-delivery-architecture.md
+      - Blog Architecture: for-developers/blog-architecture.md
+      - Image Processing API: for-developers/image-processing-api.md
+      - EF Cross-Provider Guide: for-developers/ef-cross-provider-guide.md
+      - Storage Provider Auto-Detection: for-developers/storage-provider-auto-detection.md
+      - Roles & Permissions: for-developers/roles-and-permissions.md
+      - Audit Logging: for-developers/audit-logging.md
+      - AI Integration: for-developers/ai-integration.md
+      - Extending:
+        - Custom Widgets: for-developers/extending/custom-widgets.md
+        - FlexDb Identity: for-developers/extending/flex-db.md
+      - API Reference:
+        - Overview: for-developers/api/overview.md
+        - Architecture: for-developers/api/architecture.md
+        - Configuration: for-developers/api/configuration.md
+        - Blog API: for-developers/api/blog-api.md
+        - Contact Form API: for-developers/api/contact-form.md
+        - Contact Form Example: for-developers/api/contact-form-example.md
+        - Integration Guide: for-developers/api/integration-guide.md
+        - Tutorial: for-developers/api/tutorial.md
+        - Development: for-developers/api/development.md
+        - Testing: for-developers/api/testing.md
+        - Updates: for-developers/api/updates.md
+      - Website Launch Workflow:
+        - Overview: for-developers/website-launch/index.md
+        - Full Workflow: for-developers/website-launch/Website-Launch-Workflow.md
+        - "Phase 1: Design & Planning": for-developers/website-launch/01-Design-and-Planning.md
+        - "Phase 2: Creating Layouts": for-developers/website-launch/02-Creating-Layouts.md
+        - "Phase 3: Creating Templates": for-developers/website-launch/03-Creating-Templates.md
+        - "Phase 4: Building Home Page": for-developers/website-launch/04-Building-Home-Page.md
+        - "Phase 5: Building Pages": for-developers/website-launch/05-Building-Initial-Pages.md
+        - "Phase 6: Handoff": for-developers/website-launch/06-Preparing-for-Handoff.md
+        - Modern Approach: for-developers/website-launch/SkyCMS-Modern-Approach.md
+        - Creating Editable Areas: for-developers/website-launch/CreatingEditableAreas.md
+        - Checklists:
+          - Pre-Launch Checklist: for-developers/website-launch/Checklists/Pre-Launch-Checklist.md
+          - Content Creator Onboarding: for-developers/website-launch/Checklists/Content-Creator-Onboarding.md
+        - Upload Secrets: for-developers/website-launch/UploadSecretsToGithubRepo.md
+    - Deployment:
+      - Overview: deployment/overview.md
+      - Azure: deployment/azure.md
+      - Docker: deployment/docker.md
+      - Cloudflare Edge Hosting: deployment/cloudflare.md
+      - Demo Deployment: deployment/demo-deployment.md
+      - CI/CD Pipelines: deployment/cicd-pipelines.md
+      - Publishing Workflow: deployment/publishing-workflow.md
+      - Licensing & Distribution: deployment/licensing-and-distribution.md
 
   - Configuration:
     - Overview: configuration/overview.md
@@ -298,16 +311,6 @@ nav:
       - NoOp Provider: configuration/email/none.md
       - Environment Variables: configuration/email/environment-variables.md
       - Reference: configuration/email/configuration-reference.md
-
-  - Deployment:
-    - Overview: deployment/overview.md
-    - Azure: deployment/azure.md
-    - Docker: deployment/docker.md
-    - Cloudflare Edge Hosting: deployment/cloudflare.md
-    - Demo Deployment: deployment/demo-deployment.md
-    - CI/CD Pipelines: deployment/cicd-pipelines.md
-    - Publishing Workflow: deployment/publishing-workflow.md
-    - Licensing & Distribution: deployment/licensing-and-distribution.md
 
   - Reference:
     - AI Context Pack: reference/ai-context-pack.md

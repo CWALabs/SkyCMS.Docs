@@ -1,7 +1,21 @@
-<!-- Audience: DevOps -->
-<!-- Type: How-to -->
+---
+canonical_title: Create AWS IAM Credentials for S3
+description: Create least-privilege AWS IAM credentials for SkyCMS S3-compatible storage access.
+doc_type: How-to
+product_area: configuration
+user_intent: create-aws-iam-credentials-for-skycms-s3
+audience:
+  - DevOps
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Create AWS IAM Credentials for S3
+
+## Summary
 
 Use this guide when SkyCMS needs AWS credentials to read and write objects in an S3 bucket used for media storage or asset delivery.
 
@@ -56,9 +70,9 @@ This guide covers creating a dedicated IAM user with access keys, which is the s
 }
 ```
 
-7. Select **Next**.
-8. On the **Review and create** step, enter a descriptive name such as `SkyCMS-S3-Production`.
-9. Select **Create policy**.
+1. Select **Next**.
+2. On the **Review and create** step, enter a descriptive name such as `SkyCMS-S3-Production`.
+3. Select **Create policy**.
 
 Do not grant `s3:*` unless you have a specific operational reason. The actions above are the minimum required for SkyCMS upload, download, and delete flows.
 

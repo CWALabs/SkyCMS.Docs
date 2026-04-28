@@ -1,17 +1,23 @@
-﻿# Publisher Rendering Flow
-
-**Audience:** Backend Developers, Platform Engineers  
-**Type:** Deep Dive / Reference
-
-This document explains how SkyCMS serves published pages across three delivery patterns:
-
-1. Static-first delivery (pre-rendered HTML from storage)
-2. Dynamic delivery (database-backed, rendered on request)
-3. Hybrid authenticated static delivery (static files with dynamic auth/proxy capabilities)
-
-It also covers how the Editor generates static HTML using `IViewRenderService`, and why blog rendering follows a specialized path.
-
 ---
+canonical_title: Publisher Rendering Flow
+description: How Sky.Publisher selects static or dynamic delivery at startup and routes requests through each flow.
+doc_type: Reference
+product_area: infrastructure
+user_intent: understand-publisher-rendering-flow
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Publisher Rendering Flow
+
+## Summary
+
+How Sky.Publisher selects static or dynamic delivery at startup and routes requests through each flow.
 
 ## Terminology
 

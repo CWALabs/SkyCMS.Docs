@@ -1,16 +1,32 @@
-# Preload & Caching
+---
+canonical_title: Preload and caching
+description: Multi-layer caching architecture, automatic cache invalidation, and admin-controlled preload warmup in SkyCMS.
+doc_type: Reference
+product_area: administration
+user_intent: understand-caching-layers-and-use-preload-warmup
+audience:
+  - Administrators
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
+# Preload and caching
+
+## Summary
 
 SkyCMS includes a multi-layer caching system and an admin-only preload function for warming caches. This ensures fast page delivery while keeping content fresh.
 
-**Audience:** Administrators, Developers
-
 ---
 
-## Cache Architecture
+## Cache architecture
 
 SkyCMS uses several caching layers, each serving a different purpose:
 
-### In-Memory Cache
+### In-memory cache
 
 The primary cache is an in-memory cache (`ICacheService<T>`) that stores frequently accessed data to avoid repeated database queries.
 
@@ -41,7 +57,7 @@ flowchart LR
    Edge --> StaticProxy
 ```
 
-### Cache Operations
+### Cache operations
 
 The cache service supports:
 
@@ -50,7 +66,7 @@ The cache service supports:
 - **Remove** — Invalidate a specific cache entry.
 - **Clear** — Flush all cached data.
 
-### CDN Cache
+### CDN cache
 
 When a CDN is configured (Cloudflare, Azure CDN, CloudFront, or Sucuri), published content is also cached at the edge:
 
@@ -60,7 +76,7 @@ When a CDN is configured (Cloudflare, Azure CDN, CloudFront, or Sucuri), publish
 
 ---
 
-## Cache Invalidation
+## Cache invalidation
 
 Caches are invalidated automatically through domain events:
 
@@ -77,11 +93,11 @@ The `CacheInvalidationHandler` listens for these events and removes the affected
 
 ---
 
-## Preload (Cache Warming)
+## Preload (cache warming)
 
 Administrators can proactively warm caches to prevent cold-start delays after deployments or cache flushes.
 
-### Using Preload
+### Using preload
 
 1. Navigate to **Preload** in the admin menu (or go to `/Editor/Preload`).
 2. The preload view shows:
@@ -92,7 +108,7 @@ Administrators can proactively warm caches to prevent cold-start delays after de
 
 **Access:** Administrators only.
 
-### What Preload Does
+### What preload does
 
 - Regenerates cached content for all published pages.
 - Optionally pre-fetches content through the CDN to warm edge caches.
@@ -100,7 +116,7 @@ Administrators can proactively warm caches to prevent cold-start delays after de
 
 ---
 
-## Static File Delivery
+## Static file delivery
 
 The Publisher component serves static files from blob storage with intelligent caching:
 
@@ -110,7 +126,7 @@ The Publisher component serves static files from blob storage with intelligent c
 
 ---
 
-## Multi-Tenancy
+## Multi-tenancy
 
 - Cache keys include the tenant domain to prevent data leakage between tenants.
 - Each tenant has an isolated cache namespace.
@@ -119,7 +135,7 @@ The Publisher component serves static files from blob storage with intelligent c
 
 ---
 
-## Performance Tips
+## Performance tips
 
 1. **Enable static pages** for production sites — static HTML served from blob storage is significantly faster than server-rendered content.
 2. **Configure a CDN** to cache content at edge locations close to your users.
@@ -128,7 +144,7 @@ The Publisher component serves static files from blob storage with intelligent c
 
 ---
 
-## See Also
+## See also
 
 - [Publishing Modes](publishing-modes.md) — Static site generation workflow
 - [Site Settings](site-settings.md) — CDN configuration

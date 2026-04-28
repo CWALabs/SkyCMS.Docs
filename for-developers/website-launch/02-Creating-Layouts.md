@@ -1,28 +1,23 @@
-﻿---
+---
 canonical_title: Phase 2: Creating Layouts Guide
 description: Build site-wide layout shells in SkyCMS and understand how shared structure reduces duplication across templates and articles.
-audience:
-    - Backend Developers
-    - Full-Stack Developers
-    - Designers
 doc_type: How-to
-status: Draft
-entities:
-    - layout
-    - template
-    - article
-keywords:
-    - creating layouts
-    - site design
-    - dry principle
-source: SkyCMS/Docs/Developer-Guides/02-Creating-Layouts.md
+product_area: development
+user_intent: implement-phase-2-creating-layouts-guide
+audience:
+  - Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
 ---
 
 # Phase 2: Creating Layouts Guide
 
-**Timeline:** 4-8 hours  
-**Typical Effort:** Building 1-2 Site Designs with responsive markup  
-**Output:** Complete Site Design with header, navigation, content area, footer
+## Summary
+
+Build site-wide layout shells in SkyCMS and understand how shared structure reduces duplication across templates and articles.
 
 ## Overview
 

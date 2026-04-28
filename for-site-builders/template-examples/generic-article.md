@@ -1,9 +1,29 @@
-<!-- Audience: Site Builders, Designers, Front-End Developers -->
-<!-- Type: Example -->
+---
+canonical_title: Generic Article Template Examples
+description: Build flexible article templates for long-form content while keeping stable editable-region contracts across frameworks.
+doc_type: Tutorial
+product_area: site-building
+user_intent: implement-generic-article-template-pattern
+audience:
+  - Site Builders
+  - Designers
+  - Front-End Developers
+difficulty: intermediate
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-27
+---
 
 # Generic Article Template Examples
 
+## Summary
+
 Generic article templates are the safest starting point for documentation pages, policy pages, knowledge-base content, and long-form editorial content.
+
+## Outcome
+
+After completing this guide, you should be able to implement a reusable generic article template with consistent title, summary, body, and optional sidebar regions.
 
 ## Recommended editable regions
 
@@ -153,3 +173,7 @@ Generic article templates are the safest starting point for documentation pages,
 - [Blog Post Template Examples](./blog-post.md)
 - [Landing Page Template Examples](./landing-page.md)
 - [Information Page with Secondary Navigation Examples](./information-page-secondary-nav.md)
+
+## Verification
+
+This example is successful when editable regions render in the expected hierarchy, the body region remains stable across template revisions, and optional sidebar content does not block core reading flow.

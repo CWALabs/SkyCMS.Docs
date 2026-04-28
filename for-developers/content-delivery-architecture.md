@@ -1,10 +1,23 @@
+---
+canonical_title: Content Delivery Architecture
+description: This document describes how SkyCMS serves files, pages, and assets to site visitors — from blob storage through the application layer to CDN edge caches.
+doc_type: Explanation
+product_area: architecture
+user_intent: understand-content-delivery-architecture
+audience:
+  - Developers
+difficulty: advanced
+version: current
+status: active
+owner: docs-platform
+last_reviewed: 2026-04-28
+---
+
 # Content Delivery Architecture
 
-This document describes how SkyCMS serves files, pages, and assets to site visitors — from blob storage through the application layer to CDN edge caches.
+## Summary
 
-**Audience:** Developers
-
----
+How SkyCMS serves files, pages, and assets to site visitors — from blob storage through the application layer to CDN edge caches.
 
 ## Delivery Paths
 
