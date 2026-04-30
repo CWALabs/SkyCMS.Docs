@@ -10,7 +10,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-04-30
 ---
 
 # File Manager Quick Start
@@ -35,29 +35,30 @@ After completing this quick start, you should be able to open File Manager, uplo
 
 ## Upload files
 
-**Drag and drop:**
+**Drag and drop (anywhere on the page):**
 
-1. Open your computer's file explorer alongside the browser.
-2. Drag one or more files into the upload zone.
-3. Watch the progress bar — files upload automatically.
+1. Navigate to the destination folder in File Manager.
+2. Drag one or more files from your computer and drop them anywhere on the page.
+3. The FilePond upload panel expands and files begin uploading. Per-file progress is shown.
+4. When complete the folder refreshes automatically.
 
 **Browse and select:**
 
-1. Click inside the upload zone.
+1. Click the **Upload Files** button at the top of the File Manager.
 2. Select files in the system dialog.
-3. Click **Open**.
+3. Click **Open** — files upload to the currently open folder.
 
 ## Create a folder
 
-1. Find the new folder name field next to the breadcrumb.
-2. Enter a name (use hyphens, not spaces).
-3. Click **Create**.
+1. Navigate to the parent folder.
+2. Click **New Folder** in the toolbar (folder icon).
+3. Type a name (use hyphens instead of spaces) and confirm.
 
 ## Edit a code file
 
 1. Find the file in the list.
-2. Click the Monaco editor icon (code brackets) next to it.
-3. Make your edits.
+2. Right-click it and choose **Open**, or select it and click **Open** in the toolbar.
+3. The Monaco code editor opens. Make your edits.
 4. Press **Ctrl+S** (or **Cmd+S** on Mac) to save.
 
 See [Code Editor](./code-editor.md) for the full feature guide.
@@ -65,8 +66,8 @@ See [Code Editor](./code-editor.md) for the full feature guide.
 ## Edit an image
 
 1. Find the image in the list.
-2. Click the Filerobot icon next to it.
-3. Crop, adjust, annotate, or resize as needed.
+2. Right-click it and choose **Open**, or select it and click **Open** in the toolbar.
+3. The Filerobot image editor opens. Crop, adjust, annotate, or resize as needed.
 4. Click **Save** — the original is replaced.
 
 See [Image Editing](./image-editing.md) for the full feature guide.
@@ -74,8 +75,8 @@ See [Image Editing](./image-editing.md) for the full feature guide.
 ## Copy a file URL
 
 1. Find the file in the list.
-2. Click the clipboard icon next to it.
-3. The URL is copied to your clipboard so you can paste it wherever you need it.
+2. Right-click it and choose **Get URL**, or select it and click **Info** in the toolbar, then copy the URL from the properties panel.
+3. Paste the URL wherever you need it.
 
 ## Delete files
 

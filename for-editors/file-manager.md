@@ -11,7 +11,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-04-30
 ---
 
 # File Manager
@@ -26,16 +26,17 @@ Use this guide when you need to:
 
 ## Overview
 
-The SkyCMS File Manager is a browser-based interface for managing website assets. You can upload, organise, edit, and delete files without FTP or command-line access. All publicly accessible files live under the `/pub` directory.
+The SkyCMS File Manager is a browser-based interface built on [elFinder 2.1](https://github.com/Studio-42/elFinder). You can upload, organise, edit, and delete files without FTP or command-line access. All publicly accessible files live under the `/pub` directory.
 
 Key capabilities:
 
-- Drag-and-drop uploads with chunked support for large files.
-- Built-in Monaco code editor for HTML, CSS, JavaScript, JSON, and XML.
-- Integrated Filerobot image editor for in-browser image adjustments.
-- Bulk move, copy, and delete operations.
-- Thumbnail gallery view for images.
-- Copy-to-clipboard URL shortcut for any file.
+- Full-featured toolbar with Back, Forward, Home, Up, New Folder, New File, Copy, Cut, Paste, Rename, Delete, Search, and Sort.
+- FilePond upload panel with drag-anywhere support and chunked upload (5 MB chunks) for large files.
+- Built-in Monaco code editor for HTML, CSS, JavaScript, JSON, and XML (opened via elFinder's Open action).
+- Integrated Filerobot image editor for in-browser image adjustments (opened via elFinder's Open action).
+- Bulk copy, move, and delete via toolbar or right-click context menu.
+- Thumbnail preview for images.
+- On-demand thumbnail generation (120 × 120 px).
 
 ## What this page covers
 
@@ -61,86 +62,102 @@ When editing an article or template, the File Manager automatically opens in tha
 
 ## Interface overview
 
+The File Manager has two main areas: the **upload panel** at the top and the **elFinder browser** below it.
+
 | Element | Purpose |
 | --- | --- |
-| Breadcrumb trail | Shows and navigates the current folder path |
-| New folder field | Text field + **Create** button to add a subfolder |
-| Upload zone | Drag-and-drop area; also click to browse |
-| Action buttons | New file, Rename, Delete, Copy/Move, Clear Selected, Show Selected, Thumbnail toggle |
-| File/folder grid | List or thumbnail view of current folder contents |
-| Pagination controls | Navigate pages; set items per page; sort options |
+| Upload panel | **Upload Files** button and FilePond drop zone — drop files anywhere on the page to trigger it |
+| elFinder toolbar | All file operations: navigation, create, copy, paste, delete, rename, search, view toggle, sort |
+| Folder tree (left pane) | Collapsible tree showing folder hierarchy under `/pub` |
+| File/folder area (right pane) | Grid or list view of the current folder's contents |
+| Breadcrumb | Shows current path; click any segment to navigate up |
+| Status bar | Shows selected item count and folder details |
+
+For a control-by-control breakdown of every toolbar button, see [File Manager Toolbar Reference](./file-manager-toolbar-reference.md).
 
 ## File and folder operations
 
 ### Create a folder
 
 1. Navigate to the parent folder.
-2. Enter the new name in the folder field next to the breadcrumb.
-3. Click **Create**.
+2. Click **New Folder** in the toolbar (folder icon with a plus).
+3. Type the new name and confirm.
 
 Avoid spaces and special characters in folder names — use hyphens or underscores instead.
 
 ### Create a new file
 
-1. Click **New file**.
+1. Click **New File** in the toolbar (file icon).
 2. Enter a name with a supported extension (`.html`, `.css`, `.js`, `.json`, `.xml`, `.txt`).
-3. Click **Create** — the code editor opens automatically.
+3. Confirm — elFinder creates the file and the code editor can be opened from the context menu.
 
 ### Select files
 
-- Click the checkbox next to any item to select it.
-- Check multiple boxes for bulk operations.
-- Use **Show Selected** to review the full selection across folders.
-- Use **Clear Selected** to deselect everything.
+- **Single select:** Click an item.
+- **Multi-select:** Hold **Ctrl** (or **Cmd** on Mac) and click additional items.
+- **Range select:** Hold **Shift** and click to select a contiguous range.
+- **All:** Press **Ctrl+A** (or **Cmd+A**) to select all items in the current folder.
 
 ### Rename
 
 1. Select exactly one item.
-2. Click **Rename**.
-3. Enter the new name and click **Change**.
+2. Click **Rename** in the toolbar, or right-click and choose **Rename**.
+3. Enter the new name and confirm.
 
 Changing the file extension shows a warning — only do this if you intend to change the file type.
 
 ### Delete
 
 1. Select one or more items.
-2. Click **Delete**.
+2. Click **Delete** in the toolbar (trash icon), or right-click and choose **Delete**.
 3. Confirm in the dialog.
 
 Deletion is permanent and cannot be undone. Verify your selection before confirming.
 
 ### Copy or move
 
-1. Select the items to copy or move.
-2. Click **Copy/Move**.
+**Copy:**
+1. Select the items to copy.
+2. Click **Copy** in the toolbar (or right-click → **Copy**).
 3. Navigate to the destination folder.
-4. Click **Copy to here** or **Move to here**.
+4. Click **Paste** in the toolbar — a copy is created.
+
+**Move:**
+1. Select the items to move.
+2. Click **Cut** in the toolbar (or right-click → **Cut**).
+3. Navigate to the destination folder.
+4. Click **Paste** — the items are moved.
 
 You cannot create or modify files outside the `/pub` directory.
 
 ### Download a file
 
-Click the file name in list view, or click **Download** on an image card.
+1. Select the file.
+2. Click **Download** in the toolbar, or right-click → **Download**.
 
 ## Uploading files
 
-### Drag and drop
+The File Manager uses **FilePond** for all uploads. There is a dedicated upload panel above the elFinder browser.
 
-1. Navigate to the target folder.
-2. Drag files from your computer into the upload zone.
-3. Upload progress appears per file.
+### Drag and drop (anywhere on the page)
+
+1. Navigate to the target folder in the File Manager.
+2. Drag files from your computer and drop them anywhere on the browser page.
+3. The FilePond panel expands automatically and files begin uploading immediately.
+4. Each file shows individual progress. When all uploads finish the panel collapses and the folder refreshes.
 
 ### Browse and select
 
-1. Click inside the upload zone.
-2. Select files in the system dialog and click **Open**.
+1. Click the **Upload Files** button at the top of the File Manager.
+2. Select one or more files in the system dialog and click **Open**.
+3. Files upload to the currently open folder.
 
 ### Upload behaviour
 
-- Files larger than 25 MB are automatically split into 5 MB chunks for reliable uploads.
-- Multiple files upload simultaneously.
-- Interrupted chunked uploads can resume from the last successful chunk.
-- Folder structure from your local system is preserved if you upload with paths.
+- Files are uploaded as 5 MB chunks for reliability on large files.
+- Multiple files upload simultaneously with individual per-file progress.
+- Uploads always target the folder currently open in the file browser.
+- After all uploads succeed, elFinder reloads the current folder automatically.
 
 ### Supported file types with special handling
 
@@ -156,13 +173,21 @@ All other file types can be uploaded and downloaded but have no built-in editor.
 
 ### Code editor
 
-Open any supported code file by clicking the Monaco editor icon in the file list. For full feature details, see [Code Editor](./code-editor.md).
+1. Right-click a supported code file and choose **Open**, or select it and click **Open** in the toolbar.
+2. The Monaco code editor opens with syntax highlighting.
+3. Press **Ctrl+S** (or **Cmd+S** on Mac) to save.
+
+For full feature details, see [Code Editor](./code-editor.md).
 
 Supported extensions: `.html`, `.htm`, `.css`, `.js`, `.json`, `.xml`, `.txt`
 
 ### Image editor
 
-Open any supported image by clicking the Filerobot icon. For full feature details, see [Image Editing](./image-editing.md).
+1. Right-click a supported image and choose **Open**, or select it and click **Open** in the toolbar.
+2. The Filerobot image editor opens with crop, resize, annotate, and filter tools.
+3. Click **Save** to replace the original.
+
+For full feature details, see [Image Editing](./image-editing.md).
 
 Supported formats: `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`
 
@@ -172,12 +197,11 @@ Saves replace the original — keep a backup before making major edits.
 
 ### Thumbnail view
 
-Click **Show image thumbnails** to switch to gallery card view. Each card shows a preview, file info, and quick-action buttons. Click **Show file list** to return to list view.
+Click the **View** button in the toolbar (or right-click → **View**) to switch between icon/thumbnail view and list view. Thumbnails are generated automatically at 120 × 120 px on first request.
 
 ### Copy a file URL
 
-1. Click the clipboard icon next to any file.
-2. The URL is copied — paste it wherever needed.
+Right-click a file and choose **Get URL**, or use the **Info** toolbar button and copy the URL from the properties panel.
 
 URLs follow the pattern: `https://yourdomain.com/pub/path/to/file.jpg`
 
@@ -185,17 +209,17 @@ URLs follow the pattern: `https://yourdomain.com/pub/path/to/file.jpg`
 
 - Upload images at their intended display dimensions where possible.
 - Use JPEG for photographs, PNG for graphics with transparency, WebP for smaller file sizes.
-- The File Manager generates 120×120 px thumbnails automatically for card view.
+- The File Manager generates 120 × 120 px thumbnails automatically when a folder is viewed in thumbnail mode.
 
 ## Advanced features
 
 ### Sorting
 
-Click any column header to sort by name, type, modified date, or size. Click again to reverse the order.
+Click **Sort** in the toolbar to choose the sort field and direction. You can sort by name, type, modified date, or file size.
 
-### Pagination
+### Search
 
-Use the controls at the top and bottom of the file list to change page or set items per page (10, 20, 50, 100).
+Click **Search** in the toolbar to filter the current folder by filename. Results update as you type.
 
 ### Image selection mode
 
@@ -231,8 +255,8 @@ When inserting images into a page or article, File Manager enters image selectio
 ### Can't navigate to a folder
 
 - Confirm you have access — some folders may be restricted.
-- Use the breadcrumb trail to navigate instead of direct URL.
-- Refresh the page to reset the interface state.
+- Use the breadcrumb trail to navigate up to a known-good path.
+- Click **Reload** in the toolbar to reset the interface state.
 
 ### Performance is slow
 
@@ -247,7 +271,7 @@ File Manager is working as expected when you can:
 - open the correct folder path,
 - upload and retrieve files successfully,
 - rename, move, or delete items with the expected permissions,
-- launch the code or image editor for supported file types.
+- launch the code or image editor via the toolbar or right-click menu for supported file types.
 
 ## Related guides
 

@@ -10,13 +10,15 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-28
+last_reviewed: 2026-04-30
 hide:
   - navigation
   - toc
 ---
 
 # SkyCMS Documentation
+
+> **Docs version:** These pages reflect **SkyCMS v12.3.0** (April 2026). [See what changed](reference/changelog.md)
 
 **The Edge-Native CMS for creative people who want great tools, high performance, simplicity and no constraints**
 

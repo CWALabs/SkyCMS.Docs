@@ -12,7 +12,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-04-30
 ---
 
 # Changelog
@@ -45,6 +45,24 @@ Use this structure for new entries:
 - Related links:
 
 ## Current release notes
+
+### 2026-04-30
+
+- Scope: File Manager UI refresh (v12.3.0).
+- Change type: Feature — new elFinder-based file browser replaces legacy server-rendered file explorer.
+- Summary:
+  - The File Manager now uses the elFinder 2.1 open-source file browser under the hood (`SkyCMS.Drivers.ElFinder` CQRS driver).
+  - FilePond replaces the previous chunked-upload widget. Files can be dropped anywhere on the page; uploads target the folder currently open in elFinder.
+  - All file operations (create, rename, copy, cut, paste, delete, download, search, sort, view toggle) are now available via the elFinder toolbar and right-click context menu.
+  - The legacy server-rendered file manager UI is still available via the `UseModernFileExplorer = false` setting for backwards compatibility.
+  - Documentation updated: [File Manager](../for-editors/file-manager.md), [File Manager Quick Start](../for-editors/file-manager-quickstart.md), [File Manager Toolbar Reference](../for-editors/file-manager-toolbar-reference.md).
+- Impact: Editors see a new, more capable File Manager interface by default.
+- Required action: None for most users. Administrators who relied on any custom extensions to the old UI should review the [File Manager Toolbar Reference](../for-editors/file-manager-toolbar-reference.md) to verify expected controls are present.
+- Related links:
+  - [File Manager](../for-editors/file-manager.md)
+  - [File Manager Quick Start](../for-editors/file-manager-quickstart.md)
+  - [File Manager Toolbar Reference](../for-editors/file-manager-toolbar-reference.md)
+
 
 ### 2026-04-27
 

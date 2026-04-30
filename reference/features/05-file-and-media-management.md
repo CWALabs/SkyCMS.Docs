@@ -12,12 +12,12 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-28
+last_reviewed: 2026-04-30
 ---
 
 # File & Media Management
 
-SkyCMS provides a browser-based file manager for uploading, organizing, editing, and serving media assets and code files. Files are stored in cloud blob storage with a unified abstraction layer that supports multiple cloud providers.
+SkyCMS provides a browser-based file manager built on **elFinder 2.1** (via the `SkyCMS.Drivers.ElFinder` CQRS driver) for uploading, organizing, editing, and serving media assets and code files. Files are stored in cloud blob storage with a unified abstraction layer that supports multiple cloud providers.
 
 **Audiences:** Editors, Authors, Administrators, Developers
 
@@ -38,12 +38,15 @@ A full-featured browser-based file management interface for all site assets.
 
 ### Browsing & Navigation
 
-- Hierarchical folder structure with breadcrumb navigation
-- Thumbnail gallery view (120×120 px auto-generated thumbnails)
-- Sortable columns: name, type, modified date, file size
-- Pagination controls: 10, 20, 50, or 100 items per page
-- Filter by directories only or images only
-- Copy file URL to clipboard with one click
+- elFinder 2.1 file browser with dual-pane layout (folder tree + file area)
+- Back / Forward / Home / Up navigation via toolbar
+- Breadcrumb trail for direct navigation to any ancestor folder
+- Grid (thumbnail) and list view toggle via toolbar
+- Thumbnail gallery with auto-generated 120 × 120 px thumbnails
+- Sort by name, type, modified date, or file size via toolbar
+- Search by filename within the current folder
+- Filter by directories only or images only (in image picker and folder picker modes)
+- Copy file URL via right-click → **Get URL** or the Info properties panel
 
 ### File Operations
 
@@ -60,19 +63,20 @@ A full-featured browser-based file management interface for all site assets.
 
 ### Upload Capabilities
 
-- Drag-and-drop uploads
-- Chunked upload support for large files (25 MB chunks)
-- Checksum-based resumable uploads for interrupted transfers
+- **FilePond** upload widget: drop files anywhere on the page or click **Upload Files**
+- Chunked upload (5 MB chunks) for reliable large-file transfers
+- Simultaneous multi-file upload with per-file progress
+- Uploads always target the folder currently open in the elFinder browser
+- Automatic folder refresh after all uploads complete
 - Simple upload mode for quick image insertion from editors
-- Image upload with automatic metadata extraction (dimensions)
 
 ### Integrated Editors
 
 Files can be edited directly in the browser depending on type:
 
-- **Code files** → Monaco Code Editor (syntax highlighting, IntelliSense)
+- **Code files** → Monaco Code Editor (opened via elFinder toolbar or right-click → **Open**)
   - Supported: `.html`, `.htm`, `.css`, `.js`, `.json`, `.xml`, `.txt`
-- **Image files** → Filerobot Image Editor (crop, resize, annotate, filter)
+- **Image files** → Filerobot Image Editor (opened via elFinder toolbar or right-click → **Open**)
   - Editable: `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`
   - Preview-only: `.apng`, `.avif`, `.svg`
 

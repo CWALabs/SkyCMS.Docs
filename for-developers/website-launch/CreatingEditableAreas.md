@@ -19,6 +19,20 @@ last_reviewed: 2026-04-28
 
 A practical guide for developers to define editable regions in templates and stand-alone articles, using the code editor (Monaco) with CKEditor-based Visual Editor.
 
+## How CKEditor Fits Into a Page
+
+Before writing any markup, it helps to understand one fundamental constraint: **CKEditor 5 edits HTML fragments, not full pages.**
+
+CKEditor is designed to own clearly bounded content regions — article bodies, text sections, structured rich text. It is not designed to control `<html>`, `<head>`, navigation, global chrome, or layout containers. Those parts of the page must exist outside the editor's reach.
+
+In SkyCMS this means:
+
+- Editable regions are specific elements you explicitly mark in your layout or template HTML.
+- Everything outside those marked elements — the layout shell, header, footer, scripts — is never touched by the editor.
+- Editors interact only with the regions you define.
+
+This boundary is enforced by the `data-ccms-ceid` attribute. Any element carrying that attribute becomes an editable region. Any element without it is invisible to CKEditor.
+
 ## Quick Start (5 minutes)
 
 - Mark editable regions with `data-ccms-ceid="my-id"` (or `data-ccms-new="true"` for auto-GUID on first save).
@@ -27,6 +41,45 @@ A practical guide for developers to define editable regions in templates and sta
 - Use `data-editor-config="simple"`, `"standard"`, or `"advanced"` to explicitly control toolbar richness; omit the attribute for the `standard` default.
 - Use the image widget via `data-editor-config="image-widget"`; first image is typically treated as the page banner.
 - Do **not** nest editable regions; backend rejects nested regions.
+
+### Full page template skeleton
+
+The following is the recommended starting structure when building a new layout or template. Non-editable zones carry `contenteditable="false"` so that browsers and screen readers cannot accidentally place focus inside them. Editable regions are isolated inside `<main>`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{PageTitle}}</title>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/content.css" />
+</head>
+<body>
+<header contenteditable="false">
+  <!-- Site navigation and global branding — never editor-managed -->
+</header>
+<main>
+  <!-- Title region: minimal toolbar, heading-only -->
+  <h1 data-ccms-ceid="page-title" data-editor-config="title">Page Title</h1>
+
+  <!-- Body region: standard rich content -->
+  <section data-ccms-ceid="body" class="ck-content">
+    <p>Page body…</p>
+  </section>
+</main>
+<footer contenteditable="false">
+  <!-- Site footer — never editor-managed -->
+</footer>
+</body>
+</html>
+```
+
+Key points:
+
+- `contenteditable="false"` on `<header>` and `<footer>` prevents the browser from making those zones accidentally focusable or editable.
+- Only elements with `data-ccms-ceid` are activated as editable regions.
+- There is no limit on how many editable regions a template can have, as long as none are nested inside each other.
 
 ## Element Types & Toolbar Behavior
 
@@ -115,6 +168,30 @@ Minimal pattern example:
 </div>
 ```
 Then call `Duplicator.create(element)` on each clone container in script.
+
+## What Gets Stored
+
+SkyCMS stores **only the inner HTML** of each editable region — not the surrounding element, not `class="ck-content"`, not any wrapper markup.
+
+For example, if the template contains:
+
+```html
+<section data-ccms-ceid="body" class="ck-content">
+  <p>Welcome.</p>
+</section>
+```
+
+What is saved to the database for the `body` region is:
+
+```html
+<p>Welcome.</p>
+```
+
+At render time, SkyCMS places that saved fragment back inside the `.ck-content` element. This means:
+
+- The wrapping element and its attributes come from the template or layout, not from stored content.
+- Changing the wrapper element (for example from `<section>` to `<div>`) in a template update has no effect on the saved content — it just changes the container.
+- Never store or pass the outer `.ck-content` element as the content payload; only the inner HTML belongs in storage.
 
 ## Troubleshooting
 
