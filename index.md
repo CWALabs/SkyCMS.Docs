@@ -20,7 +20,7 @@ hide:
 
 > **Docs version:** These pages reflect **SkyCMS v12.3.0** (April 2026). [See what changed](reference/changelog.md)
 
-**The Edge-Native CMS for creative people who want great tools, high performance, simplicity and no constraints**
+_The edge‑native CMS for creative people who value performance, simplicity, and creative freedom_
 
 SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools and gives developers full technical control — without fighting over the same codebase.
 
