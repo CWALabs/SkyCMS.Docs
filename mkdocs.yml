@@ -318,6 +318,7 @@ nav:
       - Azure Deployment Credentials: configuration/deployment/azure-deployment-credentials.md
 
   - Reference:
+    - Documentation Map: reference/documentation-map.md
     - AI Context Pack: reference/ai-context-pack.md
     - FAQ: reference/faq.md
     - Glossary: reference/glossary.md

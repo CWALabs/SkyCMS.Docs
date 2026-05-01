@@ -20,11 +20,11 @@ hide:
 
 > **Docs version:** These pages reflect **SkyCMS v12.3.0** (April 2026). [See what changed](reference/changelog.md)
 
-_The edge‑native CMS for creative people who value performance, simplicity, and creative freedom_
+## The edge‑native CMS for creative people who value performance, simplicity, and creative freedom
 
 SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools and gives developers full technical control — without fighting over the same codebase.
 
-[Install SkyCMS](installation/overview.md){ .md-button .md-button--primary } [What is SkyCMS?](getting-started/what-is-skycms.md){ .md-button }
+[Install SkyCMS](installation/overview.md){ .md-button .md-button--primary } [What is SkyCMS?](getting-started/what-is-skycms.md){ .md-button } [Docs Map](reference/documentation-map.md){ .md-button }
 
 ---
 
@@ -32,29 +32,23 @@ SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools 
 
 <div class="grid cards" markdown>
 
--   :material-pencil:{ .lg .middle } **Content Editor**
+-   :material-pencil:{ .lg .middle } **[Content Editor](for-editors/index.md)**
 
     ---
 
-    You publish articles, manage media, and keep your site up to date.
+    [You publish articles, manage media, and keep your site up to date.](for-editors/index.md)
 
-    [:octicons-arrow-right-24: Editor Guide](for-editors/index.md)
-
--   :material-palette:{ .lg .middle } **Site Builder**
+-   :material-palette:{ .lg .middle } **[Site Builder](for-site-builders/index.md)**
 
     ---
 
-    You design how the website looks and works by building reusable page templates for your editorial team.
+    [You design how the website looks and works by building reusable page templates for your editorial team.](for-site-builders/index.md)
 
-    [:octicons-arrow-right-24: Site Builder Guide](for-site-builders/index.md)
-
--   :material-code-braces:{ .lg .middle } **Developer**
+-   :material-code-braces:{ .lg .middle } **[Developer](for-developers/index.md)**
 
     ---
 
-    You install, extend, deploy, and integrate SkyCMS with your infrastructure.
-
-    [:octicons-arrow-right-24: Developer Guide](for-developers/index.md)
+    [You install, extend, deploy, and integrate SkyCMS with your infrastructure.](for-developers/index.md)
 
 </div>
 
@@ -79,33 +73,44 @@ flowchart LR
 
 ---
 
+## Most common tasks
+
+- I need to create and publish a page quickly: [Visual Editor quick start](for-editors/visual-editor-quickstart.md)
+- I need to upload or organize files: [File Manager quick start](for-editors/file-manager-quickstart.md)
+- I need to build site structure and reusable pages: [Site Builder overview](for-site-builders/overview.md)
+- I need to deploy SkyCMS: [Deployment overview](deployment/overview.md)
+- I need to configure database, storage, CDN, or email: [Configuration overview](configuration/overview.md)
+- I need to understand architecture before coding: [Developer overview](for-developers/overview.md)
+
+---
+
 ## Popular pages
 
 <div class="grid cards" markdown>
 
 -   :material-download:{ .lg .middle } **[Installation Overview](installation/overview.md)**
 
-    Azure · Docker · Local Development
+    [Azure · Docker · Local Development](installation/overview.md)
 
 -   :material-cog:{ .lg .middle } **[Configuration Overview](configuration/overview.md)**
 
-    Database · Storage · CDN · Email
+    [Database · Storage · CDN · Email](configuration/overview.md)
 
 -   :material-draw:{ .lg .middle } **[Layouts & Templates](for-site-builders/layouts.md)**
 
-    Build the visual structure of your site
+    [Build the visual structure of your site](for-site-builders/layouts.md)
 
 -   :material-api:{ .lg .middle } **[API Reference](for-developers/api/overview.md)**
 
-    Contact form and shared API endpoints
+    [Contact form and shared API endpoints](for-developers/api/overview.md)
 
 -   :material-rocket-launch:{ .lg .middle } **[Deployment](deployment/overview.md)**
 
-    Azure · Docker · CI/CD Pipelines
+    [Azure · Docker · CI/CD Pipelines](deployment/overview.md)
 
 -   :material-history:{ .lg .middle } **[Changelog](reference/changelog.md)**
 
-    What's new in SkyCMS
+    [What's new in SkyCMS](reference/changelog.md)
 
 </div>
 
@@ -143,5 +148,6 @@ Use these role hubs after you complete the Start Here path.
 ## AI and Deep Reference
 
 - [AI Context Pack](reference/ai-context-pack.md) — canonical terms and retrieval shortcut.
+- [Documentation Map](reference/documentation-map.md) — visual guide to docs structure and reading paths.
 - [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) — visual map for architecture and flows.
 - [Changelog](reference/changelog.md)

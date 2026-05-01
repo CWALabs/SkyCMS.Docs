@@ -19,6 +19,8 @@ last_reviewed: 2026-04-28
 
 Decision guide for choosing static, dynamic, or hybrid SkyCMS delivery architecture.
 
+> **Reading path:** [Architecture overview](./architecture.md) > [Architecture Executive Summary](./architecture-executive-summary.md) > [Core Platform Architecture](./architecture-core-platform.md) > **Architecture Decision Matrix**
+
 ## Purpose
 
 Use this matrix to select the best SkyCMS delivery architecture for a specific site or tenant.

@@ -37,9 +37,48 @@ Developers typically:
 - Maintain performance, observability, and deployment quality.
 - Add tests and uphold architecture and tenant isolation constraints.
 
+For the complete permission matrix and cross-role responsibilities, see [Roles and permissions (RBAC)](./roles-and-permissions.md).
+
 ## Start here
 
-- [Developer guide overview](./overview.md)
+If you are new to SkyCMS development, start with these five pages:
+
+1. [Developer guide overview](./overview.md)
+1. [Architecture overview](./architecture.md)
+1. [Core platform architecture](./architecture-core-platform.md)
+1. [API docs overview](./api/overview.md)
+1. [Website launch workflow](./website-launch/index.md)
+
+## Then go deeper by task
+
+### Architecture and platform
+
+- [Architecture diagram catalog](./architecture-diagram-catalog.md)
+- [Architecture executive summary](./architecture-executive-summary.md)
+- [Architecture decision matrix](./architecture-decision-matrix.md)
+- [Architecture mode selection worksheet](./architecture-mode-selection-worksheet.md)
+- [Architecture route inventory templates](./architecture-route-inventory-templates.md)
+- [Static architecture profile](./architecture-profile-static.md)
+- [Dynamic architecture profile](./architecture-profile-dynamic.md)
+- [Hybrid architecture profile](./architecture-profile-hybrid.md)
+- [Architecture review checklist](./architecture-review-checklist.md)
+- [Architecture change log](./architecture-change-log.md)
+- [Middleware pipeline](./middleware-pipeline.md)
+- [Multi-tenancy deep dive](./multi-tenancy-deep-dive.md)
+
+### Implementation and delivery
+
+- [Layouts](./layouts.md)
+- [Templates](./templates.md)
+- [Layouts, templates, and articles](./layouts-templates-articles.md)
+- [Article lifecycle](./article-lifecycle.md)
+- [Publisher rendering flow diagrams](./publisher-rendering-flow.md)
+- [Roles and permissions (RBAC)](./roles-and-permissions.md)
+- [Configuration overview](../configuration/overview.md)
+- [Creating editable areas](./website-launch/CreatingEditableAreas.md)
+
+### Documentation standards (internal)
+
 - [Documentation standards stack v1](./documentation-standards-stack-v1.md)
 - [Documentation visual style standard (DVSS)](./documentation-visual-style-standard.md)
 - [Documentation metadata schema v1](./documentation-metadata-schema.md)
@@ -48,30 +87,6 @@ Developers typically:
 - [Documentation adoption priority plan](./documentation-adoption-priority-plan.md)
 - [Documentation rollout plan](./documentation-rollout-plan.md)
 - [Documentation standards gap review and upgrade plan (2026-04)](./documentation-standards-gap-review-2026-04.md)
-- [API docs](./api/overview.md)
-- [Architecture](./architecture.md)
-- [Architecture diagram catalog](./architecture-diagram-catalog.md)
-- [Architecture executive summary](./architecture-executive-summary.md)
-- [Core platform architecture](./architecture-core-platform.md)
-- [Architecture decision matrix](./architecture-decision-matrix.md)
-- [Architecture mode selection worksheet](./architecture-mode-selection-worksheet.md)
-- [Architecture route inventory templates](./architecture-route-inventory-templates.md)
-- [Publisher rendering flow diagrams](./publisher-rendering-flow.md)
-- [Static architecture profile](./architecture-profile-static.md)
-- [Dynamic architecture profile](./architecture-profile-dynamic.md)
-- [Hybrid architecture profile](./architecture-profile-hybrid.md)
-- [Architecture review checklist](./architecture-review-checklist.md)
-- [Architecture change log](./architecture-change-log.md)
-- [Roles and permissions (RBAC)](./roles-and-permissions.md)
-- [Layouts](./layouts.md)
-- [Templates](./templates.md)
-- [Creating editable areas](./website-launch/CreatingEditableAreas.md)
-- [Layouts, templates, and articles](./layouts-templates-articles.md)
-- [Website launch workflow (phased guides)](./website-launch/index.md)
-- [Configuration overview](../configuration/overview.md)
-- [Article lifecycle](./article-lifecycle.md)
-- [Middleware pipeline](./middleware-pipeline.md)
-- [Multi-tenancy deep dive](./multi-tenancy-deep-dive.md)
 
 ## Verification
 

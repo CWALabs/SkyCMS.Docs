@@ -43,9 +43,10 @@ Site builders typically:
 - Collaborate with editors on authoring patterns and handoff.
 - Coordinate with developers when implementation changes are required.
 
+For role boundaries and permission details across all roles, see [Roles and permissions (RBAC)](../for-developers/roles-and-permissions.md).
+
 ## Start here
 
-- [Site Builder Guide Overview](./overview.md)
 - [Layouts](./layouts.md)
 - [Layout Examples Overview](./layout-examples/overview.md)
 - [Templates](./templates.md)
@@ -54,6 +55,8 @@ Site builders typically:
 - [Article Examples Overview](./article-examples/overview.md)
 - [Widgets](./widgets/overview.md)
 - [Style Guide Template](./style-guide-template.md)
+
+Once you know the basics, [Site Builder Workflow Deep-Dive](./overview.md) walks the full planning-through-handoff process with a workflow diagram, design strategy, and quality gates.
 
 ## Verification
 

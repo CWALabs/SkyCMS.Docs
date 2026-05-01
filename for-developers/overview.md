@@ -19,6 +19,10 @@ last_reviewed: 2026-04-27
 
 Navigate SkyCMS developer documentation by architecture, extension area, workflow stage, and implementation task.
 
+## New here?
+
+Start with [For Developers Start Here](./index.md), then use this page to navigate by task and intent.
+
 ## Context
 
 SkyCMS development work usually spans four concerns:

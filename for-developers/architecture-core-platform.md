@@ -19,6 +19,8 @@ last_reviewed: 2026-04-28
 
 Stable architecture model for SkyCMS independent of static, dynamic, or hybrid delivery mode.
 
+> **Reading path:** [Architecture overview](./architecture.md) > [Architecture Executive Summary](./architecture-executive-summary.md) > **Core Platform Architecture** > [Architecture Decision Matrix](./architecture-decision-matrix.md)
+
 ## Purpose
 
 This document describes the architecture that is always true for SkyCMS, regardless of deployment pattern.

@@ -42,11 +42,13 @@ Editors typically:
 - Unpublish or delete outdated content.
 - Validate the live result after changes.
 
+For role boundaries and permission details across all roles, see [Roles and permissions (RBAC)](../for-developers/roles-and-permissions.md).
+
 ## Start here
 
 1. Learn the lifecycle and workflow states:
    - [Article Lifecycle Quick Reference](./article-lifecycle-reference.md)
-   - [Editor Guide Overview](./overview.md)
+   - [Editor Workflow Reference](./overview.md)
 2. Execute core daily operations:
    - [Creating articles](./creating-articles.md)
    - [Updating and deleting articles](./updating-and-deleting-articles.md)

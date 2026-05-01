@@ -19,6 +19,8 @@ last_reviewed: 2026-04-28
 
 Stakeholder-level summary of SkyCMS architecture, deployment patterns, and governance model.
 
+> **Reading path:** [Architecture overview](./architecture.md) > **Architecture Executive Summary** > [Core Platform Architecture](./architecture-core-platform.md) > [Architecture Decision Matrix](./architecture-decision-matrix.md)
+
 ## One-page summary
 
 SkyCMS is a multi-tenant CMS platform with clear separation between authoring and public delivery. The platform supports static, dynamic, and hybrid delivery patterns so teams can choose the right balance of performance, flexibility, and operational complexity.

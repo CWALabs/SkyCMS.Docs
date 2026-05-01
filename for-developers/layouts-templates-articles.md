@@ -36,6 +36,8 @@ Use this guide when you need to:
 
 ## Canonical terminology
 
+For complete definitions of all SkyCMS concepts, see [Key Concepts](../getting-started/key-concepts.md).
+
 Use these terms consistently in developer-facing documentation:
 
 - **Layout**: the site-wide shell.

@@ -31,6 +31,8 @@ Layouts are the site-wide shell in the canonical model:
 Layout -> Template (optional) -> Article -> Published Page
 ```
 
+For complete definitions of these terms, see [Key Concepts](../getting-started/key-concepts.md).
+
 Use **layout** for shared site structure, **template** for reusable article structure, and **article** for authored content.
 
 Use this guide to create and manage consistent page structure across templates and pages, including the header, footer, navigation, spacing, and typography foundations.

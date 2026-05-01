@@ -33,6 +33,7 @@ Use this guide when you need to:
 - Layout implementation: [./layouts.md](./layouts.md)
 - Editable region implementation: [./website-launch/CreatingEditableAreas.md](./website-launch/CreatingEditableAreas.md)
 - Site-builder template guide: [../for-site-builders/templates.md](../for-site-builders/templates.md)
+- Canonical terminology: [../getting-started/key-concepts.md](../getting-started/key-concepts.md)
 
 ## What Templates Are
 

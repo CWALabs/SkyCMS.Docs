@@ -1,5 +1,5 @@
 ---
-canonical_title: Site Builder Guide Overview
+canonical_title: Site Builder Workflow Deep-Dive
 description: Understand the site-builder workflow in SkyCMS and move from layout planning to validated editor handoff.
 doc_type: Explanation
 product_area: site-building
@@ -15,7 +15,11 @@ owner: docs-platform
 last_reviewed: 2026-04-27
 ---
 
-# Site Builder Guide Overview
+# Site Builder Workflow Deep-Dive
+
+## New here?
+
+Start with [For Site Builders](./index.md) for the role overview and quick links, then return here for the full workflow.
 
 ## Summary
 

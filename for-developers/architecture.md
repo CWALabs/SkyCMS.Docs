@@ -19,6 +19,8 @@ last_reviewed: 2026-04-28
 
 Core architecture map for SkyCMS with deployment mode profiles and a selection matrix.
 
+> **Reading path:** **Architecture overview** > [Architecture Executive Summary](./architecture-executive-summary.md) > [Core Platform Architecture](./architecture-core-platform.md) > [Architecture Decision Matrix](./architecture-decision-matrix.md)
+
 ## When to use this page
 
 Use this page when you need to:

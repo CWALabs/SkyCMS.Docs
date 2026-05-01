@@ -1,5 +1,5 @@
 ---
-canonical_title: Editor Guide Overview
+canonical_title: Editor Workflow Reference
 description: Understand day-to-day editorial workflows in SkyCMS and map tasks to the right editing tools.
 doc_type: Explanation
 product_area: editor
@@ -14,7 +14,11 @@ owner: docs-platform
 last_reviewed: 2026-04-27
 ---
 
-# Editor Guide Overview
+# Editor Workflow Reference
+
+## New here?
+
+Start with [For Editors](./index.md) for the role overview and quick links, then use this page to map tasks to tools.
 
 ## Summary
 
@@ -44,12 +48,6 @@ Quick reference:
 - [Image Editing](./image-editing.md): media optimization and adjustment.
 - [File Manager](./file-manager.md): upload and organize assets.
 - [Page Scheduling](./page-scheduling.md): time-based publication control.
-
-## Role boundaries
-
-- Editor: content creation, review, and publication.
-- Site builder: layout/template structure and presentation rules.
-- Developer: platform customization and integrations.
 
 ## Verification
 

@@ -32,6 +32,7 @@ Use this guide when you need to:
 - Site-builder guide: [../for-site-builders/layouts.md](../for-site-builders/layouts.md)
 - Layout/template/article hierarchy: [./layouts-templates-articles.md](./layouts-templates-articles.md)
 - Developer overview: [./overview.md](./overview.md)
+- Canonical terminology: [../getting-started/key-concepts.md](../getting-started/key-concepts.md)
 
 ## Why This Matters
 
