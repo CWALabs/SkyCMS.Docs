@@ -21,7 +21,7 @@ Use this guide to create new articles, pages, blog posts, and blogs in SkyCMS an
 
 ## Outcome
 
-After completing this guide, you should be able to create the right content type, choose the appropriate initial publish state, and hand off cleanly into review, scheduling, or update workflows.
+After completing this guide, you should be able to create the right content type, choose the appropriate initial publish state, and prepare for review, scheduling, or updates.
 
 ## When to use this page
 

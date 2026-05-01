@@ -25,7 +25,7 @@ If you are new to SkyCMS, treat templates as the bridge between layout-level des
 
 ## Terminology note
 
-Templates define reusable structure for authored **articles**. In site-builder workflows, those articles are often called **pages**. After publishing, the public output is a **published page**.
+Templates define reusable structure for articles (often called pages in site-builder workflows). After publishing, the public output is a **published page**.
 
 ## When to use this page
 

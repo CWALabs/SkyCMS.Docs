@@ -76,7 +76,7 @@ Use this sequence when creating or revising a production layout:
 2. Map shared regions (head, header, main, footer).
 3. Implement token-driven styling.
 4. Validate with templates and representative pages.
-5. Publish and document handoff guidance.
+5. Release and document handoff guidance.
 
 ## Layout responsibilities
 

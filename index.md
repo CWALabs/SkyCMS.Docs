@@ -28,7 +28,7 @@ SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools 
 
 ---
 
-## Who are you?
+## How can we help?
 
 <div class="grid cards" markdown>
 
@@ -44,7 +44,7 @@ SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools 
 
     ---
 
-    You create the layouts, templates, and visual structure of a SkyCMS website.
+    You design how the website looks and works by building reusable page templates for your editorial team.
 
     [:octicons-arrow-right-24: Site Builder Guide](for-site-builders/index.md)
 

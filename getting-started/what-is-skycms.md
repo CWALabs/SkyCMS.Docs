@@ -27,7 +27,7 @@ Most CMS platforms force teams to choose between editor-friendly tooling and dev
 
 SkyCMS is designed to support both:
 
-- editors get visual tools for creating and publishing content,
+- editors get visual tools to create and publish content,
 - developers get configurable architecture, provider choice, and deployment flexibility.
 
 ## Who SkyCMS is for
