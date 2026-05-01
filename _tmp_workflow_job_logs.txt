@@ -1,0 +1,479 @@
+﻿2026-05-01T12:14:49.5430490Z Current runner version: '2.334.0'
+2026-05-01T12:14:49.5453032Z ##[group]Runner Image Provisioner
+2026-05-01T12:14:49.5454049Z Hosted Compute Agent
+2026-05-01T12:14:49.5454692Z Version: 20260213.493
+2026-05-01T12:14:49.5455289Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-01T12:14:49.5455990Z Build Date: 2026-02-13T00:28:41Z
+2026-05-01T12:14:49.5456680Z Worker ID: {91eaeac5-30b4-4924-b3b1-2423ac87e9bd}
+2026-05-01T12:14:49.5457314Z Azure Region: westus
+2026-05-01T12:14:49.5457839Z ##[endgroup]
+2026-05-01T12:14:49.5459524Z ##[group]Operating System
+2026-05-01T12:14:49.5460187Z Ubuntu
+2026-05-01T12:14:49.5460621Z 24.04.4
+2026-05-01T12:14:49.5461101Z LTS
+2026-05-01T12:14:49.5461535Z ##[endgroup]
+2026-05-01T12:14:49.5462031Z ##[group]Runner Image
+2026-05-01T12:14:49.5462593Z Image: ubuntu-24.04
+2026-05-01T12:14:49.5463107Z Version: 20260413.86.1
+2026-05-01T12:14:49.5464483Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-01T12:14:49.5466020Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-05-01T12:14:49.5466901Z ##[endgroup]
+2026-05-01T12:14:49.5469654Z ##[group]GITHUB_TOKEN Permissions
+2026-05-01T12:14:49.5471875Z Actions: write
+2026-05-01T12:14:49.5472410Z ArtifactMetadata: write
+2026-05-01T12:14:49.5473053Z Attestations: write
+2026-05-01T12:14:49.5473526Z Checks: write
+2026-05-01T12:14:49.5474243Z Contents: write
+2026-05-01T12:14:49.5474816Z Deployments: write
+2026-05-01T12:14:49.5475329Z Discussions: write
+2026-05-01T12:14:49.5475795Z Issues: write
+2026-05-01T12:14:49.5476323Z Metadata: read
+2026-05-01T12:14:49.5476770Z Models: read
+2026-05-01T12:14:49.5477256Z Packages: write
+2026-05-01T12:14:49.5478124Z Pages: write
+2026-05-01T12:14:49.5478687Z PullRequests: write
+2026-05-01T12:14:49.5479215Z RepositoryProjects: write
+2026-05-01T12:14:49.5479775Z SecurityEvents: write
+2026-05-01T12:14:49.5480316Z Statuses: write
+2026-05-01T12:14:49.5480798Z VulnerabilityAlerts: read
+2026-05-01T12:14:49.5481405Z ##[endgroup]
+2026-05-01T12:14:49.5483389Z Secret source: Actions
+2026-05-01T12:14:49.5484332Z Prepare workflow directory
+2026-05-01T12:14:49.5809063Z Prepare all required actions
+2026-05-01T12:14:49.5847957Z Getting action download info
+2026-05-01T12:14:50.0285989Z Download action repository 'actions/checkout@v5' (SHA:93cb6efe18208431cddfb8368fd83d5badbf9bfd)
+2026-05-01T12:14:50.1359593Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-05-01T12:14:50.4652514Z Complete job name: links-and-metadata
+2026-05-01T12:14:50.5376688Z ##[group]Run actions/checkout@v5
+2026-05-01T12:14:50.5377506Z with:
+2026-05-01T12:14:50.5377875Z   fetch-depth: 0
+2026-05-01T12:14:50.5378292Z   repository: CWALabs/SkyCMS.Docs
+2026-05-01T12:14:50.5378918Z   token: ***
+2026-05-01T12:14:50.5379284Z   ssh-strict: true
+2026-05-01T12:14:50.5379661Z   ssh-user: git
+2026-05-01T12:14:50.5380048Z   persist-credentials: true
+2026-05-01T12:14:50.5380482Z   clean: true
+2026-05-01T12:14:50.5380895Z   sparse-checkout-cone-mode: true
+2026-05-01T12:14:50.5381364Z   fetch-tags: false
+2026-05-01T12:14:50.5381743Z   show-progress: true
+2026-05-01T12:14:50.5382140Z   lfs: false
+2026-05-01T12:14:50.5382500Z   submodules: false
+2026-05-01T12:14:50.5382899Z   set-safe-directory: true
+2026-05-01T12:14:50.5383531Z ##[endgroup]
+2026-05-01T12:14:50.6505511Z Syncing repository: CWALabs/SkyCMS.Docs
+2026-05-01T12:14:50.6507195Z ##[group]Getting Git version info
+2026-05-01T12:14:50.6507913Z Working directory is '/home/runner/work/SkyCMS.Docs/SkyCMS.Docs'
+2026-05-01T12:14:50.6508928Z [command]/usr/bin/git version
+2026-05-01T12:14:50.6550143Z git version 2.53.0
+2026-05-01T12:14:50.6571989Z ##[endgroup]
+2026-05-01T12:14:50.6587935Z Temporarily overriding HOME='/home/runner/work/_temp/49a088d4-c86d-4f6e-9664-4789762f9964' before making global git config changes
+2026-05-01T12:14:50.6590330Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-01T12:14:50.6594679Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SkyCMS.Docs/SkyCMS.Docs
+2026-05-01T12:14:50.6628791Z Deleting the contents of '/home/runner/work/SkyCMS.Docs/SkyCMS.Docs'
+2026-05-01T12:14:50.6633109Z ##[group]Initializing the repository
+2026-05-01T12:14:50.6638943Z [command]/usr/bin/git init /home/runner/work/SkyCMS.Docs/SkyCMS.Docs
+2026-05-01T12:14:50.6758579Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-01T12:14:50.6760172Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-01T12:14:50.6761724Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-01T12:14:50.6762489Z hint: call:
+2026-05-01T12:14:50.6763122Z hint:
+2026-05-01T12:14:50.6764144Z hint: 	git config --global init.defaultBranch <name>
+2026-05-01T12:14:50.6764853Z hint:
+2026-05-01T12:14:50.6765379Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-01T12:14:50.6766239Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-01T12:14:50.6766917Z hint:
+2026-05-01T12:14:50.6767277Z hint: 	git branch -m <name>
+2026-05-01T12:14:50.6767700Z hint:
+2026-05-01T12:14:50.6768267Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-01T12:14:50.6769452Z Initialized empty Git repository in /home/runner/work/SkyCMS.Docs/SkyCMS.Docs/.git/
+2026-05-01T12:14:50.6778129Z [command]/usr/bin/git remote add origin https://github.com/CWALabs/SkyCMS.Docs
+2026-05-01T12:14:50.6835672Z ##[endgroup]
+2026-05-01T12:14:50.6836385Z ##[group]Disabling automatic garbage collection
+2026-05-01T12:14:50.6839064Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-01T12:14:50.6867222Z ##[endgroup]
+2026-05-01T12:14:50.6867886Z ##[group]Setting up auth
+2026-05-01T12:14:50.6873689Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-01T12:14:50.6903414Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-01T12:14:50.7176050Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-01T12:14:50.7206155Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-01T12:14:50.7421676Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-01T12:14:50.7451799Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-01T12:14:50.7662531Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-01T12:14:50.7694728Z ##[endgroup]
+2026-05-01T12:14:50.7695449Z ##[group]Fetching the repository
+2026-05-01T12:14:50.7703524Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-05-01T12:14:51.7878754Z From https://github.com/CWALabs/SkyCMS.Docs
+2026-05-01T12:14:51.7880828Z  * [new branch]      docs/copilot-inline-assistance -> origin/docs/copilot-inline-assistance
+2026-05-01T12:14:51.7882183Z  * [new branch]      main       -> origin/main
+2026-05-01T12:14:51.7917513Z [command]/usr/bin/git branch --list --remote origin/main
+2026-05-01T12:14:51.7941983Z   origin/main
+2026-05-01T12:14:51.7952696Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-05-01T12:14:51.7974367Z ad33dd2d4fef7f8bc45a6b90bc462cf2d4faaab2
+2026-05-01T12:14:51.7980275Z ##[endgroup]
+2026-05-01T12:14:51.7982035Z ##[group]Determining the checkout info
+2026-05-01T12:14:51.7984182Z ##[endgroup]
+2026-05-01T12:14:51.7985484Z [command]/usr/bin/git sparse-checkout disable
+2026-05-01T12:14:51.8020718Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-01T12:14:51.8049656Z ##[group]Checking out the ref
+2026-05-01T12:14:51.8052741Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-01T12:14:51.8785094Z Switched to a new branch 'main'
+2026-05-01T12:14:51.8786901Z branch 'main' set up to track 'origin/main'.
+2026-05-01T12:14:51.8796790Z ##[endgroup]
+2026-05-01T12:14:51.8832822Z [command]/usr/bin/git log -1 --format=%H
+2026-05-01T12:14:51.8857589Z ad33dd2d4fef7f8bc45a6b90bc462cf2d4faaab2
+2026-05-01T12:14:51.9183295Z ##[group]Run actions/setup-python@v5
+2026-05-01T12:14:51.9184780Z with:
+2026-05-01T12:14:51.9185617Z   python-version: 3.11
+2026-05-01T12:14:51.9186576Z   cache: pip
+2026-05-01T12:14:51.9187420Z   check-latest: false
+2026-05-01T12:14:51.9188658Z   token: ***
+2026-05-01T12:14:51.9189550Z   update-environment: true
+2026-05-01T12:14:51.9190611Z   allow-prereleases: false
+2026-05-01T12:14:51.9191657Z   freethreaded: false
+2026-05-01T12:14:51.9192572Z ##[endgroup]
+2026-05-01T12:14:52.0935075Z ##[group]Installed versions
+2026-05-01T12:14:52.1034314Z Successfully set up CPython (3.11.15)
+2026-05-01T12:14:52.1037233Z ##[endgroup]
+2026-05-01T12:14:52.1945659Z [command]/opt/hostedtoolcache/Python/3.11.15/x64/bin/pip cache dir
+2026-05-01T12:14:52.5094154Z /home/runner/.cache/pip
+2026-05-01T12:14:52.7999831Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.15-pip-3aae4b5649718d7110997f9c92266095dbd07e97deece0e51e41e20d7a1c3f86
+2026-05-01T12:14:54.1190549Z Received 0 of 28540959 (0.0%), 0.0 MBs/sec
+2026-05-01T12:14:54.3053592Z Received 28540959 of 28540959 (100.0%), 22.9 MBs/sec
+2026-05-01T12:14:54.3054731Z Cache Size: ~27 MB (28540959 B)
+2026-05-01T12:14:54.3165941Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2f886daa-4239-4113-8952-91661f951bb1/cache.tzst -P -C /home/runner/work/SkyCMS.Docs/SkyCMS.Docs --use-compress-program unzstd
+2026-05-01T12:14:54.3781461Z Cache restored successfully
+2026-05-01T12:14:54.3800755Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.15-pip-3aae4b5649718d7110997f9c92266095dbd07e97deece0e51e41e20d7a1c3f86
+2026-05-01T12:14:54.3947218Z ##[group]Run python -m pip install --upgrade pip
+2026-05-01T12:14:54.3947716Z [36;1mpython -m pip install --upgrade pip[0m
+2026-05-01T12:14:54.3948056Z [36;1mpip install -r requirements.txt[0m
+2026-05-01T12:14:54.3976858Z shell: /usr/bin/bash -e {0}
+2026-05-01T12:14:54.3977136Z env:
+2026-05-01T12:14:54.3977407Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:14:54.3977853Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:14:54.3978280Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:14:54.3978701Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:14:54.3979074Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:14:54.3979440Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:14:54.3979751Z ##[endgroup]
+2026-05-01T12:14:54.8622078Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages (26.0.1)
+2026-05-01T12:14:54.9432083Z Collecting pip
+2026-05-01T12:14:54.9448445Z   Using cached pip-26.1-py3-none-any.whl.metadata (4.6 kB)
+2026-05-01T12:14:54.9480272Z Using cached pip-26.1-py3-none-any.whl (1.8 MB)
+2026-05-01T12:14:54.9691245Z Installing collected packages: pip
+2026-05-01T12:14:54.9692442Z   Attempting uninstall: pip
+2026-05-01T12:14:54.9707547Z     Found existing installation: pip 26.0.1
+2026-05-01T12:14:55.0174294Z     Uninstalling pip-26.0.1:
+2026-05-01T12:14:55.0231337Z       Successfully uninstalled pip-26.0.1
+2026-05-01T12:14:55.8271625Z Successfully installed pip-26.1
+2026-05-01T12:14:56.2228895Z Collecting mkdocs>=1.6.0 (from -r requirements.txt (line 1))
+2026-05-01T12:14:56.2245712Z   Using cached mkdocs-1.6.1-py3-none-any.whl.metadata (6.0 kB)
+2026-05-01T12:14:56.2832635Z Collecting mkdocs-material>=9.5.0 (from -r requirements.txt (line 2))
+2026-05-01T12:14:56.2847698Z   Using cached mkdocs_material-9.7.6-py3-none-any.whl.metadata (19 kB)
+2026-05-01T12:14:56.2949117Z Collecting mkdocs-material-extensions>=1.3.0 (from -r requirements.txt (line 3))
+2026-05-01T12:14:56.2963476Z   Using cached mkdocs_material_extensions-1.3.1-py3-none-any.whl.metadata (6.9 kB)
+2026-05-01T12:14:56.3086391Z Collecting Pygments>=2.17.0 (from -r requirements.txt (line 4))
+2026-05-01T12:14:56.3179553Z   Using cached pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-05-01T12:14:56.3260554Z Collecting click>=7.0 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.3275442Z   Using cached click-8.3.3-py3-none-any.whl.metadata (2.6 kB)
+2026-05-01T12:14:56.3368360Z Collecting ghp-import>=1.0 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.3382109Z   Using cached ghp_import-2.1.0-py3-none-any.whl.metadata (7.2 kB)
+2026-05-01T12:14:56.3496150Z Collecting jinja2>=2.11.1 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.3509915Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-05-01T12:14:56.3625440Z Collecting markdown>=3.3.6 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.3639340Z   Using cached markdown-3.10.2-py3-none-any.whl.metadata (5.1 kB)
+2026-05-01T12:14:56.4061144Z Collecting markupsafe>=2.0.1 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.4076150Z   Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-05-01T12:14:56.4161713Z Collecting mergedeep>=1.3.4 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.4175883Z   Using cached mergedeep-1.3.4-py3-none-any.whl.metadata (4.3 kB)
+2026-05-01T12:14:56.4253284Z Collecting mkdocs-get-deps>=0.2.0 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.4267026Z   Using cached mkdocs_get_deps-0.2.2-py3-none-any.whl.metadata (4.0 kB)
+2026-05-01T12:14:56.4374926Z Collecting packaging>=20.5 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.4388534Z   Using cached packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-05-01T12:14:56.4480919Z Collecting pathspec>=0.11.1 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.5006559Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-05-01T12:14:56.5110011Z Collecting pyyaml-env-tag>=0.1 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.5123669Z   Using cached pyyaml_env_tag-1.1-py3-none-any.whl.metadata (5.5 kB)
+2026-05-01T12:14:56.5419578Z Collecting pyyaml>=5.1 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.5433946Z   Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-05-01T12:14:56.5773324Z Collecting watchdog>=2.0 (from mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.5787623Z   Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+2026-05-01T12:14:56.5917588Z Collecting babel>=2.10 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.5931781Z   Using cached babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+2026-05-01T12:14:56.6083208Z Collecting backrefs>=5.7.post1 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.6123696Z   Downloading backrefs-7.0-py311-none-any.whl.metadata (3.0 kB)
+2026-05-01T12:14:56.6247020Z Collecting colorama>=0.4 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.6260385Z   Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+2026-05-01T12:14:56.6369561Z Collecting paginate>=0.5 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.6383556Z   Using cached paginate-0.5.7-py2.py3-none-any.whl.metadata (11 kB)
+2026-05-01T12:14:56.6569956Z Collecting pymdown-extensions>=10.2 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.6584999Z   Using cached pymdown_extensions-10.21.2-py3-none-any.whl.metadata (3.1 kB)
+2026-05-01T12:14:56.6749236Z Collecting requests>=2.30 (from mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.6763829Z   Using cached requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+2026-05-01T12:14:56.6887570Z Collecting python-dateutil>=2.8.1 (from ghp-import>=1.0->mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.6901609Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-05-01T12:14:56.7068116Z Collecting platformdirs>=2.2.0 (from mkdocs-get-deps>=0.2.0->mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.7082461Z   Using cached platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+2026-05-01T12:14:56.7200907Z Collecting six>=1.5 (from python-dateutil>=2.8.1->ghp-import>=1.0->mkdocs>=1.6.0->-r requirements.txt (line 1))
+2026-05-01T12:14:56.7214561Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-05-01T12:14:56.8016349Z Collecting charset_normalizer<4,>=2 (from requests>=2.30->mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.8031381Z   Using cached charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-05-01T12:14:56.8148063Z Collecting idna<4,>=2.5 (from requests>=2.30->mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.8161373Z   Using cached idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+2026-05-01T12:14:56.8317169Z Collecting urllib3<3,>=1.26 (from requests>=2.30->mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.8330677Z   Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-05-01T12:14:56.8457837Z Collecting certifi>=2023.5.7 (from requests>=2.30->mkdocs-material>=9.5.0->-r requirements.txt (line 2))
+2026-05-01T12:14:56.8471377Z   Using cached certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+2026-05-01T12:14:56.8520571Z Using cached mkdocs-1.6.1-py3-none-any.whl (3.9 MB)
+2026-05-01T12:14:56.8550983Z Using cached mkdocs_material-9.7.6-py3-none-any.whl (9.3 MB)
+2026-05-01T12:14:56.8600887Z Using cached mkdocs_material_extensions-1.3.1-py3-none-any.whl (8.7 kB)
+2026-05-01T12:14:56.8614237Z Using cached pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-05-01T12:14:56.8633545Z Using cached babel-2.18.0-py3-none-any.whl (10.2 MB)
+2026-05-01T12:14:56.8720959Z Downloading backrefs-7.0-py311-none-any.whl (392 kB)
+2026-05-01T12:14:56.9049090Z Using cached click-8.3.3-py3-none-any.whl (110 kB)
+2026-05-01T12:14:56.9062850Z Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+2026-05-01T12:14:56.9076395Z Using cached ghp_import-2.1.0-py3-none-any.whl (11 kB)
+2026-05-01T12:14:56.9089903Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-05-01T12:14:56.9106411Z Using cached markdown-3.10.2-py3-none-any.whl (108 kB)
+2026-05-01T12:14:56.9121122Z Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-05-01T12:14:56.9134271Z Using cached mergedeep-1.3.4-py3-none-any.whl (6.4 kB)
+2026-05-01T12:14:56.9148017Z Using cached mkdocs_get_deps-0.2.2-py3-none-any.whl (9.6 kB)
+2026-05-01T12:14:56.9161261Z Using cached packaging-26.2-py3-none-any.whl (100 kB)
+2026-05-01T12:14:56.9174517Z Using cached paginate-0.5.7-py2.py3-none-any.whl (13 kB)
+2026-05-01T12:14:56.9203843Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-05-01T12:14:56.9241042Z Using cached platformdirs-4.9.6-py3-none-any.whl (21 kB)
+2026-05-01T12:14:56.9254485Z Using cached pymdown_extensions-10.21.2-py3-none-any.whl (268 kB)
+2026-05-01T12:14:56.9268713Z Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-05-01T12:14:56.9282890Z Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-05-01T12:14:56.9299039Z Using cached pyyaml_env_tag-1.1-py3-none-any.whl (4.7 kB)
+2026-05-01T12:14:56.9312167Z Using cached requests-2.33.1-py3-none-any.whl (64 kB)
+2026-05-01T12:14:56.9326407Z Using cached charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+2026-05-01T12:14:56.9340135Z Using cached idna-3.13-py3-none-any.whl (68 kB)
+2026-05-01T12:14:56.9353445Z Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-05-01T12:14:56.9367318Z Using cached certifi-2026.4.22-py3-none-any.whl (135 kB)
+2026-05-01T12:14:56.9380877Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-05-01T12:14:56.9394129Z Using cached watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+2026-05-01T12:14:57.1696580Z Installing collected packages: paginate, watchdog, urllib3, six, pyyaml, Pygments, platformdirs, pathspec, packaging, mkdocs-material-extensions, mergedeep, markupsafe, markdown, idna, colorama, click, charset_normalizer, certifi, backrefs, babel, requests, pyyaml-env-tag, python-dateutil, pymdown-extensions, mkdocs-get-deps, jinja2, ghp-import, mkdocs, mkdocs-material
+2026-05-01T12:15:01.4151008Z 
+2026-05-01T12:15:01.4169635Z Successfully installed Pygments-2.20.0 babel-2.18.0 backrefs-7.0 certifi-2026.4.22 charset_normalizer-3.4.7 click-8.3.3 colorama-0.4.6 ghp-import-2.1.0 idna-3.13 jinja2-3.1.6 markdown-3.10.2 markupsafe-3.0.3 mergedeep-1.3.4 mkdocs-1.6.1 mkdocs-get-deps-0.2.2 mkdocs-material-9.7.6 mkdocs-material-extensions-1.3.1 packaging-26.2 paginate-0.5.7 pathspec-1.1.1 platformdirs-4.9.6 pymdown-extensions-10.21.2 python-dateutil-2.9.0.post0 pyyaml-6.0.3 pyyaml-env-tag-1.1 requests-2.33.1 six-1.17.0 urllib3-2.6.3 watchdog-6.0.0
+2026-05-01T12:15:01.4902436Z ##[group]Run REPO_DIR=$(basename "$PWD")
+2026-05-01T12:15:01.4902794Z [36;1mREPO_DIR=$(basename "$PWD")[0m
+2026-05-01T12:15:01.4903040Z [36;1mcd ..[0m
+2026-05-01T12:15:01.4903230Z [36;1mcat > mkdocs-ci.yml <<WRAP[0m
+2026-05-01T12:15:01.4903493Z [36;1mINHERIT: ${REPO_DIR}/mkdocs.yml[0m
+2026-05-01T12:15:01.4904060Z [36;1mdocs_dir: ${REPO_DIR}[0m
+2026-05-01T12:15:01.4904289Z [36;1msite_dir: _ci_site[0m
+2026-05-01T12:15:01.4904513Z [36;1mWRAP[0m
+2026-05-01T12:15:01.4904795Z [36;1mpython -m mkdocs build --config-file mkdocs-ci.yml[0m
+2026-05-01T12:15:01.4905155Z [36;1mrm mkdocs-ci.yml[0m
+2026-05-01T12:15:01.4905367Z [36;1mrm -rf _ci_site[0m
+2026-05-01T12:15:01.4905590Z [36;1mcd "${REPO_DIR}"[0m
+2026-05-01T12:15:01.4929620Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-05-01T12:15:01.4929945Z env:
+2026-05-01T12:15:01.4930189Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:01.4930661Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:15:01.4931061Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:01.4931443Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:01.4931816Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:01.4932209Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:15:01.4932509Z ##[endgroup]
+2026-05-01T12:15:01.7100996Z 
+2026-05-01T12:15:01.7102031Z [31m │  ⚠  Warning from the Material for MkDocs team[0m
+2026-05-01T12:15:01.7102677Z [31m │[0m
+2026-05-01T12:15:01.7103432Z [31m │[0m  MkDocs 2.0, the underlying framework of Material for MkDocs,
+2026-05-01T12:15:01.7104661Z [31m │[0m  will introduce backward-incompatible changes, including:
+2026-05-01T12:15:01.7105296Z [31m │[0m
+2026-05-01T12:15:01.7106017Z [31m │  × [0mAll plugins will stop working – the plugin system has been removed
+2026-05-01T12:15:01.7107069Z [31m │  × [0mAll theme overrides will break – the theming system has been rewritten
+2026-05-01T12:15:01.7108064Z [31m │  × [0mNo migration path exists – existing projects cannot be upgraded
+2026-05-01T12:15:01.7109080Z [31m │  × [0mClosed contribution model – community members can't report bugs
+2026-05-01T12:15:01.7110068Z [31m │  × [0mCurrently unlicensed – unsuitable for production use
+2026-05-01T12:15:01.7110701Z [31m │[0m
+2026-05-01T12:15:01.7111090Z [31m │[0m  Our full analysis:
+2026-05-01T12:15:01.7111522Z [31m │[0m
+2026-05-01T12:15:01.7112497Z [31m │[0m  [4mhttps://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/[0m
+2026-05-01T12:15:01.7114078Z [0m
+2026-05-01T12:15:01.8147706Z INFO    -  Cleaning site directory
+2026-05-01T12:15:01.8148526Z INFO    -  Building documentation to directory: /home/runner/work/SkyCMS.Docs/_ci_site
+2026-05-01T12:15:08.2616853Z INFO    -  Documentation built in 6.47 seconds
+2026-05-01T12:15:08.3370499Z ##[group]Run ./.tmp-link-check.ps1
+2026-05-01T12:15:08.3370822Z [36;1m./.tmp-link-check.ps1[0m
+2026-05-01T12:15:08.3371193Z [36;1m$issues = Get-Content -Raw ./.tmp-link-issues.json | ConvertFrom-Json[0m
+2026-05-01T12:15:08.3371576Z [36;1m$count = @($issues).Count[0m
+2026-05-01T12:15:08.3371810Z [36;1mif ($count -gt 0) {[0m
+2026-05-01T12:15:08.3372147Z [36;1m  Write-Host "Found $count link/anchor issue(s)." -ForegroundColor Red[0m
+2026-05-01T12:15:08.3372616Z [36;1m  @($issues) | Select-Object -First 50 | ConvertTo-Json -Depth 5[0m
+2026-05-01T12:15:08.3372972Z [36;1m  exit 1[0m
+2026-05-01T12:15:08.3373145Z [36;1m}[0m
+2026-05-01T12:15:08.3373438Z [36;1mWrite-Host "No link/anchor issues found." -ForegroundColor Green[0m
+2026-05-01T12:15:08.3544875Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-05-01T12:15:08.3545158Z env:
+2026-05-01T12:15:08.3545425Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:08.3545898Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:15:08.3546328Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:08.3546709Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:08.3547093Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:08.3547481Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:15:08.3547796Z ##[endgroup]
+2026-05-01T12:15:12.4651188Z Total markdown files scanned: 262
+2026-05-01T12:15:12.4661880Z Total issues: 0
+2026-05-01T12:15:12.4810268Z No link/anchor issues found.
+2026-05-01T12:15:12.6465978Z ##[group]Run if ('push' -eq 'pull_request') {
+2026-05-01T12:15:12.6466402Z [36;1mif ('push' -eq 'pull_request') {[0m
+2026-05-01T12:15:12.6466676Z [36;1m  $base = ''[0m
+2026-05-01T12:15:12.6466881Z [36;1m  $head = ''[0m
+2026-05-01T12:15:12.6467098Z [36;1m} elseif ('push' -eq 'push') {[0m
+2026-05-01T12:15:12.6467427Z [36;1m  $base = 'a0cf3969c6e5ae061f5d59ad665ded05f2fda63a'[0m
+2026-05-01T12:15:12.6467812Z [36;1m  $head = 'ad33dd2d4fef7f8bc45a6b90bc462cf2d4faaab2'[0m
+2026-05-01T12:15:12.6468111Z [36;1m} else {[0m
+2026-05-01T12:15:12.6468284Z [36;1m  $base = ''[0m
+2026-05-01T12:15:12.6468470Z [36;1m  $head = ''[0m
+2026-05-01T12:15:12.6468652Z [36;1m}[0m
+2026-05-01T12:15:12.6468807Z [36;1m[0m
+2026-05-01T12:15:12.6469151Z [36;1mif ([string]::IsNullOrWhiteSpace($base) -or [string]::IsNullOrWhiteSpace($head)) {[0m
+2026-05-01T12:15:12.6469741Z [36;1m  $files = Get-ChildItem -Recurse -File -Filter *.md | ForEach-Object { $_.FullName }[0m
+2026-05-01T12:15:12.6470203Z [36;1m  $added = $files[0m
+2026-05-01T12:15:12.6470411Z [36;1m} else {[0m
+2026-05-01T12:15:12.6470717Z [36;1m  $files = git diff --name-only --diff-filter=ACMR $base $head -- '*.md'[0m
+2026-05-01T12:15:12.6471184Z [36;1m  $added = git diff --name-only --diff-filter=A $base $head -- '*.md'[0m
+2026-05-01T12:15:12.6471522Z [36;1m}[0m
+2026-05-01T12:15:12.6471677Z [36;1m[0m
+2026-05-01T12:15:12.6471939Z [36;1m$files = @($files) | Where-Object { $_ -and $_ -notmatch '^site/' }[0m
+2026-05-01T12:15:12.6472371Z [36;1m$added = @($added) | Where-Object { $_ -and $_ -notmatch '^site/' }[0m
+2026-05-01T12:15:12.6472719Z [36;1m$joined = ($files -join "`n")[0m
+2026-05-01T12:15:12.6472986Z [36;1m$addedJoined = ($added -join "`n")[0m
+2026-05-01T12:15:12.6473285Z [36;1m"markdown_files<<EOF" >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6473574Z [36;1m$joined >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6474123Z [36;1m"EOF" >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6474428Z [36;1m"added_markdown_files<<EOF" >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6474743Z [36;1m$addedJoined >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6475184Z [36;1m"EOF" >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6475464Z [36;1m"count=$($files.Count)" >> $env:GITHUB_OUTPUT[0m
+2026-05-01T12:15:12.6536994Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-05-01T12:15:12.6537269Z env:
+2026-05-01T12:15:12.6537526Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:12.6537959Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:15:12.6538374Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:12.6538735Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:12.6539094Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:12.6539451Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:15:12.6539753Z ##[endgroup]
+2026-05-01T12:15:13.4525182Z ##[group]Run $files = @'
+2026-05-01T12:15:13.4525466Z [36;1m$files = @'[0m
+2026-05-01T12:15:13.4525737Z [36;1mfor-developers/architecture-core-platform.md[0m
+2026-05-01T12:15:13.4526131Z [36;1mfor-developers/architecture-decision-matrix.md[0m
+2026-05-01T12:15:13.4526517Z [36;1mfor-developers/architecture-executive-summary.md[0m
+2026-05-01T12:15:13.4526843Z [36;1mfor-developers/architecture.md[0m
+2026-05-01T12:15:13.4527109Z [36;1mfor-developers/index.md[0m
+2026-05-01T12:15:13.4527400Z [36;1mfor-developers/layouts-templates-articles.md[0m
+2026-05-01T12:15:13.4527696Z [36;1mfor-developers/layouts.md[0m
+2026-05-01T12:15:13.4527944Z [36;1mfor-developers/overview.md[0m
+2026-05-01T12:15:13.4528193Z [36;1mfor-developers/templates.md[0m
+2026-05-01T12:15:13.4528430Z [36;1mfor-editors/index.md[0m
+2026-05-01T12:15:13.4528659Z [36;1mfor-editors/overview.md[0m
+2026-05-01T12:15:13.4528901Z [36;1mfor-site-builders/index.md[0m
+2026-05-01T12:15:13.4529174Z [36;1mfor-site-builders/layouts.md[0m
+2026-05-01T12:15:13.4529429Z [36;1mfor-site-builders/overview.md[0m
+2026-05-01T12:15:13.4529670Z [36;1mindex.md[0m
+2026-05-01T12:15:13.4529885Z [36;1mreference/documentation-map.md[0m
+2026-05-01T12:15:13.4530237Z [36;1m'@ -split "`n" | Where-Object { $_ -and $_.Trim().Length -gt 0 }[0m
+2026-05-01T12:15:13.4530562Z [36;1m[0m
+2026-05-01T12:15:13.4530732Z [36;1m$addedFiles = @'[0m
+2026-05-01T12:15:13.4530965Z [36;1mreference/documentation-map.md[0m
+2026-05-01T12:15:13.4531292Z [36;1m'@ -split "`n" | Where-Object { $_ -and $_.Trim().Length -gt 0 }[0m
+2026-05-01T12:15:13.4531608Z [36;1m[0m
+2026-05-01T12:15:13.4531929Z [36;1mWrite-Host "Validating metadata for $($files.Count) changed markdown file(s)."[0m
+2026-05-01T12:15:13.4532535Z [36;1m./scripts/validate-doc-metadata.ps1 -Files $files -RequireFrontMatterFiles $addedFiles[0m
+2026-05-01T12:15:13.4591968Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-05-01T12:15:13.4592230Z env:
+2026-05-01T12:15:13.4592481Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:13.4592901Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:15:13.4593338Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:13.4593965Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:13.4594341Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:13.4594716Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:15:13.4595027Z ##[endgroup]
+2026-05-01T12:15:14.1303399Z Validating metadata for 16 changed markdown file(s).
+2026-05-01T12:15:14.2708454Z Metadata validation passed for 16 file(s).
+2026-05-01T12:15:14.3194256Z ##[group]Run $jobStatus = 'success'
+2026-05-01T12:15:14.3194640Z [36;1m$jobStatus = 'success'[0m
+2026-05-01T12:15:14.3194893Z [36;1m$mkdocsOutcome = 'success'[0m
+2026-05-01T12:15:14.3195139Z [36;1m$linkOutcome = 'success'[0m
+2026-05-01T12:15:14.3195385Z [36;1m$metadataOutcome = 'success'[0m
+2026-05-01T12:15:14.3195644Z [36;1m$changedCount = '16'[0m
+2026-05-01T12:15:14.3195852Z [36;1m[0m
+2026-05-01T12:15:14.3196015Z [36;1m$files = @'[0m
+2026-05-01T12:15:14.3196461Z [36;1mfor-developers/architecture-core-platform.md[0m
+2026-05-01T12:15:14.3196831Z [36;1mfor-developers/architecture-decision-matrix.md[0m
+2026-05-01T12:15:14.3197208Z [36;1mfor-developers/architecture-executive-summary.md[0m
+2026-05-01T12:15:14.3197533Z [36;1mfor-developers/architecture.md[0m
+2026-05-01T12:15:14.3197796Z [36;1mfor-developers/index.md[0m
+2026-05-01T12:15:14.3198081Z [36;1mfor-developers/layouts-templates-articles.md[0m
+2026-05-01T12:15:14.3198410Z [36;1mfor-developers/layouts.md[0m
+2026-05-01T12:15:14.3198653Z [36;1mfor-developers/overview.md[0m
+2026-05-01T12:15:14.3198904Z [36;1mfor-developers/templates.md[0m
+2026-05-01T12:15:14.3199148Z [36;1mfor-editors/index.md[0m
+2026-05-01T12:15:14.3199378Z [36;1mfor-editors/overview.md[0m
+2026-05-01T12:15:14.3199624Z [36;1mfor-site-builders/index.md[0m
+2026-05-01T12:15:14.3199883Z [36;1mfor-site-builders/layouts.md[0m
+2026-05-01T12:15:14.3200143Z [36;1mfor-site-builders/overview.md[0m
+2026-05-01T12:15:14.3200389Z [36;1mindex.md[0m
+2026-05-01T12:15:14.3200596Z [36;1mreference/documentation-map.md[0m
+2026-05-01T12:15:14.3200947Z [36;1m'@ -split "`n" | Where-Object { $_ -and $_.Trim().Length -gt 0 }[0m
+2026-05-01T12:15:14.3201266Z [36;1m[0m
+2026-05-01T12:15:14.3201599Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "## Docs Quality Gates Summary"[0m
+2026-05-01T12:15:14.3202085Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""[0m
+2026-05-01T12:15:14.3202553Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- Job status: **$jobStatus**"[0m
+2026-05-01T12:15:14.3203122Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- MkDocs build: **$mkdocsOutcome**"[0m
+2026-05-01T12:15:14.3203986Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- Link and anchor checks: **$linkOutcome**"[0m
+2026-05-01T12:15:14.3204683Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- Metadata validation: **$metadataOutcome**"[0m
+2026-05-01T12:15:14.3205380Z [36;1mAdd-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- Changed markdown files detected: **$changedCount**"[0m
+2026-05-01T12:15:14.3205850Z [36;1m[0m
+2026-05-01T12:15:14.3206026Z [36;1mif ($files.Count -gt 0) {[0m
+2026-05-01T12:15:14.3206339Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""[0m
+2026-05-01T12:15:14.3206800Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "### Changed markdown files"[0m
+2026-05-01T12:15:14.3207268Z [36;1m  foreach ($file in ($files | Select-Object -First 30)) {[0m
+2026-05-01T12:15:14.3207707Z [36;1m    Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `$file`"[0m
+2026-05-01T12:15:14.3208049Z [36;1m  }[0m
+2026-05-01T12:15:14.3208231Z [36;1m  if ($files.Count -gt 30) {[0m
+2026-05-01T12:15:14.3208645Z [36;1m    Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- ... and $($files.Count - 30) more"[0m
+2026-05-01T12:15:14.3209063Z [36;1m  }[0m
+2026-05-01T12:15:14.3209219Z [36;1m}[0m
+2026-05-01T12:15:14.3209368Z [36;1m[0m
+2026-05-01T12:15:14.3209554Z [36;1mif ($jobStatus -ne 'success') {[0m
+2026-05-01T12:15:14.3209877Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""[0m
+2026-05-01T12:15:14.3210322Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "### Triage quick commands"[0m
+2026-05-01T12:15:14.3210854Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `./.tmp-link-check.ps1`"[0m
+2026-05-01T12:15:14.3212126Z [36;1m  Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `$files = git diff --name-only --diff-filter=ACMR -- '*.md'; $added = git diff --name-only --diff-filter=A -- '*.md'; ./scripts/validate-doc-metadata.ps1 -Files $files -RequireFrontMatterFiles $added`"[0m
+2026-05-01T12:15:14.3213081Z [36;1m}[0m
+2026-05-01T12:15:14.3272890Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-05-01T12:15:14.3273162Z env:
+2026-05-01T12:15:14.3273404Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:14.3274085Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-01T12:15:14.3274657Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:14.3275022Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:14.3275396Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-01T12:15:14.3275763Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-01T12:15:14.3276065Z ##[endgroup]
+2026-05-01T12:15:14.6472301Z [31;1mParserError: [0m/home/runner/work/_temp/375fdef6-f593-4ad0-913c-1df0a5bf9af2.ps1:50[0m
+2026-05-01T12:15:14.6473454Z [31;1m[0m[36;1mLine |[0m
+2026-05-01T12:15:14.6474772Z [31;1m[0m[36;1m[36;1m  50 | [0m … MARY -Value [36;1m"- `$files = git diff --name-only --diff-filter=ACMR -- '[0m …[0m
+2026-05-01T12:15:14.6475681Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2026-05-01T12:15:14.6476502Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mThe string is missing the terminator: ".[0m
+2026-05-01T12:15:14.6821705Z ##[error]Process completed with exit code 1.
+2026-05-01T12:15:14.6946580Z Post job cleanup.
+2026-05-01T12:15:14.7782346Z [command]/usr/bin/git version
+2026-05-01T12:15:14.7819144Z git version 2.53.0
+2026-05-01T12:15:14.7858101Z Temporarily overriding HOME='/home/runner/work/_temp/19c10745-80d5-4531-a96e-ee2566c992f1' before making global git config changes
+2026-05-01T12:15:14.7859476Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-01T12:15:14.7864347Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SkyCMS.Docs/SkyCMS.Docs
+2026-05-01T12:15:14.7899359Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-01T12:15:14.7932399Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-01T12:15:14.8187658Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-01T12:15:14.8210139Z http.https://github.com/.extraheader
+2026-05-01T12:15:14.8220467Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-01T12:15:14.8251586Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-01T12:15:14.8470081Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-01T12:15:14.8499410Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-01T12:15:14.8840324Z Cleaning up orphan processes
+2026-05-01T12:15:14.9245048Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

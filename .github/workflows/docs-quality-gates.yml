@@ -160,6 +160,6 @@ jobs:
           if ($jobStatus -ne 'success') {
             Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""
             Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "### Triage quick commands"
-            Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `./.tmp-link-check.ps1`"
-            Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `$files = git diff --name-only --diff-filter=ACMR -- '*.md'; $added = git diff --name-only --diff-filter=A -- '*.md'; ./scripts/validate-doc-metadata.ps1 -Files $files -RequireFrontMatterFiles $added`"
+            Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value '- ./.tmp-link-check.ps1'
+            Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value '- $files = git diff --name-only --diff-filter=ACMR -- ''*.md''; $added = git diff --name-only --diff-filter=A -- ''*.md''; ./scripts/validate-doc-metadata.ps1 -Files $files -RequireFrontMatterFiles $added'
           }
