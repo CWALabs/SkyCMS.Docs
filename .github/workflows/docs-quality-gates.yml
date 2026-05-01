@@ -150,7 +150,7 @@ jobs:
             Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value ""
             Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "### Changed markdown files"
             foreach ($file in ($files | Select-Object -First 30)) {
-              Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- `$file`"
+              Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- $file"
             }
             if ($files.Count -gt 30) {
               Add-Content -Path $env:GITHUB_STEP_SUMMARY -Value "- ... and $($files.Count - 30) more"
