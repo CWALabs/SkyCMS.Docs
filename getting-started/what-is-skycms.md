@@ -30,6 +30,46 @@ SkyCMS is designed to support both:
 - editors get visual tools to create and publish content,
 - developers get configurable architecture, provider choice, and deployment flexibility.
 
+## Two ways to work, one shared platform
+
+SkyCMS is built for teams that need both of these realities to be true:
+
+- non-technical content creators can keep publishing work moving without depending on developers for routine content updates,
+- developers can still work in code-first workflows and avoid restrictive CMS guardrails.
+
+In practice, this means the same website can be maintained through a visual authoring path and a code-oriented path, depending on who is doing the work.
+
+## For content creators: familiar writing experience
+
+SkyCMS includes CKEditor as a first-class editing experience. For most page and blog maintenance work, content creators can use a familiar writing interface similar to a word processor.
+
+Teams often use this model to reduce training overhead:
+
+- developers and site builders set the structure,
+- content creators update the text and media,
+- everyone shares the same publishing workflow.
+
+## For developers: CMS website as code
+
+With the SkyCMS VS Code Explorer extension, developers can view and work with SkyCMS website assets and content fields from inside Visual Studio Code.
+
+This supports a modern workflow where developers can:
+
+- inspect and edit CMS-managed resources with IDE tooling,
+- use familiar source-control and review practices,
+- stay in a code-centric environment while still working with CMS content.
+
+See [SkyCMS VS Code Extension](../for-developers/extending/vscode-extension.md).
+
+## SkyCMS philosophy: remove barriers, not flexibility
+
+SkyCMS is designed to remove barriers for both groups:
+
+- content creators should not need deep technical training to keep content current,
+- developers should not be forced into rigid abstractions that block creative implementation choices.
+
+This is a core product stance, not a single feature. It shapes how editing modes, templates, code workflows, and handoff patterns are designed across the platform.
+
 ## Who SkyCMS is for
 
 SkyCMS is primarily used by:
@@ -65,6 +105,7 @@ flowchart LR
 SkyCMS includes:
 
 - multiple editing experiences, including visual and code-oriented options,
+- Visual Studio Code integration for code-first CMS workflows,
 - structured content lifecycle and publishing states,
 - layout and template composition for reusable site design,
 - multi-tenant architecture support,
@@ -88,6 +129,8 @@ For AI assistants, search pipelines, and prompt-grounding workflows, use:
 
 ## Related guides
 
+- [Why SkyCMS Is Different](./why-skycms-is-different.md)
+- [VS Code Explorer Quick Tour](./vscode-explorer-quick-tour.md)
 - [Quick Start](./quick-start.md)
 - [Key Concepts](./key-concepts.md)
 - [Installation Overview](../installation/overview.md)

@@ -225,3 +225,4 @@ If you extend the current AI layer:
 - [AI Configuration Overview](../configuration/ai/overview.md)
 - [AI Provider Comparison](../configuration/ai/provider-comparison.md)
 - [AI Assistant for Editors](../for-editors/ai-assistant.md)
+- [SkyCMS VS Code Extension](./extending/vscode-extension.md)

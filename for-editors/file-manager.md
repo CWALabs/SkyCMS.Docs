@@ -16,6 +16,10 @@ last_reviewed: 2026-04-30
 
 # File Manager
 
+> Canonical source of truth: [File Management](./feature-catalog/file-management.md)
+
+This page is the detailed workflow and deep-use companion for the canonical feature page.
+
 ## Summary
 
 Use this guide when you need to:
@@ -117,12 +121,14 @@ Deletion is permanent and cannot be undone. Verify your selection before confirm
 ### Copy or move
 
 **Copy:**
+
 1. Select the items to copy.
 2. Click **Copy** in the toolbar (or right-click → **Copy**).
 3. Navigate to the destination folder.
 4. Click **Paste** in the toolbar — a copy is created.
 
 **Move:**
+
 1. Select the items to move.
 2. Click **Cut** in the toolbar (or right-click → **Cut**).
 3. Navigate to the destination folder.

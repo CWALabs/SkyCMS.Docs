@@ -16,7 +16,7 @@ hide:
   - toc
 ---
 
-# SkyCMS Documentation
+# Documentation
 
 > **Docs version:** These pages reflect **SkyCMS v12.3.0** (April 2026). [See what changed](reference/changelog.md)
 
@@ -24,7 +24,27 @@ hide:
 
 SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools and gives developers full technical control — without fighting over the same codebase.
 
+## Why SkyCMS feels different
+
+SkyCMS supports two equally important ways to work:
+
+- Content creators can maintain pages and blogs with CKEditor, using a word-processor-like experience that needs little or no training.
+- Developers can open the same website in Visual Studio Code with the SkyCMS Explorer extension and work with website structure and content as code.
+
+This means teams do not have to choose between "easy for editors" and "powerful for developers." SkyCMS is built to support both at the same time.
+
+```mermaid
+flowchart LR
+    Dev[Developer in VS Code] --> Build[Build structure and workflows]
+    Build --> Handoff[Handoff to content team]
+    Editor[Editor in CKEditor] --> Write[Write and update content]
+    Handoff --> Write
+    Write --> Publish[Publish with shared lifecycle]
+```
+
 [Install SkyCMS](installation/overview.md){ .md-button .md-button--primary } [What is SkyCMS?](getting-started/what-is-skycms.md){ .md-button } [Docs Map](reference/documentation-map.md){ .md-button }
+
+[Why SkyCMS Is Different](getting-started/why-skycms-is-different.md){ .md-button } [VS Code Explorer Quick Tour](getting-started/vscode-explorer-quick-tour.md){ .md-button }
 
 ---
 
@@ -81,6 +101,9 @@ flowchart LR
 - I need to deploy SkyCMS: [Deployment overview](deployment/overview.md)
 - I need to configure database, storage, CDN, or email: [Configuration overview](configuration/overview.md)
 - I need to understand architecture before coding: [Developer overview](for-developers/overview.md)
+- I want to edit SkyCMS content from Visual Studio Code: [SkyCMS VS Code Extension](for-developers/extending/vscode-extension.md)
+- I want a quick buyer-friendly summary of what makes SkyCMS unique: [Why SkyCMS Is Different](getting-started/why-skycms-is-different.md)
+- I want a visual walkthrough of the VS Code workflow: [VS Code Explorer Quick Tour](getting-started/vscode-explorer-quick-tour.md)
 
 ---
 
@@ -131,7 +154,7 @@ Use these role hubs after you complete the Start Here path.
 | ------ | ----------- | ------------ |
 | **Content Editors** | [Editor Overview](for-editors/overview.md) | [Visual Editor](for-editors/visual-editor.md) · [Blogging](for-editors/blogging.md) · [Publishing](for-editors/publishing-modes.md) · [File Manager](for-editors/file-manager.md) |
 | **Site Builders** | [Builder Overview](for-site-builders/overview.md) | [Layouts](for-site-builders/layouts.md) · [Layout Examples](for-site-builders/layout-examples/overview.md) · [Templates](for-site-builders/templates.md) · [Template Examples](for-site-builders/template-examples/overview.md) · [Article Examples](for-site-builders/article-examples/overview.md) · [Widgets](for-site-builders/widgets/overview.md) |
-| **Developers** | [Developer Overview](for-developers/overview.md) | [Architecture](for-developers/architecture.md) · [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) · [API Reference](for-developers/api/overview.md) · [Multi-Tenancy](for-developers/multi-tenancy-deep-dive.md) |
+| **Developers** | [Developer Overview](for-developers/overview.md) | [Architecture](for-developers/architecture.md) · [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) · [API Reference](for-developers/api/overview.md) · [Multi-Tenancy](for-developers/multi-tenancy-deep-dive.md) · [VS Code Extension](for-developers/extending/vscode-extension.md) |
 | **Administrators** | [Configuration](configuration/overview.md) | [Database](configuration/database/overview.md) · [Storage](configuration/storage/overview.md) · [Deployment](deployment/overview.md) |
 
 ---

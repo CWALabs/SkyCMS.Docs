@@ -21,6 +21,15 @@ last_reviewed: 2026-04-28
 
 A comprehensive inventory of every feature built into SkyCMS, organized by functional area. This catalog is intended for developers, editors, site builders, administrators, and anyone evaluating SkyCMS as a content management platform.
 
+## Product approach behind these features
+
+SkyCMS is intentionally built around two parallel experiences:
+
+- a visual, low-friction editing path for content creators,
+- a code-first path for developers who want full creative and technical control.
+
+The feature set below reflects that philosophy. You can hand off daily content maintenance to non-technical editors through CKEditor, while developers continue to work in familiar tooling, including Visual Studio Code.
+
 ---
 
 ## Sections
@@ -44,6 +53,8 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 ### For Content Creators & Editors
 
 - Four editing modes: Visual Editor (WYSIWYG), drag-and-drop Page Builder, Code Editor, and AI-assisted editing/help
+- CKEditor-powered writing experience designed for easy handoff from developers to non-technical content teams
+- VS Code extension support for editing SkyCMS fields and files from inside Visual Studio Code
 - In-browser image editing (crop, resize, filters, annotate, watermark)
 - Full version history with side-by-side comparison and restore
 - Scheduled publishing with timezone support
@@ -71,6 +82,8 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 ### For Developers
 
 - Multi-tenant architecture with automatic tenant resolution
+- [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md) for editor-integrated content and file workflows
+- CMS-as-code workflow support so developers can approach website implementation in their own IDE-centric style
 - Four database providers (Cosmos DB, SQL Server, MySQL, SQLite) — auto-detected
 - Three cloud storage providers (Azure Blob, S3, Cloudflare R2) — auto-detected
 - CQRS + Mediator vertical-slice architecture

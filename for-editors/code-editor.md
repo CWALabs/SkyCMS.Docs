@@ -15,6 +15,10 @@ last_reviewed: 2026-04-27
 
 # Code Editor Basics
 
+> Canonical source of truth: [Code Editor](./feature-catalog/code-editor.md)
+
+This page is the detailed workflow and deep-use companion for the canonical feature page.
+
 ## Summary
 
 Use this guide when you need to:

@@ -18,6 +18,16 @@ last_reviewed: 2026-04-28
 
 SkyCMS provides four distinct editing experiences, allowing content creators to choose the tool that matches their skill level and task. All editors share a common save/publish pipeline, version history, and real-time collaboration layer.
 
+## Editing philosophy
+
+SkyCMS treats content editing as a shared workflow between different skill profiles, not a single-tool experience.
+
+- Non-technical content creators can maintain day-to-day pages and blog content through CKEditor with minimal training.
+- Site builders and developers can define and evolve structure using templates, layout systems, and code-oriented workflows.
+- Teams can use the [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md) when they want to inspect and edit CMS-managed assets in an IDE.
+
+The goal is straightforward: smooth handoff to content teams without imposing rigid barriers on developer creativity.
+
 **Audiences:** Editors, Authors, Reviewers, Administrators
 
 **Jump to:**
@@ -98,6 +108,8 @@ Templates control which toolbar each editable region uses:
 
 > **Documentation:**
 >
+> - [Content Editors (Concrete Guide)](../../for-editors/feature-catalog/content-editors.md)
+> - [Visual Editor (Concrete Guide)](../../for-editors/feature-catalog/visual-editor.md)
 > - [Visual Editor](../../for-editors/visual-editor.md)
 > - [Visual Editor Quickstart](../../for-editors/visual-editor-quickstart.md)
 > - [Visual Editor Toolbar Reference](../../for-editors/visual-editor-toolbar-reference.md)
@@ -176,6 +188,7 @@ Pre-built component blocks organized by category:
 
 > **Documentation:**
 >
+> - [Page Builder (Concrete Guide)](../../for-editors/feature-catalog/page-builder.md)
 > - [Page Builder](../../for-editors/page-builder.md)
 > - [Layers Panel](../../for-editors/layers.md)
 > - [Page Builder Quickstart](../../for-editors/page-builder-quickstart.md)
@@ -185,6 +198,8 @@ Pre-built component blocks organized by category:
 ## 3. Code Editor
 
 A professional code editing experience built on **Monaco Editor** (the same engine as VS Code), for editors who prefer direct HTML/CSS/JavaScript control.
+
+For developer-heavy workflows that require IDE context, use the [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md) to view and work with SkyCMS resources from Visual Studio Code.
 
 ### Editor Capabilities
 
@@ -241,7 +256,9 @@ Full VS Code-compatible shortcut set including:
 
 > **Documentation:**
 >
+> - [Code Editor (Concrete Guide)](../../for-editors/feature-catalog/code-editor.md)
 > - [Code Editor](../../for-editors/code-editor.md)
+> - [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md)
 
 ---
 
@@ -342,6 +359,7 @@ A comprehensive in-browser image editing suite built on **Filerobot Image Editor
 
 > **Documentation:**
 >
+> - [Image Editor (Concrete Guide)](../../for-editors/feature-catalog/image-editor.md)
 > - [Image Editing](../../for-editors/image-editing.md)
 
 ---

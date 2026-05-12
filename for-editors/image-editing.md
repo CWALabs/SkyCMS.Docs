@@ -15,6 +15,10 @@ last_reviewed: 2026-04-27
 
 # Image Editing
 
+> Canonical source of truth: [Image Editor](./feature-catalog/image-editor.md)
+
+This page is the detailed workflow and deep-use companion for the canonical feature page.
+
 ## Summary
 
 Use this guide when you need to:

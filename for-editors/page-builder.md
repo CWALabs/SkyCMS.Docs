@@ -16,6 +16,10 @@ last_reviewed: 2026-04-28
 
 # Page Builder
 
+> Canonical source of truth: [Page Builder](./feature-catalog/page-builder.md)
+
+This page is the detailed workflow and deep-use companion for the canonical feature page.
+
 ## Summary
 
 Use this guide when you need to compose layouts, templates, or article structures visually with the SkyCMS Page Builder.

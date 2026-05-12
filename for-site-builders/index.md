@@ -25,6 +25,8 @@ Use this page when you need to:
 - find the right guide for layouts, templates, pages, or example implementations,
 - navigate quickly to the supporting implementation guides.
 
+SkyCMS site building is designed around a deliberate handoff model: builders and developers define structure, then content creators maintain pages and blogs through familiar editing tools like CKEditor.
+
 ## Role overview
 
 SkyCMS content roles work together like this:
@@ -42,6 +44,15 @@ Site builders typically:
 - Ensure pages are responsive, consistent, and brand-aligned.
 - Collaborate with editors on authoring patterns and handoff.
 - Coordinate with developers when implementation changes are required.
+
+## Builder workflow philosophy
+
+Site builders in SkyCMS balance two goals:
+
+- make day-to-day editing safe and simple for non-technical content teams,
+- avoid rigid implementation limits that reduce developer and design freedom.
+
+This is why SkyCMS supports multiple editing modes and code-oriented workflows, including Visual Studio Code extension support for teams that manage CMS websites with IDE-first practices.
 
 For role boundaries and permission details across all roles, see [Roles and permissions (RBAC)](../for-developers/roles-and-permissions.md).
 

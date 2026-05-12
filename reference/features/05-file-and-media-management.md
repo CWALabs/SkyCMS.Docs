@@ -32,7 +32,7 @@ SkyCMS provides a browser-based file manager built on **elFinder 2.1** (via the 
 
 ## 1. File Manager
 
-> **Documentation:** [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md) · [File Manager Toolbar Reference](../../for-editors/file-manager-toolbar-reference.md)
+> **Documentation:** [File Management (Concrete Guide)](../../for-editors/feature-catalog/file-management.md) · [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md) · [File Manager Toolbar Reference](../../for-editors/file-manager-toolbar-reference.md) · [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md)
 
 A full-featured browser-based file management interface for all site assets.
 
