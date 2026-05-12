@@ -12,6 +12,9 @@ site_dir: '../_skycms_docs_site'
 theme:
   name: material
   logo: assets/images/sky-logo.png
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
   palette:
     - scheme: light
       primary: blue
@@ -365,9 +368,12 @@ nav:
 # Site configuration
 site_author: CWALabs
 copyright: Copyright &copy; 2026 Moonrise Software
+repo_url: https://github.com/CWALabs/SkyCMS
+repo_name: CWALabs/SkyCMS
 
 # Extra configuration
 extra:
+  product_url: https://sky-cms.com
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CWALabs/SkyCMS
