@@ -52,6 +52,8 @@ jobs:
           cat > mkdocs-ci.yml <<WRAP
           INHERIT: ${REPO_DIR}/mkdocs.yml
           docs_dir: ${REPO_DIR}
+          theme:
+            custom_dir: ${REPO_DIR}/overrides
           site_dir: _ci_site
           WRAP
           python -m mkdocs build --config-file mkdocs-ci.yml
