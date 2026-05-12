@@ -3,6 +3,15 @@ import re
 import yaml
 from pathlib import Path
 import json
+from datetime import date, datetime
+
+
+def json_safe(value):
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    if isinstance(value, Path):
+        return str(value)
+    return str(value)
 
 root_dir = Path(r"d:\source\SkyCMS.Docs\for-developers")
 results = []
@@ -41,5 +50,5 @@ for filepath in root_dir.rglob("*.md"):
     })
 
 with open('d:\\source\\SkyCMS.Docs\\check_results.json', 'w', encoding='utf-8') as f:
-    json.dump(results, f, indent=2)
+    json.dump(results, f, indent=2, default=json_safe)
 print("Saved to check_results.json")

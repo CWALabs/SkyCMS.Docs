@@ -17,6 +17,10 @@ last_reviewed: 2026-04-27
 
 # Email Overview
 
+> Canonical source of truth for editor and administrator operations: [Email Management](../../for-editors/feature-catalog/email-management.md)
+
+This page focuses on provider-level configuration decisions.
+
 ## Summary
 
 Use this page to select an email delivery approach and validate outbound email behavior in your environment.

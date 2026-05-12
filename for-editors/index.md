@@ -49,11 +49,16 @@ For role boundaries and permission details across all roles, see [Roles and perm
 1. Learn the lifecycle and workflow states:
    - [Article Lifecycle Quick Reference](./article-lifecycle-reference.md)
    - [Editor Workflow Reference](./overview.md)
-2. Execute core daily operations:
+2. Find concrete feature guides by tool:
+   - [Editor Feature Catalog](./feature-catalog/index.md)
+   - [Content Editors](./feature-catalog/content-editors.md)
+   - [File Management](./feature-catalog/file-management.md)
+   - [Email Management](./feature-catalog/email-management.md)
+3. Execute core daily operations:
    - [Creating articles](./creating-articles.md)
    - [Updating and deleting articles](./updating-and-deleting-articles.md)
    - [Scheduling pages](./page-scheduling.md)
-3. Use editing tools effectively:
+4. Use editing tools effectively:
    - [Using the Visual Editor](./visual-editor.md)
    - [Visual Editor quick start](./visual-editor-quickstart.md)
    - [Visual Editor toolbar reference](./visual-editor-toolbar-reference.md)
@@ -61,7 +66,7 @@ For role boundaries and permission details across all roles, see [Roles and perm
    - [Page builder quick start](./page-builder-quickstart.md)
    - [Layers panel](./layers.md)
    - [Code editor](./code-editor.md)
-4. Use advanced and media tools when needed:
+5. Use advanced and media tools when needed:
    - [AI assistant](./ai-assistant.md)
    - [AI provider setup](./ai-provider-setup.md)
    - [AI troubleshooting](./ai-troubleshooting.md)

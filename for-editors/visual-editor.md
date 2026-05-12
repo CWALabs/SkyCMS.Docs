@@ -15,6 +15,10 @@ last_reviewed: 2026-04-28
 
 # Using the Visual Editor
 
+> Canonical source of truth: [Visual Editor](./feature-catalog/visual-editor.md)
+
+This page is the detailed workflow and deep-use companion for the canonical feature page.
+
 ## Summary
 
 Use this guide when you want to edit article content directly in page context with the SkyCMS Visual Editor.

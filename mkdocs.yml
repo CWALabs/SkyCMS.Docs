@@ -84,6 +84,8 @@ nav:
     - Home: index.md
     - Getting Started:
       - What Is SkyCMS?: getting-started/what-is-skycms.md
+      - Why SkyCMS Is Different: getting-started/why-skycms-is-different.md
+      - VS Code Explorer Quick Tour: getting-started/vscode-explorer-quick-tour.md
       - Key Concepts: getting-started/key-concepts.md
       - Quick Start: getting-started/quick-start.md
     - Installation:
@@ -112,9 +114,21 @@ nav:
     - For Editors:
       - Start Here: for-editors/index.md
       - Overview: for-editors/overview.md
+      - Feature Catalog (Concrete Guides):
+        - Editor Feature Catalog: for-editors/feature-catalog/index.md
+        - Canonical Content Model: for-editors/feature-catalog/canonical-content-model.md
+        - Editor Help Route Map: for-editors/feature-catalog/editor-help-route-map.md
+        - Content Editors: for-editors/feature-catalog/content-editors.md
+        - Visual Editor: for-editors/feature-catalog/visual-editor.md
+        - Code Editor: for-editors/feature-catalog/code-editor.md
+        - Page Builder: for-editors/feature-catalog/page-builder.md
+        - Image Editor: for-editors/feature-catalog/image-editor.md
+        - File Management: for-editors/feature-catalog/file-management.md
+        - Email Management: for-editors/feature-catalog/email-management.md
       - Creating Articles: for-editors/creating-articles.md
       - Updating & Deleting: for-editors/updating-and-deleting-articles.md
       - Article Lifecycle: for-editors/article-lifecycle-reference.md
+      - Dashboard Overview: for-editors/dashboard-overview.md
       - Editors:
         - Visual Editor: for-editors/visual-editor.md
         - Visual Editor Quick Start: for-editors/visual-editor-quickstart.md
@@ -130,11 +144,15 @@ nav:
         - AI Troubleshooting: for-editors/ai-troubleshooting.md
         - Image Editing: for-editors/image-editing.md
       - Publishing:
+        - Publish a Page: for-editors/publish-a-page.md
         - Publishing Modes: for-editors/publishing-modes.md
         - Page Scheduling: for-editors/page-scheduling.md
         - Publishing Progress: for-editors/publishing-progress.md
         - Version History: for-editors/version-history.md
+        - Compare Page Versions: for-editors/compare-page-versions.md
+        - Trash and Recovery: for-editors/trash-and-recovery.md
         - URL Management: for-editors/url-management.md
+      - Layouts and Templates: for-editors/layouts-and-templates.md
       - Blogging: for-editors/blogging.md
       - File Manager: for-editors/file-manager.md
       - File Manager Quick Start: for-editors/file-manager-quickstart.md
@@ -145,7 +163,10 @@ nav:
       - Administration:
         - Authentication & SSO: for-editors/authentication.md
         - User Management: for-editors/user-management.md
+        - Role Management: for-editors/role-management.md
+        - Article Permissions: for-editors/article-permissions.md
         - Site Settings: for-editors/site-settings.md
+        - Email Admin: for-editors/email-admin.md
         - Contact Management: for-editors/contact-management.md
     - For Site Builders:
       - Start Here: for-site-builders/index.md
@@ -233,6 +254,7 @@ nav:
       - Extending:
         - Custom Widgets: for-developers/extending/custom-widgets.md
         - FlexDb Identity: for-developers/extending/flex-db.md
+        - VS Code Extension: for-developers/extending/vscode-extension.md
       - API Reference:
         - Overview: for-developers/api/overview.md
         - Architecture: for-developers/api/architecture.md

@@ -20,12 +20,22 @@ last_reviewed: 2026-04-29
 
 SkyCMS provides two primary visual editing tools: the **Visual Editor** (CKEditor 5) and the **Page Builder** (GrapesJS). Both produce web page content, but they serve fundamentally different purposes. This guide helps site builders and developers decide which tool to use — and how to design for it — before the first editor ever opens the page.
 
+## Why this decision matters
+
+Choosing an editor in SkyCMS is not only a tooling choice. It defines team handoff and long-term maintenance.
+
+- If your goal is to let non-technical content creators maintain pages and blogs with minimal training, prefer CKEditor inside a clear template structure.
+- If your goal is editor-controlled page composition, prefer Page Builder for structure-at-authoring workflows.
+- If your goal is developer control in IDE workflows, use the SkyCMS VS Code extension alongside structured template design.
+
+The practical objective is to give every role enough freedom for their job without creating barriers for the next person in the workflow.
+
 ## The Core Difference
 
 The most useful way to think about this is not "which editor is more powerful," but rather: **what is being authored — structure, or content?**
 
 | | Visual Editor (CKEditor) | Page Builder (GrapesJS) |
-|---|---|---|
+| --- | --- | --- |
 | **What it authors** | Content inside a predefined structure | Structure itself |
 | **Who defines the layout** | Site builder / developer (in the template) | The editor, at authoring time |
 | **Number of editable regions** | Typically few — one to a handful | Potentially many, determined at edit time |
@@ -130,7 +140,7 @@ For content types that will grow to many pages, the Visual Editor + template mod
 
 ## Quick Decision Reference
 
-```
+```text
 Is the page structure consistent across many pages?
   Yes → Visual Editor + template
 

@@ -136,7 +136,7 @@ SkyCMS ships with six default roles:
 
 ## 4. Email Administration
 
-> **Documentation:** [Email Overview](../../configuration/email/overview.md) · [Azure Communication Services](../../configuration/email/azure-communication-services.md) · [SendGrid](../../configuration/email/sendgrid.md) · [SMTP](../../configuration/email/smtp.md) · [NoOp Provider](../../configuration/email/none.md) · [Email Configuration Reference](../../configuration/email/configuration-reference.md) · [Email Environment Variables](../../configuration/email/environment-variables.md)
+> **Documentation:** [Email Management (Concrete Guide)](../../for-editors/feature-catalog/email-management.md) · [Email Overview](../../configuration/email/overview.md) · [Azure Communication Services](../../configuration/email/azure-communication-services.md) · [SendGrid](../../configuration/email/sendgrid.md) · [SMTP](../../configuration/email/smtp.md) · [NoOp Provider](../../configuration/email/none.md) · [Email Configuration Reference](../../configuration/email/configuration-reference.md) · [Email Environment Variables](../../configuration/email/environment-variables.md)
 
 ### Email Provider Configuration
 

@@ -19,6 +19,8 @@ last_reviewed: 2026-04-27
 
 Start here for SkyCMS developer architecture, API, lifecycle, and implementation guidance.
 
+SkyCMS supports a code-first development model without sacrificing editor usability. Developers can implement and maintain websites with familiar architecture and tooling, while content teams continue routine updates through visual editing.
+
 ## Role overview
 
 SkyCMS content roles work together like this:
@@ -36,6 +38,12 @@ Developers typically:
 - Build integrations for storage, auth, and external services.
 - Maintain performance, observability, and deployment quality.
 - Add tests and uphold architecture and tenant isolation constraints.
+
+## Developer experience philosophy
+
+SkyCMS is designed to remove unnecessary constraints on implementation style. You can work through templates, APIs, infrastructure, and IDE-centric workflows instead of being locked into a rigid CMS authoring model.
+
+When you want to interact with CMS content and structure from inside your IDE, use the [SkyCMS VS Code Extension](./extending/vscode-extension.md) to work with SkyCMS resources as code.
 
 For the complete permission matrix and cross-role responsibilities, see [Roles and permissions (RBAC)](./roles-and-permissions.md).
 
