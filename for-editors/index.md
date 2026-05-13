@@ -11,7 +11,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # For Editors
@@ -23,6 +23,8 @@ Use this page when you need to:
 - understand editor responsibilities,
 - find lifecycle and operational workflows quickly,
 - navigate to the right editing tool guide.
+
+> **What's new in 12.4.0:** SkyCMS now adds a first-class Visual Studio Code workflow through SkyCMS VS Code Explorer for content-as-code and site operations. Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review release details in the [Changelog](../reference/changelog.md).
 
 ## Role overview
 

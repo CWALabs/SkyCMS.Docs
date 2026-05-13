@@ -12,7 +12,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # For Site Builders
@@ -24,6 +24,8 @@ Use this page when you need to:
 - understand site builder responsibilities,
 - find the right guide for layouts, templates, pages, or example implementations,
 - navigate quickly to the supporting implementation guides.
+
+> **What's new in 12.4.0:** SkyCMS now includes SkyCMS VS Code Explorer for IDE-first content and structure workflows, complementing Page Builder and in-editor tools. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and see the [Changelog](../reference/changelog.md).
 
 SkyCMS site building is designed around a deliberate handoff model: builders and developers define structure, then content creators maintain pages and blogs through familiar editing tools like CKEditor.
 

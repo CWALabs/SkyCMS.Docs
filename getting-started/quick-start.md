@@ -11,7 +11,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # Quick Start
@@ -19,6 +19,8 @@ last_reviewed: 2026-04-27
 ## Summary
 
 Use this tutorial to get SkyCMS running locally and complete one full publish cycle.
+
+> **What's new in 12.4.0:** You can now pair this setup with SkyCMS VS Code Explorer for content-as-code workflows and direct CMS operations in Visual Studio Code. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 ## Outcome
 

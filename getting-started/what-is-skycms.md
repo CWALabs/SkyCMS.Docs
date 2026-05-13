@@ -10,7 +10,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # What Is SkyCMS?
@@ -21,6 +21,8 @@ SkyCMS is a multi-tenant content management system built on ASP.NET Core for tea
 
 If you are new to SkyCMS, this page explains what the platform does before you install it or start building with it.
 
+> **What's new in 12.4.0:** SkyCMS now includes SkyCMS VS Code Explorer, adding a major content-as-code option in Visual Studio Code while preserving visual and live editing tools. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and see details in the [Changelog](../reference/changelog.md).
+
 ## Context
 
 Most CMS platforms force teams to choose between editor-friendly tooling and developer-friendly architecture.
@@ -30,7 +32,7 @@ SkyCMS is designed to support both:
 - editors get visual tools to create and publish content,
 - developers get configurable architecture, provider choice, and deployment flexibility.
 
-## Two ways to work, one shared platform
+## Multiple ways to work, one shared platform
 
 SkyCMS is built for teams that need both of these realities to be true:
 

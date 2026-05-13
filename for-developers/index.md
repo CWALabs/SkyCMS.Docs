@@ -10,7 +10,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # For Developers
@@ -18,6 +18,8 @@ last_reviewed: 2026-04-27
 ## Summary
 
 Start here for SkyCMS developer architecture, API, lifecycle, and implementation guidance.
+
+> **What's new in 12.4.0:** SkyCMS VS Code Explorer adds a major content-as-code workflow for developers who want full IDE tooling, extension support, and direct CMS operations in Visual Studio Code. Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 SkyCMS supports a code-first development model without sacrificing editor usability. Developers can implement and maintain websites with familiar architecture and tooling, while content teams continue routine updates through visual editing.
 
