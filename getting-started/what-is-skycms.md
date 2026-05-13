@@ -21,6 +21,8 @@ SkyCMS is a multi-tenant content management system built on ASP.NET Core for tea
 
 If you are new to SkyCMS, this page explains what the platform does before you install it or start building with it.
 
+Decision guidance: use this page first when you need to decide whether SkyCMS fits your team model and workflow expectations.
+
 > **What's new in 12.4.0:** SkyCMS now includes SkyCMS VS Code Explorer, adding a major content-as-code option in Visual Studio Code while preserving visual and live editing tools. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and see details in the [Changelog](../reference/changelog.md).
 
 ## Context
@@ -129,6 +131,20 @@ For AI assistants, search pipelines, and prompt-grounding workflows, use:
 
 - [Key Concepts](key-concepts.md) as the canonical vocabulary source,
 - [AI Context Pack](../reference/ai-context-pack.md) for compact authoritative retrieval paths.
+
+## Related guides
+
+## Next steps
+
+- [Installation Overview](../installation/overview.md) to choose a deployment path.
+- [Quick Start](./quick-start.md) to complete your first publish cycle.
+- [For Editors](../for-editors/index.md), [For Site Builders](../for-site-builders/index.md), or [For Developers](../for-developers/index.md) for role-specific paths.
+
+## Deep dive
+
+- [Why SkyCMS Is Different](./why-skycms-is-different.md)
+- [VS Code Explorer Quick Tour](./vscode-explorer-quick-tour.md)
+- [Key Concepts](./key-concepts.md)
 
 ## Related guides
 

@@ -186,3 +186,17 @@ Use these role hubs after you complete the Start Here path.
 - [Documentation Map](reference/documentation-map.md) — visual guide to docs structure and reading paths.
 - [Architecture Diagram Catalog](for-developers/architecture-diagram-catalog.md) — visual map for architecture and flows.
 - [Changelog](reference/changelog.md)
+
+---
+
+## Next Steps
+
+- New to SkyCMS: start with [What is SkyCMS?](getting-started/what-is-skycms.md), then [Installation Overview](installation/overview.md).
+- Ready to build: continue to [Quick Start](getting-started/quick-start.md) and [Deployment Overview](deployment/overview.md).
+- Working by role: jump to [For Editors](for-editors/index.md), [For Site Builders](for-site-builders/index.md), or [For Developers](for-developers/index.md).
+
+## Deep Dive
+
+- Product and workflow positioning: [Why SkyCMS Is Different](getting-started/why-skycms-is-different.md)
+- IDE-first workflow: [VS Code Explorer Quick Tour](getting-started/vscode-explorer-quick-tour.md)
+- Full capability inventory: [Feature Catalog](reference/features/index.md)

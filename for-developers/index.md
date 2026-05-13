@@ -19,6 +19,8 @@ last_reviewed: 2026-05-13
 
 Start here for SkyCMS developer architecture, API, lifecycle, and implementation guidance.
 
+Decision guidance: use this page when your main goal is to implement, extend, integrate, deploy, or troubleshoot SkyCMS platform behavior.
+
 > **What's new in 12.4.0:** SkyCMS VS Code Explorer adds a major content-as-code workflow for developers who want full IDE tooling, extension support, and direct CMS operations in Visual Studio Code. Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 SkyCMS supports a code-first development model without sacrificing editor usability. Developers can implement and maintain websites with familiar architecture and tooling, while content teams continue routine updates through visual editing.
@@ -101,6 +103,18 @@ If you are new to SkyCMS development, start with these five pages:
 ## Verification
 
 You are in the right developer workflow when you can identify the correct architecture and API references for your task, apply the related implementation guide, and validate changes against platform constraints.
+
+## Next steps
+
+- [For Editors](../for-editors/index.md) when validating authoring workflows and publishing operations.
+- [For Site Builders](../for-site-builders/index.md) when collaborating on layout/template composition and handoff.
+- [What Is SkyCMS?](../getting-started/what-is-skycms.md) when introducing architecture context to new contributors.
+
+## Deep dive
+
+- [Architecture overview](./architecture.md)
+- [API docs overview](./api/overview.md)
+- [SkyCMS VS Code Extension](./extending/vscode-extension.md)
 
 ## Related guides
 

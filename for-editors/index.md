@@ -24,6 +24,8 @@ Use this page when you need to:
 - find lifecycle and operational workflows quickly,
 - navigate to the right editing tool guide.
 
+Decision guidance: use this page when your main goal is day-to-day content operations (draft, edit, publish, schedule, and verification).
+
 > **What's new in 12.4.0:** SkyCMS now adds a first-class Visual Studio Code workflow through SkyCMS VS Code Explorer for content-as-code and site operations. Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review release details in the [Changelog](../reference/changelog.md).
 
 ## Role overview
@@ -84,6 +86,18 @@ You are in the right workflow when you can:
 - preview changes,
 - publish or schedule publication,
 - verify live output after publish.
+
+## Next steps
+
+- [For Site Builders](../for-site-builders/index.md) when you need layout/template structure changes.
+- [For Developers](../for-developers/index.md) when you need API, infrastructure, or platform changes.
+- [What Is SkyCMS?](../getting-started/what-is-skycms.md) when onboarding new team members.
+
+## Deep dive
+
+- [Editor Workflow Reference](./overview.md)
+- [Visual Editor toolbar reference](./visual-editor-toolbar-reference.md)
+- [File Manager](./file-manager.md)
 
 ## Related guides
 

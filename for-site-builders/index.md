@@ -25,6 +25,8 @@ Use this page when you need to:
 - find the right guide for layouts, templates, pages, or example implementations,
 - navigate quickly to the supporting implementation guides.
 
+Decision guidance: use this page when your main goal is to design or refine reusable structure before editorial teams maintain content.
+
 > **What's new in 12.4.0:** SkyCMS now includes SkyCMS VS Code Explorer for IDE-first content and structure workflows, complementing Page Builder and in-editor tools. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and see the [Changelog](../reference/changelog.md).
 
 SkyCMS site building is designed around a deliberate handoff model: builders and developers define structure, then content creators maintain pages and blogs through familiar editing tools like CKEditor.
@@ -78,6 +80,18 @@ You are in the right workflow when you can:
 - identify the right layout or template for a content goal,
 - apply or update a page structure safely,
 - hand off editor-ready regions with clear usage guidance.
+
+## Next steps
+
+- [For Editors](../for-editors/index.md) when you are validating editorial usability and handoff.
+- [For Developers](../for-developers/index.md) when implementation requires deeper platform or API changes.
+- [What Is SkyCMS?](../getting-started/what-is-skycms.md) when aligning stakeholders on platform workflow.
+
+## Deep dive
+
+- [Site Builder Workflow Deep-Dive](./overview.md)
+- [Layouts](./layouts.md)
+- [Templates](./templates.md)
 
 ## Related guides
 
