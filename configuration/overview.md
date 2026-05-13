@@ -12,7 +12,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # Configuration Overview
@@ -22,6 +22,8 @@ last_reviewed: 2026-04-27
 SkyCMS configuration controls how the platform connects to your database, storage, delivery layers, and optional service providers.
 
 If you are new to SkyCMS, use this page to understand the configuration model before you start editing environment variables or provider settings.
+
+> **What's new in 12.4.0:** SkyCMS now includes SkyCMS VS Code Explorer, giving teams an additional IDE-first content-as-code workflow after environment setup. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and see the [Changelog](../reference/changelog.md).
 
 ## Context
 

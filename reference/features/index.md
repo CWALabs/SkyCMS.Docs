@@ -14,7 +14,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-28
+last_reviewed: 2026-05-13
 ---
 
 # SkyCMS Feature Catalog
@@ -23,12 +23,17 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 
 ## Product approach behind these features
 
-SkyCMS is intentionally built around two parallel experiences:
+SkyCMS is intentionally built as a best-of-breed toolkit, where each workflow uses the right tool:
 
-- a visual, low-friction editing path for content creators,
-- a code-first path for developers who want full creative and technical control.
+- CKEditor for live content authoring,
+- GrapesJS for visual page building,
+- Monaco for code editing,
+- Filerobot for image editing,
+- elFinder for file operations,
+- built-in AI for assisted workflows,
+- SkyCMS VS Code Explorer for content-as-code and IDE-first site operations.
 
-The feature set below reflects that philosophy. You can hand off daily content maintenance to non-technical editors through CKEditor, while developers continue to work in familiar tooling, including Visual Studio Code.
+The feature set below reflects that philosophy: teams can combine visual, editorial, and code-first workflows without splitting platforms.
 
 ---
 

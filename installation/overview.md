@@ -12,7 +12,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-27
+last_reviewed: 2026-05-13
 ---
 
 # Installation Overview
@@ -22,6 +22,8 @@ last_reviewed: 2026-04-27
 Use this page to choose an installation path and complete first-time setup without guessing at missing prerequisites.
 
 If you are new to SkyCMS, start here before platform-specific guides.
+
+> **What's new in 12.4.0:** After installation, teams can now use SkyCMS VS Code Explorer for content-as-code workflows and direct CMS operations in Visual Studio Code. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 ## Outcome
 

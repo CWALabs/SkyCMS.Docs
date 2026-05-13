@@ -27,10 +27,11 @@ If you are new to SkyCMS, this page explains what the platform does before you i
 
 Most CMS platforms force teams to choose between editor-friendly tooling and developer-friendly architecture.
 
-SkyCMS is designed to support both:
+SkyCMS is designed to support both by combining specialized tools into one platform:
 
-- editors get visual tools to create and publish content,
-- developers get configurable architecture, provider choice, and deployment flexibility.
+- visual and live editing tools for content teams,
+- page-building and code-editing tools for builders and developers,
+- configurable architecture, provider choice, and deployment flexibility for operations.
 
 ## Multiple ways to work, one shared platform
 
@@ -39,7 +40,7 @@ SkyCMS is built for teams that need both of these realities to be true:
 - non-technical content creators can keep publishing work moving without depending on developers for routine content updates,
 - developers can still work in code-first workflows and avoid restrictive CMS guardrails.
 
-In practice, this means the same website can be maintained through a visual authoring path and a code-oriented path, depending on who is doing the work.
+In practice, this means the same website can be maintained through live editing, page building, code editing, image workflows, file operations, and IDE-based content-as-code paths, depending on who is doing the work.
 
 ## For content creators: familiar writing experience
 
