@@ -24,6 +24,10 @@ This folder documents a practical, incremental module framework for SkyCMS Edito
 7. [07-PR1-Execution-Checklist.md](07-PR1-Execution-Checklist.md)
    - Implementation-ready checklist, estimates, and commit breakdown for PR1
 
+## Contributor References
+
+- Screenshot capture standards for documentation work: [../screenshot-guide.md](../screenshot-guide.md)
+
 ## Design Principles
 
 - Safe by default: modules are disabled on install until explicitly enabled.

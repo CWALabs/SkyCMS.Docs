@@ -1,91 +1,149 @@
-# Screenshot Guide for SkyCMS Docs
+# Screenshot Standards for Documentation Work
 
-This guide covers how to capture, name, and embed screenshots in SkyCMS documentation pages.
+Internal guide for doc writers. This file is for documentation process use and does not need to be published as end-user product docs.
 
 ---
 
-## Where screenshots live
+## Goal
 
-All screenshots for the `for-editors/` section go in:
-
-```
-d:\source\SkyCMS.Docs\for-editors\img\
-```
-
-Create the `img/` folder if it does not exist — MkDocs picks it up automatically.
-
-For screenshots in other sections, create a parallel `img/` folder next to that section's `.md` files:
-
-```
-for-editors/img/
-for-site-builders/img/
-for-developers/img/
-```
+Use screenshots to increase trust and reduce confusion in task guides. Every screenshot should answer one question clearly: "What do I click or verify at this step?"
 
 ---
 
 ## Recommended dimensions
 
-| Screenshot type | Width × Height | Notes |
+Use these defaults unless a page has a strong reason to differ.
+
+| Screenshot type | Width x Height | Notes |
 |---|---|---|
-| Full page / full editor view | **1600 × 900 px** | 16:9; captures toolbar + canvas + save button without cutting anything |
-| Toolbar strip | **1600 × 280 px** | Tight horizontal crop; no wasted space above or below |
-| Card grid / selection screen | **1200 × 600 px** | Fits 2-column layouts comfortably |
-| Panel or dialog | **800 × 600 px** | Modals, sidebars, confirmation dialogs |
+| Full app window | 1280 x 720 | Best default for context shots; stays readable in web docs |
+| Alternate full view | 1024 x 768 | Good for denser UI or older layouts |
+| Focused closeup | 800-1100 px wide | Crop to the exact control/panel being explained |
+| Dialog/panel detail | 800 x 600 | Works well for modals and side panels |
+
+Aspect ratio guidance:
+- Prefer 16:9 or 4:3 for full-window captures.
+- Keep closeups proportional to the UI region; avoid very tall, narrow crops.
 
 ---
 
-## DPI
+## Full-screen vs closeup
 
-Use **144 DPI** (2× / HiDPI).
+Use a combination.
 
-At 144 DPI, a 1600 px wide image renders at a crisp 800 px on a retina display. If your tool does not let you set DPI, just capture at the pixel dimensions above — the browser handles scaling.
+- Start a workflow with one full-window screenshot for context.
+- Follow with focused closeups for exact actions (menus, buttons, command palette, indicators).
+- Add annotation only when the target element is not obvious.
+
+Practical mix for most guides:
+- 1 context image for a new section.
+- 2-4 focused images for the actual steps.
 
 ---
 
-## Format
+## What makes a screenshot "good"
 
-**PNG** for all UI screenshots. PNG is lossless, so text, icons, and button edges stay sharp. Avoid JPEG for UI captures.
+### 1. Intentional framing
+
+- Capture only what the reader needs for the step.
+- Close unrelated tabs/panels.
+- Keep the target UI near the visual center.
+
+### 2. Readable text
+
+- Capture at 100% app/browser zoom.
+- Use a scale where labels and button text are legible without zooming the page.
+- If text is hard to read at normal docs zoom, re-capture at a larger crop.
+
+### 3. Consistency
+
+- Use one theme (light or dark) per page.
+- Keep similar zoom levels across a guide.
+- Reuse naming and caption patterns.
+
+### 4. Context plus explanation
+
+Every image should include:
+- Alt text
+- A short caption
+- Optional "What to notice" bullets for critical UI clues
 
 ---
 
-## Before you take the screenshot
+## File format and size
 
-1. Set your browser zoom to **100%**. At 125% or 150%, rendered pixels are larger and the captured file will be smaller than intended.
-2. On a high-DPI (HiDPI/Retina) monitor, Windows Snipping Tool captures at the monitor's native resolution. 800 px of screen content at 2× = 1600 px in the saved file — that is exactly what you want.
-3. Close any personal information (email, username, profile photos) that should not appear in docs.
-4. Use realistic but neutral content in editable fields — for example, "Sample page title" rather than a real client's page name.
+- Use PNG for UI screenshots (text and icons stay crisp).
+- Keep most files in the 150-300 KB range when possible.
+- Try to keep any single screenshot under 500 KB.
+- Compress oversized images without degrading text clarity.
+
+---
+
+## Capture preparation checklist
+
+Before capture:
+
+1. Set app/browser zoom to 100%.
+2. Remove personal or sensitive information.
+3. Use neutral sample content (for example, "Sample page title").
+4. Close notifications and unrelated windows.
+5. Ensure key controls are visible and not blocked by overlays.
 
 ---
 
 ## Naming convention
 
-Use lowercase with hyphens. Match the filename in the `<!-- SCREENSHOT: ... -->` placeholder comment in the `.md` file.
+Use lowercase kebab-case and descriptive names.
 
 Examples:
-- `visual-editor-overview.png`
-- `visual-editor-toolbar-annotated.png`
-- `editor-selection-overview.png`
-- `dashboard-overview-columns.png`
+- `vscode-explorer-sidebar-overview.png`
+- `vscode-explorer-command-palette-sync.png`
+- `visual-editor-toolbar-save.png`
+- `file-manager-upload-result.png`
 
 ---
 
-## Embedding in a doc
+## Placement and embedding
+
+Store images in an `img/` folder next to the relevant markdown page section when possible.
+
+Examples:
+- `for-editors/img/`
+- `for-site-builders/img/`
+- `for-developers/img/`
+- `getting-started/img/`
+
+Markdown pattern:
 
 ```markdown
-![Alt text describing the image](img/filename.png)
-```
+![Short alt text that states what is shown](img/file-name.png)
 
-Replace the `<!-- SCREENSHOT: ... -->` placeholder comment with the live image tag once the file is saved.
+Caption: One sentence describing the user-visible state.
+What to notice:
+- Item 1
+- Item 2
+```
 
 ---
 
-## Placeholder format (for new pages)
+## Placeholder pattern while writing
 
-When writing a page before screenshots are ready, insert:
+If screenshots are pending, use:
 
 ```markdown
-<!-- SCREENSHOT: Description of what to capture. Suggested filename: img/name.png -->
+<!-- SCREENSHOT: What to capture and why. Suggested filename: img/file-name.png -->
 ```
 
-This keeps the intent visible in the source without breaking the rendered page.
+This preserves intent in source until the final images are ready.
+
+---
+
+## Quick quality gate
+
+Before merge, verify:
+
+1. Each screenshot supports a specific step.
+2. Text is legible at normal reading size.
+3. Captions and alt text are present.
+4. File names are descriptive and consistent.
+5. Mobile rendering does not make images unusably small.

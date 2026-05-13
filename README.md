@@ -181,6 +181,7 @@ When adding or updating documentation for a SkyCMS feature, also update the corr
 - **Use tables for structured data** — Configuration options, parameters, comparison matrices.
 - **Include code examples** — Use fenced code blocks with language identifiers (`csharp`, `bash`, `powershell`, `yaml`, `json`).
 - **Add "See Also" sections** — End pages with links to related documentation.
+- **Use screenshot standards for UI captures** — Follow the internal guide at [notes/screenshot-guide.md](notes/screenshot-guide.md) for dimensions, framing, alt text, captions, and quality checks.
 
 ---
 
