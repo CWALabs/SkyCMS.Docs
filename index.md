@@ -10,7 +10,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-04-30
+last_reviewed: 2026-05-13
 hide:
   - navigation
   - toc
@@ -18,7 +18,7 @@ hide:
 
 # Documentation
 
-> **Docs version:** These pages reflect **SkyCMS v12.3.0** (April 2026). [See what changed](reference/changelog.md)
+> **Docs version:** These pages reflect **SkyCMS v12.4.0** (May 2026). [See what changed](reference/changelog.md)
 
 ## The edge‑native CMS for creative people who value performance, simplicity, and creative freedom
 
@@ -26,25 +26,37 @@ SkyCMS is a multi-tenant CMS that gives content editors modern publishing tools 
 
 ## Why SkyCMS feels different
 
-SkyCMS supports two equally important ways to work:
+SkyCMS is designed as a best-of-breed content platform. Instead of forcing one editor for every task, it combines specialized tools that work together:
 
-- Content creators can maintain pages and blogs with CKEditor, using a word-processor-like experience that needs little or no training.
-- Developers can open the same website in Visual Studio Code with the SkyCMS Explorer extension and work with website structure and content as code.
+- **Live content editing:** CKEditor for article and page authoring in a familiar writing experience.
+- **Visual page building:** GrapesJS for drag-and-drop page composition and reusable layout structures.
+- **Code-first editing:** Monaco for in-browser code editing when you need direct control.
+- **Image workflows:** Filerobot for image adjustments and transformations.
+- **File operations:** Built-in elFinder File Manager for upload, organization, and storage browsing.
+- **Built-in AI:** AI-assisted workflows for help, drafting, and faster content operations.
 
-This means teams do not have to choose between "easy for editors" and "powerful for developers." SkyCMS is built to support both at the same time.
+SkyCMS VS Code Explorer extends this model with a new choice: **content as code** inside Visual Studio Code. Teams can use the full VS Code ecosystem, installed extensions, and familiar developer workflows while still collaborating with visual and editorial users.
 
 ```mermaid
 flowchart LR
-    Dev[Developer in VS Code] --> Build[Build structure and workflows]
-    Build --> Handoff[Handoff to content team]
-    Editor[Editor in CKEditor] --> Write[Write and update content]
-    Handoff --> Write
-    Write --> Publish[Publish with shared lifecycle]
+    Toolkit[Best-of-breed SkyCMS toolkit]
+    Toolkit --> Live[CKEditor live editing]
+    Toolkit --> Builder[GrapesJS page builder]
+    Toolkit --> Code[Monaco code editor]
+    Toolkit --> Media[Filerobot image editor]
+    Toolkit --> Files[elFinder file manager]
+    Toolkit --> Ai[Built-in AI]
+    Toolkit --> VsCode[VS Code Explorer content as code]
+    VsCode --> Publish[Shared publish lifecycle]
+    Live --> Publish
+    Builder --> Publish
 ```
 
 [Install SkyCMS](installation/overview.md){ .md-button .md-button--primary } [What is SkyCMS?](getting-started/what-is-skycms.md){ .md-button } [Docs Map](reference/documentation-map.md){ .md-button }
 
 [Why SkyCMS Is Different](getting-started/why-skycms-is-different.md){ .md-button } [VS Code Explorer Quick Tour](getting-started/vscode-explorer-quick-tour.md){ .md-button }
+
+[Install SkyCMS VS Code Explorer](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer){ .md-button }
 
 ---
 

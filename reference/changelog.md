@@ -64,6 +64,25 @@ Use this structure for new entries:
   - [File Manager Toolbar Reference](../for-editors/file-manager-toolbar-reference.md)
 
 
+### 2026-05-13
+
+- Scope: SkyCMS VS Code Explorer extension and platform enhancements (v12.4.0).
+- Change type: Feature — major extension, API, and editor improvements.
+- Summary:
+  - Introduced the SkyCMS VS Code Explorer extension, enabling direct site management, multi-site switching, and command execution from within Visual Studio Code.
+  - Added web-host support, documentation search, and improved error handling in the Explorer extension.
+  - Enhanced the SkyCMS API with a new VS Code controller, context-aware help links, and improved CKEditor AI chat integration.
+  - Refactored editor inventory, terminology, and save logic for clarity and maintainability.
+  - Numerous bug fixes, dependency updates, and architectural improvements for reliability and testability.
+- Impact: Developers and editors can now manage SkyCMS sites and content directly from VS Code, with improved AI and help features in the web editor.
+- Required action: To use the new Explorer features, install the SkyCMS VS Code Explorer extension. No action required for existing web users.
+- Related links:
+  - [SkyCMS VS Code Explorer (Marketplace)](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer)
+  - [SkyCMS VS Code Explorer Documentation](https://github.com/CWALabs/skycms-vscode-explorer)
+  - [Editor AI Help](../for-editors/ai-help.md)
+  - [API Reference](../for-developers/api-reference.md)
+
+
 ### 2026-04-27
 
 - Scope: Documentation standards and adoption-focused rewrite wave.
