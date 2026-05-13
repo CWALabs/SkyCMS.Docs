@@ -12,7 +12,7 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-05-11
+last_reviewed: 2026-05-13
 ---
 
 # VS Code Explorer Quick Tour
@@ -22,6 +22,8 @@ last_reviewed: 2026-05-11
 This page gives a fast, visual introduction to the SkyCMS Explorer extension inside Visual Studio Code.
 
 Use it when you want to understand what "CMS as code" looks like in practice before reading deeper setup documentation.
+
+> **What's new in 12.4.0:** SkyCMS VS Code Explorer is now a first-class workflow choice in the SkyCMS toolset, complementing CKEditor, Page Builder (GrapesJS), Monaco, Filerobot, elFinder, and built-in AI. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 ## Where this fits in your team workflow
 
@@ -37,6 +39,8 @@ Use CKEditor when:
 - the task is writing and formatting content rather than structural implementation.
 
 Most teams use both.
+
+In mature teams, this becomes a hybrid model: visual teams keep velocity in browser tools while technical teams use VS Code for structure, content-as-code, and file workflows.
 
 ## Quick tour steps
 

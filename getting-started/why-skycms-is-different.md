@@ -12,28 +12,28 @@ difficulty: beginner
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-05-11
+last_reviewed: 2026-05-13
 ---
 
 # Why SkyCMS Is Different
 
 ## Summary
 
-Most CMS products force a tradeoff:
+Most CMS products force teams into a narrow tool choice.
 
-- either editors get a simple experience and developers lose flexibility,
-- or developers get control and content teams struggle with complexity.
+SkyCMS is different because it combines best-of-breed tools in one platform: CKEditor, GrapesJS, Monaco, Filerobot, elFinder, built-in AI, and SkyCMS VS Code Explorer.
 
-SkyCMS is built to avoid that tradeoff.
+> **What's new in 12.4.0:** SkyCMS VS Code Explorer is now a first-class content-as-code workflow for teams that want full Visual Studio Code capability alongside visual and live editing tools. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../reference/changelog.md).
 
 ## The practical difference
 
 SkyCMS treats these as first-class needs, at the same time:
 
-- Non-technical content creators can maintain pages and blogs using CKEditor with a familiar word-processor-like flow.
-- Developers can use Visual Studio Code and the SkyCMS Explorer extension to approach the website as code.
+- Content teams can use live and visual tools such as CKEditor and Page Builder for day-to-day publishing.
+- Builders and developers can use Monaco and Visual Studio Code with SkyCMS Explorer for code-centric workflows.
+- Teams can manage files and media with elFinder and Filerobot while using built-in AI to accelerate content and operational tasks.
 
-The result is a shared platform where each role can work in its best environment without blocking the other role.
+The result is a shared platform where each role can work in the best tool for the task without blocking other roles.
 
 ```mermaid
 flowchart LR

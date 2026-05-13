@@ -11,7 +11,7 @@ difficulty: intermediate
 version: current
 status: active
 owner: docs-platform
-last_reviewed: 2026-05-05
+last_reviewed: 2026-05-13
 ---
 
 # SkyCMS VS Code Extension
@@ -21,6 +21,8 @@ last_reviewed: 2026-05-05
 Use the SkyCMS VS Code extension to connect VS Code to a SkyCMS Editor site, then work with layouts, templates, articles, blogs, and files without leaving your editor.
 
 This extension is central to the SkyCMS "CMS as code" workflow: developers can use familiar IDE practices while still collaborating with content teams who use CKEditor and visual tools.
+
+> **What's new in 12.4.0:** SkyCMS VS Code Explorer is now documented as a core platform workflow alongside CKEditor, Page Builder (GrapesJS), Monaco, Filerobot, elFinder, and built-in AI. Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cwalabs.skycms-explorer) and review the [Changelog](../../reference/changelog.md).
 
 ## Outcome
 
@@ -34,10 +36,11 @@ After this guide, you can:
 
 ## Why this matters for team workflow
 
-SkyCMS is designed so teams do not have to choose between developer freedom and editor simplicity.
+SkyCMS is designed as a multi-tool platform where each role can use the best interface for the current task.
 
 - Developers can keep working in a code-first environment with standard IDE patterns.
 - Non-technical content creators can continue routine page and blog updates through CKEditor with little or no training.
+- Site builders can compose and refine structure with visual page tools.
 - Both groups work on the same platform and share the same publishing lifecycle.
 
 In most teams, this creates a clean handoff model: developers and site builders shape structure, then content creators maintain day-to-day content confidently.
