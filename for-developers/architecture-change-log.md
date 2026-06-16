@@ -35,6 +35,30 @@ Each entry should include:
 
 ## Change entries
 
+### 2026-06-16 - ADR mirror and lifecycle alignment refresh
+
+- Expanded ADR mirror coverage through ADR 0043 to match canonical ADR records in the SkyCMS repository.
+- Updated lifecycle documentation to align with retained `ArticleCatalog` rows on soft-delete and permanent removal on trash.
+- Added explicit dual-path file-surface documentation for canonical storage paths vs friendly display paths.
+- Added elFinder CQRS routing operations reference, including per-command overrides and rollback controls.
+
+Why:
+
+- Remove architecture drift between ADR decisions and public documentation.
+- Make editor file-surface behavior and CQRS operations predictable for maintainers.
+
+Impacted docs:
+
+- [Architecture Decision Records](architecture-decision-records.md)
+- [Article lifecycle](article-lifecycle.md)
+- [elFinder CQRS Rollout and Operations](elfinder-cqrs-rollout.md)
+- [Feature Catalog: File & Media Management](../reference/features/05-file-and-media-management.md)
+
+Follow-up actions:
+
+1. Keep lifecycle event tables synchronized with handler-level event changes.
+2. Add integration-test references for CQRS fallback behavior in future docs updates.
+
 ### 2026-04-26 - Architecture framework expansion
 
 - Added architecture hub model with consistent static, dynamic, and hybrid profile documentation.

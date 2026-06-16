@@ -93,7 +93,7 @@ Pages moved to trash (status: Deleted) can be recovered:
 2. Click **Restore** (or go to `/Editor/Restore/{articleNumber}`).
 3. The page is restored to Draft status.
 
-> **Note:** When a page is moved to trash, its published version is removed from the live site, and associated activity logs, article locks, and catalog entries are cleaned up. Restoring the page brings it back as a draft — you will need to publish it again to make it live.
+> **Note:** When a page is moved to trash, its published version is removed from the live site and the page is hidden from active editor lists. Restoring the page brings it back as a draft, and you will need to publish it again to make it live. Permanent trash is the step that irreversibly removes catalog, history, and storage assets.
 
 ## Scheduled publishing and expiration
 

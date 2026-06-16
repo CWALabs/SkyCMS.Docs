@@ -62,6 +62,13 @@ SkyCMS ADRs are maintained in the main SkyCMS repository as the canonical source
 - [ADR 0034: Domain Events and Setup Audit Log Observability Model](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0034-domain-events-and-setup-audit-log-observability-model.md)
 - [ADR 0035: File Explorer Modernization and Connector Adapter Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0035-file-explorer-modernization-and-connector-adapter-strategy.md)
 - [ADR 0036: Layout Terminology Standardization and Documentation Strategy](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0036-layout-terminology-standardization-and-documentation-strategy.md)
+- [ADR 0037: Article Lifecycle and Status Code Semantics](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0037-article-lifecycle-and-status-code-semantics.md)
+- [ADR 0038: Article Trash and Permanent Delete Lifecycle](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0038-article-trash-and-permanent-delete-lifecycle.md)
+- [ADR 0039: DRY Controller Unification: File Manager and VS Code Explorer](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0039-dry-controller-unification-file-manager-and-vscode.md)
+- [ADR 0040: Use Human-Readable Article Titles in File Manager Display Paths](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0040-article-title-display-paths.md)
+- [ADR 0041: Trashed Article Assets Must Be Hidden and Inaccessible in Editor File Surfaces](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0041-trashed-article-assets-hidden-and-inaccessible.md)
+- [ADR 0042: ArticleCatalog Lifecycle Read-Model Alignment for Soft Delete](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0042-article-catalog-lifecycle-read-model-alignment.md)
+- [ADR 0043: Article Lifecycle Events and Catalog/Asset Side-Effects](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0043-article-lifecycle-events.md)
 
 ## Architecture topic summaries
 
@@ -75,6 +82,16 @@ Use this section as a fast architecture map before diving into individual ADR fi
 
 - [ADR 0035](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0035-file-explorer-modernization-and-connector-adapter-strategy.md): Defines the file explorer modernization approach and connector adapter boundary.
 - [ADR 0036](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0036-layout-terminology-standardization-and-documentation-strategy.md): Standardizes layout terminology and docs strategy for editor consistency.
+- [ADR 0039](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0039-dry-controller-unification-file-manager-and-vscode.md): Unifies file-surface controller logic for security parity and shared behavior.
+- [ADR 0040](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0040-article-title-display-paths.md): Introduces canonical storage paths with friendly display paths in file manager UX.
+
+### 9. Article lifecycle, deletion, and read-model alignment
+
+- [ADR 0037](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0037-article-lifecycle-and-status-code-semantics.md): Defines lifecycle status semantics across article workflows.
+- [ADR 0038](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0038-article-trash-and-permanent-delete-lifecycle.md): Formalizes two-step delete lifecycle (soft-delete then permanent trash).
+- [ADR 0041](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0041-trashed-article-assets-hidden-and-inaccessible.md): Requires trashed article assets to be hidden and blocked in editor file surfaces.
+- [ADR 0042](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0042-article-catalog-lifecycle-read-model-alignment.md): Keeps `ArticleCatalog` rows on soft-delete and removes them on permanent delete.
+- [ADR 0043](https://github.com/CWALabs/SkyCMS/blob/main/docs/adr/0043-article-lifecycle-events.md): Consolidates event-by-event lifecycle side effects for catalog and assets.
 
 ### 2. Tenant resolution and isolation
 

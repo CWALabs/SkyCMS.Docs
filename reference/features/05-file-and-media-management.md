@@ -32,9 +32,17 @@ SkyCMS provides a browser-based file manager built on **elFinder 2.1** (via the 
 
 ## 1. File Manager
 
-> **Documentation:** [File Management (Concrete Guide)](../../for-editors/feature-catalog/file-management.md) · [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md) · [File Manager Toolbar Reference](../../for-editors/file-manager-toolbar-reference.md) · [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md)
+> **Documentation:** [File Management (Concrete Guide)](../../for-editors/feature-catalog/file-management.md) · [File Manager](../../for-editors/file-manager.md) · [File Manager Quickstart](../../for-editors/file-manager-quickstart.md) · [File Manager Toolbar Reference](../../for-editors/file-manager-toolbar-reference.md) · [SkyCMS VS Code Extension](../../for-developers/extending/vscode-extension.md) · [elFinder CQRS Rollout and Operations](../../for-developers/elfinder-cqrs-rollout.md)
 
 A full-featured browser-based file management interface for all site assets.
+
+### Path Model (Editor UX vs Storage)
+
+- Article assets are stored at canonical paths under `/pub/articles/{articleNumber}/...`.
+- The File Manager may display article titles in folder labels and breadcrumbs for readability.
+- Connector operations and hashes continue to use canonical paths to keep links and storage paths stable.
+
+This dual-path behavior is intentional and allows title changes without breaking existing asset paths.
 
 ### Browsing & Navigation
 

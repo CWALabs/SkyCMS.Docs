@@ -46,6 +46,22 @@ Use this structure for new entries:
 
 ## Current release notes
 
+### 2026-06-16
+
+- Scope: elFinder command routing and file-surface architecture docs.
+- Change type: Architecture/documentation alignment.
+- Summary:
+  - Documented that all supported elFinder commands are now routed through CQRS handlers in production.
+  - Added operations guidance for global and per-command CQRS toggles, ad-hoc testing flags, and rollback behavior.
+  - Added path-model documentation clarifying friendly display paths vs canonical storage paths for article assets.
+  - Updated lifecycle wording to align soft-delete and permanent-delete catalog behavior with current ADR decisions.
+- Impact: Developers and administrators now have explicit operational controls and accurate lifecycle expectations.
+- Required action: Review [elFinder CQRS Rollout and Operations](../for-developers/elfinder-cqrs-rollout.md) before making connector routing changes in production.
+- Related links:
+  - [elFinder CQRS Rollout and Operations](../for-developers/elfinder-cqrs-rollout.md)
+  - [File & Media Management Features](features/05-file-and-media-management.md)
+  - [Architecture Decision Records](../for-developers/architecture-decision-records.md)
+
 ### 2026-04-30
 
 - Scope: File Manager UI refresh (v12.3.0).

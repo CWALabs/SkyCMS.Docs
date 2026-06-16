@@ -309,7 +309,7 @@ For DeleteArticleCommand:
 - Finds all versions by ArticleNumber.
 - Marks all versions with StatusCode = Deleted.
 - Removes related PublishedPage rows for that ArticleNumber.
-- Removes the ArticleCatalog entry.
+- Preserves the ArticleCatalog row and updates lifecycle metadata to Deleted state.
 - Deletes static page output when static publishing is enabled.
 - Rewrites TOC after deletion.
 - Blocks deletion of the `root` home page.
@@ -342,7 +342,7 @@ For TrashArticleCommand:
 - Validates that the article is already deleted (soft-delete state required).
 - Permanently removes all Article versions by ArticleNumber.
 - Removes all PublishedPage rows for that ArticleNumber.
-- Removes ArticleCatalog entries.
+- Removes ArticleCatalog entries permanently.
 - Removes ArticleLock rows (any in-progress editing locks).
 - Removes ArticleLog rows (audit/history records).
 - Deletes the folder `/pub/articles/{ArticleNumber}` from storage (static artifacts).

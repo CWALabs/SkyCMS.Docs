@@ -42,6 +42,19 @@ Key capabilities:
 - Thumbnail preview for images.
 - On-demand thumbnail generation (120 × 120 px).
 
+## Path behavior in article folders
+
+SkyCMS uses a dual-path model in File Manager when browsing article assets:
+
+- **Canonical path (storage and operations):** `/pub/articles/{articleNumber}/...`
+- **Friendly display path (UI labels):** `/pub/articles/{articleTitle}/...`
+
+What this means in practice:
+
+- Breadcrumbs and folder names can show article titles for easier navigation.
+- Upload, rename, move, copy, and delete operations still run against canonical article-number paths.
+- File URLs and backend connector operations use canonical paths for stability, even if titles change later.
+
 ## What this page covers
 
 Use this page as the operational reference for everyday file work. If you want a shorter onboarding path, start with [File Manager Quick Start](./file-manager-quickstart.md) and return here when you need more detail.

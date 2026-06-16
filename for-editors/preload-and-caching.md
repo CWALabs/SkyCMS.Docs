@@ -89,6 +89,11 @@ Caches are invalidated automatically through domain events:
 | `CatalogEntryDeletedEvent` | Catalog, SiteMap |
 | `RedirectCreatedEvent` | Redirects |
 
+Notes:
+
+- Soft-delete transitions can invalidate catalog caches through update flows without removing the underlying catalog row.
+- Permanent delete/trash operations are the lifecycle stage that removes catalog rows and naturally trigger delete-oriented invalidation paths.
+
 The `CacheInvalidationHandler` listens for these events and removes the affected cache entries. This ensures the cache stays consistent without manual intervention.
 
 ---

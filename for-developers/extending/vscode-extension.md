@@ -119,6 +119,13 @@ Most teams use both paths together.
 
 The extension mounts SkyCMS blob storage through a virtual file system rooted at `/pub`.
 
+For article assets, the extension follows the same dual-path contract as File Manager:
+
+- list views can show friendly article titles,
+- operations continue to target canonical paths such as `/pub/articles/{articleNumber}/...`.
+
+This keeps editing UX readable while preserving stable storage paths and URLs.
+
 Typical workflow:
 
 1. Expand **Files**.
