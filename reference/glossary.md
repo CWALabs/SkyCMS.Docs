@@ -112,10 +112,6 @@ See also:
 - Site-builder layouts guide: [../for-site-builders/layouts.md](../for-site-builders/layouts.md)
 - Developer layouts guide: [../for-developers/layouts.md](../for-developers/layouts.md)
 
-## Layers Panel
-
-The Page Builder tree view used to inspect, select, and reorder nested elements on the current canvas. This is an editor feature and should not be confused with architectural layers such as layout, template, article, and published page.
-
 ## Page
 
 In common usage, a page usually refers to a general article and its public result. In precise platform terms, the authored source is an **article** and the public projection is a **PublishedPage** stored in `Pages`.

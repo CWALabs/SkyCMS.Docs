@@ -58,7 +58,7 @@ See [Key Concepts](../getting-started/key-concepts.md) for the canonical article
 Typical workflow:
 
 1. Open Templates and create a new template.
-2. Choose editing mode (Page Builder for visual composition, or Code Editor for explicit HTML control).
+2. Open Code Editor for explicit HTML control.
 3. Build baseline structure for the target page type.
 4. Define editable regions with stable identifiers.
 5. Save and create a test page from the template.

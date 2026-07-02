@@ -70,7 +70,7 @@ Primary pages:
 - [for-site-builders/layouts.md](../for-site-builders/layouts.md)
 - [for-site-builders/templates.md](../for-site-builders/templates.md)
 - [for-editors/visual-editor-quickstart.md](../for-editors/visual-editor-quickstart.md)
-- [for-editors/page-builder-quickstart.md](../for-editors/page-builder-quickstart.md)
+- [for-editors/code-editor.md](../for-editors/code-editor.md)
 - [for-editors/publishing-modes.md](../for-editors/publishing-modes.md)
 
 ## Journey C: Operate and scale (third priority)
@@ -107,7 +107,7 @@ Primary pages:
 1. [for-site-builders/layouts.md](../for-site-builders/layouts.md) (first-usable layout path)
 1. [for-site-builders/templates.md](../for-site-builders/templates.md) (first-template publish path)
 1. [for-editors/visual-editor-quickstart.md](../for-editors/visual-editor-quickstart.md) (publish-first flow)
-1. [for-editors/page-builder-quickstart.md](../for-editors/page-builder-quickstart.md) (publish-first flow)
+1. [for-editors/code-editor.md](../for-editors/code-editor.md) (publish-first flow)
 1. [for-editors/publishing-modes.md](../for-editors/publishing-modes.md) (simple mode decision tree)
 
 ## Wave 3: Confidence and operational trust

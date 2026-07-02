@@ -29,7 +29,7 @@ last_reviewed: 2026-05-01
 | **What it controls** | Outer page shell: header, footer, navigation, global CSS/JS | Inner content region: page structure, widget zones |
 | **Applies to** | All pages that use this layout | All articles using this template |
 | **Who typically edits it** | Site builder or administrator | Site builder or content manager |
-| **Edited with** | Page Builder or Code Editor | Page Builder or Code Editor |
+| **Edited with** | Code Editor | Code Editor |
 
 A layout wraps a template. A template wraps an article. When a visitor views a page, SkyCMS renders: layout shell → template structure → article content.
 
@@ -46,11 +46,10 @@ Go to **Editor → Layouts** (top navigation or sidebar). The list shows all lay
 1. Click **New Layout**.
 2. Enter a name for the layout.
 3. Click **Create**.
-4. The layout opens in the Code Editor (empty). Build the outer shell HTML there, or switch to Page Builder for visual editing.
+4. The layout opens in the Code Editor (empty). Build the outer shell HTML there.
 
 ### Edit a layout
 
-- Click **Page Builder** to edit the layout visually with drag-and-drop components.
 - Click **Code Editor** to edit raw HTML, CSS, and template tokens directly.
 - Click **Community Layouts** to browse and import pre-built layout starter templates.
 
@@ -74,11 +73,10 @@ Go to **Editor → Templates** (top navigation or sidebar). The list shows all t
 1. Click **New Template**.
 2. Enter a name and choose the layout it will use.
 3. Click **Create**.
-4. Edit the template structure in Page Builder or Code Editor.
+4. Edit the template structure in Code Editor.
 
 ### Edit a template
 
-- Click **Page Builder** to edit the template visually.
 - Click **Code Editor** to edit the raw template markup.
 - Click **Pages** to see which articles currently use this template.
 - Click **Preview Impact** to check how changes will affect those pages before saving.
@@ -119,6 +117,5 @@ After editing, click **Publish** on the template to push changes live. All artic
 
 - [For Site Builders: Layouts](../for-site-builders/layouts.md) — conceptual overview and examples
 - [For Site Builders: Templates](../for-site-builders/templates.md) — conceptual overview and examples
-- [Page Builder](feature-catalog/page-builder.md) — how to use the drag-and-drop editor
 - [Code Editor](feature-catalog/code-editor.md) — how to use the code editor
 - [Layouts, Templates & Articles (developer deep dive)](../for-developers/layouts-templates-articles.md)

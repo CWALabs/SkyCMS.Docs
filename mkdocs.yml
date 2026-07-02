@@ -124,7 +124,6 @@ nav:
         - Content Editors: for-editors/feature-catalog/content-editors.md
         - Visual Editor: for-editors/feature-catalog/visual-editor.md
         - Code Editor: for-editors/feature-catalog/code-editor.md
-        - Page Builder: for-editors/feature-catalog/page-builder.md
         - Image Editor: for-editors/feature-catalog/image-editor.md
         - File Management: for-editors/feature-catalog/file-management.md
         - Email Management: for-editors/feature-catalog/email-management.md
@@ -138,9 +137,6 @@ nav:
         - Visual Editor Toolbar Reference: for-editors/visual-editor-toolbar-reference.md
         - Visual Editor Visual Guide: for-editors/visual-editor-visual-guide.md
         - Visual Editor Technical Reference: for-editors/visual-editor-technical-reference.md
-        - Page Builder: for-editors/page-builder.md
-        - Layers Panel: for-editors/layers.md
-        - Page Builder Quick Start: for-editors/page-builder-quickstart.md
         - Code Editor: for-editors/code-editor.md
         - AI Assistant: for-editors/ai-assistant.md
         - AI Provider Setup: for-editors/ai-provider-setup.md

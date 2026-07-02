@@ -79,10 +79,7 @@ The **layout** is the outermost shell of every page — the consistent chrome th
 
 ### Layout Editing
 
-Two editing modes:
-
-- **Page Builder** (GrapesJS) — Visual drag-and-drop design
-- **Code Editor** (Monaco) — Direct HTML/CSS editing
+Layout editing is performed in **Code Editor** (Monaco) for direct HTML/CSS editing.
 
 ### Layout Features
 
@@ -90,7 +87,6 @@ Two editing modes:
 | --------- | ------------- |
 | **Create** | New layout from scratch |
 | **Edit Code** | Direct HTML/CSS editing with Monaco |
-| **Visual Designer** | GrapesJS drag-and-drop builder |
 | **Edit Notes** | Attach metadata and documentation to a layout |
 | **Preview** | Preview layout changes before publishing |
 | **Publish** | Make a layout version the active default |
@@ -129,10 +125,7 @@ A **template** defines the reusable page structure within a layout. Templates co
 
 ### Template Editing
 
-Two editing modes:
-
-- **Page Builder** (GrapesJS) — Visual template composition
-- **Code Editor** (Monaco) — Direct HTML editing with region markup
+Template editing is performed in **Code Editor** (Monaco) with editable region markup.
 
 ### Template Features
 
@@ -140,7 +133,6 @@ Two editing modes:
 | --------- | ------------- |
 | **Create** | New template from scratch |
 | **Edit Code** | HTML editing with editable region markup |
-| **Visual Designer** | GrapesJS builder for template structure |
 | **Pages** | View all pages using this template |
 | **Update Page** | Apply template changes to a single page |
 | **Publish** | Make template version active |
@@ -223,11 +215,11 @@ In site-builder language, **pages** are the concrete content instances that edit
 
 > **Documentation:** [Widgets Overview](../../for-site-builders/widgets/overview.md) · [Custom Widgets (Developers)](../../for-developers/extending/custom-widgets.md) · [Breadcrumbs](../../for-site-builders/widgets/breadcrumbs.md) · [Forms](../../for-site-builders/widgets/forms.md) · [Image Widget](../../for-site-builders/widgets/image.md) · [Nav Builder](../../for-site-builders/widgets/nav-builder.md) · [Search](../../for-site-builders/widgets/search.md) · [Table of Contents](../../for-site-builders/widgets/table-of-contents.md) · [Crypto Widget](../../for-site-builders/widgets/crypto.md)
 
-Reusable components that editors can insert into pages through the Page Builder or template definitions.
+Reusable components that editors can insert into pages through template definitions.
 
 ### Available Widget Categories
 
-Based on the GrapesJS block library integration:
+Based on template and component conventions:
 
 - Blog components (stream, post)
 - Contact forms and CTAs
@@ -245,10 +237,9 @@ Based on the GrapesJS block library integration:
 
 ### Widget Behavior
 
-- Drag-and-drop placement in the Page Builder
+- Placement through template-defined regions and editor workflows
 - Configurable properties per widget instance
 - Responsive behavior inherited from the design system
-- Style customization via the Style Manager panel
 
 ---
 

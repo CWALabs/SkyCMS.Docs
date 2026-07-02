@@ -83,7 +83,7 @@ One blog can be designated as the site default. Use the **Make Default** action 
 
 ## Blog posts
 
-Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Visual Editor, Code Editor, Page Builder) but are organized and rendered through the blog infrastructure.
+Blog posts are articles that belong to a blog. They use the same editing tools as standard pages (Visual Editor and Code Editor) but are organized and rendered through the blog infrastructure.
 
 ### Creating a blog post
 

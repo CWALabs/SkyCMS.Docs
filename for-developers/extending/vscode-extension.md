@@ -110,7 +110,7 @@ Use the VS Code extension when you need:
 Use browser editors when you need:
 
 - fast non-technical authoring in CKEditor,
-- visual page composition in Page Builder,
+- visual in-context content editing in the Visual Editor,
 - editorial workflows where contributors are not expected to use developer tooling.
 
 Most teams use both paths together.

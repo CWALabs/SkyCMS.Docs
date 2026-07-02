@@ -31,7 +31,7 @@ Check that:
 
 ## Publish Now
 
-1. Open the page in any editor (Visual Editor, Page Builder, or Code Editor).
+1. Open the page in any editor (Visual Editor or Code Editor).
 2. Click the **Publish** button in the top toolbar, **or** go to the Pages Catalog, find the page, and choose **Publish** from the **More (...)** menu.
 3. In the publish dialog, confirm the page title and target URL.
 4. Click **Publish Now**.

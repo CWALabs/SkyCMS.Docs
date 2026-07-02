@@ -62,15 +62,12 @@ For role boundaries and permission details across all roles, see [Roles and perm
    - [Using the Visual Editor](./visual-editor.md)
    - [Visual Editor quick start](./visual-editor-quickstart.md)
    - [Visual Editor toolbar reference](./visual-editor-toolbar-reference.md)
-   - [Page builder](./page-builder.md)
-   - [Page builder quick start](./page-builder-quickstart.md)
-   - [Layers panel](./layers.md)
-   - [Code editor](./code-editor.md)
+   - [Code Editor](./code-editor.md)
 5. Use advanced and media tools when needed:
-   - [AI assistant](./ai-assistant.md)
+   - [AI Assistant](./ai-assistant.md)
    - [AI provider setup](./ai-provider-setup.md)
    - [AI troubleshooting](./ai-troubleshooting.md)
-   - [Image editing](./image-editing.md)
+   - [Image Editor](./image-editing.md)
    - [File Manager](./file-manager.md)
    - [File Manager quick start](./file-manager-quickstart.md)
 

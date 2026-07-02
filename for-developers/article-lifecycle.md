@@ -420,7 +420,6 @@ Use this as a starting map when debugging or extending lifecycle behavior.
 - Editor views:
   - Editor/Views/Editor/Create.cshtml
   - Editor/Views/Editor/Edit.cshtml
-  - Editor/Views/Editor/Designer.cshtml
   - Editor/Views/Editor/EditCode.cshtml
   - Editor/Views/Editor/Versions.cshtml
   - Editor/Views/Editor/Publish.cshtml

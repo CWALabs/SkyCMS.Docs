@@ -179,7 +179,6 @@ This guide is working when you can explain why one publishing mode is safer or f
 ## Related guides
 
 - [Visual Editor Quick Start](visual-editor-quickstart.md)
-- [Page Builder Quick Start](page-builder-quickstart.md)
 - [Version History](version-history.md) — How versions relate to publishing
 - [Preload & Caching](preload-and-caching.md) — Cache warming and CDN pre-loading
 - [URL Management](url-management.md) — How redirects interact with publishing

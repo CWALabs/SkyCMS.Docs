@@ -30,8 +30,6 @@ Use this map to keep in-product Help aligned with canonical documentation pages.
 | `/Editor/VisualEditor/{id}` | Visual Editor | [Visual Editor](./visual-editor.md) |
 | `/Editor/Edit/{id}` | Legacy visual editor route | [Visual Editor](./visual-editor.md) |
 | `/Editor/EditCode/{id}` | Page code editing | [Code Editor](./code-editor.md) |
-| `/Editor/PageBuilder/{id}` | Page Builder (article) | [Page Builder](./page-builder.md) |
-| `/Editor/Designer/{id}` | Legacy page builder route | [Page Builder](./page-builder.md) |
 | `/Editor/AiHelp` | AI writing assistant | [AI Assistant](../ai-assistant.md) |
 
 ### Publishing and Scheduling
@@ -83,14 +81,10 @@ Use this map to keep in-product Help aligned with canonical documentation pages.
 | --- | --- | --- |
 | `/Layouts/Index` | Layouts list | [Layouts and Templates](../layouts-and-templates.md) |
 | `/Layouts/Create` | Create layout | [Layouts and Templates](../layouts-and-templates.md) |
-| `/Layouts/PageBuilder` | Layout Page Builder | [Page Builder](./page-builder.md) |
-| `/Layouts/Designer` | Legacy layout Page Builder | [Page Builder](./page-builder.md) |
 | `/Layouts/EditCode` | Layout code editor | [Code Editor](./code-editor.md) |
 | `/Layouts/CommunityLayouts` | Community layout library | [Layouts and Templates](../layouts-and-templates.md) |
 | `/Templates/Index` | Templates list | [Layouts and Templates](../layouts-and-templates.md) |
 | `/Templates/Create` | Create template | [Layouts and Templates](../layouts-and-templates.md) |
-| `/Templates/PageBuilder/{id}` | Template Page Builder | [Page Builder](./page-builder.md) |
-| `/Templates/Designer/{id}` | Legacy template Page Builder | [Page Builder](./page-builder.md) |
 | `/Templates/EditCode/{id}` | Template code editor | [Code Editor](./code-editor.md) |
 | `/Templates/Pages/{id}` | Pages using template | [Layouts and Templates](../layouts-and-templates.md) |
 | `/Templates/PreviewImpact/{id}` | Template change impact | [Layouts and Templates](../layouts-and-templates.md) |

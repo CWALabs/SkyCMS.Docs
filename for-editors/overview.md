@@ -42,10 +42,9 @@ Quick reference:
 ## Tooling map
 
 - [Visual Editor](./visual-editor.md): inline editing in page context.
-- [Page Builder](./page-builder.md): drag-and-drop page composition.
 - [Code Editor](./code-editor.md): direct HTML, CSS, and script edits.
 - [AI Assistant](./ai-assistant.md): editing support in Monaco and CKEditor flows.
-- [Image Editing](./image-editing.md): media optimization and adjustment.
+- [Image Editor](./image-editing.md): media optimization and adjustment.
 - [File Manager](./file-manager.md): upload and organize assets.
 - [Page Scheduling](./page-scheduling.md): time-based publication control.
 

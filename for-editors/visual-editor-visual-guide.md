@@ -30,7 +30,7 @@ The quickest way to open the Visual Editor is directly from the page itself:
 3. Click **Edit** in the navigation bar. A dropdown loads with the available editors for that page.
 4. Click **Visual Editor** to open the Visual Editor.
 
-> **Note:** **Visual Editor** only appears in the dropdown if the page template has rich-text editing enabled. If you see only **Page Builder** and **Code Editor**, the Visual Editor is not available for that page. Contact your site administrator if you need it enabled.
+> **Note:** **Visual Editor** only appears in the dropdown if the page template has rich-text editing enabled. If you only see **Code Editor**, the Visual Editor is not available for that page. Contact your site administrator if you need it enabled.
 
 ### From the Pages list
 

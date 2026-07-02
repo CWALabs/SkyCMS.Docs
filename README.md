@@ -3,7 +3,7 @@
 
 # SkyCMS Documentation
 
-Documentation source for [SkyCMS](https://github.com/CWALabs/SkyCMS) — a multi-tenant ASP.NET Core content management system with four visual editors (WYSIWYG, drag-and-drop page builder, code editor, image editor), multi-cloud storage, pluggable identity providers, and static-site publishing.
+Documentation source for [SkyCMS](https://github.com/CWALabs/SkyCMS) — a multi-tenant ASP.NET Core content management system with three editor experiences (Visual Editor, Code Editor, and Image Editor), multi-cloud storage, pluggable identity providers, and static-site publishing.
 
 Published at: [docs.sky-cms.com](https://docs.sky-cms.com)
 
@@ -16,7 +16,7 @@ The site is organized by **audience role** so readers find content relevant to t
 | Folder | Audience | Topics | Description |
 | -------- | ---------- | -------- | ------------- |
 | [getting-started/](getting-started/quick-start.md) | Everyone | 3 | What is SkyCMS, key concepts, quick start |
-| [for-editors/](for-editors/) | Editors, Authors | 30 | Content creation, all four editors, blogging, publishing, collaboration, file management |
+| [for-editors/](for-editors/) | Editors, Authors | 30 | Content creation, editor guides, blogging, publishing, collaboration, file management |
 | [for-site-builders/](for-site-builders/) | Site Builders | 7 | Layouts, templates, pages, widgets, style guides |
 | [for-developers/](for-developers/) | Developers | 18 | Architecture, APIs, multi-tenancy, EF Core cross-provider, middleware pipeline |
 | [installation/](installation/overview.md) | Administrators | 14 | Setup wizard (6 steps), Azure/AWS/Docker/Cloudflare deployment, local dev |
@@ -108,11 +108,11 @@ Canonical schema reference:
 
 ```yaml
 ---
-canonical_title: Page Builder
-description: Visual drag-and-drop composition in SkyCMS using GrapesJS.
+canonical_title: Visual Editor
+description: Rich-text editing in context with CKEditor in SkyCMS.
 doc_type: How-to
 product_area: editing
-user_intent: build-pages-with-page-builder
+user_intent: edit-content-with-visual-editor
 audience:
   - Content Editors
   - Site Builders
@@ -122,11 +122,11 @@ status: active
 owner: docs-platform
 last_reviewed: 2026-04-27
 entities:
-  - page-builder
-  - layers-panel
+  - visual-editor
+  - editable-regions
 keywords:
-  - grapesjs
-  - drag and drop
+  - ckeditor
+  - rich text
   - visual editor
 ---
 ```

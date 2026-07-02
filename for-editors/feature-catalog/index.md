@@ -23,7 +23,6 @@ Use this page when you want a concrete list of what tools exist in SkyCMS and wh
 - [Content Editors overview](./content-editors.md)
 - [Visual Editor](./visual-editor.md)
 - [Code Editor](./code-editor.md)
-- [Page Builder](./page-builder.md)
 - [Image Editor](./image-editor.md)
 
 ## Management Tools
@@ -45,8 +44,7 @@ flowchart LR
 
   B --> B1[Visual Editor]
   B --> B2[Code Editor]
-  B --> B3[Page Builder]
-  B --> B4[Image Editor]
+  B --> B3[Image Editor]
 
   C --> C1[File Management]
   C --> C2[Email Management]

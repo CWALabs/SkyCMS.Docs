@@ -26,7 +26,7 @@ Before diving into `HomeController`, it helps to know that the editor has three 
 | Layout | Used By | AI Help Popup | Docs Help Popup |
 |--------|---------|:---:|:---:|
 | `_Layout.cshtml` | All standard admin pages (article lists, settings, file manager, etc.) | ✓ | ✓ |
-| `_LayoutEditor.cshtml` | All page editing / designing views (`Editor/Edit`, `Editor/Designer`, `FileManager/EditCode`, `Layouts/Designer`, `Templates/Designer`, etc.) | ✓ | ✓ |
+| `_LayoutEditor.cshtml` | All page editing views (`Editor/Edit`, `FileManager/EditCode`, and related editor surfaces) | ✓ | ✓ |
 | `Wrapper.cshtml` | `HomeController.Index` only (root URL `/` and all preview requests) | — | ✓ |
 
 `Wrapper.cshtml` sets `Layout = null`, meaning it **does not inherit from `_Layout.cshtml`**. It is a complete, self-contained HTML document.

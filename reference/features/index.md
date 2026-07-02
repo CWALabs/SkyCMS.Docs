@@ -23,12 +23,13 @@ A comprehensive inventory of every feature built into SkyCMS, organized by funct
 
 ## Product approach behind these features
 
-SkyCMS is intentionally built around two parallel experiences:
+SkyCMS is intentionally built around three editor experiences:
 
-- a visual, low-friction editing path for content creators,
-- a code-first path for developers who want full creative and technical control.
+- Visual Editor for low-friction, in-context content updates,
+- Code Editor for precise structural and markup control,
+- Image Editor for media adjustment workflows.
 
-The feature set below reflects that philosophy. You can hand off daily content maintenance to non-technical editors through CKEditor, while developers continue to work in familiar tooling, including Visual Studio Code.
+The feature set below reflects that philosophy. You can hand off daily content maintenance to non-technical editors through Visual Editor workflows, while developers continue to work in familiar tooling, including Visual Studio Code.
 
 ---
 
@@ -36,7 +37,7 @@ The feature set below reflects that philosophy. You can hand off daily content m
 
 | # | Section | What It Covers |
 | --- | --------- | --------------- |
-| 1 | [Content Editing & Authoring](01-content-editing-and-authoring.md) | Visual Editor (WYSIWYG), Page Builder (drag-and-drop), Code Editor, AI Assistant, Image Editor, Real-time collaboration |
+| 1 | [Content Editing & Authoring](01-content-editing-and-authoring.md) | Visual Editor (WYSIWYG), Code Editor, AI Assistant, Image Editor, Real-time collaboration |
 | 2 | [Content Lifecycle & Publishing](02-content-lifecycle-and-publishing.md) | Article states, versioning, publishing modes, scheduling, URL management, export/import, CDN integration |
 | 3 | [Blogging](03-blogging.md) | Blog streams, blog posts, blog templates, rendering, blog API |
 | 4 | [Site Building](04-site-building.md) | Layouts, Templates, Pages, Widgets, Editable regions, Style guide support |
@@ -52,7 +53,7 @@ The feature set below reflects that philosophy. You can hand off daily content m
 
 ### For Content Creators & Editors
 
-- Four editing modes: Visual Editor (WYSIWYG), drag-and-drop Page Builder, Code Editor, and AI-assisted editing/help
+- Three editor experiences: Visual Editor (WYSIWYG), Code Editor, and Image Editor
 - CKEditor-powered writing experience designed for easy handoff from developers to non-technical content teams
 - VS Code extension support for editing SkyCMS fields and files from inside Visual Studio Code
 - In-browser image editing (crop, resize, filters, annotate, watermark)
@@ -64,7 +65,7 @@ The feature set below reflects that philosophy. You can hand off daily content m
 ### For Site Builders
 
 - Three-layer architecture: Layouts → Templates → Articles, with Published Pages as public output
-- Visual Page Builder (GrapesJS) with 15+ block categories
+- Code-first layout and template authoring with reusable region patterns
 - Configurable editable regions with multiple toolbar profiles
 - Community layout library for quick starts
 - Template impact preview before mass-update

@@ -1,6 +1,6 @@
 ---
 canonical_title: Key Concepts
-description: Canonical definitions for tenants, layouts, templates, articles, pages, blogs, blog posts, published pages, widgets, and layers in SkyCMS.
+description: Canonical definitions for tenants, layouts, templates, articles, pages, blogs, blog posts, published pages, and widgets in SkyCMS.
 audience:
   - All
 doc_type: Explanation
@@ -15,14 +15,12 @@ entities:
   - blog
   - blog-post
   - widget
-  - layers-panel
 keywords:
   - SkyCMS concepts
   - layouts templates articles
   - pages vs articles
   - blogs
   - blog posts
-  - layers panel
 source: SkyCMS/Common/Data/Article.cs, SkyCMS/Common/Data/Layout.cs, SkyCMS/Common/Data/Template.cs
 ---
 
@@ -112,18 +110,6 @@ Widgets are used for things like:
 - blog-related components,
 - tables of contents,
 - other reusable content blocks.
-
-## Layers and the Layers panel
-
-The term **layer** is overloaded in SkyCMS docs, so use it carefully.
-
-- In **Page Builder**, the **Layers panel** means the visual hierarchy of nested elements on the canvas.
-- In **architecture** discussions, a **layer** may mean the conceptual stack of layout, template, article, and published page.
-- In **infrastructure** discussions, layer can also mean caching or delivery layers.
-
-If you mean the editor feature, say **Layers panel** rather than just **layers**.
-
-See [Layers Panel](../for-editors/layers.md) for the editor-specific guide.
 
 ## Editors and publisher
 

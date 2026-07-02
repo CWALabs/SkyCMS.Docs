@@ -1,6 +1,6 @@
 ---
 canonical_title: Feature Catalog: Content Editing & Authoring
-description: Feature inventory for SkyCMS editing experiences — Visual Editor, Page Builder, Code Editor, AI Assistant, Image Editor, and real-time collaborative editing.
+description: Feature inventory for SkyCMS editing experiences — Visual Editor, Code Editor, AI Assistant, Image Editor, and real-time collaborative editing.
 doc_type: Reference
 product_area: content-editing
 user_intent: reference-content-editing-and-authoring-features
@@ -16,7 +16,7 @@ last_reviewed: 2026-04-28
 
 # Content Editing & Authoring
 
-SkyCMS provides four distinct editing experiences, allowing content creators to choose the tool that matches their skill level and task. All editors share a common save/publish pipeline, version history, and real-time collaboration layer.
+SkyCMS provides three distinct editing experiences, allowing content creators to choose the tool that matches their skill level and task. All editors share a common save/publish pipeline, version history, and real-time collaboration layer.
 
 ## Editing philosophy
 
@@ -33,11 +33,10 @@ The goal is straightforward: smooth handoff to content teams without imposing ri
 **Jump to:**
 
 - [Visual Editor (WYSIWYG)](#1-visual-editor-wysiwyg)
-- [Page Builder (Visual Drag-and-Drop)](#2-page-builder-visual-drag-and-drop)
-- [Code Editor](#3-code-editor)
-- [AI Assistant Integration](#4-ai-assistant-integration)
-- [Image Editor](#5-image-editor)
-- [Real-Time Collaborative Editing](#6-real-time-collaborative-editing)
+- [Code Editor](#2-code-editor)
+- [AI Assistant Integration](#3-ai-assistant-integration)
+- [Image Editor](#4-image-editor)
+- [Real-Time Collaborative Editing](#5-real-time-collaborative-editing)
 
 ---
 
@@ -118,84 +117,7 @@ Templates control which toolbar each editable region uses:
 
 ---
 
-## 2. Page Builder (Visual Drag-and-Drop)
-
-A visual composition tool built on **GrapesJS** for building page layouts, templates, and article designs without writing code.
-
-### Canvas & Composition
-
-- WYSIWYG drag-and-drop canvas
-- Real-time visual preview of changes
-- Layer panel showing component hierarchy
-- Component selection, move, copy, and delete
-- Undo / redo
-
-### Block Library
-
-Pre-built component blocks organized by category:
-
-- **SkyCMS** — SkyCMS-specific blocks and Cosmos CMS legacy blocks
-- **Blog** — Blog stream and blog post components
-- **Contact** — Contact forms and CTA elements
-- **Content** — Text, headings, paragraphs, lists
-- **CTA** — Call-to-action sections
-- **Commerce** — Product/pricing components
-- **Features** — Feature showcases and grids
-- **Footer** — Footer layouts
-- **Gallery** — Image galleries
-- **Header** — Header/navigation components
-- **Hero** — Hero sections with backgrounds
-- **Pricing** — Pricing tables and comparisons
-- **Statistics** — Data visualization blocks
-- **Steps** — Step-by-step process layouts
-- **Team** — Team member profiles
-- **Testimonials** — Testimonial/review sections
-- **Extra** — Additional utility blocks
-- **Basic** — Fundamental HTML elements
-
-### Style Manager
-
-- Spacing controls (margin, padding)
-- Typography (font family, size, weight, color, line height, letter spacing)
-- Dimension controls (width, height, min/max)
-- Color and background settings
-- Border and border-radius
-- Display and position properties
-
-### Responsive Design
-
-- Multi-breakpoint preview: desktop, tablet, mobile
-- Per-breakpoint style overrides
-- Responsive layout validation
-
-### Asset Management
-
-- Integrated asset manager for images and media
-- Upload assets directly from the builder interface
-- Browse existing assets from storage
-
-### Import / Export
-
-- Import raw HTML/CSS into the builder
-- Export HTML/CSS from the builder
-- Framework-aware: detects Bootstrap and Tailwind classes and provides matching block sets
-
-### AI Assistant Use Cases
-
-- **Layouts** — Creating site-wide header/footer/navigation shells
-- **Templates** — Building reusable page structures with editable regions
-- **Articles** — Composing individual page designs (Page Builder mode)
-
-> **Documentation:**
->
-> - [Page Builder (Concrete Guide)](../../for-editors/feature-catalog/page-builder.md)
-> - [Page Builder](../../for-editors/page-builder.md)
-> - [Layers Panel](../../for-editors/layers.md)
-> - [Page Builder Quickstart](../../for-editors/page-builder-quickstart.md)
-
----
-
-## 3. Code Editor
+## 2. Code Editor
 
 A professional code editing experience built on **Monaco Editor** (the same engine as VS Code), for editors who prefer direct HTML/CSS/JavaScript control.
 
@@ -262,7 +184,7 @@ Full VS Code-compatible shortcut set including:
 
 ---
 
-## 4. AI Assistant Integration
+## 3. AI Assistant Integration
 
 A tenant-aware AI assistant shared across Monaco, CKEditor, and the standalone AI Help Chat.
 
@@ -318,7 +240,7 @@ A tenant-aware AI assistant shared across Monaco, CKEditor, and the standalone A
 
 ---
 
-## 5. Image Editor
+## 4. Image Editor
 
 A comprehensive in-browser image editing suite built on **Filerobot Image Editor**, accessible from the File Manager.
 
@@ -364,7 +286,7 @@ A comprehensive in-browser image editing suite built on **Filerobot Image Editor
 
 ---
 
-## 6. Real-Time Collaborative Editing
+## 5. Real-Time Collaborative Editing
 
 SignalR-powered real-time communication between editors working on the same content.
 

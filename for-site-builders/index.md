@@ -52,7 +52,7 @@ Site builders in SkyCMS balance two goals:
 - make day-to-day editing safe and simple for non-technical content teams,
 - avoid rigid implementation limits that reduce developer and design freedom.
 
-This is why SkyCMS supports multiple editing modes and code-oriented workflows, including Visual Studio Code extension support for teams that manage CMS websites with IDE-first practices.
+This is why SkyCMS supports three editor experiences (Visual Editor, Code Editor, and Image Editor) plus code-oriented workflows, including Visual Studio Code extension support for teams that manage CMS websites with IDE-first practices.
 
 For role boundaries and permission details across all roles, see [Roles and permissions (RBAC)](../for-developers/roles-and-permissions.md).
 

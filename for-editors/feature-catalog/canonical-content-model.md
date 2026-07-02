@@ -68,7 +68,6 @@ Not allowed duplication:
 
 - [Visual Editor](./visual-editor.md)
 - [Code Editor](./code-editor.md)
-- [Page Builder](./page-builder.md)
 - [Image Editor](./image-editor.md)
 - [File Management](./file-management.md)
 - [Email Management](./email-management.md)

@@ -210,20 +210,20 @@ Best practices:
 - Prefer reusable CSS classes and external styles.
 - Validate in preview before publish.
 
-### Page Builder (Visual Mode)
+### Code Editor
 
-Use visual mode when building and iterating structure quickly.
+Use Code Editor when building or iterating layout structure.
 
 Capabilities:
 
-- Drag-and-drop composition
-- Visual styling and responsive checks
-- Asset manager integration
+- Direct control of layout markup
+- Precise control of shared header/footer shell
+- Reliable diffs and source-control-friendly updates
 
 Constraints:
 
-- Avoid invalid nested editable region patterns.
 - Keep page-content placeholders intact in layout shell contexts.
+- Validate semantic structure and accessibility before publish.
 
 ## Community layouts
 

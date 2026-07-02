@@ -24,7 +24,7 @@ The **Pages Catalog** is the first screen you see after logging in to the SkyCMS
 - Browse all pages in a sortable, paginated list
 - Search by title or URL
 - Create a new page
-- Open any page in the Visual Editor, Page Builder, or Code Editor
+- Open any page in the Visual Editor or Code Editor
 - Check a page's publish status at a glance
 - Access version history, permissions, publish controls, and more for each page
 
@@ -50,7 +50,6 @@ A **Status** badge uses color coding: green = Published, yellow = Draft or Revie
 | Search | Filters the list by title or URL fragment |
 | Sort columns | Click any column header to sort ascending or descending |
 | Edit (pencil icon) | Opens the Visual Editor for this page |
-| Page Builder icon | Opens the Page Builder for this page |
 | Code Editor icon | Opens the Code Editor for this page |
 | More (...) | Reveals version history, permissions, scheduling, trash, and export |
 | Pagination controls | Navigate pages when the list exceeds one screen |
@@ -74,7 +73,6 @@ See [Creating Articles](creating-articles.md) for the full workflow.
 ### Open a page for editing
 
 - Click the **pencil** icon to open the Visual Editor.
-- Click the **Page Builder** icon to open the drag-and-drop Page Builder.
 - Click the **Code** icon to open raw HTML/CSS in the Code Editor.
 
 ### Check and change publish status

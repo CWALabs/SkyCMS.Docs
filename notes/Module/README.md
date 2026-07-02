@@ -44,4 +44,3 @@ This folder documents a practical, incremental module framework for SkyCMS Edito
 - Main layout include: `Editor/Views/Shared/_Layout.cshtml`
 - MVC application part loading pattern: `Editor/Program.cs`
 - Secure zip deployment patterns: `Editor/Controllers/DeploymentController.cs`
-- Existing plugin-ish model concept in designer: `Editor/Models/GrapesJs/DesignerConfig.cs`

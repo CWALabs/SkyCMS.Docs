@@ -15,7 +15,6 @@ entities:
   - published-page
   - blog
   - blog-post
-  - layers-panel
 keywords:
   - ai context
   - retrieval context
@@ -37,7 +36,6 @@ Use this page as the compact canonical reference when loading SkyCMS documentati
 - **Published Page**: public projection created from an article after publish.
 - **Blog**: article with `ArticleType = BlogStream` (enum value retained for compatibility).
 - **Blog Post**: article with `ArticleType = BlogPost`.
-- **Layers panel**: Page Builder hierarchy tree for nested elements.
 
 ## Canonical relationship
 
@@ -50,7 +48,6 @@ Layout -> Template (optional) -> Article -> Published Page
 - Prefer **article** over **page** when discussing authoring, lifecycle, scheduling, or templates.
 - Use **published page** when discussing public output, routing, or rendered HTML.
 - Use **page** only when the UI or audience language clearly expects it.
-- Use **Layers panel** for the editor feature. Do not shorten it to **layers** when ambiguity is possible.
 
 ## Entity notes
 
@@ -96,19 +93,8 @@ Authoritative docs:
 - [Blogging](../for-editors/blogging.md)
 - [Blog Architecture](../for-developers/blog-architecture.md)
 
-### Layers Panel
-
-- Editor feature in Page Builder for nested element selection and reordering.
-- Not the same as architecture layers or infrastructure layers.
-
-Authoritative docs:
-
-- [Layers Panel](../for-editors/layers.md)
-- [Page Builder](../for-editors/page-builder.md)
-
 ## Answering rules for AI
 
 - If asked what a page is, answer with the distinction between article and published page.
 - If asked how layouts, templates, and pages relate, answer with the canonical runtime model and explain the authored article versus public output distinction.
 - If asked about blog content, explain that blogs and blog posts are article types.
-- If asked about layers, clarify whether the user means the Layers panel or the content architecture.
